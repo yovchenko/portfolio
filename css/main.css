@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(41.2%, 53.7%, 95.2%);
+}
+
+.wrapper {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+canvas {
+	width:100%;
+	background-color: rgb(41.2%, 53.7%, 95.2%);
+}
+
+.sphere {
+	width: 500px;
+	height: 500px;
+	display: flex;
+}
