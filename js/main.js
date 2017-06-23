@@ -207,7 +207,7 @@ var points = [];
 
 var width = 120;
 
-var numOfPoints = 100;
+var numOfPoints = 80;
 var testCases = 50;
 
 var angle = new Vector3(0, 0, 0);
@@ -218,13 +218,14 @@ function main() {
 	c.width = 300;
 	c.height = 300;
 	ctx = c.getContext("2d");
+
 	
-	ctx.fillStyle = "rgb(255,255,255)";
-	
+
+
 	for (var i = 0; i < numOfPoints; i++) {
 		var buf = [];
 		for (var j = 0; j < testCases; j++) {
-			var v = new Vector3(Math.random() * 4 - 2, Math.random() * 4 - 2, Math.random() * 4 - 2);
+			var v = new Vector3(Math.random() * 4 - 1, Math.random() * 4 - 1, Math.random() * 4 - 1);
 			v.normalize().multiply(width);
 			buf.push(v);
 		}
@@ -244,9 +245,6 @@ function main() {
 		}
 		points.push(buf[currentHighest]);
 	}
-	
-	loop();
-}
 
 function loop() {
 	update();
@@ -274,5 +272,33 @@ function render() {
 		ctx.fill();
 	}
 }
-
+	loop();
+}
+time();
 main();
+
+function time() {
+var del = 0;
+var color = 0;
+function myLoop () {          
+   setTimeout(function () {    
+      del++;                     
+      if (del < 35) {    
+		 color = color + 10;
+	     ctx.fillStyle = "rgb("+color+","+color+","+color+")";                 
+         myLoop();             
+      }     
+	  else if (del < 70) {
+		color = color - 10;
+	  	ctx.fillStyle = "rgb("+color+","+color+","+color+")"; 
+		myLoop();  
+	  }
+	  else {
+		 del = 0;
+		 myLoop();
+	  }                   
+   }, 200)
+}
+myLoop();   
+}
+time();
