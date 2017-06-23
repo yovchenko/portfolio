@@ -1,9 +1,10 @@
 body {
-    background-color: rgb(41.2%, 53.7%, 95.2%);
+	 background-color: rgb(41.2%, 53.7%, 95.2%);
 }
 
 .wrapper {
 	width: 100%;
+	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -15,7 +16,6 @@ canvas {
 }
 
 .sphere {
-	width: 500px;
-	height: 500px;
+	max-width: 500px;
 	display: flex;
 }
