@@ -10,7 +10,7 @@
 </head>
 <body>
   <div id="musicPlayer">
-      <div class="amplitude-play"> 
+      <div class="amplitude-play"><span class="amplitude-repeat"></span>
           <div class="play">
       </div>
     </div>
@@ -28,7 +28,7 @@
     <script type="text/javascript">
     $(document).ready(function() {
     var icon = $('.play');
-    icon.click(function() {
+     icon.click(function() {
      icon.toggleClass('active');
     });
     });
