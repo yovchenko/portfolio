@@ -218,7 +218,7 @@ function main() {
 	c.width = 300;
 	c.height = 300;
 	ctx = c.getContext("2d");
-
+    ctx.fillStyle = 'rgb(255,255,255)';
 	
 
 
@@ -274,31 +274,41 @@ function render() {
 }
 	loop();
 }
-time();
+
 main();
 
-function time() {
-var del = 0;
-var color = 0;
+function letsDance() {
+var count = 0;
+var color = [254,254,254];
 function myLoop () {          
-   setTimeout(function () {    
-      del++;                     
-      if (del < 35) {    
-		 color = color + 10;
-	     ctx.fillStyle = "rgb("+color+","+color+","+color+")";                 
+   setTimeout(function () {  
+	  var randomColor;
+	  var colorNum = 0;
+      count++;                     
+      if (count < 25 && color[0] > 0 && color[1] > 0 && color[2] > 0) {    
+		 while ( colorNum < 2) {	
+	     randomColor = Math.floor((Math.random() * 10) + 1);		  
+		 color[colorNum] = color[colorNum] - randomColor;
+		 ctx.fillStyle = "rgb("+color[colorNum]+","+color[colorNum]+","+color[colorNum]+")";
+		 colorNum++; 
+		 }               
          myLoop();             
       }     
-	  else if (del < 70) {
-		color = color - 10;
-	  	ctx.fillStyle = "rgb("+color+","+color+","+color+")"; 
-		myLoop();  
+	  else if (count < 50 && color[0] < 255 && color[1] < 255 && color[2] < 255) {
+		 while ( colorNum < 2) {	
+	     randomColor = Math.floor((Math.random() * 10) + 1); 
+		 color[colorNum] = color[colorNum] + randomColor;
+		 ctx.fillStyle = "rgb("+color[colorNum]+","+color[colorNum]+","+color[colorNum]+")";
+		 colorNum++; 
+		 }
+		 myLoop();  
 	  }
 	  else {
-		 del = 0;
+		 count = 0;
 		 myLoop();
 	  }                   
-   }, 200)
+   }, 800)
 }
 myLoop();   
 }
-time();
+letsDance();
