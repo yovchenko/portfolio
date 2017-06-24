@@ -219,30 +219,87 @@ function main() {
 	c.height = 300;
 	ctx = c.getContext("2d");
 	ctx.fillStyle = 'rgb(255,255,255)';
-
-	for (var i = 0; i < numOfPoints; i++) {
-		var buf = [];
-		for (var j = 0; j < testCases; j++) {
-			var v = new Vector3(Math.random() * 4 - 1, Math.random() * 4 - 1, Math.random() * 4 - 1);
-			v.normalize().multiply(width);
-			buf.push(v);
-		}
-		var currentSum = 0;
-		var currentHighest = 0;
-
-		for (var k = 0; k < testCases; k++) {
-			var sum = 0;
-			var p = buf[k];
-			for (var l of points) {
-				sum += p.distance(l);
+	letsDance();
+function letsDance() {
+	var color = [254, 254, 254];
+	function myLoop() {
+		setTimeout(function () {
+			var randomColor;
+			var colorNum = 0;
+			if (count < 50) {
+				while (colorNum < 3) {
+					randomColor = Math.floor((Math.random() * 5) + 1);
+					color[colorNum] -= randomColor;
+					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
+					colorNum++;
+				}
+				for (var i = 0; i < numOfPoints; i = i + 1 * 32) {
+					numOfPoints++;
+					buf = [];
+					for (var j = 0; j < testCases; j++) {
+						v = new Vector3(Math.random() * 4 - 1, Math.random() * 4 - 1, Math.random() * 4 - 1);
+						v.normalize().multiply(width);
+						buf.push(v);
+					}
+					currentSum = 0;
+					currentHighest = 0;
+					for (var k = 0; k < testCases; k++) {
+						sum = 0;
+						p = buf[k];
+						for (var l of points) {
+							sum += p.distance(l);
+						}
+						if (sum > currentSum) {
+							currentSum = sum;
+							currentHighest = k;
+						}
+					}
+					points.push(buf[currentHighest]);
+				}
+				count++;
+				myLoop();
 			}
-			if (sum > currentSum) {
-				currentSum = sum;
-				currentHighest = k;
+			else if (count < 100 && count > 49) {
+				while (colorNum < 3) {
+					randomColor = Math.floor((Math.random() * 5) + 1);
+					color[colorNum] += randomColor;
+					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
+					colorNum++;
+				}
+				for (var i = 0; i < numOfPoints; i = i + 1 * 32) {
+					numOfPoints--;
+					buf = [];
+					for (var j = 0; j < testCases; j++) {
+						v = new Vector3(Math.random() * 4 - 1, Math.random() * 4 - 1, Math.random() * 4 - 1);
+						v.normalize().multiply(width);
+						buf.push(v);
+					}
+					currentSum = 0;
+					currentHighest = 0;
+					for (var k = 0; k < testCases; k++) {
+						sum = 0;
+						p = buf[k];
+						for (var l of points) {
+							sum += p.distance(l);
+						}
+						if (sum > currentSum) {
+							currentSum = sum;
+							currentHighest = k;
+						}
+					}
+					points.pop(buf[currentHighest]);
+				}
+				count++;
+				myLoop();
 			}
-		}
-		points.push(buf[currentHighest]);
+			else {
+				count = 0;
+				myLoop();
+			}
+		}, 600)
 	}
+	myLoop();
+}
 
 	function loop() {
 		update();
@@ -273,86 +330,5 @@ function main() {
 	loop();
 }
 
-function letsDance() {
-	var color = [254, 254, 254];
-	function myLoop() {
-		setTimeout(function () {
-			var randomColor;
-			var colorNum = 0;
-			if (count < 50) {
-				while (colorNum < 3) {
-					randomColor = Math.floor((Math.random() * 5) + 1);
-					color[colorNum] -= randomColor;
-					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
-					colorNum++;
-				}
-				for (var i = 0; i < numOfPoints; i = i + 1 * 32) {
-					numOfPoints--;
-					buf = [];
-					for (var j = 0; j < testCases; j++) {
-						v = new Vector3(Math.random() * 4 - 1, Math.random() * 4 - 1, Math.random() * 4 - 1);
-						v.normalize().multiply(width);
-						buf.push(v);
-					}
-					currentSum = 0;
-					currentHighest = 0;
-					for (var k = 0; k < testCases; k++) {
-						sum = 0;
-						p = buf[k];
-						for (var l of points) {
-							sum += p.distance(l);
-						}
-						if (sum > currentSum) {
-							currentSum = sum;
-							currentHighest = k;
-						}
-					}
-					points.pop(buf[currentHighest]);
-				}
-				count++;
-				myLoop();
-			}
-			else if (count < 100 && count > 49) {
-				while (colorNum < 3) {
-					randomColor = Math.floor((Math.random() * 5) + 1);
-					color[colorNum] += randomColor;
-					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
-					colorNum++;
-				}
-				for (var i = 0; i < numOfPoints; i = i + 1 * 32) {
-					numOfPoints++;
-					buf = [];
-					for (var j = 0; j < testCases; j++) {
-						v = new Vector3(Math.random() * 4 - 1, Math.random() * 4 - 1, Math.random() * 4 - 1);
-						v.normalize().multiply(width);
-						buf.push(v);
-					}
-					currentSum = 0;
-					currentHighest = 0;
-					for (var k = 0; k < testCases; k++) {
-						sum = 0;
-						p = buf[k];
-						for (var l of points) {
-							sum += p.distance(l);
-						}
-						if (sum > currentSum) {
-							currentSum = sum;
-							currentHighest = k;
-						}
-					}
-					points.push(buf[currentHighest]);
-				}
-				count++;
-				myLoop();
-			}
-			else {
-				count = 0;
-				myLoop();
-			}
-		}, 600)
-	}
-	myLoop();
-}
-letsDance();
 main();
 
