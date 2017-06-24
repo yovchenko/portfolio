@@ -32,6 +32,12 @@ canvas {
   width: 100px;
 }
 
+.amplitude-repeat {
+  margin: 0 0 0 0;
+  width: 100px;
+  height: 100px;
+}
+
 .play {
   display: flex;
   width: 0;

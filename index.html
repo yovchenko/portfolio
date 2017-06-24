@@ -10,10 +10,11 @@
 </head>
 <body>
   <div id="musicPlayer">
-      <div class="amplitude-play"><span class="amplitude-repeat"></span>
+      <div class="amplitude-play"><div class="amplitude-repeat">
           <div class="play">
       </div>
     </div>
+   </div> 
   </div>
 <div class="wrapper">
       <div class="sphere">
@@ -28,11 +29,8 @@
     <script type="text/javascript">
     $(document).ready(function() {
     var icon = $('.play');
-    var repeat = $('.amplitude-repeat')
      icon.click(function() {
      icon.toggleClass('active');
-     repeat.toggleClass('apmlitude-repeat.amplitude-repeat-on');
-     alert(typeof(repeat));
     });
     });
     </script>
