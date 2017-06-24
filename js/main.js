@@ -288,7 +288,7 @@ function myLoop () {
       if (count < 50 && color[0] > 0 && color[1] > 0 && color[2] > 0) {    
 		 while ( colorNum < 2) {	
 	     randomColor = Math.floor((Math.random() * 5) + 1);		  
-		 color[colorNum] = color[colorNum] - randomColor;
+		 color[colorNum] -= randomColor;
 		 ctx.fillStyle = "rgb("+color[colorNum]+","+color[colorNum]+","+color[colorNum]+")";
 		 colorNum++; 
 		 }               
@@ -297,7 +297,7 @@ function myLoop () {
 	  else if (count < 100 && color[0] < 255 && color[1] < 255 && color[2] < 255) {
 		 while ( colorNum < 2) {	
 	     randomColor = Math.floor((Math.random() * 5) + 1); 
-		 color[colorNum] = color[colorNum] + randomColor;
+		 color[colorNum] += randomColor;
 		 ctx.fillStyle = "rgb("+color[colorNum]+","+color[colorNum]+","+color[colorNum]+")";
 		 colorNum++; 
 		 }
