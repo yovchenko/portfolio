@@ -28,7 +28,8 @@ canvas {
 }
 
 .amplitude-play {
-  margin: 0 0 0 23px;
+  margin: 0 0 0 0;
+  width: 100px;
 }
 
 .play {
