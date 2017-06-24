@@ -285,18 +285,18 @@ function myLoop () {
 	  var randomColor;
 	  var colorNum = 0;
       count++;                     
-      if (count < 25 && color[0] > 0 && color[1] > 0 && color[2] > 0) {    
+      if (count < 50 && color[0] > 0 && color[1] > 0 && color[2] > 0) {    
 		 while ( colorNum < 2) {	
-	     randomColor = Math.floor((Math.random() * 10) + 1);		  
+	     randomColor = Math.floor((Math.random() * 5) + 1);		  
 		 color[colorNum] = color[colorNum] - randomColor;
 		 ctx.fillStyle = "rgb("+color[colorNum]+","+color[colorNum]+","+color[colorNum]+")";
 		 colorNum++; 
 		 }               
          myLoop();             
       }     
-	  else if (count < 50 && color[0] < 255 && color[1] < 255 && color[2] < 255) {
+	  else if (count < 100 && color[0] < 255 && color[1] < 255 && color[2] < 255) {
 		 while ( colorNum < 2) {	
-	     randomColor = Math.floor((Math.random() * 10) + 1); 
+	     randomColor = Math.floor((Math.random() * 5) + 1); 
 		 color[colorNum] = color[colorNum] + randomColor;
 		 ctx.fillStyle = "rgb("+color[colorNum]+","+color[colorNum]+","+color[colorNum]+")";
 		 colorNum++; 
@@ -307,7 +307,7 @@ function myLoop () {
 		 count = 0;
 		 myLoop();
 	  }                   
-   }, 800)
+   }, 600)
 }
 myLoop();   
 }
