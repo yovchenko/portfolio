@@ -21,10 +21,14 @@ canvas {
 	display: flex;
 }
 
-.amplitude-play {
+#musicPlayer {
   display: flex;
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.amplitude-play {
+  margin: 0 0 0 23px;
 }
 
 .play {
