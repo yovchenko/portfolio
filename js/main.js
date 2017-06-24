@@ -221,7 +221,7 @@ function main() {
 	ctx.fillStyle = 'rgb(255,255,255)';
 	letsDance();
 function letsDance() {
-	var color = [254, 254, 254];
+	var color = [255, 255, 255];
 	function myLoop() {
 		setTimeout(function () {
 			var randomColor;
