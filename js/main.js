@@ -207,7 +207,7 @@ var points = [];
 
 var width = 120;
 
-var numOfPoints = 60;
+var numOfPoints = 90;
 var testCases = 90;
 var count = 0;
 var angle = new Vector3(0, 0, 0);
@@ -233,7 +233,7 @@ function letsDance() {
 					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
 					colorNum++;
 				}
-				for (var i = 0; i < numOfPoints; i = i + 1 * 48) {
+				for (var i = 0; i < numOfPoints; i = i + 1 * 128) {
 					numOfPoints++;
 					buf = [];
 					for (var j = 0; j < testCases; j++) {
@@ -266,7 +266,7 @@ function letsDance() {
 					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
 					colorNum++;
 				}
-				for (var i = 0; i < numOfPoints; i = i + 1 * 48) {
+				for (var i = 0; i < numOfPoints; i = i + 1 * 128) {
 					numOfPoints--;
 					buf = [];
 					for (var j = 0; j < testCases; j++) {
