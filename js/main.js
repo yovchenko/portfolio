@@ -206,9 +206,8 @@ var c, ctx;
 var points = [];
 var flag = true;
 var width = 120;
-var numOfPoints = 70;
+var numOfPoints = 60;
 var testCases = 90;
-var count = 0;
 var angle = new Vector3(0, 0, 0);
 var angleSpeed = new Vector3(Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008);
 function main() {
@@ -222,9 +221,10 @@ function letsDance() {
 	var color = [255, 255, 255];
 	function myLoop() {
 		setTimeout(function () {
+			var count = 0;
 			var randomColor;
 			var colorNum = 0;
-			if (color[colorNum] > 7 && flag == true) {
+			if (color[colorNum] > 5 && flag == true) {
 				
 					randomColor = Math.floor((Math.random() * 5) + 1);
 					color[colorNum] -= randomColor;
@@ -254,9 +254,10 @@ function letsDance() {
 					points.push(buf[currentHighest]);
 				}
 				colorNum++;
+				numOfPoints++;
 				myLoop();
 			}
-			else if (color[colorNum] < 250) {
+			else if (color[colorNum] < 245 || (flag == false && numOfPoints > 60)) {
 			
 					randomColor = Math.floor((Math.random() * 5) + 1);
 					color[colorNum] += randomColor;
@@ -286,10 +287,13 @@ function letsDance() {
 					}
 					points.pop(buf[currentHighest]);
 				}
+				numOfPoints--;
 				flag = false;
 				myLoop();
 			}
 			else {
+				color[colorNum] = 255;
+				numOfPoints = 65;
 				flag = true;
 				myLoop();
 			}
