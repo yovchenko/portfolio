@@ -257,13 +257,16 @@ function letsDance() {
 				numOfPoints++;
 				myLoop();
 			}
-			else if (color[colorNum] < 245 || (flag == false && numOfPoints > 60)) {
-			
+			else if (color[colorNum] < 255 || (flag == false && numOfPoints > 60)) {
+				    if (color[colorNum] < 255) {
 					randomColor = Math.floor((Math.random() * 5) + 1);
 					color[colorNum] += randomColor;
 					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
 					colorNum++;
-			
+					}
+				    else {
+					colorNum-= 5;
+					}
 				for (var i = 0; i < numOfPoints; i = i + 1 * 128) {
 					numOfPoints--;
 					buf = [];
@@ -292,7 +295,6 @@ function letsDance() {
 				myLoop();
 			}
 			else {
-				color[colorNum] = 255;
 				numOfPoints = 65;
 				flag = true;
 				myLoop();
