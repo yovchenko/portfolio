@@ -204,15 +204,13 @@ Matrix3.scale = function (vec) {
 var c, ctx;
 
 var points = [];
-
+var flag = true;
 var width = 120;
-
-var numOfPoints = 90;
+var numOfPoints = 70;
 var testCases = 90;
 var count = 0;
 var angle = new Vector3(0, 0, 0);
 var angleSpeed = new Vector3(Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008);
-
 function main() {
 	c = document.getElementById("canvas");
 	c.width = 300;
@@ -226,13 +224,12 @@ function letsDance() {
 		setTimeout(function () {
 			var randomColor;
 			var colorNum = 0;
-			if (count < 50) {
+			if (color[colorNum] > 7 && flag == true) {
 				
 					randomColor = Math.floor((Math.random() * 5) + 1);
 					color[colorNum] -= randomColor;
 					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
-					colorNum++;
-		
+					
 				for (var i = 0; i < numOfPoints; i = i + 1 * 128) {
 					numOfPoints++;
 					buf = [];
@@ -256,10 +253,10 @@ function letsDance() {
 					}
 					points.push(buf[currentHighest]);
 				}
-				count++;
+				colorNum++;
 				myLoop();
 			}
-			else if (count < 100 && count > 49) {
+			else if (color[colorNum] < 250) {
 			
 					randomColor = Math.floor((Math.random() * 5) + 1);
 					color[colorNum] += randomColor;
@@ -289,11 +286,11 @@ function letsDance() {
 					}
 					points.pop(buf[currentHighest]);
 				}
-				count++;
+				flag = false;
 				myLoop();
 			}
 			else {
-				count = 0;
+				flag = true;
 				myLoop();
 			}
 		}, 600)
