@@ -227,12 +227,12 @@ function letsDance() {
 			var randomColor;
 			var colorNum = 0;
 			if (count < 50) {
-				while (colorNum < 3) {
+				
 					randomColor = Math.floor((Math.random() * 5) + 1);
 					color[colorNum] -= randomColor;
 					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
 					colorNum++;
-				}
+		
 				for (var i = 0; i < numOfPoints; i = i + 1 * 128) {
 					numOfPoints++;
 					buf = [];
@@ -260,12 +260,12 @@ function letsDance() {
 				myLoop();
 			}
 			else if (count < 100 && count > 49) {
-				while (colorNum < 3) {
+			
 					randomColor = Math.floor((Math.random() * 5) + 1);
 					color[colorNum] += randomColor;
 					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
 					colorNum++;
-				}
+			
 				for (var i = 0; i < numOfPoints; i = i + 1 * 128) {
 					numOfPoints--;
 					buf = [];
