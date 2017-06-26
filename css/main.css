@@ -23,13 +23,13 @@ header {
 }
 
 .svgIcons:hover,.svgIcons:focus {
-  box-shadow:0px 0px 10px 10px rgba(255,255,255,0.25),0px 0px 10px 10px rgba(255,255,255,0.22);
+  box-shadow:0px 0px 10px 10px rgba(255,255,255,0.20),0px 0px 10px 10px rgba(255,255,255,0.20);
 }
 
 .playMusic:hover,.playMusic:focus {
    transform: scale(1);
   -webkit-transform: scale(1);
-  -moz-transform: scale(1.1);
+  -moz-transform: scale(1);
 }
 
 .svgIcons > a[href]:hover, .svgIcons > a[href]:focus {
