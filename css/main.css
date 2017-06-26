@@ -12,8 +12,13 @@ header {
 
 .svgIcons {
   display: flex;
-  
   margin: 15px 30px 0px 0;
+}
+
+.svgIcons:hover, .svgIcons:focus {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
 }
 
 .wrapperCanvas {
@@ -56,14 +61,15 @@ canvas {
   height: 0;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 25px solid #2c3e50;
-  margin: 25px auto 50px auto;
+  border-left: 26px solid #2c3e50;
+  margin: 25px auto 40px auto;
   position: relative;
   z-index: 1;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   left: 10px;
+  padding-top: 3px;
 }
 
 .play:before {
@@ -74,7 +80,7 @@ canvas {
   bottom: -25px;
   right: -12px;
   border-radius: 50%;
-  border: 6px solid #2c3e50;
+  border: 7px solid #2c3e50;
   z-index: 2;
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
@@ -108,7 +114,7 @@ canvas {
   background: #2c3e50;
   position: relative;
   right: 29px;
-  top: -12px;
+  top: -13.6px;
   border-left: 25px solid #2c3e50;
   box-shadow: inset 25px 0 0 0 rgb(41.2%, 53.7%, 95.2%);
 }
