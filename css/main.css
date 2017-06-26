@@ -12,13 +12,24 @@ header {
 
 .svgIcons {
   display: flex;
-  margin: 15px 30px 0px 0;
+  margin: 15px 0px 0px 0;
+   transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
 }
 
 .svgIcons:hover, .svgIcons:focus {
   transform: scale(1.1);
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
+}
+
+.svgIcons:after {
+  content: '';
+  opacity: 0;
+  transition: opacity 0.6s;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
 }
 
 .wrapperCanvas {
@@ -39,82 +50,30 @@ canvas {
 	display: flex;
 }
 
-.musicPlayer {
+.player {
   display: flex;
-  align-items: flex-start;
 }
 
 .amplitude-play {
-  margin: 0 0 0 0;
-  width: 100px;
+  width: 100%;
 }
 
 .amplitude-repeat {
-  margin: 0 0 0 0;
-  width: 100px;
-  height: 100px;
+  width: 100%;
 }
 
-.play {
+.stopMusic {
+  display: none;
+}
+
+.stopMusic.active {
   display: flex;
-  width: 0;
-  height: 0;
-  border-top: 15px solid transparent;
-  border-bottom: 15px solid transparent;
-  border-left: 26px solid #2c3e50;
-  margin: 25px auto 40px auto;
-  position: relative;
-  z-index: 1;
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  left: 10px;
-  padding-top: 3px;
 }
 
-.play:before {
-  content: '';
-  position: absolute;
-  top: -25px;
-  left: -45px;
-  bottom: -25px;
-  right: -12px;
-  border-radius: 50%;
-  border: 7px solid #2c3e50;
-  z-index: 2;
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
+.playMusic.disable {
+   display:none;
 }
 
-.play:after {
-  content: '';
-  opacity: 0;
-  transition: opacity 0.6s;
-  -webkit-transition: opacity 0.6s;
-  -moz-transition: opacity 0.6s;
-}
+.playMusic {
 
-.play:hover:before, .play:focus:before {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-}
-
-.play.active {
-  border-color: transparent;
-}
-
-.play.active:after {
-  display:flex;
-  content: '';
-  opacity: 1;
-  width: 25px;
-  height: 25px;
-  background: #2c3e50;
-  position: relative;
-  right: 29px;
-  top: -13.6px;
-  border-left: 25px solid #2c3e50;
-  box-shadow: inset 25px 0 0 0 rgb(41.2%, 53.7%, 95.2%);
 }
