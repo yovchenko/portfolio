@@ -27,15 +27,15 @@ header {
 }
 
 .playMusic:hover,.playMusic:focus {
-   transform: scale(1.1);
-  -webkit-transform: scale(1.1);
+   transform: scale(1);
+  -webkit-transform: scale(1);
   -moz-transform: scale(1.1);
 }
 
 .svgIcons > a[href]:hover, .svgIcons > a[href]:focus {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
 }
 
 .playMusic {
