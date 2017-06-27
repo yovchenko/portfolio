@@ -305,7 +305,7 @@ function letsDance() {
 				flag = true;
 				myLoop();
 			}
-		}, 650)
+		}, 550)
 	}
 	myLoop();
 }
