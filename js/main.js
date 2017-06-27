@@ -205,8 +205,9 @@ var c, ctx;
 var points = [];
 var flag = true;
 var width = 120;
-var numOfPoints = 60;
+var numOfPoints = 55;
 var testCases = 90;
+var opacity = 0.6;
 var angle = new Vector3(0, 0, 0);
 var angleSpeed = new Vector3(Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008);
 function main() {
@@ -215,11 +216,17 @@ function main() {
 	c.height = 300;
 	ctx = c.getContext("2d");
 	ctx.fillStyle = 'rgb(255,255,255)';
+	ctx.font = "90px mainFont";
+	ctx.textAlign = "center";
+	ctx.textBaseline = "middle";
+	ctx.strokeText("VY", canvas.width/2, canvas.height/2);
+	ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
+	
 	letsDance();
 function letsDance() {
 	var color = [255, 255, 255];
 	function myLoop() {
-		setTimeout(function () {
+	setTimeout(function () {
 			var count = 0;
 			var randomColor;
 			var colorNum = 0;
@@ -228,7 +235,9 @@ function letsDance() {
 					randomColor = Math.floor((Math.random() * 5) + 1);
 					color[colorNum] -= randomColor;
 					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
-					
+				    ctx.strokeStyle = "rgba(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + "," + opacity + ")";
+       				
+
 				for (var i = 0; i < numOfPoints; i = i + 1 * 128) {
 					numOfPoints++;
 					buf = [];
@@ -261,6 +270,7 @@ function letsDance() {
 					randomColor = Math.floor((Math.random() * 5) + 1);
 					color[colorNum] += randomColor;
 					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
+					ctx.strokeStyle = "rgba(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + "," + opacity + ")";
 					colorNum++;
 					}
 				    else {
@@ -294,7 +304,7 @@ function letsDance() {
 				myLoop();
 			}
 			else {
-				numOfPoints = 65;
+				numOfPoints = 55;
 				flag = true;
 				myLoop();
 			}
@@ -314,12 +324,12 @@ function letsDance() {
 
 	function render() {
 		ctx.clearRect(0, 0, c.width, c.height);
-		ctx.font = "90px mainFont";
+		/*ctx.font = "90px mainFont";
 		ctx.textAlign = "center";
 		ctx.textBaseline = "middle";
 		ctx.strokeText("VY", canvas.width/2, canvas.height/2);
-		ctx.strokeStyle = "rgba(255,255,255,0.6)";
-		
+		ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";*/
+		ctx.strokeText("VY", canvas.width/2, canvas.height/2);
 		var rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
 		var rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
 		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
@@ -332,6 +342,7 @@ function letsDance() {
 			ctx.closePath();
 			ctx.fill();
 		}
+		
 	}
 	loop();
 }
