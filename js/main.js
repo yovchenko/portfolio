@@ -318,7 +318,7 @@ function letsDance() {
 		ctx.textAlign = "center";
 		ctx.textBaseline = "middle";
 		ctx.strokeText("JS", canvas.width/2, canvas.height/2);
-		ctx.strokeStyle = "rgba(255,255,255,0.7)";
+		ctx.strokeStyle = "rgba(255,255,255,0.6)";
 		
 		var rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
 		var rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
