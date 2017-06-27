@@ -223,7 +223,7 @@ function main() {
 	  setTimeout(function () {
 			var randomColor;
 			var colorNum = 0;
-			if (color[colorNum] > 75 && flag == true) {
+			if (color[colorNum] > 25 && flag == true) {
 				
 					randomColor = Math.floor((Math.random() * 5) + 1);
 					color[colorNum] -= randomColor;
