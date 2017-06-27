@@ -97,6 +97,7 @@ canvas {
   margin-top: 8px;
   border: 1px solid transparent;
   border-radius: 200px;
+  display: none;
 }
 
 .sphere {

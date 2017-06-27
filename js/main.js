@@ -230,7 +230,7 @@ function letsDance() {
 			var count = 0;
 			var randomColor;
 			var colorNum = 0;
-			if (color[colorNum] > 65 && flag == true) {
+			if (color[colorNum] > 55 && flag == true) {
 				
 					randomColor = Math.floor((Math.random() * 5) + 1);
 					color[colorNum] -= randomColor;
@@ -305,7 +305,7 @@ function letsDance() {
 				flag = true;
 				myLoop();
 			}
-		}, 550)
+		}, 650)
 	}
 	myLoop();
 }
@@ -340,4 +340,3 @@ function letsDance() {
 }
 
 main();
-
