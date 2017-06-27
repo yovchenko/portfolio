@@ -205,7 +205,7 @@ var c, ctx;
 var points = [];
 var flag = true;
 var width = 120;
-var numOfPoints = 50;
+var numOfPoints = 1;
 var testCases = 90;
 var angle = new Vector3(0, 0, 0);
 var angleSpeed = new Vector3(Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008);
@@ -265,7 +265,7 @@ function letsDance() {
 				numOfPoints++;
 				myLoop();
 			}
-			else if (color[colorNum] < 255 || (flag == false && numOfPoints > 50)) {
+			else if (color[colorNum] < 255 || (flag == false && numOfPoints > 1)) {
 				    if (color[colorNum] < 255) {
 					randomColor = Math.floor((Math.random() * 5) + 1);
 					color[colorNum] += randomColor;
@@ -304,7 +304,7 @@ function letsDance() {
 				myLoop();
 			}
 			else {
-				numOfPoints = 50;
+				numOfPoints = 1;
 				flag = true;
 				myLoop();
 			}
