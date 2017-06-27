@@ -36,21 +36,7 @@ header {
   width: 55.72px;
   height: 50.72px;
   margin-bottom: 5px;
-  transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-}
-
-.playMusic:hover,.playMusic:focus {
-   transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-}
-
-.stopMusic:hover,.stopMusic:focus {
-   transform: scale(1.1);
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
+ 
 }
 
 .svgIcons > a[href] {
@@ -62,7 +48,14 @@ header {
 }
 
 .player {
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;}
 
+.player:hover,.player:focus {
+   transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
 }
 
 .wrapperCanvas {
