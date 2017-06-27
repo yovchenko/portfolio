@@ -5,6 +5,11 @@ body {
    margin-bottom: 120px;
 }
 
+ @font-face {
+    font-family: mainFont;
+    src: url(../fonts/mainFont.ttf);
+}
+
 header {
   display: flex;
   justify-content: space-around;
@@ -77,17 +82,18 @@ header {
 }
 
 .wrapperCanvas {
-	width: 100%;
+  display: flex;
+  width: 100%;
 	height: 75vh;
-	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
 canvas {
 	width:100%;
+  height: 100%;
   display: flex;
-	background-color: rgba(41.2%, 53.7%, 95.2%,0.97);
+	background-color: rgba(41.2%, 53.7%, 95.2%,0.05);
   margin-top: 8px;
   border: 1px solid transparent;
   border-radius: 200px;

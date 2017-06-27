@@ -202,7 +202,6 @@ Matrix3.scale = function (vec) {
 //This is what matters
 
 var c, ctx;
-
 var points = [];
 var flag = true;
 var width = 120;
@@ -309,14 +308,17 @@ function letsDance() {
 		render();
 		window.requestAnimationFrame(loop);
 	}
-
 	function update() {
 		angle.add(angleSpeed);
 	}
 
 	function render() {
 		ctx.clearRect(0, 0, c.width, c.height);
-
+		ctx.font = "90px mainFont";
+		ctx.textAlign = "center";
+		ctx.textBaseline = "middle";
+		ctx.strokeText("JS", canvas.width/2, canvas.height/2);
+		ctx.strokeStyle = "rgba(235,235,235,1)";
 		var rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
 		var rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
 		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
