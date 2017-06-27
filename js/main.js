@@ -297,7 +297,7 @@ function main() {
 				flag = true;
 				myLoop();
 			}
-		}, 750)
+		}, 850)
 	}
 	myLoop();
 }
