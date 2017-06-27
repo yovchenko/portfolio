@@ -84,14 +84,14 @@ canvas {
 
 .amplitude-play {
   position: absolute;
-  width: 58px;
-  height: 58px;
+  width: 65px;
+  height: 65px;
 }
 
 .amplitude-repeat {
   position: absolute;
-  width: 58px;
-  height: 58px;
+  width: 65px;
+  height: 65px;
 }
 
 .stopMusic {
