@@ -34,9 +34,8 @@ header {
 
 .playMusic, .stopMusic {
   width: 55.72px;
-  height: 50.72px;
-  margin-bottom: 5px;
- 
+  height: 45.72px;
+  margin-bottom: 10px;
 }
 
 .svgIcons > a[href] {
@@ -44,13 +43,13 @@ header {
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
-  
 }
 
 .player {
   transition: all 0.3s;
   -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;}
+  -moz-transition: all 0.3s;
+}
 
 .player:hover,.player:focus {
    transform: scale(1.1);
@@ -95,7 +94,6 @@ canvas {
 .stopMusic {
   display: none;
 }
-
 
 
 
