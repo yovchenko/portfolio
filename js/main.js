@@ -207,6 +207,7 @@ var flag = true;
 var width = 120;
 var numOfPoints = 1;
 var testCases = 90;
+var opacity = 0.7;
 var angle = new Vector3(0, 0, 0);
 var angleSpeed = new Vector3(Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008);
 function main() {
@@ -219,7 +220,7 @@ function main() {
 	ctx.textAlign = "center";
 	ctx.textBaseline = "middle";
 	ctx.strokeText("VY", canvas.width/2, canvas.height/2);
-	ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + 0.8 + ")";
+	ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
 	
 	letsDance();
 function letsDance() {
@@ -229,15 +230,12 @@ function letsDance() {
 			var count = 0;
 			var randomColor;
 			var colorNum = 0;
-			var opacity = 0.8;
-			if (color[colorNum] > 45 && flag == true) {
+			if (color[colorNum] > 65 && flag == true) {
 				
 					randomColor = Math.floor((Math.random() * 5) + 1);
 					color[colorNum] -= randomColor;
 					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
-				    ctx.strokeStyle = "rgba(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + "," + opacity + ")";
-       				
-
+				    opacity-= 0.01;  
 				for (var i = 0; i < numOfPoints; i = i + 1 * 128) {
 					numOfPoints++;
 					buf = [];
@@ -265,12 +263,11 @@ function letsDance() {
 				numOfPoints++;
 				myLoop();
 			}
-			else if (color[colorNum] < 255 || (flag == false && numOfPoints > 1)) {
+			else if (color[colorNum] < 235 || (flag == false && numOfPoints > 1)) {
 				    if (color[colorNum] < 255) {
 					randomColor = Math.floor((Math.random() * 5) + 1);
 					color[colorNum] += randomColor;
 					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
-					ctx.strokeStyle = "rgba(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + "," + opacity + ")";
 					colorNum++;
 					}
 				    else {
@@ -308,7 +305,7 @@ function letsDance() {
 				flag = true;
 				myLoop();
 			}
-		}, 600)
+		}, 550)
 	}
 	myLoop();
 }
