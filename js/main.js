@@ -230,7 +230,7 @@ function letsDance() {
 			var randomColor;
 			var colorNum = 0;
 			var opacity = 0.8;
-			if (color[colorNum] > 5 && flag == true) {
+			if (color[colorNum] > 45 && flag == true) {
 				
 					randomColor = Math.floor((Math.random() * 5) + 1);
 					color[colorNum] -= randomColor;
