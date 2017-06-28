@@ -331,7 +331,7 @@ function main() {
 
 function fadeText() {
 	if (opacity > 0.004 && flagText == true){
-     opacity  -= 0.001 ;
+     opacity  -= 0.002;
 	   if (opacity < 0.004 && indexText  < lengthArr-1) {
 		indexText ++;
 	   }
