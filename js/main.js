@@ -335,6 +335,13 @@ function fadeText() {
 	   if (opacity < 0.004 && indexText  < lengthArr-1) {
 		indexText ++;
 	   }
+	   else if (opacity < 0.004 && indexText  === lengthArr-1) {
+		indexText = 0;		
+	   }
+
+	   else {
+       clearInterval(timerId);
+	   }
 	}
 	else if (opacity < 0.05 || (opacity < 0.8 && flagText == false)){
 	  opacity  += 0.002 ;
