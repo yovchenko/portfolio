@@ -208,7 +208,7 @@ var flag = true;
 var width = 120;
 var numOfPoints = 40;
 var testCases = 40;
-var opacity = 0.7;
+var opacity = 0.8;
 var innerText = ["JavaScript","jQuery","HTML5","CSS3","VBS","CI"];
 var indexText = 0;
 var angle = new Vector3(0, 0, 0);
@@ -331,9 +331,10 @@ function main() {
 
 function fadeText() {
 	if (opacity > 0.004 && flagText == true){
-     opacity  -= 0.0015;
+     opacity  -= 0.004;
 	   if (opacity < 0.004 && indexText  < lengthArr-1) {
 		indexText ++;
+		
 	   }
 	   else if (opacity < 0.004 && indexText  === lengthArr-1) {
 		indexText = 0;		
@@ -343,8 +344,8 @@ function fadeText() {
        clearInterval(timerId);
 	   }
 	}
-	else if (opacity < 0.05 || (opacity < 0.8 && flagText == false)){
-	  opacity  += 0.002 ;
+	else if (opacity < 0.06 || (opacity < 0.8 && flagText == false)){
+	  opacity  += 0.005 ;
 	  flagText = false;
 	}
 	else {
