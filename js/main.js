@@ -203,10 +203,14 @@ Matrix3.scale = function (vec) {
 
 var c, ctx;
 var points = [];
+var flagText = true;
 var flag = true;
 var width = 120;
 var numOfPoints = 40;
 var testCases = 40;
+var opacity = 0.7;
+var innerText = ["JavaScript","Jquery","VBS","CI"];
+var indexText = 0;
 var angle = new Vector3(0, 0, 0);
 var angleSpeed = new Vector3(Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008);
 function main() {
@@ -220,7 +224,7 @@ function main() {
     function letsDance() {
 	var color = [255, 255, 255];
 	function myLoop() {
-	  setTimeout(function () {
+	var t =  setTimeout(function () {
 			var randomColor;
 			var colorNum = 0;
 			if (color[colorNum] > 25 && flag == true) {
@@ -228,6 +232,7 @@ function main() {
 					randomColor = Math.floor((Math.random() * 5) + 1);
 					color[colorNum] -= randomColor;
 					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
+				   
 				for (var i = 0; i < numOfPoints; i = i + 1 * 128) {
 					numOfPoints++;
 					buf = [];
@@ -313,16 +318,52 @@ function main() {
 
 	function render() {
 		ctx.clearRect(0, 0, c.width, c.height);
-		ctx.font = "90px mainFont";
+		ctx.font = "50px mainFont";
 	    ctx.textAlign = "center";
 	    ctx.textBaseline = "middle";
-	    ctx.strokeText("VY", canvas.width/2, canvas.height/2);
-	    ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + 0.6 + ")";
-		ctx.strokeText("VY", canvas.width/2, canvas.height/2);
+	    ctx.strokeText(innerText[indexText], canvas.width/2, canvas.height/2);
+	    ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
 		var rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
 		var rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
 		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
 		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
+        var lengthArr  = innerText.length;
+
+function fadeText() {
+	if (opacity > 0.004 && flagText == true){
+     opacity  -= 0.001 ;
+	   if (opacity < 0.004 && indexText  < lengthArr-1) {
+		indexText ++;
+	   }
+	}
+	else if (opacity < 0.05 || (opacity < 0.8 && flagText == false)){
+	  opacity  += 0.002 ;
+	  flagText = false;
+	}
+	else {
+		setTimeout(func, 3000);
+	}
+}
+
+function func() {
+	flagText = true;
+	clearInterval(timerId);
+}
+
+var timerId = setInterval(fadeText, 8000);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		for (var p of points) {
 			p = rotation.multiplyVector(p);
