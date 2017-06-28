@@ -359,20 +359,7 @@ function func() {
 }
 
 var timerId = setInterval(fadeText, 8000);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		
 		for (var p of points) {
 			p = rotation.multiplyVector(p);
 			ctx.beginPath();
