@@ -327,7 +327,7 @@ function main() {
 		var rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
 		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
 		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
-<<<<<<< HEAD
+
 		var lengthArr = innerText.length;
 
 		function fadeText() {
@@ -361,7 +361,6 @@ function main() {
 
 		var timerId = setInterval(fadeText, 8000);
 
-=======
         var lengthArr  = innerText.length;
 
 function fadeText() {
@@ -395,7 +394,6 @@ function func() {
 
 var timerId = setInterval(fadeText, 8000);
 		
->>>>>>> ae9ebd3382f5de98408a5cdd3602914754fcea0d
 		for (var p of points) {
 			p = rotation.multiplyVector(p);
 			ctx.beginPath();
