@@ -209,7 +209,7 @@ var width = 120;
 var numOfPoints = 40;
 var testCases = 40;
 var opacity = 0.8;
-var innerText = ["JavaScript","jQuery","HTML5","CSS3","VBS","CI"];
+var innerText = ["JavaScript", "jQuery", "HTML5", "CSS3", "VBS", "CI"];
 var indexText = 0;
 var angle = new Vector3(0, 0, 0);
 var angleSpeed = new Vector3(Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008);
@@ -221,91 +221,91 @@ function main() {
 	ctx.fillStyle = 'rgb(255,255,255)';
 
 	letsDance();
-    function letsDance() {
-	var color = [255, 255, 255];
-	function myLoop() {
-	var t =  setTimeout(function () {
-			var randomColor;
-			var colorNum = 0;
-			if (color[colorNum] > 25 && flag == true) {
-				
+	function letsDance() {
+		var color = [255, 255, 255];
+		function myLoop() {
+			var t = setTimeout(function () {
+				var randomColor;
+				var colorNum = 0;
+				if (color[colorNum] > 25 && flag == true) {
+
 					randomColor = Math.floor((Math.random() * 5) + 1);
 					color[colorNum] -= randomColor;
 					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
-				   
-				for (var i = 0; i < numOfPoints; i = i + 1 * 128) {
-					numOfPoints++;
-					buf = [];
-					for (var j = 0; j < testCases; j++) {
-						v = new Vector3(Math.random() * 4 - 1, Math.random() * 4 - 1, Math.random() * 4 - 1);
-						v.normalize().multiply(width);
-						buf.push(v);
-					}
-					currentSum = 0;
-					currentHighest = 0;
-					for (var k = 0; k < testCases; k++) {
-						sum = 0;
-						p = buf[k];
-						for (var l of points) {
-							sum += p.distance(l);
+
+					for (var i = 0; i < numOfPoints; i = i + 1 * 128) {
+						numOfPoints++;
+						buf = [];
+						for (var j = 0; j < testCases; j++) {
+							v = new Vector3(Math.random() * 4 - 1, Math.random() * 4 - 1, Math.random() * 4 - 1);
+							v.normalize().multiply(width);
+							buf.push(v);
 						}
-						if (sum > currentSum) {
-							currentSum = sum;
-							currentHighest = k;
+						currentSum = 0;
+						currentHighest = 0;
+						for (var k = 0; k < testCases; k++) {
+							sum = 0;
+							p = buf[k];
+							for (var l of points) {
+								sum += p.distance(l);
+							}
+							if (sum > currentSum) {
+								currentSum = sum;
+								currentHighest = k;
+							}
 						}
+						points.push(buf[currentHighest]);
 					}
-					points.push(buf[currentHighest]);
-				}
-				colorNum++;
-				numOfPoints++;
-				myLoop();
-			}
-			else if (color[colorNum] < 230 || (flag == false && numOfPoints > 40)) {
-				    if (color[colorNum] < 230) {
-					randomColor = Math.floor((Math.random() * 5) + 1);
-					color[colorNum] += randomColor;
-					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
 					colorNum++;
-					}
-				    else {
-					colorNum-= 5;
-					}
-				for (var i = 0; i < numOfPoints; i = i + 1 * 128) {
-					numOfPoints--;
-					buf = [];
-					for (var j = 0; j < testCases; j++) {
-						v = new Vector3(Math.random() * 4 - 1, Math.random() * 4 - 1, Math.random() * 4 - 1);
-						v.normalize().multiply(width);
-						buf.push(v);
-					}
-					currentSum = 0;
-					currentHighest = 0;
-					for (var k = 0; k < testCases; k++) {
-						sum = 0;
-						p = buf[k];
-						for (var l of points) {
-							sum += p.distance(l);
-						}
-						if (sum > currentSum) {
-							currentSum = sum;
-							currentHighest = k;
-						}
-					}
-					points.pop(buf[currentHighest]);
+					numOfPoints++;
+					myLoop();
 				}
-				numOfPoints--;
-				flag = false;
-				myLoop();
-			}
-			else {
-				numOfPoints = 40;
-				flag = true;
-				myLoop();
-			}
-		}, 850)
+				else if (color[colorNum] < 230 || (flag == false && numOfPoints > 40)) {
+					if (color[colorNum] < 230) {
+						randomColor = Math.floor((Math.random() * 5) + 1);
+						color[colorNum] += randomColor;
+						ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
+						colorNum++;
+					}
+					else {
+						colorNum -= 5;
+					}
+					for (var i = 0; i < numOfPoints; i = i + 1 * 128) {
+						numOfPoints--;
+						buf = [];
+						for (var j = 0; j < testCases; j++) {
+							v = new Vector3(Math.random() * 4 - 1, Math.random() * 4 - 1, Math.random() * 4 - 1);
+							v.normalize().multiply(width);
+							buf.push(v);
+						}
+						currentSum = 0;
+						currentHighest = 0;
+						for (var k = 0; k < testCases; k++) {
+							sum = 0;
+							p = buf[k];
+							for (var l of points) {
+								sum += p.distance(l);
+							}
+							if (sum > currentSum) {
+								currentSum = sum;
+								currentHighest = k;
+							}
+						}
+						points.pop(buf[currentHighest]);
+					}
+					numOfPoints--;
+					flag = false;
+					myLoop();
+				}
+				else {
+					numOfPoints = 40;
+					flag = true;
+					myLoop();
+				}
+			}, 850)
+		}
+		myLoop();
 	}
-	myLoop();
-}
 
 	function loop() {
 		update();
@@ -319,59 +319,46 @@ function main() {
 	function render() {
 		ctx.clearRect(0, 0, c.width, c.height);
 		ctx.font = "50px mainFont";
-	    ctx.textAlign = "center";
-	    ctx.textBaseline = "middle";
-	    ctx.strokeText(innerText[indexText], canvas.width/2, canvas.height/2);
-	    ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
+		ctx.textAlign = "center";
+		ctx.textBaseline = "middle";
+		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
+		ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
 		var rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
 		var rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
 		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
 		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
-        var lengthArr  = innerText.length;
+		var lengthArr = innerText.length;
 
-function fadeText() {
-	if (opacity > 0.004 && flagText == true){
-     opacity  -= 0.004;
-	   if (opacity < 0.004 && indexText  < lengthArr-1) {
-		indexText ++;
-		
-	   }
-	   else if (opacity < 0.004 && indexText  === lengthArr-1) {
-		indexText = 0;		
-	   }
+		function fadeText() {
+			if (opacity > 0.004 && flagText == true) {
+				opacity -= 0.004;
+				if (opacity < 0.004 && indexText < lengthArr - 1) {
+					indexText++;
 
-	   else {
-       clearInterval(timerId);
-	   }
-	}
-	else if (opacity < 0.06 || (opacity < 0.8 && flagText == false)){
-	  opacity  += 0.005 ;
-	  flagText = false;
-	}
-	else {
-		setTimeout(func, 3000);
-	}
-}
+				}
+				else if (opacity < 0.004 && indexText === lengthArr - 1) {
+					indexText = 0;
+				}
 
-function func() {
-	flagText = true;
-	clearInterval(timerId);
-}
+				else {
+					clearInterval(timerId);
+				}
+			}
+			else if (opacity < 0.06 || (opacity < 0.8 && flagText == false)) {
+				opacity += 0.005;
+				flagText = false;
+			}
+			else {
+				setTimeout(func, 3000);
+			}
+		}
 
-var timerId = setInterval(fadeText, 8000);
+		function func() {
+			flagText = true;
+			clearInterval(timerId);
+		}
 
-
-
-
-
-
-
-
-
-
-
-
-
+		var timerId = setInterval(fadeText, 8000);
 
 		for (var p of points) {
 			p = rotation.multiplyVector(p);
@@ -380,7 +367,7 @@ var timerId = setInterval(fadeText, 8000);
 			ctx.closePath();
 			ctx.fill();
 		}
-		
+
 	}
 	loop();
 }
