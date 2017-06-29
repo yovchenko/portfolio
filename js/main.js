@@ -327,7 +327,6 @@ function main() {
 		var rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
 		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
 		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
-
 		var lengthArr = innerText.length;
 
 		function fadeText() {
@@ -361,39 +360,6 @@ function main() {
 
 		var timerId = setInterval(fadeText, 8000);
 
-        var lengthArr  = innerText.length;
-
-function fadeText() {
-	if (opacity > 0.004 && flagText == true){
-     opacity  -= 0.004;
-	   if (opacity < 0.004 && indexText  < lengthArr-1) {
-		indexText ++;
-		
-	   }
-	   else if (opacity < 0.004 && indexText  === lengthArr-1) {
-		indexText = 0;		
-	   }
-
-	   else {
-       clearInterval(timerId);
-	   }
-	}
-	else if (opacity < 0.06 || (opacity < 0.8 && flagText == false)){
-	  opacity  += 0.005 ;
-	  flagText = false;
-	}
-	else {
-		setTimeout(func, 3000);
-	}
-}
-
-function func() {
-	flagText = true;
-	clearInterval(timerId);
-}
-
-var timerId = setInterval(fadeText, 8000);
-		
 		for (var p of points) {
 			p = rotation.multiplyVector(p);
 			ctx.beginPath();
