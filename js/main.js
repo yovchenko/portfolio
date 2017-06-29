@@ -349,7 +349,7 @@ function main() {
 				flagText = false;
 			}
 			else {
-				setTimeout(func, 3000);
+				setTimeout(func, 1000);
 			}
 		}
 
@@ -358,7 +358,7 @@ function main() {
 			clearInterval(timerId);
 		}
 
-		var timerId = setInterval(fadeText, 8000);
+		var timerId = setInterval(fadeText, 6000);
 
 		for (var p of points) {
 			p = rotation.multiplyVector(p);
