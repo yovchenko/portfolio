@@ -39,7 +39,7 @@ header {
 }
 
 .svgIcons:hover,.svgIcons:focus {
-  box-shadow:0px 0px 10px 10px rgba(255,255,255,0.20),0px 0px 10px 10px rgba(255,255,255,0.20);
+  box-shadow:0px 0px 10px 10px rgba(255,255,255,0.60),0px 0px 10px 10px rgba(255,255,255,0.60);
 }
 
 .svgIcons > a[href]:hover, .svgIcons > a[href]:focus {
@@ -95,7 +95,6 @@ header {
 main {
  display: flex;
  position: relative;
- padding-top: -79.641px;
  min-height: 100%;
  max-width: 1200px;
  margin: 0 auto;
@@ -142,9 +141,9 @@ canvas {
 
 .myPhoto {
   max-width: 650px;
-  height: 100%;
   position: absolute;
   z-index: 1;
+  display: none;
 }
 
 footer {
