@@ -1,12 +1,12 @@
-html {
+html,body {
    height: 100%;
    box-sizing: border-box;
+   font-family: mainFont;
+   margin: 0;
 }
 
 body {
 	 background-color: rgba(41.2%, 53.7%, 95.2%,0.17);
-   margin: 0;
-   min-height: 100%;
 }
 
  @font-face {
@@ -94,9 +94,10 @@ header {
 
 main {
  display: flex;
+ min-height: 100%;
  max-width: 1200px;
  margin: 0 auto;
- 
+ margin-bottom: -79.641px;
 }
 
 .main {
@@ -140,14 +141,17 @@ canvas {
 
 .myPhoto {
   max-width: 650px;
-  height: 100%;
   position: absolute;
   z-index: 1;
 }
 
 footer {
   display: flex;
-  height: 79.641px;
-  width: 100%;
   background-color: rgba(41.2%, 53.7%, 95.2%,0.27);
+  height: 79.641px;
+}
+
+.footer {
+   max-width: 1200px;
+   margin: 0 auto;
 }
