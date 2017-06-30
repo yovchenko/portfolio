@@ -94,10 +94,11 @@ header {
 
 main {
  display: flex;
+ position: relative;
+ padding-top: -79.641px;
  min-height: 100%;
  max-width: 1200px;
  margin: 0 auto;
- margin-bottom: -79.641px;
 }
 
 .main {
@@ -141,6 +142,7 @@ canvas {
 
 .myPhoto {
   max-width: 650px;
+  height: 100%;
   position: absolute;
   z-index: 1;
 }
@@ -154,4 +156,5 @@ footer {
 .footer {
    max-width: 1200px;
    margin: 0 auto;
+   margin-top: -79.641px;
 }
