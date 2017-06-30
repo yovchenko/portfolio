@@ -108,7 +108,7 @@ main {
 .wrapperCanvas {
   display: flex;
   width: 100%;
-  height: 650px;
+  height: 100%;
   position: relative;
   margin: 0px 0px  0px 0px;
 	align-items: center;
@@ -141,6 +141,7 @@ canvas {
 
 .myPhoto {
   max-width: 650px;
+  height: 100%;
   position: absolute;
   z-index: 0;
   display: none;
