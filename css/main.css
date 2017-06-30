@@ -142,7 +142,7 @@ canvas {
 .myPhoto {
   max-width: 650px;
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   display: none;
 }
 
