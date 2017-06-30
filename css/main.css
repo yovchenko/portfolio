@@ -133,7 +133,6 @@ canvas {
 .myPhoto {
   display: flex;
   max-width: 650px;
-  height: 650px;;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
   position: absolute;
