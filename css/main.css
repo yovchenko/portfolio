@@ -102,10 +102,12 @@ header {
   display: flex;
   width: 100%;
   height: 650px;
+  position: relative;
   margin: 0px 0  0px 0px;
 	align-items: center;
 	justify-content: center;
   background-color: rgba(41.2%, 53.7%, 95.2%,0.00);
+   overflow: hidden;
 }
 
 canvas {
@@ -131,7 +133,6 @@ canvas {
 }
 
 .myPhoto {
-  display: flex;
   max-width: 650px;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
