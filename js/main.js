@@ -222,7 +222,6 @@ ctx = document.getElementById('canvas');
 ctx = c.getContext('2d');
 ctx.fillStyle = 'rgb(255,255,255)';
   
-
 	function letsDance() {
 		var color = [255, 255, 255];
 		function myLoop() {
@@ -331,6 +330,16 @@ function render() {
 		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
 		var lengthArr = innerText.length;
 
+		for (var p of points) {
+			p = rotation.multiplyVector(p);
+			ctx.beginPath();
+			ctx.arc(p.x + c.width / 2, p.y + c.height / 2, 2, 0, 2 * Math.PI);
+			ctx.closePath();
+			ctx.fill();
+		}
+        
+		var timerText = setInterval(fadeText, 8000); 
+		
 		function fadeText() {
 			if (opacity > 0.004 && flagText == true) {
 				opacity -= 0.004;
@@ -343,7 +352,7 @@ function render() {
 				}
 
 				else {
-					clearInterval(timerId);
+					clearInterval(timerText);
 				}
 			}
 			else if (opacity < 0.06 || (opacity < 0.8 && flagText == false)) {
@@ -351,25 +360,14 @@ function render() {
 				flagText = false;
 			}
 			else {
-				setTimeout(func, 1000);
+				setTimeout(func, 500);
 			}
 		}
-
 		function func() {
 			flagText = true;
-			clearInterval(timerId);
+			
 		}
-
-		var timerId = setInterval(fadeText, 6000); 
-
-		for (var p of points) {
-			p = rotation.multiplyVector(p);
-			ctx.beginPath();
-			ctx.arc(p.x + c.width / 2, p.y + c.height / 2, 2, 0, 2 * Math.PI);
-			ctx.closePath();
-			ctx.fill();
-		}
-
+        
 	}
 	loop();
 	letsDance();
