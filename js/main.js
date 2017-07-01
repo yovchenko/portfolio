@@ -206,8 +206,8 @@ var points = [];
 var flagText = true;
 var flag = true;
 var width = 120;
-var numOfPoints = 40;
-var testCases = 40;
+var numOfPoints = 20;
+var testCases = 20;
 var opacity = 0.8;
 var innerText = ["JavaScript","jQuery","HTML5","CSS3","VBS","{ C }","SQL"];
 var indexText = 0;
@@ -233,7 +233,7 @@ function main() {
 					color[colorNum] -= randomColor;
 					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
 
-					for (var i = 0; i < numOfPoints; i = i + 1 * 128) {
+					for (var i = 0; i < numOfPoints; i = i + 1 * 256) {
 						numOfPoints++;
 						buf = [];
 						for (var j = 0; j < testCases; j++) {
@@ -270,7 +270,7 @@ function main() {
 					else {
 						colorNum -= 5;
 					}
-					for (var i = 0; i < numOfPoints; i = i + 1 * 128) {
+					for (var i = 0; i < numOfPoints; i = i + 1 * 256) {
 						numOfPoints--;
 						buf = [];
 						for (var j = 0; j < testCases; j++) {
@@ -329,7 +329,7 @@ function main() {
 		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
 		var lengthArr = innerText.length;
 
-		function fadeText() {
+	/*	function fadeText() {
 			if (opacity > 0.004 && flagText == true) {
 				opacity -= 0.004;
 				if (opacity < 0.004 && indexText < lengthArr - 1) {
@@ -358,7 +358,7 @@ function main() {
 			clearInterval(timerId);
 		}
 
-		var timerId = setInterval(fadeText, 6000);
+		var timerId = setInterval(fadeText, 6000); */
 
 		for (var p of points) {
 			p = rotation.multiplyVector(p);
