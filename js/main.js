@@ -210,7 +210,7 @@ var flag = true;
 var width = 175;
 var numOfPoints = 40;
 var testCases = 40;
-var opacity = 0.8;
+var opacity = 1.0;
 var innerText = ["JavaScript","jQuery","HTML5","CSS3","VBS","{ C }","SQL"];
 var indexText = 0;
 var angle = new Vector3(0, 0, 0);
@@ -341,16 +341,17 @@ function render() {
 			ctx.fill();
 		}
 
-		var timerText = setInterval(fadeText, 5000); 
+		var timerText = setInterval(fadeText, 6000); 
 		
 		function fadeText() {
-			if (opacity > 0.004 && flagText == true) {
-				opacity -= 0.004;
-				if (opacity < 0.004 && indexText < lengthArr - 1) {
+			if (opacity > 0.005 && flagText == true) {
+				opacity -= 0.005;
+				if (opacity < 0.005 && indexText < lengthArr - 1) {
 					indexText++;
+					flagText = false;
 
 				}
-				else if (opacity < 0.004 && indexText === lengthArr - 1) {
+				else if (opacity < 0.005 && indexText === lengthArr - 1) {
 					indexText = 0;
 				}
 
@@ -358,8 +359,8 @@ function render() {
 					clearInterval(timerText);
 				}
 			}
-			else if (opacity < 0.008 || (opacity < 0.8 && flagText == false)) {
-				opacity += 0.004;
+			else if (opacity < 1.0 || (opacity < 0.01 && flagText == false)) {
+				opacity += 0.005;
 				flagText = false;
 			}
 			else {
