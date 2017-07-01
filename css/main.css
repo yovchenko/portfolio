@@ -126,7 +126,6 @@ canvas {
   margin-top: 8px;
   border: 1px solid transparent;
   border-radius: 200px;
- 
 }
 
 .sphere {
@@ -135,14 +134,14 @@ canvas {
   min-width: 250px;
   align-self: flex-end;
   z-index: 1;
+  display: none;
 }
 
 .sphereContainer {
   display: flex;
   margin-bottom: 15px;
+  position: relative;
   margin-right: 55px;
-  position: absolute;
-  bottom: 0;
   justify-content:center;
   align-self: flex-end;
 }
@@ -153,6 +152,7 @@ canvas {
   bottom: 0px;
   position: absolute;
   z-index: 0;
+  display: none;
   
 }
 
