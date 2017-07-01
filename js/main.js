@@ -228,7 +228,7 @@ ctx.fillStyle = 'rgb(255,255,255)';
 			var t = setTimeout(function () {
 				var randomColor;
 				var colorNum = 0;
-				if (color[colorNum] > 25 && flag == true) {
+				if (color[colorNum] > 35 && flag == true) {
 
 					randomColor = Math.floor((Math.random() * 10) + 1);
 					color[colorNum] -= randomColor;
@@ -261,8 +261,8 @@ ctx.fillStyle = 'rgb(255,255,255)';
 					numOfPoints++;
 					myLoop();
 				}
-				else if (color[colorNum] < 230 || (flag == false && numOfPoints > 40)) {
-					if (color[colorNum] < 230) {
+				else if (color[colorNum] < 220 || (flag == false && numOfPoints > 40)) {
+					if (color[colorNum] < 220) {
 						randomColor = Math.floor((Math.random() * 10) + 1);
 						color[colorNum] += randomColor;
 						ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
