@@ -207,7 +207,7 @@ var c, ctx;
 var points = [];
 var flagText = true;
 var flag = true;
-var width = 120;
+var width = 175;
 var numOfPoints = 40;
 var testCases = 40;
 var opacity = 0.8;
