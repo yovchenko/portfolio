@@ -222,9 +222,6 @@ ctx = document.getElementById('canvas');
 ctx = c.getContext('2d');
 ctx.fillStyle = 'rgb(255,255,255)';
   
-str = JSON.stringify(ctx);
-str = JSON.stringify(ctx, null, 4); // (Optional) beautiful indented output.
-alert(ctx); // Displays output using window.alert()
 
 	function letsDance() {
 		var color = [255, 255, 255];
