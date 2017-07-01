@@ -210,7 +210,7 @@ var flag = true;
 var width = 175;
 var numOfPoints = 40;
 var testCases = 40;
-var opacity = 0.8;
+var opacity = 0.9;
 var innerText = ["JavaScript","jQuery","HTML5","CSS3","VBS","{ C }","SQL"];
 var indexText = 0;
 var angle = new Vector3(0, 0, 0);
@@ -319,7 +319,7 @@ function update() {
 
 function render() {
 		ctx.clearRect(0, 0, c.width, c.height);
-		ctx.font = "50px mainFont";
+		ctx.font = "65px mainFont";
 		ctx.textAlign = "center";
 		ctx.textBaseline = "middle";
 		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
