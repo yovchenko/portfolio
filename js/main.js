@@ -230,7 +230,7 @@ ctx.fillStyle = 'rgb(255,255,255)';
 				var colorNum = 0;
 				if (color[colorNum] > 25 && flag == true) {
 
-					randomColor = Math.floor((Math.random() * 5) + 1);
+					randomColor = Math.floor((Math.random() * 10) + 1);
 					color[colorNum] -= randomColor;
 					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
 
@@ -263,13 +263,13 @@ ctx.fillStyle = 'rgb(255,255,255)';
 				}
 				else if (color[colorNum] < 230 || (flag == false && numOfPoints > 40)) {
 					if (color[colorNum] < 230) {
-						randomColor = Math.floor((Math.random() * 5) + 1);
+						randomColor = Math.floor((Math.random() * 10) + 1);
 						color[colorNum] += randomColor;
 						ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
 						colorNum++;
 					}
 					else {
-						colorNum -= 5;
+						colorNum -= 10;
 					}
 					for (var i = 0; i < numOfPoints; i = i + 1 * 256) {
 						numOfPoints--;
@@ -367,9 +367,8 @@ function render() {
 		
         
 	}
-	
-	loop();
 	letsDance();
+	loop();
 	
 }
 
