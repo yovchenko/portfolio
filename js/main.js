@@ -225,7 +225,7 @@ ctx.fillStyle = 'rgb(255,255,255)';
 	function letsDance() {
 		var color = [255, 255, 255];
 		function myLoop() {
-			var t = setTimeout(function () {
+			var loopColor = setTimeout(function () {
 				var randomColor;
 				var colorNum = 0;
 				if (color[colorNum] > 35 && flag == true) {
@@ -303,7 +303,7 @@ ctx.fillStyle = 'rgb(255,255,255)';
 					flag = true;
 					myLoop();
 				}
-			}, 850)
+			}, 1500)
 		}
 		myLoop();
 	}
