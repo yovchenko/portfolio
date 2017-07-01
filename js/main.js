@@ -259,6 +259,7 @@ ctx.fillStyle = 'rgb(255,255,255)';
 					}
 					colorNum++;
 					numOfPoints++;
+					clearTimeout(loopColor);
 					myLoop();
 				}
 				else if (color[colorNum] < 220 || (flag == false && numOfPoints > 40)) {
@@ -296,14 +297,16 @@ ctx.fillStyle = 'rgb(255,255,255)';
 					}
 					numOfPoints--;
 					flag = false;
+					clearTimeout(loopColor);
 					myLoop();
 				}
 				else {
 					numOfPoints = 40;
 					flag = true;
+					clearTimeout(loopColor);
 					myLoop();
 				}
-			}, 1500)
+			}, 1200)
 		}
 		myLoop();
 	}
