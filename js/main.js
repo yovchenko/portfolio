@@ -337,8 +337,8 @@ function render() {
 			ctx.closePath();
 			ctx.fill();
 		}
-        
-		var timerText = setInterval(fadeText, 8000); 
+
+		var timerText = setInterval(fadeText, 5000); 
 		
 		function fadeText() {
 			if (opacity > 0.004 && flagText == true) {
@@ -355,22 +355,22 @@ function render() {
 					clearInterval(timerText);
 				}
 			}
-			else if (opacity < 0.06 || (opacity < 0.8 && flagText == false)) {
-				opacity += 0.005;
+			else if (opacity < 0.008 || (opacity < 0.8 && flagText == false)) {
+				opacity += 0.004;
 				flagText = false;
 			}
 			else {
-				setTimeout(func, 500);
+				flagText = true;
+				clearInterval(timerText);
 			}
 		}
-		function func() {
-			flagText = true;
-			
-		}
+		
         
 	}
+	
 	loop();
 	letsDance();
+	
 }
 
 main();
