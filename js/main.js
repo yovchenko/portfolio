@@ -201,6 +201,8 @@ Matrix3.scale = function (vec) {
 
 //This is what matters
 
+function main() {
+
 var c, ctx;
 var points = [];
 var flagText = true;
@@ -213,14 +215,17 @@ var innerText = ["JavaScript","jQuery","HTML5","CSS3","VBS","{ C }","SQL"];
 var indexText = 0;
 var angle = new Vector3(0, 0, 0);
 var angleSpeed = new Vector3(Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008);
-function main() {
-	c = document.getElementById("canvas");
-	c.width = 300;
-	c.height = 300;
-	ctx = c.getContext("2d");
-	ctx.fillStyle = 'rgb(255,255,255)';
+c = document.getElementById("canvas");
+c.width = 300;
+c.height = 300;
+ctx = document.getElementById('canvas');
+ctx = c.getContext('2d');
+ctx.fillStyle = 'rgb(255,255,255)';
+  
+str = JSON.stringify(ctx);
+str = JSON.stringify(ctx, null, 4); // (Optional) beautiful indented output.
+alert(ctx); // Displays output using window.alert()
 
-	letsDance();
 	function letsDance() {
 		var color = [255, 255, 255];
 		function myLoop() {
@@ -307,16 +312,16 @@ function main() {
 		myLoop();
 	}
 
-	function loop() {
+function loop() {
 		update();
 		render();
 		window.requestAnimationFrame(loop);
 	}
-	function update() {
+function update() {
 		angle.add(angleSpeed);
 	}
 
-	function render() {
+function render() {
 		ctx.clearRect(0, 0, c.width, c.height);
 		ctx.font = "50px mainFont";
 		ctx.textAlign = "center";
@@ -370,6 +375,7 @@ function main() {
 
 	}
 	loop();
+	letsDance();
 }
 
 main();
