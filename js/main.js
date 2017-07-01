@@ -234,7 +234,7 @@ ctx.fillStyle = 'rgb(255,255,255)';
 					color[colorNum] -= randomColor;
 					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
 
-					for (var i = 0; i < numOfPoints; i = i + 1 * 256) {
+					for (var i = 0; i < numOfPoints; i = i + 1 * 64) {
 						numOfPoints++;
 						buf = [];
 						for (var j = 0; j < testCases; j++) {
@@ -271,7 +271,7 @@ ctx.fillStyle = 'rgb(255,255,255)';
 					else {
 						colorNum -= 10;
 					}
-					for (var i = 0; i < numOfPoints; i = i + 1 * 256) {
+					for (var i = 0; i < numOfPoints; i = i + 1 * 64) {
 						numOfPoints--;
 						buf = [];
 						for (var j = 0; j < testCases; j++) {
