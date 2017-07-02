@@ -170,7 +170,7 @@ canvas {
 
 footer {
   display: flex;
-  height: 89.641px;
+  height: 94.64px;
   background-color: rgba(0%, 0%, 0%, 0.1);
   background-size: cover;
 }
@@ -178,5 +178,5 @@ footer {
 .footer {
    max-width: 1200px;
    margin: 0 auto;
-   margin-top: -89.641px;
+   margin-top: -94.64px;
 }
