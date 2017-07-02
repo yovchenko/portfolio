@@ -26,10 +26,10 @@
     height: 150px;
     margin: -85px 0 0 -85px;
     border-radius: 50%;
-    border: 5px solid rgba(10.3%, 88.5%, 98.4%, 0.68);
-    box-shadow: inset 5px 5px 5px 5px rgba(88%, 32.3%, 100%, 0.45);
-    -moz-box-shadow: inset 5px 5px 5px 5px rgba(88%, 32.3%, 100%, 0.45);
-    -webkit-box-shadow: inset 5px 5px 5px 5px rgba(88%, 32.3%, 100%, 0.45);
+    border: 5px solid rgba(255%, 255%, 255%, 0.1);
+    box-shadow: 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.25);
+    -moz-box-shadow: inset 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.25);
+    -webkit-box-shadow:  inset 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.25);
     -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
     z-index: 1001;
@@ -38,15 +38,16 @@
     #loader:before {
         content: "";
         position: absolute;
-        top: 5px;
-        left: 5px;
-        right: 5px;
-        bottom: 5px;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
         border-radius: 50%;
-        border: 5px solid rgba(99.9%, 13%, 6.9%, 0.6);
-         box-shadow: 5px 5px 5px 5px rgba(99.5%, 84.3%, 5%, 0.68);
-        -moz-box-shadow: 5px 5px 5px 5px rgba(99.5%, 84.3%, 5%, 0.68);
-        -webkit-box-shadow: 5px 5px 5px 5px rgba(99.5%, 84.3%, 5%, 0.68);
+        border: 5px solid rgba(255%, 255%, 255%, 0.6);
+        border-top-color: rgba(255%, 255%, 255%, 0.6);
+         box-shadow: 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.6);
+        -moz-box-shadow: 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.6);
+        -webkit-box-shadow: 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.6);
         -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
         animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
     }
@@ -59,12 +60,12 @@
         right: 15px;
         bottom: 15px;
         border-radius: 50%;
-        border: 5px solid rgba(255%, 255%, 255%, 0.68);
-        -moz-box-shadow: 5px 10px 5px 6px rgba(255%, 255%, 255%, 0.55);
-        -webkit-box-shadow: 5px 10px 5px 6px rgba(255%, 255%, 255%, 0.55);
-        box-shadow: 5px 10px 5px 6px rgba(255%, 255%, 255%, 0.55);
+        border: 3px solid rgba(255%, 255%, 255%, 0.9);
+        -moz-box-shadow: 5px 10px 5px 6px rgba(255%, 255%, 255%, 0.65);
+        -webkit-box-shadow: 5px 10px 5px 6px rgba(255%, 255%, 255%, 0.65);
+        box-shadow: 5px 10px 5px 6px rgba(255%, 255%, 255%, 0.65);
         -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-          animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+        animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
     }
 
     @-webkit-keyframes spin {
