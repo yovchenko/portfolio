@@ -15,7 +15,7 @@ body {
 }
 
 header {
-  background-color:rgba(96.4%, 39.9%, 13.1%, 0.8);
+  background-color: rgba(96.4%, 39.9%, 13.1%, 0.8);
   padding: 0 0 15px 0;
 }
 
@@ -164,16 +164,15 @@ canvas {
   min-height: 55%;
   max-width: 100%;
   min-width: 650px;
-  z-index: 0;
   display: none;
-   position: absolute;
-   bottom: 0px;
+  position: absolute;
+  bottom: 0px;
 }
 
 footer {
   display: flex;
-  background-color: rgba(96.4%, 39.9%, 13.1%, 0.8);
   height: 79.641px;
+  background-color: rgba(96.4%, 39.9%, 13.1%, 1);
 }
 
 .footer {
