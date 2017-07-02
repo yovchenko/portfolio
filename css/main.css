@@ -15,8 +15,9 @@ body {
 }
 
 header {
-  background-color: rgba(96.4%, 39.9%, 13.1%, 0.8);
+  background-color: rgba(0%, 0%, 0%, 0.1);
   padding: 0 0 15px 0;
+  background-size: cover;
 }
 
 .header {
@@ -170,7 +171,8 @@ canvas {
 footer {
   display: flex;
   height: 79.641px;
-  background-color: rgba(96.4%, 39.9%, 13.1%, 1);
+  background-color: rgba(0%, 0%, 0%, 0.1);
+  background-size: cover;
 }
 
 .footer {
