@@ -147,7 +147,6 @@ canvas {
   min-width: 350px;
   align-self: flex-end;
   z-index: 1;
-  display: none;
 }
 
 .sphereContainer {
@@ -164,7 +163,6 @@ canvas {
   min-height: 55%;
   max-width: 100%;
   min-width: 650px;
-  display: none;
   position: absolute;
   bottom: 0px;
 }
