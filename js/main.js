@@ -341,7 +341,7 @@ function render() {
 			ctx.fill();
 		}
 
-		var timerText = setInterval(fadeText, 6000); 
+		var timerText = setInterval(fadeText, 2500); 
 		
 		function fadeText() {
 			if (opacity > 0.005 && flagText == true) {
