@@ -24,11 +24,12 @@
     top: 50%;
     width: 150px;
     height: 150px;
-    margin: -75px 0 0 -75px;
+    margin: -85px 0 0 -85px;
     border-radius: 50%;
-    border: 3px solid transparent;
-    border-top-color: #3498db;
-
+    border: 5px solid rgba(10.3%, 88.5%, 98.4%, 0.68);
+    box-shadow: inset 5px 5px 5px 5px rgba(88%, 32.3%, 100%, 0.45);
+    -moz-box-shadow: inset 5px 5px 5px 5px rgba(88%, 32.3%, 100%, 0.45);
+    -webkit-box-shadow: inset 5px 5px 5px 5px rgba(88%, 32.3%, 100%, 0.45);
     -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
     animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
     z-index: 1001;
@@ -42,9 +43,10 @@
         right: 5px;
         bottom: 5px;
         border-radius: 50%;
-        border: 3px solid transparent;
-        border-top-color: #e74c3c;
-
+        border: 5px solid rgba(99.9%, 13%, 6.9%, 0.6);
+         box-shadow: 5px 5px 5px 5px rgba(99.5%, 84.3%, 5%, 0.68);
+        -moz-box-shadow: 5px 5px 5px 5px rgba(99.5%, 84.3%, 5%, 0.68);
+        -webkit-box-shadow: 5px 5px 5px 5px rgba(99.5%, 84.3%, 5%, 0.68);
         -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
         animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
     }
@@ -57,9 +59,10 @@
         right: 15px;
         bottom: 15px;
         border-radius: 50%;
-        border: 3px solid transparent;
-        border-top-color: #f9c922;
-
+        border: 5px solid rgba(255%, 255%, 255%, 0.68);
+        -moz-box-shadow: 5px 10px 5px 6px rgba(255%, 255%, 255%, 0.55);
+        -webkit-box-shadow: 5px 10px 5px 6px rgba(255%, 255%, 255%, 0.55);
+        box-shadow: 5px 10px 5px 6px rgba(255%, 255%, 255%, 0.55);
         -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
           animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
     }
