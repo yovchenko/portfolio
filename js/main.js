@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	setTimeout(function(){
 		$('body').addClass('loaded');
-		$('h1').css('color','#222222')
+		$('.entry-title').css('display','none');
 	}, 2500);
 
 });

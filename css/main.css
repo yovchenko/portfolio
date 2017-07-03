@@ -1,7 +1,7 @@
 html,body {
    height: 100%;
    box-sizing: border-box;
-   font-family: mainFont;
+   font-family: mainFont,"Georgia",serif;
    margin: 0;
 }
 
