@@ -350,10 +350,10 @@ function render() {
 				}
 
 				else {
-				  
+				  flagText = true;
 				}
 			}
-			else if (opacity < 1.0 || (opacity < 0.01 && flagText == false)) {
+			else if (opacity < 0.95 || (opacity < 0.01 && flagText == false)) {
 				opacity += 0.005;
 				flagText = false;
 			}
@@ -363,8 +363,6 @@ function render() {
 	}
 	letsDance();
 	loop();
-	
 }
 
 setTimeout(main, 2500);
-main();
