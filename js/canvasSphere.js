@@ -202,15 +202,14 @@ Matrix3.scale = function (vec) {
 //This is what matters
 
 function main() {
-
 var c, ctx;
+var opacity = 1.0;
 var points = [];
 var flagText = true;
 var flag = true;
 var width = 175;
 var numOfPoints = 40;
 var testCases = 40;
-var opacity = 1.0;
 var innerText = ["JavaScript","jQuery","HTML5","CSS3","VBS","{ C }","SQL"];
 var indexText = 0;
 var angle = new Vector3(0, 0, 0);
@@ -321,18 +320,17 @@ function update() {
 	}
 
 function render() {
-		ctx.clearRect(0, 0, c.width, c.height);
-		ctx.font = "65px mainFont";
-		ctx.textAlign = "center";
-		ctx.textBaseline = "middle";
-		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
-		ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
 		var rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
 		var rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
 		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
 		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
 		var lengthArr = innerText.length;
-
+		ctx.clearRect(0, 0, c.width, c.height);
+		ctx.font = "65px mainFont";
+		ctx.textAlign = "center";
+        ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
+		ctx.textBaseline = "middle";
+		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
 		for (var p of points) {
 			p = rotation.multiplyVector(p);
 			ctx.beginPath();
@@ -341,22 +339,18 @@ function render() {
 			ctx.fill();
 		}
 
-		var timerText = setInterval(fadeText, 2500); 
-		
-		function fadeText() {
 			if (opacity > 0.005 && flagText == true) {
 				opacity -= 0.005;
 				if (opacity < 0.005 && indexText < lengthArr - 1) {
 					indexText++;
 					flagText = false;
-
 				}
 				else if (opacity < 0.005 && indexText === lengthArr - 1) {
 					indexText = 0;
 				}
 
 				else {
-					clearInterval(timerText);
+				  
 				}
 			}
 			else if (opacity < 1.0 || (opacity < 0.01 && flagText == false)) {
@@ -365,15 +359,12 @@ function render() {
 			}
 			else {
 				flagText = true;
-				clearInterval(timerText);
 			}
-		}
-		
-        
 	}
 	letsDance();
 	loop();
 	
 }
 
+setTimeout(main, 2500);
 main();

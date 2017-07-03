@@ -9,7 +9,6 @@ $(document).ready(function() {
            clearInterval(pulse);
 		   }
     }, 100);
- 
 	setTimeout(function(){
 		$('body').addClass('loaded');
 		$('.entry-title').css('display','none');
