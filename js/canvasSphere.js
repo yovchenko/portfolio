@@ -207,7 +207,7 @@ function main() {
 	var points = [];
 	var flagText = true;
 	var flag = true;
-	var width = 180;
+	var width = 100;
 	var innerText = ["JavaScript", "jQuery", "HTML5", "CSS3", "VBS", "{ C }", "SQL"];
 	var indexText = 0;
 	var numOfPoints = 1;
@@ -217,8 +217,8 @@ function main() {
 	var angle = new Vector3(0, 0, 0);
 	var angleSpeed = new Vector3(Math.random() * 0.009 - 0.015, Math.random() * 0.009 - 0.015, Math.random() * 0.009 - 0.015);
 	c = document.getElementById("canvas");
-	c.width = 380;
-	c.height = 380;
+	c.width = 250;
+	c.height = 250;
 	ctx = document.getElementById('canvas');
 	ctx = c.getContext('2d');
 	ctx.fillStyle = 'rgb(255,255,255)';
