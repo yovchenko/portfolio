@@ -322,6 +322,8 @@ var init = function loop() {
 		render();
 		window.requestAnimationFrame(loop);
 	}
+
+window.setInterval(update, 10);
 	function update() {
 		angle.add(angleSpeed);
 	}
