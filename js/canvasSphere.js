@@ -343,8 +343,8 @@ function main() {
 
 		for (var p of points) {
 			p = rotation.multiplyVector(p);
-			ctx.arc(p.x + c.width / 2, p.y + c.height / 2, 2, 0, 2 * Math.PI);
 			ctx.beginPath();
+			ctx.arc(p.x + c.width / 2, p.y + c.height / 2, 2, 0, 2 * Math.PI);
 			ctx.closePath();
 			ctx.fill();
 		}
