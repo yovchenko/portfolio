@@ -207,7 +207,7 @@ function main() {
 	var points = [];
 	var flagText = true;
 	var flag = true;
-	var width = 180;
+	var width = 150;
 	var innerText = ["JavaScript", "jQuery", "HTML5", "CSS3", "VBS", "{ C }", "SQL"];
 	var indexText = 0;
 	var numOfPoints = 1;
@@ -332,7 +332,7 @@ function main() {
 		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
 		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
 		var lengthArr = innerText.length;
-		ctx.clearRect(0, 0, c.width, c.height);
+		ctx.clearRect(23, 23, c.width, c.height);
 		ctx.font = "65px mainFont";
 		ctx.textAlign = "center";
 		ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
