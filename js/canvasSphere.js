@@ -317,8 +317,6 @@ function main() {
 	}
 
 	letsDance();
-	loop();
-
 	function loop() {
 		update();
 		render();
@@ -348,29 +346,8 @@ function main() {
 			ctx.fill();
 		}
 
-		if (opacity > 0.005 && flagText == true) {
-			opacity -= 0.005;
-			if (opacity < 0.005 && indexText < lengthArr - 1) {
-				indexText++;
-				flagText = false;
-			}
-			else if (opacity < 0.005 && indexText === lengthArr - 1) {
-				indexText = 0;
-			}
-
-			else {
-				flagText = true;
-			}
-		}
-		else if (opacity < 0.95 || (opacity < 0.01 && flagText == false)) {
-			opacity += 0.005;
-			flagText = false;
-		}
-		else {
-			flagText = true;
-		}
 	}
-	loop();
+	setTimeout(loop, 100);
 }
 
 setTimeout(main, 2500);
