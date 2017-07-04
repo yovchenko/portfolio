@@ -207,7 +207,7 @@ function main() {
 	var points = [];
 	var flagText = true;
 	var flag = true;
-	var width = 130;
+	var width = 125;
 	var innerText = ["Node.js", "jQuery", "HTML5", "CSS3", "VBS", "{ C }", "SQL"];
 	var indexText = 0;
 	var numOfPoints = 1;
@@ -332,20 +332,20 @@ function main() {
 		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
 		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
 		var lengthArr = innerText.length;
-		ctx.clearRect(23, 23, 300, 300);
+		ctx.clearRect(23, 23, 265, 265);
 		ctx.font = "65px mainFont";
 		ctx.textAlign = "center";
 		ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
 		ctx.textBaseline = "middle";
 		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
+		ctx.beginPath();
 
 		for (var p of points) {
 			p = rotation.multiplyVector(p);
 			ctx.arc(p.x + c.width / 2, p.y + c.height / 2, 2, 0, 2 * Math.PI);
-			ctx.beginPath();
 			ctx.closePath();
-			ctx.fill();
 		}
+		ctx.fill();
 
 	if (opacity > 0.005 && flagText == true) {
  			opacity -= 0.005;
