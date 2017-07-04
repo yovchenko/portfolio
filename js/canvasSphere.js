@@ -266,6 +266,7 @@ function main() {
 					}
 				}, 500);
 			}
+
 			else if (flag == false) {
 				for (var i = 0; i < numOfPoints; i++) {
 					var buf = [];
@@ -338,14 +339,16 @@ function main() {
 		ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
 		ctx.textBaseline = "middle";
 		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
-		ctx.beginPath();
+		
 
 		for (var p of points) {
 			p = rotation.multiplyVector(p);
 			ctx.arc(p.x + c.width / 2, p.y + c.height / 2, 2, 0, 2 * Math.PI);
+			ctx.beginPath();
 			ctx.closePath();
+			ctx.fill();
 		}
-		ctx.fill();
+	
 
 	if (opacity > 0.005 && flagText == true) {
  			opacity -= 0.005;
