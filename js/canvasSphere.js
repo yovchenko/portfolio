@@ -207,7 +207,7 @@ function main() {
 	var points = [];
 	var flagText = true;
 	var flag = true;
-	var width = 175;
+	var width = 180;
 	var innerText = ["JavaScript", "jQuery", "HTML5", "CSS3", "VBS", "{ C }", "SQL"];
 	var indexText = 0;
 	var numOfPoints = 1;
