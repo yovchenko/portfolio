@@ -217,8 +217,8 @@ function main() {
 	var angle = new Vector3(0, 0, 0);
 	var angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
 	c = document.getElementById("canvas");
-	c.width = 380;
-	c.height = 380;
+	c.width = 320;
+	c.height = 320;
 	ctx = document.getElementById('canvas');
 	ctx = c.getContext('2d');
 	ctx.fillStyle = 'rgb(255,255,255)';
@@ -338,13 +338,15 @@ function main() {
 		ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
 		ctx.textBaseline = "middle";
 		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
+		ctx.beginPath();
+
 		for (var p of points) {
 			p = rotation.multiplyVector(p);
-			ctx.beginPath();
 			ctx.arc(p.x + c.width / 2, p.y + c.height / 2, 2, 0, 2 * Math.PI);
 			ctx.closePath();
-			ctx.fill();
 		}
+		ctx.fill();
+
 	if (opacity > 0.005 && flagText == true) {
  			opacity -= 0.005;
  			if (opacity < 0.005 && indexText < lengthArr - 1) {
