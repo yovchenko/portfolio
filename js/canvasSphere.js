@@ -215,7 +215,7 @@ function main() {
 	var counter = 0;
 	var color = [255, 255, 255];
 	var angle = new Vector3(0, 0, 0);
-	var angleSpeed = new Vector3(Math.random() * 0.012 - 0.008, Math.random() * 0.012 - 0.008, Math.random() * 0.012 - 0.008);
+	var angleSpeed = new Vector3(Math.random() * 0.01 - 0.015, Math.random() * 0.01 - 0.015, Math.random() * 0.01 - 0.015);
 	c = document.getElementById("canvas");
 	c.width = 380;
 	c.height = 380;
@@ -318,12 +318,11 @@ function main() {
 
 	letsDance();
 var init = function loop() {
+		update();
 		render();
 		window.requestAnimationFrame(loop);
 	}
-
- window.setInterval(update, 10);
-
+	
 	function update() {
 		angle.add(angleSpeed);
 	}
