@@ -222,7 +222,7 @@ function main() {
 	ctx = document.getElementById('canvas');
 	ctx = c.getContext('2d');
 	ctx.fillStyle = 'rgb(255,255,255)';
-    render(ctx);
+	render(ctx);
 	function letsDance() {
 		var loopDots = setTimeout(function () {
 			if (flag == true) {
@@ -250,7 +250,7 @@ function main() {
 					points.push(buf[currentHighest]);
 				}
 
-				var loopColorUp = setTimeout(function () {
+				var loopUp = setTimeout(function () {
 					var randomColor;
 					var colorNum = 0;
 					if (counter < 15) {
@@ -261,7 +261,7 @@ function main() {
 					}
 					else {
 						flag = false;
-						clearTimeout(loopColorUp);
+						clearTimeout(loopUp);
 						letsDance();
 					}
 				}, 500);
@@ -291,19 +291,17 @@ function main() {
 					}
 					points.pop(buf[currentHighest]);
 				}
-				var loopColorDown = setTimeout(function () {
+				var loopDown = setTimeout(function () {
 					var randomColor;
 					var colorNum = 0;
 					if (counter > 0) {
 						counter--;
-						color[colorNum] += randomColor;
-						ctx.fillStyle = "rgb(" + 235 + "," + 235 + "," + 235 + ")";
 						flag = false;
 						letsDance();
 					}
 					else {
 						flag = true;
-						clearTimeout(loopColorDown);
+						clearTimeout(loopDown);
 						letsDance();
 					}
 
@@ -321,7 +319,7 @@ function main() {
 		render();
 		window.requestAnimationFrame(loop);
 	}
-	
+
 	function update() {
 		angle.add(angleSpeed);
 	}
@@ -339,7 +337,6 @@ function main() {
 		ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
 		ctx.textBaseline = "middle";
 		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
-		
 
 		for (var p of points) {
 			p = rotation.multiplyVector(p);
@@ -348,29 +345,29 @@ function main() {
 			ctx.closePath();
 			ctx.fill();
 		}
-	
 
-	if (opacity > 0.005 && flagText == true) {
- 			opacity -= 0.005;
- 			if (opacity < 0.005 && indexText < lengthArr - 1) {
- 				indexText++;
- 				flagText = false;
- 			}
- 			else if (opacity < 0.005 && indexText === lengthArr - 1) {
- 				indexText = 0;
- 			}
- 
- 			else {
- 				flagText = true;
- 			}
- 		}
- 		else if (opacity < 0.95 || (opacity < 0.01 && flagText == false)) {
- 			opacity += 0.005;
- 			flagText = false;
- 		}
- 		else {
- 			flagText = true;
- 		}
+
+		if (opacity > 0.005 && flagText == true) {
+			opacity -= 0.005;
+			if (opacity < 0.005 && indexText < lengthArr - 1) {
+				indexText++;
+				flagText = false;
+			}
+			else if (opacity < 0.005 && indexText === lengthArr - 1) {
+				indexText = 0;
+			}
+
+			else {
+				flagText = true;
+			}
+		}
+		else if (opacity < 0.95 || (opacity < 0.01 && flagText == false)) {
+			opacity += 0.005;
+			flagText = false;
+		}
+		else {
+			flagText = true;
+		}
 	}
 	loop();
 	letsDance();
