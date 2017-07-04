@@ -318,7 +318,7 @@ function main() {
 
 	letsDance();
 var init = function loop() {
-		window.setInterval(updateLoop, 50);	
+		window.setInterval(updateLoop,100);	
 		render();
 		window.requestAnimationFrame(loop);
 	}
