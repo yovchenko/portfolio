@@ -367,7 +367,7 @@ function main() {
  			flagText = true;
  		}
 	}
-	window.setTimeout(loop, 0.1);
+	loop();
 }
 
 setTimeout(main, 2500);
