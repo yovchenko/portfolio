@@ -207,15 +207,15 @@ function main() {
 	var points = [];
 	var flagText = true;
 	var flag = true;
-	var width = 150;
-	var innerText = ["JavaScript", "jQuery", "HTML5", "CSS3", "VBS", "{ C }", "SQL"];
+	var width = 130;
+	var innerText = ["JS", "jQuery", "HTML5", "CSS3", "VBS", "{ C }", "SQL"];
 	var indexText = 0;
 	var numOfPoints = 1;
 	var testCases = 15;
 	var counter = 0;
 	var color = [255, 255, 255];
 	var angle = new Vector3(0, 0, 0);
-	var angleSpeed = new Vector3(Math.random() * 0.006 - 0.009, Math.random() * 0.006 - 0.009, Math.random() * 0.006 - 0.009);
+	var angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
 	c = document.getElementById("canvas");
 	c.width = 380;
 	c.height = 380;
@@ -332,7 +332,7 @@ function main() {
 		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
 		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
 		var lengthArr = innerText.length;
-		ctx.clearRect(23, 23, c.width, c.height);
+		ctx.clearRect(23, 23, 300, 300);
 		ctx.font = "65px mainFont";
 		ctx.textAlign = "center";
 		ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
