@@ -211,7 +211,8 @@ function main() {
 	var innerText = ["JavaScript", "jQuery", "HTML5", "CSS3", "VBS", "{ C }", "SQL"];
 	var indexText = 0;
 	var numOfPoints = 1;
-	var testCases = 30;
+	var testCases = 15;
+	var counter = 0;
 	var color = [255, 255, 255];
 	var angle = new Vector3(0, 0, 0);
 	var angleSpeed = new Vector3(Math.random() * 0.001 - 0.004, Math.random() * 0.001 - 0.004, Math.random() * 0.001 - 0.004);
@@ -252,8 +253,8 @@ function main() {
 				var loopColorUp = setTimeout(function () {
 					var randomColor;
 					var colorNum = 0;
-					if (color[colorNum] > 20 && flag == true) {
-						randomColor = 20;
+					if (counter < 15) {
+						counter++;
 						color[colorNum] -= randomColor;
 						ctx.fillStyle = "rgb(" + 235 + "," + 235 + "," + 235 + ")";
 						letsDance();
@@ -292,8 +293,8 @@ function main() {
 				var loopColorDown = setTimeout(function () {
 					var randomColor;
 					var colorNum = 0;
-					if (color[colorNum] < 245 && flag == false) {
-						randomColor = 20;
+					if (counter > 0) {
+						counter--;
 						color[colorNum] += randomColor;
 						ctx.fillStyle = "rgb(" + 235 + "," + 235 + "," + 235 + ")";
 						flag = false;
