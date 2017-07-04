@@ -317,7 +317,7 @@ function main() {
 	}
 
 	letsDance();
-var init = function loop() {
+function loop() {
 		update();
 		render();
 		window.requestAnimationFrame(loop);
@@ -368,7 +368,7 @@ function update() {
  			flagText = true;
  		}
 	}
-	init();
+	loop();
 }
 
 setTimeout(main, 2500);
