@@ -326,7 +326,7 @@ function main() {
 	}
 
 	function render() {
-		window.setTimeout(update, 500);
+		window.setTimeout(update, 100);
 		var rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
 		var rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
 		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
