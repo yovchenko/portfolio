@@ -208,7 +208,7 @@ function main() {
 	var flagText = true;
 	var flag = true;
 	var width = 130;
-	var innerText = ["JS", "jQuery", "HTML5", "CSS3", "VBS", "{ C }", "SQL"];
+	var innerText = ["Node.js", "jQuery", "HTML5", "CSS3", "VBS", "{ C }", "SQL"];
 	var indexText = 0;
 	var numOfPoints = 1;
 	var testCases = 15;
@@ -371,4 +371,4 @@ function main() {
 	letsDance();
 }
 
-setTimeout(main, 2500);
+setTimeout(main, 2500)
