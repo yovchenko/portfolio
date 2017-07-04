@@ -215,7 +215,7 @@ function main() {
 	var counter = 0;
 	var color = [255, 255, 255];
 	var angle = new Vector3(0, 0, 0);
-	var angleSpeed = new Vector3(Math.random() * 0.009 - 0.015, Math.random() * 0.009 - 0.015, Math.random() * 0.009 - 0.015);
+	var angleSpeed = new Vector3(Math.random() * 0.005 - 0.005, Math.random() * 0.005 - 0.005, Math.random() * 0.005 - 0.005);
 	c = document.getElementById("canvas");
 	c.width = 380;
 	c.height = 380;
@@ -317,15 +317,16 @@ function main() {
 	}
 
 	function loop() {
-		update();
 		render();
 		window.requestAnimationFrame(loop);
 	}
+	
 	function update() {
 		angle.add(angleSpeed);
 	}
 
 	function render() {
+		update();
 		var rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
 		var rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
 		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
