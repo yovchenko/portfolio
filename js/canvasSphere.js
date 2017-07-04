@@ -8,16 +8,16 @@ function Vector3(x, y, z) {
 	this.z = z;
 }
 
-Vector3.prototype.mag = function() {
+Vector3.prototype.mag = function () {
 	return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
 }
 
-Vector3.prototype.distance = function(vec) {
+Vector3.prototype.distance = function (vec) {
 	if (vec instanceof Vector3)
 		return Math.sqrt((this.x - vec.x) * (this.x - vec.x) + (this.y - vec.y) * (this.y - vec.y) + (this.z - vec.z) * (this.z - vec.z));
 }
 
-Vector3.prototype.add = function(vec) {
+Vector3.prototype.add = function (vec) {
 	if (vec instanceof Vector3) {
 		this.x += vec.x;
 		this.y += vec.y;
@@ -26,38 +26,38 @@ Vector3.prototype.add = function(vec) {
 	return this;
 }
 
-Vector3.prototype.subtract = function(vec) {
+Vector3.prototype.subtract = function (vec) {
 	if (vec instanceof Vector3) {
 		this.add(vec.negate);
 	}
 	return this;
 }
 
-Vector3.prototype.negate = function() {
+Vector3.prototype.negate = function () {
 	this.multiply(-1);
 	return this;
 }
 
-Vector3.prototype.multiply = function(n) {
+Vector3.prototype.multiply = function (n) {
 	this.x *= n;
 	this.y *= n;
 	this.z *= n;
 	return this;
 }
 
-Vector3.prototype.divide = function(n) {
+Vector3.prototype.divide = function (n) {
 	if (n != 0) {
 		this.multiply(1 / n);
 	}
 	return this;
 }
 
-Vector3.prototype.normalize = function() {
+Vector3.prototype.normalize = function () {
 	this.divide(this.mag());
 	return this;
 }
 
-Vector3.cross = function(vec1, vec2) {
+Vector3.cross = function (vec1, vec2) {
 	if (vec1 instanceof Vector3 && vec2 instanceof Vector3) {
 		var x = vec1.y * vec2.z - vec1.z * vec2.y;
 		var y = vec1.z * vec2.x - vec1.x * vec2.z;
@@ -66,7 +66,7 @@ Vector3.cross = function(vec1, vec2) {
 	}
 }
 
-Vector3.dot = function(vec1, vec2) {
+Vector3.dot = function (vec1, vec2) {
 	if (vec1 instanceof Vector3 && vec2 instanceof Vector3) {
 		return vec1.x * vec2.x + vec1.y * vec2.y + vec1.z * vec2.z;
 	}
@@ -79,13 +79,13 @@ function Matrix3() {
 	}
 }
 
-Matrix3.prototype.setIdentity = function() {
+Matrix3.prototype.setIdentity = function () {
 	this.data[0 + 0 * 3] = 1;
 	this.data[1 + 1 * 3] = 1;
 	this.data[2 + 2 * 3] = 1;
 }
 
-Matrix3.prototype.add = function(mat) {
+Matrix3.prototype.add = function (mat) {
 	if (mat instanceof Matrix3) {
 		for (var i = 0; i < 9; i++) {
 			this.data[i] += mat.data[i];
@@ -93,32 +93,32 @@ Matrix3.prototype.add = function(mat) {
 	}
 }
 
-Matrix3.prototype.subtract = function(mat) {
+Matrix3.prototype.subtract = function (mat) {
 	if (mat instanceof Matrix3)
 		this.add(mat.negate());
 }
 
-Matrix3.prototype.multiplyScalar = function(n) {
+Matrix3.prototype.multiplyScalar = function (n) {
 	for (var i = 0; i < 9; i++) {
 		this.data[i] *= n;
 	}
 }
 
-Matrix3.prototype.negate = function() {
+Matrix3.prototype.negate = function () {
 	this.multiply(-1);
 }
 
-Matrix3.prototype.multiplyVector = function(vec) {
+Matrix3.prototype.multiplyVector = function (vec) {
 	if (vec instanceof Vector3) {
 		var x = this.data[0 + 0 * 3] * vec.x + this.data[0 + 1 * 3] * vec.y + this.data[0 + 2 * 3] * vec.z;
 		var y = this.data[1 + 0 * 3] * vec.x + this.data[1 + 1 * 3] * vec.y + this.data[1 + 2 * 3] * vec.z;
 		var z = this.data[2 + 0 * 3] * vec.x + this.data[2 + 1 * 3] * vec.y + this.data[2 + 2 * 3] * vec.z;
-		
+
 		return new Vector3(x, y, z);
 	}
 }
 
-Matrix3.prototype.multiplyMatrix = function(mat) {
+Matrix3.prototype.multiplyMatrix = function (mat) {
 	if (mat instanceof Matrix3) {
 		var result = new Matrix3();
 		for (var y = 0; y < 3; y++) {
@@ -134,17 +134,17 @@ Matrix3.prototype.multiplyMatrix = function(mat) {
 	}
 }
 
-Matrix3.prototype.transpose = function() {
+Matrix3.prototype.transpose = function () {
 	var result = new Matrix3();
 	for (var x = 0; x < 3; x++) {
 		for (var y = 0; y < 3; y++) {
-			result.data[y + x * 3] = this.data[x + y * 3]; 
+			result.data[y + x * 3] = this.data[x + y * 3];
 		}
 	}
 	return result;
 }
 
-Matrix3.translate = function(vec) {
+Matrix3.translate = function (vec) {
 	var result = new Matrix3();
 	result.setIdentity();
 	if (vec instanceof Vector2) {
@@ -158,43 +158,43 @@ Matrix3.translate = function(vec) {
 	return result;
 }
 
-Matrix3.rotate = function(angle, x, y, z) {
+Matrix3.rotate = function (angle, x, y, z) {
 	var result = new Matrix3();
 	result.setIdentity();
-	
+
 	var cos = Math.cos(angle);
 	var sin = Math.sin(angle);
 	var omc = 1 - cos;
-	
+
 	result.data[0 + 0 * 3] = x * omc + cos;
 	result.data[1 + 0 * 3] = y * x * omc + z * sin;
 	result.data[2 + 0 * 3] = x * z * omc - y * sin;
-	
+
 	result.data[0 + 1 * 3] = x * y * omc - z * sin;
 	result.data[1 + 1 * 3] = y * omc + cos;
 	result.data[2 + 1 * 3] = y * z * omc + x * sin;
-	
+
 	result.data[0 + 2 * 3] = x * z * omc + y * sin;
 	result.data[1 + 2 * 3] = y * z * omc - x * sin;
 	result.data[2 + 2 * 3] = z * omc + cos;
-	
+
 	return result;
 }
 
-Matrix3.scale = function(vec) {
+Matrix3.scale = function (vec) {
 	var result = new Matrix3();
 	result.setIdentity();
-	
-	if (vec instanceof Vector3) {	
+
+	if (vec instanceof Vector3) {
 		result.data[0 + 0 * 3] = vec.x;
 		result.data[1 + 1 * 3] = vec.y;
 		result.data[2 + 2 * 3] = vec.z;
-		
+
 		return result;
 	} else if (vec instanceof Vector2) {
 		result.data[0 + 0 * 3] = vec.x;
 		result.data[1 + 1 * 3] = vec.y;
-		
+
 		return result;
 	}
 }
@@ -202,138 +202,132 @@ Matrix3.scale = function(vec) {
 //This is what matters
 
 function main() {
-var c, ctx;
-var opacity = 1.0;
-var points = [];
-var flagText = true;
-var flag = true;
-var width = 175;
-var innerText = ["JavaScript","jQuery","HTML5","CSS3","VBS","{ C }","SQL"];
-var indexText = 0;
-var numOfPoints = 0;
-var testCases = 40;
-var color = [255, 255, 255];
-var angle = new Vector3(0, 0, 0);
-var angleSpeed = new Vector3(Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008);
-c = document.getElementById("canvas");
-c.width = 380;
-c.height = 380;
-ctx = document.getElementById('canvas');
-ctx = c.getContext('2d');
-ctx.fillStyle = 'rgb(255,255,255)';
+	var c, ctx;
+	var opacity = 1.0;
+	var points = [];
+	var flagText = true;
+	var flag = true;
+	var width = 175;
+	var innerText = ["JavaScript", "jQuery", "HTML5", "CSS3", "VBS", "{ C }", "SQL"];
+	var indexText = 0;
+	var numOfPoints = 1;
+	var testCases = 30;
+	var color = [255, 255, 255];
+	var angle = new Vector3(0, 0, 0);
+	var angleSpeed = new Vector3(Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008);
+	c = document.getElementById("canvas");
+	c.width = 380;
+	c.height = 380;
+	ctx = document.getElementById('canvas');
+	ctx = c.getContext('2d');
+	ctx.fillStyle = 'rgb(255,255,255)';
 
-function letsDance () {
-	var loopDots = setInterval(function () {
-if (flag == true) {
-	numOfPoints ++;
-	for (var i = 0; i < numOfPoints; i++) {
-		var buf = [];
-		for (var j = 0; j < testCases; j++) {
-			var v = new Vector3(Math.random() * 4 - 2, Math.random() * 4 - 2, Math.random() * 4 - 2);
-			v.normalize().multiply(width);
-			buf.push(v);
-		}
-		var currentSum = 0;
-		var currentHighest = 0;
-		
-		for (var k = 0; k < testCases; k++) {
-			var sum = 0;
-			var p = buf[k];
-			for (var l of points) {
-				sum += p.distance(l);
+	function letsDance() {
+		var loopDots = setTimeout(function () {
+			if (flag == true) {
+				for (var i = 0; i < numOfPoints; i++) {
+					var buf = [];
+					for (var j = 0; j < testCases; j++) {
+						var v = new Vector3(Math.random() * 4 - 2, Math.random() * 4 - 2, Math.random() * 4 - 2);
+						v.normalize().multiply(width);
+						buf.push(v);
+					}
+					var currentSum = 0;
+					var currentHighest = 0;
+
+					for (var k = 0; k < testCases; k++) {
+						var sum = 0;
+						var p = buf[k];
+						for (var l of points) {
+							sum += p.distance(l);
+						}
+						if (sum > currentSum) {
+							currentSum = sum;
+							currentHighest = k;
+						}
+					}
+					points.push(buf[currentHighest]);
+				}
+
+				var loopColorUp = setTimeout(function () {
+					var randomColor;
+					var colorNum = 0;
+					if (color[colorNum] > 20 && flag == true) {
+						randomColor = 20;
+						color[colorNum] -= randomColor;
+						ctx.fillStyle = "rgb(" + 235 + "," + 235 + "," + 235 + ")";
+						letsDance();
+					}
+					else {
+						flag = false;
+						clearTimeout(loopColorUp);
+						letsDance();
+					}
+				}, 500);
 			}
-			if (sum > currentSum) {
-				currentSum = sum;
-				currentHighest = k;
+			else if (flag == false) {
+				for (var i = 0; i < numOfPoints; i++) {
+					var buf = [];
+					for (var j = 0; j < testCases; j++) {
+						var v = new Vector3(Math.random() * 4 - 2, Math.random() * 4 - 2, Math.random() * 4 - 2);
+						v.normalize().multiply(width);
+						buf.push(v);
+					}
+					var currentSum = 0;
+					var currentHighest = 0;
+
+					for (var k = 0; k < testCases; k++) {
+						var sum = 0;
+						var p = buf[k];
+						for (var l of points) {
+							sum += p.distance(l);
+						}
+						if (sum > currentSum) {
+							currentSum = sum;
+							currentHighest = k;
+						}
+					}
+					points.pop(buf[currentHighest]);
+				}
+				var loopColorDown = setTimeout(function () {
+					var randomColor;
+					var colorNum = 0;
+					if (color[colorNum] < 245 && flag == false) {
+						randomColor = 20;
+						color[colorNum] += randomColor;
+						ctx.fillStyle = "rgb(" + 235 + "," + 235 + "," + 235 + ")";
+						flag = false;
+						letsDance();
+					}
+					else {
+						flag = true;
+						clearTimeout(loopColorDown);
+						letsDance();
+					}
+
+				}, 500);
 			}
-		}
-		points.push(buf[currentHighest]);
+			else {
+
+				clearTimeout(loopDots);
+			}
+
+		}, 1000);
 	}
 
-	var loopColorUp = setInterval(function () {
-				var randomColor;
-				var colorNum = 0;
-				if (color[colorNum] > 35 && flag == true) {
-					randomColor = Math.floor((Math.random() * 10) + 1);
-					color[colorNum] -= randomColor;
-					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
-			     }
-				else if (color[colorNum] < 250) {
-						randomColor = Math.floor((Math.random() * 10) + 1);
-						color[colorNum] += randomColor;
-						ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
-					    flag = false;
-				 }
-				 else {
-					 clearInterval(loopColorUp);
-				 }
-						
-			}, 500);
-			
-        }
+	letsDance();
+	loop();
 
-	else if (flag == false) {
-	numOfPoints --;
-	for (var i = 0; i < numOfPoints; i++) {
-		var buf = [];
-		for (var j = 0; j < testCases; j++) {
-			var v = new Vector3(Math.random() * 4 - 2, Math.random() * 4 - 2, Math.random() * 4 - 2);
-			v.normalize().multiply(width);
-			buf.push(v);
-		}
-		var currentSum = 0;
-		var currentHighest = 0;
-		
-		for (var k = 0; k < testCases; k++) {
-			var sum = 0;
-			var p = buf[k];
-			for (var l of points) {
-				sum += p.distance(l);
-			}
-			if (sum > currentSum) {
-				currentSum = sum;
-				currentHighest = k;
-			}
-		}
-		points.pop(buf[currentHighest]);
-	}
-				var loopColorDown = setInterval(function () {
-				var randomColor;
-				var colorNum = 0;
-				if (color[colorNum] > 35 && flag == true) {
-					randomColor = Math.floor((Math.random() * 10) + 1);
-					color[colorNum] -= randomColor;
-					ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
-			     }
-				else if (color[colorNum] < 250) {
-						randomColor = Math.floor((Math.random() * 10) + 1);
-						color[colorNum] += randomColor;
-						ctx.fillStyle = "rgb(" + color[colorNum] + "," + color[colorNum] + "," + color[colorNum] + ")";
-					    flag = false;
-				 }
-				 else {
-					 clearInterval(loopColorDown);
-				 }
-						
-			}, 500);
-		}
-		else { clearInterval(loopDots);}
-    }, 3000);
-}
-
-letsDance();
-loop();
-
-function loop() {
+	function loop() {
 		update();
 		render();
 		window.requestAnimationFrame(loop);
 	}
-function update() {
+	function update() {
 		angle.add(angleSpeed);
 	}
 
-function render() {
+	function render() {
 		var rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
 		var rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
 		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
@@ -342,7 +336,7 @@ function render() {
 		ctx.clearRect(0, 0, c.width, c.height);
 		ctx.font = "65px mainFont";
 		ctx.textAlign = "center";
-        ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
+		ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
 		ctx.textBaseline = "middle";
 		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
 		for (var p of points) {
@@ -353,27 +347,27 @@ function render() {
 			ctx.fill();
 		}
 
-			if (opacity > 0.005 && flagText == true) {
-				opacity -= 0.005;
-				if (opacity < 0.005 && indexText < lengthArr - 1) {
-					indexText++;
-					flagText = false;
-				}
-				else if (opacity < 0.005 && indexText === lengthArr - 1) {
-					indexText = 0;
-				}
-
-				else {
-				  flagText = true;
-				}
-			}
-			else if (opacity < 0.95 || (opacity < 0.01 && flagText == false)) {
-				opacity += 0.005;
+		if (opacity > 0.005 && flagText == true) {
+			opacity -= 0.005;
+			if (opacity < 0.005 && indexText < lengthArr - 1) {
+				indexText++;
 				flagText = false;
 			}
+			else if (opacity < 0.005 && indexText === lengthArr - 1) {
+				indexText = 0;
+			}
+
 			else {
 				flagText = true;
 			}
+		}
+		else if (opacity < 0.95 || (opacity < 0.01 && flagText == false)) {
+			opacity += 0.005;
+			flagText = false;
+		}
+		else {
+			flagText = true;
+		}
 	}
 	loop();
 }
