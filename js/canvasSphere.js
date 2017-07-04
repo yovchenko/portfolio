@@ -223,75 +223,6 @@ function main() {
 	ctx = c.getContext('2d');
 	ctx.fillStyle = 'rgb(255,255,255)';
 
-function loop() {
-		update();
-		render();
-		window.requestAnimationFrame(loop);
-	}
-	
-function update() {
-		angle.add(angleSpeed);
-	}
-
-	function render() {
-		var rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
-		var rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
-		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
-		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
-		var lengthArr = innerText.length;
-		ctx.clearRect(0, 0, c.width, c.height);
-		ctx.font = "65px mainFont";
-		ctx.textAlign = "center";
-		ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
-		ctx.textBaseline = "middle";
-		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
-		for (var p of points) {
-			p = rotation.multiplyVector(p);
-			ctx.beginPath();
-			ctx.arc(p.x + c.width / 2, p.y + c.height / 2, 2, 0, 2 * Math.PI);
-			ctx.closePath();
-			ctx.fill();
-		}
-	if (opacity > 0.005 && flagText == true) {
- 			opacity -= 0.005;
- 			if (opacity < 0.005 && indexText < lengthArr - 1) {
- 				indexText++;
- 				flagText = false;
- 			}
- 			else if (opacity < 0.005 && indexText === lengthArr - 1) {
- 				indexText = 0;
- 			}
- 
- 			else {
- 				flagText = true;
- 			}
- 		}
- 		else if (opacity < 0.95 || (opacity < 0.01 && flagText == false)) {
- 			opacity += 0.005;
- 			flagText = false;
- 		}
- 		else {
- 			flagText = true;
- 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	function letsDance() {
 		var loopDots = setTimeout(function () {
 			if (flag == true) {
@@ -382,12 +313,63 @@ function update() {
 				clearTimeout(loopDots);
 			}
 
-		}, 3000);
+		}, 1000);
 	}
 
 	letsDance();
+
+function myloop() {
+		update();
+		render();
+		window.requestAnimationFrame(loop);
 	}
-	loop();
+	
+function update() {
+		angle.add(angleSpeed);
+	}
+
+	function render() {
+		var rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
+		var rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
+		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
+		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
+		var lengthArr = innerText.length;
+		ctx.clearRect(0, 0, c.width, c.height);
+		ctx.font = "65px mainFont";
+		ctx.textAlign = "center";
+		ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
+		ctx.textBaseline = "middle";
+		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
+		for (var p of points) {
+			p = rotation.multiplyVector(p);
+			ctx.beginPath();
+			ctx.arc(p.x + c.width / 2, p.y + c.height / 2, 2, 0, 2 * Math.PI);
+			ctx.closePath();
+			ctx.fill();
+		}
+	if (opacity > 0.005 && flagText == true) {
+ 			opacity -= 0.005;
+ 			if (opacity < 0.005 && indexText < lengthArr - 1) {
+ 				indexText++;
+ 				flagText = false;
+ 			}
+ 			else if (opacity < 0.005 && indexText === lengthArr - 1) {
+ 				indexText = 0;
+ 			}
+ 
+ 			else {
+ 				flagText = true;
+ 			}
+ 		}
+ 		else if (opacity < 0.95 || (opacity < 0.01 && flagText == false)) {
+ 			opacity += 0.005;
+ 			flagText = false;
+ 		}
+ 		else {
+ 			flagText = true;
+ 		}
+	}
+	myloop();
 }
 
 setTimeout(main, 2500);
