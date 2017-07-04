@@ -222,7 +222,7 @@ function main() {
 	ctx = document.getElementById('canvas');
 	ctx = c.getContext('2d');
 	ctx.fillStyle = 'rgb(255,255,255)';
-
+    render(ctx);
 	function letsDance() {
 		var loopDots = setTimeout(function () {
 			if (flag == true) {

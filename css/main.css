@@ -120,8 +120,8 @@ main {
 }
 
 canvas {
-  width: 74%;
-  height: 74%;
+  width: 81%;
+  height: 81%;
 	background-color: rgba(0%, 0%, 0%,0.3);
   box-shadow:0px 0px 10px 10px rgba(255,255,255,0.30),0px 0px 10px 10px rgba(255,255,255,0.30);
   margin-top: 80%;
