@@ -214,7 +214,7 @@ function main() {
 	var testCases = 30;
 	var color = [255, 255, 255];
 	var angle = new Vector3(0, 0, 0);
-	var angleSpeed = new Vector3(Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008, Math.random() * 0.001 - 0.008);
+	var angleSpeed = new Vector3(Math.random() * 0.001 - 0.004, Math.random() * 0.001 - 0.004, Math.random() * 0.001 - 0.004);
 	c = document.getElementById("canvas");
 	c.width = 380;
 	c.height = 380;
