@@ -318,11 +318,12 @@ function main() {
 
 	letsDance();
 var init = function loop() {
-		update();
 		render();
 		window.requestAnimationFrame(loop);
 	}
 	
+ window.setInterval(update, 10);
+
 	function update() {
 		angle.add(angleSpeed);
 	}
@@ -346,29 +347,9 @@ var init = function loop() {
 			ctx.closePath();
 			ctx.fill();
 		}
-	if (opacity > 0.005 && flagText == true) {
- 			opacity -= 0.005;
- 			if (opacity < 0.005 && indexText < lengthArr - 1) {
- 				indexText++;
- 				flagText = false;
- 			}
- 			else if (opacity < 0.005 && indexText === lengthArr - 1) {
- 				indexText = 0;
- 			}
- 
- 			else {
- 				flagText = true;
- 			}
- 		}
- 		else if (opacity < 0.95 || (opacity < 0.01 && flagText == false)) {
- 			opacity += 0.005;
- 			flagText = false;
- 		}
- 		else {
- 			flagText = true;
- 		}
+	
 	}
 	init();
 }
 
-setTimeout(main, 2500);
+main();
