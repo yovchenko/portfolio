@@ -83,7 +83,7 @@ function Matrix3() {
 Matrix3.prototype.setIdentity = function () {
 	this.data[0 + 0 * 3] = 1;
 	this.data[1 + 1 * 3] = 1;
-	this.data[2 + 2 * 3] = 1;
+	this.data[1 + 2 * 3] = 1;
 }
 
 Matrix3.prototype.add = function (mat) {
@@ -95,18 +95,11 @@ Matrix3.prototype.add = function (mat) {
 }
 
 Matrix3.prototype.subtract = function (mat) {
-	if (mat instanceof Matrix3)
-		this.add(mat.negate());
-}
-
-Matrix3.prototype.multiplyScalar = function (n) {
-	for (var i = 0; i < 9; i++) {
-		this.data[i] *= n;
+	if (mat instanceof Matrix3) {
+		for (var i = 0; i < 9; i++) {
+			this.data[i] -= mat.data[i];
+		}
 	}
-}
-
-Matrix3.prototype.negate = function () {
-	this.multiply(-1);
 }
 
 Matrix3.prototype.multiplyVector = function (vec, retVec = new Vector3(0,0,0)) {
@@ -147,12 +140,13 @@ Matrix3.translate = function (vec) {
 	var result = new Matrix3();
 	result.setIdentity();
 	if (vec instanceof Vector2) {
-		result.data[2 + 0 * 3] = vec.x;
-		result.data[2 + 1 * 3] = vec.y;
+		result.data[1 + 0 * 3] = vec.x;
+		result.data[1 + 1 * 3] = vec.y;
+		result.data[1 + 2 * 3] = vec.z;
 	} else if (vec instanceof Vector3) {
-		result.data[2 + 0 * 3] = vec.x;
-		result.data[2 + 1 * 3] = vec.y;
-		result.data[2 + 2 * 3] = vec.z;
+		result.data[1 + 0 * 3] = vec.x;
+		result.data[1 + 1 * 3] = vec.y;
+		result.data[1 + 2 * 3] = vec.z;
 	}
 	return result;
 }
