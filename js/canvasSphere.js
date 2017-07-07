@@ -12,6 +12,7 @@ Vector3.prototype.mag = function () {
 	return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
 }
 
+
 Vector3.prototype.distance = function (vec) {
 	if (vec instanceof Vector3)
 		return Math.sqrt((this.x - vec.x) * (this.x - vec.x) + (this.y - vec.y) * (this.y - vec.y) + (this.z - vec.z) * (this.z - vec.z));
@@ -108,15 +109,13 @@ Matrix3.prototype.negate = function () {
 	this.multiply(-1);
 }
 
-Matrix3.prototype.multiplyVector = function (vec) {
-	if (vec instanceof Vector3) {
-		var x = this.data[0 + 0 * 3] * vec.x + this.data[0 + 1 * 3] * vec.y + this.data[0 + 2 * 3] * vec.z;
-		var y = this.data[1 + 0 * 3] * vec.x + this.data[1 + 1 * 3] * vec.y + this.data[1 + 2 * 3] * vec.z;
-		var z = this.data[2 + 0 * 3] * vec.x + this.data[2 + 1 * 3] * vec.y + this.data[2 + 2 * 3] * vec.z;
-
-		return new Vector3(x, y, z);
-	}
-}
+Matrix3.prototype.multiplyVector = function (vec, retVec = new Vector3(0,0,0)) {
+    const d = this.data;
+    retVec.x = d[0] * vec.x + d[3] * vec.y + d[6] * vec.z;
+    retVec.y = d[1] * vec.x + d[4] * vec.y + d[7] * vec.z;
+    retVec.z = d[2] * vec.x + d[5] * vec.y + d[8] * vec.z;
+    return retVec;
+};
 
 Matrix3.prototype.multiplyMatrix = function (mat) {
 	if (mat instanceof Matrix3) {
@@ -215,7 +214,7 @@ function main() {
 	var counter = 0;
 	var color = [255, 255, 255];
 	var angle = new Vector3(0, 0, 0);
-	var angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
+	var angleSpeed = new Vector3(Math.random() * 0.007 - 0.009, Math.random() * 0.007 - 0.009, Math.random() * 0.007 - 0.009);
 	c = document.getElementById("canvas");
 	c.width = 320;
 	c.height = 320;
@@ -321,6 +320,7 @@ function main() {
 	}
 
 	function update() {
+		
 		angle.add(angleSpeed);
 	}
 
@@ -338,13 +338,16 @@ function main() {
 		ctx.textBaseline = "middle";
 		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
 
+		const rp = new Vector3(0,0,0);
+		ctx.beginPath();
 		for (var p of points) {
-			p = rotation.multiplyVector(p);
-			ctx.beginPath();
-			ctx.arc(p.x + c.width / 2, p.y + c.height / 2, 2, 0, 2 * Math.PI);
-			ctx.closePath();
-			ctx.fill();
-		}
+   	    rotation.multiplyVector(p,rp);
+  	    const x = rp.x + c.width / 2;
+        const y = rp.y + c.height / 2;
+        ctx.moveTo(x + 1, y)
+        ctx.arc(x, y, 2, 0, 2 * Math.PI);
+	    }
+	ctx.fill();
 
 
 		if (opacity > 0.005 && flagText == true) {
