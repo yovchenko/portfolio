@@ -320,7 +320,6 @@ function main() {
 	}
 
 	function update() {
-		
 		angle.add(angleSpeed);
 	}
 
@@ -337,17 +336,16 @@ function main() {
 		ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
 		ctx.textBaseline = "middle";
 		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
-
 		const rp = new Vector3(0,0,0);
 		ctx.beginPath();
-		for (var p of points) {
+		for (var p of points) {	
    	    rotation.multiplyVector(p,rp);
   	    const x = rp.x + c.width / 2;
         const y = rp.y + c.height / 2;
         ctx.moveTo(x + 1, y)
         ctx.arc(x, y, 2, 0, 2 * Math.PI);
 	    }
-	ctx.fill();
+	    ctx.fill();
 
 
 		if (opacity > 0.005 && flagText == true) {
