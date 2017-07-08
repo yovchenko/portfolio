@@ -108,14 +108,12 @@ Matrix3.prototype.negate = function () {
 	this.multiply(-1);
 }
 
-Matrix3.prototype.multiplyVector = function (vec) {
-	if (vec instanceof Vector3) {
-		var x = this.data[0 + 0 * 3] * vec.x + this.data[0 + 1 * 3] * vec.y + this.data[0 + 2 * 3] * vec.z;
-		var y = this.data[1 + 0 * 3] * vec.x + this.data[1 + 1 * 3] * vec.y + this.data[1 + 2 * 3] * vec.z;
-		var z = this.data[2 + 0 * 3] * vec.x + this.data[2 + 1 * 3] * vec.y + this.data[2 + 2 * 3] * vec.z;
-
-		return new Vector3(x, y, z);
-	}
+Matrix3.prototype.multiplyVector = function (vec, retVec = new Vector3(0,0,0)) {
+    const d = this.data;
+    retVec.x = d[0] * vec.x + d[3] * vec.y + d[6] * vec.z;
+    retVec.y = d[1] * vec.x + d[4] * vec.y + d[7] * vec.z;
+    retVec.z = d[2] * vec.x + d[5] * vec.y + d[8] * vec.z;
+    return retVec;
 }
 
 Matrix3.prototype.multiplyMatrix = function (mat) {
