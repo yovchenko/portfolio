@@ -215,7 +215,7 @@ function main() {
 	var counter = 0;
 	var color = [255, 255, 255];
 	var angle = new Vector3(0, 0, 0);
-	var angleSpeed = new Vector3(Math.random() * 0.005 - 0.009, Math.random() * 0.005 - 0.009, Math.random() * 0.005 - 0.009);
+	var angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
 	c = document.getElementById("canvas");
 	c.width = 320;
 	c.height = 320;
@@ -251,12 +251,9 @@ function main() {
 				}
 
 				var loopUp = setTimeout(function () {
-					var randomColor;
-					var colorNum = 0;
 					if (counter < 15) {
 						counter++;
-						color[colorNum] -= randomColor;
-						ctx.fillStyle = "rgb(" + 235 + "," + 235 + "," + 235 + ")";
+						/*ctx.fillStyle = "rgb(" + 235 + "," + 235 + "," + 235 + ")";*/
 						letsDance();
 					}
 					else {
@@ -264,7 +261,7 @@ function main() {
 						clearTimeout(loopUp);
 						letsDance();
 					}
-				}, 500);
+				}, 1000);
 			}
 
 			else if (flag == false) {
@@ -305,7 +302,7 @@ function main() {
 						letsDance();
 					}
 
-				}, 500);
+				}, 1000);
 			}
 			else {
 
