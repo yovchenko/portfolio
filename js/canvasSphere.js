@@ -337,14 +337,15 @@ function main() {
 		ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
 		ctx.textBaseline = "middle";
 		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
-		const rp = new Vector3(0,0,0);
-		for (var p of points) {
-        p = rotation.multiplyVector(p);
         ctx.beginPath();
-        ctx.arc(p.x + c.width / 2, p.y + c.height / 2, 2, 0, 2 * Math.PI);
-        ctx.closePath();
+    for (var p of points) {
+        p = rotation.multiplyVector(p);
+        const x = p.x + c.width / 2;
+        const y = p.y + c.height / 2;
+        ctx.moveTo(x + 2, y)
+        ctx.arc(x, y, 2, 0, 2 * Math.PI);
+        }
         ctx.fill();
-    }
 
 		if (opacity > 0.005 && flagText == true) {
 			opacity -= 0.005;
