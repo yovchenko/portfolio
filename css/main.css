@@ -96,8 +96,8 @@ header {
 
 main {
  display: flex;
- position: relative;
  min-height: 100%;
+ margin-bottom: -94.64px;
 }
 
 #main {
@@ -170,20 +170,23 @@ canvas {
   z-index: 0;
 }
 
+.push {
+  height: 94.64px;
+}
+
 footer {
   display: flex;
   height: 94.64px;
   position: relative;
   background-color: rgba(0%, 0%, 0%, 0.1);
   background-size: cover;
-    -moz-box-shadow: 0px 5px 5px 6px rgba(0%, 0%, 0%, 0.5);
+  -moz-box-shadow: 0px 5px 5px 6px rgba(0%, 0%, 0%, 0.5);
  -webkit-box-shadow: 0px 5px 5px 6px rgba(0%, 0%, 0%, 0.5);
-         box-shadow: 0px 5px 5px 6px rgba(0%, 0%, 0%, 0.5);
+  box-shadow: 0px 5px 5px 6px rgba(0%, 0%, 0%, 0.5);
   z-index: 2;
 }
 
 .footer {
    max-width: 1200px;
    margin: 0 auto;
-   margin-top: -94.64px;
 }
