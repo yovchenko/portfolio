@@ -211,7 +211,7 @@ function main() {
 	var innerText = ["Node.js", "jQuery", "HTML5", "CSS3", "VBS", "{ C }", "SQL"];
 	var indexText = 0;
 	var numOfPoints = 1;
-	var testCases = 15;
+	var testCases = 1;
 	var counter = 0;
 	var color = [255, 255, 255];
 	var angle = new Vector3(0, 0, 0);
@@ -247,6 +247,7 @@ function main() {
 							currentHighest = k;
 						}
 					}
+					testCases++;
 					points.push(buf[currentHighest]);
 				}
 
@@ -286,6 +287,7 @@ function main() {
 							currentHighest = k;
 						}
 					}
+					testCases--;
 					points.pop(buf[currentHighest]);
 				}
 				var loopDown = setTimeout(function () {
