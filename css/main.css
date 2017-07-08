@@ -111,7 +111,6 @@ main {
   display: flex;
   width: 100%;
   height: 100%;
-  position: relative;
   margin: 0px 0px  0px 0px;
 	align-items: center;
 	justify-content: center;
@@ -119,12 +118,13 @@ main {
   overflow: hidden;
 }
 
-canvas {
+#canvas {
   width: 81%;
   height: 81%;
 	background-color: rgba(0%, 0%, 0%,0.3);
   box-shadow:0px 0px 10px 10px rgba(255,255,255,0.30),0px 0px 10px 10px rgba(255,255,255,0.30);
   margin-top: 80%;
+  position: relative;
   border: 1px solid transparent;
   border-radius: 200px;
 }
@@ -146,6 +146,7 @@ canvas {
 .sphere {
   display: flex;
   max-width: 100%;
+  position: relative;
   min-width: 350px;
   align-self: flex-end;
   z-index: 1;
@@ -153,6 +154,7 @@ canvas {
 
 .sphereContainer {
   display: flex;
+  max-width: 100%;
   margin-bottom: 15px;
   position: relative;
   margin-right: 55px;
@@ -176,9 +178,9 @@ footer {
   position: relative;
   background-color: rgba(0%, 0%, 0%, 0.1);
   background-size: cover;
-  -moz-box-shadow: 0px 5px 5px 6px rgba(0%, 0%, 0%, 0.5);
-  -webkit-box-shadow: 0px 5px 5px 6px rgba(0%, 0%, 0%, 0.5);
-  box-shadow: 0px 5px 5px 6px rgba(0%, 0%, 0%, 0.5);
+    -moz-box-shadow: 0px 5px 5px 6px rgba(0%, 0%, 0%, 0.5);
+ -webkit-box-shadow: 0px 5px 5px 6px rgba(0%, 0%, 0%, 0.5);
+         box-shadow: 0px 5px 5px 6px rgba(0%, 0%, 0%, 0.5);
   z-index: 2;
 }
 
