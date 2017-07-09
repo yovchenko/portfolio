@@ -130,7 +130,6 @@ main {
 }
 
 #canvas {
-  height: 100%;
   position: relative;
   right: 50px;
   bottom: 10px;
