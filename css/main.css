@@ -130,6 +130,7 @@ main {
 }
 
 #canvas {
+  height: 100%;
   position: relative;
   right: 50px;
   bottom: 10px;
@@ -141,12 +142,12 @@ main {
 
 .spherePadding {
   display: flex;
-  flex:10 10 70%;
+  flex:0 25 100%;
 }
 
 .sphere {
   display: flex;
-  flex: 5 5 auto;
+  flex: 0 10 auto;
   z-index: 1;
 }
 
