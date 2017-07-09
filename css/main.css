@@ -16,7 +16,6 @@ body {
 
 header {
   background-color: rgba(0%, 0%, 0%, 0.1);
-  padding: 0 0 15px 0;
   background-size: cover;
   box-shadow: 0px 1px 5px #888888;
 }
@@ -31,8 +30,8 @@ header {
 .svgIcons {
   display: flex;
   background-color: rgba(41.2%, 53.7%, 95.2%,0.07);
-  margin: 15px 0px 0px 0px;
   border: 1px solid transparent;
+  margin: 10px;
   width:  47.652px;
   height: 47.652px;
   border-radius: 35.5px;
@@ -96,15 +95,15 @@ header {
 
 main {
  display: flex;
+ max-width: 1200px;
+ margin: 0 auto;
  min-height: 100%;
- margin-bottom: -94.64px;
+ margin-bottom: -69.65px;
 }
 
 #main {
  display: flex;
- position: relative;
  width: 100%;
- justify-content: center;
 }
 
 #wrapperCanvas {
@@ -114,19 +113,41 @@ main {
   position: relative;
   margin: 0px 0px  0px 0px;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-end;
   background-color: rgba(41.2%, 53.7%, 95.2%,0.00);
+  flex-direction: column;
   overflow: hidden;
 }
 
-canvas {
-  width: 74%;
-  height: 74%;
+.myPhoto {
+  max-height: 100%;
+  min-height: 55%;
+  max-width: 100%;
+  min-width: 650px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 0;
+}
+
+#canvas {
+  position: relative;
+  right: 50px;
+  bottom: 10px;
 	background-color: rgba(0%, 0%, 0%,0.3);
   box-shadow:0px 0px 10px 10px rgba(255,255,255,0.30),0px 0px 10px 10px rgba(255,255,255,0.30);
-  margin-top: 80%;
   border: 1px solid transparent;
-  border-radius: 200px;
+  border-radius: 100%;
+}
+
+.spherePadding {
+  display: flex;
+  flex:10 10 70%;
+}
+
+.sphere {
+  display: flex;
+  flex: 5 5 auto;
+  z-index: 1;
 }
 
 #canvasPic {
@@ -143,40 +164,13 @@ canvas {
   border-radius: 0px;
 }
 
-.sphere {
-  display: flex;
-  max-width: 100%;
-  min-width: 350px;
-  align-self: flex-end;
-  z-index: 1;
-}
-
-.sphereContainer {
-  display: flex;
-  margin-bottom: 15px;
-  position: relative;
-  margin-right: 55px;
-  justify-content:center;
-  align-self: flex-end;
-}
-
-.myPhoto {
-  max-height: 100%;
-  min-height: 55%;
-  max-width: 100%;
-  min-width: 650px;
-  position: absolute;
-  bottom: 0px;
-  z-index: 0;
-}
-
 .push {
-  height: 94.64px;
+  height: 69.65px;
 }
 
 footer {
   display: flex;
-  height: 94.64px;
+  height: 69.65px;
   position: relative;
   background-color: rgba(0%, 0%, 0%, 0.1);
   background-size: cover;
