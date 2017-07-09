@@ -146,6 +146,8 @@ main {
 
 .sphere {
   display: flex;
+  justify-content: center;
+  align-self: stretch;
   z-index: 1;
 }
 
