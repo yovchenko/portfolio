@@ -141,12 +141,11 @@ main {
 
 .spherePadding {
   display: flex;
-  flex:0 25 100%;
+  flex:0 2 75%;
 }
 
 .sphere {
   display: flex;
-  flex: 0 10 auto;
   z-index: 1;
 }
 
