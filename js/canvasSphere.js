@@ -217,8 +217,8 @@ function main() {
 	var angle = new Vector3(0, 0, 0);
 	var angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
 	c = document.getElementById("canvas");
-	c.width = 300;
-	c.height = 300;
+	c.width = 315;
+	c.height = 315;
 	ctx = document.getElementById('canvas');
 	ctx = c.getContext('2d');
 	ctx.fillStyle = 'rgb(255,255,255)';
