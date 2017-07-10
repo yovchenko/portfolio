@@ -131,14 +131,12 @@ main {
 
 .spherePadding {
   display: flex;
-  flex: 0 0 auto;
+  flex: 0 8 65%;
+  z-index: 1;
+
 }
 
 #canvas {
-  display: flex;
-  max-height: 100%;
-  min-height: 30%;
-  max-width: 100%;
   position: relative;
   right: 50px;
   bottom: 10px;
@@ -150,7 +148,7 @@ main {
 
 .sphere {
   display: flex;
-  flex: 0 0 auto;
+  flex: 0 10 auto;
   justify-content: center;
   z-index: 1;
 }
