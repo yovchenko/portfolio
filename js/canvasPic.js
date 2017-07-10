@@ -2,7 +2,7 @@ var pattern = Trianglify({
 		width: window.innerWidth,
 		height: window.innerHeight
 	});
-	var canvasBackground = document.getElementById("wrapperCanvas").appendChild(pattern.canvas());
+	var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
   canvasBackground.setAttribute("id", "canvasPic");
   
   
