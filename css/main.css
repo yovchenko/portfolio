@@ -97,8 +97,7 @@ main {
  display: flex;
  max-width: 1200px;
  margin: 0 auto;
- min-height: 100%;
- margin-bottom: -69.65px;
+ min-height: calc(100vh - 69.65px);
 }
 
 #main {
