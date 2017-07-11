@@ -15,6 +15,7 @@ body {
 }
 
 header {
+  height: 74.64px;
   background-color: rgba(0%, 0%, 0%, 0.1);
   background-size: cover;
   box-shadow: 0px 1px 5px #888888;
@@ -24,7 +25,7 @@ header {
  display: flex;
  max-width: 1200px;
  margin: 0 auto;
- justify-content: space-around;
+ 
 }
 
 .svgIcons {
@@ -32,15 +33,15 @@ header {
   background-color: rgba(41.2%, 53.7%, 95.2%,0.07);
   border: 1px solid transparent;
   margin: 10px;
-  width:  47.652px;
-  height: 47.652px;
+  width:  52.652px;
+  height: 52.652px;
   border-radius: 35.5px;
   justify-content: center;
   align-items: center;
 }
 
 .svgIcons:hover,.svgIcons:focus {
-  box-shadow:0px 0px 10px 10px rgba(255,255,255,0.8),0px 0px 10px 10px rgba(255,255,255,0.8);
+  box-shadow:0px 0px 8px 8px rgba(255,255,255,0.7),0px 0px 8px 8px rgba(255,255,255,0.7);
 }
 
 .svgIcons > a[href]:hover, .svgIcons > a[href]:focus {
@@ -79,14 +80,14 @@ header {
 .amplitude-play {
   position: absolute;
   width: 65.72px;
-  height: 70.72px;
+  height: 60.72px;
 }
 
 .amplitude-repeat {
   position: absolute;
   left: -10px;
   width: 65.72px;
-  height: 70.72px;
+  height: 60.72px;
 }
 
 .stopMusic {
@@ -97,7 +98,7 @@ main {
  display: flex;
  max-width: 1200px;
  margin: 0 auto;
- min-height: calc(100vh - 69.65px);
+ min-height: calc(100vh - 74.64px);
 }
 
 #main {
@@ -161,13 +162,7 @@ main {
   border-radius: 0px;
 }
 
-.push {
-  height: 69.65px;
-}
-
 footer {
-  display: flex;
-  height: 69.65px;
   position: relative;
   background-color: rgba(0%, 0%, 0%, 0.1);
   background-size: cover;
@@ -178,6 +173,8 @@ footer {
 }
 
 .footer {
+   display: flex;
    max-width: 1200px;
    margin: 0 auto;
+   justify-content: space-around;
 }
