@@ -77,12 +77,12 @@ header {
 }
 
 .menuToggle span {
-  background-color: rgba(17.3%, 24.3%, 31.4%, 0.85);
+  background-color: rgba(17.3%, 24.3%, 31.4%, 0.9);
   border-radius: 5px;
 }
 
 .menuToggle.active span {
-  background-color: rgba(17.3%, 24.3%, 31.4%, 0.85);
+  background-color: rgba(17.3%, 24.3%, 31.4%, 0.9);
   z-index: 1;
 }
 
