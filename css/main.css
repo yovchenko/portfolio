@@ -29,6 +29,7 @@ header {
  text-align: center;
 }
 
+/*Hamburger menu*/
 .menuToggle {
   cursor: pointer;
   display: flex;
@@ -43,10 +44,10 @@ header {
   height: 0.4rem;
   position: absolute;
   width: 3rem;
-  -webkit-transition: margin .5s ease-in-out, width .5s ease-in-out, -webkit-transform .5s ease-in-out;
-  transition: margin .5s ease-in-out, width .5s ease-in-out, -webkit-transform .5s ease-in-out;
-  transition: margin .5s ease-in-out, width .5s ease-in-out, transform .5s ease-in-out;
-  transition: margin .5s ease-in-out, width .5s ease-in-out, transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+  -webkit-transition: margin .3s ease-in-out, width .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  transition: margin .3s ease-in-out, width .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  transition: margin .3s ease-in-out, width .3s ease-in-out, transform .3s ease-in-out;
+  transition: margin .3s ease-in-out, width .3s ease-in-out, transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
 }
 
 .menuToggle span:nth-child(2) {
