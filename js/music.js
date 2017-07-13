@@ -2,11 +2,10 @@
 		    "songs": 
     [
 			{
-				"name": "Honey",
-				"artist": "Emancipator",
-				"album": "Seven Seas",
+				"name": "Trigger Hippie",
+				"artist": "Morcheeba",
+				"album": "Who Can You Trust?",
 				"url": "smoothMusic.mp3",
-				"cover_art_url": "/images/album.jpg",
 			}
 		],
 		 "volume": 40
