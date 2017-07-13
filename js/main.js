@@ -15,6 +15,7 @@ $(document).ready(function () {
 		$('body').addClass('loaded');
 		$('.entry-title').css('display', 'none');
 	}, 2500);
+	
 	/* hamburger menu */
 	$('.menuToggle').hover(function () {
 		$('.menuToggle span').toggleClass('spanWithShadow');
