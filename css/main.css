@@ -51,11 +51,11 @@ header {
 }
 
 .menuToggle span:nth-child(2) {
-  margin-top: 0.9rem;
+  margin-top: 14px;
 }
 
 .menuToggle span:nth-child(3) {
-  margin-top: 1.8rem;
+  margin-top: 28px;
 }
 
 .menuToggle.active span:nth-child(odd) {
@@ -64,14 +64,14 @@ header {
 }
 
 .menuToggle.active span:nth-child(1) {
-  margin-top: 0.6rem;
+  margin-top: 8px;
   -webkit-transform: rotate(30deg);
   transform: rotate(30deg);
   z-index: 0;
 }
 
 .menuToggle.active span:nth-child(3) {
-  margin-top: 1.3rem;
+  margin-top: 20px;
   -webkit-transform: rotate(-30deg);
   transform: rotate(-30deg);
   z-index: 0;
