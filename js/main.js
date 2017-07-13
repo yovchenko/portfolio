@@ -24,19 +24,23 @@ $(document).ready(function () {
 			var $this = $(this);
 			if ($this.hasClass('active')) {
 				$this.removeClass('active');
-				flag = false;
+				$('.menu__about').addClass('fadeOut');
+				$('.menu__work').addClass('fadeOut');
+				$('.menu__contact').addClass('fadeOut');
 				headerText();
 			}
 			else {
 				$this.addClass('active');
-				flag = true;
+				$('.menu__about').removeClass('fadeOut');
+				$('.menu__work').removeClass('fadeOut');
+				$('.menu__contact').removeClass('fadeOut');
 				headerText();
 			}
 		});
 	});
 });
+
 /*header text*/
-var flag = true;
 var headerText = function () {
 	var $about, $work, $contact;
 	var s,
@@ -51,10 +55,10 @@ var headerText = function () {
 				this.bindEvents();
 			},
 			bindEvents: function () {
-				if (flag == true) {
-					$about = $('.js-about').text('About');
-					$work = $('.js-work').text('Work');
-					$contact = $('.js-contact').text('Contact');
+				$about = $('.js-about').text('About');
+				$work = $('.js-work').text('Work');
+				$contact = $('.js-contact').text('Contact');
+				{
 					s.lettersAbout.html(function (i, el) {
 						var text = $.trim(el).split("");
 						return '<span>' + text.join('</span><span>') + '</span>';
@@ -66,23 +70,6 @@ var headerText = function () {
 					s.lettersContact.html(function (i, el) {
 						text = $.trim(el).split("");
 						return '<span>' + text.join('</span><span>') + '</span>';
-					});
-				}
-				else {
-					$about = $('.js-about').text('');
-					$work = $('.js-work').text('');
-					$contact = $('.js-contact').text('');
-					s.lettersAbout.html(function (i, el) {
-						text = $.trim(el).split("");
-						return text;
-					});
-					s.lettersWork.html(function (i, el) {
-						text = $.trim(el).split("");
-						return text;
-					});
-					s.lettersContact.html(function (i, el) {
-						text = $.trim(el).split("");
-						return text;
 					});
 				}
 			},
