@@ -24,16 +24,12 @@ $(document).ready(function () {
 			var $this = $(this);
 			if ($this.hasClass('active')) {
 				$this.removeClass('active');
-				$('.menu__about').addClass('fadeOut');
-				$('.menu__work').addClass('fadeOut');
-				$('.menu__contact').addClass('fadeOut');
+				$('.menu__about,.menu__work,.menu__contact').addClass('fadeOut');
 				headerText();
 			}
 			else {
 				$this.addClass('active');
-				$('.menu__about').removeClass('fadeOut');
-				$('.menu__work').removeClass('fadeOut');
-				$('.menu__contact').removeClass('fadeOut');
+				$('.menu__about,.menu__work,.menu__contact').removeClass('fadeOut');
 				headerText();
 			}
 		});
