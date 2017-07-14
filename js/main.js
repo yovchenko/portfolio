@@ -29,10 +29,13 @@ $(document).ready(function () {
 				$this.removeClass('active');
 				$('.menu__about,.menu__work,.menu__contact').addClass('fadeOut');
 				headerText();
+				setTimeout(function () {
+					$('.fadeOut').css('display','none');
+	             }, 1800);
 			}
 			else {
 				$this.addClass('active');
-				$('.menu__about,.menu__work,.menu__contact').removeClass('fadeOut');
+				$('.menu__about,.menu__work,.menu__contact').removeClass('fadeOut').css('display','flex');
 				headerText();
 			}
 		});
