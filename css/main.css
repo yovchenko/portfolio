@@ -277,8 +277,9 @@ footer {
 }
 
 .menu__header > p:hover,.menu__header > p:focus {
-  text-shadow:5px 5px 12px rgba(255,255,255,1.0),-5px -5px 12px rgba(255,255,255,1.0);
+ text-shadow:1px 1px 15px white, 1px 1px 15px white, 1px 1px 15px white, -1px -1px 15px white;
   transform: scale(1.07);
+  opacity: 1.0;
   -webkit-transform: scale(1.07);
   -moz-transform: scale(1.07);
 }
