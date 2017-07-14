@@ -269,7 +269,7 @@ footer {
  margin: 10px;
 }
 
-.menu__about {
+.menu__about,.menu__work,.menu__contact {
   font-family: mainFont,"Georgia",serif;
   font-size: 3.7vmax;
   align-self: center;
@@ -301,14 +301,6 @@ footer {
           animation-delay: 0.25s;
 }
 
-
-.menu__work {
-  font-family: mainFont,"Georgia",serif;
-  font-size: 3.7vmax;
-  align-self: center;
-  padding-top: 2px;
-}
-
 .menu__work span {
   -webkit-animation: letter-glow 0.5s 0s ease both;
           animation: letter-glow 0.5s 0s ease both;
@@ -328,13 +320,6 @@ footer {
 .menu__work span:nth-child(4) {
   -webkit-animation-delay: 0.50s;
           animation-delay: 0.50s;
-}
-
-.menu__contact {
-  font-family: mainFont,"Georgia",serif;
-  font-size: 3.7vmax;
-  align-self: center;
-  padding-top: 2px;
 }
 
 .menu__contact span {

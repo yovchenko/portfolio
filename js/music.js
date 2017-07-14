@@ -2,9 +2,9 @@
 		    "songs": 
     [
 			{
-				"name": "Trigger Hippie",
+				"name": "World Looking In",
 				"artist": "Morcheeba",
-				"album": "Who Can You Trust?",
+				"album": "Parts of the Process",
 				"url": "smoothMusic.mp3",
 			}
 		],
