@@ -144,20 +144,6 @@ Matrix3.prototype.transpose = function () {
 	return result;
 }
 
-Matrix3.translate = function (vec) {
-	var result = new Matrix3();
-	result.setIdentity();
-	if (vec instanceof Vector2) {
-		result.data[2 + 0 * 3] = vec.x;
-		result.data[2 + 1 * 3] = vec.y;
-	} else if (vec instanceof Vector3) {
-		result.data[2 + 0 * 3] = vec.x;
-		result.data[2 + 1 * 3] = vec.y;
-		result.data[2 + 2 * 3] = vec.z;
-	}
-	return result;
-}
-
 Matrix3.rotate = function (angle, x, y, z) {
 	var result = new Matrix3();
 	result.setIdentity();
@@ -179,24 +165,6 @@ Matrix3.rotate = function (angle, x, y, z) {
 	result.data[2 + 2 * 3] = z * omc + cos;
 
 	return result;
-}
-
-Matrix3.scale = function (vec) {
-	var result = new Matrix3();
-	result.setIdentity();
-
-	if (vec instanceof Vector3) {
-		result.data[0 + 0 * 3] = vec.x;
-		result.data[1 + 1 * 3] = vec.y;
-		result.data[2 + 2 * 3] = vec.z;
-
-		return result;
-	} else if (vec instanceof Vector2) {
-		result.data[0 + 0 * 3] = vec.x;
-		result.data[1 + 1 * 3] = vec.y;
-
-		return result;
-	}
 }
 
 //This is what matters
@@ -316,6 +284,7 @@ function main() {
 
 	function loop() {
 		render();
+		update();
 		window.requestAnimationFrame(loop);
 	}
 
@@ -324,7 +293,6 @@ function main() {
 	}
 
 	function render() {
-		update();
 		var rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
 		var rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
 		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
