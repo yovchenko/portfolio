@@ -2,9 +2,9 @@
 		    "songs": 
     [
 			{
-				"name": "World Looking In",
-				"artist": "Morcheeba",
-				"album": "Parts of the Process",
+				"name": "Cantaloupe Island",
+				"artist": "Herbie Hancock",
+				"album": "Then&Now The Definitive Herbie",
 				"url": "smoothMusic.mp3",
 			}
 		],
