@@ -20,7 +20,10 @@ $(document).ready(function () {
 	$('.menuToggle').hover(function () {
 		$('.menuToggle span').toggleClass('spanWithShadow');
 		$(this).toggleClass('menuTransform');
-		$(this).click(function () {
+	});
+});
+
+	$('.menuToggle').click(function () {
 			var $this = $(this);
 			if ($this.hasClass('active')) {
 				$this.removeClass('active');
@@ -33,8 +36,6 @@ $(document).ready(function () {
 				headerText();
 			}
 		});
-	});
-});
 
 /*header text*/
 var headerText = function () {

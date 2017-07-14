@@ -372,4 +372,4 @@ function main() {
 	letsDance();
 }
 
-setTimeout(main, 2500)
+setTimeout(main, 2500);
