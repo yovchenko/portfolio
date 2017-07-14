@@ -181,24 +181,6 @@ Matrix3.rotate = function (angle, x, y, z) {
 	return result;
 }
 
-Matrix3.scale = function (vec) {
-	var result = new Matrix3();
-	result.setIdentity();
-
-	if (vec instanceof Vector3) {
-		result.data[0 + 0 * 3] = vec.x;
-		result.data[1 + 1 * 3] = vec.y;
-		result.data[2 + 2 * 3] = vec.z;
-
-		return result;
-	} else if (vec instanceof Vector2) {
-		result.data[0 + 0 * 3] = vec.x;
-		result.data[1 + 1 * 3] = vec.y;
-
-		return result;
-	}
-}
-
 //This is what matters
 
 function main() {
@@ -219,7 +201,6 @@ function main() {
 	c = document.getElementById("canvas");
 	c.width = 290;
 	c.height = 290;
-	ctx = document.getElementById('canvas');
 	ctx = c.getContext('2d');
 	ctx.fillStyle = 'rgb(255,255,255)';
 	render(ctx);
@@ -345,6 +326,7 @@ function main() {
         ctx.arc(x, y, 2, 0, 2 * Math.PI);
         }
         ctx.fill();
+		
 
 		if (opacity > 0.005 && flagText == true) {
 			opacity -= 0.005;
