@@ -402,8 +402,8 @@ footer {
 
 /*header letters disappearing*/
 .menu__about.fadeOut span {
-  -webkit-animation: textDisappearing 0.45s 0s ease both;
-          animation: textDisappearing 0.45s 0s ease both;
+  -webkit-animation: textDisappearing 0.55s 0s ease both;
+          animation: textDisappearing 0.55s 0s ease both;
 }
 .menu__about.fadeOut span:nth-child(1) {
   -webkit-animation-delay: 0.05s;
@@ -427,8 +427,8 @@ footer {
 }
 
 .menu__work.fadeOut span {
-  -webkit-animation: textDisappearing 0.35s 0s ease both;
-          animation: textDisappearing 0.35s 0s ease both;
+  -webkit-animation: textDisappearing 0.45s 0s ease both;
+          animation: textDisappearing 0.45s 0s ease both;
 }
 .menu__work.fadeOut span:nth-child(1) {
   -webkit-animation-delay: 0.35s;
@@ -448,8 +448,8 @@ footer {
 }
 
 .menu__contact.fadeOut span {
-  -webkit-animation: textDisappearing 0.55s 0s ease both;
-          animation: textDisappearing 0.55s 0s ease both;
+  -webkit-animation: textDisappearing 0.65s 0s ease both;
+          animation: textDisappearing 0.65s 0s ease both;
 }
 .menu__contact.fadeOut span:nth-child(1) {
   -webkit-animation-delay: 0.60s;
