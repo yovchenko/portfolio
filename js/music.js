@@ -8,7 +8,7 @@
 				"url": "smoothMusic.mp3",
 			}
 		],
-		 "volume": 41
+		 "volume": 40
 	});
  
   
