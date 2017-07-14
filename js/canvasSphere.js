@@ -144,6 +144,20 @@ Matrix3.prototype.transpose = function () {
 	return result;
 }
 
+Matrix3.translate = function (vec) {
+	var result = new Matrix3();
+	result.setIdentity();
+	if (vec instanceof Vector2) {
+		result.data[2 + 0 * 3] = vec.x;
+		result.data[2 + 1 * 3] = vec.y;
+	} else if (vec instanceof Vector3) {
+		result.data[2 + 0 * 3] = vec.x;
+		result.data[2 + 1 * 3] = vec.y;
+		result.data[2 + 2 * 3] = vec.z;
+	}
+	return result;
+}
+
 Matrix3.rotate = function (angle, x, y, z) {
 	var result = new Matrix3();
 	result.setIdentity();
@@ -165,6 +179,24 @@ Matrix3.rotate = function (angle, x, y, z) {
 	result.data[2 + 2 * 3] = z * omc + cos;
 
 	return result;
+}
+
+Matrix3.scale = function (vec) {
+	var result = new Matrix3();
+	result.setIdentity();
+
+	if (vec instanceof Vector3) {
+		result.data[0 + 0 * 3] = vec.x;
+		result.data[1 + 1 * 3] = vec.y;
+		result.data[2 + 2 * 3] = vec.z;
+
+		return result;
+	} else if (vec instanceof Vector2) {
+		result.data[0 + 0 * 3] = vec.x;
+		result.data[1 + 1 * 3] = vec.y;
+
+		return result;
+	}
 }
 
 //This is what matters
