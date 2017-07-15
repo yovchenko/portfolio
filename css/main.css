@@ -33,22 +33,30 @@ header {
 .menuToggle {
   cursor: pointer;
   display: flex;
-  width:  52.654px;
-  height: 52.654px;
+  width:  54.64px;
+  height: 54.64px;
+  flex: 0 0 auto;
   position: relative;
-  padding: 8.66px 0 0 0;
-  margin-right: -5%;
+  padding-top: 8.66px;
 }
 
 .menuToggle span {
   display: block;
   height: 0.4rem;
   position: absolute;
-  width: 3rem;
+  width: 54.64px;
   -webkit-transition: margin .3s ease-in-out, width .3s ease-in-out, -webkit-transform .3s ease-in-out;
   transition: margin .3s ease-in-out, width .3s ease-in-out, -webkit-transform .3s ease-in-out;
   transition: margin .3s ease-in-out, width .3s ease-in-out, transform .3s ease-in-out;
   transition: margin .3s ease-in-out, width .3s ease-in-out, transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+.menu__header:first-child {
+  padding-left: .66px;
+}
+
+.menu__header:last-child {
+  padding-right: .66px;
 }
 
 .menuToggle span:nth-child(2) {
@@ -61,20 +69,20 @@ header {
 
 .menuToggle.active span:nth-child(odd) {
   margin-left: 1.5rem;
-  width: 1.5rem;
+  width: 31.80px;
 }
 
 .menuToggle.active span:nth-child(1) {
   margin-top: 8px;
-  -webkit-transform: rotate(30deg);
-  transform: rotate(30deg);
+  -webkit-transform: rotate(26deg);
+  transform: rotate(26deg);
   z-index: 0;
 }
 
 .menuToggle.active span:nth-child(3) {
   margin-top: 20px;
-  -webkit-transform: rotate(-30deg);
-  transform: rotate(-30deg);
+  -webkit-transform: rotate(-26deg);
+  transform: rotate(-26deg);
   z-index: 0;
 }
 
@@ -272,8 +280,10 @@ footer {
 .menu__about,.menu__work,.menu__contact {
   font-family: mainFont,"Georgia",serif;
   font-size: 3.7vmax;
+  flex: 0 1 20%;
   align-self: center;
   padding-top: 2px;
+  justify-content: flex-end;
 }
 
 .menu__header > p:hover,.menu__header > p:focus {
@@ -284,12 +294,20 @@ footer {
   -moz-transform: scale(1.07);
 }
 
-.menu__init {
+#menu__init {
   font-size: 3.7vmax;
   align-self: center;
   margin: 0 auto;
-  padding: 0 0 3px 52.64px;
- 
+  padding-bottom: 3px;
+  padding-left: calc(5% + 10.64px);
+}
+
+#menu__init:hover, #menu__init:focus {
+  text-shadow: 0px 0px 5px white;
+  transform: scale(1.0);
+  opacity: 1.0;
+  -webkit-transform: scale(1.0);
+  -moz-transform: scale(1.0);
 }
 
 .menu__about span {
