@@ -253,16 +253,14 @@ function main() {
 		ctx.textBaseline = "middle";
 		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
         ctx.beginPath();
-    for (var p of points) {
-		  ctx.beginPath();
-        p = rotation.multiplyVector(p);
-        const x = p.x + c.width / 2;
-        const y = p.y + c.height / 2;
-        ctx.moveTo(x + 2, y)
-        ctx.arc(x, y, 2, 0, 2 * Math.PI);
-		ctx.fill();
-        }
-        
+         for (var p of points) {
+         p = rotation.multiplyVector(p);
+         const x = p.x + c.width / 2;
+         const y = p.y + c.height / 2;
+         ctx.moveTo(x + 2, y)
+         ctx.arc(x, y, 2, 0, 2 * Math.PI);
+         }
+        ctx.fill();
 
 		if (opacity > 0.005 && flagText == true) {
 			opacity -= 0.005;
