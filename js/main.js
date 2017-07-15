@@ -13,8 +13,7 @@ $(document).ready(function () {
 
 	setTimeout(function () {
 		$('body').addClass('loaded');
-		$('.entry-title').css('display', 'none');
-		$('#loader').css('display', 'none');
+		$('.entry-title,#loader').css('display', 'none');
 	}, 2500);
 	
 /* hamburger menu */
