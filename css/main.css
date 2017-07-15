@@ -287,7 +287,9 @@ footer {
 .menu__init {
   font-size: 3.7vmax;
   align-self: center;
-  padding-top: 2px;
+  margin: 0 auto;
+  padding: 0 0 3px 52.64px;
+ 
 }
 
 .menu__about span {
