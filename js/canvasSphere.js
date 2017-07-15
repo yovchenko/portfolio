@@ -28,13 +28,10 @@ Vector3.prototype.add = function (vec) {
 
 Vector3.prototype.subtract = function (vec) {
 	if (vec instanceof Vector3) {
-		this.add(vec.negate);
+		this.x -= vec.x;
+		this.y -= vec.y;
+		this.z -= vec.z;
 	}
-	return this;
-}
-
-Vector3.prototype.negate = function () {
-	this.multiply(-1);
 	return this;
 }
 
@@ -57,21 +54,6 @@ Vector3.prototype.normalize = function () {
 	return this;
 }
 
-Vector3.cross = function (vec1, vec2) {
-	if (vec1 instanceof Vector3 && vec2 instanceof Vector3) {
-		var x = vec1.y * vec2.z - vec1.z * vec2.y;
-		var y = vec1.z * vec2.x - vec1.x * vec2.z;
-		var z = vec1.x * vec2.y - vec1.y * vec2.x;
-		return new Vector3(x, y, z);
-	}
-}
-
-Vector3.dot = function (vec1, vec2) {
-	if (vec1 instanceof Vector3 && vec2 instanceof Vector3) {
-		return vec1.x * vec2.x + vec1.y * vec2.y + vec1.z * vec2.z;
-	}
-}
-
 function Matrix3() {
 	this.data = [];
 	for (var i = 0; i < 9; i++) {
@@ -83,29 +65,6 @@ Matrix3.prototype.setIdentity = function () {
 	this.data[0 + 0 * 3] = 1;
 	this.data[1 + 1 * 3] = 1;
 	this.data[2 + 2 * 3] = 1;
-}
-
-Matrix3.prototype.add = function (mat) {
-	if (mat instanceof Matrix3) {
-		for (var i = 0; i < 9; i++) {
-			this.data[i] += mat.data[i];
-		}
-	}
-}
-
-Matrix3.prototype.subtract = function (mat) {
-	if (mat instanceof Matrix3)
-		this.add(mat.negate());
-}
-
-Matrix3.prototype.multiplyScalar = function (n) {
-	for (var i = 0; i < 9; i++) {
-		this.data[i] *= n;
-	}
-}
-
-Matrix3.prototype.negate = function () {
-	this.multiply(-1);
 }
 
 Matrix3.prototype.multiplyVector = function (vec) {
@@ -132,30 +91,6 @@ Matrix3.prototype.multiplyMatrix = function (mat) {
 		}
 		return result;
 	}
-}
-
-Matrix3.prototype.transpose = function () {
-	var result = new Matrix3();
-	for (var x = 0; x < 3; x++) {
-		for (var y = 0; y < 3; y++) {
-			result.data[y + x * 3] = this.data[x + y * 3];
-		}
-	}
-	return result;
-}
-
-Matrix3.translate = function (vec) {
-	var result = new Matrix3();
-	result.setIdentity();
-	if (vec instanceof Vector2) {
-		result.data[2 + 0 * 3] = vec.x;
-		result.data[2 + 1 * 3] = vec.y;
-	} else if (vec instanceof Vector3) {
-		result.data[2 + 0 * 3] = vec.x;
-		result.data[2 + 1 * 3] = vec.y;
-		result.data[2 + 2 * 3] = vec.z;
-	}
-	return result;
 }
 
 Matrix3.rotate = function (angle, x, y, z) {
@@ -189,7 +124,7 @@ function main() {
 	var points = [];
 	var flagText = true;
 	var flag = true;
-	var width = 100;
+	var width = 110;
 	var innerText = ["Node.js", "jQuery", "HTML5", "CSS3", "VBS", "{ C }", "SQL"];
 	var indexText = 0;
 	var numOfPoints = 1;
@@ -311,7 +246,7 @@ function main() {
 		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
 		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
 		var lengthArr = innerText.length;
-		ctx.clearRect(35, 35, 225, 225);
+		ctx.clearRect(33, 33, 225, 225);
 		ctx.font = "55px mainFont";
 		ctx.textAlign = "center";
 		ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
@@ -319,15 +254,15 @@ function main() {
 		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
         ctx.beginPath();
     for (var p of points) {
+		  ctx.beginPath();
         p = rotation.multiplyVector(p);
         const x = p.x + c.width / 2;
         const y = p.y + c.height / 2;
         ctx.moveTo(x + 2, y)
         ctx.arc(x, y, 2, 0, 2 * Math.PI);
+		ctx.fill();
         }
-        ctx.fill();
-		
-
+        
 		if (opacity > 0.005 && flagText == true) {
 			opacity -= 0.005;
 			if (opacity < 0.005 && indexText < lengthArr - 1) {
