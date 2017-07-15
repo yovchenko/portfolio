@@ -7,7 +7,7 @@ var pattern = Trianglify({
   
   
 	  pattern = Trianglify({
-    cell_size: 30,
+    cell_size: 95,
     variance: 0.75,
     x_colors: 'random',
     y_colors: 'match_x',
