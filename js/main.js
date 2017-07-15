@@ -30,11 +30,13 @@ $(document).ready(function () {
 				$('.menu__about,.menu__work,.menu__contact').addClass('fadeOut');
 				headerText();
 				setTimeout(function () {
+					$('.menu__init').css('display','none');
 					$('.fadeOut').css('display','none');
 	             }, 1800);
 			}
 			else {
 				$this.addClass('active');
+				$('.menu__init').css('display','none');
 				$('.menu__about,.menu__work,.menu__contact').removeClass('fadeOut').css('display','flex');
 				headerText();
 			}

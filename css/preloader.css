@@ -31,8 +31,8 @@
     box-shadow: 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.25);
     -moz-box-shadow: inset 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.25);
     -webkit-box-shadow:  inset 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.25);
-    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    -webkit-animation: spin 2.5s linear; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 2.5s linear; /* Chrome, Firefox 16+, IE 10+, Opera */
     z-index: 1001;
 }
 
@@ -49,8 +49,8 @@
          box-shadow: 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.6);
         -moz-box-shadow: 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.6);
         -webkit-box-shadow: 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.6);
-        -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-        animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+        -webkit-animation: spin 3s linear; /* Chrome, Opera 15+, Safari 5+ */
+        animation: spin 3s linear; /* Chrome, Firefox 16+, IE 10+, Opera */
     }
 
     #loader:after {
@@ -65,8 +65,8 @@
         -moz-box-shadow: 5px 10px 5px 6px rgba(255%, 255%, 255%, 0.65);
         -webkit-box-shadow: 5px 10px 5px 6px rgba(255%, 255%, 255%, 0.65);
         box-shadow: 5px 10px 5px 6px rgba(255%, 255%, 255%, 0.65);
-        -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-        animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+        -webkit-animation: spin 1.5s linear; /* Chrome, Opera 15+, Safari 5+ */
+        animation: spin 1.5s linear; /* Chrome, Firefox 16+, IE 10+, Opera */
     }
 
 	.entry-header {
