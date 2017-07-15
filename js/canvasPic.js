@@ -12,7 +12,7 @@ var pattern = Trianglify({
     x_colors: 'random',
     y_colors: 'match_x',
     palette: Trianglify.colorbrewer,
-    stroke_width: 1.51,
+    stroke_width: 0.2,
 });
 
 // Serialize the SVG object to a String

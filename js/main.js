@@ -16,7 +16,7 @@ $(document).ready(function () {
 		$('.entry-title').css('display', 'none');
 	}, 2500);
 	
-	/* hamburger menu */
+/* hamburger menu */
 	$('.menuToggle').hover(function () {
 		$('.menuToggle span').toggleClass('spanWithShadow');
 		$(this).toggleClass('menuTransform');

@@ -263,6 +263,7 @@ function main() {
 		ctx.fill();
         }
         
+
 		if (opacity > 0.005 && flagText == true) {
 			opacity -= 0.005;
 			if (opacity < 0.005 && indexText < lengthArr - 1) {
