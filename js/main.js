@@ -80,7 +80,6 @@ $('.menu__home').click(function () {
  	var $timerCurtain = setTimeout(function () {
 	$('.menuToggle,#canvas,.myPhoto').css('display','flex');
 	$('.menu__home').css('display','none');
-	$('.menuToggle').removeClass('active');
 	$('#curtain-section-right').stop().css({
   	'-webkit-transform' : 'translateX(100%)',
   	'-moz-transform'    : 'translateX(100%)',
