@@ -33,12 +33,11 @@ $(document).ready(function () {
 			var $set = setTimeout(function () {
 				$('.fadeOut').css('display', 'none');
 				if (!$menuClasses.is(':visible')) {
-				$init.fadeIn(500);
+				$init.stop().fadeIn(500);
 			}
 			else {
  				clearTimeout($set);
 			}
-
 			}, 1500);
 		}
 		else {
@@ -46,7 +45,7 @@ $(document).ready(function () {
 			$menuClasses.removeClass('fadeOut').css('display', 'flex');
 			headerText();
 			if ($init.is(':visible')) {
-			$init.fadeOut(500);
+			$init.stop().fadeOut(500);
 		    }
 			else {
 			clearTimeout($set);
