@@ -22,7 +22,7 @@ var pattern = Trianglify({
 		height: window.innerHeight
 	});
 	var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-  canvasBackground.setAttribute("id", "canvasPic");
+    canvasBackground.setAttribute("id", "canvasPic");
 	pattern = Trianglify({
     cell_size: 95,
     variance: 0.75,
@@ -87,6 +87,7 @@ $('.menu__about,.menu__work,.menu__contact').click(function () {
  	var $timerCurtain = setTimeout(function () {
 	$('.menuToggle,#canvas,.myPhoto').stop().css('display','none');
 	$('.menu__home').css('display','flex');
+	$('#canvasPic').remove();
 	canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
     canvasBackground.setAttribute("id", "canvasPic");
 	pattern = Trianglify({
@@ -117,6 +118,7 @@ $('.menu__home').click(function () {
  	var $timerCurtainHome = setTimeout(function () {
 	$('.menuToggle,#canvas,.myPhoto').css('display','flex');
 	$('.menu__home').css('display','none');
+	$('#canvasPic').remove();
 	canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
     canvasBackground.setAttribute("id", "canvasPic");
 	pattern = Trianglify({
