@@ -16,7 +16,34 @@ $(document).ready(function () {
 		$('.entry-title,#loader,#loader:before,#loader:after').stop().css('display','none');
 	}, 2500);
 
-	/* hamburger menu */
+/*canvas background*/
+var pattern = Trianglify({
+		width: window.innerWidth,
+		height: window.innerHeight
+	});
+	var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
+  canvasBackground.setAttribute("id", "canvasPic");
+	pattern = Trianglify({
+    cell_size: 95,
+    variance: 0.75,
+    x_colors: 'random',
+    y_colors: 'match_x',
+    palette: Trianglify.colorbrewer,
+    stroke_width: 0.2,
+});
+
+// Serialize the SVG object to a String
+var m = new XMLSerializer().serializeToString(pattern.svg());
+// Perform the base64 encoding of the String
+var k = window.btoa(m);
+// Query the element to set the background image property
+var elementTop = document.getElementsByTagName('header')[0];
+var elementBottom = document.getElementsByTagName('footer')[0];
+// Set the background image property, including the encoding type header
+elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+
+/* hamburger menu */
 	$('.menuToggle').hover(function () {
 		$('.menuToggle span').toggleClass('spanWithShadow');
 		$(this).toggleClass('menuTransform');
@@ -60,6 +87,16 @@ $('.menu__about,.menu__work,.menu__contact').click(function () {
  	var $timerCurtain = setTimeout(function () {
 	$('.menuToggle,#canvas,.myPhoto').stop().css('display','none');
 	$('.menu__home').css('display','flex');
+	canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
+    canvasBackground.setAttribute("id", "canvasPic");
+	pattern = Trianglify({
+    cell_size: 95,
+    variance: 0.75,
+    x_colors: 'random',
+    y_colors: 'match_x',
+    palette: Trianglify.colorbrewer,
+    stroke_width: 0.2,
+    });
 	$('#curtain-section-right').stop().css({
   	'-webkit-transform' : 'translateX(100%)',
   	'-moz-transform'    : 'translateX(100%)',
@@ -77,9 +114,19 @@ $('.menu__home').click(function () {
     $('#curtain-section-right,#curtain-section-left').css('width','100%');
 	$('#curtain-section-right').stop().css('transform','translateX(50%)');
 	$('#curtain-section-left').stop().css('transform','translateX(-50%)');
- 	var $timerCurtain = setTimeout(function () {
+ 	var $timerCurtainHome = setTimeout(function () {
 	$('.menuToggle,#canvas,.myPhoto').css('display','flex');
 	$('.menu__home').css('display','none');
+	canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
+    canvasBackground.setAttribute("id", "canvasPic");
+	pattern = Trianglify({
+    cell_size: 95,
+    variance: 0.75,
+    x_colors: 'random',
+    y_colors: 'match_x',
+    palette: Trianglify.colorbrewer,
+    stroke_width: 0.2,
+    });
 	$('#curtain-section-right').stop().css({
   	'-webkit-transform' : 'translateX(100%)',
   	'-moz-transform'    : 'translateX(100%)',
