@@ -39,7 +39,7 @@ $(document).ready(function () {
  				clearTimeout($set);
 			}
 
-			}, 1600);
+			}, 1500);
 		}
 		else {
 			$this.addClass('active');
