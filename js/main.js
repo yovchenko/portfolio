@@ -88,6 +88,10 @@ $('.menu__about,.menu__work,.menu__contact').click(function () {
 	$('.menuToggle,#canvas,.myPhoto').stop().css('display','none');
 	$('.menu__home').css('display','flex');
 	$('#canvasPic').remove();
+	pattern = Trianglify({
+		width: window.innerWidth,
+		height: window.innerHeight
+	});
 	canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
     canvasBackground.setAttribute("id", "canvasPic");
 	pattern = Trianglify({
@@ -119,6 +123,10 @@ $('.menu__home').click(function () {
 	$('.menuToggle,#canvas,.myPhoto').css('display','flex');
 	$('.menu__home').css('display','none');
 	$('#canvasPic').remove();
+	pattern = Trianglify({
+		width: window.innerWidth,
+		height: window.innerHeight
+	});
 	canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
     canvasBackground.setAttribute("id", "canvasPic");
 	pattern = Trianglify({
