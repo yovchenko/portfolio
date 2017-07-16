@@ -58,6 +58,8 @@ $('.menu__about,.menu__work,.menu__contact').click(function () {
 	$('#curtain-section-right').stop().css('transform','translateX(50%)');
 	$('#curtain-section-left').stop().css('transform','translateX(-50%)');
  	var $timerCurtain = setTimeout(function () {
+	$('.menuToggle,#canvas,.myPhoto').stop().css('display','none');
+	$('.menu__home').css('display','flex');
 	$('#curtain-section-right').stop().css({
   	'-webkit-transform' : 'translateX(100%)',
   	'-moz-transform'    : 'translateX(100%)',
@@ -71,7 +73,27 @@ $('.menu__about,.menu__work,.menu__contact').click(function () {
  }, 1200);
 });
 
-	/*header text*/
+$('.menu__home').click(function () {
+    $('#curtain-section-right,#curtain-section-left').css('width','100%');
+	$('#curtain-section-right').stop().css('transform','translateX(50%)');
+	$('#curtain-section-left').stop().css('transform','translateX(-50%)');
+ 	var $timerCurtain = setTimeout(function () {
+	$('.menuToggle,#canvas,.myPhoto').css('display','flex');
+	$('.menu__home').css('display','none');
+	$('#curtain-section-right').stop().css({
+  	'-webkit-transform' : 'translateX(100%)',
+  	'-moz-transform'    : 'translateX(100%)',
+  	'transform'         : 'translateX(100%)'
+});
+	$('#curtain-section-left').stop().css({
+  	'-webkit-transform' : 'translateX(-100%)',
+  	'-moz-transform'    : 'translateX(-100%)',
+  	'transform'         : 'translateX(-100%)'
+});
+ }, 1200);
+});
+
+/*header text*/
 	var headerText = function () {
 		var $about, $work, $contact;
 		var s,

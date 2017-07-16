@@ -268,6 +268,7 @@ footer {
   padding-right: .66px;
 }
 
+
 /*header letters appearing*/
 .menu__header {
  display: flex;
@@ -278,17 +279,25 @@ footer {
 }
 
 .menu__about,.menu__work,.menu__contact {
-  cursor: pointer;
   font-family: mainFont,"Georgia",serif;
   display: none;
   font-size: 3.7vmax;
-  flex: 0 1 20%;
   align-self: center;
   padding-top: 2px;
   justify-content: flex-end;
 }
 
-.menu__header > p:hover,.menu__header > p:focus {
+.menu__home {
+  font-family: mainFont,"Georgia",serif;
+  display: none;
+  font-size: 3.7vmax;
+  opacity: 0.85;
+  align-self: center;
+  padding-top: 2px;
+  justify-content: flex-end;
+}
+
+.menu__header > p[class]:hover,.menu__header > p[class]:focus {
   text-shadow: 0px 0px 5px white, 0px 0px 5px white, 0px 0px 5px white, 0px 0px 5px white,0px 0px 10px white, 0px 0px 10px white, 0px 0px 10px white, 0px 0px 10px white,0px 0px 15px white, 0px 0px 15px white, 0px 0px 15px white, 0px 0px 15px white;
   transform: scale(1.07);
   opacity: 0.85;
@@ -311,14 +320,6 @@ footer {
     opacity: 0.85;
     align-items: center;
     justify-content: center;
-}
-
-#menu__init:hover, #menu__init:focus {
-  text-shadow: 0px 0px 0px white;
-  transform: scale(1.0);
-  opacity: 0.95;
-  -webkit-transform: scale(1.0);
-  -moz-transform: scale(1.0);
 }
 
 .menu__about span {

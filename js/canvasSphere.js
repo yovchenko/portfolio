@@ -132,6 +132,7 @@ function main() {
 	var counter = 0;
 	var color = [255, 255, 255];
 	var angle = new Vector3(0, 0, 0);
+	var requestID;
 	var angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
 	c = document.getElementById("canvas");
 	c.width = 290;
@@ -233,7 +234,7 @@ function main() {
 	function loop() {
 		render();
 		update();
-		window.requestAnimationFrame(loop);
+	    requestID = window.requestAnimationFrame(loop);
 	}
 
 	function update() {
@@ -286,6 +287,13 @@ function main() {
 	}
 	loop();
 	letsDance();
+	$('.menu__about,.menu__work,.menu__contact').click(function () {
+	cancelAnimationFrame(requestID);
+});
+	$('.menu__home').click(function () {
+    main();
+	});
 }
 
 setTimeout(main, 3000);
+	
