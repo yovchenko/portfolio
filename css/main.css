@@ -291,7 +291,7 @@ footer {
 .menu__header > p:hover,.menu__header > p:focus {
   text-shadow: 0px 0px 5px white, 0px 0px 5px white, 0px 0px 5px white, 0px 0px 5px white,0px 0px 10px white, 0px 0px 10px white, 0px 0px 10px white, 0px 0px 10px white,0px 0px 15px white, 0px 0px 15px white, 0px 0px 15px white, 0px 0px 15px white;
   transform: scale(1.07);
-  opacity: 1.0;
+  opacity: 0.85;
   -webkit-transform: scale(1.07);
   -moz-transform: scale(1.07);
 }
@@ -308,7 +308,7 @@ footer {
     bottom: 0;
     right: 0;
     display: flex;
-    opacity: 0.8;
+    opacity: 0.85;
     align-items: center;
     justify-content: center;
 }
@@ -316,7 +316,7 @@ footer {
 #menu__init:hover, #menu__init:focus {
   text-shadow: 0px 0px 0px white;
   transform: scale(1.0);
-  opacity: 1.0;
+  opacity: 0.95;
   -webkit-transform: scale(1.0);
   -moz-transform: scale(1.0);
 }
@@ -415,7 +415,7 @@ footer {
     text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
   }
   100% {
-    opacity: 0.8;
+    opacity: 0.85;
   }
 }
 
@@ -425,15 +425,15 @@ footer {
     text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.3);
   }
   66% {
-    opacity: 1;
+    opacity: 0.95;
     text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
   }
   77% {
-    opacity: 1;
+    opacity: 0.95;
     text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
   }
   100% {
-    opacity: 0.8;
+    opacity: 0.85;
   }
 }
 
@@ -520,15 +520,15 @@ footer {
 
 @-webkit-keyframes textDisappearing {
   0% {
-    opacity: 0.8;
+    opacity: 0.85;
     text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.3);
   }
   66% {
-    opacity: 1;
+    opacity: 0.95;
     text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
   }
   77% {
-    opacity: 0.8;
+    opacity: 0.85;
   }
   100% {
     opacity: 0;
@@ -538,7 +538,7 @@ footer {
 
 @keyframes textDisappearing {
   0% {
-    opacity: 0.8;
+    opacity: 0.85;
     text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.3);
   }
   66% {
@@ -546,7 +546,7 @@ footer {
     text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
   }
   77% {
-    opacity: 0.8;
+    opacity: 0.85;
   }
   100% {
     opacity: 0;
