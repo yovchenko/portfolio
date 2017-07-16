@@ -13,7 +13,7 @@ $(document).ready(function () {
 
 	setTimeout(function () {
 		$('body').addClass('loaded');
-		$('.entry-title,#loader').css('display', 'none');
+		$('.entry-title,#loader').stop().css('display','none');
 	}, 2500);
 
 	/* hamburger menu */
@@ -53,6 +53,24 @@ $(document).ready(function () {
 			}
 		}
 	});
+
+$('.menu__about,.menu__work,.menu__contact').click(function () {
+    $('#curtain-section-right,#curtain-section-left').css('width','100%');
+	$('#curtain-section-right').stop().css('transform','translateX(50%)');
+	$('#curtain-section-left').stop().css('transform','translateX(-50%)');
+ 	var $timerCurtain = setTimeout(function () {
+	$('#curtain-section-right').stop().css({
+  	'-webkit-transform' : 'translateX(100%)',
+  	'-moz-transform'    : 'translateX(100%)',
+  	'transform'         : 'translateX(100%)'
+});
+	$('#curtain-section-left').stop().css({
+  	'-webkit-transform' : 'translateX(-100%)',
+  	'-moz-transform'    : 'translateX(-100%)',
+  	'transform'         : 'translateX(-100%)'
+});
+ }, 1200);
+});
 
 	/*header text*/
 	var headerText = function () {
