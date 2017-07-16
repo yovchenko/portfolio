@@ -23,21 +23,34 @@ $(document).ready(function () {
 	});
 
 	$('.menuToggle').click(function () {
-		var $setT, $resetT;
 		var $this = $(this);
 		var $menuClasses = $('.menu__about,.menu__work,.menu__contact');
 		var $init = $('#menu__init');
 		if ($this.hasClass('active')) {
 			$this.removeClass('active');
 			$menuClasses.addClass('fadeOut');
+			$init.css('display','none');
 			var $set = setTimeout(function () {
 				$('.fadeOut').css('display', 'none');
+				if (!$menuClasses.is(':visible')) {
+				$init.fadeIn(500);
+			}
+			else {
+ 				clearTimeout($set);
+			}
+
 			}, 1600);
 		}
 		else {
 			$this.addClass('active');
 			$menuClasses.removeClass('fadeOut').css('display', 'flex');
 			headerText();
+			if ($init.is(':visible')) {
+			$init.fadeOut(500);
+		    }
+			else {
+			clearTimeout($set);
+			}
 		}
 	});
 
