@@ -19,7 +19,7 @@ $(document).ready(function () {
 /*canvas background*/
 var pattern = Trianglify({
 		width: window.innerWidth,
-		height: window.innerHeight
+		height: window.innerHeight+74.64
 	});
 	var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
     canvasBackground.setAttribute("id", "canvasPic");
