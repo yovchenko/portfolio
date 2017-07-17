@@ -25,7 +25,6 @@ header {
  display: flex;
  max-width: 1200px;
  margin: 0 auto;
- font-size: 1.8em;
  text-align: center;
 }
 
@@ -168,7 +167,7 @@ main {
   top: 0;
   left: 0;
   right: 0;
-  bottom: - 74.64px;
+  bottom: 74.64px;
 }
 
 footer {
