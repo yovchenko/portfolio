@@ -549,3 +549,9 @@ footer {
     text-shadow: 0px 0px 20px rgba(255, 255, 255, 0);
   }
 }
+
+@media all and (min-width: 1600px) {
+#menu__init,.menu__home,.menu__about,.menu__work,.menu__contact {
+    font-size: 50px;
+  }
+}
