@@ -16,7 +16,6 @@ $(document).ready(function () {
 		$('footer').css('display','block');
 		$('.entry-title,#loader,#loader:before,#loader:after').stop().css('display','none');
 	}, 2500);
-
 /*canvas background*/
 var pattern = Trianglify({
 		width: window.innerWidth,
