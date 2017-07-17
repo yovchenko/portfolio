@@ -13,6 +13,7 @@ $(document).ready(function () {
 
 	setTimeout(function () {
 		$('body').addClass('loaded');
+		$('footer').css('display','block');
 		$('.entry-title,#loader,#loader:before,#loader:after').stop().css('display','none');
 	}, 2500);
 
