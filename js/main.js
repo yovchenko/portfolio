@@ -11,11 +11,22 @@ $(document).ready(function () {
 		}
 	}, 100);
 
-
 	var $start =setTimeout(function () {
 		$('body').addClass('loaded');
 		$('footer').css('display','block');
 		$('.entry-title,#loader,#loader:before,#loader:after').stop().css('display','none');
+		 Amplitude.init({
+		    "songs": 
+    [
+			{
+				"name": "Cantaloupe Island",
+				"artist": "Herbie Hancock",
+				"album": "Then&Now The Definitive Herbie",
+				"url": " https://yovchenko.github.io/music/smoothMusic.mp3",
+			}
+		],
+		 "volume": 40
+	});
 	}, 2500);
 	
 /*canvas background*/
@@ -188,6 +199,17 @@ $('.menu__home').click(function () {
 			};
 		textLetters.init();
 	};
+
+var stop = $('.stopMusic');
+var play = $('.playMusic');
+      play.click(function () {
+        stop.show();
+        play.hide();
+      });
+      stop.click(function () {
+        stop.hide();
+        play.show();
+      });
 });
 
 
