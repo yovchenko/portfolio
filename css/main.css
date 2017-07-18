@@ -274,6 +274,7 @@ footer {
 }
 
 .menu__about,.menu__work,.menu__contact {
+  cursor: pointer;
   font-family: mainFont,"Georgia",serif;
   display: none;
   font-size: 3.7vmax;
@@ -283,6 +284,7 @@ footer {
 }
 
 .menu__home {
+  cursor: pointer;
   font-family: mainFont,"Georgia",serif;
   display: none;
   font-size: 3.7vmax;
