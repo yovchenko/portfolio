@@ -287,8 +287,10 @@ footer {
   display: none;
   font-size: 3.7vmax;
   align-self: center;
-  padding-top: 2px;
+  padding-top: 3px;
+  background-image: linear-gradient(90deg, rgba(0,0,0,0) 0%,rgba(75,75,75,0.40) 100%);
   justify-content: flex-end;
+  border-radius: 5px;
 }
 
 .menu__home {
@@ -298,12 +300,14 @@ footer {
   font-size: 3.7vmax;
   opacity: 0.85;
   align-self: center;
-  padding-top: 2px;
+  padding-top: 3px;
+  background-image: linear-gradient(90deg, rgba(0,0,0,0) 0%,rgba(75,75,75,0.40) 100%);
+  border-radius: 5px;
   justify-content: flex-end;
 }
 
 .menu__header > p[class]:hover,.menu__header > p[class]:focus {
-  text-shadow: 0px 0px 5px white, 0px 0px 5px white, 0px 0px 5px white, 0px 0px 5px white,0px 0px 10px white, 0px 0px 10px white, 0px 0px 10px white, 0px 0px 10px white,0px 0px 15px white, 0px 0px 15px white, 0px 0px 15px white, 0px 0px 15px white;
+  text-shadow: -1px 0 rgba(255,255,255,0.9), 0 1px rgba(255,255,255,0.9), 1px 0 rgba(255,255,255,0.9), 0 -1px rgba(255,255,255,0.9);
   opacity: 0.85;
    transform: scale(1.07);
   -webkit-transform: scale(1.07);
@@ -414,7 +418,7 @@ footer {
   }
   66% {
     opacity: 1;
-    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8),0px 0px 20px rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 1),0px 0px 20px rgba(255, 255, 255, 1);
   }
   77% {
     opacity: 1;
@@ -432,13 +436,14 @@ footer {
   }
   66% {
     opacity: 0.95;
-    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 1),0px 0px 20px rgba(255, 255, 255, 1);
   }
   77% {
     opacity: 0.95;
     text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.3);
   }
   100% {
+
     opacity: 0.85;
   }
 }
@@ -531,7 +536,7 @@ footer {
   }
   66% {
     opacity: 0.95;
-    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 1),0px 0px 20px rgba(255, 255, 255, 1);
   }
   77% {
     opacity: 0.85;
@@ -549,7 +554,7 @@ footer {
   }
   66% {
     opacity: 1;
-    text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 0px 20px rgba(255, 255, 255, 1),0px 0px 20px rgba(255, 255, 255, 1);
   }
   77% {
     opacity: 0.85;
