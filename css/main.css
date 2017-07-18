@@ -173,7 +173,7 @@ main {
 article {
   display: none;
   max-width: 100%;
-  font-size: 3.3vmax;
+  font-size: 3.25vmax;
   text-align: center;
   margin: 0 auto;
 }
@@ -304,8 +304,8 @@ footer {
 
 .menu__header > p[class]:hover,.menu__header > p[class]:focus {
   text-shadow: 0px 0px 5px white, 0px 0px 5px white, 0px 0px 5px white, 0px 0px 5px white,0px 0px 10px white, 0px 0px 10px white, 0px 0px 10px white, 0px 0px 10px white,0px 0px 15px white, 0px 0px 15px white, 0px 0px 15px white, 0px 0px 15px white;
-  transform: scale(1.07);
   opacity: 0.85;
+   transform: scale(1.07);
   -webkit-transform: scale(1.07);
   -moz-transform: scale(1.07);
 }
