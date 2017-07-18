@@ -145,6 +145,7 @@ function content(event) {
 	if ($page === 3 || $page === 4)	 {
 	$('.menuToggle,#canvas,.myPhoto').stop().css('display','none');
 	$('.menu__home').css('display','flex');
+	$('article').css('display','none');
 }
 	else if ($page === 2) {
 	$('.menuToggle,#canvas,.myPhoto').stop().css('display','none');
@@ -154,6 +155,8 @@ function content(event) {
 	else {
 	$('.menuToggle,#canvas,.myPhoto').css('display','flex');
 	$('.menu__home').css('display','none');
+	$('article').css('display','none');
+	$('#wrapperCanvas').css('display','flex')
 }
 	$('#canvasPic').remove();
 	pattern = Trianglify({
