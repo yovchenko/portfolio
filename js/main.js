@@ -92,76 +92,6 @@ elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '"
 		}
 	});
 
-$('.menu__about,.menu__work,.menu__contact').click(function () {
-    $('#curtain-section-right,#curtain-section-left').css('width','100%');
-	$('#curtain-section-right').stop().css('transform','translateX(50%)');
-	$('#curtain-section-left').stop().css('transform','translateX(-50%)');
- 	var $timerCurtain = setTimeout(function () {
-	$('.menuToggle,#canvas,.myPhoto').stop().css('display','none');
-	$('.menu__home').css('display','flex');
-	$('#canvasPic').remove();
-	pattern = Trianglify({
-		width: window.innerWidth,
-		height: window.innerHeight
-	});
-	canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-    canvasBackground.setAttribute("id", "canvasPic");
-	pattern = Trianglify({
-    cell_size: 95,
-    variance: 0.75,
-    x_colors: 'random',
-    y_colors: 'match_x',
-    palette: Trianglify.colorbrewer,
-    stroke_width: 0.2,
-    });
-	$('#curtain-section-right').stop().css({
-  	'-webkit-transform' : 'translateX(100%)',
-  	'-moz-transform'    : 'translateX(100%)',
-  	'transform'         : 'translateX(100%)'
-});
-	$('#curtain-section-left').stop().css({
-  	'-webkit-transform' : 'translateX(-100%)',
-  	'-moz-transform'    : 'translateX(-100%)',
-  	'transform'         : 'translateX(-100%)'
-});
- }, 1200);
-});
-
-$('.menu__home').click(function () {
-    $('#curtain-section-right,#curtain-section-left').css('width','100%');
-	$('#curtain-section-right').stop().css('transform','translateX(50%)');
-	$('#curtain-section-left').stop().css('transform','translateX(-50%)');
- 	var $timerCurtainHome = setTimeout(function () {
-	$('.menuToggle,#canvas,.myPhoto').css('display','flex');
-	$('.menu__home').css('display','none');
-	$('#canvasPic').remove();
-	pattern = Trianglify({
-		width: window.innerWidth,
-		height: window.innerHeight
-	});
-	canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-    canvasBackground.setAttribute("id", "canvasPic");
-	pattern = Trianglify({
-    cell_size: 95,
-    variance: 0.75,
-    x_colors: 'random',
-    y_colors: 'match_x',
-    palette: Trianglify.colorbrewer,
-    stroke_width: 0.2,
-    });
-	$('#curtain-section-right').stop().css({
-  	'-webkit-transform' : 'translateX(100%)',
-  	'-moz-transform'    : 'translateX(100%)',
-  	'transform'         : 'translateX(100%)'
-});
-	$('#curtain-section-left').stop().css({
-  	'-webkit-transform' : 'translateX(-100%)',
-  	'-moz-transform'    : 'translateX(-100%)',
-  	'transform'         : 'translateX(-100%)'
-});
- }, 1200);
-});
-
 /*header text*/
 	var headerText = function () {
 		var $about, $work, $contact;
@@ -198,6 +128,81 @@ $('.menu__home').click(function () {
 			};
 		textLetters.init();
 	};
+
+/* change content onclick function */
+$('.menu__home').on('click',{ case: 1 },content);
+$('.menu__about').on("click", { case: 2 }, content);
+$('.menu__work').on('click',{ case: 3 },content);
+$('.menu__contact').on('click',{ case: 4 },content);
+
+function content(event) {
+	var $page = event.data.case;
+    $('#curtain-section-right,#curtain-section-left').css('width','100%');
+	$('#curtain-section-right').stop().css('transform','translateX(50%)');
+	$('#curtain-section-left').stop().css('transform','translateX(-50%)');
+ 	var $timerCurtain = setTimeout(function () {
+
+	if ($page === 3 || $page === 4)	 {
+	$('.menuToggle,#canvas,.myPhoto').stop().css('display','none');
+	$('.menu__home').css('display','flex');
+}
+	else if ($page === 2) {
+	$('.menuToggle,#canvas,.myPhoto').stop().css('display','none');
+	$('.menu__home,article').css('display','flex');
+	$('#wrapperCanvas').css('display','none')
+}
+	else {
+	$('.menuToggle,#canvas,.myPhoto').css('display','flex');
+	$('.menu__home').css('display','none');
+}
+	$('#canvasPic').remove();
+	pattern = Trianglify({
+		width: window.innerWidth,
+		height: window.innerHeight
+	});
+	canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
+    canvasBackground.setAttribute("id", "canvasPic");
+	pattern = Trianglify({
+    cell_size: 95,
+    variance: 0.75,
+    x_colors: 'random',
+    y_colors: 'match_x',
+    palette: Trianglify.colorbrewer,
+    stroke_width: 0.2,
+    });
+	$('#curtain-section-right').stop().css({
+  	'-webkit-transform' : 'translateX(100%)',
+  	'-moz-transform'    : 'translateX(100%)',
+  	'transform'         : 'translateX(100%)'
+});
+	$('#curtain-section-left').stop().css({
+  	'-webkit-transform' : 'translateX(-100%)',
+  	'-moz-transform'    : 'translateX(-100%)',
+  	'transform'         : 'translateX(-100%)'
+});
+ }, 1200);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 var stop = $('.stopMusic');
 var play = $('.playMusic');

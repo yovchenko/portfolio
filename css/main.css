@@ -170,6 +170,14 @@ main {
   bottom: - 74.64px;
 }
 
+article {
+  display: none;
+  max-width: 100%;
+  font-size: 3.2vmax;
+  text-align: center;
+  margin: 0 auto;
+}
+
 footer {
   position: relative;
   display: none;
