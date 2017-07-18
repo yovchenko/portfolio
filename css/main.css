@@ -41,7 +41,7 @@ header {
 
 .menuToggle span {
   display: block;
-  height: 0.4rem;
+  height: 6px;
   position: absolute;
   width: 54.64px;
   -webkit-transition: margin .3s ease-in-out, width .3s ease-in-out, -webkit-transform .3s ease-in-out;
@@ -173,7 +173,7 @@ main {
 article {
   display: none;
   max-width: 100%;
-  font-size: 3.2vmax;
+  font-size: 3.3vmax;
   text-align: center;
   margin: 0 auto;
 }
