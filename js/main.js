@@ -93,23 +93,26 @@ elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '"
 	});
 
 /*header text*/
+    var $home = $('.menu__home');
+    var $about = $('.js-about');
+	var $work = $('.js-work');
+	var $contact = $('.js-contact');
 	var headerText = function () {
-		var $about, $work, $contact;
 		var s,
 			textLetters = {
 				settings: {
-					lettersAbout: $('.js-about'),
-					lettersWork: $('.js-work'),
-					lettersContact: $('.js-contact'),
+					lettersAbout: $about,
+					lettersWork: $work,
+					lettersContact: $contact,
 				},
 				init: function () {
 					s = this.settings;
 					this.bindEvents();
 				},
 				bindEvents: function () {
-					$about = $('.js-about').text('About');
-					$work = $('.js-work').text('Work');
-					$contact = $('.js-contact').text('Contact');
+					$about.text('About');
+					$work.text('Work');
+					$contact.text('Contact');
 					{
 						s.lettersAbout.html(function (i, el) {
 							var text = $.trim(el).split("");
@@ -130,10 +133,11 @@ elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '"
 	};
 
 /* change content onclick function */
-$('.menu__home').on('click',{ case: 1 },content);
-$('.menu__about').on("click", { case: 2 }, content);
-$('.menu__work').on('click',{ case: 3 },content);
-$('.menu__contact').on('click',{ case: 4 },content);
+
+$home.on('click',{ case: 1 },content);
+$about.on("click", { case: 2 }, content);
+$work.on('click',{ case: 3 },content);
+$contact.on('click',{ case: 4 },content);
 
 function content(event) {
 	var $page = event.data.case;
@@ -144,7 +148,7 @@ function content(event) {
 
 	if ($page === 3 || $page === 4)	 {
 	$('.menuToggle,#canvas,.myPhoto').stop().css('display','none');
-	$('.menu__home').css('display','flex');
+	$home.css('display','flex');
 	$('article').css('display','none');
 }
 	else if ($page === 2) {
@@ -154,7 +158,7 @@ function content(event) {
 }
 	else {
 	$('.menuToggle,#canvas,.myPhoto').css('display','flex');
-	$('.menu__home').css('display','none');
+	$home.css('display','none');
 	$('article').css('display','none');
 	$('#wrapperCanvas').css('display','flex')
 }
@@ -186,27 +190,7 @@ function content(event) {
  }, 1200);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* music player buttons */
 var stop = $('.stopMusic');
 var play = $('.playMusic');
       play.click(function () {
