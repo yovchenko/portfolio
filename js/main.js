@@ -28,7 +28,6 @@ $(document).ready(function () {
 		 "volume": 40
 	});
 	}, 2500);
-	
 /*canvas background*/
 var pattern = Trianglify({
 		width: window.innerWidth,
