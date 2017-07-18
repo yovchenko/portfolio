@@ -133,7 +133,6 @@ main {
 }
 
 .myPhoto {
-  display: flex;
   max-height: 100%;
   min-height: 55%;
   max-width: 100%;

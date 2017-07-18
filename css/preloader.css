@@ -6,11 +6,12 @@
 }
 
 #loader-wrapper {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    bottom: -74.64px;
     z-index: 1000;
 }
 
@@ -18,7 +19,7 @@
     display: block;
     position: relative;
     left: 50%;
-    top: 50%;
+    top: 45%;
     width: 150px;
     height: 150px;
     margin: -85px 0 0 -85px;
