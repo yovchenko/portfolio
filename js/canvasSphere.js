@@ -248,7 +248,7 @@ function main() {
 		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
 		var lengthArr = innerText.length;
 		ctx.clearRect(35, 35, 225, 225);
-		ctx.font = "55px mainFont";
+		ctx.font = "58px mainFont";
 		ctx.textAlign = "center";
 		ctx.strokeStyle = "rgba(" + 245 + "," + 245 + "," + 245 + "," + opacity + ")";
 		ctx.textBaseline = "middle";
@@ -277,7 +277,7 @@ function main() {
 				flagText = true;
 			}
 		}
-		else if (opacity < 0.90 || (opacity < 0.01 && flagText == false)) {
+		else if (opacity < 0.95 || (opacity < 0.01 && flagText == false)) {
 			opacity += 0.005;
 			flagText = false;
 		}
