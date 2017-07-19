@@ -68,7 +68,7 @@ $(document).ready(function () {
 		var $init = $('#menu__init');
 		if ($this.hasClass('active')) {
 			$this.removeClass('active');
-			$menuClasses.addClass('fadeOut');
+			$menuClasses.stop().addClass('fadeOut');
 			$init.css('display', 'none');
 			var $set = setTimeout(function () {
 				$('.fadeOut').css('display', 'none');
@@ -82,10 +82,13 @@ $(document).ready(function () {
 		}
 		else {
 			$this.addClass('active');
+			$menuClasses.css('display','none');
+			$menuClasses.fadeIn(1500);
 			$menuClasses.removeClass('fadeOut').css('display', 'flex');
 			headerText();
 			if ($init.is(':visible')) {
 				$init.stop().fadeOut(500);
+				
 			}
 			else {
 				clearTimeout($set);
