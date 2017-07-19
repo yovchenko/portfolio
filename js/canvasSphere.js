@@ -135,8 +135,8 @@ function main() {
 	var requestID;
 	var angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
 	c = document.getElementById("canvas");
-	c.width = 290;
-	c.height = 290;
+	c.width = 295;
+	c.height = 295;
 	ctx = c.getContext('2d');
 	ctx.fillStyle = 'rgb(255,255,255)';
 	render(ctx);
@@ -247,10 +247,10 @@ function main() {
 		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
 		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
 		var lengthArr = innerText.length;
-		ctx.clearRect(33, 33, 225, 225);
+		ctx.clearRect(35, 35, 225, 225);
 		ctx.font = "55px mainFont";
 		ctx.textAlign = "center";
-		ctx.strokeStyle = "rgba(" + 255 + "," + 255 + "," + 255 + "," + opacity + ")";
+		ctx.strokeStyle = "rgba(" + 245 + "," + 245 + "," + 245 + "," + opacity + ")";
 		ctx.textBaseline = "middle";
 		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
         ctx.beginPath();
@@ -277,7 +277,7 @@ function main() {
 				flagText = true;
 			}
 		}
-		else if (opacity < 0.95 || (opacity < 0.01 && flagText == false)) {
+		else if (opacity < 0.90 || (opacity < 0.01 && flagText == false)) {
 			opacity += 0.005;
 			flagText = false;
 		}
