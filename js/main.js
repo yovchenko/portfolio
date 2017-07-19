@@ -56,12 +56,13 @@ $(document).ready(function () {
 	elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
 
 	/* hamburger menu */
-	$('.menuToggle').hover(function () {
+	var $menuToggle = $('.menuToggle');
+	$menuToggle.hover(function () {
 		$('.menuToggle span').toggleClass('spanWithShadow');
 		$(this).toggleClass('menuTransform');
 	});
 
-	$('.menuToggle').click(function () {
+	$menuToggle.click(function () {
 		var $this = $(this);
 		var $menuClasses = $('.menu__about,.menu__work,.menu__contact');
 		var $init = $('#menu__init');
@@ -140,24 +141,26 @@ $(document).ready(function () {
 	$contact.on('click', { case: 4 }, content);
     
 	function content(event) {
+		var $curtainRight = $('#curtain-section-right');
+		var $curtainLeft = $('#curtain-section-left');
 		var $page = event.data.case;
-		$('#curtain-section-right,#curtain-section-left').css('width', '100%');
-		$('#curtain-section-right').stop().css('transform', 'translateX(50%)');
-		$('#curtain-section-left').stop().css('transform', 'translateX(-50%)');
+		$curtainRight.add($curtainLeft).css('width', '100%');
+		$curtainRight.stop().css('transform', 'translateX(50%)');
+		$curtainLeft.stop().css('transform', 'translateX(-50%)');
 		var $timerCurtain = setTimeout(function () {
 
 			if ($page === 3 || $page === 4) {
-				$('.menuToggle,#canvas,.myPhoto').stop().css('display', 'none');
+				$menuToggle.add('#canvas,.myPhoto').stop().css('display', 'none');
 				$home.css('display', 'flex');
 				$('article').css('display', 'none');
 			}
 			else if ($page === 2) {
-				$('.menuToggle,#canvas,.myPhoto').stop().css('display', 'none');
+				$menuToggle.add('#canvas,.myPhoto').stop().css('display', 'none');
 				$('.menu__home,article').css('display', 'flex');
 				$('#wrapperCanvas').css('display', 'none')
 			}
 			else {
-				$('.menuToggle,#canvas,.myPhoto').css('display', 'flex');
+				$menuToggle.add('#canvas,.myPhoto').css('display', 'flex');
 				$home.css('display', 'none');
 				$('article').css('display', 'none');
 				$('#wrapperCanvas').css('display', 'flex')
@@ -177,12 +180,12 @@ $(document).ready(function () {
 				palette: Trianglify.colorbrewer,
 				stroke_width: 0.2,
 			});
-			$('#curtain-section-right').stop().css({
+			$curtainRight.stop().css({
 				'-webkit-transform': 'translateX(100%)',
 				'-moz-transform': 'translateX(100%)',
 				'transform': 'translateX(100%)'
 			});
-			$('#curtain-section-left').stop().css({
+			$curtainLeft.stop().css({
 				'-webkit-transform': 'translateX(-100%)',
 				'-moz-transform': 'translateX(-100%)',
 				'transform': 'translateX(-100%)'
