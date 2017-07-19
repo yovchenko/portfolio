@@ -281,13 +281,13 @@ footer {
   line-height: 65.74px;
   align-self: center;
   padding-top: 3px;
-  background-image: linear-gradient(90deg, rgba(0,0,0,0) 0%,rgba(75,75,75,0.40) 100%);
+  background-image: linear-gradient(90deg, rgba(0,0,0,0.005) 0%,rgba(75,75,75,0.45) 100%);
   justify-content: flex-end;
   border-radius: 5px;
 }
 
 p[class] > span{
-   text-align: center;
+   letter-spacing: -0.45px;
 }
 
 p[class] > span:last-child {
@@ -309,7 +309,7 @@ p[class] > span:first-child {
   margin: -5px;
   align-self: center;
   padding-top: 3px;
-  background-image: linear-gradient(90deg, rgba(0,0,0,0) 0%,rgba(75,75,75,0.40) 100%);
+  background-image: linear-gradient(90deg, rgba(0,0,0,0.005) 0%,rgba(75,75,75,0.45) 100%);
   border-radius: 5px;
   justify-content: flex-end;
 }
