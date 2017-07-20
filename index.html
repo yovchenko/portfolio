@@ -20,6 +20,7 @@
   <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
@@ -73,11 +74,29 @@
           but my skills are broad, from HMI/Scada system design to front end development.<br> I love code,and I'm available for
           remote work. If you would like to build something together, feel free to contact me.</p>
       </article>
+    <div class="envelope">
+    <div id="wrap">
+		<div id='form_wrap'>
+			<form>
+				<p>Hello bro,</p>
+				<label for="email">Your Message : </label>
+				<textarea  name="message" value="Your Message" id="message" ></textarea>
+				<p>Best,</p>	
+				<label for="name">Name: </label>
+				<input type="text" name="name" value="" id="name" />
+				<label for="email">Email: </label>
+				<input type="text" name="email" value="" id="email" />
+				<input type="submit" name ="submit" value="Now, I send, thanks!" />
+			</form>
+		</div>
+	</div>
+  </div>
       <div id="wrapperCanvas">
         <div class="spherePadding"></div>
         <img class="myPhoto" src="images/me.png" alt="My Photo">
         <canvas id="canvas">
         </canvas>
+        </div>
     </section>
   </main>
   <footer>
@@ -182,12 +201,12 @@
       </div>
     </div>
   </footer>
-  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
   <script src="js/modernizr-2.6.2.min.js"></script>
   <script src="js/main.js"></script>
   <script type="text/javascript" src="js/canvasSphere.js"></script>
   <script type="text/javascript" src="amplitude.min.js"></script>
 </body>
-
 </html>

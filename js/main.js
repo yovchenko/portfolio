@@ -136,7 +136,7 @@ $(document).ready(function () {
 		textLetters.init();
 	};
 
-	/* change content onclick function */
+/* change content onclick function */
 
 	$home.on('click', { case: 1 }, content);
 	$about.on("click", { case: 2 }, content);
@@ -144,29 +144,32 @@ $(document).ready(function () {
 	$contact.on('click', { case: 4 }, content);
     
 	function content(event) {
+		var $wrapperCanvas = $('#wrapperCanvas');
+		var $article = $('article');
 		var $curtainRight = $('#curtain-section-right');
 		var $curtainLeft = $('#curtain-section-left');
+		var $envelope = $('.envelope');
 		var $page = event.data.case;
 		$curtainRight.add($curtainLeft).css('width', '100%');
 		$curtainRight.stop().css('transform', 'translateX(50%)');
 		$curtainLeft.stop().css('transform', 'translateX(-50%)');
 		var $timerCurtain = setTimeout(function () {
 
-			if ($page === 3 || $page === 4) {
-				$menuToggle.add('#canvas,.myPhoto').stop().css('display', 'none');
+			if ($page === 4) {
+				$menuToggle.add('#canvas,.myPhoto').add($article).add($wrapperCanvas).stop().css('display', 'none');
+				$envelope.add($home).css('display','flex');
+			}
+			else if ($page === 3) {
+				$menuToggle.add('#canvas,.myPhoto').add($article).add($envelope).stop().css('display', 'none');
 				$home.css('display', 'flex');
-				$('article').css('display', 'none');
 			}
 			else if ($page === 2) {
-				$menuToggle.add('#canvas,.myPhoto').stop().css('display', 'none');
+				$menuToggle.add('#canvas,.myPhoto').add($wrapperCanvas).add($envelope).stop().css('display', 'none');
 				$('.menu__home,article').css('display', 'flex');
-				$('#wrapperCanvas').css('display', 'none')
 			}
 			else {
-				$menuToggle.add('#canvas,.myPhoto').css('display', 'flex');
-				$home.css('display', 'none');
-				$('article').css('display', 'none');
-				$('#wrapperCanvas').css('display', 'flex')
+				$menuToggle.add('#canvas,.myPhoto').add($wrapperCanvas).css('display', 'flex');
+				$home.add($article).add($envelope).css('display', 'none');
 			}
 			$('#canvasPic').remove();
 			pattern = Trianglify({
@@ -196,7 +199,7 @@ $(document).ready(function () {
 		}, 1200);
 	}
 
-	/* music player buttons */
+/* music player buttons */
 	var stop = $('.stopMusic');
 	var play = $('.playMusic');
 	play.click(function () {
