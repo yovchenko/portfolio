@@ -696,10 +696,7 @@ p[class] > span:first-child {
 			font-size:24px; 
       color: #7c7873;
       text-shadow:0 1px 0 #fff;
-			width:50%; 
-      -ms-transform: translateX(50%); 
-      -webkit-transform: translateX(50%); 
-      -moz-transform: translateX(50%);  
+			width: 100%; 
       text-align:center;
       opacity:0;
 			background:none;
