@@ -648,8 +648,6 @@ p[class] > span:first-child {
 
 	form {
     background:#f7f2ec url('../images/letter_bg.png'); 
-    background-size: contain;
-    background-repeat: no-repeat;
 		position:relative;
     top: 150px;
     overflow:hidden;

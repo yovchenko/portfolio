@@ -196,7 +196,7 @@ $(document).ready(function () {
 				'-moz-transform': 'translateX(-100%)',
 				'transform': 'translateX(-100%)'
 			});
-		}, 1200);
+		}, 1500);
 	}
 
 /* music player buttons */
