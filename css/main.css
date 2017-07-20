@@ -610,14 +610,23 @@ p[class] > span:first-child {
 	
 	#form_wrap:before {content:"";
 		position:absolute;
-		bottom:128px;left:0px;
+		bottom:128px;
+    left:0px;
 		background:url('../images/before.png');
-		width:530px;height: 316px;}
+    background-size: contain; 
+    background-repeat: no-repeat;
+		width: 100%;
+    height: 316px;}
 	
 	#form_wrap:after {content:"";position:absolute;
-		bottom:0px;left:0;
+		bottom:0px;
+    left:0;
 		background:url('../images/after.png');
-		width:530px;height: 260px; }
+    background-size: contain; 
+    background-repeat: no-repeat;
+		width: 100%;
+    height: 260px; 
+    }
 
 	#form_wrap.hide:after, #form_wrap.hide:before {
     display:none;
@@ -729,11 +738,19 @@ p[class] > span:first-child {
 }
 
 @media all and (max-width: 570px) {
+  #wrap {
+    margin: 10px auto 0;
+}
 
 	#form_wrap:hover form {
     height: 305px;
 }
   
+  #form_wrap:hover {
+    height: 630px;
+    top: -190px;
+}
+
   form {
     max-width: 80%;
     height: 140px;
@@ -743,13 +760,23 @@ p[class] > span:first-child {
 
 	#form_wrap:hover {
     top: 0px;
-    }
+    }  
+  #form_wrap {
+    margin: 10px;
+  }
 
-    #form_wrap:before {
-    display: none;
+  #form_wrap:before {
+    content:"";
+	  display: none;
     }
 	
-	#form_wrap:after {
-    display: none;
+	#form_wrap:after {content:"";position:absolute;
+		bottom:0px;
+    left:0;
+		background:url('../images/envelope.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+		width: 100%;
+    height: 440px; 
     }
 }
