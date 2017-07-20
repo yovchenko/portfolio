@@ -738,6 +738,7 @@ p[class] > span:first-child {
 }
   
   form {
+    max-width: 80%;
     height: 140px;
     top: 0px;
     z-index: 1;
