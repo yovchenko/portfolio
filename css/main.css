@@ -596,46 +596,28 @@ p[class] > span:first-child {
 }
 
 #wrap {
-  margin: 10px 10px 84.64px 10px;
+  margin:20px auto 0;
   position: relative;
-  max-width: 530px;
+  width: 530px;
   overflow: hidden;
   }
 
-	#form_wrap { 
-    display: flex;
-    height: 80%; 
-    position:relative; 
-    top:0px;
-    margin: 0px 10px 10px 10px;
+#form_wrap { overflow:hidden; height:446px; position:relative; top:0px;
 		-webkit-transition: all 1s ease-in-out .3s;
 		-moz-transition: all 1s ease-in-out .3s;
 		-o-transition: all 1s ease-in-out .3s;
-		transition: all 1s ease-in-out .3s;
-    }
+		transition: all 1s ease-in-out .3s;}
 	
-	#form_wrap:before {
-    content:"";
-	  position:absolute;
-  	bottom:128px;
-  	background:url('../images/before.png');
-    width: 100%;
-    height: 310px;
-    margin-top: 10px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    }
+	#form_wrap:before {content:"";
+		position:absolute;
+		bottom:128px;left:0px;
+		background:url('../images/before.png');
+		width:530px;height: 316px;}
 	
-	#form_wrap:after {
-    content:"";
-    position:absolute;
-		bottom:0px;
+	#form_wrap:after {content:"";position:absolute;
+		bottom:0px;left:0;
 		background:url('../images/after.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-		width: 100%;
-    height: 260px; 
-    }
+		width:530px;height: 260px; }
 
 	#form_wrap.hide:after, #form_wrap.hide:before {
     display:none;
@@ -646,19 +628,19 @@ p[class] > span:first-child {
     top:-150px;
     }
 
+
 	form {
     background:#f7f2ec url('../images/letter_bg.png'); 
 		position:relative;
     top: 150px;
     overflow:hidden;
-		height: 32%;
-    width: 80%;
+		height:200px;
+    width:400px;
     margin:0px auto;
-    padding: 20px 26px 20px 20px;
+    padding:20px; 
 		border: 1px solid #fff;
 		border-radius: 3px; 
-		-moz-border-radius: 3px; 
-    -webkit-border-radius: 3px;
+		-moz-border-radius: 3px; -webkit-border-radius: 3px;
 		box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff;
 		-moz-box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 14px #fff;
 		-webkit-box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff;
@@ -667,12 +649,12 @@ p[class] > span:first-child {
 		-o-transition: all 1s ease-in-out .3s;
 		transition: all 1s ease-in-out .3s;}
 
-    form > p {
-    margin: 0px 0px 15px 0px;
+		#form_wrap:hover form {
+      height: 430px;
     }
 
-		#form_wrap:hover form {
-         height: 60%;
+    form > p {
+    margin: 0px 0px 15px 0px;
     }
 
 		label {
