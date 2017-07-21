@@ -211,6 +211,7 @@ $(document).ready(function () {
 		play.show();
 	});
 
+/*textarea focusing*/
 window.addEventListener('native.showkeyboard', keyboardShowHandler);
 function keyboardShowHandler(e){
 $('footer').hide(); 
