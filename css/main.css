@@ -765,6 +765,7 @@ p[class] > span:first-child {
 	#form_wrap:hover {
     top: 0px;
     }  
+
   #form_wrap {
     margin: 10px;
   }
@@ -785,4 +786,14 @@ p[class] > span:first-child {
 		width: 100%;
     height: 440px; 
     }
+}
+
+@media screen and (orientation:landscape) {
+  .hide-footer {
+    display: none!important;
+  }
+
+  .wrapLandscape {
+    overflow: initial!important;
+  }
 }

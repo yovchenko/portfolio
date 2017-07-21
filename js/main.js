@@ -212,12 +212,19 @@ $(document).ready(function () {
 	});
 
 /*textarea focusing*/
-$('input,#message').focus(function() {
-   $('.hide-on-keyboard-open').addClass('hide-footer');
+var $form = $('#message');
+var $hideFooter = $('.hide-on-keyboard-open');
+$('input').add($form).focus(function() {
+   $hideFooter.addClass('hide-footer');
 });
 
-$('input,#message').focusout(function() {
-   $('.hide-on-keyboard-open').removeClass('hide-footer');
+$('input').add($form).focusout(function() {
+   $hideFooter.removeClass('hide-footer');
+});
+
+$(window).on( "orientationchange", function(event) {
+   $hideFooter.toggleClass('hide-footer');
+   $('#wrap').toggleClass('wrapLandscape');
 });
 });
 
