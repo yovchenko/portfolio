@@ -222,11 +222,11 @@ function keyboardHideHandler(e){
     $('footer').show(); 
 }
 
-$('input','textarea').focus(function() {
+$('input,#message').focus(function() {
    $('footer').addClass('hide-footer');
 });
 
-$('input','textarea').focusout(function() {
+$('input,#message').focusout(function() {
    $('footer').removeClass('hide-footer');
 });
 
