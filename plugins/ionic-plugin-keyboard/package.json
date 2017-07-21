@@ -10,7 +10,7 @@
         "spec": "latest",
         "type": "tag"
       },
-      "/home/yovchenko/v/node_modules"
+      "https://yovchenko.github.io/portfolio/node_modules"
     ]
   ],
   "_from": "ionic-plugin-keyboard@latest",
@@ -45,7 +45,7 @@
   "_shasum": "f2a9e169bbe9b5522400347c9fd6d3467ee3fa12",
   "_shrinkwrap": null,
   "_spec": "ionic-plugin-keyboard",
-  "_where": "/home/yovchenko/v/node_modules",
+  "_where": "https://yovchenko.github.io/portfolio/node_modules",
   "author": {
     "name": "Ionic"
   },
