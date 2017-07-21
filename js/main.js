@@ -210,11 +210,13 @@ $(document).ready(function () {
 		stop.hide();
 		play.show();
 	});
-	
+
 /*ionic plugins for mobKeybord*/
+
 window.addEventListener('native.showkeyboard', keyboardShowHandler);
 function keyboardShowHandler(e){
 $('footer').hide(); 
+alert('hello');
 }
 
 window.addEventListener('native.hidekeyboard', keyboardHideHandler);
