@@ -770,7 +770,9 @@ p[class] > span:first-child {
 	  display: none;
     }
 	
-	#form_wrap:after {content:"";position:absolute;
+	#form_wrap:after {
+    content:"";
+    position:absolute;
 		bottom:0px;
     left:0;
 		background:url('../images/envelope.png');
