@@ -743,7 +743,7 @@ p[class] > span:first-child {
 }
 
 .hide-footer {
-        display: none;
+    display: none!important;
 }
 
 	#form_wrap:hover form {

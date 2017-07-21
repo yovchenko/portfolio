@@ -223,11 +223,11 @@ function keyboardHideHandler(e){
 }
 
 $('input,#message').focus(function() {
-   $('footer').addClass('hide-footer');
+   $('.hide-on-keyboard-open').addClass('hide-footer');
 });
 
 $('input,#message').focusout(function() {
-   $('footer').removeClass('hide-footer');
+   $('.hide-on-keyboard-open').removeClass('hide-footer');
 });
 
 });
