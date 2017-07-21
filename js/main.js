@@ -223,7 +223,7 @@ $('input').add($form).focusout(function() {
 });
 
 $(window).on( "orientationchange", function(event) {
-   $hideFooter.toggleClass('hide-footer');
+   $hideFooter.toggleClass('footerLandscape');
    $('#wrap').toggleClass('wrapLandscape');
 });
 });

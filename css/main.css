@@ -789,7 +789,7 @@ p[class] > span:first-child {
 }
 
 @media screen and (orientation:landscape) {
-  .hide-footer {
+  .footerLandscape {
     display: none!important;
   }
 
