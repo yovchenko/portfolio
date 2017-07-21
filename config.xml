@@ -10,7 +10,6 @@
     <repo>https://github.com/driftyco/ionic-plugin-keyboard.git</repo>
     <issue>https://github.com/driftyco/ionic-plugin-keyboard/issues</issue>
 
-
     <!-- android -->
     <platform name="android">
         <js-module src="www/android/keyboard.js" name="keyboard">
