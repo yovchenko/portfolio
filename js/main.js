@@ -212,18 +212,6 @@ $(document).ready(function () {
 	});
 
 /*textarea focusing*/
-window.addEventListener('native.showkeyboard', keyboardShowHandler);
-function keyboardShowHandler(e){
-$('footer').hide(); 
-alert('hello');
-}
-
-window.addEventListener('native.hidekeyboard', keyboardHideHandler);
-function keyboardHideHandler(e){
-    $('footer').show(); 
-	alert('bye');
-}
-
 $('input,#message').focus(function() {
    $('.hide-on-keyboard-open').addClass('hide-footer');
 });
@@ -231,6 +219,5 @@ $('input,#message').focus(function() {
 $('input,#message').focusout(function() {
    $('.hide-on-keyboard-open').removeClass('hide-footer');
 });
-
 });
 
