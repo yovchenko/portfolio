@@ -221,5 +221,14 @@ window.addEventListener('native.hidekeyboard', keyboardHideHandler);
 function keyboardHideHandler(e){
     $('footer').show(); 
 }
+
+$('input','textarea').focus(function() {
+   $('footer').addClass('hide-footer');
+});
+
+$('input','textarea').focusout(function() {
+   $('footer').removeClass('hide-footer');
+});
+
 });
 

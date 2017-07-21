@@ -782,3 +782,9 @@ p[class] > span:first-child {
     height: 440px; 
     }
 }
+
+@media all and (min-width: 570px) {
+.hide-footer {
+        display: none;
+    }
+}
