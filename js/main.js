@@ -221,6 +221,7 @@ alert('hello');
 window.addEventListener('native.hidekeyboard', keyboardHideHandler);
 function keyboardHideHandler(e){
     $('footer').show(); 
+	alert('bye');
 }
 
 $('input,#message').focus(function() {
