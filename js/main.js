@@ -204,10 +204,10 @@ $(document).ready(function () {
 	var play = $('.playMusic');
 	play.click(function () {
 		stop.show();
-		play.hide();
+		$(this).hide();
 	});
 	stop.click(function () {
-		stop.hide();
+		$(this).hide();
 		play.show();
 	});
 
