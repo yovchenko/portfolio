@@ -149,21 +149,21 @@ $(document).ready(function () {
 		var $curtainRight = $('#curtain-section-right');
 		var $curtainLeft = $('#curtain-section-left');
 		var $envelope = $('.envelope');
-		var $page = event.data.case;
+		var $pageMain = event.data.case;
 		$curtainRight.add($curtainLeft).css('width', '100%');
 		$curtainRight.stop().css('transform', 'translateX(50%)');
 		$curtainLeft.stop().css('transform', 'translateX(-50%)');
 		var $timerCurtain = setTimeout(function () {
 
-			if ($page === 4) {
+			if ($pageMain === 4) {
 				$menuToggle.add('#canvas,.myPhoto').add($article).add($wrapperCanvas).stop().css('display', 'none');
 				$envelope.add($home).css('display','flex');
 			}
-			else if ($page === 3) {
+			else if ($pageMain === 3) {
 				$menuToggle.add('#canvas,.myPhoto').add($article).add($envelope).stop().css('display', 'none');
 				$home.css('display', 'flex');
 			}
-			else if ($page === 2) {
+			else if ($pageMain === 2) {
 				$menuToggle.add('#canvas,.myPhoto').add($wrapperCanvas).add($envelope).stop().css('display', 'none');
 				$('.menu__home,article').css('display', 'flex');
 			}
@@ -210,5 +210,56 @@ $(document).ready(function () {
 		$(this).hide();
 		play.show();
 	});
+
+/*envelope resize*/
+var pageWidth, pageHeight;
+
+var basePage = {
+  width: 530,
+  height: 583,
+  scale: 1,
+  scaleX: 1,
+  scaleY: 1
+};
+
+$(function(){
+  var $page = $('#wrap');
+  
+  getPageSize();
+  scalePages($page, pageWidth, pageHeight);
+  
+//using underscore to delay resize method till finished resizing window
+  $(window).resize(function () {
+    getPageSize();            
+    scalePages($page, pageWidth, pageHeight);
 });
+  
+
+function getPageSize() {
+  pageHeight = $('.envelope').height();
+  pageWidth = $('.envelope').width();
+}
+
+function scalePages(page, maxWidth, maxHeight) {            
+  var scaleX = 1, scaleY = 1;                      
+  scaleX = maxWidth / basePage.width;
+  scaleY = maxHeight / basePage.height;
+  basePage.scaleX = scaleX;
+  basePage.scaleY = scaleY;
+  basePage.scale = (scaleX > scaleY) ? scaleY : scaleX;
+
+  var newLeftPos = Math.abs(Math.floor(((basePage.width * basePage.scale) - maxWidth)/2));
+  var newTopPos = Math.abs(Math.floor(((basePage.height * basePage.scale) - maxHeight)/2));
+
+  page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');left:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
+}
+});
+});
+
+
+
+
+
+
+
 
