@@ -82,13 +82,13 @@ $(document).ready(function () {
 		}
 		else {
 			$this.addClass('active');
-			$menuClasses.css('display','none');
+			$menuClasses.css('display', 'none');
 			$menuClasses.fadeIn(1500);
 			$menuClasses.removeClass('fadeOut').css('display', 'flex');
 			headerText();
 			if ($init.is(':visible')) {
 				$init.stop().fadeOut(500);
-				
+
 			}
 			else {
 				clearTimeout($set);
@@ -136,13 +136,13 @@ $(document).ready(function () {
 		textLetters.init();
 	};
 
-/* change content onclick function */
+	/* change content onclick function */
 
 	$home.on('click', { case: 1 }, content);
 	$about.on("click", { case: 2 }, content);
 	$work.on('click', { case: 3 }, content);
 	$contact.on('click', { case: 4 }, content);
-    
+
 	function content(event) {
 		var $wrapperCanvas = $('#wrapperCanvas');
 		var $article = $('article');
@@ -157,7 +157,7 @@ $(document).ready(function () {
 
 			if ($pageMain === 4) {
 				$menuToggle.add('#canvas,.myPhoto').add($article).add($wrapperCanvas).stop().css('display', 'none');
-				$envelope.add($home).css('display','flex');
+				$envelope.add($home).css('display', 'flex');
 			}
 			else if ($pageMain === 3) {
 				$menuToggle.add('#canvas,.myPhoto').add($article).add($envelope).stop().css('display', 'none');
@@ -199,7 +199,7 @@ $(document).ready(function () {
 		}, 1500);
 	}
 
-/* music player buttons */
+	/* music player buttons */
 	var stop = $('.stopMusic');
 	var play = $('.playMusic');
 	play.click(function () {
@@ -211,49 +211,49 @@ $(document).ready(function () {
 		play.show();
 	});
 
-/*envelope resize*/
-var pageWidth, pageHeight;
+	/*envelope resize*/
+	var pageWidth, pageHeight;
 
-var basePage = {
-  width: 530,
-  height: 583,
-  scale: 1,
-  scaleX: 1,
-  scaleY: 1
-};
+	var basePage = {
+		width: 530,
+		height: 583,
+		scale: 1,
+		scaleX: 1,
+		scaleY: 1
+	};
 
-$(function(){
-  var $page = $('#wrap');
-  
-  getPageSize();
-  scalePages($page, pageWidth, pageHeight);
-  
-//using underscore to delay resize method till finished resizing window
-  $(window).resize(function () {
-    getPageSize();            
-    scalePages($page, pageWidth, pageHeight);
-});
-  
+	$(function () {
+		var $page = $('#wrap');
 
-function getPageSize() {
-  pageHeight = $('.envelope').height();
-  pageWidth = $('.envelope').width();
-}
+		getPageSize();
+		scalePages($page, pageWidth, pageHeight);
 
-function scalePages(page, maxWidth, maxHeight) {            
-  var scaleX = 1, scaleY = 1;                      
-  scaleX = maxWidth / basePage.width;
-  scaleY = maxHeight / basePage.height;
-  basePage.scaleX = scaleX;
-  basePage.scaleY = scaleY;
-  basePage.scale = (scaleX > scaleY) ? scaleY : scaleX;
+		//using underscore to delay resize method till finished resizing window
+		$(window).resize(function () {
+			getPageSize();
+			scalePages($page, pageWidth, pageHeight);
+		});
 
-  var newLeftPos = Math.abs(Math.floor(((basePage.width * basePage.scale) - maxWidth)/2));
-  var newTopPos = Math.abs(Math.floor(((basePage.height * basePage.scale) - maxHeight)/2));
 
-  page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');left:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
-}
-});
+		function getPageSize() {
+			pageHeight = $('.envelope').height();
+			pageWidth = $('.envelope').width();
+		}
+
+		function scalePages(page, maxWidth, maxHeight) {
+			var scaleX = 1, scaleY = 1;
+			scaleX = maxWidth / basePage.width;
+			scaleY = maxHeight / basePage.height;
+			basePage.scaleX = scaleX;
+			basePage.scaleY = scaleY;
+			basePage.scale = (scaleX > scaleY) ? scaleY : scaleX;
+
+			var newLeftPos = Math.abs(Math.floor(((basePage.width * basePage.scale) - maxWidth) / 2));
+			var newTopPos = Math.abs(Math.floor(((basePage.height * basePage.scale) - maxHeight) / 2));
+
+			page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
+		}
+	});
 });
 
 
