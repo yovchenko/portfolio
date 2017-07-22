@@ -225,6 +225,7 @@ $('input').add($form).focusout(function() {
 $(window).on( "orientationchange", function(event) {
    $hideFooter.toggleClass('footerLandscape');
    $('#wrap').toggleClass('wrapLandscape');
+   $('.myPhoto').toggleClass('myPhotoLandscape');
 });
 });
 
