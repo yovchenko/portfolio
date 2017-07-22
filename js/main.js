@@ -212,24 +212,13 @@ $(document).ready(function () {
 	});
 
 /*textarea focusing*/
-var $form = $('#message');
-var $hideFooter = $('.hide-on-keyboard-open');
-$('input').add($form).focus(function() {
-   $hideFooter.addClass('hide-footer');
-});
-
-$('input').add($form).focusout(function() {
-   $hideFooter.removeClass('hide-footer');
-});
-
 $(window).on( "orientationchange", function(event) {
-	if ($('.myPhoto').is(':visible')) {
-   $('.myPhoto').toggleClass('myPhotoLandscape');
-   $('#canvas').toggleClass('canvasLandscape');
+ 	if ($('.myPhoto').is(':visible')) {
+	$('.myPhoto').toggleClass('myPhotoLandscape');
+    $('#canvas').toggleClass('canvasLandscape');
 	}
 	else {
-	$('#wrap').toggleClass('wrapLandscape');
-    $hideFooter.toggleClass('footerLandscape');
+    $('#wrap').toggleClass('wrapLandscape');
 	}
 });
 });
