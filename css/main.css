@@ -135,6 +135,7 @@ main {
 
 .myPhoto {
   height: 100%;
+  margin: auto;
   position: absolute;
   bottom: 0px;
   z-index: 0;
