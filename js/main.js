@@ -210,16 +210,5 @@ $(document).ready(function () {
 		$(this).hide();
 		play.show();
 	});
-
-/*textarea focusing*/
-$(window).on( "orientationchange", function(event) {
- 	if ($('.myPhoto').is(':visible')) {
-	$('.myPhoto').toggleClass('myPhotoLandscape');
-    $('#canvas').toggleClass('canvasLandscape');
-	}
-	else {
-    $('#wrap').toggleClass('wrapLandscape');
-	}
-});
 });
 
