@@ -782,13 +782,3 @@ p[class] > span:first-child {
     }
   
 }
-
-@media screen and (orientation:landscape) {
-  .myPhotoLandscape {
-    min-width: initial!important;
-  }
-
-  .canvasLandscape {
-    right: 70px!important;
-  }
-}
