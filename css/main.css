@@ -790,6 +790,8 @@ p[class] > span:first-child {
     .footerLandscape {
       display: flex;
     }
+
+    
 }
 
 @media screen and (orientation:landscape) {
@@ -802,6 +804,10 @@ p[class] > span:first-child {
   }
 
   .myPhotoLandscape {
-    min-width: initial;
+    min-width: initial!important;
+  }
+
+  .canvasLandscape {
+    right: 70px!important;
   }
 }
