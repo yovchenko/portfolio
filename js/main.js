@@ -223,10 +223,14 @@ $('input').add($form).focusout(function() {
 });
 
 $(window).on( "orientationchange", function(event) {
-   $hideFooter.toggleClass('footerLandscape');
-   $('#wrap').toggleClass('wrapLandscape');
+	if ($('.myPhoto').is(':visible')) {
    $('.myPhoto').toggleClass('myPhotoLandscape');
    $('#canvas').toggleClass('canvasLandscape');
+	}
+	else {
+	$('#wrap').toggleClass('wrapLandscape');
+    $hideFooter.toggleClass('footerLandscape');
+	}
 });
 });
 
