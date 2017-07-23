@@ -141,6 +141,27 @@ main {
   z-index: 0;
 }
 
+.smallMe {
+  display: none;
+}
+
+@media all and (min-width: 571px) {
+.myPhoto {
+  display: none;
+}
+}
+
+@media all and (max-width: 570px) {
+.smallMe {
+  display: inherit;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  bottom: 0px;
+  z-index: 0;
+}
+}
+
 .spherePadding {
   display: flex;
   flex:0 1 70%;
