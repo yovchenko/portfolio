@@ -225,33 +225,6 @@ $(document).ready(function () {
 
 var $resizeContent = function e() {
 	var $page = $('#wrap');
-	 $('input,#message').focus(function() {
-	if ($(window).width() < 570) {
-	   basePage = {
-		width: 530,
-		height: 283,
-		scale: 1,
-		scaleX: 1,
-		scaleY: 1
-	};
-	getPageSize();
-	scalePages($page, pageWidth, pageHeight);
-	}
-	});
-
-	$('input,#message').focusout(function() {
-	if ($(window).width() < 570) {	
-	   basePage = {
-		width: 530,
-		height: 583,
-		scale: 1,
-		scaleX: 1,
-		scaleY: 1
-	};
-	getPageSize();
-	scalePages($page, pageWidth, pageHeight);
-	}
-	});
 
 		getPageSize();
 		scalePages($page, pageWidth, pageHeight);
