@@ -225,6 +225,32 @@ $(document).ready(function () {
 	$(function () {
 		var $page = $('#wrap');
 
+		 $('input,#message').focus(function() {
+	 $('footer').css('display','none');
+	   basePage = {
+		width: 530,
+		height: 383,
+		scale: 1,
+		scaleX: 1,
+		scaleY: 1
+	};
+	getPageSize();
+	scalePages($page, pageWidth, pageHeight);
+	});
+
+		 $('input,#message').focusout(function() {
+			 $('footer').css('display','block');
+	   basePage = {
+		width: 530,
+		height: 583,
+		scale: 1,
+		scaleX: 1,
+		scaleY: 1
+	};
+	getPageSize();
+	scalePages($page, pageWidth, pageHeight);
+	});
+
 		getPageSize();
 		scalePages($page, pageWidth, pageHeight);
 
@@ -255,18 +281,6 @@ $(document).ready(function () {
 			page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
 		}
 	});
-
- $('input,#message').focus(function() {
-  $('#wrap').addClass('wrapFocused');
-  $('form').addClass('formFocused');
-  $('footer').addClass('hide-footer');
-});
-
- $('input,#message').focusout(function() {
-  $('footer').removeClass('hide-footer');
-  $('#wrap').removeClass('wrapFocused');
-  $('form').removeClass('formFocused');
- });
 });
 
 

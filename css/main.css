@@ -705,6 +705,7 @@ p[class] > span:first-child {
 		}	
 
 		textarea { 
+      width: 98.8%;
       height: 80px; 
       padding-top:14px;
       }
@@ -751,18 +752,20 @@ p[class] > span:first-child {
 }
 
  @media all and (max-width: 570px) {
- .wrapFocused{
-   -webkit-transform:scale(1.0)!important;
-   -moz-transform: scale(1.0)!important;
-   transform: scale(1.0)!important;
-   right : 0!important;
-   width : 100%!important;
-     }
-  .formFocused {
-    width: 80%!important;
-    height: 50%!important;
+
+.wrapFocused {
+  width: 530px!important;
+  height: 383px!important;
+  padding-bottom: 200px!important;
+  -ms-transform-origin: top right!important;
+  -webkit-transform-origin: top right!important;
+  transform-origin: top right!important;
+  -webkit-transition: all 500ms ease-in-out !important;
+  transition: all 500ms ease-in-out !important;
   }
+  
   .hide-footer{
     display: none!important;
- }
+}
+
  }
