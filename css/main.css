@@ -587,9 +587,7 @@ p[class] > span:first-child {
   display: none;
   width: 100%;
   height: auto;
-  position: relative;
-  margin-bottom: 100px;
-  padding: 25% 0 0 0;
+  padding: 55% 0 0 0;
 }
 
 .envelope {
@@ -604,6 +602,7 @@ p[class] > span:first-child {
 }
 
 #wrap {
+  margin-top: 74.64px;
   width: 530px;
   height: 583px;
   overflow: hidden;
@@ -761,5 +760,6 @@ p[class] > span:first-child {
 @media screen and (max-width: 570px) {
 .container {
   padding: 75% 0 0 0;
+  margin-bottom: 100px;
 }
 }
