@@ -583,12 +583,19 @@ p[class] > span:first-child {
 }
 
 /*contact form*/
-.envelope {
+.container {
   display: none;
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 100px;
+  padding: 25% 0 0 0;
+}
+
+.envelope {
   width: 90%;
   position: absolute;
   height: 80%;
-  margin:  74.64px auto 0px auto;
   top: 50%; 
   left: 50%;
   -webkit-transform: translate(-50%,-50%);
@@ -745,9 +752,14 @@ p[class] > span:first-child {
       }
 
 /* media queries */
-
 @media all and (min-width: 1600px) {
 #menu__init,.menu__home,.menu__about,.menu__work,.menu__contact {
     font-size: 50px;
   }
+}
+
+@media screen and (max-width: 570px) {
+.container {
+  padding: 75% 0 0 0;
+}
 }

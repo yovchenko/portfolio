@@ -148,7 +148,7 @@ $(document).ready(function () {
 		var $article = $('article');
 		var $curtainRight = $('#curtain-section-right');
 		var $curtainLeft = $('#curtain-section-left');
-		var $envelope = $('.envelope');
+		var $container = $('.container');
 		var $pageMain = event.data.case;
 		$curtainRight.add($curtainLeft).css('width', '100%');
 		$curtainRight.stop().css('transform', 'translateX(50%)');
@@ -157,19 +157,20 @@ $(document).ready(function () {
 
 			if ($pageMain === 4) {
 				$menuToggle.add('#canvas,.myPhoto').add($article).add($wrapperCanvas).stop().css('display', 'none');
-				$envelope.add($home).css('display', 'flex');
+				$container.add($home).css('display', 'flex');
+				$resizeContent();
 			}
 			else if ($pageMain === 3) {
-				$menuToggle.add('#canvas,.myPhoto').add($article).add($envelope).stop().css('display', 'none');
+				$menuToggle.add('#canvas,.myPhoto').add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
 			}
 			else if ($pageMain === 2) {
-				$menuToggle.add('#canvas,.myPhoto').add($wrapperCanvas).add($envelope).stop().css('display', 'none');
+				$menuToggle.add('#canvas,.myPhoto').add($wrapperCanvas).add($container).stop().css('display', 'none');
 				$('.menu__home,article').css('display', 'flex');
 			}
 			else {
 				$menuToggle.add('#canvas,.myPhoto').add($wrapperCanvas).css('display', 'flex');
-				$home.add($article).add($envelope).css('display', 'none');
+				$home.add($article).add($container).css('display', 'none');
 			}
 			$('#canvasPic').remove();
 			pattern = Trianglify({
@@ -222,11 +223,10 @@ $(document).ready(function () {
 		scaleY: 1
 	};
 
-	$(function () {
+var $resizeContent = function e() {
 	var $page = $('#wrap');
 	 $('input,#message').focus(function() {
 	if ($(window).width() < 570) {
-	 $('footer').css('display','none');
 	   basePage = {
 		width: 530,
 		height: 383,
@@ -241,7 +241,6 @@ $(document).ready(function () {
 
 	$('input,#message').focusout(function() {
 	if ($(window).width() < 570) {	
-	$('footer').css('display','block');
 	   basePage = {
 		width: 530,
 		height: 583,
@@ -283,7 +282,7 @@ $(document).ready(function () {
 
 			page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
 		}
-	});
+	};
 });
 
 
