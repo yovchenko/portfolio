@@ -745,6 +745,7 @@ p[class] > span:first-child {
       }
 
 /* media queries */
+
 @media all and (min-width: 1600px) {
 #menu__init,.menu__home,.menu__about,.menu__work,.menu__contact {
     font-size: 50px;
