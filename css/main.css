@@ -145,13 +145,13 @@ main {
   display: none;
 }
 
-@media all and (min-width: 571px) {
+@media all and (max-width: 570px) {
 .myPhoto {
   display: none;
 }
 }
 
-@media all and (max-width: 570px) {
+@media all and (min-width: 571px) {
 .smallMe {
   display: inherit;
   height: 100%;
