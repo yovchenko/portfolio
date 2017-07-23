@@ -229,7 +229,7 @@ var $resizeContent = function e() {
 	if ($(window).width() < 570) {
 	   basePage = {
 		width: 530,
-		height: 383,
+		height: 283,
 		scale: 1,
 		scaleX: 1,
 		scaleY: 1
