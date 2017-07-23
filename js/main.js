@@ -223,9 +223,9 @@ $(document).ready(function () {
 	};
 
 	$(function () {
-		var $page = $('#wrap');
-
-		 $('input,#message').focus(function() {
+	var $page = $('#wrap');
+	 $('input,#message').focus(function() {
+	if ($(window).width() < 570) {
 	 $('footer').css('display','none');
 	   basePage = {
 		width: 530,
@@ -236,10 +236,12 @@ $(document).ready(function () {
 	};
 	getPageSize();
 	scalePages($page, pageWidth, pageHeight);
+	}
 	});
 
-		 $('input,#message').focusout(function() {
-			 $('footer').css('display','block');
+	$('input,#message').focusout(function() {
+	if ($(window).width() < 570) {	
+	$('footer').css('display','block');
 	   basePage = {
 		width: 530,
 		height: 583,
@@ -249,6 +251,7 @@ $(document).ready(function () {
 	};
 	getPageSize();
 	scalePages($page, pageWidth, pageHeight);
+	}
 	});
 
 		getPageSize();
