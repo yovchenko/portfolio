@@ -133,13 +133,6 @@ main {
   flex-direction: column;
 }
 
-.myPhoto {
-  height: 100%;
-  margin: auto;
-  position: absolute;
-  bottom: 0px;
-  z-index: 0;
-}
 
 .smallMe {
   display: none;
@@ -150,15 +143,24 @@ main {
   display: none;
 }
 }
+
 @media all and (max-width: 570px) {
 .smallMe {
-  display: inherit;
+  display: flex;
   height: 100%;
   margin: auto;
   position: absolute;
   bottom: 0px;
   z-index: 0;
 }
+}
+
+.myPhoto {
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  bottom: 0px;
+  z-index: 0;
 }
 
 .spherePadding {
