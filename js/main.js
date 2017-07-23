@@ -226,6 +226,29 @@ $(document).ready(function () {
 var $resizeContent = function e() {
 	var $page = $('#wrap');
 
+	 $('input,#message').focus(function() {
+	if ($(window).width() < 570) {
+	   basePage = {
+		width: 530,
+		height: 323,
+		scale: 1,
+		scaleX: 1,
+		scaleY: 1
+	};
+	getPageSize();
+	scalePages($page, pageWidth, pageHeight);
+	}
+});
+
+$(window).on('orientationchange',function(event){
+$('.container').css({
+	'padding':'115% 0 0 0',
+	'top' : '-100px'
+});
+});
+
+ 
+
 		getPageSize();
 		scalePages($page, pageWidth, pageHeight);
 
