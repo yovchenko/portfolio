@@ -211,7 +211,7 @@ $(document).ready(function () {
 		play.show();
 	});
 
-	/*envelope resize*/
+/*envelope resize*/
 	var pageWidth, pageHeight;
 
 	var basePage = {
@@ -242,6 +242,7 @@ $(document).ready(function () {
 
 		function scalePages(page, maxWidth, maxHeight) {
 			var scaleX = 1, scaleY = 1;
+
 			scaleX = maxWidth / basePage.width;
 			scaleY = maxHeight / basePage.height;
 			basePage.scaleX = scaleX;
@@ -254,9 +255,19 @@ $(document).ready(function () {
 			page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
 		}
 	});
+
+ $('input,#message').focus(function() {
+  $('#wrap').addClass('wrapFocused');
+  $('form').addClass('formFocused');
+  $('footer').addClass('hide-footer');
 });
 
-
+ $('input,#message').focusout(function() {
+  $('footer').removeClass('hide-footer');
+  $('#wrap').removeClass('wrapFocused');
+  $('form').removeClass('formFocused');
+ });
+});
 
 
 
