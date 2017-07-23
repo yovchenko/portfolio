@@ -750,22 +750,3 @@ p[class] > span:first-child {
     font-size: 50px;
   }
 }
-
- @media all and (max-width: 570px) {
-
-.wrapFocused {
-  width: 530px!important;
-  height: 383px!important;
-  padding-bottom: 200px!important;
-  -ms-transform-origin: top right!important;
-  -webkit-transform-origin: top right!important;
-  transform-origin: top right!important;
-  -webkit-transition: all 500ms ease-in-out !important;
-  transition: all 500ms ease-in-out !important;
-  }
-  
-  .hide-footer{
-    display: none!important;
-}
-
- }
