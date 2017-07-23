@@ -226,17 +226,7 @@ $(document).ready(function () {
 var $resizeContent = function e() {
 	var $page = $('#wrap');
 	 $('input,#message').focus(function() {
-	if ($(window).width() < 570) {
-	   basePage = {
-		width: 530,
-		height: 383,
-		scale: 1,
-		scaleX: 1,
-		scaleY: 1
-	};
-	getPageSize();
-	scalePages($page, pageWidth, pageHeight);
-	}
+	
 	});
 
 	$('input,#message').focusout(function() {
