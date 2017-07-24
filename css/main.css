@@ -12,9 +12,9 @@ body {
 @font-face {
   font-family: "sketchBlock";
   src:url("../fonts/sketchBlock.eot?") format("eot"),
-  url("../fonts/sketchBlock.woff") format("woff"),
-  url("../fonts/sketchBlock.ttf") format("truetype"),
-  url("../fonts/sketchBlock.svg#sketchBlock") format("svg");
+      url("../fonts/sketchBlock.woff") format("woff"),
+      url("../fonts/sketchBlock.ttf") format("truetype"),
+      url("../fonts/sketchBlock.svg#sketchBlock") format("svg");
   font-weight:normal;
   font-style:normal;
 }

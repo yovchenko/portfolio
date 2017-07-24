@@ -212,7 +212,7 @@ $(document).ready(function () {
 		play.show();
 	});
 
-/*envelope resize*/
+	/*envelope resize*/
 	var pageWidth, pageHeight;
 
 	var basePage = {
@@ -223,32 +223,22 @@ $(document).ready(function () {
 		scaleY: 1
 	};
 
-var $resizeContent = function e() {
-	var $page = $('#wrap');
+	var $resizeContent = function e() {
+		var $page = $('#wrap');
 
-	 $('input,#message').focus(function() {
-	if ($(window).width() < 570) {
-	   basePage = {
-		width: 530,
-		height: 323,
-		scale: 1,
-		scaleX: 1,
-		scaleY: 1
-	};
-	getPageSize();
-	scalePages($page, pageWidth, pageHeight);
-	}
-});
-
-$(window).on('orientationchange',function(event){
-$('.container').css({
-	'padding':'115% 0 0 0',
-	'top' : '-100px'
-});
-});
-
- 
-
+		$('input,#message').focus(function () {
+			if ($(window).width() < 570) {
+				basePage = {
+					width: 530,
+					height: 323,
+					scale: 1,
+					scaleX: 1,
+					scaleY: 1
+				};
+				getPageSize();
+				scalePages($page, pageWidth, pageHeight);
+			}
+		});
 		getPageSize();
 		scalePages($page, pageWidth, pageHeight);
 
@@ -279,7 +269,37 @@ $('.container').css({
 			page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
 		}
 	};
+	$(window).on('orientationchange', function (event) {
+		$('.container').css({
+			'padding': '115% 0 0 0',
+			'top': '-100px'
+		});
+
+	});
+
+	/*feedback $form*/
+	var $contactForm = $('#contactForm');
+	$contactForm.submit(function (e) {
+		var form = document.querySelector('#message');
+		if (form.checkValidity()) {
+			e.preventDefault();
+			$.ajax({
+				url: "https://formspree.io/gascentr.service@gmail.com",
+				method: "POST",
+				data: {
+					textarea: $('#message').val()
+				},
+				dataType: "json"
+			}).done(function () {
+				$('form').html('<h1><span class="message">Thank you!</span></h1>');
+			});
+		}
+	});
 });
+
+
+
+
 
 
 
