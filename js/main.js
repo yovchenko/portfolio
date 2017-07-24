@@ -284,7 +284,7 @@ $(document).ready(function () {
 		if ($contactForm.valid()) {
 			e.preventDefault();
 			$.ajax({
-				url: "https://formspree.io/gascentr.@gmail.com",
+				url: "https://formspree.io/yovchenko.vl@gmail.com",
 				method: "POST",
 				data: $(this).serialize(),
 				dataType: "json"
