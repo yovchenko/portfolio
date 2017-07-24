@@ -248,7 +248,7 @@ function main() {
 		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
 		var lengthArr = innerText.length;
 		ctx.clearRect(35, 35, 225, 225);
-		ctx.font = "58px mainFont";
+		ctx.font = "58px sketchBlock";
 		ctx.textAlign = "center";
 		ctx.strokeStyle = "rgba(" + 245 + "," + 245 + "," + 245 + "," + opacity + ")";
 		ctx.textBaseline = "middle";
