@@ -286,7 +286,9 @@ $(document).ready(function () {
 			$.ajax({
 				url: "https://formspree.io/yovchenko.vl@gmail.com",
 				method: "POST",
-				data: $(this).serialize(),
+				data: {
+                textarea: $('#message').val()
+                },
 				dataType: "json"
 			}).done(function () {
 				$('form').html('<h1><span class="message">Thank you!</span></h1>');
