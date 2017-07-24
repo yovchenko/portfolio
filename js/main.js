@@ -279,12 +279,12 @@ $(document).ready(function () {
 
 	/*feedback $form*/
 	var $contactForm = $('#contactForm');
-	$contactForm.submit(function (e) {
-		var form = document.querySelector('#message');
-		if (form.checkValidity()) {
+	$contactForm.validate();
+	$contactForm.submit(function(e) {
+		if ($contactForm.valid()) {
 			e.preventDefault();
 			$.ajax({
-				url: "https://formspree.io/yovchenko.vl@gmail.com",
+				url: "https://formspree.io/gascentr.@gmail.com",
 				method: "POST",
 				data: $(this).serialize(),
 				dataType: "json"
