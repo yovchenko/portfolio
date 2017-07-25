@@ -138,10 +138,10 @@ $(document).ready(function () {
 
 	/* change content onclick function */
 
-	$home.on('click', { case: 1 }, content);
-	$about.on("click", { case: 2 }, content);
-	$work.on('click', { case: 3 }, content);
-	$contact.on('click', { case: 4 }, content);
+$home.on('click', { case: 1 }, content);
+$about.on("click", { case: 2 }, content);
+$work.on('click', { case: 3 }, content);
+$contact.on('click', { case: 4 }, content);
 
 	function content(event) {
 		var $wrapperCanvas = $('#wrapperCanvas');

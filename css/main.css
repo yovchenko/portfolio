@@ -134,23 +134,6 @@ main {
   display: none;
 }
 
-@media all and (max-width: 570px) {
-.myPhoto {
-  display: none;
-}
-}
-
-@media all and (max-width: 570px) {
-.smallMe {
-  display: flex;
-  height: 100%;
-  margin: auto;
-  position: absolute;
-  bottom: 0px;
-  z-index: 0;
-}
-}
-
 .myPhoto {
   height: 100%;
   margin: auto;
@@ -356,7 +339,7 @@ p[class] > span:first-child {
     flex: 0 0 75%;
     margin: auto;
     margin-left: 64.64px;
-    top: 2px;
+    top: 0;
     left: 0;
     bottom: 0;
     right: 0;
@@ -777,8 +760,22 @@ p[class] > span:first-child {
   }
 }
 
-@media screen and (max-width: 570px) {
+@media all and (max-width: 570px) {
 .containerForm {
     padding: 115% 0 0 0;
 }
+  
+  .myPhoto {
+  display: none;
+}
+
+.smallMe {
+  display: flex;
+  height: 100%;
+  margin: auto;
+  position: absolute;
+  bottom: 0px;
+  z-index: 0;
+}
+
 }
