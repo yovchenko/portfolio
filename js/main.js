@@ -148,7 +148,7 @@ $(document).ready(function () {
 		var $article = $('article');
 		var $curtainRight = $('#curtain-section-right');
 		var $curtainLeft = $('#curtain-section-left');
-		var $container = $('.container');
+		var $container = $('.containerForm');
 		var $pageMain = event.data.case;
 		$curtainRight.add($curtainLeft).css('width', '100%');
 		$curtainRight.stop().css('transform', 'translateX(50%)');
@@ -213,7 +213,6 @@ $(document).ready(function () {
 	});
 
 /*envelope resize*/
-window.addEventListener("load", function() { window. scrollTo(0, 0); });
 	var pageWidth, pageHeight;
 
 	var basePage = {
@@ -269,8 +268,9 @@ var $resizeContent = function e() {
 			page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
 		}
 	};
+
 $(window).on('orientationchange', function (event) {
-		$('.container').css({
+		$('.containerForm').css({
 			'padding': '115% 0 0 0',
 			'margin-bottom' : '15%'
 	});

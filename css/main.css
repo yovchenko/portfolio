@@ -600,7 +600,7 @@ p[class] > span:first-child {
 }
 
 /*contact form*/
-.container {
+.containerForm {
   display: none;
   width: 100%;
   height: auto;
@@ -777,7 +777,7 @@ p[class] > span:first-child {
 }
 
 @media screen and (max-width: 570px) {
-.container {
+.containerForm {
     padding: 115% 0 0 0;
 }
 }
