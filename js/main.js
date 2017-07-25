@@ -296,13 +296,3 @@ $(window).on('orientationchange', function (event) {
 		}
 	});
 });
-
-
-
-
-
-
-
-
-
-
