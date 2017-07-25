@@ -61,11 +61,10 @@ $(document).ready(function () {
 		$('.menuToggle span').toggleClass('spanWithShadow');
 		$(this).toggleClass('menuTransform');
 	});
-
+var $init = $('#menu__init');
 	$menuToggle.click(function () {
 		var $this = $(this);
 		var $menuClasses = $('.menu__about,.menu__work,.menu__contact');
-		var $init = $('#menu__init');
 		if ($this.hasClass('active')) {
 			$this.removeClass('active');
 			$menuClasses.stop().addClass('fadeOut');
@@ -156,20 +155,20 @@ $contact.on('click', { case: 4 }, content);
 		var $timerCurtain = setTimeout(function () {
 
 			if ($pageMain === 4) {
-				$menuToggle.add('#canvas,.myPhoto,#menu__init').add($article).add($wrapperCanvas).stop().css('display', 'none');
+				$menuToggle.add($init).add($article).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
 				$resizeContent();
 			}
 			else if ($pageMain === 3) {
-				$menuToggle.add('#canvas,.myPhoto,#menu__init').add($article).add($container).stop().css('display', 'none');
+				$menuToggle.add($init).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
 			}
 			else if ($pageMain === 2) {
-				$menuToggle.add('#canvas,.myPhoto,#menu__init').add($wrapperCanvas).add($container).stop().css('display', 'none');
+				$menuToggle.add($init).add($wrapperCanvas).add($container).stop().css('display', 'none');
 				$home.add($article).css('display', 'flex');
 			}
 			else {
-				$menuToggle.add('#canvas,.myPhoto').add($wrapperCanvas).css('display', 'flex');
+				$menuToggle.add($wrapperCanvas).css('display', 'flex');
 				$home.add($article).add($container).css('display', 'none');
 			}
 			$('#canvasPic').remove();
