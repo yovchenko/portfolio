@@ -223,7 +223,7 @@ $(document).ready(function () {
 		scaleY: 1
 	};
 
-	var $resizeContent = function e() {
+var $resizeContent = function e() {
 		var $page = $('#wrap');
 		getPageSize();
 		scalePages($page, pageWidth, pageHeight);
