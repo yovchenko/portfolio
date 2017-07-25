@@ -607,7 +607,6 @@ p[class] > span:first-child {
   padding: 65% 0 0 0;
   margin-bottom: 74.64;
   position: relative;
-  top: -10%;
   margin-top: 74.64px;
 }
 
@@ -684,7 +683,7 @@ p[class] > span:first-child {
     overflow:hidden;
 		height:200px;
     width:400px;
-    margin:0px auto;
+    margin: 0 auto;
     padding:20px; 
 		border: 1px solid #fff;
 		border-radius: 3px; 
@@ -702,7 +701,7 @@ p[class] > span:first-child {
     }
 
     form > p {
-    margin: 0px 0px 15px 0px;
+      margin: 0px 0px 15px 0px;
     }
 
 		label {
@@ -778,6 +777,7 @@ p[class] > span:first-child {
 
 @media screen and (max-width: 570px) {
 .container {
-    padding: 135% 0 0 0;
+    padding: 115% 0 0 0;
+    margin-bottom: 15%;
 }
 }
