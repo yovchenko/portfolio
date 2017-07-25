@@ -230,10 +230,7 @@ $(document).ready(function () {
 
 		$('input,#message').focus(function() {
 	if ($(window).width() < 570) {
-			$('.container').css({
-			'padding': '125% 0 0 0',
-			'margin-bottom' : '25%'
-		});
+		$('.container').css('margin-bottom','100%');
 	   basePage = {
 		width: 530,
 		height: 350,
