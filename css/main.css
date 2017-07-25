@@ -603,6 +603,7 @@ p[class] > span:first-child {
 .container {
   display: none;
   width: 100%;
+  height: auto;
   padding: 55% 0 0 0;
   margin-bottom: 74.64px;
   position: relative;
@@ -777,12 +778,6 @@ p[class] > span:first-child {
 
 @media screen and (max-width: 570px) {
 .container {
-    padding: 150% 0 0 0;
-    width: 100%;
-    min-height: 100%;
-    margin-bottom: 74.64px;
-    position: relative;
-    margin-top: 74.64px;
-    top: -50%;
+    padding: 115% 0 0 0;
 }
 }
