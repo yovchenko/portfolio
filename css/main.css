@@ -604,11 +604,11 @@ p[class] > span:first-child {
   display: none;
   width: 100%;
   height: auto;
-  padding: 65% 0 0 0;
-  margin-bottom: 74.64;
+  padding: 55% 0 0 0;
+  margin-bottom: 74.64px;
   position: relative;
-  top: -10%;
   margin-top: 74.64px;
+  top: -10%;
 }
 
 .envelope {
@@ -779,5 +779,6 @@ p[class] > span:first-child {
 @media screen and (max-width: 570px) {
 .container {
     padding: 115% 0 0 0;
+    top: -15%;
 }
 }
