@@ -229,7 +229,6 @@ var $resizeContent = function e() {
 		scalePages($page, pageWidth, pageHeight);
 
 	$('input,#message').focus(function() {
-	$('body').css('min-height','500px');
 	if ($(window).width() < 570) {
 	   basePage = {
 		width: 530,
