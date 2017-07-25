@@ -156,17 +156,17 @@ $contact.on('click', { case: 4 }, content);
 		var $timerCurtain = setTimeout(function () {
 
 			if ($pageMain === 4) {
-				$menuToggle.add('#canvas,.myPhoto').add($article).add($wrapperCanvas).stop().css('display', 'none');
+				$menuToggle.add('#canvas,.myPhoto,#menu__init').add($article).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
 				$resizeContent();
 			}
 			else if ($pageMain === 3) {
-				$menuToggle.add('#canvas,.myPhoto').add($article).add($container).stop().css('display', 'none');
+				$menuToggle.add('#canvas,.myPhoto,#menu__init').add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
 			}
 			else if ($pageMain === 2) {
-				$menuToggle.add('#canvas,.myPhoto').add($wrapperCanvas).add($container).stop().css('display', 'none');
-				$('.menu__home,article').css('display', 'flex');
+				$menuToggle.add('#canvas,.myPhoto,#menu__init').add($wrapperCanvas).add($container).stop().css('display', 'none');
+				$home.add($article).css('display', 'flex');
 			}
 			else {
 				$menuToggle.add('#canvas,.myPhoto').add($wrapperCanvas).css('display', 'flex');
