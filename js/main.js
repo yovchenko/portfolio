@@ -28,7 +28,7 @@ $(document).ready(function () {
 			"volume": 40
 		});
 	}, 2500);
-	/*canvas background*/
+/*canvas background*/
 	var pattern = Trianglify({
 		width: window.innerWidth,
 		height: window.innerHeight
@@ -96,7 +96,7 @@ $(document).ready(function () {
 		}
 	});
 
-	/*header text*/
+/*header text*/
 	var $home = $('.menu__home');
 	var $about = $('.js-about');
 	var $work = $('.js-work');
@@ -277,7 +277,7 @@ $(document).ready(function () {
 
 	});
 
-	/*feedback $form*/
+/*feedback form*/
 	var $contactForm = $('#contactForm');
 	$contactForm.validate();
 	$contactForm.submit(function(e) {

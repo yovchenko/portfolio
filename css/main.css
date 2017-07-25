@@ -716,13 +716,13 @@ p[class] > span:first-child {
     }
 
 		label {
-			margin: 11px 20px 0 0; 
+			margin: 11px 55px 0 0; 
 			font-size: 16px; color: #b3aba1;
 			text-transform: uppercase; 
 			text-shadow: 0px 1px 0px #fff;
 		}
 
-		input[type=text], textarea {
+		input[type=text],input[type=email],textarea {
 			font: 14px normal normal uppercase helvetica, arial, serif;
 			color: #7c7873;
       background:none;

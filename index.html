@@ -64,7 +64,6 @@
         <p class="menu__contact js-contact">
         </p>
       </div>
-
     </div>
   </header>
   <main>
@@ -83,10 +82,10 @@
               <label for="email">Your Message : </label>
               <textarea name="message" value="Your Message" id="message"></textarea>
               <p>Best,</p>
-              <label for="name">Name: </label>
-              <input type="text" name="name" id="name"/>
-              <label for="email">Email: </label>
-              <input type="text" name="email" id="email"/>
+              <label for="name">Name:</label>
+              <input type="text" name="name" id="name" minlength="1" required/>
+              <label for="email">Email:</label>
+              <input type="email" name="email" id="email" required/>
               <input type="text" name="_gotcha" style="display:none"/>
               <input type="submit" id="submit" name="submit" value="Now, I send, thanks!"/>
             </form>
