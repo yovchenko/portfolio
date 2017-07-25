@@ -169,7 +169,7 @@ $contact.on('click', { case: 4 }, content);
 			}
 			else {
 				$menuToggle.add($wrapperCanvas).css('display', 'flex');
-				$home.add($article).add($container).css('display', 'none');
+				$home.add($article).add($container).stop().css('display', 'none');
 			}
 			$('#canvasPic').remove();
 			pattern = Trianglify({
@@ -240,6 +240,7 @@ var $resizeContent = function e() {
 	scalePages($page, pageWidth, pageHeight);
 	}
 });
+
 //using underscore to delay resize method till finished resizing window
 		$(window).resize(function () {
 			getPageSize();
