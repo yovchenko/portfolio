@@ -19,14 +19,6 @@ body {
   font-style:normal;
 }
 
-@font-face {
-  font-family: "YanoneKaffeesatzRegular";
-  src: url("../fonts/yanonekaffeesatz-regular-webfont.eot?") format("eot"), 
-       url("../fonts/yanonekaffeesatz-regular-webfont.woff") format("woff"), 
-       url("../fonts/yanonekaffeesatz-regular-webfont.ttf") format("truetype"),
-       url("../fonts/yanonekaffeesatz-regular-webfont.svg#YanoneKaffeesatzRegular") format("svg");
-}
-
 header {
   background-color: rgba(0%, 0%, 0%, 0.1);
   background-size: cover;
@@ -750,7 +742,7 @@ p[class] > span:first-child {
 
 		#form_wrap input[type=submit] {
 			position:relative;
-      font-family: "YanoneKaffeesatzRegular"; 
+      font-family: "sketchBlock"; 
 			font-size:24px; 
       color: #7c7873;
       text-shadow:0 1px 0 #fff;
