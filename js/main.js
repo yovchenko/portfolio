@@ -212,7 +212,7 @@ $(document).ready(function () {
 		play.show();
 	});
 
-	/*envelope resize*/
+/*envelope resize*/
 	var pageWidth, pageHeight;
 
 	var basePage = {
@@ -228,9 +228,8 @@ $(document).ready(function () {
 		getPageSize();
 		scalePages($page, pageWidth, pageHeight);
 
-		$('input,#message').focus(function() {
+	$('input,#message').focus(function() {
 	if ($(window).width() < 570) {
-		$('.container').css('margin-bottom','100%');
 	   basePage = {
 		width: 530,
 		height: 350,
