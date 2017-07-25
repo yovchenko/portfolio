@@ -272,7 +272,7 @@ $(document).ready(function () {
 	$(window).on('orientationchange', function (event) {
 		$('.container').css({
 			'padding': '115% 0 0 0',
-			'top': '-100px'
+			'margin-bottom' : '15%'
 		});
 
 	});
