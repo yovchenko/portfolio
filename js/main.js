@@ -217,7 +217,7 @@ $(document).ready(function () {
 
 	var basePage = {
 		width: 530,
-		height: 593,
+		height: 600,
 		scale: 1,
 		scaleX: 1,
 		scaleY: 1
@@ -230,7 +230,7 @@ $(document).ready(function () {
 			if ($(window).width() < 570) {
 				basePage = {
 					width: 530,
-					height: 333,
+					height: 350,
 					scale: 1,
 					scaleX: 1,
 					scaleY: 1

@@ -605,7 +605,7 @@ p[class] > span:first-child {
   width: 100%;
   height: auto;
   padding: 65% 0 0 0;
-  margin-bottom: 74.64px;
+  margin-bottom: 124.64px;
   position: relative;
   top: -10%;
 }
@@ -624,7 +624,7 @@ p[class] > span:first-child {
 #wrap {
   margin-top: 74.64px;
   width: 530px;
-  height: 593px;
+  height: 600px;
   overflow: hidden;
   position: absolute;
   -ms-transform-origin: top right;
@@ -658,13 +658,13 @@ p[class] > span:first-child {
 	#form_wrap:after {
     content:"";
     position:absolute;
-		bottom: -50px;
+		bottom:-60px;
     left:0;
 		background:url('../images/after.png');
     background-size: contain; 
     background-repeat: no-repeat;
 		width: 100%;
-    height: 310px; 
+    height: 320px; 
     }
 
 	#form_wrap.hide:after, #form_wrap.hide:before {
