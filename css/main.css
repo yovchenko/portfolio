@@ -362,9 +362,8 @@ p[class] > span:first-child {
     position: absolute;
     flex: 0 0 75%;
     margin: auto;
-    padding-bottom: 5px;
     margin-left: 64.64px;
-    top: 0;
+    top: 2px;
     left: 0;
     bottom: 0;
     right: 0;
