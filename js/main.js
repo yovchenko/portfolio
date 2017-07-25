@@ -229,10 +229,11 @@ var $resizeContent = function e() {
 		scalePages($page, pageWidth, pageHeight);
 
 	$('input,#message').focus(function() {
+	$('body').css('min-height','500px');
 	if ($(window).width() < 570) {
 	   basePage = {
 		width: 530,
-		height: 600,
+		height: 350,
 		scale: 1,
 		scaleX: 1,
 		scaleY: 1
@@ -269,13 +270,12 @@ var $resizeContent = function e() {
 			page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
 		}
 	};
-	$(window).on('orientationchange', function (event) {
+$(window).on('orientationchange', function (event) {
 		$('.container').css({
 			'padding': '115% 0 0 0',
 			'margin-bottom' : '15%'
-		});
-
 	});
+});
 
 /*feedback form*/
 	var $contactForm = $('#contactForm');
