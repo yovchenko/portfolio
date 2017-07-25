@@ -213,6 +213,7 @@ $(document).ready(function () {
 	});
 
 /*envelope resize*/
+window.addEventListener("load", function() { window. scrollTo(0, 0); });
 	var pageWidth, pageHeight;
 
 	var basePage = {
@@ -232,7 +233,7 @@ var $resizeContent = function e() {
 	if ($(window).width() < 570) {
 	   basePage = {
 		width: 530,
-		height: 350,
+		height: 450,
 		scale: 1,
 		scaleX: 1,
 		scaleY: 1
@@ -241,8 +242,7 @@ var $resizeContent = function e() {
 	scalePages($page, pageWidth, pageHeight);
 	}
 });
-
-		//using underscore to delay resize method till finished resizing window
+//using underscore to delay resize method till finished resizing window
 		$(window).resize(function () {
 			getPageSize();
 			scalePages($page, pageWidth, pageHeight);
