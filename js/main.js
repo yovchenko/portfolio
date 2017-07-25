@@ -225,23 +225,22 @@ $(document).ready(function () {
 
 	var $resizeContent = function e() {
 		var $page = $('#wrap');
-
-		$('input,#message').focus(function () {
-			if ($(window).width() < 570) {
-				basePage = {
-					width: 530,
-					height: 350,
-					scale: 1,
-					scaleX: 1,
-					scaleY: 1
-				};
-				getPageSize();
-				scalePages($page, pageWidth, pageHeight);
-			}
-		});
-		
 		getPageSize();
 		scalePages($page, pageWidth, pageHeight);
+
+		$('input,#message').focus(function() {
+	if ($(window).width() < 570) {
+	   basePage = {
+		width: 530,
+		height: 350,
+		scale: 1,
+		scaleX: 1,
+		scaleY: 1
+	};
+	getPageSize();
+	scalePages($page, pageWidth, pageHeight);
+	}
+});
 
 		//using underscore to delay resize method till finished resizing window
 		$(window).resize(function () {
