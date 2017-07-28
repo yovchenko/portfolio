@@ -129,11 +129,6 @@ main {
   flex-direction: column;
 }
 
-
-.smallMe {
-  display: none;
-}
-
 .myPhoto {
   height: 100%;
   margin: auto;
@@ -152,7 +147,7 @@ main {
   max-height: 45%;
   min-height: 45%;
   position: relative;
-  right: 50px;
+  right: 60px;
   margin-bottom: 10px;
 	background-color: rgba(0%, 0%, 0%,0.3);
   box-shadow:0px 0px 10px 10px rgba(255,255,255,0.30),0px 0px 10px 10px rgba(255,255,255,0.30);
@@ -764,18 +759,4 @@ p[class] > span:first-child {
 .containerForm {
     padding: 115% 0 0 0;
 }
-  
-  .myPhoto {
-  display: none;
-}
-
-.smallMe {
-  display: flex;
-  height: 100%;
-  margin: auto;
-  position: absolute;
-  bottom: 0px;
-  z-index: 0;
-}
-
 }
