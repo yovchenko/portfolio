@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "sketchBlock";
+  src:url("../fonts/CabinSketch.ttf") format("truetype");
+}
+
 html,body {
    height: 100%;
    box-sizing: border-box;
@@ -9,15 +14,10 @@ body {
 	 background-color: rgba(41.5%, 53.7%, 95.5%,0.17);
 }
 
-@font-face {
-  font-family: "sketchBlock";
-  src:url("../fonts/CabinSketch.ttf") format("truetype");
+article > p {
+   margin: 1em 1em;
 }
 
-p, pre {
-    margin: 1em 1em;
-}
-  
 header {
   background-color: rgba(0%, 0%, 0%, 0.1);
   background-size: cover;
