@@ -145,6 +145,7 @@ $contact.on('click', { case: 4 }, content);
 	function content(event) {
 		var $wrapperCanvas = $('#wrapperCanvas');
 		var $article = $('article');
+		var $footer = $('footer');
 		var $curtainRight = $('#curtain-section-right');
 		var $curtainLeft = $('#curtain-section-left');
 		var $container = $('.containerForm');
@@ -157,19 +158,23 @@ $contact.on('click', { case: 4 }, content);
 			if ($pageMain === 4) {
 				$menuToggle.add($init).add($article).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
+				$footer.css('margin-top','74.64px');
 				$resizeContent();
 			}
 			else if ($pageMain === 3) {
 				$menuToggle.add($init).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
+				$footer.css('margin-top','0px');
 			}
 			else if ($pageMain === 2) {
 				$menuToggle.add($init).add($wrapperCanvas).add($container).stop().css('display', 'none');
 				$home.add($article).css('display', 'flex');
+				$footer.css('margin-top','0px');
 			}
 			else {
 				$menuToggle.add($wrapperCanvas).css('display', 'flex');
 				$home.add($article).add($container).stop().css('display', 'none');
+				$footer.css('margin-top','0px');
 			}
 			$('#canvasPic').remove();
 			pattern = Trianglify({
