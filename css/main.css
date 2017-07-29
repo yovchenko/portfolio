@@ -25,11 +25,11 @@ header {
 }
 
 .header {
- height: 74.64px;
- display: flex;
- max-width: 1200px;
- margin: 0 auto;
- text-align: center;
+  height: 74.64px;
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /*Hamburger menu*/
@@ -104,10 +104,10 @@ header {
 }
 
 main {
- display: flex;
- max-width: 1200px;
- margin: 0 auto;
- min-height: calc(100vh - 74.64px);
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 74.64px);
 }
 
 #main {
@@ -711,11 +711,12 @@ p[class] > span:first-child {
       width: 98.8%;
       height: 80px; 
       padding-top:14px;
-      }
+      resize: vertical;
+    }
 
 		textarea:focus, input[type=text]:focus, input[type=email]:focus {
       background:rgba(255,255,255,.35);
-      }
+    }
 
 		#form_wrap input[type=submit] {
 			position:relative;
