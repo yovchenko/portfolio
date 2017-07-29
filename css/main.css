@@ -589,6 +589,12 @@ p[class] > span:first-child {
   top: -10%;
 }
 
+@-moz-document url-prefix() {
+  .containerForm {
+       padding: 115% 0 0 0;
+    }
+}
+
 .envelope {
   width: 90%;
   position: absolute;
