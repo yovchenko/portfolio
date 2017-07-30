@@ -600,6 +600,7 @@ p[class] > span:first-child {
 @-moz-document url-prefix() {
   .containerForm {
        padding: 115% 0 0 0;
+       top: -15%;
     }
 }
 
