@@ -244,8 +244,9 @@ footer {
 
 .amplitude-play {
   position: absolute;
-  width: 65.74px;
-  height: 60.74px;
+  width: 85.74px;
+  height: 70.74px;
+  top: -8px;
 }
 
 .amplitude-repeat {
@@ -601,13 +602,7 @@ p[class] > span:first-child {
   .containerForm {
        padding: 115% 0 0 0;
        top: -15%;
-       margin-bottom: 74.64px;
     }
-      @media all and (max-width: 570px) {
-  .containerForm {
-       top: -25%;
-    }
-      }
 }
 
 .envelope {
