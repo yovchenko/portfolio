@@ -175,7 +175,7 @@ main {
 article {
   display: none;
   max-width: 100%;
-  font-size: 3.25vmax;
+  font-size: 5.2vmin;
   text-align: center;
   margin: 0 auto;
 }
@@ -289,7 +289,7 @@ footer {
   cursor: pointer;
   font-family: "sketchBlock","Georgia",serif;
   display: none;
-  font-size: 3.7vmax;
+  font-size: 5.7vmin;
   line-height: 65.74px;
   align-self: center;
   margin-top: 3px;
@@ -315,7 +315,7 @@ p[class] > span:first-child {
   cursor: pointer;
   font-family: "sketchBlock","Georgia",serif;
   display: none;
-  font-size: 3.7vmax;
+  font-size: 5.7vmin;
   opacity: 0.85;
   line-height: 65.74px;
   position: relative;
@@ -337,7 +337,7 @@ p[class] > span:first-child {
 }
 
 #menu__init {
-    font-size: 3.7vmax;
+    font-size: 5.7vmin;
     position: absolute;
     flex: 0 0 75%;
     margin: auto;
@@ -767,6 +767,9 @@ p[class] > span:first-child {
 /* media queries */
 @media all and (min-width: 1600px) {
 #menu__init,.menu__home,.menu__about,.menu__work,.menu__contact {
+    font-size: 50px;
+  }
+  article {
     font-size: 50px;
   }
 }
