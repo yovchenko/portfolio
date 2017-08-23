@@ -762,5 +762,7 @@ p[class] > span:first-child {
 }
 
 @media all and (max-width: 576px) {
-
+.containerForm {
+  padding: 115% 0 0 0;
+}
 }
