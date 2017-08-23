@@ -762,7 +762,12 @@ p[class] > span:first-child {
 }
 
 @media all and (max-width: 576px) {
-.containerForm {
-  padding: 115% 0 0 0;
-}
+  .containerForm {
+    height: auto;
+    padding: 115% 0 0 0;
+    margin-bottom: 74.64px;
+    position: relative;
+    margin-top: 74.64px;
+    top: -10%;
+ }
 }
