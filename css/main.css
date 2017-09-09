@@ -220,9 +220,8 @@ footer {
   -moz-transition: all 0.1s;
 }
 
-.playMusic, .stopMusic {
+#playMusic {
   cursor: pointer;
-  display: flex;
   width: 55.74px;
   height: 55.74px;
 }
@@ -255,8 +254,10 @@ footer {
   height: 60.74px;
 }
 
-.stopMusic {
-  display: none;
+#stopMusic {
+  cursor: pointer;
+  width: 55.74px;
+  height: 55.74px;
 }
 
 .footer {

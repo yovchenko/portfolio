@@ -143,18 +143,19 @@ $contact.on('click', { case: 4 }, content);
 		}, 1500);
 	}
 
-	/* music player buttons */
-	var stop = $('.stopMusic');
-	var play = $('.playMusic');
-	play.click(function () {
-		stop.show();
-		$(this).hide();
-	});
-	stop.click(function () {
-		$(this).hide();
-		play.show();
-	});
-
+/* music player buttons */
+	function player() {
+	var stop = document.getElementById('stopMusic');
+	var play = document.getElementById('playMusic');
+	if (stop.style.display === 'none') {
+	stop.style.display = 'block'
+	play.style.display = 'none';
+	}
+	else {
+	stop.style.display = 'none'
+	play.style.display = 'block';
+	}
+}
 
 
 

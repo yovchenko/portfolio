@@ -98,9 +98,9 @@
   </main>
   <footer id="footer">
     <div class="footer">
-      <div class="svgIcons">
+      <div class="svgIcons" onclick = "player()">
         <div class="player">
-          <div class="stopMusic">
+          <div id="stopMusic" style="display: none">
             <div class="amplitude-repeat">
               <div class="amplitude-play"> </div>
             </div>
@@ -116,7 +116,7 @@
               </g>
             </svg>
           </div>
-          <div class="playMusic">
+          <div id="playMusic" style="display: flex">
             <div class="amplitude-repeat">
               <div class="amplitude-play"></div>
             </div>
