@@ -1,33 +1,4 @@
-/*preloader*/
-$(document).ready(function () {
-	var opacity = 0.55;
-	var pulse = setInterval(function () {
-		if (opacity < 0.95) {
-			$('.entry-title').css('color', 'rgba(255%,255%,255%,' + opacity + ')');
-			opacity += 0.05;
-		}
-		else {
-			clearInterval(pulse);
-		}
-	}, 100);
 
-	var $start = setTimeout(function () {
-		$('body').addClass('loaded');
-		$('footer').css('display', 'block');
-		$('.entry-title,#loader,#loader:before,#loader:after').stop().css('display', 'none');
-		Amplitude.init({
-			"songs":
-			[
-				{
-					"name": "Cantaloupe Island",
-					"artist": "Herbie Hancock",
-					"album": "Then&Now The Definitive Herbie",
-					"url": " https://yovchenko.github.io/music/smoothMusic.mp3",
-				}
-			],
-			"volume": 40
-		});
-	}, 2500);
 /*canvas background*/
 	var pattern = Trianglify({
 		width: window.innerWidth,
@@ -296,4 +267,4 @@ $(window).on('orientationchange', function (event) {
 			});
 		}
 	});
-});
+
