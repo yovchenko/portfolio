@@ -16,10 +16,10 @@ var pulse = setInterval(function () {
 }
 }, 100);
 
-/*I'm giving you the extra time to enjoy my preloader*/
+/*I'm giving you some extra time to enjoy my preloader*/
 window.onload = setTimeout(function () {
-    $('body').addClass('loaded');
-    $('footer').css('display', 'block');
+    $('#body').addClass('loaded');
+    $('#footer').css('display', 'block');
     $('.entry-title,#loader,#loader:before,#loader:after').stop().css('display', 'none');
     Amplitude.init({
         "songs":
