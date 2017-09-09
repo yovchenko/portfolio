@@ -1,6 +1,6 @@
 
 
-var opacity = 0.85;
+var opacity = 0.55;
 var increment = 0.05;
 var pulse = setInterval(function () {
     var el =  document.getElementsByClassName('entry-title')[0];
@@ -16,8 +16,8 @@ var pulse = setInterval(function () {
 }
 }, 100);
 
-window.onload = function () {
-    var $start = setTimeout(function () {
+/*I'm giving you the extra time to enjoy my preloader*/
+window.onload = setTimeout(function () {
     $('body').addClass('loaded');
     $('footer').css('display', 'block');
     $('.entry-title,#loader,#loader:before,#loader:after').stop().css('display', 'none');
@@ -33,5 +33,5 @@ window.onload = function () {
         ],
         "volume": 40
     });
-}, 2500);
-}
+}, 2000);
+

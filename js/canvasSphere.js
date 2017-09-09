@@ -295,5 +295,5 @@ function main() {
 	});
 }
 
-setTimeout(main, 2500);
+main();
 	
