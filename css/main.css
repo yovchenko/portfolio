@@ -653,8 +653,8 @@ p[class] > span:first-child {
     }
 
 	#form_wrap:hover {
-    height: 730px;
-    top:-190px;
+    height: 750px;
+    top:-195px;
     }
 
 
@@ -683,7 +683,7 @@ p[class] > span:first-child {
     }
 
     form > p {
-    margin: 0px 0px 15px 0px;
+    margin: 0px 0px 10px 0px;
     }
 
 		label {
