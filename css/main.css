@@ -194,11 +194,8 @@ footer {
 .svgIcons {
   display: flex;
   background-color: rgba(41.5%, 53.7%, 95.5%,0.07);
-  border: 1px solid transparent;
   margin: 10px;
-  width:  52.654px;
-  height: 52.654px;
-  border-radius: 35.5px;
+  border-radius: 50%;
   justify-content: center;
   align-items: center;
 }
