@@ -1,3 +1,4 @@
+import _ from 'jquery';
 var pageWidth, pageHeight;
 
 	var basePage = {
@@ -8,7 +9,7 @@ var pageWidth, pageHeight;
 		scaleY: 1
 	};
 
-var $resizeContent = function e() {
+export var $resizeContent = function e() {
 		var $page = $('#wrap');
 		getPageSize();
 		scalePages($page, pageWidth, pageHeight);

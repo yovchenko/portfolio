@@ -1,3 +1,5 @@
+import _ from 'jquery';
+import _ from 'jquery-validation';
 var $contactForm = $('#contactForm');
 $contactForm.validate();
 $contactForm.submit(function(e) {

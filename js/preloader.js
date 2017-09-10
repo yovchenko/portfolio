@@ -1,5 +1,4 @@
-
-
+import _ from 'jquery';
 var opacity = 0.55;
 var increment = 0.05;
 var pulse = setInterval(function () {

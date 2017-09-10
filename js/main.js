@@ -1,4 +1,7 @@
-    /* hamburger menu */
+import _ from 'jquery';
+import {$resizeContent} from './resize.js';
+import styles from '../scss/main.scss';
+  /* hamburger menu */
 	var $menuToggle = $('.menuToggle');
 	$menuToggle.hover(function () {
 		$('.menuToggle span').toggleClass('spanWithShadow');
@@ -65,11 +68,11 @@ var $init = $('#menu__init');
 							return '<span>' + text.join('</span><span>') + '</span>';
 						});
 						s.lettersWork.html(function (i, el) {
-							text = $.trim(el).split("");
+							var text = $.trim(el).split("");
 							return '<span>' + text.join('</span><span>') + '</span>';
 						});
 						s.lettersContact.html(function (i, el) {
-							text = $.trim(el).split("");
+							var text = $.trim(el).split("");
 							return '<span>' + text.join('</span><span>') + '</span>';
 						});
 					}
@@ -116,11 +119,11 @@ $contact.on('click', { case: 4 }, content);
 				$home.add($article).add($container).stop().css('display', 'none');
 			}
 			$('#canvasPic').remove();
-			pattern = Trianglify({
+			var pattern = Trianglify({
 				width: window.innerWidth,
 				height: window.innerHeight
 			});
-			canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
+			var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
 			canvasBackground.setAttribute("id", "canvasPic");
 			pattern = Trianglify({
 				cell_size: 95,
@@ -143,19 +146,6 @@ $contact.on('click', { case: 4 }, content);
 		}, 1500);
 	}
 
-/* music player buttons */
-	function player() {
-	var stop = document.getElementById('stopMusic');
-	var play = document.getElementById('playMusic');
-	if (stop.style.display === 'none') {
-	stop.style.display = 'block'
-	play.style.display = 'none';
-	}
-	else {
-	stop.style.display = 'none'
-	play.style.display = 'block';
-	}
-}
 
 
 

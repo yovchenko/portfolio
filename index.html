@@ -200,16 +200,29 @@
     </div>
   </footer>
   </div>
-  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-  <script type="text/javascript" src="js/canvasSphere.js"></script>
+  <script> 
+  /* music player buttons */
+	function player() {
+	var stop = document.getElementById('stopMusic');
+	var play = document.getElementById('playMusic');
+	if (stop.style.display === 'none') {
+	stop.style.display = 'block'
+	play.style.display = 'none';
+	}
+	else {
+	stop.style.display = 'none'
+	play.style.display = 'block';
+	}
+  }
+  </script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
-  <script type="text/javascript" src="js/canvasBackground.js"></script>
-  <script type="text/javascript" src="js/main.js"></script>
-  <script type="text/javascript" src="js/resize.js"></script>
-  <script type="text/javascript" src="js/contactForm.js"></script>
-  <script type="text/javascript" src="js/preloader.js"></script>
-  <script type="text/javascript" src="js/amplitude.min.js"></script>
+  <script src="js/amplitude.min.js"></script>
+  <script src="dist/background.entry.js"></script>
+  <script src="dist/form.entry.js"></script>
+  <script src="dist/main.entry.js"></script>
+  <script src="dist/preload.entry.js"></script>
+  <script src="dist/resize.entry.js"></script>
+  <script src="dist/sphere.entry.js"></script>
 </body>
 
 </html>
