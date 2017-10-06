@@ -1,3 +1,6 @@
+
+const Trianglify = require('trianglify');
+$( document ).ready(function() {
 var pattern = Trianglify({
     width: window.innerWidth,
     height: window.innerHeight
@@ -23,3 +26,4 @@ var elementBottom = document.getElementsByTagName('footer')[0];
 // Set the background image property, including the encoding type header
 elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
 elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+});

@@ -1,9 +1,22 @@
-import _ from 'jquery';
 import {$resizeContent} from './resize.js';
-require('../scss/main.scss');
+const Trianglify = require('trianglify');
+$( document ).ready(function() {
+/* music player buttons */
+function player() {
+	var stop = document.getElementById('stopMusic');
+	var play = document.getElementById('playMusic');
+	if (stop.style.display === 'none') {
+	stop.style.display = 'block'
+	play.style.display = 'none';
+	}
+	else {
+	stop.style.display = 'none'
+	play.style.display = 'block';
+	}
+}
   /* hamburger menu */
-	var $menuToggle = $('.menuToggle');
-	$menuToggle.hover(function () {
+var $menuToggle = $('.menuToggle');
+$menuToggle.hover(function () {
 		$('.menuToggle span').toggleClass('spanWithShadow');
 		$(this).toggleClass('menuTransform');
 	});
@@ -145,8 +158,7 @@ $contact.on('click', { case: 4 }, content);
 			});
 		}, 1500);
 	}
-
-
+});
 
 
 
