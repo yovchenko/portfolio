@@ -1,3 +1,5 @@
+/*@import "mixins";
+@include font-face('sketch', normal, 500, 'fonts/cabinSketch.ttf');*/
 html, body {
   height: 100%;
   box-sizing: border-box;
@@ -541,7 +543,7 @@ p[class] > span:first-child {
   position: absolute;
   bottom: 128px;
   left: 0px;
-  background: url(source/images/before.png?2b95685d20a2b9bdbcfd5ee5096ee85c);
+  background: url(images/images/before.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
@@ -552,7 +554,7 @@ p[class] > span:first-child {
   position: absolute;
   bottom: -60px;
   left: 0;
-  background: url(source/images/after.png?a182a8fde8746b2a50cbad25c3320905);
+  background: url(images/images/after.png);
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
@@ -566,7 +568,7 @@ p[class] > span:first-child {
   top: -195px; }
 
 form {
-  background: #f7f2ec url(source/images/letter_bg.png?cad2f843878b7371885280da67463ed6);
+  background: #f7f2ec url(images/images/letter_bg.png);
   position: relative;
   top: 190px;
   overflow: hidden;
