@@ -1,36 +1,42 @@
 const webpack = require('webpack');
 const path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 const PATHS = { 
     source: path.join(__dirname,'source'),
-    build: path.join(__dirname,'build')
+    dist: path.join(__dirname,'dist')
 };
 
 module.exports = {
     devServer: {
         historyApiFallback: true,
-        hot: true,
         inline: true,
         progress: true,
-        contentBase: './',
+        contentBase: PATHS.dist,
         port: 8080,
       },
     entry: PATHS.source + '/index.js',
     output: {
         path: path.join(__dirname, "dist"),
         filename: "[name].js",
+        publicPath: PATHS.dist
     },
     module: {
         rules: [   
             {
-                test: /\.(png|jpg|gif)$/,
-                use: [
-                  {
-                    loader: 'file-loader',
-                    options: { name: '[path][name].[ext]?[hash]'}  
-                  }
+             test: /\.(png|jpg&g|gif|svg|eot|ttf|woff|woff2)$/,
+                loaders: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                          name: '[name].[ext]',
+                          outputPath: 'images/',
+                          publicPath: 'images/'
+                        }  
+                    },
+                     'img-loader'
                 ]
             },
             {
