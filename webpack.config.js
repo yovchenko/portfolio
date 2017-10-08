@@ -14,14 +14,17 @@ module.exports = {
         inline: true,
         progress: true,
         contentBase: PATHS.docs,
+<<<<<<< HEAD
         port: 8081,
+=======
+        port: 8082,
+>>>>>>> gh-pages
       },
     entry: PATHS.source + '/index.js',
     output: {
         path: PATHS.docs,
         publicPath: '',
         filename: "[name].js",
-      
     },
     module: {
         rules: [   
@@ -33,6 +36,7 @@ module.exports = {
                         options: {
                           name: '[name].[ext]',
                           outputPath: '/fonts/',
+                          publicPath: '../'
                         }  
                     },
                 ]
@@ -45,6 +49,7 @@ module.exports = {
                     options: {
                       name: '[name].[ext]',
                       outputPath: '/images/',
+                      publicPath: '../'
                     }  
                 },
                  'img-loader'
@@ -59,7 +64,15 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                use: [ 'html-loader' ]
+                use: [
+                    {
+                        loader: 'html-loader',
+                        options: {
+                            attrs: [':data-src']
+                          }
+                    },
+            
+                ]
             }
         ]
     },
