@@ -32,6 +32,7 @@ module.exports = {
                         options: {
                           name: '[name].[ext]',
                           outputPath: '/fonts/',
+                          publicPath: '../'
                         }  
                     },
                 ]
@@ -44,6 +45,7 @@ module.exports = {
                     options: {
                       name: '[name].[ext]',
                       outputPath: '/images/',
+                      publicPath: '../'
                     }  
                 },
                  'img-loader'
@@ -58,7 +60,15 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                use: [ 'html-loader' ]
+                use: [
+                    {
+                        loader: 'html-loader',
+                        options: {
+                            attrs: [':data-src']
+                          }
+                    },
+            
+                ]
             }
         ]
     },
