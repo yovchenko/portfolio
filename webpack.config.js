@@ -14,11 +14,7 @@ module.exports = {
         inline: true,
         progress: true,
         contentBase: PATHS.docs,
-<<<<<<< HEAD
         port: 8081,
-=======
-        port: 8082,
->>>>>>> gh-pages
       },
     entry: PATHS.source + '/index.js',
     output: {
