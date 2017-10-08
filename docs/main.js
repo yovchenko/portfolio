@@ -12209,7 +12209,7 @@ return /******/ (function(modules) { // webpackBootstrap
 | Module Variables
 |-------------------------------------------------------------------------------
 | These variables make Amplitude run. The config is the most important
-| containing active settings and parameters.
+| containing active settings and parameters. 
 */
 /*--------------------------------------------------------------------------
 	The config JSON is the global settings for ALL of Amplitude functions.
@@ -12218,7 +12218,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	Amplitude.
 --------------------------------------------------------------------------*/
 var config = {
-	version: '3.2.0',
 	/*
  	The audio element we will be using to handle all of the audio. This
  	is the javascript version of the HTML5 audio element.
@@ -12280,7 +12279,7 @@ var config = {
 	shuffled_playlists: {},
 
 	/*
- 	Object that contains whether the current playlist is in
+ 	Object that contains whether the current playlist is in 
  	shuffle mode or not.
  */
 	shuffled_statuses: {},
@@ -12377,20 +12376,7 @@ var config = {
  */
 	soundcloud_songs_ready: 0,
 
-	/*
- 	Flag for if the user is moving the screen.
- */
-	is_touch_moving: false,
-
-	/*
- 	How much of the song is buffered.
- */
-	buffered: 0,
-
-	/*
- 	Array of bindings to certain key events.
- */
-	bindings: {}
+	is_touch_moving: false
 };
 
 module.exports = config;
@@ -12423,7 +12409,7 @@ var config = __webpack_require__(0);
 |----------------------------------------------------------------------------------------------------
 | HELPER FUNCTIONS
 |----------------------------------------------------------------------------------------------------
-| For the sake of code clarity, these functions perform helper tasks
+| For the sake of code clarity, these functions perform helper tasks 
 | assisting the logical functions with what they need such as setting
 | the proper song index after an event has occured.
 |
@@ -12492,7 +12478,7 @@ var AmplitudeHelpers = function () {
 			/*
    	Build the callback function
    */
-			var callbackFunction = config.callbacks[callbackName];
+			var callbackFunction = window[config.callbacks[callbackName]];
 
 			/*
    	Write a debug message stating the callback we are running
@@ -12546,9 +12532,10 @@ var AmplitudeHelpers = function () {
 		_visual2.default.resetSongSliders();
 
 		/*
-  	Resets the progress bars
+  	Reset the song time vizualizations as well since those
+  	can be bound to a specific song.
   */
-		_visual2.default.resetSongPlayedProgressBars();
+		_visual2.default.resetSongTimeVisualizations();
 
 		/*
   	Reset all the time place holders accordingly.
@@ -12586,11 +12573,6 @@ var AmplitudeHelpers = function () {
   	Sets the active song's duration
   */
 		_visual2.default.syncSongDuration();
-
-		/*
-  	Run song change callback.
-  */
-		runCallback('song_change');
 	}
 
 	/*--------------------------------------------------------------------------
@@ -12635,7 +12617,7 @@ var AmplitudeHelpers = function () {
 	}
 
 	/*--------------------------------------------------------------------------
- 	Sets the new song in the config. Sets the src of the audio object,
+ 	Sets the new song in the config. Sets the src of the audio object, 
  	updates the	metadata and sets the active album.
  		@param JSON song The song object of the song we are changing to.
  	@param int index The index of the song in the songs object we are changing.
@@ -12666,7 +12648,7 @@ var AmplitudeHelpers = function () {
 		}
 
 		/*
-  	Iterate ove rthe songs and generate random numbers to
+  	Iterate ove rthe songs and generate random numbers to 
   	swap the indexes of the shuffle array.
   */
 		for (var i = config.songs.length - 1; i > 0; i--) {
@@ -12699,7 +12681,7 @@ var AmplitudeHelpers = function () {
 		}
 
 		/*
-  	Iterate ove rthe songs and generate random numbers to
+  	Iterate ove rthe songs and generate random numbers to 
   	swap the indexes of the shuffle array.
   */
 		for (var i = config.playlists[playlist].length - 1; i > 0; i--) {
@@ -12730,7 +12712,7 @@ var AmplitudeHelpers = function () {
 
 	/*--------------------------------------------------------------------------
  	Sets the active playlist
- 		@param string playlist The string of the playlist being
+ 		@param string playlist The string of the playlist being 
  	set to active.
  --------------------------------------------------------------------------*/
 	function setActivePlaylist(playlist) {
@@ -12743,7 +12725,8 @@ var AmplitudeHelpers = function () {
 
 	/*--------------------------------------------------------------------------
  	Determines if the string passed in is a URL or not
- 		@param string url The string we are testing to see if it's a URL.
+ 
+ 	@param string url The string we are testing to see if it's a URL.
  --------------------------------------------------------------------------*/
 	function isURL(url) {
 		var pattern = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
@@ -12753,7 +12736,8 @@ var AmplitudeHelpers = function () {
 
 	/*--------------------------------------------------------------------------
  	Determines if what is passed in is an integer or not.
- 		@param string int The variable we are testing to see is an integer or not.
+ 
+ 	@param string int The variable we are testing to see is an integer or not.
  --------------------------------------------------------------------------*/
 	function isInt(int) {
 		return !isNaN(int) && parseInt(Number(int)) == int && !isNaN(parseInt(int, 10));
@@ -12802,6 +12786,8 @@ var _helpers2 = _interopRequireDefault(_helpers);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 /*
 |----------------------------------------------------------------------------------------------------
 | VISUAL SYNC METHODS
@@ -12814,6 +12800,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 |	syncCurrentTime( currentTime, completionPercentage )
 |	resetTimes()
 |	resetSongSliders()
+|	resetSongTimeVisualizations()
 |	setActiveContainer()
 |	displaySongMetadata()
 |	syncPlaybackSpeed()
@@ -12825,6 +12812,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 | 	syncRepeat()
 */
 var AmplitudeVisualSync = function () {
+	var _ref;
+
 	/*--------------------------------------------------------------------------
  	Visually displays the current time on the screen. This is called on
  	time update for the current song.
@@ -12861,12 +12850,16 @@ var AmplitudeVisualSync = function () {
 		syncMainSliderLocation(completionPercentage);
 		syncPlaylistSliderLocation(_config2.default.active_playlist, completionPercentage);
 		syncSongSliderLocation(_config2.default.active_playlist, _config2.default.active_index, completionPercentage);
-
-		_helpers2.default.syncSongPlayedProgressBar(completionPercentage);
+		/*
+  	Set all visual sync song time visualizations. This will
+  	expand the div inside of the visualization to be the song
+  	played percentage.
+  */
+		_helpers2.default.syncSongTimeVisualizations(completionPercentage);
 	}
 
 	/*--------------------------------------------------------------------------
- 	Visually sync all of the times to the initial time of 0. This is so
+ 	Visually sync all of the times to the initial time of 0. This is so 
  	we can keep all the players in sync
  --------------------------------------------------------------------------*/
 	function resetTimes() {
@@ -12893,36 +12886,25 @@ var AmplitudeVisualSync = function () {
 	}
 
 	/*--------------------------------------------------------------------------
- 	Sets all of the song buffered progress bars to 0
+ 	Visually syncs the song time visualizations. Like the song sliders,
+ 	when a song is changed, these must be synced back to 0. Except 0 in
+ 	this circumstance is the visualization status has 0 width.
  --------------------------------------------------------------------------*/
-	function resetSongBufferedProgressBars() {
-		/*
-  	Gets all of the song buffered progress bars.
-  */
-		var songBufferedProgressBars = document.getElementsByClassName("amplitude-buffered-progress");
+	function resetSongTimeVisualizations() {
+		var songTimeVisualizations = document.getElementsByClassName("amplitude-song-time-visualization");
 
 		/*
-  	Iterate over all of the song buffered progress bar and
-  	set them to 0 which is like re-setting them.
+  	Iterate over all of the song time visualization elements and find their inner
+  	status and set that element's width to 0.
   */
-		for (var i = 0; i < songBufferedProgressBars.length; i++) {
-			songBufferedProgressBars[i].value = 0;
+		for (var i = 0; i < songTimeVisualizations.length; i++) {
+			var songTimeVisualizationStatus = songTimeVisualizations[i].querySelector('.amplitude-song-time-visualization-status');
+			songTimeVisualizationStatus.setAttribute('style', 'width: 0px');
 		}
 	}
 
 	/*--------------------------------------------------------------------------
- 	Sets all of the song played progress bars to 0
- --------------------------------------------------------------------------*/
-	function resetSongPlayedProgressBars() {
-		var songPlayedProgressBars = document.getElementsByClassName("amplitude-song-played-progress");
-
-		for (var i = 0; i < songPlayedProgressBars.length; i++) {
-			songPlayedProgressBars[i].value = 0;
-		}
-	}
-
-	/*--------------------------------------------------------------------------
- 	Applies the class 'amplitude-active-song-container' to the element
+ 	Applies the class 'amplitude-active-song-container' to the element 
  	containing visual information regarding the active song.
  --------------------------------------------------------------------------*/
 	function setActiveContainer() {
@@ -12937,7 +12919,7 @@ var AmplitudeVisualSync = function () {
 
 		/*
   	Finds the active index and adds the active song container to the element
-  	that represents the song at the index.
+  	that represents the song at the index. 
   */
 		if (_config2.default.active_playlist == '' || _config2.default.active_playlist == null) {
 			if (document.querySelectorAll('.amplitude-song-container[amplitude-song-index="' + _config2.default.active_index + '"]')) {
@@ -13139,7 +13121,7 @@ var AmplitudeVisualSync = function () {
 			playbackSpeedClasses[i].classList.remove('amplitude-playback-speed-20');
 
 			/*
-   	Switch the current playback speed and apply the appropriate
+   	Switch the current playback speed and apply the appropriate 
    	speed class.
    */
 			switch (_config2.default.playback_speed) {
@@ -13153,21 +13135,6 @@ var AmplitudeVisualSync = function () {
 					playbackSpeedClasses[i].classList.add('amplitude-playback-speed-20');
 					break;
 			}
-		}
-	}
-
-	function syncBufferedProgressBars() {
-		/*
-  	Gets all of the song buffered progress bars.
-  */
-		var songBufferedProgressBars = document.getElementsByClassName("amplitude-buffered-progress");
-
-		/*
-  	Iterate over all of the song buffered progress bar and
-  	set them to 0 which is like re-setting them.
-  */
-		for (var i = 0; i < songBufferedProgressBars.length; i++) {
-			songBufferedProgressBars[i].value = parseFloat(parseFloat(_config2.default.buffered) / 100);
 		}
 	}
 
@@ -13231,7 +13198,8 @@ var AmplitudeVisualSync = function () {
 
 	/*--------------------------------------------------------------------------
  	Syncs the main playlist play pause buttons to the state of the active song.
- 		@param string playlist The playlist we are setting the play pause state
+ 	
+ 	@param string playlist The playlist we are setting the play pause state
  	for.
  		@param string state Either playing or paused for the state of the
  	active song.
@@ -13266,10 +13234,12 @@ var AmplitudeVisualSync = function () {
 
 	/*--------------------------------------------------------------------------
  	Syncs the song play pause buttons to the state of the active song.
- 		@param string playlist The playlist we are setting the play pause state
+ 	
+ 	@param string playlist The playlist we are setting the play pause state
  	for.
  		@param int song The index of the song we are syncing the state for
- 		@param string state Either playing or paused for the state of the
+ 	
+ 	@param string state Either playing or paused for the state of the
  	active song.
  --------------------------------------------------------------------------*/
 	function syncSongPlayPause(playlist, song, state) {
@@ -13355,7 +13325,7 @@ var AmplitudeVisualSync = function () {
 
 	/*--------------------------------------------------------------------------
  	Syncs repeat for all of the repeat buttons. Users
- 	can apply styles to the 'amplitude-repeat-on' and
+ 	can apply styles to the 'amplitude-repeat-on' and 
  	'amplitude-repeat-off' classes. They represent the state
  	of the player.
  --------------------------------------------------------------------------*/
@@ -13408,6 +13378,11 @@ var AmplitudeVisualSync = function () {
 			}
 		}
 	}
+
+	/*--------------------------------------------------------------------------
+ 	@param 	string	state
+ --------------------------------------------------------------------------*/
+	function syncVolumeSliders(volume) {}
 
 	/*--------------------------------------------------------------------------
  	Syncs the global shuffle button visual state.
@@ -13508,7 +13483,8 @@ var AmplitudeVisualSync = function () {
 
 	/*--------------------------------------------------------------------------
  	Syncs playlist song slider locations
- 		@param 	string	playlist The playlist we are setting the song slider for.
+ 	
+ 	@param 	string	playlist The playlist we are setting the song slider for.
  	@param 	int 	location The location of the song as a percentage.
  --------------------------------------------------------------------------*/
 	function syncPlaylistSliderLocation(playlist, location) {
@@ -13533,7 +13509,8 @@ var AmplitudeVisualSync = function () {
 
 	/*--------------------------------------------------------------------------
  	Syncs individual song slider locations
- 		@param 	string	playlist The playlist we are setting the song slider for.
+ 	
+ 	@param 	string	playlist The playlist we are setting the song slider for.
  	@param 	int 	songIndex The index of the song we are adjusting the song slider for.
  	@param 	int 	location The location of the song as a percentage.
  --------------------------------------------------------------------------*/
@@ -13583,7 +13560,8 @@ var AmplitudeVisualSync = function () {
 
 	/*--------------------------------------------------------------------------
  	Sets the volume slider location
- 		@param 	int volume The volume from 0 - 1 for song volume.
+ 	
+ 	@param 	int volume The volume from 0 - 1 for song volume.
  --------------------------------------------------------------------------*/
 	function syncVolumeSliderLocation(volume) {
 		/*
@@ -13605,7 +13583,7 @@ var AmplitudeVisualSync = function () {
  		@param 	songDuration 	Object containing information about the duration
  		of the song
  --------------------------------------------------------------------------*/
-	function syncSongDuration(currentTime, songDuration) {
+	function syncSongDuration(songDuration) {
 		/*
   	Set duration hour display.
   */
@@ -13625,26 +13603,19 @@ var AmplitudeVisualSync = function () {
   	Set duration time display.
   */
 		_helpers2.default.syncDurationTime(songDuration != undefined ? songDuration : {});
-
-		/*
-  	Set count down time display.
-  */
-		_helpers2.default.syncCountDownTime(currentTime, songDuration);
 	}
 
 	/*
  	Returns the publically available functions
  */
-	return {
+	return _ref = {
 		syncCurrentTime: syncCurrentTime,
 		resetTimes: resetTimes,
 		resetSongSliders: resetSongSliders,
-		resetSongPlayedProgressBars: resetSongPlayedProgressBars,
-		resetSongBufferedProgressBars: resetSongBufferedProgressBars,
+		resetSongTimeVisualizations: resetSongTimeVisualizations,
 		setActiveContainer: setActiveContainer,
 		displaySongMetadata: displaySongMetadata,
 		syncPlaybackSpeed: syncPlaybackSpeed,
-		syncBufferedProgressBars: syncBufferedProgressBars,
 		syncVolumeSliders: syncVolumeSliders,
 		setPlayPauseButtonsToPause: setPlayPauseButtonsToPause,
 		setFirstSongInPlaylist: setFirstSongInPlaylist,
@@ -13652,15 +13623,8 @@ var AmplitudeVisualSync = function () {
 		syncPlaylistPlayPause: syncPlaylistPlayPause,
 		syncSongPlayPause: syncSongPlayPause,
 		syncRepeat: syncRepeat,
-		syncMute: syncMute,
-		syncShuffle: syncShuffle,
-		syncPlaylistShuffle: syncPlaylistShuffle,
-		syncMainSliderLocation: syncMainSliderLocation,
-		syncPlaylistSliderLocation: syncPlaylistSliderLocation,
-		syncSongSliderLocation: syncSongSliderLocation,
-		syncVolumeSliderLocation: syncVolumeSliderLocation,
-		syncSongDuration: syncSongDuration
-	};
+		syncMute: syncMute
+	}, _defineProperty(_ref, 'syncVolumeSliders', syncVolumeSliders), _defineProperty(_ref, 'syncShuffle', syncShuffle), _defineProperty(_ref, 'syncPlaylistShuffle', syncPlaylistShuffle), _defineProperty(_ref, 'syncMainSliderLocation', syncMainSliderLocation), _defineProperty(_ref, 'syncPlaylistSliderLocation', syncPlaylistSliderLocation), _defineProperty(_ref, 'syncSongSliderLocation', syncSongSliderLocation), _defineProperty(_ref, 'syncVolumeSliderLocation', syncVolumeSliderLocation), _defineProperty(_ref, 'syncSongDuration', syncSongDuration), _ref;
 }();
 
 exports.default = AmplitudeVisualSync;
@@ -13698,7 +13662,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 | Interacts directly with native functions of the Audio element. Logic
 | leading up to these methods are handled by click handlers which call
 | helpers and visual synchronizers. These are the core functions of AmplitudeJS.
-| Every other function that leads to these prepare the information to be
+| Every other function that leads to these prepare the information to be 
 | acted upon by these functions.
 |
 | METHODS
@@ -13807,7 +13771,7 @@ var AmplitudeCore = function () {
 
 	/*--------------------------------------------------------------------------
  	Sets the song percentage. If it's a live song, we ignore this because
- 	we can't skip ahead. This is an issue if you have a playlist with
+ 	we can't skip ahead. This is an issue if you have a playlist with 
  	a live source.
  		@param int songPercentage A number between 1 and 100 as a percentage of
  	song completion.
@@ -13862,7 +13826,8 @@ var AmplitudeCore = function () {
  	When you pass a song object it plays that song right awawy.  It sets
  	the active song in the config to the song you pass in and synchronizes
  	the visuals.
- 		Public Accessor: Amplitude.playNow( song_json )
+ 	
+ 	Public Accessor: Amplitude.playNow( song_json )
  		@param song JSON representation of a song.
  --------------------------------------------------------------------------*/
 	function playNow(song) {
@@ -13893,13 +13858,11 @@ var AmplitudeCore = function () {
 		_visual2.default.displaySongMetadata();
 
 		/*
-  	Reset the song sliders, song progress bar info, and
+  	Reset the song sliders, song time visualizations, and
   	reset times. This ensures everything stays in sync.
   */
 		_visual2.default.resetSongSliders();
-
-		_visual2.default.resetSongPlayedProgressBars();
-
+		_visual2.default.resetSongTimeVisualizations();
 		_visual2.default.resetTimes();
 
 		/*
@@ -13992,7 +13955,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 |	bindRepeat()
 |	bindPlaybackSpeed()
 |	bindSkipTo()
-| bindProgress()
 */
 var AmplitudeEvents = function () {
 	/*--------------------------------------------------------------------------
@@ -14028,11 +13990,6 @@ var AmplitudeEvents = function () {
 		bindTimeUpdate();
 
 		/*
-  	Binds key down event handlers for matching key codes to functions.
-  */
-		bindKeyDownEventHandlers();
-
-		/*
   	When the audio element has ended playing, we handle the song
   	ending. In a single song or multiple modular song instance,
   	this just synchronizes the visuals for time and song time
@@ -14040,11 +13997,6 @@ var AmplitudeEvents = function () {
   	it should play the next song or not.
   */
 		bindSongEnded();
-
-		/*
-  	Binds progress event so we can see how much of the song is loaded.
-  */
-		bindProgress();
 
 		/*
   	Binds 'amplitude-play' event handlers
@@ -14136,16 +14088,6 @@ var AmplitudeEvents = function () {
 	}
 
 	/*--------------------------------------------------------------------------
- 	On keydown, we listen to what key got pressed so we can map the key to
- 	a function. This allows the user to map pause and play, next, etc. to key
- 	presses.
- --------------------------------------------------------------------------*/
-	function bindKeyDownEventHandlers() {
-		document.removeEventListener("keydown", _helpers2.default.keydown);
-		document.addEventListener("keydown", _handlers2.default.keydown);
-	}
-
-	/*--------------------------------------------------------------------------
  	When the audio element has ended playing, we handle the song
  	ending. In a single song or multiple modular song instance,
  	this just synchronizes the visuals for time and song time
@@ -14155,16 +14097,6 @@ var AmplitudeEvents = function () {
 	function bindSongEnded() {
 		_config2.default.active_song.removeEventListener('ended', _handlers2.default.songEnded);
 		_config2.default.active_song.addEventListener('ended', _handlers2.default.songEnded);
-	}
-
-	/*--------------------------------------------------------------------------
- 	As the audio is loaded, the progress event gets fired. We bind into this
- 	to grab the buffered percentage of the song. We can then add more elements
- 	to show the buffered amount.
- --------------------------------------------------------------------------*/
-	function bindProgress() {
-		_config2.default.active_song.removeEventListener('progress', _handlers2.default.progess);
-		_config2.default.active_song.addEventListener('progress', _handlers2.default.progress);
 	}
 
 	/*--------------------------------------------------------------------------
@@ -14221,7 +14153,8 @@ var AmplitudeEvents = function () {
 
 	/*--------------------------------------------------------------------------
  	BINDS: class="amplitude-play-pause"
- 		Binds click and touchend events for amplitude play pause buttons.
+ 	
+ 	Binds click and touchend events for amplitude play pause buttons.
  --------------------------------------------------------------------------*/
 	function bindPlayPause() {
 		/*
@@ -14277,7 +14210,7 @@ var AmplitudeEvents = function () {
  --------------------------------------------------------------------------*/
 	function bindMute() {
 		/*
-  	Gets all of the elements with the class amplitue-mute
+  	Gets all of the elements with the class amplitue-mute			
   */
 		var mute_classes = document.getElementsByClassName("amplitude-mute");
 
@@ -14316,7 +14249,7 @@ var AmplitudeEvents = function () {
  --------------------------------------------------------------------------*/
 	function bindVolumeUp() {
 		/*
-  	Gets all of the elements with the class amplitude-volume-up
+  	Gets all of the elements with the class amplitude-volume-up			
   */
 		var volume_up_classes = document.getElementsByClassName("amplitude-volume-up");
 
@@ -14355,7 +14288,7 @@ var AmplitudeEvents = function () {
  --------------------------------------------------------------------------*/
 	function bindVolumeDown() {
 		/*
-  	Gets all of the elements with the class amplitude-volume-down
+  	Gets all of the elements with the class amplitude-volume-down			
   */
 		var volume_down_classes = document.getElementsByClassName("amplitude-volume-down");
 
@@ -14532,7 +14465,7 @@ var AmplitudeEvents = function () {
   */
 		for (var i = 0; i < shuffle_classes.length; i++) {
 			/*
-   	Since we are re-binding everything we remove any classes that signify
+   	Since we are re-binding everything we remove any classes that signify 
    	a state of the shuffle control.
    */
 			shuffle_classes[i].classList.remove('amplitude-shuffle-on');
@@ -14565,7 +14498,7 @@ var AmplitudeEvents = function () {
   */
 		for (var i = 0; i < repeat_classes.length; i++) {
 			/*
-   	Since we are re-binding everything we remove any classes that signify
+   	Since we are re-binding everything we remove any classes that signify 
    	a state of the repeat control.
    */
 			repeat_classes[i].classList.remove('amplitude-repeat-on');
@@ -14676,7 +14609,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 |-------------------------------------------------------------------------------
 | EVENT HANDLER HELPER METHODS
 |-------------------------------------------------------------------------------
-| These methods help handle interactions whether it's computation or shuffling
+| These methods help handle interactions whether it's computation or shuffling 
 | songs.
 |
 | METHODS
@@ -15133,7 +15066,7 @@ var AmplitudeEventHelpers = function () {
   */
 		var nextIndex = 0;
 		/*
-    Ensure we don't loop in the playlist if config.repeat is not true
+    Ensure we don't loop in the playlist if config.repeat is not true 
   */
 		var endOfList = false;
 
@@ -15147,7 +15080,7 @@ var AmplitudeEventHelpers = function () {
    	we use the next shuffle otherwise we go to the beginning
    	of the shuffle list.
    */
-			if (parseInt(_config2.default.shuffle_active_index) + 1 < _config2.default.shuffle_list.length) {
+			if (_config2.default.shuffle_active_index + 1 < _config2.default.shuffle_list.length) {
 				_config2.default.shuffle_active_index = parseInt(_config2.default.shuffle_active_index) + 1;
 
 				/*
@@ -15165,7 +15098,7 @@ var AmplitudeEventHelpers = function () {
    	we use the next song otherwise we go to the beginning of the
    	song list.
    */
-			if (parseInt(_config2.default.active_index) + 1 < _config2.default.songs.length) {
+			if (_config2.default.active_index + 1 < _config2.default.songs.length) {
 				_config2.default.active_index = parseInt(_config2.default.active_index) + 1;
 			} else {
 				_config2.default.active_index = 0;
@@ -15224,7 +15157,7 @@ var AmplitudeEventHelpers = function () {
 
 		/*
     Used to determine whether the playlist looped over
-    If it did, only play if repeat is allowed, end otherwise
+    If it did, only play if repeat is allowed, end otherwise 
     @TODO: Different settings for song loop, in-playlist loop and global loop
   */
 		var endOfList = false;
@@ -15330,7 +15263,7 @@ var AmplitudeEventHelpers = function () {
   */
 		if (_config2.default.shuffle_on) {
 			/*
-   	If the previous index is greater than or equal to 0, we use the active
+   	If the previous index is greater than or equal to 0, we use the active 
    	index - 1.
    */
 			if (parseInt(_config2.default.shuffle_active_index) - 1 >= 0) {
@@ -15416,7 +15349,7 @@ var AmplitudeEventHelpers = function () {
 			var shuffledPlaylistActiveSongIndex = parseInt(_config2.default.shuffled_active_indexes[playlist]);
 
 			/*
-   	If the shuffled song active index is greater than or equal to 0,
+   	If the shuffled song active index is greater than or equal to 0, 
    	we use the active index - 1.
    */
 			if (shuffledPlaylistActiveSongIndex - 1 >= 0) {
@@ -15488,104 +15421,6 @@ var AmplitudeEventHelpers = function () {
 		_helpers2.default.runCallback('after_prev');
 	}
 
-	/*--------------------------------------------------------------------------
- 	Runs an event on key down
- 		@param 	int key The key code the event is bound to.
- --------------------------------------------------------------------------*/
-	function runKeyEvent(key) {
-		/*
-  	Checks to see if the user bound an event to the code pressed.
-  */
-		if (_config2.default.bindings[key] != undefined) {
-			/*
-   	Determine which event should be run if bound.
-   */
-			switch (_config2.default.bindings[key]) {
-				/*
-    	Fires a play pause event.
-    */
-				case 'play_pause':
-					setSongPlayPause(_config2.default.active_playlist, _config2.default.active_index);
-					break;
-
-				/*
-    	Fires a next event.
-    */
-				case 'next':
-					/*
-     	Check to see if the current state of the player
-     	is in playlist mode or not playlist mode.
-     */
-					if (_config2.default.active_playlist == '' || _config2.default.active_playlist == null) {
-						setNext();
-					} else {
-						setNextPlaylist(_config2.default.active_playlist);
-					}
-					break;
-
-				/*
-    	Fires a previous event.
-    */
-				case 'prev':
-					/*
-     	Check to see if the current playlist has been set
-     	or null and set the previous song.
-     */
-					if (_config2.default.active_playlist == '' || _config2.default.active_playlist == null) {
-						AmplitudeEventHelpers.setPrev();
-					} else {
-						AmplitudeEventHelpers.setPrevPlaylist(_config2.default.active_playlist);
-					}
-					break;
-
-				/*
-    	Fires a stop event.
-    */
-				case 'stop':
-					/*
-     	Sets all of the play/pause buttons to pause
-     */
-					_visual2.default.setPlayPauseButtonsToPause();
-
-					/*
-     	Stops the active song.
-     */
-					_core2.default.stop();
-					break;
-
-				/*
-    	Fires a shuffle event.
-    */
-				case 'shuffle':
-					/*
-     	Check to see if the current playlist has been set
-     	or null and set the previous song.
-     */
-					if (_config2.default.active_playlist == '' || _config2.default.active_playlist == null) {
-						AmplitudeEventHelpers.setShuffle(null);
-					} else {
-						AmplitudeEventHelpers.setShuffle(_config2.default.active_playlist);
-					}
-					break;
-
-				/*
-    	Fires a repeat event.
-    */
-				case 'repeat':
-					/*
-     	Sets repeat to the opposite of what it was set to
-     */
-					AmplitudeEventHelpers.setRepeat(!_config2.default.repeat);
-
-					/*
-     	Visually sync repeat
-     */
-					_visual2.default.syncRepeat();
-					break;
-			}
-		}
-	}
-
 	/*
  	Return the publically scoped functions
  */
@@ -15602,8 +15437,7 @@ var AmplitudeEventHelpers = function () {
 		setNext: setNext,
 		setNextPlaylist: setNextPlaylist,
 		setPrev: setPrev,
-		setPrevPlaylist: setPrevPlaylist,
-		runKeyEvent: runKeyEvent
+		setPrevPlaylist: setPrevPlaylist
 	};
 }();
 
@@ -15662,10 +15496,11 @@ var config = __webpack_require__(0);
 var AmplitudeInitializer = function () {
 
 	/*--------------------------------------------------------------------------
- 	The main init function.  The user will call this through
+ 	The main init function.  The user will call this through 
  	Amplitude.init({}) and pass in their settings.
- 		Public Accessor: Amplitude.init( user_config_json );
- 	 	@param userConfig A JSON object of user defined values that help
+ 	
+ 	Public Accessor: Amplitude.init( user_config_json );
+ 	 	@param userConfig A JSON object of user defined values that help 
   	configure and initialize AmplitudeJS.
  --------------------------------------------------------------------------*/
 	function initialize(userConfig) {
@@ -15682,6 +15517,17 @@ var AmplitudeInitializer = function () {
   	necessary.
   */
 		_events2.default.initializeEvents();
+
+		/*
+  	In Amplitude there are 2 different types of song time visualizations.
+  	1st is the HTML5 range element. The 2nd is a div that gets filled in
+  	proportionately to the amount of time elapsed in the song. The user 
+  	can style this and represent the amount played visually. This
+  	initializes all of the 2nd type by inserting an element into each
+  	of the defined divs that will expand the width according to song
+  	played percentage.
+  */
+		initializeSongTimeVisualizations();
 
 		/*
   	Initializes debugging right away so we can use it for the rest
@@ -15779,12 +15625,10 @@ var AmplitudeInitializer = function () {
 			/*
    	If the user provides a soundcloud client then we assume that
    	there are URLs in their songs that will reference SoundcCloud.
-   	We then copy over the user config they provided to the
+   	We then copy over the user config they provided to the 
    	temp_user_config so we don't mess up the global or their configs
    	and load the soundcloud information.
    */
-			var tempUserConfig = {};
-
 			if (config.soundcloud_client != '') {
 				tempUserConfig = userConfig;
 
@@ -15813,6 +15657,7 @@ var AmplitudeInitializer = function () {
  --------------------------------------------------------------------------*/
 	function rebindDisplay() {
 		_events2.default.initializeEvents();
+		initializeSongTimeVisualizations();
 	}
 
 	/*--------------------------------------------------------------------------
@@ -15869,13 +15714,6 @@ var AmplitudeInitializer = function () {
   	and the name of the function the user needs to call.
   */
 		config.callbacks = userConfig.callbacks != undefined ? userConfig.callbacks : {};
-
-		/*
-  	Initializes the user defined key bindings. This should be a JSON
-  	object that contains a key->value store of the key event number
-  	pressed and the method to be run.
-  */
-		config.bindings = userConfig.bindings != undefined ? userConfig.bindings : {};
 
 		/*
   	The user can define a starting volume in a range of 0-100 with
@@ -15948,6 +15786,51 @@ var AmplitudeInitializer = function () {
   	Run after init callback
   */
 		_helpers2.default.runCallback('after_init');
+	}
+
+	/*--------------------------------------------------------------------------
+ 	Sets up all of the song time visualizations.  This is the only time
+ 	that AmplitudeJS will add an element to the page. AmplitudeJS will
+ 	add an element inside of the song time visualization element that will
+ 	expand proportionally to the amount of time elapsed on the active 
+ 	audio, thus visualizing the song time.  This element is NOT user
+ 	interactive.  To have the user scrub the time, they will have to 
+ 	style and implement a song time slider with an HTML 5 Range Element.
+ --------------------------------------------------------------------------*/
+	function initializeSongTimeVisualizations() {
+		/*
+  	Sets up song time visualizations
+  */
+		var song_time_visualizations = document.getElementsByClassName("amplitude-song-time-visualization");
+
+		/*
+  	Iterates through all of the amplitude-song-time-visualization
+  	elements adding a new div with a class of
+  	'amplitude-song-time-visualization-status' that will expand
+  	inside of the 'amplitude-song-time-visualization' element.
+  */
+		for (var i = 0; i < song_time_visualizations.length; i++) {
+			/*
+   	Creates new element
+   */
+			var status = document.createElement('div');
+
+			/*
+   	Adds class and attributes
+   */
+			status.classList.add('amplitude-song-time-visualization-status');
+			status.setAttribute('style', 'width: 0px');
+
+			/*
+   	Clears the inner HTML so we don't get two status divs.
+   */
+			song_time_visualizations[i].innerHTML = '';
+
+			/*
+   	Appends the element as a child element.
+   */
+			song_time_visualizations[i].appendChild(status);
+		}
 	}
 
 	/*--------------------------------------------------------------------------
@@ -16194,22 +16077,8 @@ exports.default = {
    	the duration of the song.
    */
 			_visual2.default.syncCurrentTime(currentTime, songCompletionPercentage);
-			_visual2.default.syncSongDuration(currentTime, songDuration);
-
-			/*
-   	Runs the callback defined for the time update.
-   */
-			_helpers4.default.runCallback('time_update');
+			_visual2.default.syncSongDuration(songDuration);
 		}
-	},
-
-	/*--------------------------------------------------------------------------
- 	HANDLER FOR: keydown
- 		When the keydown event is fired, we determine which function should be run
- 	based on what was passed in.
- --------------------------------------------------------------------------*/
-	keydown: function keydown() {
-		_helpers2.default.runKeyEvent(event.which);
 	},
 
 	/*--------------------------------------------------------------------------
@@ -16229,28 +16098,6 @@ exports.default = {
    */
 			_helpers2.default.setNextPlaylist(_config2.default.active_playlist, true);
 		}
-	},
-
-	/*--------------------------------------------------------------------------
- 	HANDLER FOR: progress
- 		As the song is buffered, we can display the buffered percentage in
- 	a progress bar.
- --------------------------------------------------------------------------*/
-	progress: function progress() {
-		/*
-  	Help from: http://jsbin.com/badimipi/1/edit?html,js,output
-  */
-		if (_config2.default.active_song.buffered.length - 1 >= 0) {
-			var bufferedEnd = _config2.default.active_song.buffered.end(_config2.default.active_song.buffered.length - 1);
-			var duration = _config2.default.active_song.duration;
-
-			_config2.default.buffered = bufferedEnd / duration * 100;
-		}
-
-		/*
-  	Sync the buffered progress bars.
-  */
-		_visual2.default.syncBufferedProgressBars();
 	},
 
 	/*--------------------------------------------------------------------------
@@ -16274,7 +16121,8 @@ exports.default = {
 			}
 
 			/*
-   	*/
+   	
+   */
 			if (playButtonPlaylistIndex != null && playButtonPlaylistIndex != '') {
 				if (_helpers4.default.checkNewPlaylist(playButtonPlaylistIndex)) {
 					_helpers4.default.setActivePlaylist(playButtonPlaylistIndex);
@@ -16309,7 +16157,7 @@ exports.default = {
 			}
 
 			/*
-   	Start the visualizations for the song.
+   	Start the visualizations for the song. 
    	AMPFX-TODO: MAKE HANDLED BY AMPLITUDE FX
    */
 			//privateStartVisualization();
@@ -16435,10 +16283,11 @@ exports.default = {
 	mute: function mute() {
 		if (!_config2.default.is_touch_moving) {
 			/*
-   	If the current volume in the config is 0, we set the volume to the
+   	If the current volume in the config is 0, we set the volume to the 
    	pre_mute level.  This means that the audio is already muted and
    	needs to be restored to the pre_mute level.
-   		Otherwise, we set pre_mute volume to the current volume
+   	
+   	Otherwise, we set pre_mute volume to the current volume
    	and set the config volume to 0, muting the audio.
    */
 			if (_config2.default.volume == 0) {
@@ -16797,7 +16646,8 @@ exports.default = {
     	Gets the location, playlist and song index that is being skipped
     	to.
     */
-				var seconds = parseInt(this.getAttribute('amplitude-location'));
+				var location = parseInt(this.getAttribute('amplitude-location'));
+				var playlist = this.getAttribute('amplitude-playlist');
 				var songIndex = parseInt(this.getAttribute('amplitude-song-index'));
 
 				/*
@@ -16807,20 +16657,16 @@ exports.default = {
 				_helpers4.default.changeSong(songIndex);
 				_core2.default.play();
 
-				_visual2.default.syncMainPlayPause('playing');
-				_visual2.default.syncPlaylistPlayPause(playlist, 'playing');
-				_visual2.default.syncSongPlayPause(playlist, songIndex, 'playing');
-
 				/*
     	Skip to the location in the song.
     */
-				_core2.default.skipToLocation(seconds);
+				_core2.default.skipToLocation(location);
 			} else {
 				/*
     	Gets the location and song index that is being skipped
     	to.
     */
-				var seconds = parseInt(this.getAttribute('amplitude-location'));
+				var location = parseInt(this.getAttribute('amplitude-location'));
 				var songIndex = parseInt(this.getAttribute('amplitude-song-index'));
 
 				/*
@@ -16830,13 +16676,10 @@ exports.default = {
 				_helpers4.default.changeSong(songIndex);
 				_core2.default.play();
 
-				_visual2.default.syncMainPlayPause('playing');
-				_visual2.default.syncSongPlayPause(null, songIndex, 'playing');
-
 				/*
     	Skip to the location in the song.
     */
-				_core2.default.skipToLocation(seconds);
+				_core2.default.skipToLocation(location);
 			}
 		}
 	}
@@ -16886,7 +16729,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; } /*
                                                                                                                                                                                                                   	Amplitude.js
-                                                                                                                                                                                                                  	Version: 	3.2.0
+                                                                                                                                                                                                                  	Version: 	3.1.0
                                                                                                                                                                                                                   	Author: 	Dan Pastori
                                                                                                                                                                                                                   	Company: 	521 Dimensions
                                                                                                                                                                                                                   */
@@ -16901,10 +16744,11 @@ var Amplitude = function () {
 	var _ref;
 
 	/*--------------------------------------------------------------------------
- 	The main init function.  The user will call this through
+ 	The main init function.  The user will call this through 
  	Amplitude.init({}) and pass in their settings.
- 		Public Accessor: Amplitude.init( user_config_json );
- 	 	@param user_config A JSON object of user defined values that help
+ 	
+ 	Public Accessor: Amplitude.init( user_config_json );
+ 	 	@param user_config A JSON object of user defined values that help 
   	configure and initialize AmplitudeJS.
  --------------------------------------------------------------------------*/
 	function init(userConfig) {
@@ -16972,7 +16816,8 @@ var Amplitude = function () {
 
 	/*--------------------------------------------------------------------------
  	Allows the user to get the percentage of the song played.
- 		Public Accessor: Amplitude.getSongPlayedPercentage();
+ 	
+ 	Public Accessor: Amplitude.getSongPlayedPercentage();
  --------------------------------------------------------------------------*/
 	function getSongPlayedPercentage() {
 		/*
@@ -16983,9 +16828,11 @@ var Amplitude = function () {
 
 	/*--------------------------------------------------------------------------
  	Allows the user to set how far into the song they want to be. This is
- 	helpful for implementing custom range sliders. Only works on the current song.
- 		Public Accessor: Amplitude.setSongPlayedPercentage( float );
- 	 	@param Float percentage The percentage of the song played
+ 	helpful for implementing custom range sliders
+ 	
+ 	Public Accessor: Amplitude.setSongPlayedPercentage( float );
+ 	
+  	@param Float percentage The percentage of the song played
  --------------------------------------------------------------------------*/
 	function setSongPlayedPercentage(percentage) {
 		/*
@@ -17001,8 +16848,10 @@ var Amplitude = function () {
 
 	/*--------------------------------------------------------------------------
  	Allows the user to turn on debugging.
- 		Public Accessor: Amplitude.setDebug( bool );
- 	 	@param BOOL state Turns debugging on and off.
+ 	
+ 	Public Accessor: Amplitude.setDebug( bool );
+ 	
+  	@param BOOL state Turns debugging on and off.
  --------------------------------------------------------------------------*/
 	function setDebug(state) {
 		/*
@@ -17012,10 +16861,12 @@ var Amplitude = function () {
 	}
 
 	/*--------------------------------------------------------------------------
- 	Returns the active song meta data for the user to do what is
+ 	Returns the active song meta data for the user to do what is 
  	needed.
- 		Public Accessor: Amplitude.getActiveSongMetadata();
- 	 	@returns JSON Object with the active song information
+ 	
+ 	Public Accessor: Amplitude.getActiveSongMetadata();
+ 	
+  	@returns JSON Object with the active song information
  --------------------------------------------------------------------------*/
 	function getActiveSongMetadata() {
 		return _config2.default.active_metadata;
@@ -17023,7 +16874,8 @@ var Amplitude = function () {
 
 	/*--------------------------------------------------------------------------
  	Returns a song in the songs array at that index
- 		Public Accessor: Amplitude.getSongByIndex( song_index )
+ 	
+ 	Public Accessor: Amplitude.getSongByIndex( song_index )
  		@param int index The integer for the index of the
  	song in the songs array.
  		@returns JSON representation for the song at a specific index.
@@ -17034,7 +16886,8 @@ var Amplitude = function () {
 
 	/*--------------------------------------------------------------------------
  	Returns a song at a playlist index
- 		Public Accessor: Amplitude.getSongAtPlaylistIndex( playlist, index
+ 	
+ 	Public Accessor: Amplitude.getSongAtPlaylistIndex( playlist, index 
  		@param 	int 	index The integer for the index of the
  	song in the playlist.
  		@param 	string	playlist The key of the playlist we are getting the song
@@ -17050,7 +16903,8 @@ var Amplitude = function () {
 	/*--------------------------------------------------------------------------
  	Adds a song to the end of the config array.  This will allow Amplitude
  	to play the song in a playlist type setting.
- 		Public Accessor: Amplitude.addSong( song_json )
+ 	
+ 	Public Accessor: Amplitude.addSong( song_json )
  		@param song JSON representation of a song.
  		@returns int New index of the song.
  --------------------------------------------------------------------------*/
@@ -17063,7 +16917,8 @@ var Amplitude = function () {
  	When you pass a song object it plays that song right awawy.  It sets
  	the active song in the config to the song you pass in and synchronizes
  	the visuals.
- 		Public Accessor: Amplitude.playNow( song )
+ 	
+ 	Public Accessor: Amplitude.playNow( song )
  		@param song JSON representation of a song.
  --------------------------------------------------------------------------*/
 	function playNow(song) {
@@ -17088,7 +16943,7 @@ var Amplitude = function () {
 	/*--------------------------------------------------------------------------
  	Allows the user to pause whatever the active song is directly
  	through Javascript. Normally ALL of Amplitude functions that access
- 	the core features are called through event handlers.
+ 	the core features are called through event handlers. 
  		Public Accessor: Amplitude.pause();
  --------------------------------------------------------------------------*/
 	function pause() {
@@ -17163,139 +17018,6 @@ var Amplitude = function () {
 		}
 	}
 
-	/*--------------------------------------------------------------------------
- 	Gets all of the songs in the songs array
- 		Public Accessor: Amplitude.getSongs( );
- --------------------------------------------------------------------------*/
-	function getSongs() {
-		return _config2.default.songs;
-	}
-
-	/*--------------------------------------------------------------------------
- 	Gets all of the songs in a playlist
- 		Public Accessor: Amplitude.getSongsInPlaylist( playlist );
- 		@param 	string 	playlist The playlist key
- --------------------------------------------------------------------------*/
-	function getSongsInPlaylist(playlist) {
-		var songsArray = [];
-
-		for (var i = 0; i < _config2.default.playlist[playlist].length; i++) {
-			songsArray.push(_config2.default.songs[i]);
-		}
-
-		return songsArray;
-	}
-
-	/*--------------------------------------------------------------------------
- 	Get current state of songs. If shuffled, this will return the shuffled
- 	songs.
- 		Public Accessor: Amplitude.getSongsState();
- --------------------------------------------------------------------------*/
-	function getSongsState() {
-		if (_config2.default.shuffle_on) {
-			return _config2.default.shuffle_list;
-		} else {
-			return _config2.default.songs;
-		}
-	}
-
-	/*--------------------------------------------------------------------------
- 	Get current state of songs in playlist. If shuffled, this will return the
- 	shuffled songs.
- 		Public Accessor: Amplitude.getSongsStatePlaylist( playlist );
- 		@param 	string 	playlist The playlist key
- --------------------------------------------------------------------------*/
-	function getSongsStatePlaylist(playlist) {
-		var songsArray = [];
-
-		if (_config2.default.shuffled_status[playlist]) {
-
-			for (var i = 0; i < _config2.default.shuffled_playlists[playlist].length; i++) {
-				songsArray.push(_config2.default.songs[i]);
-			}
-		} else {
-
-			for (var i = 0; i < _config2.default.playlist[playlist].length; i++) {
-				songsArray.push(_config2.default.songs[i]);
-			}
-		}
-
-		return songsArray;
-	}
-
-	/*--------------------------------------------------------------------------
- 	Gets the active index of the player
- 		Public Accessor: Amplitude.getActiveIndex()
- --------------------------------------------------------------------------*/
-	function getActiveIndex() {
-		return parseInt(_config2.default.active_index);
-	}
-
-	/*--------------------------------------------------------------------------
- 	Gets the active index with respect to the state of the player whether it is
- 	shuffled or not.
- 		Public Accessor: Amplitude.getActiveIndexState()
- --------------------------------------------------------------------------*/
-	function getActiveIndexState() {
-		if (_config2.default.shuffle_on) {
-			return parseInt(_config2.default.shuffle_active_index);
-		} else {
-			return parseInt(_config2.default.active_index);
-		}
-	}
-
-	/*--------------------------------------------------------------------------
- 	Get the version of AmplitudeJS
- 		Public Accessor: Amplitude.getVersion()
- --------------------------------------------------------------------------*/
-	function getVersion() {
-		return _config2.default.version;
-	}
-
-	/*--------------------------------------------------------------------------
- 	Get the buffered amount for the current song
- 		Public Accessor: Amplitude.getBuffered()
- --------------------------------------------------------------------------*/
-	function getBuffered() {
-		return _config2.default.buffered;
-	}
-
-	/*--------------------------------------------------------------------------
- 	Skip to a certain location in a selected song.
- 		Public Accessor: Amplitude.getBuffered()
- --------------------------------------------------------------------------*/
-	function skipTo(seconds, songIndex) {
-		var playlist = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
-
-		if (playlist != null) {
-			if (_helpers2.default.checkNewPlaylist(playlist)) {
-				_helpers2.default.setActivePlaylist(playlist);
-			}
-		}
-
-		seconds = parseInt(seconds);
-
-		/*
-  	Changes the song to where it's being skipped and then
-  	play the song.
-  */
-		_helpers2.default.changeSong(songIndex);
-		_core2.default.play();
-
-		_visual2.default.syncMainPlayPause('playing');
-
-		if (playlist != null) {
-			_visual2.default.syncPlaylistPlayPause(playlist, 'playing');
-		}
-
-		_visual2.default.syncSongPlayPause(playlist, songIndex, 'playing');
-
-		/*
-  	Skip to the location in the song.
-  */
-		_core2.default.skipToLocation(seconds);
-	}
-
 	/*
  	Returns all of the publically accesible methods.
  */
@@ -17319,7 +17041,7 @@ var Amplitude = function () {
 		playNow: playNow,
 		play: play,
 		pause: pause
-	}, _defineProperty(_ref, 'addSong', addSong), _defineProperty(_ref, 'audio', getAudio), _defineProperty(_ref, 'next', next), _defineProperty(_ref, 'prev', prev), _defineProperty(_ref, 'getSongs', getSongs), _defineProperty(_ref, 'getSongsInPlaylist', getSongsInPlaylist), _defineProperty(_ref, 'getSongsState', getSongsState), _defineProperty(_ref, 'getSongsStatePlaylist', getSongsStatePlaylist), _defineProperty(_ref, 'getActiveIndex', getActiveIndex), _defineProperty(_ref, 'getActiveIndexState', getActiveIndexState), _defineProperty(_ref, 'getVersion', getVersion), _defineProperty(_ref, 'getBuffered', getBuffered), _defineProperty(_ref, 'skipTo', skipTo), _ref;
+	}, _defineProperty(_ref, 'addSong', addSong), _defineProperty(_ref, 'audio', getAudio), _defineProperty(_ref, 'next', next), _defineProperty(_ref, 'prev', prev), _ref;
 }();
 
 exports.default = Amplitude;
@@ -17514,7 +17236,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 |-------------------------------------------------------------------------------
 | VISUAL SYNC HELPER METHODS
 |-------------------------------------------------------------------------------
-| These methods help sync visual displays. They essentially make the visual sync
+| These methods help sync visual displays. They essentially make the visual sync 
 | methods smaller and more maintainable.
 |
 | METHODS
@@ -17525,11 +17247,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 |	syncCurrentSeconds( seconds )
 |	resetCurrentSeconds()
 |	syncCurrentTime( currentTime )
-| syncCurrentHours( hours )
-| syncCurrentMinutes( minutes )
-| syncCurrentSeconds( seconds )
-| syncCurrentTime( time )
 |	resetCurrentTime()
+|	syncSongTimeVisualizations( songPlayedPercentage )
+|	syncMainSongTimeVisualizations( songPlayedPercentage )
+|	syncPlaylistSongTimeVisualizations( songPlayedPercentage )
+|	syncIndividualSongTimeVisualizations( songPlayedPercentage )
 |	setElementPlay( element )
 |	setElementPause( element )
 */
@@ -17801,95 +17523,156 @@ var AmplitudeVisualSyncHelpers = function () {
 	}
 
 	/*--------------------------------------------------------------------------
- 	Syncs the song played progress bars. These are HTML5 progress elements.
+ 	Updates all of the song time visualizaitons which are an expanding
+ 	element that displays the percentage of the song that has been played.
+ 		@param float songPlayedPercentage The percentage of the song that
+ 	has been played.
  --------------------------------------------------------------------------*/
-	function syncSongPlayedProgressBar(songPlayedPercentage) {
-		syncMainSongPlayedProgressBars(songPlayedPercentage);
-		syncPlaylistSongPlayedProgressBars(songPlayedPercentage);
-		syncIndividualSongPlayedProgressBars(songPlayedPercentage);
+	function syncSongTimeVisualizations(songPlayedPercentage) {
+		syncMainSongTimeVisualizations(songPlayedPercentage);
+		syncPlaylistSongTimeVisualizations(songPlayedPercentage);
+		syncIndividualSongTimeVisualizations(songPlayedPercentage);
 	}
 
 	/*--------------------------------------------------------------------------
- 	Sync how much has been played with a progress bar. This is the main progress
- 	bar.
- 		@param float songPlayedPercentage The percent of the song completed.
+ 	Updates all of the main song time visualizaitons which are an expanding
+ 	element that displays the percentage of the song that has been played.
+ 		@param float songPlayedPercentage The percentage of the song that
+ 	has been played.
  --------------------------------------------------------------------------*/
-	function syncMainSongPlayedProgressBars(songPlayedPercentage) {
+	function syncMainSongTimeVisualizations(songPlayedPercentage) {
 		/*
-  	Ensure that the song completion percentage is a number
+  	Get all of the main song time visualizations
   */
-		if (!isNaN(songPlayedPercentage)) {
+		var mainSongTimeVisualizations = document.querySelectorAll('.amplitude-song-time-visualization[amplitude-main-song-time-visualization="true"]');
+
+		/*
+  	Iterate over all of the main song time visualizations setting
+  	the internal div to be the percentage of the parent container
+  	equivalent to the percentage of the song played.
+  */
+		for (var i = 0; i < mainSongTimeVisualizations.length; i++) {
 			/*
-   	Get all of the song progress bars
+   	Get the song time visualization status and the visualization
+   	width. Calculate the computed width of the song as a percentage
+   	of the player width and song played.
    */
-			var songPlayedProgressBars = document.querySelectorAll('.amplitude-song-played-progress[amplitude-main-song-played-progress="true"]');
+			var songTimeVisualizationStatus = mainSongTimeVisualizations[i].querySelectorAll('.amplitude-song-time-visualization-status');
+			var visualizationWidth = mainSongTimeVisualizations[i].offsetWidth;
+			var computedWidth = visualizationWidth * (songPlayedPercentage / 100);
 
-			for (var i = 0; i < songPlayedProgressBars.length; i++) {
-				var max = songPlayedProgressBars[i].max;
-
-				songPlayedProgressBars[i].value = songPlayedPercentage / 100 * max;
-			}
+			/*
+   	Set the inner element width to the computed width. This allows for the user
+   	to define the width of the outer element and this will fill proportionally.
+   */
+			songTimeVisualizationStatus[0].setAttribute('style', 'width: ' + computedWidth + 'px');
 		}
 	}
 
 	/*--------------------------------------------------------------------------
- 	Sync how much has been played with a progress bar. This is the playlist progress
- 	bar.
- 		@param float songPlayedPercentage The percent of the song completed.
+ 	Updates all of the playlist song time visualizaitons which are an expanding
+ 	element that displays the percentage of the song that has been played.
+ 		@param float songPlayedPercentage The percentage of the song that
+ 	has been played.
  --------------------------------------------------------------------------*/
-	function syncPlaylistSongPlayedProgressBars(songPlayedPercentage) {
+	function syncPlaylistSongTimeVisualizations(songPlayedPercentage) {
 		/*
-  	Ensure that the song completion percentage is a number
+  	Get all of the playlist song time visualizations
   */
-		if (!isNaN(songPlayedPercentage)) {
+		var playlistSongTimeVisualizations = document.querySelectorAll('.amplitude-song-time-visualization[amplitude-playlist-song-time-visualization="true"][amplitude-playlist="' + _config2.default.active_playlist + '"]');
+
+		/*
+  	Iterate over all of the main song time visualizations setting
+  	the internal div to be the percentage of the parent container
+  	equivalent to the percentage of the song played.
+  */
+		for (var i = 0; i < playlistSongTimeVisualizations.length; i++) {
 			/*
-   	Get all of the song progress bars
+   	Get the song time visualization status and the visualization
+   	width. Calculate the computed width of the song as a percentage
+   	of the player width and song played.
    */
-			var songPlayedProgressBars = document.querySelectorAll('.amplitude-song-played-progress[amplitude-playlist-song-played-progress="true"][amplitude-playlist="' + _config2.default.active_playlist + '"]');
+			var songTimeVisualizationStatus = playlistSongTimeVisualizations[i].querySelectorAll('.amplitude-song-time-visualization-status');
+			var visualizationWidth = playlistSongTimeVisualizations[i].offsetWidth;
+			var computedWidth = visualizationWidth * (songPlayedPercentage / 100);
 
-			for (var i = 0; i < songPlayedProgressBars.length; i++) {
-				var max = songPlayedProgressBars[i].max;
-
-				songPlayedProgressBars[i].value = songPlayedPercentage / 100 * max;
-			}
+			/*
+   	Set the inner element width to the computed width. This allows for the user
+   	to define the width of the outer element and this will fill proportionally.
+   */
+			songTimeVisualizationStatus[0].setAttribute('style', 'width: ' + computedWidth + 'px');
 		}
 	}
 
 	/*--------------------------------------------------------------------------
- 	Sync how much has been played with a progress bar. This is for an individual
- 	song.
- 		@param float songPlayedPercentage The percent of the song completed.
+ 	Updates all of the individual song time visualizaitons which are an expanding
+ 	element that displays the percentage of the song that has been played.
+ 		@param float songPlayedPercentage The percentage of the song that
+ 	has been played.
  --------------------------------------------------------------------------*/
-	function syncIndividualSongPlayedProgressBars(songPlayedPercentage) {
+	function syncIndividualSongTimeVisualizations(songPlayedPercentage) {
 		/*
-  	Ensure that the song completion percentage is a number
+  	If the active playlist is not null, we get the individual song
+  	time visualizations for the playlist.
   */
-		if (!isNaN(songPlayedPercentage)) {
+		if (_config2.default.active_playlist != '' && _config2.default.active_playlist != null) {
 			/*
-   	If the active playlist is not null, we get the individual song
-   	played progress for the playlist.
+   	Get all of the individual song time visualizations that correspond
+   	to a playlist
    */
-			if (_config2.default.active_playlist != '' && _config2.default.active_playlist != null) {
+			var songTimeVisualizations = document.querySelectorAll('.amplitude-song-time-visualization[amplitude-playlist="' + _config2.default.active_playlist + '"][amplitude-song-index="' + _config2.default.active_index + '"]');
+
+			/*
+   	Iterate over all of the individual song time visualizations setting
+   	the internal div to be the percentage of the parent container
+   	equivalent to the percentage of the song played.
+   */
+			for (var i = 0; i < songTimeVisualizations.length; i++) {
 				/*
-    	Get all of the song progress bars
+    	Get the song time visualization status and the visualization
+    	width. Calculate the computed width of the song as a percentage
+    	of the player width and song played.
     */
-				var songPlayedProgressBars = document.querySelectorAll('.amplitude-song-played-progress[amplitude-playlist="' + _config2.default.active_playlist + '"][amplitude-song-index="' + _config2.default.active_index + '"]');
+				var songTimeVisualizationStatus = songTimeVisualizations[i].querySelectorAll('.amplitude-song-time-visualization-status');
+				var visualizationWidth = songTimeVisualizations[i].offsetWidth;
+				var computedWidth = visualizationWidth * (songPlayedPercentage / 100);
 
-				for (var i = 0; i < songPlayedProgressBars.length; i++) {
-					var max = songPlayedProgressBars[i].max;
-
-					songPlayedProgressBars[i].value = songPlayedPercentage / 100 * max;
-				}
-			} else {
 				/*
-    	Get all of the song progress bars
+    	Set the inner element width to the computed width. This allows for the user
+    	to define the width of the outer element and this will fill proportionally.
     */
-				var songPlayedProgressBars = document.querySelectorAll('.amplitude-song-played-progress[amplitude-song-index="' + _config2.default.active_index + '"]');
+				songTimeVisualizationStatus[0].setAttribute('style', 'width: ' + computedWidth + 'px');
+			}
+		} else {
+			/*
+   	Get all of the individual song time visualizations.
+   */
+			var songTimeVisualizations = document.querySelectorAll('.amplitude-song-time-visualization[amplitude-song-index="' + _config2.default.active_index + '"]');
 
-				for (var i = 0; i < songPlayedProgressBars.length; i++) {
-					var max = songPlayedProgressBars[i].max;
+			/*
+   	Iterate over all of the individual song time visualizations setting
+   	the internal div to be the percentage of the parent container
+   	equivalent to the percentage of the song played.
+   */
+			for (var i = 0; i < songTimeVisualizations.length; i++) {
+				/*
+    	Ensure the visualization doesn't have a playlist attribute.
+    */
+				if (!songTimeVisualizations[i].hasAttribute('amplitude-playlist')) {
+					/*
+     	Get the song time visualization status and the visualization
+     	width. Calculate the computed width of the song as a percentage
+     	of the player width and song played.
+     */
+					var songTimeVisualizationStatus = songTimeVisualizations[i].querySelectorAll('.amplitude-song-time-visualization-status');
+					var visualizationWidth = songTimeVisualizations[i].offsetWidth;
+					var computedWidth = visualizationWidth * (songPlayedPercentage / 100);
 
-					songPlayedProgressBars[i].value = songPlayedPercentage / 100 * max;
+					/*
+     	Set the inner element width to the computed width. This allows for the user
+     	to define the width of the outer element and this will fill proportionally.
+     */
+					songTimeVisualizationStatus[0].setAttribute('style', 'width: ' + computedWidth + 'px');
 				}
 			}
 		}
@@ -18115,74 +17898,6 @@ var AmplitudeVisualSyncHelpers = function () {
 		}
 	}
 
-	/*--------------------------------------------------------------------------
- 	Updates the elements that show how much time is remaining in the song.
- 		@param JSON currentTime A json object containing the parts for the current
- 	time for the song.
- 		@param JSON durationTime A json object conaining the parts for the
- 	duration time for the song.
- --------------------------------------------------------------------------*/
-	function syncCountDownTime(currentTime, songDuration) {
-		/*
-  	Initialize time remaining.
-  */
-		var timeRemaining = '00:00';
-
-		/*
-  	Ensure that all values are defined.
-  */
-		if (currentTime != undefined && songDuration != undefined) {
-			/*
-   	Initialize the total current seconds and total duration seconds
-   */
-			var totalCurrentSeconds = parseInt(currentTime.seconds) + parseInt(currentTime.minutes) * 60 + parseInt(currentTime.hours) * 60 * 60;
-			var totalDurationSeconds = parseInt(songDuration.seconds) + parseInt(songDuration.minutes) * 60 + parseInt(songDuration.hours) * 60 * 60;
-
-			/*
-   	If the two variables are numbers we continue the computing.
-   */
-			if (!isNaN(totalCurrentSeconds) && !isNaN(totalDurationSeconds)) {
-				/*
-    	Find the total remaining seconds.
-    */
-				var timeRemainingTotalSeconds = totalDurationSeconds - totalCurrentSeconds;
-
-				/*
-    	Find how many seconds are remaining.
-    */
-				var timeRemainingSeconds = (Math.floor(timeRemainingTotalSeconds % 60) < 10 ? '0' : '') + Math.floor(timeRemainingTotalSeconds % 60);
-
-				/*
-    	Find how many minutes are remaining.
-    */
-				var timeRemainingMinutes = (Math.floor(timeRemainingTotalSeconds / 60) < 10 ? '0' : '') + Math.floor(timeRemainingTotalSeconds / 60);
-
-				/*
-    	Build the time remaining.
-    */
-				timeRemaining = timeRemainingMinutes + ':' + timeRemainingSeconds;
-			}
-		}
-
-		/*
-  	Gets all of the song time selectors.
-  */
-		var timeSelectors = ['.amplitude-time-remaining[amplitude-main-time-remaining="true"]', '.amplitude-time-remaining[amplitude-playlist-main-time-remaining="' + _config2.default.active_playlist + '"]', '.amplitude-time-remaining[amplitude-song-index="' + _config2.default.active_index + '"]'];
-
-		/*
-  	Get all of the time selectors.
-  */
-		var timeRemainingSelectors = document.querySelectorAll(timeSelectors.join());
-
-		/*
-  	Set the time selector's inner html to the duration time for the song. The duration
-  	time is computed by joining minutes and seconds.
-  */
-		for (var i = 0; i < timeRemainingSelectors.length; i++) {
-			timeRemainingSelectors[i].innerHTML = timeRemaining;
-		}
-	}
-
 	/*
  	Return the publically available functions.
  */
@@ -18195,14 +17910,13 @@ var AmplitudeVisualSyncHelpers = function () {
 		resetCurrentMinutes: resetCurrentMinutes,
 		resetCurrentSeconds: resetCurrentSeconds,
 		resetCurrentTime: resetCurrentTime,
-		syncSongPlayedProgressBar: syncSongPlayedProgressBar,
+		syncSongTimeVisualizations: syncSongTimeVisualizations,
 		setElementPlay: setElementPlay,
 		setElementPause: setElementPause,
 		syncDurationHours: syncDurationHours,
 		syncDurationMinutes: syncDurationMinutes,
 		syncDurationSeconds: syncDurationSeconds,
-		syncDurationTime: syncDurationTime,
-		syncCountDownTime: syncCountDownTime
+		syncDurationTime: syncDurationTime
 	};
 }();
 
