@@ -99,7 +99,6 @@ module.exports = {
             filename:  (getPath) => {
               return getPath('css/[name].css').replace('css/js', 'css');
             },
-            
             allChunks: true
         })
     ]
