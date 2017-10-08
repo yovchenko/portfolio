@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const PATHS = { 
     source: path.join(__dirname,'source'),
-    dist: path.join(__dirname,'dist')
+    dist: path.join(__dirname,'docs')
 };
 
 module.exports = {
@@ -13,12 +13,12 @@ module.exports = {
         historyApiFallback: true,
         inline: true,
         progress: true,
-        contentBase: PATHS.dist,
+        contentBase: PATHS.docs,
         port: 8080,
       },
     entry: PATHS.source + '/index.js',
     output: {
-        path: PATHS.dist,
+        path: PATHS.docs,
         publicPath: '',
         filename: "[name].js",
       
