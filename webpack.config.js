@@ -20,8 +20,7 @@ module.exports = {
     output: {
         path: PATHS.docs,
         publicPath: '',
-        filename: "[name].js",
-      
+        filename: "[name].js"
     },
     module: {
         rules: [   
@@ -33,6 +32,7 @@ module.exports = {
                         options: {
                           name: '[name].[ext]',
                           outputPath: '/fonts/',
+                          publicPath: '../'
                         }  
                     },
                 ]
@@ -45,6 +45,7 @@ module.exports = {
                     options: {
                       name: '[name].[ext]',
                       outputPath: '/images/',
+                      publicPath: '../'
                     }  
                 },
                  'img-loader'
@@ -59,7 +60,15 @@ module.exports = {
             },
             {
                 test: /\.html$/,
-                use: [ 'html-loader' ]
+                use: [
+                    {
+                        loader: 'html-loader',
+                        options: {
+                            attrs: [':data-src']
+                          }
+                    },
+            
+                ]
             }
         ]
     },
@@ -85,12 +94,11 @@ module.exports = {
                 removeStyleLinkTypeAttributes: true
               }
         }),
-    /*   new FaviconsWebpackPlugin(PATHS.source + '/favicon/favicon.png'), */
+        new FaviconsWebpackPlugin(PATHS.source + '/favicon/favicon.png'),
         new ExtractTextPlugin({
             filename:  (getPath) => {
               return getPath('css/[name].css').replace('css/js', 'css');
             },
-            
             allChunks: true
         })
     ]
