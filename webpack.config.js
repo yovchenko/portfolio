@@ -14,14 +14,13 @@ module.exports = {
         inline: true,
         progress: true,
         contentBase: PATHS.docs,
-        port: 8081,
+        port: 8082,
       },
     entry: PATHS.source + '/index.js',
     output: {
         path: PATHS.docs,
         publicPath: '',
         filename: "[name].js",
-      
     },
     module: {
         rules: [   
