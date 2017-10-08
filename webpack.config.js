@@ -1,5 +1,5 @@
-let webpack = require('webpack');
-const path = require('path');
+const webpack = require('webpack');
+const path = require();
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
