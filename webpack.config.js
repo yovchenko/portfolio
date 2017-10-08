@@ -2,8 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const PATHS = { 
     source: path.join(__dirname,'source'),
     dist: path.join(__dirname,'dist')
@@ -19,25 +18,37 @@ module.exports = {
       },
     entry: PATHS.source + '/index.js',
     output: {
-        path: path.join(__dirname, "dist"),
+        path: PATHS.dist,
+        publicPath: '',
         filename: "[name].js",
         publicPath: PATHS.dist
     },
     module: {
         rules: [   
             {
-             test: /\.(png|jpg&g|gif|svg|eot|ttf|woff|woff2)$/,
-                loaders: [
+            test: /\.(eot|ttf|woff|woff2)$/,
+            use: [
                     {
                         loader: 'file-loader',
                         options: {
                           name: '[name].[ext]',
-                          outputPath: 'images/',
-                          publicPath: 'images/'
+                          outputPath: '/fonts/',
                         }  
                     },
-                     'img-loader'
                 ]
+            },
+            {
+            test: /\.(png|jpg&g|gif|svg|)$/,
+            use: [
+                {
+                    loader: 'file-loader',
+                    options: {
+                      name: '[name].[ext]',
+                      outputPath: '/images/',
+                    }  
+                },
+                 'img-loader'
+            ]
             },
             {
                 test: /\.scss$/,
@@ -50,8 +61,6 @@ module.exports = {
                 test: /\.html$/,
                 use: [ 'html-loader' ]
             }
-        
-            //...
         ]
     },
     resolve: {
@@ -68,7 +77,15 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: PATHS.source + '/index.html',
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true,
+                removeRedundantAttributes: true,
+                removeScriptTypeAttributes: true,
+                removeStyleLinkTypeAttributes: true
+              }
         }),
+    /*   new FaviconsWebpackPlugin(PATHS.source + '/favicon/favicon.png'), */
         new ExtractTextPlugin({
             filename:  (getPath) => {
               return getPath('css/[name].css').replace('css/js', 'css');
