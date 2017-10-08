@@ -1,2 +1,2 @@
 # portfolio
-Sorry,the website is under construction.
+Sorry,the app is under construction.
