@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const path = require();
+const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
@@ -7,6 +7,7 @@ const PATHS = {
     source: path.join(__dirname,'source'),
     docs: path.join(__dirname,'docs')
 };
+
 module.exports = {
     devServer: {
         historyApiFallback: true,
@@ -19,7 +20,8 @@ module.exports = {
     output: {
         path: PATHS.docs,
         publicPath: '',
-        filename: "[name].js", 
+        filename: "[name].js",
+      
     },
     module: {
         rules: [   
@@ -83,7 +85,7 @@ module.exports = {
                 removeStyleLinkTypeAttributes: true
               }
         }),
-        new FaviconsWebpackPlugin(PATHS.source + '/favicon/favicon.png'),
+    /*   new FaviconsWebpackPlugin(PATHS.source + '/favicon/favicon.png'), */
         new ExtractTextPlugin({
             filename:  (getPath) => {
               return getPath('css/[name].css').replace('css/js', 'css');
