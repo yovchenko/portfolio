@@ -20,7 +20,7 @@ module.exports = {
     output: {
         path: PATHS.docs,
         publicPath: '',
-        filename: "[name].js",
+        filename: "[name].js"
     },
     module: {
         rules: [   
