@@ -7,7 +7,6 @@ const PATHS = {
     source: path.join(__dirname,'source'),
     dist: path.join(__dirname,'dist')
 };
-
 module.exports = {
     devServer: {
         historyApiFallback: true,
