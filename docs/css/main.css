@@ -1,9 +1,3 @@
-@font-face {
-  font-family: "sketch";
-  font-style: normal;
-  font-weight: 500;
-  src: url(../fonts/cabinSketch.ttf) format("truetype"); }
-
 html, body {
   height: 100%;
   box-sizing: border-box;
