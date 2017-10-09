@@ -7218,10 +7218,10 @@ module.exports = Trianglify;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_main_scss__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__scss_main_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__scss_main_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_normalize_scss__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_normalize_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_normalize_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_normalize__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_normalize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_normalize__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scss_main_scss__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scss_main_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__scss_main_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__js_preloader__ = __webpack_require__(108);
@@ -17939,15 +17939,15 @@ let pattern = Trianglify({
     width: window.innerWidth,
     height: window.innerHeight
 });
-let canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
+const canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
 canvasBackground.setAttribute("id", "canvasPic");
 pattern = Trianglify({
-    cell_size: 105,
-    variance:  0.3,
+    cell_size: 95,
+    variance: 0.75,
     x_colors: 'random',
     y_colors: 'match_x',
     palette: Trianglify.colorbrewer,
-    stroke_width: 0.3,
+    stroke_width: 0.2,
 });
 
 // Serialize the SVG object to a String
@@ -17955,8 +17955,8 @@ let m = new XMLSerializer().serializeToString(pattern.svg());
 // Perform the base64 encoding of the String
 let k = window.btoa(m);
 // Query the element to set the background image property
-let elementTop = document.getElementsByTagName('header')[0];
-let elementBottom = document.getElementsByTagName('footer')[0];
+const elementTop = document.getElementsByTagName('header')[0];
+const elementBottom = document.getElementsByTagName('footer')[0];
 // Set the background image property, including the encoding type header
 elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
 elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
@@ -21479,9 +21479,9 @@ process.umask = function() { return 0; };
 let Trianglify = __webpack_require__(65); 
 $( document ).ready(function() {
 /* music player buttons */
-function player() {
-	let stop = document.getElementById('stopMusic');
-	let play = document.getElementById('playMusic');
+document.getElementsByClassName('svgIcons')[0].onclick = function () {
+	const stop = document.getElementById('stopMusic');
+	const play = document.getElementById('playMusic');
 	if (stop.style.display === 'none') {
 	stop.style.display = 'block'
 	play.style.display = 'none';
@@ -21492,15 +21492,15 @@ function player() {
 	}
 }
 /* hamburger menu */
-let $menuToggle = $('.menuToggle');
+const $menuToggle = $('.menuToggle');
 $menuToggle.hover(function () {
 		$('.menuToggle span').toggleClass('spanWithShadow');
 		$(this).toggleClass('menuTransform');
 	});
-let $init = $('#menu__init');
+const $init = $('#menu__init');
 	$menuToggle.click(function () {
 		let $this = $(this);
-		let $menuClasses = $('.menu__about,.menu__work,.menu__contact');
+		const $menuClasses = $('.menu__about,.menu__work,.menu__contact');
 		if ($this.hasClass('active')) {
 			$this.removeClass('active');
 			$menuClasses.stop().addClass('fadeOut');
@@ -21532,10 +21532,10 @@ let $init = $('#menu__init');
 	});
 
 /*header text*/
-	let $home = $('.menu__home');
-	let $about = $('.js-about');
-	let $work = $('.js-work');
-	let $contact = $('.js-contact');
+	const $home = $('.menu__home');
+	const $about = $('.js-about');
+	const $work = $('.js-work');
+	const $contact = $('.js-contact');
 	let headerText = function () {
 		let s,
 			textLetters = {
@@ -21578,12 +21578,12 @@ $work.on('click', { case: 3 }, content);
 $contact.on('click', { case: 4 }, content);
 
 	function content(event) {
-		let $wrapperCanvas = $('#wrapperCanvas');
-		let $article = $('article');
-		let $footer = $('footer');
-		let $curtainRight = $('#curtain-section-right');
-		let $curtainLeft = $('#curtain-section-left');
-		let $container = $('.containerForm');
+		const $wrapperCanvas = $('#wrapperCanvas');
+		const $article = $('article');
+		const $footer = $('footer');
+		const $curtainRight = $('#curtain-section-right');
+		const $curtainLeft = $('#curtain-section-left');
+		const $container = $('.containerForm');
 		let $pageMain = event.data.case;
 		$curtainRight.add($curtainLeft).css('width', '100%');
 		$curtainRight.stop().css('transform', 'translateX(50%)');
@@ -21612,15 +21612,15 @@ $contact.on('click', { case: 4 }, content);
 				width: window.innerWidth,
 				height: window.innerHeight
 			});
-			let canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
+			const canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
 			canvasBackground.setAttribute("id", "canvasPic");
 			pattern = Trianglify({
-				cell_size: 105,
-				variance:  0.3,
+				cell_size: 95,
+				variance: 0.75,
 				x_colors: 'random',
 				y_colors: 'match_x',
 				palette: Trianglify.colorbrewer,
-				stroke_width: 0.3,
+				stroke_width: 0.2,
 			});
 			$curtainRight.stop().css({
 				'-webkit-transform': 'translateX(100%)',
@@ -21649,9 +21649,10 @@ $contact.on('click', { case: 4 }, content);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 
-var pageWidth, pageHeight;
 
-	var basePage = {
+let pageWidth, pageHeight;
+
+	let basePage = {
 		width: 530,
 		height: 600,
 		scale: 1,
@@ -21659,8 +21660,8 @@ var pageWidth, pageHeight;
 		scaleY: 1
 	};
 
-var $resizeContent = function e() {
-		var $page = $('#wrap');
+let $resizeContent = function e() {
+		const $page = $('#wrap');
 		getPageSize();
 		scalePages($page, pageWidth, pageHeight);
 
@@ -21691,7 +21692,8 @@ var $resizeContent = function e() {
 		}
 
 		function scalePages(page, maxWidth, maxHeight) {
-			var scaleX = 1, scaleY = 1;
+			let scaleX = 1; 
+			let scaleY = 1;
 
 			scaleX = maxWidth / basePage.width;
 			scaleY = maxHeight / basePage.height;
@@ -21699,8 +21701,8 @@ var $resizeContent = function e() {
 			basePage.scaleY = scaleY;
 			basePage.scale = (scaleX > scaleY) ? scaleY : scaleX;
 
-			var newLeftPos = Math.abs(Math.floor(((basePage.width * basePage.scale) - maxWidth) / 2));
-			var newTopPos = Math.abs(Math.floor(((basePage.height * basePage.scale) - maxHeight) / 2));
+			let newLeftPos = Math.abs(Math.floor(((basePage.width * basePage.scale) - maxWidth) / 2));
+			let newTopPos = Math.abs(Math.floor(((basePage.height * basePage.scale) - maxHeight) / 2));
 
 			page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
 		}
@@ -22032,7 +22034,8 @@ main();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery_validation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery_validation__);
 
 
-var $contactForm = $('#contactForm');
+
+let $contactForm = $('#contactForm');
 $contactForm.validate();
 $contactForm.submit(function(e) {
     if ($contactForm.valid()) {
@@ -22045,7 +22048,7 @@ $contactForm.submit(function(e) {
             beforeSend: function() { $contactForm.append('<div class="alert alert--loading">Sending message…</div>');},
             success: function(data) {$contactForm.find('.alert--loading').hide();
             $contactForm.append('<div class="alert alert--success">Message sent!</div>');},
-              error: function(err) { $contactForm.find('.alert--loading').hide();
+            error: function(err) { $contactForm.find('.alert--loading').hide();
             $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>'); }
         });
     }

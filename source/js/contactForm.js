@@ -1,6 +1,7 @@
+'use strict';
 import _ from 'jquery';
 import _ from 'jquery-validation';
-var $contactForm = $('#contactForm');
+let $contactForm = $('#contactForm');
 $contactForm.validate();
 $contactForm.submit(function(e) {
     if ($contactForm.valid()) {
@@ -13,7 +14,7 @@ $contactForm.submit(function(e) {
             beforeSend: function() { $contactForm.append('<div class="alert alert--loading">Sending message…</div>');},
             success: function(data) {$contactForm.find('.alert--loading').hide();
             $contactForm.append('<div class="alert alert--success">Message sent!</div>');},
-              error: function(err) { $contactForm.find('.alert--loading').hide();
+            error: function(err) { $contactForm.find('.alert--loading').hide();
             $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>'); }
         });
     }

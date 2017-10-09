@@ -1,16 +1,20 @@
 @import "mixins";
 @include font-face('sketch', normal, 500, '../fonts/cabinSketch.ttf');
-html,body {
-     height: 100%;
-     box-sizing: border-box;
-     font-family: "sketch","Georgia",serif;
-     margin: 0;
-  }
-  
+html {
+  height: 100%;
+  box-sizing: border-box;
+  font-family: "sketch","Georgia",serif;
+  margin: 0;
   body {
-       background-color: rgba(41.5%, 53.7%, 95.5%,0.17);
+    @extend html;
+    background-color: rgba(41.5%, 53.7%, 95.5%,0.17);
   }
-  
+}
+
+ .grid-container {
+    display: grid;
+ }
+
   article > p {
      margin: 1em 1em;
   }
@@ -21,13 +25,7 @@ html,body {
     box-shadow: 0px 1px 5px #888888;
     order: 1;
   }
-  
-  .flex-container {
-      display: flex;
-      flex-direction: column;
-      flex: 1 0 auto;
-  }
-  
+
   .header {
     height: 74.64px;
     display: flex;

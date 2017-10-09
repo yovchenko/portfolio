@@ -3,9 +3,9 @@ import {$resizeContent} from './resize.js';
 let Trianglify = require('trianglify'); 
 $( document ).ready(function() {
 /* music player buttons */
-function player() {
-	let stop = document.getElementById('stopMusic');
-	let play = document.getElementById('playMusic');
+document.getElementsByClassName('svgIcons')[0].onclick = function () {
+	const stop = document.getElementById('stopMusic');
+	const play = document.getElementById('playMusic');
 	if (stop.style.display === 'none') {
 	stop.style.display = 'block'
 	play.style.display = 'none';
@@ -16,15 +16,15 @@ function player() {
 	}
 }
 /* hamburger menu */
-let $menuToggle = $('.menuToggle');
+const $menuToggle = $('.menuToggle');
 $menuToggle.hover(function () {
 		$('.menuToggle span').toggleClass('spanWithShadow');
 		$(this).toggleClass('menuTransform');
 	});
-let $init = $('#menu__init');
+const $init = $('#menu__init');
 	$menuToggle.click(function () {
 		let $this = $(this);
-		let $menuClasses = $('.menu__about,.menu__work,.menu__contact');
+		const $menuClasses = $('.menu__about,.menu__work,.menu__contact');
 		if ($this.hasClass('active')) {
 			$this.removeClass('active');
 			$menuClasses.stop().addClass('fadeOut');
@@ -56,10 +56,10 @@ let $init = $('#menu__init');
 	});
 
 /*header text*/
-	let $home = $('.menu__home');
-	let $about = $('.js-about');
-	let $work = $('.js-work');
-	let $contact = $('.js-contact');
+	const $home = $('.menu__home');
+	const $about = $('.js-about');
+	const $work = $('.js-work');
+	const $contact = $('.js-contact');
 	let headerText = function () {
 		let s,
 			textLetters = {
@@ -102,12 +102,12 @@ $work.on('click', { case: 3 }, content);
 $contact.on('click', { case: 4 }, content);
 
 	function content(event) {
-		let $wrapperCanvas = $('#wrapperCanvas');
-		let $article = $('article');
-		let $footer = $('footer');
-		let $curtainRight = $('#curtain-section-right');
-		let $curtainLeft = $('#curtain-section-left');
-		let $container = $('.containerForm');
+		const $wrapperCanvas = $('#wrapperCanvas');
+		const $article = $('article');
+		const $footer = $('footer');
+		const $curtainRight = $('#curtain-section-right');
+		const $curtainLeft = $('#curtain-section-left');
+		const $container = $('.containerForm');
 		let $pageMain = event.data.case;
 		$curtainRight.add($curtainLeft).css('width', '100%');
 		$curtainRight.stop().css('transform', 'translateX(50%)');
@@ -136,7 +136,7 @@ $contact.on('click', { case: 4 }, content);
 				width: window.innerWidth,
 				height: window.innerHeight
 			});
-			let canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
+			const canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
 			canvasBackground.setAttribute("id", "canvasPic");
 			pattern = Trianglify({
 				cell_size: 95,

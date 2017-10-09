@@ -3,9 +3,11 @@
 	$src: url(quote($path)) format(quote($format));
 
 	@font-face {
-		font-family: quote($name);
-		font-style: $style;
-		font-weight: $weight;
+		font : { 
+		family: quote($name);
+		style: $style;
+		weight: $weight;
+		}
 		src: $src;
 	}
 }

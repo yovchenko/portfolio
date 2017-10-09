@@ -3,9 +3,9 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const PATHS = { 
-    source: path.join(__dirname,'source'),
-    docs: path.join(__dirname,'docs')
+const PATHS = {
+    source: path.join(__dirname, 'source'),
+    docs: path.join(__dirname, 'docs')
 };
 
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
         progress: true,
         contentBase: PATHS.docs,
         port: 8083,
-      },
+    },
     entry: PATHS.source + '/index.js',
     output: {
         path: PATHS.docs,
@@ -23,39 +23,52 @@ module.exports = {
         filename: "[name].js"
     },
     module: {
-        rules: [   
+        rules: [
             {
-            test: /\.(eot|ttf|woff|woff2)$/,
-            use: [
+                test: /\.(eot|ttf|woff|woff2)$/,
+                use: [
                     {
                         loader: 'file-loader',
                         options: {
-                          name: '[name].[ext]',
-                          outputPath: '/fonts/',
-                          publicPath: '..'
-                        }  
+                            name: '[name].[ext]',
+                            outputPath: '/fonts/',
+                            publicPath: '..'
+                        }
                     },
                 ]
             },
             {
-            test: /\.(png|jpg&g|gif|svg|)$/,
-            use: [
-                {
-                    loader: 'file-loader',
-                    options: {
-                      name: '[name].[ext]',
-                      outputPath: '/images/',
-                      publicPath: '..'
-                    }  
-                },
-                 'img-loader'
-            ]
+                test: /\.(png|jpg&g|gif|svg|)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: '/images/',
+                            publicPath: '..'
+                        }
+                    },
+                    'img-loader'
+                ]
             },
             {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
-                fallback: 'style-loader',
-                use: [ 'css-loader','sass-loader' ]
+                    fallback: 'style-loader',
+                    use: [{
+                        loader: 'css-loader',
+                        options: { importLoaders: 1 }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            ident: 'postcss',
+                            plugins: () => [require('autoprefixer')({ browsers: ['last 2 versions'] })]
+                        }
+                    },
+                    {
+                        loader: 'sass-loader'
+                    }]
                 })
             },
             {
@@ -65,9 +78,9 @@ module.exports = {
                         loader: 'html-loader',
                         options: {
                             attrs: [':data-src']
-                          }
+                        }
                     },
-            
+
                 ]
             }
         ]
@@ -76,14 +89,16 @@ module.exports = {
         alias: {
             jquery: "jquery/src/jquery",
             validation: "jquery-validation/dist/jquery.validation",
-            amplitude: "amplitudejs/dist/amplitude"
-        }
+            amplitude: "amplitudejs/dist/amplitude",
+            normalize: "node-normalize-scss/_normalize.scss"
+        },
     },
-	plugins: [
-	    new webpack.optimize.UglifyJsPlugin({
-	      include: /\.min\.js$/,
-	      minimize: true
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin({
+            include: /\.min\.js$/,
+            minimize: true
         }),
+
         new HtmlWebpackPlugin({
             template: PATHS.source + '/index.html',
             minify: {
@@ -92,12 +107,12 @@ module.exports = {
                 removeRedundantAttributes: true,
                 removeScriptTypeAttributes: true,
                 removeStyleLinkTypeAttributes: true
-              }
+            }
         }),
-      /*  new FaviconsWebpackPlugin(PATHS.source + '/favicon/favicon.png'), */
+        /*  new FaviconsWebpackPlugin(PATHS.source + '/favicon/favicon.png'), */
         new ExtractTextPlugin({
-            filename:  (getPath) => {
-              return getPath('css/[name].css').replace('css/js', 'css');
+            filename: (getPath) => {
+                return getPath('css/[name].css').replace('css/js', 'css');
             },
             allChunks: true
         })

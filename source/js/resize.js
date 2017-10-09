@@ -1,7 +1,8 @@
+'use strict';
 import _ from 'jquery';
-var pageWidth, pageHeight;
+let pageWidth, pageHeight;
 
-	var basePage = {
+	let basePage = {
 		width: 530,
 		height: 600,
 		scale: 1,
@@ -9,8 +10,8 @@ var pageWidth, pageHeight;
 		scaleY: 1
 	};
 
-export var $resizeContent = function e() {
-		var $page = $('#wrap');
+export let $resizeContent = function e() {
+		const $page = $('#wrap');
 		getPageSize();
 		scalePages($page, pageWidth, pageHeight);
 
@@ -41,7 +42,8 @@ export var $resizeContent = function e() {
 		}
 
 		function scalePages(page, maxWidth, maxHeight) {
-			var scaleX = 1, scaleY = 1;
+			let scaleX = 1; 
+			let scaleY = 1;
 
 			scaleX = maxWidth / basePage.width;
 			scaleY = maxHeight / basePage.height;
@@ -49,8 +51,8 @@ export var $resizeContent = function e() {
 			basePage.scaleY = scaleY;
 			basePage.scale = (scaleX > scaleY) ? scaleY : scaleX;
 
-			var newLeftPos = Math.abs(Math.floor(((basePage.width * basePage.scale) - maxWidth) / 2));
-			var newTopPos = Math.abs(Math.floor(((basePage.height * basePage.scale) - maxHeight) / 2));
+			let newLeftPos = Math.abs(Math.floor(((basePage.width * basePage.scale) - maxWidth) / 2));
+			let newTopPos = Math.abs(Math.floor(((basePage.height * basePage.scale) - maxHeight) / 2));
 
 			page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
 		}
