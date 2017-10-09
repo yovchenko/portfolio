@@ -14,7 +14,7 @@ module.exports = {
         inline: true,
         progress: true,
         contentBase: PATHS.docs,
-        port: 8080,
+        port: 8081,
       },
     entry: PATHS.source + '/index.js',
     output: {
@@ -32,7 +32,7 @@ module.exports = {
                         options: {
                           name: '[name].[ext]',
                           outputPath: '/fonts/',
-                          publicPath: '../'
+                          publicPath: '..'
                         }  
                     },
                 ]
@@ -45,7 +45,7 @@ module.exports = {
                     options: {
                       name: '[name].[ext]',
                       outputPath: '/images/',
-                      publicPath: '../'
+                      publicPath: '..'
                     }  
                 },
                  'img-loader'
@@ -94,7 +94,7 @@ module.exports = {
                 removeStyleLinkTypeAttributes: true
               }
         }),
-        new FaviconsWebpackPlugin(PATHS.source + '/favicon/favicon.png'),
+      /*  new FaviconsWebpackPlugin(PATHS.source + '/favicon/favicon.png'), */
         new ExtractTextPlugin({
             filename:  (getPath) => {
               return getPath('css/[name].css').replace('css/js', 'css');
