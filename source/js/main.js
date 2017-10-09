@@ -139,12 +139,12 @@ $contact.on('click', { case: 4 }, content);
 			let canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
 			canvasBackground.setAttribute("id", "canvasPic");
 			pattern = Trianglify({
-				cell_size: 105,
-				variance:  0.3,
+				cell_size: 95,
+				variance: 0.75,
 				x_colors: 'random',
 				y_colors: 'match_x',
 				palette: Trianglify.colorbrewer,
-				stroke_width: 0.3,
+				stroke_width: 0.2,
 			});
 			$curtainRight.stop().css({
 				'-webkit-transform': 'translateX(100%)',
