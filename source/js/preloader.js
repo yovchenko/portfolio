@@ -1,4 +1,5 @@
 import Amplitude from "amplitude";
+import main from './canvasSphere.js'
 "use strict";
 let opacity = 0.55;
 let increment = 0.05;
@@ -15,10 +16,11 @@ let pulse = setInterval(function () {
     clearInterval(pulse);
 }
 }, 100);
-
+  
 /*I'm giving you some extra time to enjoy my preloader*/
 window.onload = setTimeout(function () {
     document.body.className = " loaded";
+    main();    
     document.getElementById('footer').style.display = 'grid';
     $('#loader').add('.entry-title').add('#loader:before').add('#loader:after').stop().css('display', 'none');
     Amplitude.init({
