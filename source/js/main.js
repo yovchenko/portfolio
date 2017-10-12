@@ -16,44 +16,25 @@ document.getElementsByClassName('svgIcons')[0].onclick = function () {
 	}
 }
 /* hamburger menu */
-const $menuToggle = $('.menuToggle');
-$menuToggle.hover(function () {
-		$('.menuToggle span').toggleClass('spanWithShadow');
-		$(this).toggleClass('menuTransform');
-	});
-const $init = $('#menu__init');
-	$menuToggle.click(function () {
-		let $this = $(this);
-		const $menuClasses = $('.menu__about,.menu__work,.menu__contact');
-		if ($this.hasClass('active')) {
-			$this.removeClass('active');
-			$menuClasses.stop().addClass('fadeOut');
-			$init.css('display', 'none');
-			let $set = setTimeout(function () {
-				$('.fadeOut').css('display', 'none');
-				if (!$menuClasses.is(':visible')) {
-					$init.stop().fadeIn(500);
-				}
-				else {
-					clearTimeout($set);
-				}
-			}, 1500);
-		}
-		else {
-			$this.addClass('active');
-			$menuClasses.css('display', 'none');
-			$menuClasses.fadeIn(1500);
-			$menuClasses.removeClass('fadeOut').css('display', 'flex');
-			headerText();
-			if ($init.is(':visible')) {
-				$init.stop().fadeOut(500);
+document.getElementsByClassName('btn-hamburger')[0].onclick = function () {
+const menuToArrow = document.getElementById('menu-to-arrow');
+const arrowToMenu = document.getElementById('arrow-to-menu');
 
-			}
-			else {
-				clearTimeout($set);
-			}
-		}
-	});
+if (this.classList == 'btn-hamburger') {
+this.classList += ' active';
+animateMenuToArrow();
+function animateMenuToArrow(){
+  menuToArrow.beginElement();
+}
+}
+else {
+this.classList = 'btn-hamburger';
+animateArrowToMenu();
+function animateArrowToMenu(){
+  arrowToMenu.beginElement();
+}
+}
+}
 
 /*header text*/
 	const $home = $('.menu__home');

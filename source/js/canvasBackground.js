@@ -15,7 +15,6 @@ pattern = Trianglify({
     palette: Trianglify.colorbrewer,
     stroke_width: 0.2,
 });
-
 // Serialize the SVG object to a String
 let m = new XMLSerializer().serializeToString(pattern.svg());
 // Perform the base64 encoding of the String

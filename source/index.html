@@ -21,10 +21,53 @@
     <div id="curtain-section-left"></div>
     <div class="header">
       <div class="menu__header">
-        <div class="menuToggle">
-          <span></span>
-          <span></span>
-          <span></span>
+        <div class='btn-hamburger'>
+          <svg class="navicon" id="navicon-full" viewbox="0 0 200 200">
+            <defs>
+                  <filter id="drop-shadow">
+                      <feFlood result="flood" flood-color="rgb(255,255,255)" flood-opacity="1"></feFlood>
+                      <feComposite in="flood" result="mask" in2="SourceGraphic" operator="in"></feComposite>
+                      <feMorphology in="mask" result="dilated" operator="dilate" radius="6"></feMorphology>
+                      <feGaussianBlur in="dilated" result="blurred" stdDeviation="2"></feGaussianBlur>
+                      <feMerge>
+                          <feMergeNode in="blurred"></feMergeNode>
+                          <feMergeNode in="SourceGraphic"></feMergeNode>
+                      </feMerge>
+                  </filter>
+            </defs>
+            <defs>
+                <filter id="icon-shadow">
+                    <feFlood result="flood" flood-color="rgb(255,255,255)" flood-opacity="1"></feFlood>
+                    <feComposite in="flood" result="mask" in2="SourceGraphic" operator="in"></feComposite>
+                    <feMorphology in="mask" result="dilated" operator="dilate" radius="1"></feMorphology>
+                    <feGaussianBlur in="dilated" result="blurred" stdDeviation="2"></feGaussianBlur>
+                    <feMerge>
+                        <feMergeNode in="blurred"></feMergeNode>
+                        <feMergeNode in="SourceGraphic"></feMergeNode>
+                    </feMerge>
+                </filter>
+          </defs>
+            <path id="path" d="M20 20 L 180 20 M20 100 L 180 100 M20 180 L 180 180">
+            <animate id="menu-to-arrow"
+                     attributeType="XML"
+                     attributeName="d"
+                     from="M20 20 L 180 20 M20 180 L 180 100 M20 180 L 180 180"
+                     to="M100 180 L 180 102 M20 100 L 180 100 M100 20 L 180 98"
+                     dur="0.25s"
+                     begin="indefinite" 
+                     fill="freeze"
+                     />
+            <animate id="arrow-to-menu"
+                     attributeType="XML"
+                     attributeName="d"
+                     from="M20 98 L 100 20 M20 100 L 180 100 M20 102 L 100 180"
+                     to="M20 180 L 180 180 M20 100 L 180 100 M20 20 L 180 20"
+                     dur="0.25s"
+                     begin="indefinite"
+                     fill="freeze"
+                     />
+          </path>
+        </svg>
         </div>
         <p id="menu__init">Need a Software Developer Now?
         </p>
