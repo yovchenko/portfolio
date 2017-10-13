@@ -21,7 +21,7 @@ let pulse = setInterval(function () {
 window.onload = setTimeout(function () {
     document.body.className = " loaded";
     main();    
-    document.getElementById('footer').style.display = 'grid';
+    document.getElementsByClassName('footer')[0].style.display = 'block';
     $('#loader').add('.entry-title').add('#loader:before').add('#loader:after').stop().css('display', 'none');
     Amplitude.init({
         "songs":

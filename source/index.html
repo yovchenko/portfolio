@@ -6,9 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vladymyr M.Yovchenko - Portfolio</title>
 </head>
-<body id='body'>
+<body>
     <div class="grid-container">
-  <header>
+  <header class="header">
+   <div class="wrapper">
     <div id="loader-wrapper">
       <div class="entry-header">
         <span class="entry-title">Loading</span>
@@ -19,34 +20,42 @@
     </div>
     <div id="curtain-section-right"></div>
     <div id="curtain-section-left"></div>
-    <div class="header">
       <div class="menu__header">
         <div class='btn-hamburger'>
           <svg class="navicon" id="navicon-full" viewbox="0 0 200 200">
             <defs>
                   <filter id="drop-shadow">
-                      <feFlood result="flood" flood-color="rgb(255,255,255)" flood-opacity="1"></feFlood>
-                      <feComposite in="flood" result="mask" in2="SourceGraphic" operator="in"></feComposite>
-                      <feMorphology in="mask" result="dilated" operator="dilate" radius="3"></feMorphology>
-                      <feGaussianBlur in="dilated" result="blurred" stdDeviation="2"></feGaussianBlur>
-                      <feMerge>
-                          <feMergeNode in="blurred"></feMergeNode>
-                          <feMergeNode in="SourceGraphic"></feMergeNode>
-                      </feMerge>
+                     <!--outside-stroke-->
+                     <feFlood flood-color="rgb(255,255,255)" flood-opacity="1" result="outside-color"/>
+                     <feMorphology in="SourceAlpha" operator="dilate" radius="1"/>
+                     <feComposite in="outside-color" operator="in" result="outside-stroke"/>
+                     <!--fill-area-->
+                     <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"/>
+                     <feComposite in="SourceGraphic" operator="in" result="fill-area"/>
+                     <!--merge graphics-->
+                   
+                     <feMerge>
+                       <feMergeNode in="outside-stroke"/>
+                       <feMergeNode in="fill-area"/>
+                     </feMerge>
+                  </filter>
+                  <filter id="icon-shadow">
+                          <!--outside-stroke-->
+                          <feFlood flood-color="rgb(255,255,255)" flood-opacity="1" result="outside-color"/>
+                          <feMorphology in="SourceAlpha" operator="dilate" radius="1"/>
+                          <feComposite in="outside-color" operator="in" result="outside-stroke"/>
+                          <!--fill-area-->
+                          <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"/>
+                          <feComposite in="SourceGraphic" operator="in" result="fill-area"/>
+                          <!--merge graphics-->
+                        
+                          <feMerge>
+                            <feMergeNode in="outside-stroke"/>
+                            <feMergeNode in="fill-area"/>
+                          </feMerge>
                   </filter>
             </defs>
-            <defs>
-                <filter id="icon-shadow">
-                    <feFlood result="flood" flood-color="rgb(255,255,255)" flood-opacity="1"></feFlood>
-                    <feComposite in="flood" result="mask" in2="SourceGraphic" operator="in"></feComposite>
-                    <feMorphology in="mask" result="dilated" operator="dilate" radius="1"></feMorphology>
-                    <feGaussianBlur in="dilated" result="blurred" stdDeviation="2"></feGaussianBlur>
-                    <feMerge>
-                        <feMergeNode in="blurred"></feMergeNode>
-                        <feMergeNode in="SourceGraphic"></feMergeNode>
-                    </feMerge>
-                </filter>
-          </defs>
+       
             <path id="path" d="M20 20 L 180 20 M20 100 L 180 100 M20 180 L 180 180">
             <animate id="menu-to-arrow"
                      attributeType="XML"
@@ -86,7 +95,7 @@
       </div>
     </div>
   </header>
-  <main id="main">
+  <main id="main" class="wrapper">
       <article>
         <p> Hello, my name is Vladimir and I'm a programmer living in Ukraine. At the present I’m primarily using JavaScript
           but my skills are broad, from HMI/Scada system design to front end development.<br> I love code,and I'm available
@@ -113,14 +122,14 @@
       </div>
       </div>
       <div id="wrapperCanvas">
-        <div class="spherePadding"></div>
         <img class="myPhoto" src="images/me-large.png" data-src="images/me-large.png" alt="My Photo">
         <canvas id="canvas">
         </canvas>
       </div>
   </main>
-  <footer id="footer">
-    <div class="footer">
+  <footer class="footer">
+      <div class="wrapper">
+        <div class="footer-flexbox">
       <div class="svgIcons">
         <div class="player">
           <div id="stopMusic" style="display: none">
@@ -220,6 +229,7 @@
           </svg>
         </a>
       </div>
+    </div>
     </div>
   </footer>
   </div>
