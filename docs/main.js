@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 66);
+/******/ 	return __webpack_require__(__webpack_require__.s = 67);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -74,16 +74,16 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* global Symbol
 !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(18),
 	__webpack_require__(1),
-	__webpack_require__(69),
+	__webpack_require__(70),
 	__webpack_require__(21),
 	__webpack_require__(37),
 	__webpack_require__(38),
 	__webpack_require__(22),
 	__webpack_require__(20),
-	__webpack_require__(70),
+	__webpack_require__(71),
 	__webpack_require__(23),
 	__webpack_require__(39),
-	__webpack_require__(71),
+	__webpack_require__(72),
 	__webpack_require__(8),
 	__webpack_require__(40)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( arr, document, getProto, slice, concat, push, indexOf,
@@ -562,7 +562,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(72) ], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(73) ], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
 	"use strict";
 }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -1284,8 +1284,8 @@ return jQuery;
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
 	__webpack_require__(22),
-	__webpack_require__(75),
 	__webpack_require__(76),
+	__webpack_require__(77),
 	__webpack_require__(49),
 	__webpack_require__(7),
 
@@ -2236,12 +2236,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(0),
 	__webpack_require__(1),
 	__webpack_require__(6),
-	__webpack_require__(91),
+	__webpack_require__(92),
 	__webpack_require__(62),
 	__webpack_require__(63),
 
 	__webpack_require__(4),
-	__webpack_require__(92),
+	__webpack_require__(93),
 	__webpack_require__(35),
 	__webpack_require__(11),
 	__webpack_require__(64) // jQuery.param
@@ -3109,34 +3109,34 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(12),
 	__webpack_require__(29),
 	__webpack_require__(11),
-	__webpack_require__(77),
-	__webpack_require__(50),
 	__webpack_require__(78),
-	__webpack_require__(31),
+	__webpack_require__(50),
 	__webpack_require__(79),
-	__webpack_require__(83),
+	__webpack_require__(31),
+	__webpack_require__(80),
+	__webpack_require__(84),
 	__webpack_require__(13),
-	__webpack_require__(87),
 	__webpack_require__(88),
+	__webpack_require__(89),
 	__webpack_require__(19),
-	__webpack_require__(90),
-	__webpack_require__(93),
-	__webpack_require__(17),
+	__webpack_require__(91),
 	__webpack_require__(94),
+	__webpack_require__(17),
+	__webpack_require__(95),
 	__webpack_require__(64),
 	__webpack_require__(14),
-	__webpack_require__(95),
 	__webpack_require__(96),
 	__webpack_require__(97),
 	__webpack_require__(98),
-	__webpack_require__(101),
-	__webpack_require__(32),
+	__webpack_require__(99),
 	__webpack_require__(102),
+	__webpack_require__(32),
 	__webpack_require__(103),
 	__webpack_require__(104),
 	__webpack_require__(105),
 	__webpack_require__(106),
-	__webpack_require__(107)
+	__webpack_require__(107),
+	__webpack_require__(108)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery ) {
 
 "use strict";
@@ -3620,7 +3620,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(58),
 	__webpack_require__(59),
 	__webpack_require__(60),
-	__webpack_require__(81),
+	__webpack_require__(82),
 
 	__webpack_require__(5),
 	__webpack_require__(52),
@@ -4739,7 +4739,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(36),
 	__webpack_require__(45),
 	__webpack_require__(5),
-	__webpack_require__(80),
+	__webpack_require__(81),
 
 	__webpack_require__(4),
 	__webpack_require__(31),
@@ -4747,7 +4747,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(12),
 	__webpack_require__(19),
 	__webpack_require__(17),
-	__webpack_require__(82)
+	__webpack_require__(83)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, document, rcssNum, rnothtmlwhite, cssExpand, isHiddenWithinTree, swap,
 	adjustCSS, dataPriv, showHide ) {
 
@@ -6161,7 +6161,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
 	__webpack_require__(1),
-	__webpack_require__(74),
+	__webpack_require__(75),
 	__webpack_require__(11)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, document ) {
 
@@ -7036,6 +7036,313 @@ return jQuery;
 
 /***/ }),
 /* 65 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = main;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+
+'use strict';
+//I concatenated the Math classes with the original game file
+//so the example can run, this part is irrelevant, please, 
+//scroll down, until you reach the main() function
+
+function Vector3(x, y, z) {
+	this.x = x;
+	this.y = y;
+	this.z = z;
+}
+
+Vector3.prototype.mag = function () {
+	return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
+}
+
+Vector3.prototype.distance = function (vec) {
+	if (vec instanceof Vector3)
+		return Math.sqrt((this.x - vec.x) * (this.x - vec.x) + (this.y - vec.y) * (this.y - vec.y) + (this.z - vec.z) * (this.z - vec.z));
+}
+
+Vector3.prototype.add = function (vec) {
+	if (vec instanceof Vector3) {
+		this.x += vec.x;
+		this.y += vec.y;
+		this.z += vec.z;
+	}
+	return this;
+}
+
+Vector3.prototype.subtract = function (vec) {
+	if (vec instanceof Vector3) {
+		this.x -= vec.x;
+		this.y -= vec.y;
+		this.z -= vec.z;
+	}
+	return this;
+}
+
+Vector3.prototype.multiply = function (n) {
+	this.x *= n;
+	this.y *= n;
+	this.z *= n;
+	return this;
+}
+
+Vector3.prototype.divide = function (n) {
+	if (n != 0) {
+		this.multiply(1 / n);
+	}
+	return this;
+}
+
+Vector3.prototype.normalize = function () {
+	this.divide(this.mag());
+	return this;
+}
+
+function Matrix3() {
+	this.data = [];
+	for (let i = 0; i < 9; i++) {
+		this.data[i] = 0;
+	}
+}
+
+Matrix3.prototype.setIdentity = function () {
+	this.data[0 + 0 * 3] = 1;
+	this.data[1 + 1 * 3] = 1;
+	this.data[2 + 2 * 3] = 1;
+}
+
+Matrix3.prototype.multiplyVector = function (vec) {
+	if (vec instanceof Vector3) {
+		let x = this.data[0 + 0 * 3] * vec.x + this.data[0 + 1 * 3] * vec.y + this.data[0 + 2 * 3] * vec.z;
+		let y = this.data[1 + 0 * 3] * vec.x + this.data[1 + 1 * 3] * vec.y + this.data[1 + 2 * 3] * vec.z;
+		let z = this.data[2 + 0 * 3] * vec.x + this.data[2 + 1 * 3] * vec.y + this.data[2 + 2 * 3] * vec.z;
+
+		return new Vector3(x, y, z);
+	}
+}
+
+Matrix3.prototype.multiplyMatrix = function (mat) {
+	if (mat instanceof Matrix3) {
+		let result = new Matrix3();
+		for (let y = 0; y < 3; y++) {
+			for (let x = 0; x < 3; x++) {
+				let sum = 0;
+				for (let e = 0; e < 3; e++) {
+					sum += this.data[e + y * 3] * mat.data[x + e * 3];
+				}
+				result.data[x + y * 3] = sum;
+			}
+		}
+		return result;
+	}
+}
+
+Matrix3.rotate = function (angle, x, y, z) {
+	let result = new Matrix3();
+	result.setIdentity();
+
+	let cos = Math.cos(angle);
+	let sin = Math.sin(angle);
+	let omc = 1 - cos;
+
+	result.data[0 + 0 * 3] = x * omc + cos;
+	result.data[1 + 0 * 3] = y * x * omc + z * sin;
+	result.data[2 + 0 * 3] = x * z * omc - y * sin;
+
+	result.data[0 + 1 * 3] = x * y * omc - z * sin;
+	result.data[1 + 1 * 3] = y * omc + cos;
+	result.data[2 + 1 * 3] = y * z * omc + x * sin;
+
+	result.data[0 + 2 * 3] = x * z * omc + y * sin;
+	result.data[1 + 2 * 3] = y * z * omc - x * sin;
+	result.data[2 + 2 * 3] = z * omc + cos;
+
+	return result;
+}
+
+//This is what matters
+function main() {
+	let c, ctx;
+	let opacity = 1.0;
+	let points = [];
+	let flagText = true;
+	let flag = true;
+	let width = 110;
+	const innerText = ["Webpack", "jQuery", "HTML5", "SCSS", "VBS", "{ C }", "SQL"];
+	let indexText = 0;
+	let numOfPoints = 1;
+	let testCases = 1;
+	let counter = 0;
+	let color = [255, 255, 255];
+	let angle = new Vector3(0, 0, 0);
+	let requestID;
+	let angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
+	c = document.getElementById("canvas");
+	c.width = 295;
+	c.height = 295;
+	ctx = c.getContext('2d');
+	ctx.fillStyle = 'rgb(255,255,255)';
+	render(ctx);
+	function letsDance() {
+		let loopDots = setTimeout(function () {
+			if (flag == true) {
+				for (let i = 0; i < numOfPoints; i++) {
+					let buf = [];
+					for (let j = 0; j < testCases; j++) {
+						let v = new Vector3(Math.random() * 4 - 2, Math.random() * 4 - 2, Math.random() * 4 - 2);
+						v.normalize().multiply(width);
+						buf.push(v);
+					}
+					let currentSum = 0;
+					let currentHighest = 0;
+
+					for (var k = 0; k < testCases; k++) {
+						var sum = 0;
+						var p = buf[k];
+						for (var l of points) {
+							sum += p.distance(l);
+						}
+						if (sum > currentSum) {
+							currentSum = sum;
+							currentHighest = k;
+						}
+					}
+					testCases++;
+					points.push(buf[currentHighest]);
+				}
+
+				var loopUp = setTimeout(function () {
+					if (counter < 15) {
+						counter++;
+						/*ctx.fillStyle = "rgb(" + 235 + "," + 235 + "," + 235 + ")";*/
+						letsDance();
+					}
+					else {
+						flag = false;
+						clearTimeout(loopUp);
+						letsDance();
+					}
+				}, 1000);
+			}
+
+			else if (flag == false) {
+				for (let i = 0; i < numOfPoints; i++) {
+					let buf = [];
+					for (let j = 0; j < testCases; j++) {
+						let v = new Vector3(Math.random() * 4 - 2, Math.random() * 4 - 2, Math.random() * 4 - 2);
+						v.normalize().multiply(width);
+						buf.push(v);
+					}
+					let currentSum = 0;
+					let currentHighest = 0;
+
+					for (let k = 0; k < testCases; k++) {
+						let sum = 0;
+						let p = buf[k];
+						for (var l of points) {
+							sum += p.distance(l);
+						}
+						if (sum > currentSum) {
+							currentSum = sum;
+							currentHighest = k;
+						}
+					}
+					testCases--;
+					points.pop(buf[currentHighest]);
+				}
+				let loopDown = setTimeout(function () {
+					let randomColor;
+					let colorNum = 0;
+					if (counter > 0) {
+						counter--;
+						flag = false;
+						letsDance();
+					}
+					else {
+						flag = true;
+						clearTimeout(loopDown);
+						letsDance();
+					}
+
+				}, 1000);
+			}
+			else {
+
+				clearTimeout(loopDots);
+			}
+
+		}, 1000);
+	}
+
+	function loop() {
+		render();
+		update();
+	    requestID = window.requestAnimationFrame(loop);
+	}
+
+	function update() {
+		angle.add(angleSpeed);
+	}
+
+	function render() {
+		let rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
+		let rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
+		let rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
+		let rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
+		let lengthArr = innerText.length;
+		ctx.clearRect(35, 35, 225, 225);
+		ctx.font = "56px sketch";
+		ctx.textAlign = "center";
+		ctx.strokeStyle = "rgba(" + 245 + "," + 245 + "," + 245 + "," + opacity + ")";
+		ctx.textBaseline = "middle";
+		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
+        ctx.beginPath();
+         for (var p of points) {
+         p = rotation.multiplyVector(p);
+         const x = p.x + c.width / 2;
+         const y = p.y + c.height / 2;
+         ctx.moveTo(x + 2, y)
+         ctx.arc(x, y, 2, 0, 2 * Math.PI);
+         }
+        ctx.fill();
+
+		if (opacity > 0.005 && flagText == true) {
+			opacity -= 0.005;
+			if (opacity < 0.005 && indexText < lengthArr - 1) {
+				indexText++;
+				flagText = false;
+			}
+			else if (opacity < 0.005 && indexText === lengthArr - 1) {
+				indexText = 0;
+			}
+
+			else {
+				flagText = true;
+			}
+		}
+		else if (opacity < 0.95 || (opacity < 0.01 && flagText == false)) {
+			opacity += 0.005;
+			flagText = false;
+		}
+		else {
+			flagText = true;
+		}
+	}
+	loop();
+	letsDance();
+	$('.menu__about').add('.menu__work').add('.menu__contact').click(function () {
+	cancelAnimationFrame(requestID);
+});
+	document.getElementsByClassName('menu__home')[0].onclick = function () {
+    main();
+	}
+}
+
+
+/***/ }),
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -7045,13 +7352,13 @@ return jQuery;
  * Licensed under the GPLv3
  */
 
-var delaunay = __webpack_require__(111);
-var seedrandom = __webpack_require__(112);
-var chroma = __webpack_require__(121); //PROBLEM: chroma.js is nearly 32k in size
-var colorbrewer = __webpack_require__(122); //We could use the chroma.js colorbrewer, but it's got some ugly stuff so we use our own subset.
-var _generate_points = __webpack_require__(123);
+var delaunay = __webpack_require__(112);
+var seedrandom = __webpack_require__(113);
+var chroma = __webpack_require__(122); //PROBLEM: chroma.js is nearly 32k in size
+var colorbrewer = __webpack_require__(123); //We could use the chroma.js colorbrewer, but it's got some ugly stuff so we use our own subset.
+var _generate_points = __webpack_require__(124);
 
-var Pattern = __webpack_require__(124);
+var Pattern = __webpack_require__(125);
 
 var defaults = {
   width: 600,                       // Width of pattern
@@ -7213,22 +7520,22 @@ module.exports = Trianglify;
 
 
 /***/ }),
-/* 66 */
+/* 67 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_normalize__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_normalize__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_normalize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_normalize__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scss_main_scss__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scss_main_scss__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scss_main_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__scss_main_scss__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__js_preloader__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__js_canvasBackground__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__js_preloader__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__js_canvasBackground__ = __webpack_require__(111);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__js_canvasBackground___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__js_canvasBackground__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__js_main__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__js_canvasSphere_js__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__js_main__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__js_canvasSphere_js__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__js_contactForm__ = __webpack_require__(131);
 
 
@@ -7242,12 +7549,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 /***/ }),
-/* 67 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
 /* 68 */
 /***/ (function(module, exports) {
 
@@ -7255,6 +7556,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 /***/ }),
 /* 69 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
@@ -7266,7 +7573,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
 
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -7280,7 +7587,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -7294,12 +7601,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
-	__webpack_require__(73)
+	__webpack_require__(74)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, Sizzle ) {
 
 "use strict";
@@ -7320,7 +7627,7 @@ jQuery.escapeSelector = Sizzle.escape;
 
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -9599,7 +9906,7 @@ if ( true ) {
 
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -9619,7 +9926,7 @@ jQuery.readyException = function( error ) {
 
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -9648,7 +9955,7 @@ return function( elem, dir, until ) {
 
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
@@ -9672,7 +9979,7 @@ return function( n, elem ) {
 
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -9700,7 +10007,7 @@ jQuery.Deferred.exceptionHook = function( error, stack ) {
 
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -9886,7 +10193,7 @@ return jQuery;
 
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -9917,7 +10224,7 @@ return jQuery.fn.delay;
 
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10029,7 +10336,7 @@ return showHide;
 
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10071,7 +10378,7 @@ return support;
 
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10201,15 +10508,15 @@ jQuery.fx.step = {};
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
-	__webpack_require__(84),
-	__webpack_require__(61),
 	__webpack_require__(85),
-	__webpack_require__(86)
+	__webpack_require__(61),
+	__webpack_require__(86),
+	__webpack_require__(87)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery ) {
 
 "use strict";
@@ -10221,7 +10528,7 @@ return jQuery;
 
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10369,7 +10676,7 @@ jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( i, name ) 
 
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10550,7 +10857,7 @@ jQuery.fn.extend( {
 
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10747,7 +11054,7 @@ jQuery.each( [ "radio", "checkbox" ], function() {
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10783,13 +11090,13 @@ jQuery.fn.extend( {
 
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
 	__webpack_require__(5),
-	__webpack_require__(89),
+	__webpack_require__(90),
 
 	__webpack_require__(13),
 	__webpack_require__(35)
@@ -10845,7 +11152,7 @@ return jQuery;
 
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10863,7 +11170,7 @@ return support;
 
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10893,7 +11200,7 @@ return jQuery._evalUrl;
 
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
@@ -10905,7 +11212,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
 
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10942,7 +11249,7 @@ return jQuery.parseXML;
 
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11026,7 +11333,7 @@ return jQuery;
 
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11048,7 +11355,7 @@ jQuery.expr.pseudos.visible = function( elem ) {
 
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11224,7 +11531,7 @@ jQuery.ajaxTransport( function( options ) {
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11308,7 +11615,7 @@ jQuery.ajaxTransport( "script", function( s ) {
 
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11417,13 +11724,13 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
 	__webpack_require__(34),
-	__webpack_require__(99),
+	__webpack_require__(100),
 	__webpack_require__(14),
 	__webpack_require__(12),
 	__webpack_require__(19),
@@ -11500,7 +11807,7 @@ jQuery.fn.load = function( url, params, callback ) {
 
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11510,7 +11817,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(60),
 
 	// This is the only module that needs core/support
-	__webpack_require__(100)
+	__webpack_require__(101)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, document, rsingleTag, buildFragment, support ) {
 
 "use strict";
@@ -11572,7 +11879,7 @@ return jQuery.parseHTML;
 
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11599,7 +11906,7 @@ return support;
 
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11628,7 +11935,7 @@ jQuery.each( [
 
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11650,7 +11957,7 @@ jQuery.expr.pseudos.animated = function( elem ) {
 
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11886,7 +12193,7 @@ return jQuery;
 
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11949,7 +12256,7 @@ return jQuery;
 
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11996,7 +12303,7 @@ jQuery.nodeName = nodeName;
 
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -12030,7 +12337,7 @@ if ( true ) {
 
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -12071,17 +12378,20 @@ if ( !noGlobal ) {
 
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_amplitude__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_amplitude__ = __webpack_require__(110);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_amplitude___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_amplitude__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__canvasSphere_js__ = __webpack_require__(65);
 
-var opacity = 0.55;
-var increment = 0.05;
-var pulse = setInterval(function () {
-    var el =  document.getElementsByClassName('entry-title')[0];
+
+"use strict";
+let opacity = 0.55;
+let increment = 0.05;
+let pulse = setInterval(function () {
+    const el =  document.getElementsByClassName('entry-title')[0];
     opacity += increment;
     if (!document.body.classList.contains('loaded') && (!(opacity.toFixed(2) === '0.95' || opacity.toFixed(2) === '0.55')) ) {
         el.style.color = 'rgba(255%,255%,255%,' + opacity + ')';
@@ -12093,12 +12403,13 @@ var pulse = setInterval(function () {
     clearInterval(pulse);
 }
 }, 100);
-
+  
 /*I'm giving you some extra time to enjoy my preloader*/
 window.onload = setTimeout(function () {
-    $('#body').addClass('loaded');
-    $('#footer').css('display', 'block');
-    $('.entry-title,#loader,#loader:before,#loader:after').stop().css('display', 'none');
+    document.body.className = " loaded";
+    Object(__WEBPACK_IMPORTED_MODULE_1__canvasSphere_js__["a" /* default */])();    
+    document.getElementsByClassName('footer')[0].style.display = 'block';
+    $('#loader').add('.entry-title').add('#loader:before').add('#loader:after').stop().css('display', 'none');
     __WEBPACK_IMPORTED_MODULE_0_amplitude___default.a.init({
         "songs":
         [
@@ -12116,7 +12427,7 @@ window.onload = setTimeout(function () {
 
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -17928,13 +18239,13 @@ module.exports = exports['default'];
 });
 
 /***/ }),
-/* 110 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-let Trianglify = __webpack_require__(65); 
+let Trianglify = __webpack_require__(66); 
 let pattern = Trianglify({
     width: window.innerWidth,
     height: window.innerHeight
@@ -17949,21 +18260,20 @@ pattern = Trianglify({
     palette: Trianglify.colorbrewer,
     stroke_width: 0.2,
 });
-
 // Serialize the SVG object to a String
 let m = new XMLSerializer().serializeToString(pattern.svg());
 // Perform the base64 encoding of the String
 let k = window.btoa(m);
 // Query the element to set the background image property
-const elementTop = document.getElementsByTagName('header')[0];
-const elementBottom = document.getElementsByTagName('footer')[0];
+const elementTop = document.getElementsByClassName('header')[0];
+const elementBottom = document.getElementsByClassName('footer')[0];
 // Set the background image property, including the encoding type header
-elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+/*elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';*/
 
 
 /***/ }),
-/* 111 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Delaunay;
@@ -18203,7 +18513,7 @@ var Delaunay;
 
 
 /***/ }),
-/* 112 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // A library of seedable RNGs implemented in Javascript.
@@ -18218,17 +18528,17 @@ var Delaunay;
 // alea, a 53-bit multiply-with-carry generator by Johannes Baagøe.
 // Period: ~2^116
 // Reported to pass all BigCrush tests.
-var alea = __webpack_require__(113);
+var alea = __webpack_require__(114);
 
 // xor128, a pure xor-shift generator by George Marsaglia.
 // Period: 2^128-1.
 // Reported to fail: MatrixRank and LinearComp.
-var xor128 = __webpack_require__(114);
+var xor128 = __webpack_require__(115);
 
 // xorwow, George Marsaglia's 160-bit xor-shift combined plus weyl.
 // Period: 2^192-2^32
 // Reported to fail: CollisionOver, SimpPoker, and LinearComp.
-var xorwow = __webpack_require__(115);
+var xorwow = __webpack_require__(116);
 
 // xorshift7, by François Panneton and Pierre L'ecuyer, takes
 // a different approach: it adds robustness by allowing more shifts
@@ -18236,7 +18546,7 @@ var xorwow = __webpack_require__(115);
 // with 256 bits, that passes BigCrush with no systmatic failures.
 // Period 2^256-1.
 // No systematic BigCrush failures reported.
-var xorshift7 = __webpack_require__(116);
+var xorshift7 = __webpack_require__(117);
 
 // xor4096, by Richard Brent, is a 4096-bit xor-shift with a
 // very long period that also adds a Weyl generator. It also passes
@@ -18245,18 +18555,18 @@ var xorshift7 = __webpack_require__(116);
 // collisions.
 // Period: 2^4128-2^32.
 // No systematic BigCrush failures reported.
-var xor4096 = __webpack_require__(117);
+var xor4096 = __webpack_require__(118);
 
 // Tyche-i, by Samuel Neves and Filipe Araujo, is a bit-shifting random
 // number generator derived from ChaCha, a modern stream cipher.
 // https://eden.dei.uc.pt/~sneves/pubs/2011-snfa2.pdf
 // Period: ~2^127
 // No systematic BigCrush failures reported.
-var tychei = __webpack_require__(118);
+var tychei = __webpack_require__(119);
 
 // The original ARC4-based prng included in this library.
 // Period: ~2^1600
-var sr = __webpack_require__(119);
+var sr = __webpack_require__(120);
 
 sr.alea = alea;
 sr.xor128 = xor128;
@@ -18269,7 +18579,7 @@ module.exports = sr;
 
 
 /***/ }),
-/* 113 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A port of an algorithm by Johannes Baagøe <baagoe@baagoe.com>, 2010
@@ -18391,7 +18701,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 114 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xor128" prng algorithm by
@@ -18480,7 +18790,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xorwow" prng algorithm by
@@ -18574,7 +18884,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xorshift7" algorithm by
@@ -18679,7 +18989,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 117 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of Richard Brent's Xorgens xor4096 algorithm.
@@ -18833,7 +19143,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 118 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "Tyche-i" prng algorithm by
@@ -18944,7 +19254,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 119 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -19183,7 +19493,7 @@ if ((typeof module) == 'object' && module.exports) {
   module.exports = seedrandom;
   // When in node.js, try using crypto package for autoseeding.
   try {
-    nodecrypto = __webpack_require__(120);
+    nodecrypto = __webpack_require__(121);
   } catch (ex) {}
 } else if (true) {
   !(__WEBPACK_AMD_DEFINE_RESULT__ = function() { return seedrandom; }.call(exports, __webpack_require__, exports, module),
@@ -19198,13 +19508,13 @@ if ((typeof module) == 'object' && module.exports) {
 
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Generated by CoffeeScript 1.6.2
@@ -21107,7 +21417,7 @@ if ((typeof module) == 'object' && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, exports) {
 
 /*
@@ -21147,7 +21457,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 123 */
+/* 124 */
 /***/ (function(module, exports) {
 
 function generate_grid(width, height, bleed_x, bleed_y, cell_size, variance, rand_fn) {
@@ -21173,7 +21483,7 @@ module.exports = generate_grid;
 
 
 /***/ }),
-/* 124 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {/*
@@ -21182,7 +21492,7 @@ module.exports = generate_grid;
  */
 
 // conditionally load jsdom if we don't have a browser environment available.
-var doc = (typeof document !== "undefined") ? document : __webpack_require__(126).jsdom('<html/>');
+var doc = (typeof document !== "undefined") ? document : __webpack_require__(127).jsdom('<html/>');
 
 function Pattern(polys, opts) {
 
@@ -21216,7 +21526,7 @@ function Pattern(polys, opts) {
         typeof process.versions.node !== 'undefined') {
       // In Node environment.
       try {
-        __webpack_require__(127);
+        __webpack_require__(128);
       } catch (e) {
         throw Error('The optional node-canvas dependency is needed for Trianglify to render using canvas in node.');
       }
@@ -21264,10 +21574,10 @@ function Pattern(polys, opts) {
 
 module.exports = Pattern;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(125)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(126)))
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -21457,12 +21767,6 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 126 */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
 /* 127 */
 /***/ (function(module, exports) {
 
@@ -21470,13 +21774,20 @@ process.umask = function() { return 0; };
 
 /***/ }),
 /* 128 */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+/* 129 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__resize_js__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__resize_js__ = __webpack_require__(130);
 
 
-let Trianglify = __webpack_require__(65); 
+let Trianglify = __webpack_require__(66); 
+
 $( document ).ready(function() {
 /* music player buttons */
 document.getElementsByClassName('svgIcons')[0].onclick = function () {
@@ -21491,45 +21802,36 @@ document.getElementsByClassName('svgIcons')[0].onclick = function () {
 	play.style.display = 'block';
 	}
 }
-/* hamburger menu */
-const $menuToggle = $('.menuToggle');
-$menuToggle.hover(function () {
-		$('.menuToggle span').toggleClass('spanWithShadow');
-		$(this).toggleClass('menuTransform');
-	});
-const $init = $('#menu__init');
-	$menuToggle.click(function () {
-		let $this = $(this);
-		const $menuClasses = $('.menu__about,.menu__work,.menu__contact');
-		if ($this.hasClass('active')) {
-			$this.removeClass('active');
-			$menuClasses.stop().addClass('fadeOut');
-			$init.css('display', 'none');
-			let $set = setTimeout(function () {
-				$('.fadeOut').css('display', 'none');
-				if (!$menuClasses.is(':visible')) {
-					$init.stop().fadeIn(500);
-				}
-				else {
-					clearTimeout($set);
-				}
-			}, 1500);
-		}
-		else {
-			$this.addClass('active');
-			$menuClasses.css('display', 'none');
-			$menuClasses.fadeIn(1500);
-			$menuClasses.removeClass('fadeOut').css('display', 'flex');
-			headerText();
-			if ($init.is(':visible')) {
-				$init.stop().fadeOut(500);
 
-			}
-			else {
-				clearTimeout($set);
-			}
-		}
-	});
+/* hamburger menu */
+const btnHamburger = document.getElementsByClassName('btn-hamburger')[0];
+const init = document.getElementById('menu__init');
+const menuToArrow = document.getElementById('menu-to-arrow');
+const arrowToMenu = document.getElementById('arrow-to-menu');
+const menuAbout = document.getElementsByClassName('menu__about')[0];
+const menuWork = document.getElementsByClassName('menu__work')[0];
+const menuContact = document.getElementsByClassName('menu__contact')[0];
+btnHamburger.onclick = function () {
+if (this.classList == 'btn-hamburger') {
+this.classList += ' active';
+animateMenuToArrow();
+function animateMenuToArrow(){
+  menuToArrow.beginElement();
+  init.style.display = 'none';
+  $(menuAbout).add(menuWork).add(menuContact).css('display', 'flex');
+  headerText();
+}
+}
+else {
+this.classList = 'btn-hamburger';
+animateArrowToMenu();
+function animateArrowToMenu(){
+  arrowToMenu.beginElement();
+  $(menuAbout).add(menuWork).add(menuContact).css('display', 'none');
+  init.style.display = 'flex';
+}
+}
+}
 
 /*header text*/
 	const $home = $('.menu__home');
@@ -21580,7 +21882,7 @@ $contact.on('click', { case: 4 }, content);
 	function content(event) {
 		const $wrapperCanvas = $('#wrapperCanvas');
 		const $article = $('article');
-		const $footer = $('footer');
+		const $footer = $('.footer');
 		const $curtainRight = $('#curtain-section-right');
 		const $curtainLeft = $('#curtain-section-left');
 		const $container = $('.containerForm');
@@ -21591,20 +21893,20 @@ $contact.on('click', { case: 4 }, content);
 		let $timerCurtain = setTimeout(function () {
 
 			if ($pageMain === 4) {
-				$menuToggle.add($init).add($article).add($wrapperCanvas).stop().css('display', 'none');
+				$(init).add(btnHamburger).add($article).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
 				Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* $resizeContent */])();
 			}
 			else if ($pageMain === 3) {
-				$menuToggle.add($init).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
+				$(init).add(btnHamburger).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
 			}
 			else if ($pageMain === 2) {
-				$menuToggle.add($init).add($wrapperCanvas).add($container).stop().css('display', 'none');
+				$(init).add(btnHamburger).add($wrapperCanvas).add($container).stop().css('display', 'none');
 				$home.add($article).css('display', 'flex');
 			}
 			else {
-				$menuToggle.add($wrapperCanvas).css('display', 'flex');
+				($wrapperCanvas).add(btnHamburger).css('display', 'flex');
 				$home.add($article).add($container).stop().css('display', 'none');
 			}
 			$('#canvasPic').remove();
@@ -21641,7 +21943,7 @@ $contact.on('click', { case: 4 }, content);
 
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21665,26 +21967,11 @@ let $resizeContent = function e() {
 		getPageSize();
 		scalePages($page, pageWidth, pageHeight);
 
-	$('input,#message').focus(function() {
-	if ($(window).width() < 570) {
-	   basePage = {
-		width: 530,
-		height: 450,
-		scale: 1,
-		scaleX: 1,
-		scaleY: 1
-	};
-	getPageSize();
-	scalePages($page, pageWidth, pageHeight);
-	}
-});
-
 //using underscore to delay resize method till finished resizing window
 		$(window).resize(function () {
 			getPageSize();
 			scalePages($page, pageWidth, pageHeight);
 		});
-
 
 		function getPageSize() {
 			pageHeight = $('.envelope').height();
@@ -21708,319 +21995,6 @@ let $resizeContent = function e() {
 		}
 	};
 
-$(window).on('orientationchange', function (event) {
-		$('.containerForm').css({
-			'padding': '115% 0 0 0',
-			'margin-bottom' : '15%'
-	});
-});
-
-/***/ }),
-/* 130 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-
-//I concatenated the Math classes with the original game file
-//so the example can run, this part is irrelevant, please, 
-//scroll down, until you reach the main() function
-
-function Vector3(x, y, z) {
-	this.x = x;
-	this.y = y;
-	this.z = z;
-}
-
-Vector3.prototype.mag = function () {
-	return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
-}
-
-Vector3.prototype.distance = function (vec) {
-	if (vec instanceof Vector3)
-		return Math.sqrt((this.x - vec.x) * (this.x - vec.x) + (this.y - vec.y) * (this.y - vec.y) + (this.z - vec.z) * (this.z - vec.z));
-}
-
-Vector3.prototype.add = function (vec) {
-	if (vec instanceof Vector3) {
-		this.x += vec.x;
-		this.y += vec.y;
-		this.z += vec.z;
-	}
-	return this;
-}
-
-Vector3.prototype.subtract = function (vec) {
-	if (vec instanceof Vector3) {
-		this.x -= vec.x;
-		this.y -= vec.y;
-		this.z -= vec.z;
-	}
-	return this;
-}
-
-Vector3.prototype.multiply = function (n) {
-	this.x *= n;
-	this.y *= n;
-	this.z *= n;
-	return this;
-}
-
-Vector3.prototype.divide = function (n) {
-	if (n != 0) {
-		this.multiply(1 / n);
-	}
-	return this;
-}
-
-Vector3.prototype.normalize = function () {
-	this.divide(this.mag());
-	return this;
-}
-
-function Matrix3() {
-	this.data = [];
-	for (var i = 0; i < 9; i++) {
-		this.data[i] = 0;
-	}
-}
-
-Matrix3.prototype.setIdentity = function () {
-	this.data[0 + 0 * 3] = 1;
-	this.data[1 + 1 * 3] = 1;
-	this.data[2 + 2 * 3] = 1;
-}
-
-Matrix3.prototype.multiplyVector = function (vec) {
-	if (vec instanceof Vector3) {
-		var x = this.data[0 + 0 * 3] * vec.x + this.data[0 + 1 * 3] * vec.y + this.data[0 + 2 * 3] * vec.z;
-		var y = this.data[1 + 0 * 3] * vec.x + this.data[1 + 1 * 3] * vec.y + this.data[1 + 2 * 3] * vec.z;
-		var z = this.data[2 + 0 * 3] * vec.x + this.data[2 + 1 * 3] * vec.y + this.data[2 + 2 * 3] * vec.z;
-
-		return new Vector3(x, y, z);
-	}
-}
-
-Matrix3.prototype.multiplyMatrix = function (mat) {
-	if (mat instanceof Matrix3) {
-		var result = new Matrix3();
-		for (var y = 0; y < 3; y++) {
-			for (var x = 0; x < 3; x++) {
-				var sum = 0;
-				for (var e = 0; e < 3; e++) {
-					sum += this.data[e + y * 3] * mat.data[x + e * 3];
-				}
-				result.data[x + y * 3] = sum;
-			}
-		}
-		return result;
-	}
-}
-
-Matrix3.rotate = function (angle, x, y, z) {
-	var result = new Matrix3();
-	result.setIdentity();
-
-	var cos = Math.cos(angle);
-	var sin = Math.sin(angle);
-	var omc = 1 - cos;
-
-	result.data[0 + 0 * 3] = x * omc + cos;
-	result.data[1 + 0 * 3] = y * x * omc + z * sin;
-	result.data[2 + 0 * 3] = x * z * omc - y * sin;
-
-	result.data[0 + 1 * 3] = x * y * omc - z * sin;
-	result.data[1 + 1 * 3] = y * omc + cos;
-	result.data[2 + 1 * 3] = y * z * omc + x * sin;
-
-	result.data[0 + 2 * 3] = x * z * omc + y * sin;
-	result.data[1 + 2 * 3] = y * z * omc - x * sin;
-	result.data[2 + 2 * 3] = z * omc + cos;
-
-	return result;
-}
-
-//This is what matters
-
-function main() {
-	var c, ctx;
-	var opacity = 1.0;
-	var points = [];
-	var flagText = true;
-	var flag = true;
-	var width = 110;
-	var innerText = ["Node.js", "jQuery", "HTML5", "CSS3", "VBS", "{ C }", "SQL"];
-	var indexText = 0;
-	var numOfPoints = 1;
-	var testCases = 1;
-	var counter = 0;
-	var color = [255, 255, 255];
-	var angle = new Vector3(0, 0, 0);
-	var requestID;
-	var angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
-	c = document.getElementById("canvas");
-	c.width = 295;
-	c.height = 295;
-	ctx = c.getContext('2d');
-	ctx.fillStyle = 'rgb(255,255,255)';
-	render(ctx);
-	function letsDance() {
-		var loopDots = setTimeout(function () {
-			if (flag == true) {
-				for (var i = 0; i < numOfPoints; i++) {
-					var buf = [];
-					for (var j = 0; j < testCases; j++) {
-						var v = new Vector3(Math.random() * 4 - 2, Math.random() * 4 - 2, Math.random() * 4 - 2);
-						v.normalize().multiply(width);
-						buf.push(v);
-					}
-					var currentSum = 0;
-					var currentHighest = 0;
-
-					for (var k = 0; k < testCases; k++) {
-						var sum = 0;
-						var p = buf[k];
-						for (var l of points) {
-							sum += p.distance(l);
-						}
-						if (sum > currentSum) {
-							currentSum = sum;
-							currentHighest = k;
-						}
-					}
-					testCases++;
-					points.push(buf[currentHighest]);
-				}
-
-				var loopUp = setTimeout(function () {
-					if (counter < 15) {
-						counter++;
-						/*ctx.fillStyle = "rgb(" + 235 + "," + 235 + "," + 235 + ")";*/
-						letsDance();
-					}
-					else {
-						flag = false;
-						clearTimeout(loopUp);
-						letsDance();
-					}
-				}, 1000);
-			}
-
-			else if (flag == false) {
-				for (var i = 0; i < numOfPoints; i++) {
-					var buf = [];
-					for (var j = 0; j < testCases; j++) {
-						var v = new Vector3(Math.random() * 4 - 2, Math.random() * 4 - 2, Math.random() * 4 - 2);
-						v.normalize().multiply(width);
-						buf.push(v);
-					}
-					var currentSum = 0;
-					var currentHighest = 0;
-
-					for (var k = 0; k < testCases; k++) {
-						var sum = 0;
-						var p = buf[k];
-						for (var l of points) {
-							sum += p.distance(l);
-						}
-						if (sum > currentSum) {
-							currentSum = sum;
-							currentHighest = k;
-						}
-					}
-					testCases--;
-					points.pop(buf[currentHighest]);
-				}
-				var loopDown = setTimeout(function () {
-					var randomColor;
-					var colorNum = 0;
-					if (counter > 0) {
-						counter--;
-						flag = false;
-						letsDance();
-					}
-					else {
-						flag = true;
-						clearTimeout(loopDown);
-						letsDance();
-					}
-
-				}, 1000);
-			}
-			else {
-
-				clearTimeout(loopDots);
-			}
-
-		}, 1000);
-	}
-
-	function loop() {
-		render();
-		update();
-	    requestID = window.requestAnimationFrame(loop);
-	}
-
-	function update() {
-		angle.add(angleSpeed);
-	}
-
-	function render() {
-		var rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
-		var rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
-		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
-		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
-		var lengthArr = innerText.length;
-		ctx.clearRect(35, 35, 225, 225);
-		ctx.font = "58px sketch";
-		ctx.textAlign = "center";
-		ctx.strokeStyle = "rgba(" + 245 + "," + 245 + "," + 245 + "," + opacity + ")";
-		ctx.textBaseline = "middle";
-		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
-        ctx.beginPath();
-         for (var p of points) {
-         p = rotation.multiplyVector(p);
-         const x = p.x + c.width / 2;
-         const y = p.y + c.height / 2;
-         ctx.moveTo(x + 2, y)
-         ctx.arc(x, y, 2, 0, 2 * Math.PI);
-         }
-        ctx.fill();
-
-		if (opacity > 0.005 && flagText == true) {
-			opacity -= 0.005;
-			if (opacity < 0.005 && indexText < lengthArr - 1) {
-				indexText++;
-				flagText = false;
-			}
-			else if (opacity < 0.005 && indexText === lengthArr - 1) {
-				indexText = 0;
-			}
-
-			else {
-				flagText = true;
-			}
-		}
-		else if (opacity < 0.95 || (opacity < 0.01 && flagText == false)) {
-			opacity += 0.005;
-			flagText = false;
-		}
-		else {
-			flagText = true;
-		}
-	}
-	loop();
-	letsDance();
-	$('.menu__about,.menu__work,.menu__contact').click(function () {
-	cancelAnimationFrame(requestID);
-});
-	$('.menu__home').click(function () {
-    main();
-	});
-}
-
-main();
 	
 
 /***/ }),

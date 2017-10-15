@@ -1,6 +1,7 @@
 'use strict';
 import {$resizeContent} from './resize.js';
 let Trianglify = require('trianglify'); 
+
 $( document ).ready(function() {
 /* music player buttons */
 document.getElementsByClassName('svgIcons')[0].onclick = function () {
@@ -15,16 +16,24 @@ document.getElementsByClassName('svgIcons')[0].onclick = function () {
 	play.style.display = 'block';
 	}
 }
+
 /* hamburger menu */
-document.getElementsByClassName('btn-hamburger')[0].onclick = function () {
+const btnHamburger = document.getElementsByClassName('btn-hamburger')[0];
+const init = document.getElementById('menu__init');
 const menuToArrow = document.getElementById('menu-to-arrow');
 const arrowToMenu = document.getElementById('arrow-to-menu');
-
+const menuAbout = document.getElementsByClassName('menu__about')[0];
+const menuWork = document.getElementsByClassName('menu__work')[0];
+const menuContact = document.getElementsByClassName('menu__contact')[0];
+btnHamburger.onclick = function () {
 if (this.classList == 'btn-hamburger') {
 this.classList += ' active';
 animateMenuToArrow();
 function animateMenuToArrow(){
   menuToArrow.beginElement();
+  init.style.display = 'none';
+  $(menuAbout).add(menuWork).add(menuContact).css('display', 'flex');
+  headerText();
 }
 }
 else {
@@ -32,6 +41,8 @@ this.classList = 'btn-hamburger';
 animateArrowToMenu();
 function animateArrowToMenu(){
   arrowToMenu.beginElement();
+  $(menuAbout).add(menuWork).add(menuContact).css('display', 'none');
+  init.style.display = 'flex';
 }
 }
 }
@@ -96,20 +107,20 @@ $contact.on('click', { case: 4 }, content);
 		let $timerCurtain = setTimeout(function () {
 
 			if ($pageMain === 4) {
-				$menuToggle.add($init).add($article).add($wrapperCanvas).stop().css('display', 'none');
+				$(init).add(btnHamburger).add($article).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
 				$resizeContent();
 			}
 			else if ($pageMain === 3) {
-				$menuToggle.add($init).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
+				$(init).add(btnHamburger).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
 			}
 			else if ($pageMain === 2) {
-				$menuToggle.add($init).add($wrapperCanvas).add($container).stop().css('display', 'none');
+				$(init).add(btnHamburger).add($wrapperCanvas).add($container).stop().css('display', 'none');
 				$home.add($article).css('display', 'flex');
 			}
 			else {
-				$menuToggle.add($wrapperCanvas).css('display', 'flex');
+				($wrapperCanvas).add(btnHamburger).css('display', 'flex');
 				$home.add($article).add($container).stop().css('display', 'none');
 			}
 			$('#canvasPic').remove();
