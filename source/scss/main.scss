@@ -20,6 +20,7 @@ html {
                          "main"
                          "footer";
     grid-template-rows: 65px $main auto;
+    grid-template-columns: auto;
  }
 
   header {
@@ -174,8 +175,8 @@ html {
   
   #canvasPic {
     width: 100%;
-    min-height: 100%;
-    position: absolute;
+    height: 100%;
+    position: fixed;
     z-index: -1;
     top: 0;
     left: 0;
