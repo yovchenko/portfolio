@@ -15,26 +15,11 @@ export let $resizeContent = function e() {
 		getPageSize();
 		scalePages($page, pageWidth, pageHeight);
 
-	$('input,#message').focus(function() {
-	if ($(window).width() < 570) {
-	   basePage = {
-		width: 530,
-		height: 450,
-		scale: 1,
-		scaleX: 1,
-		scaleY: 1
-	};
-	getPageSize();
-	scalePages($page, pageWidth, pageHeight);
-	}
-});
-
 //using underscore to delay resize method till finished resizing window
 		$(window).resize(function () {
 			getPageSize();
 			scalePages($page, pageWidth, pageHeight);
 		});
-
 
 		function getPageSize() {
 			pageHeight = $('.envelope').height();
@@ -58,9 +43,4 @@ export let $resizeContent = function e() {
 		}
 	};
 
-$(window).on('orientationchange', function (event) {
-		$('.containerForm').css({
-			'padding': '115% 0 0 0',
-			'margin-bottom' : '15%'
-	});
-});
+	
