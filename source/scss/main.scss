@@ -119,6 +119,14 @@ html {
   }
 }
    
+.menu__header > p[class]:hover,.menu__header > p[class]:focus {
+    text-shadow: -1px 0 rgba(255,255,255,0.9), 0 1px rgba(255,255,255,0.9), 1px 0 rgba(255,255,255,0.9), 0 -1px rgba(255,255,255,0.9);
+    opacity: 0.85;
+     transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+  }
+  
 /*main section */
   main {
     grid-area: main;
@@ -166,12 +174,13 @@ html {
   
   #canvasPic {
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100% + 65px);
     position: absolute;
     z-index: -1;
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
   }
   
   article > p {
