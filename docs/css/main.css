@@ -768,7 +768,7 @@ figure {
 
 #canvasPic {
   width: 100%;
-  min-height: calc(100% + 65px);
+  min-height: 100%;
   position: absolute;
   z-index: -1;
   top: 0;
