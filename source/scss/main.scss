@@ -200,8 +200,9 @@ html {
   
   #canvasPic {
     width: 100%;
-    height: calc(100% + 130px);
-    position: fixed;
+    height: calc(100% - 65px);
+    position: absolute;
+    margin-top: 65px;
     z-index: -2;
     top: 0;
     left: 0;
