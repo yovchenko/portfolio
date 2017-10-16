@@ -29,23 +29,25 @@ btnHamburger.onclick = function () {
 if (this.classList == 'btn-hamburger') {
 this.classList += ' active';
 animateMenuToArrow();
-function animateMenuToArrow(){
-  menuToArrow.beginElement();
-  init.style.display = 'none';
-  $(menuAbout).add(menuWork).add(menuContact).css('display', 'flex');
-  headerText();
-}
 }
 else {
 this.classList = 'btn-hamburger';
 animateArrowToMenu();
+}
+}
+
+function animateMenuToArrow(){
+	menuToArrow.beginElement();
+	init.style.display = 'none';
+	$(menuAbout).add(menuWork).add(menuContact).css('display', 'flex');
+	headerText();
+  }
+
 function animateArrowToMenu(){
-  arrowToMenu.beginElement();
-  $(menuAbout).add(menuWork).add(menuContact).css('display', 'none');
-  init.style.display = 'flex';
-}
-}
-}
+	arrowToMenu.beginElement();
+	$(menuAbout).add(menuWork).add(menuContact).css('display', 'none');
+	init.style.display = 'flex';
+  }
 
 /*header text*/
 	const $home = $('.menu__home');
@@ -120,14 +122,17 @@ $contact.on('click', { case: 4 }, content);
 				$home.add($article).css('display', 'flex');
 			}
 			else {
-				($wrapperCanvas).add(btnHamburger).css('display', 'flex');
+				($wrapperCanvas).add(btnHamburger).css('display', 'grid');
 				$home.add($article).add($container).stop().css('display', 'none');
+				animateArrowToMenu();
+				btnHamburger.classList = 'btn-hamburger';
 			}
 			$('#canvasPic').remove();
 			let pattern = Trianglify({
 				width: window.innerWidth,
 				height: window.innerHeight
 			});
+			
 			const canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
 			canvasBackground.setAttribute("id", "canvasPic");
 			pattern = Trianglify({
