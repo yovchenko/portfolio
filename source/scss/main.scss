@@ -37,6 +37,7 @@ html {
     margin: 0 auto;
     width: 90%;
     max-width: 1600px;
+    overflow: hidden;
   }
 
   footer {
@@ -137,13 +138,6 @@ html {
     width: 100%;
   }
   
-  figure {
-    height: 0;
-    margin: 0;
-    padding-bottom: 56.25%; 
-    position: relative;
-  }
-
   .canvas-box {
     position: relative;
     width: 100%; 
@@ -151,6 +145,13 @@ html {
     overflow: hidden;
   }
 
+  figure {
+    height: 0;
+    margin: 0;
+    padding-bottom: 56.25%; 
+    position: relative;
+  }
+  
   #wrapperCanvas {
     display: grid;
     justify-content: center;
