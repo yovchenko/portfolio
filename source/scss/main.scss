@@ -47,13 +47,11 @@ html {
     -webkit-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6);
     box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6);
+  
     .footer-grid {
       display: grid;
       justify-content: space-between;
-      z-index: 0;
-    }
-    .wrapper {
-      z-index: 0;
+      z-index: 1;
     }
   }
 
@@ -188,7 +186,7 @@ html {
     height: 100%;
     position: absolute;
     margin-top: 65px;
-    z-index: -1;
+    z-index: -2;
     top: 0;
     left: 0;
     right: 0;
