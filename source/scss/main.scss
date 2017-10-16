@@ -587,7 +587,7 @@ footer .wrapper {
 #curtain-section-right {
         position: fixed;
         width: 0%;
-        height: 100%;
+        height: calc(100% + 65px);
         right: 0;
         background: #222;
         border: 1px solid #222;
@@ -602,7 +602,7 @@ footer .wrapper {
 #curtain-section-left {
         position: fixed;
         width: 0%;
-        height: 100%;
+        height: calc(100% + 65px);
         left: 0;
         background: #222;
         z-index: 10001;
