@@ -200,9 +200,8 @@ html {
   
   #canvasPic {
     width: 100%;
-    height: 100%;
+    height: calc(100% + 65px);
     position: absolute;
-    margin-top: 65px;
     z-index: -2;
     top: 0;
     left: 0;
@@ -390,18 +389,26 @@ html {
         
 /*footer*/
 footer .wrapper {
-     padding: 3px 0;
+     padding: 4px 0;
 }
 
   .svgIcons {
       display: grid;
       grid-row: 1;
-      max-width: 51px;
-      max-height: 51px;
+      max-width: 45px;
+      max-height: 45px;
       position: relative;
-      margin: 4px;
+      padding: 6px;
+      top: -2px;
 }
   
+.svgIcons:first-of-type {
+      max-width: 44.5px;
+      max-height: 44.5px;
+      position: relative;
+      top: 1px;
+}
+
   .svgIcons:hover,.svgIcons:focus {
     filter: url(#icon-shadow);
     transform: scale(1.07);
