@@ -46,8 +46,8 @@ html {
     background-size: cover;
     -webkit-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6);
-         box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6);
-    z-index: 2;
+    box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6);
+    z-index: -1;
     .footer-grid {
       display: grid;
       justify-content: space-between;
