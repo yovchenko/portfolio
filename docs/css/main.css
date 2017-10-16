@@ -615,7 +615,8 @@ html, html body {
 .grid-container {
   display: grid;
   grid-template-areas: "head" "main" "footer";
-  grid-template-rows: 65px calc(100vh - 65px) auto; }
+  grid-template-rows: 65px calc(100vh - 65px) auto;
+  grid-template-columns: auto; }
 
 header {
   grid-area: head;
@@ -637,7 +638,7 @@ footer {
   background-size: cover;
   -webkit-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6);
   box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6);
-  z-index: 2; }
+  z-index: -1; }
   footer .footer-grid {
     display: grid;
     -webkit-box-pack: justify;
@@ -734,6 +735,12 @@ figure {
   padding-bottom: 56.25%;
   position: relative; }
 
+.canvas-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+
 #wrapperCanvas {
   display: grid;
   -webkit-box-pack: center;
@@ -768,8 +775,8 @@ figure {
 
 #canvasPic {
   width: 100%;
-  min-height: 100%;
-  position: absolute;
+  height: 100%;
+  position: fixed;
   z-index: -1;
   top: 0;
   left: 0;
