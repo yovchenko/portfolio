@@ -127,7 +127,7 @@ $contact.on('click', { case: 4 }, content);
 				animateArrowToMenu();
 				btnHamburger.classList = 'btn-hamburger';
 			}
-			$('#canvasPic').remove();
+			document.getElementById('canvasPic').remove();
 			let pattern = Trianglify({
 				width: window.innerWidth,
 				height: window.innerHeight

@@ -839,14 +839,15 @@ footer .wrapper {
 
   /* media queries */
   @media all and (min-width: 1600px) {
-    #menu__init,.menu__home,.menu__about,.menu__work,.menu__contact {
+      .wrapper {
+    #menu__init,  .menu__about,.menu__work,.menu__contact {
         font-size: 50px;
       }
       article {
         font-size: 50px;
       }
     }
-    
+}
     @media all and (max-width: 767) and (min-width: 577px) {
 
     }

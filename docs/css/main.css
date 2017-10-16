@@ -1351,9 +1351,9 @@ footer .wrapper {
 
 /* media queries */
 @media all and (min-width: 1600px) {
-  #menu__init, .menu__home, .menu__about, .menu__work, .menu__contact {
+  .wrapper #menu__init, .wrapper .menu__about, .wrapper .menu__work, .wrapper .menu__contact {
     font-size: 50px; }
-  article {
+  .wrapper article {
     font-size: 50px; } }
 
 @media all and (max-width: 576px) {

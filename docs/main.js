@@ -18271,6 +18271,24 @@ const elementBottom = document.getElementsByClassName('footer')[0];
 elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
 elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
 
+window.onresize = function(event){
+    document.getElementById('canvasPic').remove();
+    let pattern = Trianglify({
+        width: window.innerWidth,
+        height: window.innerHeight
+    });
+    
+    const canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
+    canvasBackground.setAttribute("id", "canvasPic");
+    pattern = Trianglify({
+        cell_size: 95,
+        variance: 0.75,
+        x_colors: 'random',
+        y_colors: 'match_x',
+        palette: Trianglify.colorbrewer,
+        stroke_width: 0.2,
+    });
+};
 
 /***/ }),
 /* 112 */
@@ -21913,7 +21931,7 @@ $contact.on('click', { case: 4 }, content);
 				animateArrowToMenu();
 				btnHamburger.classList = 'btn-hamburger';
 			}
-			$('#canvasPic').remove();
+			document.getElementById('canvasPic').remove();
 			let pattern = Trianglify({
 				width: window.innerWidth,
 				height: window.innerHeight
