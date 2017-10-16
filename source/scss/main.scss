@@ -182,7 +182,7 @@ html {
   
   #canvasPic {
     width: 100%;
-    height: 100%;
+    height: calc (100% + 65);
     position: absolute;
     z-index: -1;
     top: 0;
