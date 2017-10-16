@@ -637,13 +637,15 @@ footer {
   background-color: rgba(0, 0, 0, 0.1);
   background-size: cover;
   -webkit-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6);
-  z-index: -1; }
+  box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6); }
   footer .footer-grid {
     display: grid;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between; }
+            justify-content: space-between;
+    z-index: 0; }
+  footer .wrapper {
+    z-index: 0; }
 
 /*Hamburger menu*/
 .btn-hamburger {

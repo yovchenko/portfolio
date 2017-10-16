@@ -12408,7 +12408,7 @@ let pulse = setInterval(function () {
 window.onload = setTimeout(function () {
     document.body.className = " loaded";
     Object(__WEBPACK_IMPORTED_MODULE_1__canvasSphere_js__["a" /* default */])();    
-    document.getElementsByClassName('footer')[0].style.display = 'block';
+    document.getElementsByClassName('footer')[0].style.display = 'flex';
     $('#loader').add('.entry-title').add('#loader:before').add('#loader:after').stop().css('display', 'none');
     __WEBPACK_IMPORTED_MODULE_0_amplitude___default.a.init({
         "songs":
