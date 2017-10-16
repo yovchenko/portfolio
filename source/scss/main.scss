@@ -51,7 +51,7 @@ html {
   
     .footer-grid {
       display: grid;
-      justify-content: space-between;
+      justify-content: space-around;
 
     }
   }
@@ -86,7 +86,7 @@ html {
     position: relative;
     grid-auto-rows: minmax(45px, 45px);
     grid-template-columns: repeat(4, auto);
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 10px 0;
     align-items: center;
 .menu__about,.menu__work,.menu__contact {
@@ -141,9 +141,9 @@ html {
 .menu__header > p[class]:hover, .menu__header > p[class]:focus {
     text-shadow: -1px 0 rgba(255,255,255,0.9), 0 1px rgba(255,255,255,0.9), 1px 0 rgba(255,255,255,0.9), 0 -1px rgba(255,255,255,0.9);
     opacity: 0.85;
-     transform: scale(1.07);
-    -webkit-transform: scale(1.07);
-    -moz-transform: scale(1.07);
+    transform: scaleY(1.07);
+    -webkit-transform: scaleY(1.07);
+    -moz-transform: scaleY(1.07);
   }
   
 /*main section */
@@ -390,7 +390,7 @@ html {
         
 /*footer*/
 footer .wrapper {
-     padding: 4px 0;
+     padding: 3px 0;
 }
 
   .svgIcons {
@@ -399,11 +399,14 @@ footer .wrapper {
       max-width: 51px;
       max-height: 51px;
       position: relative;
-      margin: 3px;
+      margin: 4px;
 }
   
   .svgIcons:hover,.svgIcons:focus {
     filter: url(#icon-shadow);
+    transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+    -moz-transform: scale(1.07);
 }
 
   .player {
@@ -841,5 +844,32 @@ footer .wrapper {
     }
 
     @media all and (max-width: 576px) {
- 
+        .menu__header {
+        .menu__about,.menu__work,.menu__contact {
+            font-size: 5.6vmin;
+          }
+               
+           #menu__init {
+            font-size: 5.6vmin;
+            line-height: 26px;
+          }
+         
+        .menu__home {
+            font-size: 5.6vmin;
+            line-height: 61px;
+            border-radius: 5px;
+          }
+        
+          p[class] > span{
+            letter-spacing: -0.45px;
+         }
+         
+         p[class] > span:last-child {
+            padding-right: 5px;
+         }
+         
+         p[class] > span:first-child {
+            padding-left: 5px;
+         }
+        }
     }
