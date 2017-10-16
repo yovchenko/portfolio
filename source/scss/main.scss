@@ -200,14 +200,14 @@ html {
   
   #canvasPic {
     width: 100%;
-    height: calc(100% - 65px);
+    height: 100%;
     position: absolute;
-    margin-top: 65px;
     z-index: -2;
+    margin-top: 65px;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+
   }
   
   article > p {
