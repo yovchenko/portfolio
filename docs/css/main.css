@@ -783,13 +783,13 @@ figure {
 
 #canvasPic {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   z-index: -2;
-  margin-top: 65px;
   top: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  bottom: 0; }
 
 article > p {
   margin: 1em 1em; }
@@ -957,7 +957,7 @@ footer .wrapper {
   max-width: 44.5px;
   max-height: 44.5px;
   position: relative;
-  top: 1px; }
+  top: 0px; }
 
 .svgIcons:hover, .svgIcons:focus {
   -webkit-filter: url(#icon-shadow);
