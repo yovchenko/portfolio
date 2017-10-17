@@ -744,11 +744,11 @@ main {
   grid-template-rows: repeat(3, 1fr); }
 
 .canvas-scale {
-  grid-row: 2; }
+  height: calc(100vh - 65px); }
 
 .canvas-box {
   position: relative;
-  max-height: 80vh; }
+  max-height: 80%; }
 
 figure {
   height: 0;

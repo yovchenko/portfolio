@@ -162,12 +162,12 @@ html {
   }
   
   .canvas-scale {
-    grid-row: 2;
+    height: $main;
   }
   
   .canvas-box {
     position: relative;
-    max-height: 80vh;
+    max-height: 80%;
   }
 
   figure {
