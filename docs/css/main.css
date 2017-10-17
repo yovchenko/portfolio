@@ -745,14 +745,17 @@ main {
 
 .canvas-scale {
   height: calc(100vh - 65px);
-  display: table-cell;
-  vertical-align: middle; }
+  position: relative; }
 
 .canvas-box {
   position: relative;
-  max-height: 80%; }
+  max-height: 80%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  top: 50%; }
 
 figure {
+  display: block;
   height: 0;
   margin: 0;
   padding-bottom: 100%; }
@@ -762,7 +765,7 @@ figure {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(20, 1fr);
   position: absolute;
   top: 0;
   left: 0;
@@ -782,7 +785,7 @@ figure {
   min-height: 37%;
   margin: 0 auto;
   grid-row: 1 / 4;
-  grid-column: 3 / 6;
+  grid-column: 10;
   background-color: rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6);
   box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6);
