@@ -740,19 +740,20 @@ main {
   grid-area: main;
   display: grid;
   z-index: -1;
-  width: 100%; }
+  width: 100%;
+  grid-template-rows: repeat(3, 1fr); }
+
+.canvas-scale {
+  grid-row: 2; }
 
 .canvas-box {
   position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden; }
+  max-height: 80vh; }
 
 figure {
   height: 0;
   margin: 0;
-  padding-bottom: 56.25%;
-  position: relative; }
+  padding-bottom: 100%; }
 
 #wrapperCanvas {
   display: grid;
