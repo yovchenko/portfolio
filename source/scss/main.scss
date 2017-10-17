@@ -163,6 +163,8 @@ html {
   
   .canvas-scale {
     height: $main;
+    display: table-cell; 
+    vertical-align: middle;
   }
   
   .canvas-box {

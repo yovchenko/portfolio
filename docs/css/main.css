@@ -744,7 +744,9 @@ main {
   grid-template-rows: repeat(3, 1fr); }
 
 .canvas-scale {
-  height: calc(100vh - 65px); }
+  height: calc(100vh - 65px);
+  display: table-cell;
+  vertical-align: middle; }
 
 .canvas-box {
   position: relative;
