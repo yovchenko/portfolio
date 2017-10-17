@@ -745,7 +745,8 @@ main {
 
 .canvas-scale {
   height: calc(100vh - 65px);
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .canvas-box {
   position: relative;

@@ -164,6 +164,7 @@ html {
   .canvas-scale {
     height: $main;
     position: relative;
+    overflow: hidden;
   }
   
   .canvas-box {
