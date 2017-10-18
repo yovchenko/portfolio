@@ -196,7 +196,11 @@ html {
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-   
+    -webkit-filter: drop-shadow(2px 1px 0 rgba(255, 255, 255, 0.7)) 
+    drop-shadow(-1px -1px 0 rgba(255, 255, 255, 0.7));
+
+    filter: drop-shadow(2px 1px 0 rgba(255, 255, 255, 0.7)) 
+    drop-shadow(-1px -1px 0 rgba(255, 255, 255, 0.7));
   }
   
   #canvas {
@@ -206,11 +210,12 @@ html {
     grid-row: 1 / 4;
     grid-column: 1 / 20;
     background-color: rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6),8px 0px 6px -6px rgba(255, 255, 255, 0.6),-8px 0px 6px -6px rgba(255, 255, 255, 0.6);
-    -moz-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6),8px 0px 6px -6px rgba(255, 255, 255, 0.6),-8px 0px 6px -6px rgba(255, 255, 255, 0.6);
-         box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6),8px 0px 6px -6px rgba(255, 255, 255, 0.6),-8px 0px 6px -6px rgba(255, 255, 255, 0.6);
+    -webkit-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.4), 0 -8px 6px -6px rgba(255, 255, 255, 0.6),8px 0px 6px -6px rgba(255, 255, 255, 0.6),-8px 0px 6px -6px rgba(255, 255, 255, 0.6);
+    -moz-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.4), 0 -8px 6px -6px rgba(255, 255, 255, 0.6),8px 0px 6px -6px rgba(255, 255, 255, 0.6),-8px 0px 6px -6px rgba(255, 255, 255, 0.6);
+         box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.4), 0 -8px 6px -6px rgba(255, 255, 255, 0.6),8px 0px 6px -6px rgba(255, 255, 255, 0.6),-8px 0px 6px -6px rgba(255, 255, 255, 0.6);
     border-radius: 50%;
     z-index: 1;
+    image-rendering: optimizeSpeed; 
   }
   
   #canvasPic {
