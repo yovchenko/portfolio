@@ -782,9 +782,7 @@ figure {
   background-image: url(../images/me-large.png);
   background-size: contain;
   background-position: center center;
-  background-repeat: no-repeat;
-  -webkit-filter: url(#drop-shadow);
-          filter: url(#drop-shadow); }
+  background-repeat: no-repeat; }
 
 #canvas {
   max-height: 37%;
