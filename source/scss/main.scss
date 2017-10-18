@@ -183,11 +183,12 @@ html {
   }
   
   #wrapperCanvas {
-
- 
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(20, 1fr);
     position: absolute;
     top: 0; left: 0;
-  
+    grid-template-rows: repeat(3, 1fr);
     width: 100%; 
     height: 100%;
     align-items: end;
@@ -195,14 +196,15 @@ html {
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-   
+    filter: url(#drop-shadow);
   }
   
   #canvas {
     max-height: 37%;
     min-height: 37%;
     margin: 0 auto;
-
+    grid-row: 1 / 4;
+    grid-column: 1 / 20;
     background-color: rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6),8px 0px 6px -6px rgba(255, 255, 255, 0.6),-8px 0px 6px -6px rgba(255, 255, 255, 0.6);
     -moz-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6),8px 0px 6px -6px rgba(255, 255, 255, 0.6),-8px 0px 6px -6px rgba(255, 255, 255, 0.6);
