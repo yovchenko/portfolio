@@ -52,7 +52,7 @@ html {
     .footer-grid {
       display: grid;
       justify-content: space-around;
-
+        align-items: center;
     }
   }
 
@@ -169,7 +169,7 @@ html {
   
   .canvas-box {
     position: relative;
-    max-height: 100%;
+    max-height: 90%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     top: 50%;
@@ -194,8 +194,9 @@ html {
     align-items: end;
     background-image: url(../images/me-large.png);
     background-size: contain;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
+    filter: url(#icon-shadow);
   }
   
   #canvas {
@@ -203,7 +204,7 @@ html {
     min-height: 37%;
     margin: 0 auto;
     grid-row: 1 / 4;
-    grid-column: 10;
+    grid-column: 1 / 20;
     background-color: rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6),8px 0px 6px -6px rgba(255, 255, 255, 0.6),-8px 0px 6px -6px rgba(255, 255, 255, 0.6);
     -moz-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6),8px 0px 6px -6px rgba(255, 255, 255, 0.6),-8px 0px 6px -6px rgba(255, 255, 255, 0.6);
@@ -420,8 +421,7 @@ footer .wrapper {
 .svgIcons:first-of-type {
       max-width: 44.5px;
       max-height: 44.5px;
-      position: relative;
-      top: 0px;
+
 }
 
   .svgIcons:hover,.svgIcons:focus {
@@ -862,7 +862,7 @@ footer .wrapper {
       }
     }
 }
-    @media all and (max-width: 767) and (min-width: 577px) {
+    @media all and (max-width: 767px) and (min-width: 577px) {
         .btn-hamburger {
             padding: 0px;
           }

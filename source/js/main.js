@@ -89,7 +89,7 @@ function animateArrowToMenu(){
 		textLetters.init();
 	};
 	
-/* change content onclick function */
+/* replace content onclick */
 $home.on('click', { case: 1 }, content);
 $about.on("click", { case: 2 }, content);
 $work.on('click', { case: 3 }, content);

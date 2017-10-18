@@ -126,7 +126,7 @@ export default function main() {
 	let flagText = true;
 	let flag = true;
 	let width = 110;
-	const innerText = ["Webpack", "jQuery", "HTML5", "SCSS", "VBS", "{ C }", "SQL"];
+	const innerText = ["NodeJS","Webpack", "jQuery", "HTML5", "SCSS", "VBS", "SQL"];
 	let indexText = 0;
 	let numOfPoints = 1;
 	let testCases = 1;
