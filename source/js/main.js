@@ -1,5 +1,5 @@
 'use strict';
-import {$resizeContent} from './resize.js';
+import {resizeContent} from './resize.js';
 let Trianglify = require('trianglify'); 
 
 $( document ).ready(function() {
@@ -88,7 +88,7 @@ function animateArrowToMenu(){
 			};
 		textLetters.init();
 	};
-	
+	resizeContent('#figure','#wrapperCanvas');
 /* replace content onclick */
 $home.on('click', { case: 1 }, content);
 $about.on("click", { case: 2 }, content);
@@ -111,7 +111,7 @@ $contact.on('click', { case: 4 }, content);
 			if ($pageMain === 4) {
 				$(init).add(btnHamburger).add($article).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
-				$resizeContent();
+				resizeContent('.envelope','#wrap');
 			}
 			else if ($pageMain === 3) {
 				$(init).add(btnHamburger).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
@@ -125,6 +125,7 @@ $contact.on('click', { case: 4 }, content);
 				($wrapperCanvas).add(btnHamburger).css('display', 'grid');
 				$home.add($article).add($container).stop().css('display', 'none');
 				animateArrowToMenu();
+				resizeContent('#figure','#wrapperCanvas');
 				btnHamburger.classList = 'btn-hamburger';
 			}
 			document.getElementById('canvasPic').remove();

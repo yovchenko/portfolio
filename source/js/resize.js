@@ -10,8 +10,8 @@ let pageWidth, pageHeight;
 		scaleY: 1
 	};
 
-export let $resizeContent = function e() {
-		const $page = $('#wrap');
+export function resizeContent(div,wrap) {
+		const $page = $(wrap);
 		getPageSize();
 		scalePages($page, pageWidth, pageHeight);
 
@@ -22,8 +22,8 @@ export let $resizeContent = function e() {
 		});
 
 		function getPageSize() {
-			pageHeight = $('.envelope').height();
-			pageWidth = $('.envelope').width();
+			pageHeight = $(div).height();
+			pageWidth = $(div).width();
 		}
 
 		function scalePages(page, maxWidth, maxHeight) {

@@ -18268,8 +18268,8 @@ let k = window.btoa(m);
 const elementTop = document.getElementsByClassName('header')[0];
 const elementBottom = document.getElementsByClassName('footer')[0];
 // Set the background image property, including the encoding type header
-//elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-//elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
+elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
 window.onresize = function(event){
     document.getElementById('canvasPic').remove();
     let pattern = Trianglify({
@@ -21891,7 +21891,7 @@ function animateArrowToMenu(){
 			};
 		textLetters.init();
 	};
-	
+	Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('#figure','#wrapperCanvas');
 /* replace content onclick */
 $home.on('click', { case: 1 }, content);
 $about.on("click", { case: 2 }, content);
@@ -21914,7 +21914,7 @@ $contact.on('click', { case: 4 }, content);
 			if ($pageMain === 4) {
 				$(init).add(btnHamburger).add($article).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
-				Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* $resizeContent */])();
+				Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap');
 			}
 			else if ($pageMain === 3) {
 				$(init).add(btnHamburger).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
@@ -21928,6 +21928,7 @@ $contact.on('click', { case: 4 }, content);
 				($wrapperCanvas).add(btnHamburger).css('display', 'grid');
 				$home.add($article).add($container).stop().css('display', 'none');
 				animateArrowToMenu();
+				Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('#figure','#wrapperCanvas');
 				btnHamburger.classList = 'btn-hamburger';
 			}
 			document.getElementById('canvasPic').remove();
@@ -21969,7 +21970,7 @@ $contact.on('click', { case: 4 }, content);
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return $resizeContent; });
+/* harmony export (immutable) */ __webpack_exports__["a"] = resizeContent;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 
@@ -21984,8 +21985,8 @@ let pageWidth, pageHeight;
 		scaleY: 1
 	};
 
-let $resizeContent = function e() {
-		const $page = $('#wrap');
+function resizeContent(div,wrap) {
+		const $page = $(wrap);
 		getPageSize();
 		scalePages($page, pageWidth, pageHeight);
 
@@ -21996,8 +21997,8 @@ let $resizeContent = function e() {
 		});
 
 		function getPageSize() {
-			pageHeight = $('.envelope').height();
-			pageWidth = $('.envelope').width();
+			pageHeight = $(div).height();
+			pageWidth = $(div).width();
 		}
 
 		function scalePages(page, maxWidth, maxHeight) {
