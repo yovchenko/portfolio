@@ -742,7 +742,6 @@ footer {
 main {
   grid-area: main;
   display: grid;
-  z-index: -1;
   width: 100%;
   grid-template-rows: repeat(3, 1fr); }
 
@@ -822,7 +821,8 @@ article {
 .containerForm {
   display: none;
   width: 100%;
-  position: relative; }
+  position: relative;
+  min-height: calc(100vh - 65px); }
 
 .envelope {
   width: 90%;
@@ -835,7 +835,7 @@ article {
 
 #wrap {
   width: 530px;
-  height: 600px;
+  height: 630px;
   overflow: hidden;
   position: absolute;
   -webkit-transform-origin: top right;
@@ -876,8 +876,8 @@ article {
   display: none; }
 
 #form_wrap:hover {
-  height: 750px;
-  top: -195px; }
+  height: 765px;
+  top: -190px; }
 
 form {
   background: #f7f2ec url(../images/letter_bg.png);
@@ -902,7 +902,7 @@ form {
   height: 430px; }
 
 form > p {
-  margin: 0px 0px 10px 0px; }
+  margin: 0px 0px 15px 0px; }
 
 label {
   margin: 11px 55px 0 0;
@@ -911,7 +911,7 @@ label {
   text-transform: uppercase;
   text-shadow: 0px 1px 0px #fff; }
 
-input[type=text], input[type=email], textarea {
+#name, input[type=text], input[type=email], textarea {
   font: 14px normal normal uppercase helvetica, arial, serif;
   color: #7c7873;
   background: none;
@@ -930,12 +930,12 @@ textarea {
   padding-top: 14px;
   resize: vertical; }
 
-textarea:focus, input[type=text]:focus, input[type=email]:focus {
+#name:focus, textarea:focus, input[type=text]:focus, input[type=email]:focus {
   background: rgba(255, 255, 255, 0.35); }
 
 #form_wrap input[type=submit] {
   position: relative;
-  font-family: "sketch";
+  font-family: "sketchBlock";
   font-size: 24px;
   color: #7c7873;
   text-shadow: 0 1px 0 #fff;
@@ -1365,7 +1365,7 @@ footer .wrapper {
 
 /* media queries */
 @media all and (min-width: 1600px) {
-  .wrapper #menu__init, .wrapper .menu__about, .wrapper .menu__work, .wrapper .menu__contact {
+  .wrapper #menu__init, .wrapper .menu__home, .wrapper .menu__about, .wrapper .menu__work, .wrapper .menu__contact {
     font-size: 50px; }
   .wrapper article {
     font-size: 50px; } }

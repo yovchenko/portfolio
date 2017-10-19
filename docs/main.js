@@ -7293,7 +7293,7 @@ function main() {
 		let rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
 		let lengthArr = innerText.length;
 		ctx.clearRect(35, 35, 225, 225);
-		ctx.font = "56px sketch";
+		ctx.font = "52px sketch";
 		ctx.textAlign = "center";
 		ctx.strokeStyle = "rgba(" + 245 + "," + 245 + "," + 245 + "," + opacity + ")";
 		ctx.textBaseline = "middle";
@@ -18268,8 +18268,8 @@ let k = window.btoa(m);
 const elementTop = document.getElementsByClassName('header')[0];
 const elementBottom = document.getElementsByClassName('footer')[0];
 // Set the background image property, including the encoding type header
-elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
+//elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+//elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
 window.onresize = function(event){
     document.getElementById('canvasPic').remove();
     let pattern = Trianglify({

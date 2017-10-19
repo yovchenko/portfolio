@@ -156,9 +156,8 @@ html {
   main {
     grid-area: main;
     display: grid;
-    z-index: -1;
     width: 100%;
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
   
   .canvas-scale {
@@ -236,12 +235,13 @@ html {
     text-align: center;
     margin: 0 auto;
   }
-  
-  /*contact form*/
-  .containerForm {
+
+ /*contact form*/
+ .containerForm {
     display: none;
     width: 100%;
     position: relative;
+    min-height: calc(100vh - 65px);
   }
   
   .envelope {
@@ -257,7 +257,7 @@ html {
   
   #wrap {
     width: 530px;
-    height: 600px;
+    height: 630px;
     overflow: hidden;
     position: absolute;
     -ms-transform-origin: top right;
@@ -278,25 +278,25 @@ html {
       
       #form_wrap:before {
       content:"";
-      position:absolute;
-      bottom:128px;
+          position:absolute;
+          bottom:128px;
       left:0px;
-      background:url('../images/before.png');
+          background:url('../images/before.png');
       background-size: contain; 
       background-repeat: no-repeat;
-      width: 100%;
+          width: 100%;
       height: 316px;
       }
       
       #form_wrap:after {
       content:"";
       position:absolute;
-      bottom:-60px;
+          bottom:-60px;
       left:0;
-      background:url('../images/after.png');
+          background:url('../images/after.png');
       background-size: contain; 
       background-repeat: no-repeat;
-      width: 100%;
+          width: 100%;
       height: 320px; 
       }
   
@@ -305,8 +305,8 @@ html {
       }
   
       #form_wrap:hover {
-      height: 750px;
-      top:-195px;
+      height: 765px;
+      top:-190px;
       }
   
   
@@ -335,7 +335,7 @@ html {
       }
   
       form > p {
-      margin: 0px 0px 10px 0px;
+      margin: 0px 0px 15px 0px;
       }
   
           label {
@@ -345,7 +345,7 @@ html {
               text-shadow: 0px 1px 0px #fff;
           }
   
-          input[type=text],input[type=email],textarea {
+          #name,input[type=text],input[type=email],textarea {
               font: 14px normal normal uppercase helvetica, arial, serif;
               color: #7c7873;
         background:none;
@@ -369,13 +369,13 @@ html {
         resize: vertical;
       }
   
-          textarea:focus, input[type=text]:focus, input[type=email]:focus {
+      #name:focus,textarea:focus, input[type=text]:focus, input[type=email]:focus {
         background:rgba(255,255,255,.35);
       }
   
           #form_wrap input[type=submit] {
               position:relative;
-        font-family: "sketch"; 
+        font-family: "sketchBlock"; 
               font-size:24px; 
         color: #7c7873;
         text-shadow:0 1px 0 #fff;
@@ -402,7 +402,9 @@ html {
               #form_wrap:hover input:hover[type=submit] {
           color:#435c70;
         }
-        
+ 
+  
+  
 /*footer*/
 footer .wrapper {
      padding: 4px 0;
@@ -854,7 +856,7 @@ footer .wrapper {
   /* media queries */
   @media all and (min-width: 1600px) {
       .wrapper {
-    #menu__init,  .menu__about,.menu__work,.menu__contact {
+    #menu__init,.menu__home ,.menu__about,.menu__work,.menu__contact {
         font-size: 50px;
       }
       article {
