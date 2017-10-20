@@ -758,6 +758,7 @@ figure {
   height: 80%;
   top: 50%;
   left: 50%;
+  margin: 0 auto;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
@@ -780,15 +781,14 @@ figure {
   transform-origin: top right;
   -webkit-transition: all 500ms ease-in-out !important;
   transition: all 500ms ease-in-out !important; }
-
-#canvas {
-  background-color: rgba(0, 0, 0, 0.3);
-  -webkit-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6);
-  box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6);
-  border-radius: 50%;
-  margin: 50px 70px 70px 0px;
-  z-index: 1;
-  image-rendering: optimizeSpeed; }
+  #wrapperCanvas #canvas {
+    background-color: rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    margin: 50px 70px 70px 0px;
+    z-index: 1;
+    image-rendering: optimizeSpeed; }
 
 #canvasPic {
   width: 100%;
@@ -801,9 +801,6 @@ figure {
   right: 0;
   bottom: 0; }
 
-article > p {
-  margin: 1em 1em; }
-
 article {
   display: none;
   max-width: 100%;
@@ -812,6 +809,8 @@ article {
   margin: 0 auto;
   grid-row: 1;
   grid-column: 1 / 4; }
+  article p {
+    margin: 1em 1em; }
 
 /*contact form*/
 .containerForm {

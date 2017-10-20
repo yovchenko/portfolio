@@ -7265,7 +7265,6 @@ function main() {
 				var loopUp = setTimeout(function () {
 					if (counter < 15) {
 						counter++;
-						/*ctx.fillStyle = "rgb(" + 235 + "," + 235 + "," + 235 + ")";*/
 						letsDance();
 					}
 					else {
@@ -18320,8 +18319,8 @@ let k = window.btoa(m);
 const elementTop = document.getElementsByClassName('header')[0];
 const elementBottom = document.getElementsByClassName('footer')[0];
 // Set the background image property, including the encoding type header
-//elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-//elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
+elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
 window.onresize = function(event){
     document.getElementById('canvasPic').remove();
     let pattern = Trianglify({
@@ -18341,11 +18340,9 @@ window.onresize = function(event){
     });
     if ($('.envelope').is(':visible') === true) {
     Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);
-    alert('halo');
     }
     else if ($('.canvas-box').is(':visible') === true) {
     Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('#figure','#wrapperCanvas',800,900);
-    alert('olah');
     }
 };
 

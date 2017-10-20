@@ -172,7 +172,6 @@ export default function main() {
 				var loopUp = setTimeout(function () {
 					if (counter < 15) {
 						counter++;
-						/*ctx.fillStyle = "rgb(" + 235 + "," + 235 + "," + 235 + ")";*/
 						letsDance();
 					}
 					else {

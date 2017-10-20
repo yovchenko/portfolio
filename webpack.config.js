@@ -14,7 +14,7 @@ module.exports = {
         inline: true,
         progress: true,
         contentBase: PATHS.docs,
-        port: 8082
+        port: 8084
     },
     entry: PATHS.source + '/index.js',
     output: {
@@ -109,7 +109,7 @@ module.exports = {
                 removeStyleLinkTypeAttributes: true
             }
         }),
-     //   new FaviconsWebpackPlugin(PATHS.source + '/favicon/favicon.png'), 
+        new FaviconsWebpackPlugin(PATHS.source + '/favicon/favicon.png'), 
         new ExtractTextPlugin({
             filename: (getPath) => {
                 return getPath('css/[name].css').replace('css/js', 'css');
