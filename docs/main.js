@@ -5694,12 +5694,12 @@ return jQuery;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 
 
-function resizeContent(objDiv,objWrap,objWidth,objHeight) {
+function resizeContent(objDiv,objWrap,objWrapWidth,objWrapHeight) {
 	let pageWidth, pageHeight;
 	
 		let basePage = {
-			width: objWidth,
-			height: objHeight,
+			width: objWrapWidth,
+			height: objWrapHeight,
 			scale: 1,
 			scaleX: 1,
 			scaleY: 1

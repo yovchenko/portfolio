@@ -1,11 +1,11 @@
 'use strict';
 import _ from 'jquery';
-export function resizeContent(objDiv,objWrap,objWidth,objHeight) {
+export function resizeContent(objDiv,objWrap,objWrapWidth,objWrapHeight) {
 	let pageWidth, pageHeight;
 	
 		let basePage = {
-			width: objWidth,
-			height: objHeight,
+			width: objWrapWidth,
+			height: objWrapHeight,
 			scale: 1,
 			scaleX: 1,
 			scaleY: 1
