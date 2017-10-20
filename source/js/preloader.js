@@ -1,5 +1,6 @@
 import Amplitude from "amplitude";
-import main from './canvasSphere.js'
+import main from './canvasSphere.js';
+import {resizeContent} from './resize.js';
 "use strict";
 let opacity = 0.55;
 let increment = 0.05;
@@ -16,11 +17,12 @@ let pulse = setInterval(function () {
     clearInterval(pulse);
 }
 }, 100);
-  
+
 /*I'm giving you some extra time to enjoy my preloader*/
 window.onload = setTimeout(function () {
-    document.body.className = " loaded";
-    main();    
+    main();   
+    resizeContent('#figure','#wrapperCanvas',800,900);
+    document.body.className = " loaded"; 
     document.getElementsByClassName('footer')[0].style.display = 'flex';
     $('#loader').add('.entry-title').add('#loader:before').add('#loader:after').stop().css('display', 'none');
     Amplitude.init({

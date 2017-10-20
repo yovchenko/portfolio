@@ -1,29 +1,23 @@
 'use strict';
 import _ from 'jquery';
-let pageWidth, pageHeight;
-
-	let basePage = {
-		width: 530,
-		height: 600,
-		scale: 1,
-		scaleX: 1,
-		scaleY: 1
-	};
-
-export function resizeContent(div,wrap) {
-		const $page = $(wrap);
+export function resizeContent(objDiv,objWrap,objWidth,objHeight) {
+	let pageWidth, pageHeight;
+	
+		let basePage = {
+			width: objWidth,
+			height: objHeight,
+			scale: 1,
+			scaleX: 1,
+			scaleY: 1
+		};
+		let $page = $(objWrap);
 		getPageSize();
 		scalePages($page, pageWidth, pageHeight);
 
 //using underscore to delay resize method till finished resizing window
-		$(window).resize(function () {
-			getPageSize();
-			scalePages($page, pageWidth, pageHeight);
-		});
-
 		function getPageSize() {
-			pageHeight = $(div).height();
-			pageWidth = $(div).width();
+			pageHeight = $(objDiv).height();
+			pageWidth = $(objDiv).width();
 		}
 
 		function scalePages(page, maxWidth, maxHeight) {

@@ -158,21 +158,26 @@ html {
     display: grid;
     width: 100%;
     grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: 10% 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
   
   .canvas-box {
-    width: 80%;
+   
+    width: 100%;
     position: relative;
-    grid-row: 1 / 3;
-    grid-column: 2 / 5;
-    margin: 0 auto;
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
   }
 
   figure {
-    width: 100%;
+    width: 90%;
     position: absolute;
-    height: 100%;
+    height: 80%;
+    top: 50%; 
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
   }
   
   #wrapperCanvas {
@@ -226,6 +231,8 @@ html {
     font-size: 5.2vmin;
     text-align: center;
     margin: 0 auto;
+    grid-row: 1;
+    grid-column: 1 / 4;
   }
 
  /*contact form*/
@@ -233,7 +240,8 @@ html {
     display: none;
     width: 100%;
     position: relative;
-    min-height: $main;
+    grid-column: 1 / 4;
+    grid-row: 1 / 4;
   }
   
   .envelope {

@@ -88,7 +88,7 @@ function animateArrowToMenu(){
 			};
 		textLetters.init();
 	};
-	resizeContent('#figure','#wrapperCanvas');
+	
 /* replace content onclick */
 $home.on('click', { case: 1 }, content);
 $about.on("click", { case: 2 }, content);
@@ -111,7 +111,7 @@ $contact.on('click', { case: 4 }, content);
 			if ($pageMain === 4) {
 				$(init).add(btnHamburger).add($article).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
-				resizeContent('.envelope','#wrap');
+				resizeContent('.envelope','#wrap',530,630);
 			}
 			else if ($pageMain === 3) {
 				$(init).add(btnHamburger).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
@@ -125,7 +125,7 @@ $contact.on('click', { case: 4 }, content);
 				($wrapperCanvas).add(btnHamburger).css('display', 'grid');
 				$home.add($article).add($container).stop().css('display', 'none');
 				animateArrowToMenu();
-				resizeContent('#figure','#wrapperCanvas');
+				resizeContent('#figure','#wrapperCanvas',800,900);
 				btnHamburger.classList = 'btn-hamburger';
 			}
 			document.getElementById('canvasPic').remove();

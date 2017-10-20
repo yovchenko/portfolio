@@ -1,5 +1,5 @@
-
 'use strict';
+import {resizeContent} from './resize.js';
 let Trianglify = require('trianglify'); 
 let pattern = Trianglify({
     width: window.innerWidth,
@@ -23,8 +23,8 @@ let k = window.btoa(m);
 const elementTop = document.getElementsByClassName('header')[0];
 const elementBottom = document.getElementsByClassName('footer')[0];
 // Set the background image property, including the encoding type header
-elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
+//elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+//elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
 window.onresize = function(event){
     document.getElementById('canvasPic').remove();
     let pattern = Trianglify({
@@ -42,4 +42,10 @@ window.onresize = function(event){
         palette: Trianglify.colorbrewer,
         stroke_width: 0.2,
     });
+    if ($('.envelope').is(':visible') === true) {
+    resizeContent('.envelope','#wrap',530,630);
+    }
+    else if ($('#figure').is(':visible') === true) {
+    resizeContent('#figure','#wrapperCanvas',800,900);
+    }
 };
