@@ -22017,23 +22017,23 @@ $contact.on('click', { case: 4 }, content);
 	}
 
 	/*contactForm is getting bigger on focus */
-	const textArea = document.getElementById('message');
+/*	const textArea = document.getElementById('message');
 	$('input').add(textArea).focus(function() {
 		if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
 		document.getElementsByClassName('envelope')[0].style.cssText = 'width:150%;height:150%;top:80%';
-		Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);
+		resizeContent('.envelope','#wrap',530,630);
 		document.getElementsByClassName('footer')[0].style.display = 'none';
 		}
 	});
 	$('input').add(textArea).focusout(function() {
 		if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches)  {
 		document.getElementsByClassName('envelope')[0].style.cssText = 'width:90%;height:80%;top:50%';
-		Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);
+		resizeContent('.envelope','#wrap',530,630);
 		document.getElementsByClassName('footer')[0].style.display = 'flex';
 		}
 	});
-
-});
+*/
+}); 
 
 
 
