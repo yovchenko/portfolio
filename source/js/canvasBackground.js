@@ -44,8 +44,10 @@ window.onresize = function(event){
     });
     if ($('.envelope').is(':visible') === true) {
     resizeContent('.envelope','#wrap',530,630);
+    alert('halo');
     }
-    else if ($('#figure').is(':visible') === true) {
+    else if ($('.canvas-box').is(':visible') === true) {
     resizeContent('#figure','#wrapperCanvas',800,900);
+    alert('olah');
     }
 };

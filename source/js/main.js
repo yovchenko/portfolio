@@ -96,8 +96,8 @@ $work.on('click', { case: 3 }, content);
 $contact.on('click', { case: 4 }, content);
 
 	function content(event) {
-		const $wrapperCanvas = $('#wrapperCanvas');
-		const $article = $('article');
+		const $wrapperCanvas = $('.canvas-box');
+		const $article = $('.article');
 		const $footer = $('.footer');
 		const $curtainRight = $('#curtain-section-right');
 		const $curtainLeft = $('#curtain-section-left');
