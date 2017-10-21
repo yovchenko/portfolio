@@ -22027,12 +22027,11 @@ $contact.on('click', { case: 4 }, content);
 let height = $(window).height();
 let width = $(window).width();
 let originalSize = width + height;
+let mediaQueryList = window.matchMedia("(orientation: portrait)");
 const envelope = document.getElementsByClassName('envelope')[0];
 const footer = document.getElementsByClassName('footer')[0];
  $(window).resize(function(){
-	height = $(window).height();
-	width = $(window).width();
-	if ($('.envelope').is(':visible') === true && width < height) {
+	if ($('.envelope').is(':visible') === true && mediaQueryList) {
 	if(width + height  != originalSize){
 		if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
 			envelope .style.cssText = 'width:150%;height:150%;top:80%'; 	
