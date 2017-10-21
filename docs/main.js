@@ -18319,8 +18319,8 @@ let k = window.btoa(m);
 const elementTop = document.getElementsByClassName('header')[0];
 const elementBottom = document.getElementsByClassName('footer')[0];
 // Set the background image property, including the encoding type header
-elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
+//elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+//elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
 window.onresize = function(event){
     document.getElementById('canvasPic').remove();
     let pattern = Trianglify({
@@ -18344,6 +18344,8 @@ window.onresize = function(event){
     else if ($('.canvas-box').is(':visible') === true) {
     Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('#figure','#wrapperCanvas',800,900);
     }
+    document.getElementsByClassName('grid-container')[0].style.cssText = 'grid-template-rows: 65px calc(100vh - 65px) auto;';
+    document.getElementById('canvasPic').style.cssText = 'height: calc(100vh - 65px);';
 };
 
 /***/ }),
@@ -22028,6 +22030,7 @@ $contact.on('click', { case: 4 }, content);
 		if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
 	//	document.getElementsByClassName('envelope')[0].style.cssText = 'width:150%;height:150%;top:80%';
 		document.getElementsByClassName('grid-container')[0].style.cssText = 'grid-template-rows: 65px calc(200vh - 65px) auto;';
+		document.getElementById('canvasPic').style.cssText = 'height: calc(200vh - 65px);';
 	//	resizeContent('.envelope','#wrap',530,630);
 	//	document.getElementsByClassName('footer')[0].style.display = 'none';
 	Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);

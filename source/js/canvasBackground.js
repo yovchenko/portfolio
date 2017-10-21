@@ -23,8 +23,8 @@ let k = window.btoa(m);
 const elementTop = document.getElementsByClassName('header')[0];
 const elementBottom = document.getElementsByClassName('footer')[0];
 // Set the background image property, including the encoding type header
-elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
+//elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+//elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
 window.onresize = function(event){
     document.getElementById('canvasPic').remove();
     let pattern = Trianglify({
@@ -48,4 +48,6 @@ window.onresize = function(event){
     else if ($('.canvas-box').is(':visible') === true) {
     resizeContent('#figure','#wrapperCanvas',800,900);
     }
+    document.getElementsByClassName('grid-container')[0].style.cssText = 'grid-template-rows: 65px calc(100vh - 65px) auto;';
+    document.getElementById('canvasPic').style.cssText = 'height: calc(100vh - 65px);';
 };

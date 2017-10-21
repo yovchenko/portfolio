@@ -166,6 +166,7 @@ $contact.on('click', { case: 4 }, content);
 		if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
 	//	document.getElementsByClassName('envelope')[0].style.cssText = 'width:150%;height:150%;top:80%';
 		document.getElementsByClassName('grid-container')[0].style.cssText = 'grid-template-rows: 65px calc(200vh - 65px) auto;';
+		document.getElementById('canvasPic').style.cssText = 'height: calc(200vh - 65px);';
 	//	resizeContent('.envelope','#wrap',530,630);
 	//	document.getElementsByClassName('footer')[0].style.display = 'none';
 	resizeContent('.envelope','#wrap',530,630);
