@@ -3,6 +3,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const CordovaPlugin = require('webpack-cordova-plugin');
 const PATHS = {
     source: path.join(__dirname, 'source'),
     docs: path.join(__dirname, 'docs')
@@ -90,7 +91,8 @@ module.exports = {
             jquery: "jquery/src/jquery",
             validation: "jquery-validation/dist/jquery.validation",
             amplitude: "amplitudejs/dist/amplitude",
-            normalize: "node-normalize-scss/_normalize.scss"
+            normalize: "node-normalize-scss/_normalize.scss",
+            keyboard:  "cordova-plugin-keyboard/www/keyboard"
         },
     },
     plugins: [
