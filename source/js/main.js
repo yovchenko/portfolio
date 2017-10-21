@@ -169,12 +169,14 @@ const footer = document.getElementsByClassName('footer')[0];
 	if($(window).width() + $(window).height() != originalSize){
 		if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
 			envelope .style.cssText = 'width:150%;height:150%;top:80%'; 	
-			footer.style.display = 'none';	
-			resizeContent('.envelope','#wrap',530,630);		 	  		
+			resizeContent('.envelope','#wrap',530,630);		
+			document.getElementsByClassName('grid-container')[0].style.cssText = 'grid-template-rows: 65px calc(100vh + 65px) auto;';
+			document.getElementById('canvasPic').style.cssText = 'height: calc(100vh + 65px);'; 	  		
 	}
 	}else{
 			envelope .style.cssText = 'width:90%;height:80%;top:50%'; 	
-			footer.style.display = 'flex';	
+			document.getElementsByClassName('grid-container')[0].style.cssText = 'grid-template-rows: 65px calc(100vh - 65px) auto;';
+			document.getElementById('canvasPic').style.cssText = 'height: calc(100vh - 65px);'; 	
 	 		resizeContent('.envelope','#wrap',530,630);	
 	}
 }
