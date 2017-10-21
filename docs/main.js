@@ -18342,6 +18342,8 @@ window.onresize = function(event){
     Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);
     }
     else if ($('.canvas-box').is(':visible') === true) {
+    document.getElementsByClassName('envelope')[0].style.cssText = 'width:90%;height:80%;top:50%'; 	
+    document.getElementsByClassName('footer')[0].style.display = 'flex';
     Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('#figure','#wrapperCanvas',800,900);
     }
 };
@@ -22022,7 +22024,7 @@ $contact.on('click', { case: 4 }, content);
 		}, 1500);
 	}
 
-	/*contactForm is getting bigger on focus */
+/*contactForm is getting bigger on focus */
 	const textArea = document.getElementById('message');
 	textArea.onfocus = function () {
 		if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {

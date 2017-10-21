@@ -160,7 +160,7 @@ $contact.on('click', { case: 4 }, content);
 		}, 1500);
 	}
 
-	/*contactForm is getting bigger on focus */
+/*contactForm is getting bigger on focus */
 	const textArea = document.getElementById('message');
 	textArea.onfocus = function () {
 		if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
