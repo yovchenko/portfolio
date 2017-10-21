@@ -161,12 +161,14 @@ $contact.on('click', { case: 4 }, content);
 	}
 
 /*contactForm is getting bigger when the on-screen keyboard opens*/
-let originalSize = $(window).width() + $(window).height();
+let height = $(window).height();
+let width = $(window).width();
+let originalSize = width + height;
 const envelope = document.getElementsByClassName('envelope')[0];
 const footer = document.getElementsByClassName('footer')[0];
  $(window).resize(function(){
-	if ($('.envelope').is(':visible') === true) {
-	if($(window).width() + $(window).height() != originalSize){
+	if ($('.envelope').is(':visible') === true && width > height) {
+	if(width + height  != originalSize){
 		if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
 			envelope .style.cssText = 'width:150%;height:150%;top:80%'; 	
 			footer.style.display = 'none';	
