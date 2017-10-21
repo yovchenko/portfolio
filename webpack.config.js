@@ -14,7 +14,7 @@ module.exports = {
         inline: true,
         progress: true,
         contentBase: PATHS.docs,
-        port: 8086
+        port: 8080
     },
     entry: PATHS.source + '/index.js',
     output: {
