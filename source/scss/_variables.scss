@@ -1,2 +1,5 @@
 $svg-color: #2c3e50;
-$main: calc(100vh - 65px);
+$hundred: 100;
+$header: 65;
+$main: calc(#{$hundred}vh - #{$header}px);
+
