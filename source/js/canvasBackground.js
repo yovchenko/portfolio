@@ -48,7 +48,4 @@ window.onresize = function(event){
     else if ($('.canvas-box').is(':visible') === true) {
     resizeContent('#figure','#wrapperCanvas',800,900);
     }
-    document.getElementsByClassName('envelope')[0].style.cssText = 'width:90%;height:80%;top:50%';
-    resizeContent('.envelope','#wrap',530,630);		  	
-    document.getElementsByClassName('footer')[0].style.display = 'flex';
 };
