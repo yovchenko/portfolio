@@ -43,7 +43,6 @@ window.onresize = function(event){
         stroke_width: 0.2,
     });
 
-    let originalSize = $(window).width() + $(window).height()
     /*if ($('.envelope').is(':visible') === true) {
     resizeContent('.envelope','#wrap',530,630);
     }
@@ -51,7 +50,7 @@ window.onresize = function(event){
     resizeContent('#figure','#wrapperCanvas',800,900);
     }*/
 
-    let originalSize = $(window).width() + $(window).height()
+    let originalSize = $(window).width() + $(window).height();
     if ($('.envelope').is(':visible') === true) {
             if($(window).width() + $(window).height() != originalSize){
                 if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {

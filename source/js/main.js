@@ -161,7 +161,7 @@ $contact.on('click', { case: 4 }, content);
 	}
 
 /*contactForm is getting bigger when the on-screen keyboard opens*/
-let originalSize = $(window).width() + $(window).height()
+
 /* $(window).resize(function(){
 	if ($('.envelope').is(':visible') === true) {
 	if($(window).width() + $(window).height() != originalSize){
