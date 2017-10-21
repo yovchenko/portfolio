@@ -18319,8 +18319,8 @@ let k = window.btoa(m);
 const elementTop = document.getElementsByClassName('header')[0];
 const elementBottom = document.getElementsByClassName('footer')[0];
 // Set the background image property, including the encoding type header
-elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
+//elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+//elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
 window.onresize = function(event){
     document.getElementById('canvasPic').remove();
     let pattern = Trianglify({
@@ -22022,22 +22022,22 @@ $contact.on('click', { case: 4 }, content);
 	}
 
 	/*contactForm is getting bigger on focus */
-/*	const textArea = document.getElementById('message');
+	const textArea = document.getElementById('message');
 	$('input').add(textArea).focus(function() {
 		if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
 		document.getElementsByClassName('envelope')[0].style.cssText = 'width:150%;height:150%;top:80%';
-		resizeContent('.envelope','#wrap',530,630);
+		Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);
 		document.getElementsByClassName('footer')[0].style.display = 'none';
 		}
 	});
-	$('input').add(textArea).focusout(function() {
+	$('input').add(textArea).blur(function() {
 		if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches)  {
 		document.getElementsByClassName('envelope')[0].style.cssText = 'width:90%;height:80%;top:50%';
-		resizeContent('.envelope','#wrap',530,630);
+		Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);
 		document.getElementsByClassName('footer')[0].style.display = 'flex';
 		}
 	});
-*/
+
 }); 
 
 
