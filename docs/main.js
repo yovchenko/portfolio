@@ -22030,7 +22030,9 @@ let originalSize = width + height;
 const envelope = document.getElementsByClassName('envelope')[0];
 const footer = document.getElementsByClassName('footer')[0];
  $(window).resize(function(){
-	if ($('.envelope').is(':visible') === true && width > height) {
+	height = $(window).height();
+	width = $(window).width();
+	if ($('.envelope').is(':visible') === true && width < height) {
 	if(width + height  != originalSize){
 		if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
 			envelope .style.cssText = 'width:150%;height:150%;top:80%'; 	
