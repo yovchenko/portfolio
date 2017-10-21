@@ -18319,8 +18319,8 @@ let k = window.btoa(m);
 const elementTop = document.getElementsByClassName('header')[0];
 const elementBottom = document.getElementsByClassName('footer')[0];
 // Set the background image property, including the encoding type header
-//elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-//elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
+elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
 window.onresize = function(event){
     document.getElementById('canvasPic').remove();
     let pattern = Trianglify({
@@ -18340,6 +18340,14 @@ window.onresize = function(event){
     });
 
     let originalSize = $(window).width() + $(window).height()
+    /*if ($('.envelope').is(':visible') === true) {
+    resizeContent('.envelope','#wrap',530,630);
+    }
+    else if ($('.canvas-box').is(':visible') === true) {
+    resizeContent('#figure','#wrapperCanvas',800,900);
+    }*/
+
+    let originalSize = $(window).width() + $(window).height()
     if ($('.envelope').is(':visible') === true) {
             if($(window).width() + $(window).height() != originalSize){
                 if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
@@ -18355,7 +18363,7 @@ window.onresize = function(event){
     }
     else if ($('.canvas-box').is(':visible') === true) {
     Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('#figure','#wrapperCanvas',800,900);
-    }
+    } 
 };
 
 /***/ }),
