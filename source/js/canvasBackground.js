@@ -43,8 +43,6 @@ window.onresize = function(event){
         stroke_width: 0.2,
     });
     if ($('.envelope').is(':visible') === true) {
-    document.getElementsByClassName('envelope')[0].style.cssText = 'width:90%;height:80%;top:50%'; 	
-    document.getElementsByClassName('footer')[0].style.display = 'flex';
     resizeContent('.envelope','#wrap',530,630);
     }
     else if ($('.canvas-box').is(':visible') === true) {

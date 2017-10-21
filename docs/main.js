@@ -18339,8 +18339,6 @@ window.onresize = function(event){
         stroke_width: 0.2,
     });
     if ($('.envelope').is(':visible') === true) {
-    document.getElementsByClassName('envelope')[0].style.cssText = 'width:90%;height:80%;top:50%'; 	
-    document.getElementsByClassName('footer')[0].style.display = 'flex';
     Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);
     }
     else if ($('.canvas-box').is(':visible') === true) {
@@ -22026,13 +22024,22 @@ $contact.on('click', { case: 4 }, content);
 
 /*contactForm is getting bigger on focus */
 	const textArea = document.getElementById('message');
-	textArea.onfocus = function () {
-		if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
-			document.getElementsByClassName('envelope')[0].style.cssText = 'width:150%;height:150%;top:80%'; 	
-			document.getElementsByClassName('footer')[0].style.display = 'none';	
-			Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);		 	  		
-	}
-}
+	var originalSize = $(window).width() + $(window).height()
+	$(window).resize(function(){
+		if($(window).width() + $(window).height() != originalSize){
+			alert("keyboard opened");
+			if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
+				document.getElementsByClassName('envelope')[0].style.cssText = 'width:150%;height:150%;top:80%'; 	
+				document.getElementsByClassName('footer')[0].style.display = 'none';	
+				Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);		 	  		
+		}
+		}else{
+		  alert("keyboard closed");
+		  document.getElementsByClassName('envelope')[0].style.cssText = 'width:90%;height:80%;top:50%'; 	
+		  document.getElementsByClassName('footer')[0].style.display = 'flex';	
+		  Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);	
+		}
+	  });
 }); 
 
 
