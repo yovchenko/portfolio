@@ -43,28 +43,10 @@ window.onresize = function(event){
         stroke_width: 0.2,
     });
 
-    /*if ($('.envelope').is(':visible') === true) {
+    if ($('.envelope').is(':visible') === true) {
     resizeContent('.envelope','#wrap',530,630);
     }
     else if ($('.canvas-box').is(':visible') === true) {
     resizeContent('#figure','#wrapperCanvas',800,900);
-    }*/
-
-    let originalSize = $(window).width() + $(window).height();
-    if ($('.envelope').is(':visible') === true) {
-            if($(window).width() + $(window).height() != originalSize){
-                if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
-                    document.getElementsByClassName('envelope')[0].style.cssText = 'width:150%;height:150%;top:80%'; 	
-                    document.getElementsByClassName('footer')[0].style.display = 'none';	
-                    resizeContent('.envelope','#wrap',530,630);		 	  		
-            }
-            }else{
-                     document.getElementsByClassName('envelope')[0].style.cssText = 'width:90%;height:80%;top:50%'; 	
-                     document.getElementsByClassName('footer')[0].style.display = 'flex';	
-                     resizeContent('.envelope','#wrap',530,630);	
-            }
     }
-    else if ($('.canvas-box').is(':visible') === true) {
-    resizeContent('#figure','#wrapperCanvas',800,900);
-    } 
 };

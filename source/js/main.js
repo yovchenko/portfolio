@@ -161,8 +161,8 @@ $contact.on('click', { case: 4 }, content);
 	}
 
 /*contactForm is getting bigger when the on-screen keyboard opens*/
-
-/* $(window).resize(function(){
+let originalSize = $(window).width() + $(window).height();
+ $(window).resize(function(){
 	if ($('.envelope').is(':visible') === true) {
 	if($(window).width() + $(window).height() != originalSize){
 		if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
@@ -176,8 +176,7 @@ $contact.on('click', { case: 4 }, content);
 	 		resizeContent('.envelope','#wrap',530,630);	
 	}
 }
-  }); */
-  
+  }); 
 }); 
 
 
