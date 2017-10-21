@@ -18319,8 +18319,8 @@ let k = window.btoa(m);
 const elementTop = document.getElementsByClassName('header')[0];
 const elementBottom = document.getElementsByClassName('footer')[0];
 // Set the background image property, including the encoding type header
-elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
+//elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+//elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
 window.onresize = function(event){
     document.getElementById('canvasPic').remove();
     let pattern = Trianglify({
@@ -18338,8 +18338,20 @@ window.onresize = function(event){
         palette: Trianglify.colorbrewer,
         stroke_width: 0.2,
     });
+
+    let originalSize = $(window).width() + $(window).height()
     if ($('.envelope').is(':visible') === true) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);
+            if($(window).width() + $(window).height() != originalSize){
+                if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
+                    document.getElementsByClassName('envelope')[0].style.cssText = 'width:150%;height:150%;top:80%'; 	
+                    document.getElementsByClassName('footer')[0].style.display = 'none';	
+                    Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);		 	  		
+            }
+            }else{
+                     document.getElementsByClassName('envelope')[0].style.cssText = 'width:90%;height:80%;top:50%'; 	
+                     document.getElementsByClassName('footer')[0].style.display = 'flex';	
+                     Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);	
+            }
     }
     else if ($('.canvas-box').is(':visible') === true) {
     Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('#figure','#wrapperCanvas',800,900);
@@ -22024,21 +22036,21 @@ $contact.on('click', { case: 4 }, content);
 
 /*contactForm is getting bigger when the on-screen keyboard opens*/
 let originalSize = $(window).width() + $(window).height()
-$(window).resize(function(){
+/* $(window).resize(function(){
 	if ($('.envelope').is(':visible') === true) {
 	if($(window).width() + $(window).height() != originalSize){
 		if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
 			document.getElementsByClassName('envelope')[0].style.cssText = 'width:150%;height:150%;top:80%'; 	
 			document.getElementsByClassName('footer')[0].style.display = 'none';	
-			Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);		 	  		
+			resizeContent('.envelope','#wrap',530,630);		 	  		
 	}
 	}else{
 	 		document.getElementsByClassName('envelope')[0].style.cssText = 'width:90%;height:80%;top:50%'; 	
 	 		document.getElementsByClassName('footer')[0].style.display = 'flex';	
-	 		Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);	
+	 		resizeContent('.envelope','#wrap',530,630);	
 	}
 }
-  });
+  }); */
   
 }); 
 
