@@ -977,13 +977,6 @@ footer .wrapper {
   -webkit-transform: scale(1.07);
   -moz-transform: scale(1.07); }
 
-.amplitude-play, .amplitude-repeat {
-  position: absolute;
-  width: 110%;
-  height: 110%;
-  top: 0px;
-  left: -1px; }
-
 #playMusic, #stopMusic {
   cursor: pointer;
   width: 100%;

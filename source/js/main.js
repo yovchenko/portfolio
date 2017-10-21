@@ -1,6 +1,7 @@
 'use strict';
 import {resizeContent} from './resize.js';
 let Trianglify = require('trianglify'); 
+import Amplitude from "amplitude";
 
 $( document ).ready(function() {
 /* music player buttons */
@@ -10,10 +11,12 @@ document.getElementsByClassName('svgIcons')[0].onclick = function () {
 	if (stop.style.display === 'none') {
 	stop.style.display = 'block'
 	play.style.display = 'none';
+	Amplitude.play();
 	}
 	else {
 	stop.style.display = 'none'
 	play.style.display = 'block';
+	Amplitude.pause();
 	}
 }
 
