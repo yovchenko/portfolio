@@ -431,28 +431,28 @@ footer .wrapper {
     -moz-transform: scale(1.07);
 }
 
-  .amplitude-play {
+.amplitude-play {
     position: absolute;
-    width: 55.74px;
-    height: 55.74px;
-    left: -5px;
-    top: -5px;
-    left: -5px;
-    bottom: -5px;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: -1px;
   }
   
-  .amplitude-repeat {
-    position: absolute;
-    width: 55.74px;
-    height: 55.74px;
+.amplitude-repeat {
+   @extend .amplitude-play;
   }
-  
-  #stopMusic {
+
+#playMusic {
     cursor: pointer;
-    width: 55.74px;
-    height: 55.74px;
+    width: 100%;
+    height: 100%;
   }
- 
+
+#stopMusic {
+   @extend #playMusic;
+  }
+
 /* preloader */
   .chromeframe {
     margin: 0.2em 0;
