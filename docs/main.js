@@ -18344,8 +18344,9 @@ window.onresize = function(event){
     else if ($('.canvas-box').is(':visible') === true) {
     Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('#figure','#wrapperCanvas',800,900);
     }
-    document.getElementsByClassName('grid-container')[0].style.cssText = 'grid-template-rows: 65px calc(100vh - 65px) auto;';
-    document.getElementById('canvasPic').style.cssText = 'height: calc(100vh - 65px);';
+    document.getElementsByClassName('envelope')[0].style.cssText = 'width:90%;height:80%;top:50%';
+    Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);		  	
+    document.getElementsByClassName('footer')[0].style.display = 'flex';
 };
 
 /***/ }),
@@ -22028,14 +22029,11 @@ $contact.on('click', { case: 4 }, content);
 	const textArea = document.getElementById('message');
 	textArea.onfocus = function () {
 		if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
-	//	document.getElementsByClassName('envelope')[0].style.cssText = 'width:150%;height:150%;top:80%';
-		document.getElementsByClassName('grid-container')[0].style.cssText = 'grid-template-rows: 65px calc(200vh - 65px) auto;';
-		document.getElementById('canvasPic').style.cssText = 'height: calc(200vh - 65px);';
-	//	resizeContent('.envelope','#wrap',530,630);
-	//	document.getElementsByClassName('footer')[0].style.display = 'none';
-	Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);
+			document.getElementsByClassName('envelope')[0].style.cssText = 'width:150%;height:150%;top:80%';
+			Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);		  	
+			document.getElementsByClassName('footer')[0].style.display = 'none';		  		
 	}
-	}
+}
 }); 
 
 

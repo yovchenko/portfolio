@@ -48,6 +48,7 @@ window.onresize = function(event){
     else if ($('.canvas-box').is(':visible') === true) {
     resizeContent('#figure','#wrapperCanvas',800,900);
     }
-    document.getElementsByClassName('grid-container')[0].style.cssText = 'grid-template-rows: 65px calc(100vh - 65px) auto;';
-    document.getElementById('canvasPic').style.cssText = 'height: calc(100vh - 65px);';
+    document.getElementsByClassName('envelope')[0].style.cssText = 'width:90%;height:80%;top:50%';
+    resizeContent('.envelope','#wrap',530,630);		  	
+    document.getElementsByClassName('footer')[0].style.display = 'flex';
 };
