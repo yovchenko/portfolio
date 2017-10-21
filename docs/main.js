@@ -22031,10 +22031,10 @@ const footer = document.getElementsByClassName('footer')[0];
 	if ($('.envelope').is(':visible') === true) {
 	if($(window).width() + $(window).height() != originalSize){
 		if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
-			envelope .style.cssText = 'width:150%;height:150%;top:80%'; 	
+			envelope .style.cssText = 'width:150%;height:150%;top:70%'; 	
 			Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);		
-			document.getElementsByClassName('grid-container')[0].style.cssText = 'grid-template-rows: 65px calc(100vh + 65px) auto;';
-			document.getElementById('canvasPic').style.cssText = 'height: calc(100vh + 65px);'; 	  		
+			document.getElementsByClassName('grid-container')[0].style.cssText = 'grid-template-rows: 65px calc(100vh + 150px) auto;';
+			document.getElementById('canvasPic').style.cssText = 'height: calc(100vh + 150px);'; 	  		
 	}
 	}else{
 			envelope .style.cssText = 'width:90%;height:80%;top:50%'; 	
