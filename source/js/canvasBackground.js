@@ -6,7 +6,7 @@ let pattern = Trianglify({
     height: window.innerHeight
 });
 const canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-canvasBackground.setAttribute("id", "canvasPic");
+canvasBackground.setAttribute("class", "canvasPic");
 pattern = Trianglify({
     cell_size: 95,
     variance: 0.75,
@@ -26,14 +26,14 @@ const elementBottom = document.getElementsByClassName('footer')[0];
 elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
 elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
 window.onresize = function(event){
-    document.getElementById('canvasPic').remove();
+    document.getElementsByClassName('canvasPic')[0].remove();
     let pattern = Trianglify({
         width: window.innerWidth,
         height: window.innerHeight
     });
     
     const canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-    canvasBackground.setAttribute("id", "canvasPic");
+    canvasBackground.setAttribute("class", "canvasPic");
     pattern = Trianglify({
         cell_size: 95,
         variance: 0.75,

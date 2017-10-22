@@ -792,7 +792,7 @@ figure {
     z-index: 1;
     image-rendering: optimizeSpeed; }
 
-#canvasPic {
+.canvasPic {
   width: 100%;
   height: calc(100vh - 65px);
   position: absolute;
@@ -1416,7 +1416,11 @@ footer .wrapper {
     padding: 0px; }
   .btn-hamburger:hover {
     -webkit-transform: none;
-            transform: none; } }
+            transform: none; }
+  .grid-container.resize {
+    grid-template-rows: 65px calc(100vh + 50vh) auto; }
+  .canvasPic.resize {
+    height: calc(100vh + 50vh); } }
 
 @media all and (max-width: 576px) {
   .menu__header .menu__about, .menu__header .menu__work, .menu__header .menu__contact {
@@ -1438,7 +1442,11 @@ footer .wrapper {
     padding: 0px; }
   .btn-hamburger:hover {
     -webkit-transform: none;
-            transform: none; } }
+            transform: none; }
+  .grid-container.resize {
+    grid-template-rows: 65px calc(100vh + 50vh) auto; }
+  .canvasPic.resize {
+    height: calc(100vh + 50vh); } }
 
 @media all and (max-aspect-ratio: 5 / 4) {
   .svg-logo-one {

@@ -198,6 +198,7 @@ html {
     transform-origin: top right;
     -webkit-transition: all 500ms ease-in-out !important;
     transition: all 500ms ease-in-out !important;
+
     #canvas {
         background-color: rgba(0, 0, 0, 0.3);
         -webkit-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6),8px 0px 6px -6px rgba(255, 255, 255, 0.6),-8px 0px 6px -6px rgba(255, 255, 255, 0.6);
@@ -210,7 +211,7 @@ html {
       }
   }
   
-  #canvasPic {
+  .canvasPic {
     width: 100%;
     height: $main;
     position: absolute;
@@ -243,10 +244,6 @@ html {
   
   .svg-logo-one > div:nth-child(1) {
     width: 80%; 
-  }
-
-  .svg-logo-one > div:nth-child(2) {
-
   }
 
   .svg-logo-one > div:nth-child(3) {
@@ -925,6 +922,14 @@ footer .wrapper {
           .btn-hamburger:hover {
             transform: none;
           }
+
+          .grid-container.resize {
+            grid-template-rows: 65px calc(100vh + 50vh) auto;
+          }
+
+          .canvasPic.resize {
+            height: calc(100vh + 50vh);
+          }
     }
 
     @media all and (max-width: 576px) {
@@ -964,6 +969,14 @@ footer .wrapper {
         .btn-hamburger:hover {
             transform: none;
         }
+
+        .grid-container.resize {
+            grid-template-rows: 65px calc(100vh + 50vh) auto;
+          }
+
+          .canvasPic.resize {
+            height: calc(100vh + 50vh);
+          }
     }
 
     @media all and (max-aspect-ratio: 5/4) {

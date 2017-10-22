@@ -98,7 +98,7 @@ $home.on('click', { case: 1 }, content);
 $about.on("click", { case: 2 }, content);
 $work.on('click', { case: 3 }, content);
 $contact.on('click', { case: 4 }, content);
-
+let flag = false;
 	function content(event) {
 		const $wrapperCanvas = $('.canvas-box');
 		const $article = $('.about');
@@ -117,22 +117,21 @@ $contact.on('click', { case: 4 }, content);
 				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
 				resizeContent('.envelope','#wrap',530,630);
+				flag = true;
 				anim.pause();
 			}
 			else if ($pageMain === 3) {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
 				anim.pause();
-				document.getElementsByClassName('grid-container')[0].style.cssText = 'grid-template-rows: 65px calc(100vh - 65px) auto;';
-				document.getElementById('canvasPic').style.cssText = 'height: calc(100vh - 65px);'; 
+				flag = false;
 			}
 			else if ($pageMain === 2) {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($container).stop().css('display', 'none');
 				$article.css('display', 'grid');
 				$home.css('display', 'flex');
 				anim.play();
-				document.getElementsByClassName('grid-container')[0].style.cssText = 'grid-template-rows: 65px calc(100vh - 65px) auto;';
-				document.getElementById('canvasPic').style.cssText = 'height: calc(100vh - 65px);'; 
+				flag = false;
 			}
 			else {
 				($wrapperCanvas).add(btnHamburger).add($logoOne).add($logoTwo).css('display', 'grid');
@@ -141,17 +140,16 @@ $contact.on('click', { case: 4 }, content);
 				resizeContent('#figure','#wrapperCanvas',800,900);
 				btnHamburger.classList = 'btn-hamburger';
 				anim.pause();
-				document.getElementsByClassName('grid-container')[0].style.cssText = 'grid-template-rows: 65px calc(100vh - 65px) auto;';
-				document.getElementById('canvasPic').style.cssText = 'height: calc(100vh - 65px);'; 
+				flag = false;
 			}
-			document.getElementById('canvasPic').remove();
+			document.getElementsByClassName('canvasPic')[0].remove();
 			let pattern = Trianglify({
 				width: window.innerWidth,
 				height: window.innerHeight
 			});
 			
 			const canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-			canvasBackground.setAttribute("id", "canvasPic");
+			canvasBackground.setAttribute("class", "canvasPic");
 			pattern = Trianglify({
 				cell_size: 95,
 				variance: 0.75,
@@ -170,29 +168,29 @@ $contact.on('click', { case: 4 }, content);
 				'-moz-transform': 'translateX(-100%)',
 				'transform': 'translateX(-100%)'
 			});
+
+			if (flag === false) {
+				document.getElementsByClassName('grid-container')[0].classList = 'grid-container';
+				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic'; 	
+			}
 		}, 1500);
 	}
 
   let originalSize = $(window).width() + $(window).height();
-  const envelope = document.getElementsByClassName('envelope')[0];
-  const footer = document.getElementsByClassName('footer')[0];
    $(window).resize(function(){
-	if ($('.envelope').is(':visible') === true) {
-	  if($(window).width() + $(window).height() != originalSize){
-		  if (window.matchMedia("all and (max-width: 576px)").matches || window.matchMedia("all and (max-width: 767px) and (min-width: 577px)").matches) {
-			  document.getElementsByClassName('grid-container')[0].style.cssText = 'grid-template-rows: 65px calc(100vh + 50vh) auto;';
-			  document.getElementById('canvasPic').style.cssText = 'height: calc(100vh + 50vh);'; 	
+	if (flag === true && $(window).width() + $(window).height() != originalSize) {
+		      document.getElementsByClassName('grid-container')[0].classList += ' resize';
+			  document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 			  resizeContent('.envelope','#wrap',530,630);		  		
-	  	}
 	}
 	  else{
-			  envelope .style.cssText = 'width:90%;height:80%;top:50%'; 	
-			  document.getElementsByClassName('grid-container')[0].style.cssText = 'grid-template-rows: 65px calc(100vh - 65px) auto;';
-			  document.getElementById('canvasPic').style.cssText = 'height: calc(100vh - 65px);'; 	
+		      document.getElementsByClassName('grid-container')[0].classList = 'grid-container';
+			  document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic'; 	
 			  resizeContent('.envelope','#wrap',530,630);	
 	  }
-	}
 	}); 
+
+
 }); 
 
 
