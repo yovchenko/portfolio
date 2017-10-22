@@ -801,16 +801,28 @@ figure {
   right: 0;
   bottom: 0; }
 
-article {
+.about {
   display: none;
+  grid-row: 1 / 4;
+  grid-column: 1 / 4;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr); }
+
+article {
   max-width: 100%;
   font-size: 5.2vmin;
   text-align: center;
   margin: 0 auto;
   grid-row: 1;
-  grid-column: 1 / 4; }
-  article p {
-    margin: 1em 1em; }
+  grid-column: 1/4; }
+
+#animationWindow {
+  width: 100%;
+  grid-column: 1/4; }
+
+#animationWindow > svg {
+  max-width: 100%;
+  max-height: 100%; }
 
 /*contact form*/
 .containerForm {

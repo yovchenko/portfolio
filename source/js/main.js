@@ -2,7 +2,7 @@
 import {resizeContent} from './resize.js';
 let Trianglify = require('trianglify'); 
 import Amplitude from "amplitude";
-
+import {anim} from './jsonAnimation.js';
 
 $( document ).ready(function() {
 /* music player buttons */
@@ -53,7 +53,7 @@ function animateArrowToMenu(){
 	init.style.display = 'flex';
   }
 
-/*header text*/
+/*header text animation*/
 	const $home = $('.menu__home');
 	const $about = $('.js-about');
 	const $work = $('.js-work');
@@ -101,7 +101,7 @@ $contact.on('click', { case: 4 }, content);
 
 	function content(event) {
 		const $wrapperCanvas = $('.canvas-box');
-		const $article = $('.article');
+		const $article = $('.about');
 		const $curtainRight = $('#curtain-section-right');
 		const $curtainLeft = $('#curtain-section-left');
 		const $container = $('.containerForm');
@@ -115,14 +115,18 @@ $contact.on('click', { case: 4 }, content);
 				$(init).add(btnHamburger).add($article).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
 				resizeContent('.envelope','#wrap',530,630);
+				anim.pause();
 			}
 			else if ($pageMain === 3) {
 				$(init).add(btnHamburger).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
+				anim.pause();
 			}
 			else if ($pageMain === 2) {
 				$(init).add(btnHamburger).add($wrapperCanvas).add($container).stop().css('display', 'none');
-				$home.add($article).css('display', 'flex');
+				$article.css('display', 'grid');
+				$home.css('display', 'flex');
+				anim.play();
 			}
 			else {
 				($wrapperCanvas).add(btnHamburger).css('display', 'grid');
@@ -130,6 +134,7 @@ $contact.on('click', { case: 4 }, content);
 				animateArrowToMenu();
 				resizeContent('#figure','#wrapperCanvas',800,900);
 				btnHamburger.classList = 'btn-hamburger';
+				anim.pause();
 			}
 			document.getElementById('canvasPic').remove();
 			let pattern = Trianglify({

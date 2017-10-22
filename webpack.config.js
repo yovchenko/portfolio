@@ -3,7 +3,6 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
-const CordovaPlugin = require('webpack-cordova-plugin');
 const PATHS = {
     source: path.join(__dirname, 'source'),
     docs: path.join(__dirname, 'docs')
@@ -92,7 +91,7 @@ module.exports = {
             validation: "jquery-validation/dist/jquery.validation",
             amplitude: "amplitudejs/dist/amplitude",
             normalize: "node-normalize-scss/_normalize.scss",
-            keyboard:  "cordova-plugin-keyboard/www/keyboard"
+            bodymovin: "bodymovin/build/player/bodymovin"
         },
     },
     plugins: [
@@ -111,7 +110,7 @@ module.exports = {
                 removeStyleLinkTypeAttributes: true
             }
         }),
-        new FaviconsWebpackPlugin(PATHS.source + '/favicon/favicon.png'), 
+       // new FaviconsWebpackPlugin(PATHS.source + '/favicon/favicon.png'), 
         new ExtractTextPlugin({
             filename: (getPath) => {
                 return getPath('css/[name].css').replace('css/js', 'css');
