@@ -818,7 +818,8 @@ article {
 
 #animationWindow {
   width: 100%;
-  grid-column: 1/4; }
+  grid-column: 1/4;
+  grid-row: 2 / 4; }
 
 #animationWindow > svg {
   max-width: 100%;
