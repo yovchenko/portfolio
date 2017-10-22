@@ -21992,6 +21992,8 @@ $contact.on('click', { case: 4 }, content);
 		const $curtainRight = $('#curtain-section-right');
 		const $curtainLeft = $('#curtain-section-left');
 		const $container = $('.containerForm');
+		const $logoOne = $('.svg-logo-one');
+		const $logoTwo = $('.svg-logo-two');
 		let $pageMain = event.data.case;
 		$curtainRight.add($curtainLeft).css('width', '100%');
 		$curtainRight.stop().css('transform', 'translateX(50%)');
@@ -21999,24 +22001,24 @@ $contact.on('click', { case: 4 }, content);
 		let $timerCurtain = setTimeout(function () {
 
 			if ($pageMain === 4) {
-				$(init).add(btnHamburger).add($article).add($wrapperCanvas).stop().css('display', 'none');
+				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
 				Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);
 				__WEBPACK_IMPORTED_MODULE_2__jsonAnimation_js__["a" /* anim */].pause();
 			}
 			else if ($pageMain === 3) {
-				$(init).add(btnHamburger).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
+				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
 				__WEBPACK_IMPORTED_MODULE_2__jsonAnimation_js__["a" /* anim */].pause();
 			}
 			else if ($pageMain === 2) {
-				$(init).add(btnHamburger).add($wrapperCanvas).add($container).stop().css('display', 'none');
+				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($container).stop().css('display', 'none');
 				$article.css('display', 'grid');
 				$home.css('display', 'flex');
 				__WEBPACK_IMPORTED_MODULE_2__jsonAnimation_js__["a" /* anim */].play();
 			}
 			else {
-				($wrapperCanvas).add(btnHamburger).css('display', 'grid');
+				($wrapperCanvas).add(btnHamburger).add($logoOne).add($logoTwo).css('display', 'grid');
 				$home.add($article).add($container).stop().css('display', 'none');
 				animateArrowToMenu();
 				Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('#figure','#wrapperCanvas',800,900);
