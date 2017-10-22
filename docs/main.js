@@ -21999,7 +21999,8 @@ let flag = false;
 		$curtainRight.stop().css('transform', 'translateX(50%)');
 		$curtainLeft.stop().css('transform', 'translateX(-50%)');
 		let $timerCurtain = setTimeout(function () {
-
+		document.getElementsByClassName('grid-container')[0].classList = 'grid-container';
+		document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic'; 
 			if ($pageMain === 4) {
 				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
@@ -22054,12 +22055,7 @@ let flag = false;
 				'-webkit-transform': 'translateX(-100%)',
 				'-moz-transform': 'translateX(-100%)',
 				'transform': 'translateX(-100%)'
-			});
-
-			if (flag === false) {
-				document.getElementsByClassName('grid-container')[0].classList = 'grid-container';
-				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic'; 	
-			}
+			});	
 		}, 1500);
 	}
 
