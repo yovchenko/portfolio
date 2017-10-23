@@ -36183,7 +36183,7 @@ $(document).ready(function () {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($container).stop().css('display', 'none');
 				$article.css('display', 'grid');
 				$home.css('display', 'flex');
-				__WEBPACK_IMPORTED_MODULE_2__jsonAnimation_js__["a" /* anim */].play();
+				__WEBPACK_IMPORTED_MODULE_2__jsonAnimation_js__["a" /* anim */].stop();
 				flag = false;
 			}
 			else {
