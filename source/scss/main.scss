@@ -21,6 +21,7 @@ html {
                          "footer";
     grid-template-rows: 65px $main auto;
     grid-template-columns: auto;
+    overflow: hidden;
  }
 
   header {
@@ -37,7 +38,6 @@ html {
     margin: 0 auto;
     width: 90%;
     max-width: 1600px;
-    overflow: hidden;
   }
 
   footer {
@@ -263,17 +263,6 @@ html {
 
   .svg-logo-two > div:nth-child(3) {
     width: 85%;
-  }
-
-  .amplitude-volume-slider {
-    -webkit-appearance: none;
-    margin: 10px 0;
-    width: 100%;
-    position: fixed;
-    transform: rotate(90deg);
-    z-index: 3;
-    top: 10px;
-    background: transparent; 
   }
 
   .about {
@@ -510,18 +499,21 @@ footer .wrapper {
   }
 
 .volume.visible {
-    right: 15px;
+    right: -5%;
     transition: ease-in-out 1s;
     z-index: 2;
 }
 
 .volume {
     direction: block;
-    position: fixed;
+    position: relative;
     right: 15px;
-    top: 40%;
-    bottom: 60%;
-    right: -50px;
+    grid-column: 3;
+    grid-row: 2;
+    margin-right: 10px;
+    align-self: center;
+    justify-self: end;
+    right: -15%;
     z-index: 2;
     transition: ease-in-out 1s;
 .plus-minus-input {
@@ -1025,7 +1017,10 @@ footer .wrapper {
           }
           .volume {
             transform: scale(1.2);  
-          }
+            .input-wrap {
+              padding: 10px 0 10px 0;
+               }
+            }
     }
 
     @media all and (max-width: 576px) {
@@ -1073,8 +1068,12 @@ footer .wrapper {
           .canvasPic.resize {
             height: calc(100vh + 50vh);
           }
+
           .volume {
           transform: scale(1.2);  
+          .input-wrap {
+            padding: 10px 0 10px 0;
+             }
           }
     }
 
