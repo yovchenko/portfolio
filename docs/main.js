@@ -21901,17 +21901,17 @@ $( document ).ready(function() {
 document.getElementsByClassName('svgIcons')[0].onclick = function () {
 	const stop = document.getElementById('stopMusic');
 	const play = document.getElementById('playMusic');
-	const volume = document.getElementsByClassName('volume')[0];
+	const $volume = $('.volume');
 	if (stop.style.display === 'none') {
 	stop.style.display = 'block'
 	play.style.display = 'none';
-	volume.classList += ' visible'; 
+	$volume.fadeIn('slow');
 	__WEBPACK_IMPORTED_MODULE_1_amplitude___default.a.play();
 	}
 	else {
 	stop.style.display = 'none'
 	play.style.display = 'block';
-	volume.classList = 'volume'; 
+	$volume.fadeOut('slow');
 	__WEBPACK_IMPORTED_MODULE_1_amplitude___default.a.pause();
 	}
 }

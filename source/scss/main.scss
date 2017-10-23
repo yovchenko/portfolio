@@ -498,24 +498,20 @@ footer .wrapper {
    @extend #playMusic;
   }
 
-.volume.visible {
-    right: -5%;
-    transition: ease-in-out 1s;
-    z-index: 2;
-}
+
 
 .volume {
+    display: none;
     direction: block;
     position: relative;
-    right: 15px;
+    right: -65px;
     grid-column: 3;
     grid-row: 2;
     margin-right: 10px;
     align-self: center;
     justify-self: end;
-    right: -15%;
     z-index: 2;
-    transition: ease-in-out 1s;
+ 
 .plus-minus-input {
     align-items: center;
     display: flex;
@@ -1015,7 +1011,8 @@ footer .wrapper {
           .canvasPic.resize {
             height: calc(100vh + 50vh);
           }
-          .volume {
+         main .volume {
+            right: -25px;
             transform: scale(1.2);  
             .input-wrap {
               padding: 10px 0 10px 0;
@@ -1069,7 +1066,8 @@ footer .wrapper {
             height: calc(100vh + 50vh);
           }
 
-          .volume {
+        main  .volume {
+          right: -15px;
           transform: scale(1.2);  
           .input-wrap {
             padding: 10px 0 10px 0;
@@ -1132,5 +1130,9 @@ footer .wrapper {
         
           .svg-logo-two > div:nth-child(3) {
             width: 85%;
+          }
+
+          .volume {
+            right: -45px;
           }
     }
