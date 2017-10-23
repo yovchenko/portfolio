@@ -498,15 +498,13 @@ footer .wrapper {
    @extend #playMusic;
   }
 
-
-
 .volume {
     display: none;
     direction: block;
     position: relative;
     right: -65px;
     grid-column: 3;
-    grid-row: 2;
+    grid-row: 3;
     margin-right: 10px;
     align-self: center;
     justify-self: end;
