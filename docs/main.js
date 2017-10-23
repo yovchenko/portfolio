@@ -13418,6 +13418,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__js_canvasSphere__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__js_jsonAnimation__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__js_contactForm__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__js_volumeButtons__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__js_volumeButtons___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_9__js_volumeButtons__);
+
 
 
 
@@ -18305,7 +18308,9 @@ window.onload = setTimeout(function () {
                 "url": " https://yovchenko.github.io/music/smoothMusic.mp3",
             }
         ],
-        "volume": 40
+        "volume": 50,
+        "volume_increment": 10,
+        "volume_decrement": 10
     });
 }, 2000);
 
@@ -21896,14 +21901,17 @@ $( document ).ready(function() {
 document.getElementsByClassName('svgIcons')[0].onclick = function () {
 	const stop = document.getElementById('stopMusic');
 	const play = document.getElementById('playMusic');
+	const volume = document.getElementsByClassName('plus-minus-input')[0];
 	if (stop.style.display === 'none') {
 	stop.style.display = 'block'
 	play.style.display = 'none';
+	volume.classList += ' visible'; 
 	__WEBPACK_IMPORTED_MODULE_1_amplitude___default.a.play();
 	}
 	else {
 	stop.style.display = 'none'
 	play.style.display = 'block';
+	volume.classList = 'plus-minus-input'; 
 	__WEBPACK_IMPORTED_MODULE_1_amplitude___default.a.pause();
 	}
 }
@@ -21917,7 +21925,7 @@ const menuAbout = document.getElementsByClassName('menu__about')[0];
 const menuWork = document.getElementsByClassName('menu__work')[0];
 const menuContact = document.getElementsByClassName('menu__contact')[0];
 btnHamburger.onclick = function () {
-if (this.classList == 'btn-hamburger') {
+if (this.classList.value === 'btn-hamburger') {
 this.classList += ' active';
 animateMenuToArrow();
 }
@@ -22072,8 +22080,6 @@ let flag = false;
 			  Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);	
 	  }
 	}); 
-
-
 }); 
 
 
@@ -37873,6 +37879,44 @@ if ( $.ajaxPrefilter ) {
 }
 return $;
 }));
+
+/***/ }),
+/* 135 */
+/***/ (function(module, exports) {
+
+jQuery(document).ready(function(){
+    // This button will increment the value
+    $('[data-quantity="plus"]').click(function(e){
+        // Stop acting like a button
+        e.preventDefault();
+        // Get the field name
+        fieldName = $(this).attr('data-field');
+        // Get its current value
+        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        // If is not undefined
+        if (!isNaN(currentVal) && currentVal < 100) {
+            // Increment
+            $('input[name='+fieldName+']').val(currentVal + 10);
+        } 
+    });
+    // This button will decrement the value till 0
+    $('[data-quantity="minus"]').click(function(e) {
+        // Stop acting like a button
+        e.preventDefault();
+        // Get the field name
+        fieldName = $(this).attr('data-field');
+        // Get its current value
+        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        // If it isn't undefined or its greater than 0
+        if (!isNaN(currentVal) && currentVal > 0) {
+            // Decrement one
+            $('input[name='+fieldName+']').val(currentVal - 10);
+        } else {
+            // Otherwise put a 0 there
+            $('input[name='+fieldName+']').val(0);
+        }
+    });
+});
 
 /***/ })
 /******/ ]);

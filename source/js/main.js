@@ -9,14 +9,17 @@ $( document ).ready(function() {
 document.getElementsByClassName('svgIcons')[0].onclick = function () {
 	const stop = document.getElementById('stopMusic');
 	const play = document.getElementById('playMusic');
+	const volume = document.getElementsByClassName('plus-minus-input')[0];
 	if (stop.style.display === 'none') {
 	stop.style.display = 'block'
 	play.style.display = 'none';
+	volume.classList += ' visible'; 
 	Amplitude.play();
 	}
 	else {
 	stop.style.display = 'none'
 	play.style.display = 'block';
+	volume.classList = 'plus-minus-input'; 
 	Amplitude.pause();
 	}
 }
@@ -30,7 +33,7 @@ const menuAbout = document.getElementsByClassName('menu__about')[0];
 const menuWork = document.getElementsByClassName('menu__work')[0];
 const menuContact = document.getElementsByClassName('menu__contact')[0];
 btnHamburger.onclick = function () {
-if (this.classList == 'btn-hamburger') {
+if (this.classList.value === 'btn-hamburger') {
 this.classList += ' active';
 animateMenuToArrow();
 }
@@ -185,8 +188,6 @@ let flag = false;
 			  resizeContent('.envelope','#wrap',530,630);	
 	  }
 	}); 
-
-
 }); 
 
 

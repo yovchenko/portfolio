@@ -7,4 +7,5 @@ import './js/main';
 import './js/canvasSphere';
 import './js/jsonAnimation';
 import './js/contactForm';
+import './js/volumeButtons';
 

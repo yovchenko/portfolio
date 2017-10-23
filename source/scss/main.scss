@@ -265,6 +265,17 @@ html {
     width: 85%;
   }
 
+  .amplitude-volume-slider {
+    -webkit-appearance: none;
+    margin: 10px 0;
+    width: 100%;
+    position: fixed;
+    transform: rotate(90deg);
+    z-index: 3;
+    top: 10px;
+    background: transparent; 
+  }
+
   .about {
     display: none;
     grid-row: 1 / 4;
@@ -467,14 +478,12 @@ footer .wrapper {
      padding: 4px 0;
 }
 
-  .svgIcons {
+.svgIcons {
       display: grid;
       grid-row: 1;
       max-width: 45px;
       max-height: 45px;
-      position: relative;
       padding: 6px;
-      top: -2px;
 }
   
 .svgIcons:first-of-type {
@@ -499,6 +508,83 @@ footer .wrapper {
 #stopMusic {
    @extend #playMusic;
   }
+
+.plus-minus-input.visible {
+    right: 15px;
+    transition: ease-in-out 1s;
+}
+
+.plus-minus-input {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 40%;
+    bottom: 60%;
+    right: -50px;
+    z-index: 2;
+    transition: ease-in-out 0.7s;
+    .input-wrap { 
+        padding: 5px;
+      
+    .input-group-field {
+      text-align: center;
+      width: 25px;
+      font-size: 15px;
+      border-radius: 5%;
+      background: -webkit-gradient(linear, left top, left bottom, from(#2c3e50), to(black));
+      background: linear-gradient(#2c3e50, black);
+      border-bottom-color: white;
+      border-top-color: white;
+      color: white;
+      &::-webkit-inner-spin-button,
+      ::-webkit-outer-spin-button {
+        appearance: none;
+        text-align: center;
+        flex: 0 0 auto;
+      }
+    }
+  }
+    .input-group-button {
+        .button-wrap {
+            display: block;
+            background: -webkit-gradient(linear, left top, left bottom, from(#2c3e50), to(black));
+            background: linear-gradient(#2c3e50, black);
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04);
+            border-radius: 50%;
+      .circle.amplitude-volume-up{
+       position: relative;
+       border-radius: 50%;
+       padding: 12.5px;
+       border-color: transparent;
+       background: -webkit-gradient(linear, left top, left bottom, from(#2c3e50), to(rgba(0, 0, 0, 0.6)));
+       background: linear-gradient(#2c3e50, rgba(0, 0, 0, 0.6));
+       outline: none;
+       border-bottom-color: white;
+       border-top-color: white;
+       outline: none;
+        &:active {
+            background: radial-gradient(rgba(0, 0, 0, 0.6), rgba(255%, 255%, 255%, 0.25));
+        }
+       svg {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        }
+      }
+      }
+      .button-wrap {
+      .circle.amplitude-volume-down{
+        @extend .amplitude-volume-up;
+        svg {
+        @extend svg;
+        }
+      }
+    }
+  }
+}
 
 /* preloader */
   .chromeframe {
