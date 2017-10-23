@@ -1,6 +1,7 @@
 import Amplitude from "amplitude";
 import main from './canvasSphere.js';
 import {resizeContent} from './resize.js';
+import { anim } from './jsonAnimation.js';
 "use strict";
 let opacity = 0.55;
 let increment = 0.05;
@@ -21,6 +22,7 @@ let pulse = setInterval(function () {
 /*I'm giving you some extra time to enjoy my preloader*/
 window.onload = setTimeout(function () {
     main();   
+    anim.stop();
     resizeContent('#figure','#wrapperCanvas',800,900);
     document.body.className = " loaded"; 
     document.getElementsByClassName('footer')[0].style.display = 'flex';
