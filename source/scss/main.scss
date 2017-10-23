@@ -509,21 +509,25 @@ footer .wrapper {
    @extend #playMusic;
   }
 
-.plus-minus-input.visible {
+.volume.visible {
     right: 15px;
     transition: ease-in-out 1s;
+    z-index: 2;
 }
 
-.plus-minus-input {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+.volume {
+    direction: block;
     position: fixed;
+    right: 15px;
     top: 40%;
     bottom: 60%;
     right: -50px;
     z-index: 2;
-    transition: ease-in-out 0.7s;
+    transition: ease-in-out 1s;
+.plus-minus-input {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     .input-wrap { 
         padding: 5px;
       
@@ -534,9 +538,12 @@ footer .wrapper {
       border-radius: 5%;
       background: -webkit-gradient(linear, left top, left bottom, from(#2c3e50), to(black));
       background: linear-gradient(#2c3e50, black);
-      border-bottom-color: white;
-      border-top-color: white;
+      border-bottom-color: #933EC5;
+      border-top-color: #933EC5;
       color: white;
+      margin: 5px;
+      padding: 2px;
+      border-style: double;
       &::-webkit-inner-spin-button,
       ::-webkit-outer-spin-button {
         appearance: none;
@@ -564,7 +571,7 @@ footer .wrapper {
        border-top-color: white;
        outline: none;
         &:active {
-            background: radial-gradient(rgba(0, 0, 0, 0.6), rgba(255%, 255%, 255%, 0.25));
+            background: radial-gradient(rgba(0, 0, 0, 0.6), rgba(255%, 255%, 255%, 0.20));
         }
        svg {
         position: absolute;
@@ -585,7 +592,7 @@ footer .wrapper {
     }
   }
 }
-
+}
 /* preloader */
   .chromeframe {
     margin: 0.2em 0;
@@ -1016,6 +1023,9 @@ footer .wrapper {
           .canvasPic.resize {
             height: calc(100vh + 50vh);
           }
+          .volume {
+            transform: scale(1.2);  
+          }
     }
 
     @media all and (max-width: 576px) {
@@ -1062,6 +1072,9 @@ footer .wrapper {
 
           .canvasPic.resize {
             height: calc(100vh + 50vh);
+          }
+          .volume {
+          transform: scale(1.2);  
           }
     }
 
