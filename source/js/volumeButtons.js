@@ -25,9 +25,6 @@ jQuery(document).ready(function(){
         if (!isNaN(currentVal) && currentVal > 0) {
             // Decrement one
             $('input[name='+fieldName+']').val(currentVal - 10);
-        } else {
-            // Otherwise put a 0 there
-            $('input[name='+fieldName+']').val(0);
-        }
+        } 
     });
 });
