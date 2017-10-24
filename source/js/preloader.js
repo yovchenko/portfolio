@@ -37,7 +37,6 @@ window.onload = setTimeout(function () {
                 "url": " https://yovchenko.github.io/music/smoothMusic.mp3",
             }
         ],
-        "volume": 50,
         "volume_increment": 10,
         "volume_decrement": 10
     });

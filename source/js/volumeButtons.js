@@ -1,4 +1,5 @@
 "use strict";
+import {AmplitudeEvents} from "amplitude";
 jQuery(document).ready(function(){
     // This button will increment the value
     $('[data-quantity="plus"]').click(function(e){
@@ -12,7 +13,6 @@ jQuery(document).ready(function(){
         if (!isNaN(currentVal) && currentVal < 100) {
             // Increment
             $('input[name='+fieldName+']').val(currentVal + 10);
-            $('.amplitude-volume-up').click();
         } 
     });
     // This button will decrement the value till 0
@@ -27,7 +27,6 @@ jQuery(document).ready(function(){
         if (!isNaN(currentVal) && currentVal > 0) {
             // Decrement one
             $('input[name='+fieldName+']').val(currentVal - 10);
-           $('.amplitude-volume-down').click();
         } 
     });
 });
