@@ -1,6 +1,7 @@
 "use strict";
-import Amplitude from "amplitude";
 jQuery(document).ready(function(){
+    const volumeUp = document.getElementsByClassName('amplitude-volume-up')[0];
+    const volumeDown = document.getElementsByClassName('amplitude-volume-down')[0];
     // This button will increment the value
     $('[data-quantity="plus"]').click(function(e){
         // Stop acting like a button
@@ -13,6 +14,7 @@ jQuery(document).ready(function(){
         if (!isNaN(currentVal) && currentVal < 100) {
             // Increment
             $('input[name='+fieldName+']').val(currentVal + 10);
+            volumeUp.click();
         } 
     });
     // This button will decrement the value till 0
@@ -27,6 +29,7 @@ jQuery(document).ready(function(){
         if (!isNaN(currentVal) && currentVal > 0) {
             // Decrement one
             $('input[name='+fieldName+']').val(currentVal - 10);
+            volumeDown.click();
         } 
     });
 });
