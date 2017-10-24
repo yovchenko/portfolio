@@ -1,5 +1,5 @@
 "use strict";
-
+import Amplitude from "amplitude";
 jQuery(document).ready(function(){
     // This button will increment the value
     $('[data-quantity="plus"]').click(function(e){
