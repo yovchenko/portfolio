@@ -2,7 +2,7 @@
 import {AmplitudeEvents} from "amplitude";
 jQuery(document).ready(function(){
     // This button will increment the value
-    $('[data-quantity="plus"]').click(function(e){
+    $('.amplitude-volume-up').click(function(e){
         // Stop acting like a button
         e.preventDefault();
         // Get the field name
@@ -16,7 +16,7 @@ jQuery(document).ready(function(){
         } 
     });
     // This button will decrement the value till 0
-    $('[data-quantity="minus"]').click(function(e) {
+    $('.amplitude-volume-down').click(function(e) {
         // Stop acting like a button
         e.preventDefault();
         // Get the field name
