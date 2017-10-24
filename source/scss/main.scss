@@ -530,9 +530,11 @@ footer .wrapper {
       margin: 5px;
       padding: 2px;
       border-style: double;
+      -moz-appearance: textfield;
       &::-webkit-inner-spin-button,
       ::-webkit-outer-spin-button {
         appearance: none;
+        -webkit-appearance: none;
         text-align: center;
         flex: 0 0 auto;
       }
@@ -545,7 +547,7 @@ footer .wrapper {
             background: linear-gradient(#2c3e50, black);
             box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04);
             border-radius: 50%;
-      .circle.amplitude-volume-up{
+      .circle {
        position: relative;
        border-radius: 50%;
        padding: 12.5px;
@@ -568,14 +570,6 @@ footer .wrapper {
         }
       }
       }
-      .button-wrap {
-      .circle.amplitude-volume-down{
-        @extend .amplitude-volume-up;
-        svg {
-        @extend svg;
-        }
-      }
-    }
   }
 }
 }
