@@ -134,7 +134,7 @@ $(document).ready(function () {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($container).stop().css('display', 'none');
 				$article.css('display', 'grid');
 				$home.css('display', 'flex');
-				anim.stop();
+				anim.play();
 				flag = false;
 			}
 			else {
