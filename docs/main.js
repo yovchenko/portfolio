@@ -32504,8 +32504,8 @@ let k = window.btoa(m);
 const elementTop = document.getElementsByClassName('header')[0];
 const elementBottom = document.getElementsByClassName('footer')[0];
 // Set the background image property, including the encoding type header
-//elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-//elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
+elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
 window.onresize = function(event){
     document.getElementsByClassName('canvasPic')[0].remove();
     let pattern = Trianglify({
