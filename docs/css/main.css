@@ -897,7 +897,7 @@ article {
 
 #wrap {
   width: 530px;
-  height: 630px;
+  height: 650px;
   overflow: hidden;
   position: absolute;
   -webkit-transform-origin: top right;
@@ -950,7 +950,7 @@ form {
   height: 200px;
   width: 400px;
   margin: 0px auto;
-  padding: 5px 25px 40px 25px;
+  padding: 0px 25px 45px 25px;
   border: 1px solid #fff;
   border-radius: 3px;
   -moz-border-radius: 3px;
@@ -961,7 +961,7 @@ form {
   -webkit-transition: all 1s ease-in-out .3s;
   transition: all 1s ease-in-out .3s; }
   form p {
-    font-size: 3em;
+    font-size: 3.8em;
     margin: 5px 0px 5px 0px; }
 
 #form_wrap:hover form {
@@ -969,7 +969,7 @@ form {
 
 label {
   margin: 11px 55px 0 0;
-  font-size: 2em;
+  font-size: 1.9em;
   text-transform: uppercase;
   text-shadow: 0px 1px 0px #fff; }
 
@@ -978,7 +978,7 @@ label {
   color: red;
   float: right;
   position: relative;
-  top: -60px;
+  top: -65px;
   right: 0px;
   margin: 0; }
 
@@ -1002,7 +1002,8 @@ textarea {
   width: 98.8%;
   height: 80px;
   padding-top: 14px;
-  resize: vertical; }
+  resize: vertical;
+  margin: 0; }
 
 #name:focus,
 textarea:focus,
@@ -1018,7 +1019,7 @@ input[type=email]:focus {
   width: 100%;
   text-align: center;
   opacity: 0;
-  max-height: 35px;
+  max-height: 40px;
   background: none;
   cursor: pointer;
   border-radius: 3px;
