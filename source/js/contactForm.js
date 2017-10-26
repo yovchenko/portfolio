@@ -1,5 +1,4 @@
 'use strict';
-import _ from 'jquery';
 import _ from 'jquery-validation';
 let $contactForm = $('#contactForm');
 $contactForm.validate();

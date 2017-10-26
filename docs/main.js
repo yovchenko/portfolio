@@ -72,7 +72,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* global Symbol
 // unguarded in another place, it seems safer to define global only for this module
 
 !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(18),
+	__webpack_require__(17),
 	__webpack_require__(1),
 	__webpack_require__(73),
 	__webpack_require__(21),
@@ -3105,54 +3105,6 @@ module.exports = __webpack_amd_options__;
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
-	__webpack_require__(2),
-	__webpack_require__(12),
-	__webpack_require__(29),
-	__webpack_require__(11),
-	__webpack_require__(81),
-	__webpack_require__(53),
-	__webpack_require__(82),
-	__webpack_require__(31),
-	__webpack_require__(83),
-	__webpack_require__(87),
-	__webpack_require__(13),
-	__webpack_require__(91),
-	__webpack_require__(92),
-	__webpack_require__(19),
-	__webpack_require__(94),
-	__webpack_require__(97),
-	__webpack_require__(17),
-	__webpack_require__(98),
-	__webpack_require__(67),
-	__webpack_require__(14),
-	__webpack_require__(99),
-	__webpack_require__(100),
-	__webpack_require__(101),
-	__webpack_require__(102),
-	__webpack_require__(105),
-	__webpack_require__(32),
-	__webpack_require__(106),
-	__webpack_require__(107),
-	__webpack_require__(108),
-	__webpack_require__(109),
-	__webpack_require__(110),
-	__webpack_require__(111)
-], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery ) {
-
-"use strict";
-
-return jQuery;
-
-}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(0),
 	__webpack_require__(25),
 	__webpack_require__(9),
 	__webpack_require__(44),
@@ -3593,7 +3545,7 @@ return jQuery;
 
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
@@ -3601,6 +3553,54 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
 
 	return [];
 }.call(exports, __webpack_require__, exports, module),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
+	__webpack_require__(0),
+	__webpack_require__(2),
+	__webpack_require__(12),
+	__webpack_require__(29),
+	__webpack_require__(11),
+	__webpack_require__(81),
+	__webpack_require__(53),
+	__webpack_require__(82),
+	__webpack_require__(31),
+	__webpack_require__(83),
+	__webpack_require__(87),
+	__webpack_require__(13),
+	__webpack_require__(91),
+	__webpack_require__(92),
+	__webpack_require__(19),
+	__webpack_require__(94),
+	__webpack_require__(97),
+	__webpack_require__(16),
+	__webpack_require__(98),
+	__webpack_require__(67),
+	__webpack_require__(14),
+	__webpack_require__(99),
+	__webpack_require__(100),
+	__webpack_require__(101),
+	__webpack_require__(102),
+	__webpack_require__(105),
+	__webpack_require__(32),
+	__webpack_require__(106),
+	__webpack_require__(107),
+	__webpack_require__(108),
+	__webpack_require__(109),
+	__webpack_require__(110),
+	__webpack_require__(111)
+], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery ) {
+
+"use strict";
+
+return jQuery;
+
+}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 
@@ -4117,7 +4117,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(18)
+	__webpack_require__(17)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( arr ) {
 	"use strict";
 
@@ -4131,7 +4131,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(18)
+	__webpack_require__(17)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( arr ) {
 	"use strict";
 
@@ -4746,7 +4746,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(11),
 	__webpack_require__(12),
 	__webpack_require__(19),
-	__webpack_require__(17),
+	__webpack_require__(16),
 	__webpack_require__(86)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, document, rcssNum, rnothtmlwhite, cssExpand, isHiddenWithinTree, swap,
 	adjustCSS, dataPriv, showHide ) {
@@ -7595,7 +7595,7 @@ var AmplitudeEvents = function () {
 		/*
   	Binds 'amplitude-volume-up' event handlers
   */
-	bindVolumeUp();
+		bindVolumeUp();
 
 		/*
   	Binds 'amplitude-volume-down' event handlers
@@ -7816,7 +7816,7 @@ var AmplitudeEvents = function () {
  	BINDS: class="amplitude-volume-up"
  		Binds click and touchend events for amplitude volume up buttons
  --------------------------------------------------------------------------*/
-	 function bindVolumeUp() {
+	function bindVolumeUp() {
 		/*
   	Gets all of the elements with the class amplitude-volume-up			
   */
@@ -11498,63 +11498,79 @@ module.exports = exports['default'];
 
 /***/ }),
 /* 37 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = resizeContent;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 
 
-function resizeContent(objDiv,objWrap,objWrapWidth,objWrapHeight) {
-	let pageWidth, pageHeight;
-	
-		let basePage = {
-			width: objWrapWidth,
-			height: objWrapHeight,
-			scale: 1,
-			scaleX: 1,
-			scaleY: 1
-		};
-		let $page = $(objWrap);
-		getPageSize();
-		scalePages($page, pageWidth, pageHeight);
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.resizeContent = resizeContent;
 
-//using underscore to delay resize method till finished resizing window
-		function getPageSize() {
-			pageHeight = $(objDiv).height();
-			pageWidth = $(objDiv).width();
-		}
+var _jquery = __webpack_require__(18);
 
-		function scalePages(page, maxWidth, maxHeight) {
-			let scaleX = 1; 
-			let scaleY = 1;
+var _jquery2 = _interopRequireDefault(_jquery);
 
-			scaleX = maxWidth / basePage.width;
-			scaleY = maxHeight / basePage.height;
-			basePage.scaleX = scaleX;
-			basePage.scaleY = scaleY;
-			basePage.scale = (scaleX > scaleY) ? scaleY : scaleX;
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-			let newLeftPos = Math.abs(Math.floor(((basePage.width * basePage.scale) - maxWidth) / 2));
-			let newTopPos = Math.abs(Math.floor(((basePage.height * basePage.scale) - maxHeight) / 2));
+function resizeContent(objDiv, objWrap, objWrapWidth, objWrapHeight) {
+	var pageWidth = void 0,
+	    pageHeight = void 0;
 
-			page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
-		}
+	var basePage = {
+		width: objWrapWidth,
+		height: objWrapHeight,
+		scale: 1,
+		scaleX: 1,
+		scaleY: 1
 	};
+	var $page = $(objWrap);
+	getPageSize();
+	scalePages($page, pageWidth, pageHeight);
 
-	
+	//using underscore to delay resize method till finished resizing window
+	function getPageSize() {
+		pageHeight = $(objDiv).height();
+		pageWidth = $(objDiv).width();
+	}
+
+	function scalePages(page, maxWidth, maxHeight) {
+		var scaleX = 1;
+		var scaleY = 1;
+
+		scaleX = maxWidth / basePage.width;
+		scaleY = maxHeight / basePage.height;
+		basePage.scaleX = scaleX;
+		basePage.scaleY = scaleY;
+		basePage.scale = scaleX > scaleY ? scaleY : scaleX;
+
+		var newLeftPos = Math.abs(Math.floor((basePage.width * basePage.scale - maxWidth) / 2));
+		var newTopPos = Math.abs(Math.floor((basePage.height * basePage.scale - maxHeight) / 2));
+
+		page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
+	}
+};
 
 /***/ }),
 /* 38 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return anim; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bodymovin__ = __webpack_require__(113);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bodymovin___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_bodymovin__);
- 
-let animData = {
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.anim = undefined;
+
+var _bodymovin = __webpack_require__(113);
+
+var _bodymovin2 = _interopRequireDefault(_bodymovin);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var animData = {
     wrapper: document.getElementById('animationWindow'),
     animType: 'svg',
     loop: true,
@@ -11562,9 +11578,8 @@ let animData = {
     autoplay: true,
     path: 'https://yovchenko.github.io/JSON-animation/animation.json'
 };
-let anim = __WEBPACK_IMPORTED_MODULE_0_bodymovin___default.a.loadAnimation(animData);
+var anim = exports.anim = _bodymovin2.default.loadAnimation(animData);
 anim.setSpeed(3.0);
-
 
 /***/ }),
 /* 39 */
@@ -11604,7 +11619,7 @@ return function( elem, options, callback, args ) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(18)
+	__webpack_require__(17)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( arr ) {
 	"use strict";
 
@@ -11618,7 +11633,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(18)
+	__webpack_require__(17)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( arr ) {
 	"use strict";
 
@@ -12918,12 +12933,21 @@ return jQuery;
 
 /***/ }),
 /* 68 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = main;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.default = main;
+
+var _jquery = __webpack_require__(18);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 'use strict';
 //I concatenated the Math classes with the original game file
@@ -12938,12 +12962,11 @@ function Vector3(x, y, z) {
 
 Vector3.prototype.mag = function () {
 	return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
-}
+};
 
 Vector3.prototype.distance = function (vec) {
-	if (vec instanceof Vector3)
-		return Math.sqrt((this.x - vec.x) * (this.x - vec.x) + (this.y - vec.y) * (this.y - vec.y) + (this.z - vec.z) * (this.z - vec.z));
-}
+	if (vec instanceof Vector3) return Math.sqrt((this.x - vec.x) * (this.x - vec.x) + (this.y - vec.y) * (this.y - vec.y) + (this.z - vec.z) * (this.z - vec.z));
+};
 
 Vector3.prototype.add = function (vec) {
 	if (vec instanceof Vector3) {
@@ -12952,7 +12975,7 @@ Vector3.prototype.add = function (vec) {
 		this.z += vec.z;
 	}
 	return this;
-}
+};
 
 Vector3.prototype.subtract = function (vec) {
 	if (vec instanceof Vector3) {
@@ -12961,30 +12984,30 @@ Vector3.prototype.subtract = function (vec) {
 		this.z -= vec.z;
 	}
 	return this;
-}
+};
 
 Vector3.prototype.multiply = function (n) {
 	this.x *= n;
 	this.y *= n;
 	this.z *= n;
 	return this;
-}
+};
 
 Vector3.prototype.divide = function (n) {
 	if (n != 0) {
 		this.multiply(1 / n);
 	}
 	return this;
-}
+};
 
 Vector3.prototype.normalize = function () {
 	this.divide(this.mag());
 	return this;
-}
+};
 
 function Matrix3() {
 	this.data = [];
-	for (let i = 0; i < 9; i++) {
+	for (var i = 0; i < 9; i++) {
 		this.data[i] = 0;
 	}
 }
@@ -12993,25 +13016,25 @@ Matrix3.prototype.setIdentity = function () {
 	this.data[0 + 0 * 3] = 1;
 	this.data[1 + 1 * 3] = 1;
 	this.data[2 + 2 * 3] = 1;
-}
+};
 
 Matrix3.prototype.multiplyVector = function (vec) {
 	if (vec instanceof Vector3) {
-		let x = this.data[0 + 0 * 3] * vec.x + this.data[0 + 1 * 3] * vec.y + this.data[0 + 2 * 3] * vec.z;
-		let y = this.data[1 + 0 * 3] * vec.x + this.data[1 + 1 * 3] * vec.y + this.data[1 + 2 * 3] * vec.z;
-		let z = this.data[2 + 0 * 3] * vec.x + this.data[2 + 1 * 3] * vec.y + this.data[2 + 2 * 3] * vec.z;
+		var x = this.data[0 + 0 * 3] * vec.x + this.data[0 + 1 * 3] * vec.y + this.data[0 + 2 * 3] * vec.z;
+		var y = this.data[1 + 0 * 3] * vec.x + this.data[1 + 1 * 3] * vec.y + this.data[1 + 2 * 3] * vec.z;
+		var z = this.data[2 + 0 * 3] * vec.x + this.data[2 + 1 * 3] * vec.y + this.data[2 + 2 * 3] * vec.z;
 
 		return new Vector3(x, y, z);
 	}
-}
+};
 
 Matrix3.prototype.multiplyMatrix = function (mat) {
 	if (mat instanceof Matrix3) {
-		let result = new Matrix3();
-		for (let y = 0; y < 3; y++) {
-			for (let x = 0; x < 3; x++) {
-				let sum = 0;
-				for (let e = 0; e < 3; e++) {
+		var result = new Matrix3();
+		for (var y = 0; y < 3; y++) {
+			for (var x = 0; x < 3; x++) {
+				var sum = 0;
+				for (var e = 0; e < 3; e++) {
 					sum += this.data[e + y * 3] * mat.data[x + e * 3];
 				}
 				result.data[x + y * 3] = sum;
@@ -13019,15 +13042,15 @@ Matrix3.prototype.multiplyMatrix = function (mat) {
 		}
 		return result;
 	}
-}
+};
 
 Matrix3.rotate = function (angle, x, y, z) {
-	let result = new Matrix3();
+	var result = new Matrix3();
 	result.setIdentity();
 
-	let cos = Math.cos(angle);
-	let sin = Math.sin(angle);
-	let omc = 1 - cos;
+	var cos = Math.cos(angle);
+	var sin = Math.sin(angle);
+	var omc = 1 - cos;
 
 	result.data[0 + 0 * 3] = x * omc + cos;
 	result.data[1 + 0 * 3] = y * x * omc + z * sin;
@@ -13042,50 +13065,74 @@ Matrix3.rotate = function (angle, x, y, z) {
 	result.data[2 + 2 * 3] = z * omc + cos;
 
 	return result;
-}
+};
 
 //This is what matters
 function main() {
-	let c, ctx;
-	let opacity = 1.0;
-	let points = [];
-	let flagText = true;
-	let flag = true;
-	let width = 110;
-	const innerText = ["NodeJS","Webpack", "jQuery", "HTML5", "SCSS", "VBS", "SQL"];
-	let indexText = 0;
-	let numOfPoints = 1;
-	let testCases = 1;
-	let counter = 0;
-	let color = [255, 255, 255];
-	let angle = new Vector3(0, 0, 0);
-	let requestID;
-	let angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
+	var c = void 0,
+	    ctx = void 0;
+	var opacity = 1.0;
+	var points = [];
+	var flagText = true;
+	var flag = true;
+	var width = 110;
+	var innerText = ["NodeJS", "Webpack", "jQuery", "HTML5", "SCSS", "VBS", "SQL"];
+	var indexText = 0;
+	var numOfPoints = 1;
+	var testCases = 1;
+	var counter = 0;
+	var color = [255, 255, 255];
+	var angle = new Vector3(0, 0, 0);
+	var requestID = void 0;
+	var angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
 	c = document.getElementById("canvas");
 	c.width = 295;
 	c.height = 295;
 	ctx = c.getContext('2d');
 	ctx.fillStyle = 'rgb(255,255,255)';
 	render(ctx);
+
 	function letsDance() {
-		let loopDots = setTimeout(function () {
+		var loopDots = setTimeout(function () {
 			if (flag == true) {
-				for (let i = 0; i < numOfPoints; i++) {
-					let buf = [];
-					for (let j = 0; j < testCases; j++) {
-						let v = new Vector3(Math.random() * 4 - 2, Math.random() * 4 - 2, Math.random() * 4 - 2);
+				for (var i = 0; i < numOfPoints; i++) {
+					var buf = [];
+					for (var j = 0; j < testCases; j++) {
+						var v = new Vector3(Math.random() * 4 - 2, Math.random() * 4 - 2, Math.random() * 4 - 2);
 						v.normalize().multiply(width);
 						buf.push(v);
 					}
-					let currentSum = 0;
-					let currentHighest = 0;
+					var currentSum = 0;
+					var currentHighest = 0;
 
 					for (var k = 0; k < testCases; k++) {
 						var sum = 0;
 						var p = buf[k];
-						for (var l of points) {
-							sum += p.distance(l);
+						var _iteratorNormalCompletion = true;
+						var _didIteratorError = false;
+						var _iteratorError = undefined;
+
+						try {
+							for (var _iterator = points[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+								var l = _step.value;
+
+								sum += p.distance(l);
+							}
+						} catch (err) {
+							_didIteratorError = true;
+							_iteratorError = err;
+						} finally {
+							try {
+								if (!_iteratorNormalCompletion && _iterator.return) {
+									_iterator.return();
+								}
+							} finally {
+								if (_didIteratorError) {
+									throw _iteratorError;
+								}
+							}
 						}
+
 						if (sum > currentSum) {
 							currentSum = sum;
 							currentHighest = k;
@@ -13099,68 +13146,83 @@ function main() {
 					if (counter < 15) {
 						counter++;
 						letsDance();
-					}
-					else {
+					} else {
 						flag = false;
 						clearTimeout(loopUp);
 						letsDance();
 					}
 				}, 1000);
-			}
-
-			else if (flag == false) {
-				for (let i = 0; i < numOfPoints; i++) {
-					let buf = [];
-					for (let j = 0; j < testCases; j++) {
-						let v = new Vector3(Math.random() * 4 - 2, Math.random() * 4 - 2, Math.random() * 4 - 2);
-						v.normalize().multiply(width);
-						buf.push(v);
+			} else if (flag == false) {
+				for (var _i = 0; _i < numOfPoints; _i++) {
+					var _buf = [];
+					for (var _j = 0; _j < testCases; _j++) {
+						var _v = new Vector3(Math.random() * 4 - 2, Math.random() * 4 - 2, Math.random() * 4 - 2);
+						_v.normalize().multiply(width);
+						_buf.push(_v);
 					}
-					let currentSum = 0;
-					let currentHighest = 0;
+					var _currentSum = 0;
+					var _currentHighest = 0;
 
-					for (let k = 0; k < testCases; k++) {
-						let sum = 0;
-						let p = buf[k];
-						for (var l of points) {
-							sum += p.distance(l);
+					for (var _k = 0; _k < testCases; _k++) {
+						var _sum = 0;
+						var _p = _buf[_k];
+						var _iteratorNormalCompletion2 = true;
+						var _didIteratorError2 = false;
+						var _iteratorError2 = undefined;
+
+						try {
+							for (var _iterator2 = points[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+								var l = _step2.value;
+
+								_sum += _p.distance(l);
+							}
+						} catch (err) {
+							_didIteratorError2 = true;
+							_iteratorError2 = err;
+						} finally {
+							try {
+								if (!_iteratorNormalCompletion2 && _iterator2.return) {
+									_iterator2.return();
+								}
+							} finally {
+								if (_didIteratorError2) {
+									throw _iteratorError2;
+								}
+							}
 						}
-						if (sum > currentSum) {
-							currentSum = sum;
-							currentHighest = k;
+
+						if (_sum > _currentSum) {
+							_currentSum = _sum;
+							_currentHighest = _k;
 						}
 					}
 					testCases--;
-					points.pop(buf[currentHighest]);
+					points.pop(_buf[_currentHighest]);
 				}
-				let loopDown = setTimeout(function () {
-					let randomColor;
-					let colorNum = 0;
+				var loopDown = setTimeout(function () {
+					var randomColor = void 0;
+					var colorNum = 0;
 					if (counter > 0) {
 						counter--;
 						flag = false;
 						letsDance();
-					}
-					else {
+					} else {
 						flag = true;
 						clearTimeout(loopDown);
 						letsDance();
 					}
-
 				}, 1000);
-			}
-			else {
+			} else {
 
 				clearTimeout(loopDots);
 			}
-
 		}, 1000);
 	}
 
 	function loop() {
 		render();
 		update();
-	    requestID = window.requestAnimationFrame(loop);
+		requestID = window.requestAnimationFrame(loop);
 	}
 
 	function update() {
@@ -13168,59 +13230,75 @@ function main() {
 	}
 
 	function render() {
-		let rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
-		let rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
-		let rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
-		let rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
-		let lengthArr = innerText.length;
+		var rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
+		var rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
+		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
+		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
+		var lengthArr = innerText.length;
 		ctx.clearRect(35, 35, 225, 225);
 		ctx.font = "52px sketch";
 		ctx.textAlign = "center";
 		ctx.strokeStyle = "rgba(" + 245 + "," + 245 + "," + 245 + "," + opacity + ")";
 		ctx.textBaseline = "middle";
 		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
-        ctx.beginPath();
-         for (var p of points) {
-         p = rotation.multiplyVector(p);
-         const x = p.x + c.width / 2;
-         const y = p.y + c.height / 2;
-         ctx.moveTo(x + 2, y)
-         ctx.arc(x, y, 2, 0, 2 * Math.PI);
-         }
-        ctx.fill();
+		ctx.beginPath();
+		var _iteratorNormalCompletion3 = true;
+		var _didIteratorError3 = false;
+		var _iteratorError3 = undefined;
+
+		try {
+			for (var _iterator3 = points[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+				var p = _step3.value;
+
+				p = rotation.multiplyVector(p);
+				var x = p.x + c.width / 2;
+				var y = p.y + c.height / 2;
+				ctx.moveTo(x + 2, y);
+				ctx.arc(x, y, 2, 0, 2 * Math.PI);
+			}
+		} catch (err) {
+			_didIteratorError3 = true;
+			_iteratorError3 = err;
+		} finally {
+			try {
+				if (!_iteratorNormalCompletion3 && _iterator3.return) {
+					_iterator3.return();
+				}
+			} finally {
+				if (_didIteratorError3) {
+					throw _iteratorError3;
+				}
+			}
+		}
+
+		ctx.fill();
 
 		if (opacity > 0.005 && flagText == true) {
 			opacity -= 0.005;
 			if (opacity < 0.005 && indexText < lengthArr - 1) {
 				indexText++;
 				flagText = false;
-			}
-			else if (opacity < 0.005 && indexText === lengthArr - 1) {
+			} else if (opacity < 0.005 && indexText === lengthArr - 1) {
 				indexText = 0;
-			}
-
-			else {
+			} else {
 				flagText = true;
 			}
-		}
-		else if (opacity < 0.95 || (opacity < 0.01 && flagText == false)) {
+		} else if (opacity < 0.95 || opacity < 0.01 && flagText == false) {
 			opacity += 0.005;
 			flagText = false;
-		}
-		else {
+		} else {
 			flagText = true;
 		}
 	}
 	loop();
 	letsDance();
 	$('.menu__about').add('.menu__work').add('.menu__contact').click(function () {
-	cancelAnimationFrame(requestID);
-});
+		cancelAnimationFrame(requestID);
+	});
 	document.getElementsByClassName('menu__home')[0].onclick = function () {
-    main();
-	}
+		main();
+	};
 }
-
 
 /***/ }),
 /* 69 */
@@ -13402,35 +13480,38 @@ module.exports = Trianglify;
 
 /***/ }),
 /* 70 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_normalize__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_normalize___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_normalize__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scss_main_scss__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scss_main_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__scss_main_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__js_preloader__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__js_canvasBackground__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__js_main__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__js_canvasSphere__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__js_jsonAnimation__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__js_contactForm__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__js_volumeButtons__ = __webpack_require__(135);
 
 
+var _normalize = __webpack_require__(71);
 
+var _normalize2 = _interopRequireDefault(_normalize);
 
+var _main = __webpack_require__(72);
 
+var _main2 = _interopRequireDefault(_main);
 
+var _jquery = __webpack_require__(18);
 
+var _jquery2 = _interopRequireDefault(_jquery);
 
+__webpack_require__(112);
 
+__webpack_require__(114);
 
+__webpack_require__(132);
 
+__webpack_require__(68);
 
+__webpack_require__(38);
+
+__webpack_require__(133);
+
+__webpack_require__(135);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
 /* 71 */
@@ -16267,7 +16348,7 @@ return support;
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
-	__webpack_require__(17)
+	__webpack_require__(16)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery ) {
 
 "use strict";
@@ -17856,7 +17937,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(7),
 
 	__webpack_require__(4),
-	__webpack_require__(17),
+	__webpack_require__(16),
 	__webpack_require__(2) // contains
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, access, document, documentElement, rnumnonpx,
              curCSS, addGetHookIf, support, nodeName ) {
@@ -18083,7 +18164,7 @@ return jQuery;
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
 	__webpack_require__(9),
-	__webpack_require__(17)
+	__webpack_require__(16)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, access ) {
 
 "use strict";
@@ -18263,59 +18344,59 @@ if ( !noGlobal ) {
 
 /***/ }),
 /* 112 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_amplitude__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_amplitude___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_amplitude__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__canvasSphere_js__ = __webpack_require__(68);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__resize_js__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__jsonAnimation_js__ = __webpack_require__(38);
 
 
+var _amplitude = __webpack_require__(36);
 
+var _amplitude2 = _interopRequireDefault(_amplitude);
+
+var _canvasSphere = __webpack_require__(68);
+
+var _canvasSphere2 = _interopRequireDefault(_canvasSphere);
+
+var _resize = __webpack_require__(37);
+
+var _jsonAnimation = __webpack_require__(38);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 "use strict";
-let opacity = 0.55;
-let increment = 0.05;
-let pulse = setInterval(function () {
-    const el =  document.getElementsByClassName('entry-title')[0];
+var opacity = 0.55;
+var increment = 0.05;
+var pulse = setInterval(function () {
+    var el = document.getElementsByClassName('entry-title')[0];
     opacity += increment;
-    if (!document.body.classList.contains('loaded') && (!(opacity.toFixed(2) === '0.95' || opacity.toFixed(2) === '0.55')) ) {
+    if (!document.body.classList.contains('loaded') && !(opacity.toFixed(2) === '0.95' || opacity.toFixed(2) === '0.55')) {
         el.style.color = 'rgba(255%,255%,255%,' + opacity + ')';
-    }
-    else if (!document.body.classList.contains('loaded') && (opacity.toFixed(2) === '0.95' || opacity.toFixed(2) === '0.55')) {
+    } else if (!document.body.classList.contains('loaded') && (opacity.toFixed(2) === '0.95' || opacity.toFixed(2) === '0.55')) {
         increment = -increment;
+    } else {
+        clearInterval(pulse);
     }
-    else {
-    clearInterval(pulse);
-}
 }, 100);
 
 /*I'm giving you some extra time to enjoy my preloader*/
 window.onload = setTimeout(function () {
-    Object(__WEBPACK_IMPORTED_MODULE_1__canvasSphere_js__["a" /* default */])();   
-    __WEBPACK_IMPORTED_MODULE_3__jsonAnimation_js__["a" /* anim */].stop();
-    Object(__WEBPACK_IMPORTED_MODULE_2__resize_js__["a" /* resizeContent */])('#figure','#wrapperCanvas',800,900);
-    document.body.className = " loaded"; 
+    (0, _canvasSphere2.default)();
+    _jsonAnimation.anim.stop();
+    (0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
+    document.body.className = " loaded";
     document.getElementsByClassName('footer')[0].style.display = 'flex';
     $('#loader').add('.entry-title').add('#loader:before').add('#loader:after').stop().css('display', 'none');
-    __WEBPACK_IMPORTED_MODULE_0_amplitude___default.a.init({
-        "songs":
-        [
-            {
-                "name": "Cantaloupe Island",
-                "artist": "Herbie Hancock",
-                "album": "Then&Now The Definitive Herbie",
-                "url": " https://yovchenko.github.io/music/smoothMusic.mp3",
-            }
-        ],
+    _amplitude2.default.init({
+        "songs": [{
+            "name": "Cantaloupe Island",
+            "artist": "Herbie Hancock",
+            "album": "Then&Now The Definitive Herbie",
+            "url": " https://yovchenko.github.io/music/smoothMusic.mp3"
+        }],
         "volume_increment": 10,
         "volume_decrement": 10
     });
 }, 2000);
-
-
 
 /***/ }),
 /* 113 */
@@ -32473,18 +32554,19 @@ GroupEffect.prototype.init = function(data,element,dynamicProperties){
 
 /***/ }),
 /* 114 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__resize_js__ = __webpack_require__(37);
 
 
-let Trianglify = __webpack_require__(69); 
-let pattern = Trianglify({
+var _resize = __webpack_require__(37);
+
+var Trianglify = __webpack_require__(69);
+var pattern = Trianglify({
     width: window.innerWidth,
     height: window.innerHeight
 });
-const canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
+var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
 canvasBackground.setAttribute("class", "canvasPic");
 pattern = Trianglify({
     cell_size: 95,
@@ -32492,26 +32574,26 @@ pattern = Trianglify({
     x_colors: 'random',
     y_colors: 'match_x',
     palette: Trianglify.colorbrewer,
-    stroke_width: 0.2,
+    stroke_width: 0.2
 });
 // Serialize the SVG object to a String
-let m = new XMLSerializer().serializeToString(pattern.svg());
+var m = new XMLSerializer().serializeToString(pattern.svg());
 // Perform the base64 encoding of the String
-let k = window.btoa(m);
+var k = window.btoa(m);
 // Query the element to set the background image property
-const elementTop = document.getElementsByClassName('header')[0];
-const elementBottom = document.getElementsByClassName('footer')[0];
+var elementTop = document.getElementsByClassName('header')[0];
+var elementBottom = document.getElementsByClassName('footer')[0];
 // Set the background image property, including the encoding type header
 elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
-window.onresize = function(event){
+elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+window.onresize = function (event) {
     document.getElementsByClassName('canvasPic')[0].remove();
-    let pattern = Trianglify({
+    var pattern = Trianglify({
         width: window.innerWidth,
         height: window.innerHeight
     });
-    
-    const canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
+
+    var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
     canvasBackground.setAttribute("class", "canvasPic");
     pattern = Trianglify({
         cell_size: 95,
@@ -32519,14 +32601,13 @@ window.onresize = function(event){
         x_colors: 'random',
         y_colors: 'match_x',
         palette: Trianglify.colorbrewer,
-        stroke_width: 0.2,
+        stroke_width: 0.2
     });
 
     if ($('.envelope').is(':visible') === true) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope','#wrap',530,630);
-    }
-    else if ($('.canvas-box').is(':visible') === true) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('#figure','#wrapperCanvas',800,900);
+        (0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+    } else if ($('.canvas-box').is(':visible') === true) {
+        (0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
     }
 };
 
@@ -36038,57 +36119,60 @@ process.umask = function() { return 0; };
 
 /***/ }),
 /* 132 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__resize_js__ = __webpack_require__(37);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_amplitude__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_amplitude___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_amplitude__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__jsonAnimation_js__ = __webpack_require__(38);
 
 
-let Trianglify = __webpack_require__(69);
+var _resize = __webpack_require__(37);
 
+var _amplitude = __webpack_require__(36);
+
+var _amplitude2 = _interopRequireDefault(_amplitude);
+
+var _jsonAnimation = __webpack_require__(38);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Trianglify = __webpack_require__(69);
 
 
 $(document).ready(function () {
 	/* music player buttons */
 	document.getElementsByClassName('svgIcons')[0].onclick = function () {
-		const stop = document.getElementById('stopMusic');
-		const play = document.getElementById('playMusic');
-		const $volume = $('.volume');
+		var stop = document.getElementById('stopMusic');
+		var play = document.getElementById('playMusic');
+		var $volume = $('.volume');
 		if (stop.style.display === 'none') {
-			stop.style.display = 'block'
+			stop.style.display = 'block';
 			play.style.display = 'none';
 			$volume.fadeIn('slow');
-			__WEBPACK_IMPORTED_MODULE_1_amplitude___default.a.play();
-		}
-		else {
-			stop.style.display = 'none'
+			_amplitude2.default.play();
+		} else {
+			stop.style.display = 'none';
 			play.style.display = 'block';
 			$volume.fadeOut('slow');
-			__WEBPACK_IMPORTED_MODULE_1_amplitude___default.a.pause();
+			_amplitude2.default.pause();
 		}
-	}
+	};
 
 	/* hamburger menu */
-	const btnHamburger = document.getElementsByClassName('btn-hamburger')[0];
-	const init = document.getElementById('menu__init');
-	const menuToArrow = document.getElementById('menu-to-arrow');
-	const arrowToMenu = document.getElementById('arrow-to-menu');
-	const menuAbout = document.getElementsByClassName('menu__about')[0];
-	const menuWork = document.getElementsByClassName('menu__work')[0];
-	const menuContact = document.getElementsByClassName('menu__contact')[0];
+	var btnHamburger = document.getElementsByClassName('btn-hamburger')[0];
+	var init = document.getElementById('menu__init');
+	var menuToArrow = document.getElementById('menu-to-arrow');
+	var arrowToMenu = document.getElementById('arrow-to-menu');
+	var menuAbout = document.getElementsByClassName('menu__about')[0];
+	var menuWork = document.getElementsByClassName('menu__work')[0];
+	var menuContact = document.getElementsByClassName('menu__contact')[0];
 	btnHamburger.onclick = function () {
 		if (this.classList.value === 'btn-hamburger') {
 			this.classList += ' active';
 			animateMenuToArrow();
-		}
-		else {
+		} else {
 			this.classList = 'btn-hamburger';
 			animateArrowToMenu();
 		}
-	}
+	};
 
 	function animateMenuToArrow() {
 		menuToArrow.beginElement();
@@ -36104,102 +36188,107 @@ $(document).ready(function () {
 	}
 
 	/*header text animation*/
-	const $home = $('.menu__home');
-	const $about = $('.js-about');
-	const $work = $('.js-work');
-	const $contact = $('.js-contact');
-	let headerText = function () {
-		let s,
-			textLetters = {
-				settings: {
-					lettersAbout: $about,
-					lettersWork: $work,
-					lettersContact: $contact,
-				},
-				init: function () {
-					s = this.settings;
-					this.bindEvents();
-				},
-				bindEvents: function () {
-					$about.text('About');
-					$work.text('Work');
-					$contact.text('Contact');
-					{
-						s.lettersAbout.html(function (i, el) {
-							let text = $.trim(el).split("");
-							return '<span>' + text.join('</span><span>') + '</span>';
-						});
-						s.lettersWork.html(function (i, el) {
-							let text = $.trim(el).split("");
-							return '<span>' + text.join('</span><span>') + '</span>';
-						});
-						s.lettersContact.html(function (i, el) {
-							let text = $.trim(el).split("");
-							return '<span>' + text.join('</span><span>') + '</span>';
-						});
-					}
-				},
-			};
+	var $home = $('.menu__home');
+	var $about = $('.js-about');
+	var $work = $('.js-work');
+	var $contact = $('.js-contact');
+	var headerText = function headerText() {
+		var s = void 0,
+		    textLetters = {
+			settings: {
+				lettersAbout: $about,
+				lettersWork: $work,
+				lettersContact: $contact
+			},
+			init: function init() {
+				s = this.settings;
+				this.bindEvents();
+			},
+			bindEvents: function bindEvents() {
+				$about.text('About');
+				$work.text('Work');
+				$contact.text('Contact');{
+					s.lettersAbout.html(function (i, el) {
+						var text = $.trim(el).split("");
+						return '<span>' + text.join('</span><span>') + '</span>';
+					});
+					s.lettersWork.html(function (i, el) {
+						var text = $.trim(el).split("");
+						return '<span>' + text.join('</span><span>') + '</span>';
+					});
+					s.lettersContact.html(function (i, el) {
+						var text = $.trim(el).split("");
+						return '<span>' + text.join('</span><span>') + '</span>';
+					});
+				}
+			}
+		};
 		textLetters.init();
 	};
 
 	/* replace content onclick */
-	$home.on('click', { case: 1 }, content);
-	$about.on("click", { case: 2 }, content);
-	$work.on('click', { case: 3 }, content);
-	$contact.on('click', { case: 4 }, content);
-	let flag = false;
+	$home.on('click', {
+		case: 1
+	}, content);
+	$about.on("click", {
+		case: 2
+	}, content);
+	$work.on('click', {
+		case: 3
+	}, content);
+	$contact.on('click', {
+		case: 4
+	}, content);
+	var flag = false;
+
 	function content(event) {
-		const $wrapperCanvas = $('.canvas-box');
-		const $article = $('.about');
-		const $curtainRight = $('#curtain-section-right');
-		const $curtainLeft = $('#curtain-section-left');
-		const $container = $('.containerForm');
-		const $logoOne = $('.svg-logo-one');
-		const $logoTwo = $('.svg-logo-two');
-		let $pageMain = event.data.case;
+		var $wrapperCanvas = $('.canvas-box');
+		var $article = $('.about');
+		var $curtainRight = $('#curtain-section-right');
+		var $curtainLeft = $('#curtain-section-left');
+		var $container = $('.containerForm');
+		var $logoOne = $('.svg-logo-one');
+		var $logoTwo = $('.svg-logo-two');
+		var $pageMain = event.data.case;
 		$curtainRight.add($curtainLeft).css('width', '100%');
 		$curtainRight.stop().css('transform', 'translateX(50%)');
 		$curtainLeft.stop().css('transform', 'translateX(-50%)');
-		let $timerCurtain = setTimeout(function () {
+		var $timerCurtain = setTimeout(function () {
 			document.getElementsByClassName('grid-container')[0].classList = 'grid-container';
 			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
 			if ($pageMain === 4) {
 				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
-				Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope', '#wrap', 530, 630);
+				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 				flag = true;
-				__WEBPACK_IMPORTED_MODULE_2__jsonAnimation_js__["a" /* anim */].stop();
-			}
-			else if ($pageMain === 3) {
+				_jsonAnimation.anim.stop();
+			} else if ($pageMain === 3) {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
-				__WEBPACK_IMPORTED_MODULE_2__jsonAnimation_js__["a" /* anim */].stop();
+				_jsonAnimation.anim.stop();
 				flag = false;
-			}
-			else if ($pageMain === 2) {
+			} else if ($pageMain === 2) {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($container).stop().css('display', 'none');
 				$article.css('display', 'grid');
 				$home.css('display', 'flex');
-				__WEBPACK_IMPORTED_MODULE_2__jsonAnimation_js__["a" /* anim */].play();
+				_jsonAnimation.anim.play();
 				flag = false;
-			}
-			else {
-				($wrapperCanvas).add(btnHamburger).add($logoOne).add($logoTwo).css('display', 'grid');
+			} else {
+				$wrapperCanvas.add(btnHamburger).add($logoOne).add($logoTwo).css('display', 'grid');
 				$home.add($article).add($container).stop().css('display', 'none');
 				animateArrowToMenu();
-				Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('#figure', '#wrapperCanvas', 800, 900);
+				(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
 				btnHamburger.classList = 'btn-hamburger';
-				__WEBPACK_IMPORTED_MODULE_2__jsonAnimation_js__["a" /* anim */].stop();
+				_jsonAnimation.anim.stop();
 				flag = false;
 			}
 			document.getElementsByClassName('canvasPic')[0].remove();
-			let pattern = Trianglify({
+			var pattern = Trianglify({
 				width: window.innerWidth,
 				height: window.innerHeight
 			});
 
-			const canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
+			var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
 			canvasBackground.setAttribute("class", "canvasPic");
 			pattern = Trianglify({
 				cell_size: 95,
@@ -36207,7 +36296,7 @@ $(document).ready(function () {
 				x_colors: 'random',
 				y_colors: 'match_x',
 				palette: Trianglify.colorbrewer,
-				stroke_width: 0.2,
+				stroke_width: 0.2
 			});
 			$curtainRight.stop().css({
 				'-webkit-transform': 'translateX(100%)',
@@ -36222,40 +36311,36 @@ $(document).ready(function () {
 		}, 1500);
 	}
 
-	let originalSize = $(window).width() + $(window).height();
+	var originalSize = $(window).width() + $(window).height();
 	$(window).resize(function () {
 		if (flag === true && $(window).width() + $(window).height() != originalSize) {
 			document.getElementsByClassName('grid-container')[0].classList += ' resize';
 			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
-			Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope', '#wrap', 530, 630);
-		}
-		else {
+			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+		} else {
 			document.getElementsByClassName('grid-container')[0].classList = 'grid-container';
 			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
-			Object(__WEBPACK_IMPORTED_MODULE_0__resize_js__["a" /* resizeContent */])('.envelope', '#wrap', 530, 630);
+			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 		}
 	});
 });
 
-
-
-
-
 /***/ }),
 /* 133 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery_validation__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery_validation___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery_validation__);
 
 
+var _jqueryValidation = __webpack_require__(134);
 
-let $contactForm = $('#contactForm');
+var _jqueryValidation2 = _interopRequireDefault(_jqueryValidation);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var $contactForm = $('#contactForm');
 $contactForm.validate();
-$contactForm.submit(function(e) {
+$contactForm.submit(function (e) {
     if ($contactForm.valid()) {
         e.preventDefault();
         $.ajax({
@@ -36263,11 +36348,17 @@ $contactForm.submit(function(e) {
             method: "POST",
             data: $(this).serialize(),
             dataType: "json",
-            beforeSend: function() { $contactForm.append('<div class="alert alert--loading">Sending message…</div>');},
-            success: function(data) {$contactForm.find('.alert--loading').hide();
-            $contactForm.append('<div class="alert alert--success">Message sent!</div>');},
-            error: function(err) { $contactForm.find('.alert--loading').hide();
-            $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>'); }
+            beforeSend: function beforeSend() {
+                $contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+            },
+            success: function success(data) {
+                $contactForm.find('.alert--loading').hide();
+                $contactForm.append('<div class="alert alert--success">Message sent!</div>');
+            },
+            error: function error(err) {
+                $contactForm.find('.alert--loading').hide();
+                $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+            }
         });
     }
 });
@@ -36286,7 +36377,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
  */
 (function( factory ) {
 	if ( true ) {
-		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(16)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
+		!(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(18)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
 				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
 				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -37883,41 +37974,41 @@ return $;
 
 /***/ }),
 /* 135 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_amplitude__ = __webpack_require__(36);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_amplitude___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_amplitude__);
 
 
-jQuery(document).ready(function(){
+var _amplitude = __webpack_require__(36);
+
+jQuery(document).ready(function () {
     // This button will increment the value
-    $('.amplitude-volume-up').click(function(e){
+    $('.amplitude-volume-up').click(function (e) {
         // Stop acting like a button
         e.preventDefault();
         // Get the field name
-       let fieldName = $(this).attr('data-field');
+        var fieldName = $(this).attr('data-field');
         // Get its current value
-        let currentVal = parseInt($('input[name='+fieldName+']').val());
+        var currentVal = parseInt($('input[name=' + fieldName + ']').val());
         // If is not undefined
         if (!isNaN(currentVal) && currentVal < 100) {
             // Increment
-            $('input[name='+fieldName+']').val(currentVal + 10);
-        } 
+            $('input[name=' + fieldName + ']').val(currentVal + 10);
+        }
     });
     // This button will decrement the value till 0
-    $('.amplitude-volume-down').click(function(e) {
+    $('.amplitude-volume-down').click(function (e) {
         // Stop acting like a button
         e.preventDefault();
         // Get the field name
-       let fieldName = $(this).attr('data-field');
+        var fieldName = $(this).attr('data-field');
         // Get its current value
-        let currentVal = parseInt($('input[name='+fieldName+']').val());
+        var currentVal = parseInt($('input[name=' + fieldName + ']').val());
         // If it isn't undefined or its greater than 0
         if (!isNaN(currentVal) && currentVal > 0) {
             // Decrement one
-            $('input[name='+fieldName+']').val(currentVal - 10);
-        } 
+            $('input[name=' + fieldName + ']').val(currentVal - 10);
+        }
     });
 });
 

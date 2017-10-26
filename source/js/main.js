@@ -1,8 +1,12 @@
 'use strict';
-import { resizeContent } from './resize.js';
+import {
+	resizeContent
+} from './resize.js';
 let Trianglify = require('trianglify');
 import Amplitude from "amplitude";
-import { anim } from './jsonAnimation.js';
+import {
+	anim
+} from './jsonAnimation.js';
 
 $(document).ready(function () {
 	/* music player buttons */
@@ -15,8 +19,7 @@ $(document).ready(function () {
 			play.style.display = 'none';
 			$volume.fadeIn('slow');
 			Amplitude.play();
-		}
-		else {
+		} else {
 			stop.style.display = 'none'
 			play.style.display = 'block';
 			$volume.fadeOut('slow');
@@ -36,8 +39,7 @@ $(document).ready(function () {
 		if (this.classList.value === 'btn-hamburger') {
 			this.classList += ' active';
 			animateMenuToArrow();
-		}
-		else {
+		} else {
 			this.classList = 'btn-hamburger';
 			animateArrowToMenu();
 		}
@@ -76,8 +78,7 @@ $(document).ready(function () {
 				bindEvents: function () {
 					$about.text('About');
 					$work.text('Work');
-					$contact.text('Contact');
-					{
+					$contact.text('Contact'); {
 						s.lettersAbout.html(function (i, el) {
 							let text = $.trim(el).split("");
 							return '<span>' + text.join('</span><span>') + '</span>';
@@ -97,11 +98,20 @@ $(document).ready(function () {
 	};
 
 	/* replace content onclick */
-	$home.on('click', { case: 1 }, content);
-	$about.on("click", { case: 2 }, content);
-	$work.on('click', { case: 3 }, content);
-	$contact.on('click', { case: 4 }, content);
+	$home.on('click', {
+		case: 1
+	}, content);
+	$about.on("click", {
+		case: 2
+	}, content);
+	$work.on('click', {
+		case: 3
+	}, content);
+	$contact.on('click', {
+		case: 4
+	}, content);
 	let flag = false;
+
 	function content(event) {
 		const $wrapperCanvas = $('.canvas-box');
 		const $article = $('.about');
@@ -123,21 +133,18 @@ $(document).ready(function () {
 				resizeContent('.envelope', '#wrap', 530, 630);
 				flag = true;
 				anim.stop();
-			}
-			else if ($pageMain === 3) {
+			} else if ($pageMain === 3) {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
 				anim.stop();
 				flag = false;
-			}
-			else if ($pageMain === 2) {
+			} else if ($pageMain === 2) {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($container).stop().css('display', 'none');
 				$article.css('display', 'grid');
 				$home.css('display', 'flex');
 				anim.play();
 				flag = false;
-			}
-			else {
+			} else {
 				($wrapperCanvas).add(btnHamburger).add($logoOne).add($logoTwo).css('display', 'grid');
 				$home.add($article).add($container).stop().css('display', 'none');
 				animateArrowToMenu();
@@ -181,8 +188,7 @@ $(document).ready(function () {
 			document.getElementsByClassName('grid-container')[0].classList += ' resize';
 			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 			resizeContent('.envelope', '#wrap', 530, 630);
-		}
-		else {
+		} else {
 			document.getElementsByClassName('grid-container')[0].classList = 'grid-container';
 			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
 			resizeContent('.envelope', '#wrap', 530, 630);

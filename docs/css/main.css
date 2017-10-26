@@ -607,7 +607,7 @@ html, html body {
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "sketch","Georgia",serif;
+  font-family: "sketch", "Georgia", serif;
   margin: 0; }
   html body {
     background-color: rgba(106, 137, 244, 0.17); }
@@ -687,9 +687,11 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  .menu__header .menu__about, .menu__header .menu__work, .menu__header .menu__contact {
+  .menu__header .menu__about,
+  .menu__header .menu__work,
+  .menu__header .menu__contact {
     cursor: pointer;
-    font-family: "sketch","Georgia",serif;
+    font-family: "sketch", "Georgia", serif;
     display: none;
     font-size: 5.3vmin;
     line-height: 61px;
@@ -716,7 +718,7 @@ footer {
   .menu__header .menu__home {
     display: none;
     cursor: pointer;
-    font-family: "sketch","Georgia",serif;
+    font-family: "sketch", "Georgia", serif;
     font-size: 5.3vmin;
     line-height: 61px;
     grid-row: 1;
@@ -731,7 +733,8 @@ footer {
   .menu__header p[class] > span:first-child {
     padding-left: 10px; }
 
-.menu__header > p[class]:hover, .menu__header > p[class]:focus {
+.menu__header > p[class]:hover,
+.menu__header > p[class]:focus {
   text-shadow: -1px 0 rgba(255, 255, 255, 0.9), 0 1px rgba(255, 255, 255, 0.9), 1px 0 rgba(255, 255, 255, 0.9), 0 -1px rgba(255, 255, 255, 0.9);
   opacity: 0.85;
   transform: scaleY(1.07);
@@ -922,7 +925,8 @@ article {
   width: 100%;
   height: 320px; }
 
-#form_wrap.hide:after, #form_wrap.hide:before {
+#form_wrap.hide:after,
+#form_wrap.hide:before {
   display: none; }
 
 #form_wrap:hover {
@@ -961,7 +965,10 @@ label {
   text-transform: uppercase;
   text-shadow: 0px 1px 0px #fff; }
 
-#name, input[type=text], input[type=email], textarea {
+#name,
+input[type=text],
+input[type=email],
+textarea {
   font: 14px normal normal uppercase helvetica, arial, serif;
   color: #7c7873;
   background: none;
@@ -980,7 +987,10 @@ textarea {
   padding-top: 14px;
   resize: vertical; }
 
-#name:focus, textarea:focus, input[type=text]:focus, input[type=email]:focus {
+#name:focus,
+textarea:focus,
+input[type=text]:focus,
+input[type=email]:focus {
   background: rgba(255, 255, 255, 0.35); }
 
 #form_wrap input[type=submit] {
@@ -1022,7 +1032,8 @@ footer .wrapper {
   max-width: 44.5px;
   max-height: 44.5px; }
 
-.svgIcons:hover, .svgIcons:focus {
+.svgIcons:hover,
+.svgIcons:focus {
   -webkit-filter: url(#icon-shadow);
           filter: url(#icon-shadow);
   transform: scale(1.07);
@@ -1320,7 +1331,8 @@ footer .wrapper {
   transition: all 1s cubic-bezier(0.045, 0.045, 0.045, 1);
   /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */ }
 
-#curtain-section-right .load, #curtain-section-left .load {
+#curtain-section-right .load,
+#curtain-section-left .load {
   -webkit-transition: all 2s linear;
   /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
   transition: all 2s linear;
@@ -1477,7 +1489,11 @@ footer .wrapper {
 
 /* media queries */
 @media all and (min-width: 1600px) {
-  .wrapper #menu__init, .wrapper .menu__home, .wrapper .menu__about, .wrapper .menu__work, .wrapper .menu__contact {
+  .wrapper #menu__init,
+  .wrapper .menu__home,
+  .wrapper .menu__about,
+  .wrapper .menu__work,
+  .wrapper .menu__contact {
     font-size: 50px; }
   .wrapper article {
     font-size: 50px; } }
@@ -1501,7 +1517,9 @@ footer .wrapper {
       padding: 10px 0 10px 0; } }
 
 @media all and (max-width: 576px) {
-  .menu__header .menu__about, .menu__header .menu__work, .menu__header .menu__contact {
+  .menu__header .menu__about,
+  .menu__header .menu__work,
+  .menu__header .menu__contact {
     font-size: 5.6vmin; }
   .menu__header #menu__init {
     font-size: 5.6vmin;

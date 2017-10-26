@@ -25,22 +25,27 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.js$/,
+                exclude: [/node_modules/],
+                use: [{
+                    loader: 'babel-loader',
+                    options: { presets: ['es2015'] }                    
+                }]
+            },
+            {
                 test: /\.(eot|ttf|woff|woff2)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: '/fonts/',
-                            publicPath: '..'
-                        }
-                    },
-                ]
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: '/fonts/',
+                        publicPath: '..'
+                    }
+                }, ]
             },
             {
                 test: /\.(png|jpg&g|gif|svg|)$/,
-                use: [
-                    {
+                use: [{
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
@@ -56,25 +61,29 @@ module.exports = {
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
                     use: [{
-                        loader: 'css-loader',
-                        options: { importLoaders: 1 }
-                    },
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            ident: 'postcss',
-                            plugins: () => [require('autoprefixer')({ browsers: ['last 2 versions'] })]
+                            loader: 'css-loader',
+                            options: {
+                                importLoaders: 1
+                            }
+                        },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                ident: 'postcss',
+                                plugins: () => [require('autoprefixer')({
+                                    browsers: ['last 2 versions']
+                                })]
+                            }
+                        },
+                        {
+                            loader: 'sass-loader'
                         }
-                    },
-                    {
-                        loader: 'sass-loader'
-                    }]
+                    ]
                 })
             },
             {
                 test: /\.html$/,
-                use: [
-                    {
+                use: [{
                         loader: 'html-loader',
                         options: {
                             attrs: [':data-src']
@@ -110,7 +119,7 @@ module.exports = {
                 removeStyleLinkTypeAttributes: true
             }
         }),
-        new FaviconsWebpackPlugin(PATHS.source + '/favicon/favicon.png'), 
+        new FaviconsWebpackPlugin(PATHS.source + '/favicon/favicon.png'),
         new ExtractTextPlugin({
             filename: (getPath) => {
                 return getPath('css/[name].css').replace('css/js', 'css');

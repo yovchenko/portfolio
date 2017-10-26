@@ -1,4 +1,4 @@
-import bodymovin from "bodymovin"; 
+import bodymovin from "bodymovin";
 let animData = {
     wrapper: document.getElementById('animationWindow'),
     animType: 'svg',

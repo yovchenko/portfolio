@@ -126,7 +126,7 @@ export default function main() {
 	let flagText = true;
 	let flag = true;
 	let width = 110;
-	const innerText = ["NodeJS","Webpack", "jQuery", "HTML5", "SCSS", "VBS", "SQL"];
+	const innerText = ["NodeJS", "Webpack", "jQuery", "HTML5", "SCSS", "VBS", "SQL"];
 	let indexText = 0;
 	let numOfPoints = 1;
 	let testCases = 1;
@@ -141,6 +141,7 @@ export default function main() {
 	ctx = c.getContext('2d');
 	ctx.fillStyle = 'rgb(255,255,255)';
 	render(ctx);
+
 	function letsDance() {
 		let loopDots = setTimeout(function () {
 			if (flag == true) {
@@ -173,16 +174,13 @@ export default function main() {
 					if (counter < 15) {
 						counter++;
 						letsDance();
-					}
-					else {
+					} else {
 						flag = false;
 						clearTimeout(loopUp);
 						letsDance();
 					}
 				}, 1000);
-			}
-
-			else if (flag == false) {
+			} else if (flag == false) {
 				for (let i = 0; i < numOfPoints; i++) {
 					let buf = [];
 					for (let j = 0; j < testCases; j++) {
@@ -214,16 +212,14 @@ export default function main() {
 						counter--;
 						flag = false;
 						letsDance();
-					}
-					else {
+					} else {
 						flag = true;
 						clearTimeout(loopDown);
 						letsDance();
 					}
 
 				}, 1000);
-			}
-			else {
+			} else {
 
 				clearTimeout(loopDots);
 			}
@@ -234,7 +230,7 @@ export default function main() {
 	function loop() {
 		render();
 		update();
-	    requestID = window.requestAnimationFrame(loop);
+		requestID = window.requestAnimationFrame(loop);
 	}
 
 	function update() {
@@ -253,44 +249,39 @@ export default function main() {
 		ctx.strokeStyle = "rgba(" + 245 + "," + 245 + "," + 245 + "," + opacity + ")";
 		ctx.textBaseline = "middle";
 		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
-        ctx.beginPath();
-         for (var p of points) {
-         p = rotation.multiplyVector(p);
-         const x = p.x + c.width / 2;
-         const y = p.y + c.height / 2;
-         ctx.moveTo(x + 2, y)
-         ctx.arc(x, y, 2, 0, 2 * Math.PI);
-         }
-        ctx.fill();
+		ctx.beginPath();
+		for (var p of points) {
+			p = rotation.multiplyVector(p);
+			const x = p.x + c.width / 2;
+			const y = p.y + c.height / 2;
+			ctx.moveTo(x + 2, y)
+			ctx.arc(x, y, 2, 0, 2 * Math.PI);
+		}
+		ctx.fill();
 
 		if (opacity > 0.005 && flagText == true) {
 			opacity -= 0.005;
 			if (opacity < 0.005 && indexText < lengthArr - 1) {
 				indexText++;
 				flagText = false;
-			}
-			else if (opacity < 0.005 && indexText === lengthArr - 1) {
+			} else if (opacity < 0.005 && indexText === lengthArr - 1) {
 				indexText = 0;
-			}
-
-			else {
+			} else {
 				flagText = true;
 			}
-		}
-		else if (opacity < 0.95 || (opacity < 0.01 && flagText == false)) {
+		} else if (opacity < 0.95 || (opacity < 0.01 && flagText == false)) {
 			opacity += 0.005;
 			flagText = false;
-		}
-		else {
+		} else {
 			flagText = true;
 		}
 	}
 	loop();
 	letsDance();
 	$('.menu__about').add('.menu__work').add('.menu__contact').click(function () {
-	cancelAnimationFrame(requestID);
-});
+		cancelAnimationFrame(requestID);
+	});
 	document.getElementsByClassName('menu__home')[0].onclick = function () {
-    main();
+		main();
 	}
 }

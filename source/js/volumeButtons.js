@@ -1,32 +1,34 @@
 "use strict";
-import {AmplitudeEvents} from "amplitude";
-jQuery(document).ready(function(){
+import {
+    AmplitudeEvents
+} from "amplitude";
+jQuery(document).ready(function () {
     // This button will increment the value
-    $('.amplitude-volume-up').click(function(e){
+    $('.amplitude-volume-up').click(function (e) {
         // Stop acting like a button
         e.preventDefault();
         // Get the field name
-       let fieldName = $(this).attr('data-field');
+        let fieldName = $(this).attr('data-field');
         // Get its current value
-        let currentVal = parseInt($('input[name='+fieldName+']').val());
+        let currentVal = parseInt($('input[name=' + fieldName + ']').val());
         // If is not undefined
         if (!isNaN(currentVal) && currentVal < 100) {
             // Increment
-            $('input[name='+fieldName+']').val(currentVal + 10);
-        } 
+            $('input[name=' + fieldName + ']').val(currentVal + 10);
+        }
     });
     // This button will decrement the value till 0
-    $('.amplitude-volume-down').click(function(e) {
+    $('.amplitude-volume-down').click(function (e) {
         // Stop acting like a button
         e.preventDefault();
         // Get the field name
-       let fieldName = $(this).attr('data-field');
+        let fieldName = $(this).attr('data-field');
         // Get its current value
-        let currentVal = parseInt($('input[name='+fieldName+']').val());
+        let currentVal = parseInt($('input[name=' + fieldName + ']').val());
         // If it isn't undefined or its greater than 0
         if (!isNaN(currentVal) && currentVal > 0) {
             // Decrement one
-            $('input[name='+fieldName+']').val(currentVal - 10);
-        } 
+            $('input[name=' + fieldName + ']').val(currentVal - 10);
+        }
     });
 });
