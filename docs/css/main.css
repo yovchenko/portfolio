@@ -1012,17 +1012,18 @@ input[type=email]:focus {
   background: rgba(255, 255, 255, 0.35); }
 
 #form_wrap input[type=submit] {
-  position: relative;
+  position: absolute;
   font-size: 3em;
   font-family: 'Italianno, cursive';
   color: rgba(0, 0, 0, 0.3);
-  width: 100%;
+  width: 89%;
   text-align: center;
   opacity: 0;
+  bottom: 84px;
   max-height: 40px;
   background: none;
   cursor: pointer;
-  border-radius: 3px;
+  border-radius: 15px;
   -webkit-transition: opacity .6s ease-in-out 0s;
   transition: opacity .6s ease-in-out 0s; }
 
