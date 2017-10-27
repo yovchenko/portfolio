@@ -10,7 +10,7 @@ import {
 
 $(document).ready(function (e) {
 	/* music player buttons */
-	document.getElementsByClassName('svgIcons')[0].onclick = function (e) {
+	document.getElementsByClassName('svgIcons')[0].onclick = function () {
 		const stop = document.getElementById('stopMusic');
 		const play = document.getElementById('playMusic');
 		const $volume = $('.volume');
@@ -35,7 +35,7 @@ $(document).ready(function (e) {
 	const menuAbout = document.getElementsByClassName('menu__about')[0];
 	const menuWork = document.getElementsByClassName('menu__work')[0];
 	const menuContact = document.getElementsByClassName('menu__contact')[0];
-	btnHamburger.onclick = function (e) {
+	btnHamburger.onclick = function () {
 		if (this.classList.value === 'btn-hamburger') {
 			this.classList += ' active';
 			animateMenuToArrow();
@@ -111,6 +111,8 @@ $(document).ready(function (e) {
 		case: 4
 	}, content);
 	let flag = false;
+	const grid = document.getElementsByClassName('grid-container')[0];
+	const canvasPic = document.getElementsByClassName('canvasPic')[0];
 
 	function content(event) {
 		const $wrapperCanvas = $('.canvas-box');
@@ -125,8 +127,8 @@ $(document).ready(function (e) {
 		$curtainRight.stop().css('transform', 'translateX(50%)');
 		$curtainLeft.stop().css('transform', 'translateX(-50%)');
 		let $timerCurtain = setTimeout(function () {
-			document.getElementsByClassName('grid-container')[0].classList = 'grid-container';
-			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
+			grid.classList = 'grid-container';
+			canvasPic.classList = 'canvasPic';
 			if ($pageMain === 4) {
 				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
@@ -184,7 +186,7 @@ $(document).ready(function (e) {
 
 	let originalSize = $(window).width() + $(window).height();
 	$(window).resize(function () {
-		if (flag === true && $(window).width() + $(window).height() != originalSize) {
+		if (flag === true && $(window).width() + $(window).height() != originalSize && grid.classList.value === 'grid-container') {
 			document.getElementsByClassName('grid-container')[0].classList += ' resize';
 			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 			resizeContent('.envelope', '#wrap', 530, 630);
