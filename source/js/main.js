@@ -199,9 +199,8 @@ $(document).ready(function (e) {
 	});
 	$(window).on("orientationchange", function (event) {
 		if (flag === true) {
-			document.getElementsByClassName('grid-container')[0] = 'grid-container';
-			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
-			resizeContent('.envelope', '#wrap', 530, 630);
+			grid.classList = 'grid-container';
+			canvasPic.classList = 'canvasPic';
 		}
 	});
 });
