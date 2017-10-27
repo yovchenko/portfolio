@@ -36325,6 +36325,7 @@ $(document).ready(function (e) {
 			grid.classList = 'grid-container';
 			canvasPic.classList = 'canvasPic';
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+			orientation = false;
 		}
 	});
 	$(window).on("orientationchange", function (event) {
