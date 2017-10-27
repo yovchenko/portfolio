@@ -188,10 +188,11 @@ $(document).ready(function (e) {
 	let originalSize = $(window).width() + $(window).height();
 	let orientation = false;
 	$(window).resize(function () {
-		if (flag === true && $(window).width() + $(window).height() != originalSize && grid.classList.value === 'grid-container' && orientation === false) {
+		if ((flag === true && $(window).width() + $(window).height() != originalSize && grid.classList.value === 'grid-container') || (orientation === true)) {
 			document.getElementsByClassName('grid-container')[0].classList += ' resize';
 			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 			resizeContent('.envelope', '#wrap', 530, 630);
+			orientation = false;
 		} else {
 			grid.classList = 'grid-container';
 			canvasPic.classList = 'canvasPic';
@@ -201,10 +202,10 @@ $(document).ready(function (e) {
 	});
 	$(window).on("orientationchange", function (event) {
 		if (flag === true && grid.classList.value === 'grid-container') {
-			orientation = true;
+			orientation = false;
 		}
 		else if (flag === true && grid.classList.value === 'grid-container resize') {
-
+			orientation = true
 		}
 	});
 });
