@@ -196,6 +196,10 @@ $(document).ready(function (e) {
 			resizeContent('.envelope', '#wrap', 530, 630);
 		}
 	});
+	$(window).on("orientationchange", function (event) {
+		grid.classList = 'grid-container';
+		canvasPic.classList = 'canvasPic';
+	});
 });
 
 
