@@ -8,21 +8,22 @@ import {
 	anim
 } from './jsonAnimation.js';
 
-$(document).ready(function () {
+$(document).ready(function (e) {
 	/* music player buttons */
-	document.getElementsByClassName('svgIcons')[0].onclick = function () {
+	document.getElementsByClassName('svgIcons')[0].onclick = function (e) {
 		const stop = document.getElementById('stopMusic');
 		const play = document.getElementById('playMusic');
+		e.preventDefault();
 		const $volume = $('.volume');
 		if (stop.style.display === 'none') {
 			stop.style.display = 'block'
 			play.style.display = 'none';
-			$volume.fadeIn('slow');
+			$volume.stop().fadeIn('slow');
 			Amplitude.play();
 		} else {
 			stop.style.display = 'none'
 			play.style.display = 'block';
-			$volume.fadeOut('slow');
+			$volume.stop().fadeOut('slow');
 			Amplitude.pause();
 		}
 	}
@@ -35,7 +36,8 @@ $(document).ready(function () {
 	const menuAbout = document.getElementsByClassName('menu__about')[0];
 	const menuWork = document.getElementsByClassName('menu__work')[0];
 	const menuContact = document.getElementsByClassName('menu__contact')[0];
-	btnHamburger.onclick = function () {
+	btnHamburger.onclick = function (e) {
+		e.preventDefault();
 		if (this.classList.value === 'btn-hamburger') {
 			this.classList += ' active';
 			animateMenuToArrow();
@@ -113,6 +115,7 @@ $(document).ready(function () {
 	let flag = false;
 
 	function content(event) {
+		event.preventDefault();
 		const $wrapperCanvas = $('.canvas-box');
 		const $article = $('.about');
 		const $curtainRight = $('#curtain-section-right');

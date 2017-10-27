@@ -36137,21 +36137,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Trianglify = __webpack_require__(69);
 
 
-$(document).ready(function () {
+$(document).ready(function (e) {
 	/* music player buttons */
-	document.getElementsByClassName('svgIcons')[0].onclick = function () {
+	document.getElementsByClassName('svgIcons')[0].onclick = function (e) {
 		var stop = document.getElementById('stopMusic');
 		var play = document.getElementById('playMusic');
+		e.preventDefault();
 		var $volume = $('.volume');
 		if (stop.style.display === 'none') {
 			stop.style.display = 'block';
 			play.style.display = 'none';
-			$volume.fadeIn('slow');
+			$volume.stop().fadeIn('slow');
 			_amplitude2.default.play();
 		} else {
 			stop.style.display = 'none';
 			play.style.display = 'block';
-			$volume.fadeOut('slow');
+			$volume.stop().fadeOut('slow');
 			_amplitude2.default.pause();
 		}
 	};
@@ -36164,7 +36165,8 @@ $(document).ready(function () {
 	var menuAbout = document.getElementsByClassName('menu__about')[0];
 	var menuWork = document.getElementsByClassName('menu__work')[0];
 	var menuContact = document.getElementsByClassName('menu__contact')[0];
-	btnHamburger.onclick = function () {
+	btnHamburger.onclick = function (e) {
+		e.preventDefault();
 		if (this.classList.value === 'btn-hamburger') {
 			this.classList += ' active';
 			animateMenuToArrow();
@@ -36242,6 +36244,7 @@ $(document).ready(function () {
 	var flag = false;
 
 	function content(event) {
+		event.preventDefault();
 		var $wrapperCanvas = $('.canvas-box');
 		var $article = $('.about');
 		var $curtainRight = $('#curtain-section-right');
