@@ -112,7 +112,6 @@ $(document).ready(function (e) {
 	}, content);
 	let flag = false;
 	const grid = document.getElementsByClassName('grid-container')[0];
-	const canvasPic = document.getElementsByClassName('canvasPic')[0];
 
 	function content(event) {
 		const $wrapperCanvas = $('.canvas-box');
@@ -128,7 +127,7 @@ $(document).ready(function (e) {
 		$curtainLeft.stop().css('transform', 'translateX(-50%)');
 		let $timerCurtain = setTimeout(function () {
 			grid.classList = 'grid-container';
-			canvasPic.classList = 'canvasPic';
+			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
 			if ($pageMain === 4) {
 				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
@@ -197,8 +196,11 @@ $(document).ready(function (e) {
 		}
 	});
 	$(window).on("orientationchange", function (event) {
-		grid.classList = 'grid-container';
-		canvasPic.classList = 'canvasPic';
+		if (flag === true) {
+			document.getElementsByClassName('grid-container')[0].classList = 'grid-container';
+			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
+			resizeContent('.envelope', '#wrap', 530, 630);
+		}
 	});
 });
 
