@@ -13,8 +13,8 @@ $(document).ready(function (e) {
 	document.getElementsByClassName('svgIcons')[0].onclick = function (e) {
 		const stop = document.getElementById('stopMusic');
 		const play = document.getElementById('playMusic');
-		e.preventDefault();
 		const $volume = $('.volume');
+		e.preventDefault();
 		if (stop.style.display === 'none') {
 			stop.style.display = 'block'
 			play.style.display = 'none';

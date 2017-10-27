@@ -278,10 +278,12 @@ export default function main() {
 	}
 	loop();
 	letsDance();
-	$('.menu__about').add('.menu__work').add('.menu__contact').click(function () {
+	$('.menu__about').add('.menu__work').add('.menu__contact').click(function (e) {
+		e.preventDefault();
 		cancelAnimationFrame(requestID);
 	});
-	document.getElementsByClassName('menu__home')[0].onclick = function () {
+	document.getElementsByClassName('menu__home')[0].onclick = function (e) {
+		e.preventDefault();
 		main();
 	}
 }
