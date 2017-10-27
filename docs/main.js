@@ -36314,6 +36314,12 @@ $(document).ready(function (e) {
 	}
 
 	/* the form is getting bigger when the on-screen keyboard opens */
+	$(window).on("orientationchange", function (event) {
+		if (flag === true) {
+			grid.classList = 'grid-container';
+			canvasPic.classList = 'canvasPic';
+		}
+	});
 	var originalSize = $(window).width() + $(window).height();
 	$(window).resize(function () {
 		if (flag === true && $(window).width() + $(window).height() != originalSize && grid.classList.value === 'grid-container') {
@@ -36324,12 +36330,6 @@ $(document).ready(function (e) {
 			grid.classList = 'grid-container';
 			canvasPic.classList = 'canvasPic';
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-		}
-	});
-	$(window).on("orientationchange", function (event) {
-		if (flag === true) {
-			grid.classList = 'grid-container';
-			canvasPic.classList = 'canvasPic';
 		}
 	});
 });
