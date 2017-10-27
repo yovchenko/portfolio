@@ -113,6 +113,7 @@ $(document).ready(function (e) {
 	let flag = false;
 	const grid = document.getElementsByClassName('grid-container')[0];
 	let canvasPic = document.getElementsByClassName('canvasPic')[0];
+
 	function content(event) {
 		const $wrapperCanvas = $('.canvas-box');
 		const $article = $('.about');
@@ -204,6 +205,3 @@ $(document).ready(function (e) {
 		}
 	});
 });
-
-
-

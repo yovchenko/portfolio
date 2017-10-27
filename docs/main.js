@@ -36242,6 +36242,7 @@ $(document).ready(function (e) {
 	var flag = false;
 	var grid = document.getElementsByClassName('grid-container')[0];
 	var canvasPic = document.getElementsByClassName('canvasPic')[0];
+
 	function content(event) {
 		var $wrapperCanvas = $('.canvas-box');
 		var $article = $('.about');

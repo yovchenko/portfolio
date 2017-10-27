@@ -394,8 +394,8 @@ form {
     -o-transition: all 1s ease-in-out .3s;
     transition: all 1s ease-in-out .3s;
     p {
-       font-size: 3.8em;
-       margin: 5px 0px 5px 0px;
+        font-size: 3.8em;
+        margin: 5px 0px 5px 0px;
     }
 }
 
@@ -410,7 +410,7 @@ label {
     text-shadow: 0px 1px 0px #fff;
 }
 
-#name-error, 
+#name-error,
 #email-error {
     color: red;
     float: right;
@@ -453,7 +453,6 @@ textarea:focus,
 input[type=text]:focus,
 input[type=email]:focus {
     background: rgba(255, 255, 255, .35);
-
 }
 
 #form_wrap input[type=submit] {
@@ -1081,18 +1080,29 @@ footer .wrapper {
     .btn-hamburger:hover {
         transform: none;
     }
-    .grid-container.resize {
-        grid-template-rows: 65px calc(100vh + 50vh) auto;
-    }
-    .canvasPic.resize {
-        height: calc(100vh + 50vh);
-    }
     main .volume {
         right: 6%;
         bottom: 9%;
         transform: scale(1.2);
         .input-wrap {
             padding: 10px 0 10px 0;
+        }
+    }
+    @media all and (orientation: portrait) {
+        .grid-container.resize {
+            grid-template-rows: 65px calc(100vh + 50vh) auto;
+        }
+        .canvasPic.resize {
+            height: calc(100vh + 50vh);
+        }
+    }
+    @media all and (orientation: landscape) {
+        .grid-container.resize {
+            grid-template-rows: 65px calc(100vh + 150vh) auto;
+        }
+        .canvasPic.resize {
+            
+            height: calc(100vh + 150vh);
         }
     }
 }
