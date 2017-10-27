@@ -13293,11 +13293,9 @@ function main() {
 	loop();
 	letsDance();
 	$('.menu__about').add('.menu__work').add('.menu__contact').click(function (e) {
-		e.preventDefault();
 		cancelAnimationFrame(requestID);
 	});
 	document.getElementsByClassName('menu__home')[0].onclick = function (e) {
-		e.preventDefault();
 		main();
 	};
 }
@@ -36145,7 +36143,6 @@ $(document).ready(function (e) {
 		var stop = document.getElementById('stopMusic');
 		var play = document.getElementById('playMusic');
 		var $volume = $('.volume');
-		e.preventDefault();
 		if (stop.style.display === 'none') {
 			stop.style.display = 'block';
 			play.style.display = 'none';
@@ -36168,7 +36165,6 @@ $(document).ready(function (e) {
 	var menuWork = document.getElementsByClassName('menu__work')[0];
 	var menuContact = document.getElementsByClassName('menu__contact')[0];
 	btnHamburger.onclick = function (e) {
-		e.preventDefault();
 		if (this.classList.value === 'btn-hamburger') {
 			this.classList += ' active';
 			animateMenuToArrow();
@@ -36246,7 +36242,6 @@ $(document).ready(function (e) {
 	var flag = false;
 
 	function content(event) {
-		event.preventDefault();
 		var $wrapperCanvas = $('.canvas-box');
 		var $article = $('.about');
 		var $curtainRight = $('#curtain-section-right');

@@ -14,7 +14,6 @@ $(document).ready(function (e) {
 		const stop = document.getElementById('stopMusic');
 		const play = document.getElementById('playMusic');
 		const $volume = $('.volume');
-		e.preventDefault();
 		if (stop.style.display === 'none') {
 			stop.style.display = 'block'
 			play.style.display = 'none';
@@ -37,7 +36,6 @@ $(document).ready(function (e) {
 	const menuWork = document.getElementsByClassName('menu__work')[0];
 	const menuContact = document.getElementsByClassName('menu__contact')[0];
 	btnHamburger.onclick = function (e) {
-		e.preventDefault();
 		if (this.classList.value === 'btn-hamburger') {
 			this.classList += ' active';
 			animateMenuToArrow();
@@ -115,7 +113,6 @@ $(document).ready(function (e) {
 	let flag = false;
 
 	function content(event) {
-		event.preventDefault();
 		const $wrapperCanvas = $('.canvas-box');
 		const $article = $('.about');
 		const $curtainRight = $('#curtain-section-right');
