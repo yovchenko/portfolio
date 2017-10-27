@@ -36241,7 +36241,7 @@ $(document).ready(function (e) {
 	}, content);
 	var flag = false;
 	var grid = document.getElementsByClassName('grid-container')[0];
-
+	var canvasPic = document.getElementsByClassName('canvasPic')[0];
 	function content(event) {
 		var $wrapperCanvas = $('.canvas-box');
 		var $article = $('.about');
@@ -36256,7 +36256,7 @@ $(document).ready(function (e) {
 		$curtainLeft.stop().css('transform', 'translateX(-50%)');
 		var $timerCurtain = setTimeout(function () {
 			grid.classList = 'grid-container';
-			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
+			canvasPic.classList = 'canvasPic';
 			if ($pageMain === 4) {
 				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
@@ -36312,6 +36312,7 @@ $(document).ready(function (e) {
 		}, 1500);
 	}
 
+	/* the form is getting bigger when the on-screen keyboard opens */
 	var originalSize = $(window).width() + $(window).height();
 	$(window).resize(function () {
 		if (flag === true && $(window).width() + $(window).height() != originalSize && grid.classList.value === 'grid-container') {
@@ -36319,15 +36320,15 @@ $(document).ready(function (e) {
 			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 		} else {
-			document.getElementsByClassName('grid-container')[0].classList = 'grid-container';
-			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
+			grid.classList = 'grid-container';
+			canvasPic.classList = 'canvasPic';
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 		}
 	});
 	$(window).on("orientationchange", function (event) {
 		if (flag === true) {
-			document.getElementsByClassName('grid-container')[0].classList = 'grid-container';
-			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
+			grid.classList = 'grid-container';
+			canvasPic.classList = 'canvasPic';
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 		}
 	});
