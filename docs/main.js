@@ -32586,28 +32586,33 @@ var elementBottom = document.getElementsByClassName('footer')[0];
 // Set the background image property, including the encoding type header
 elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
 elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+var originalSize = $(window).width() + $(window).height();
 window.onresize = function (event) {
-    document.getElementsByClassName('canvasPic')[0].remove();
-    var pattern = Trianglify({
-        width: window.innerWidth,
-        height: window.innerHeight
-    });
+    var newSize = $(window).width() + $(window).height();
+    if (newSize !== originalSize) {
+        document.getElementsByClassName('canvasPic')[0].remove();
+        var _pattern = Trianglify({
+            width: window.innerWidth,
+            height: window.innerHeight
+        });
 
-    var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-    canvasBackground.setAttribute("class", "canvasPic");
-    pattern = Trianglify({
-        cell_size: 95,
-        variance: 0.75,
-        x_colors: 'random',
-        y_colors: 'match_x',
-        palette: Trianglify.colorbrewer,
-        stroke_width: 0.2
-    });
+        var _canvasBackground = document.getElementById("main").appendChild(_pattern.canvas());
+        _canvasBackground.setAttribute("class", "canvasPic");
+        _pattern = Trianglify({
+            cell_size: 95,
+            variance: 0.75,
+            x_colors: 'random',
+            y_colors: 'match_x',
+            palette: Trianglify.colorbrewer,
+            stroke_width: 0.2
+        });
 
-    if ($('.envelope').is(':visible') === true) {
-        (0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-    } else if ($('.canvas-box').is(':visible') === true) {
-        (0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
+        if ($('.envelope').is(':visible') === true) {
+            (0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+        } else if ($('.canvas-box').is(':visible') === true) {
+            (0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
+        }
+        originalSize = newSize;
     }
 };
 
@@ -36315,7 +36320,8 @@ $(document).ready(function (e) {
 	/* the form is getting bigger when the on-screen keyboard opens */
 	var originalSize = $(window).width() + $(window).height();
 	$(window).resize(function () {
-		if (flag === true && $(window).width() + $(window).height() != originalSize && grid.classList.value === 'grid-container') {
+		var newSize = $(window).width() + $(window).height();
+		if (flag === true && newSize !== originalSize && grid.classList.value === 'grid-container') {
 			document.getElementsByClassName('grid-container')[0].classList += ' resize';
 			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
