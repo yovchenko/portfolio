@@ -50,4 +50,5 @@ window.onresize = function (event) {
     } else if ($('.canvas-box').is(':visible') === true) {
         resizeContent('#figure', '#wrapperCanvas', 800, 900);
     }
+    
 };

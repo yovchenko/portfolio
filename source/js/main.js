@@ -187,22 +187,20 @@ $(document).ready(function (e) {
 let originalSize = $(window).width() + $(window).height();
 let orientation = false;
 $(window).resize(function () {
-	let newSize = $(window).width() + $(window).height();
+//	let newSize = $(window).width() + $(window).height();
 	if (flag === true && newSize != originalSize && grid.classList.value === 'grid-container' && orientation === false) {
 		document.getElementsByClassName('grid-container')[0].classList += ' resize';
 		document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 		resizeContent('.envelope', '#wrap', 530, 630);
-		originalSize = newSize;
 	} else {
 		grid.classList = 'grid-container';
 		canvasPic.classList = 'canvasPic';
 		resizeContent('.envelope', '#wrap', 530, 630);
-		originalSize = newSize;
 		orientation = false;
+
 	}
 });
 $(window).on("orientationchange", function (event) {
-let newSize = $(window).width() + $(window).height();
 if (flag === true && grid.classList.value === 'grid-container') {
 	orientation = true;
 } else if (flag === true && grid.classList.value === 'grid-container resize') {
