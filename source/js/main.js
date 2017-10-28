@@ -231,6 +231,7 @@ $(document).ready(function (e) {
 		} else if (flagHome === true) {
 			resizeContent('#figure', '#wrapperCanvas', 800, 900);
 		}
+		originalSize = newSize;
 		resizeContent('.envelope', '#wrap', 530, 630);
 	});
 });
