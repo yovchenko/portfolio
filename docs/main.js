@@ -32586,30 +32586,6 @@ var elementBottom = document.getElementsByClassName('footer')[0];
 // Set the background image property, including the encoding type header
 elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
 elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-window.onresize = function (event) {
-    document.getElementsByClassName('canvasPic')[0].remove();
-    var pattern = Trianglify({
-        width: window.innerWidth,
-        height: window.innerHeight
-    });
-
-    var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-    canvasBackground.setAttribute("class", "canvasPic");
-    pattern = Trianglify({
-        cell_size: 95,
-        variance: 0.75,
-        x_colors: 'random',
-        y_colors: 'match_x',
-        palette: Trianglify.colorbrewer,
-        stroke_width: 0.2
-    });
-
-    if ($('.envelope').is(':visible') === true) {
-        (0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-    } else if ($('.canvas-box').is(':visible') === true) {
-        (0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
-    }
-};
 
 /***/ }),
 /* 115 */
@@ -36239,9 +36215,10 @@ $(document).ready(function (e) {
 	$contact.on('click', {
 		case: 4
 	}, content);
-	var flag = false;
+	var flagForm = false;
+	var flagHome = true;
 	var grid = document.getElementsByClassName('grid-container')[0];
-	var canvasPic = document.getElementsByClassName('canvasPic')[0];
+
 	function content(event) {
 		var $wrapperCanvas = $('.canvas-box');
 		var $article = $('.about');
@@ -36261,19 +36238,22 @@ $(document).ready(function (e) {
 				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
 				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-				flag = true;
+				flagForm = true;
+				flagHome = false;
 				_jsonAnimation.anim.stop();
 			} else if ($pageMain === 3) {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
 				_jsonAnimation.anim.stop();
-				flag = false;
+				flagForm = false;
+				flagHome = false;
 			} else if ($pageMain === 2) {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($container).stop().css('display', 'none');
 				$article.css('display', 'grid');
 				$home.css('display', 'flex');
 				_jsonAnimation.anim.play();
-				flag = false;
+				flagForm = false;
+				flagHome = false;
 			} else {
 				$wrapperCanvas.add(btnHamburger).add($logoOne).add($logoTwo).css('display', 'grid');
 				$home.add($article).add($container).stop().css('display', 'none');
@@ -36281,7 +36261,8 @@ $(document).ready(function (e) {
 				(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
 				btnHamburger.classList = 'btn-hamburger';
 				_jsonAnimation.anim.stop();
-				flag = false;
+				flagForm = false;
+				flagHome = true;
 			}
 			document.getElementsByClassName('canvasPic')[0].remove();
 			var pattern = Trianglify({
@@ -36312,23 +36293,47 @@ $(document).ready(function (e) {
 		}, 1500);
 	}
 
-	var originalSize = $(window).width() + $(window).height();
-	$(window).resize(function () {
-		if (flag === true && $(window).width() + $(window).height() != originalSize && grid.classList.value === 'grid-container') {
-			document.getElementsByClassName('grid-container')[0].classList += ' resize';
-			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
-			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-		} else {
-			grid.classList = 'grid-container';
-			canvasPic.classList = 'canvasPic';
-			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+	var keyboard = false;
+	$(window).on("orientationchange", function (event) {
+		if (flagForm === true && grid.classList.value === 'grid-container') {
+			keyboard = false;
+		} else if (flagForm === true && grid.classList.value === 'grid-container resize') {
+			keyboard = true;
 		}
 	});
-	$(window).on("orientationchange", function (event) {
-		if (flag === true) {
-			grid.classList = 'grid-container';
-			canvasPic.classList = 'canvasPic';
-			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+
+	var originalSize = $(window).width() + $(window).height();
+	$(window).resize(function () {
+		var newSize = $(window).width() + $(window).height();
+		document.getElementsByClassName('canvasPic')[0].remove();
+		var pattern = Trianglify({
+			width: window.innerWidth,
+			height: window.innerHeight
+		});
+		var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
+		canvasBackground.setAttribute("class", "canvasPic");
+		pattern = Trianglify({
+			cell_size: 95,
+			variance: 0.75,
+			x_colors: 'random',
+			y_colors: 'match_x',
+			palette: Trianglify.colorbrewer,
+			stroke_width: 0.2
+		});
+		if (flagForm === true) {
+			if (newSize !== originalSize && grid.classList.value === 'grid-container' && !keyboard === true) {
+				grid.classList = 'grid-container resize';
+				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic resize';
+				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+				keyboard = false;
+			} else {
+				grid.classList = 'grid-container';
+				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
+				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+				keyboard = false;
+			}
+		} else if (flagHome === true) {
+			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
 		}
 	});
 });
