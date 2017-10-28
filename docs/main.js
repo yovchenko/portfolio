@@ -36324,6 +36324,7 @@ $(document).ready(function (e) {
 			if (newSize !== originalSize && grid.classList.value === 'grid-container' || keyboard === true) {
 				grid.classList = 'grid-container';
 				grid.classList += ' resize';
+				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
 				document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 				keyboard = false;
 				originalSize = newSize;
