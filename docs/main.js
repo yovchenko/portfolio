@@ -36308,18 +36308,16 @@ $(document).ready(function (e) {
 	}
 	/* the form is getting bigger when the on-screen keyboard opens */
 	var originalSize = $(window).width() + $(window).height();
-	var orientation = false;
+
 	$(window).resize(function () {
 		if (flag === true && $(window).width() + $(window).height() != originalSize && grid.classList.value === 'grid-container') {
 			document.getElementsByClassName('grid-container')[0].classList += ' resize';
 			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-			orientation = false;
 		} else {
 			grid.classList = 'grid-container';
 			canvasPic.classList = 'canvasPic';
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-			orientation = false;
 		}
 	});
 	$(window).on("orientationchange", function (event) {
