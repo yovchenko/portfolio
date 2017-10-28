@@ -32602,9 +32602,7 @@ window.onresize = function (event) {
         palette: Trianglify.colorbrewer,
         stroke_width: 0.2
     });
-    if ($('.envelope').is(':visible') === true) {
-        (0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-    } else if ($('.canvas-box').is(':visible') === true) {
+    if ($('.canvas-box').is(':visible') === true) {
         (0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
     }
 };
@@ -36313,6 +36311,7 @@ $(document).ready(function (e) {
 
 	/* the form is getting bigger when the on-screen keyboard opens */
 	var originalSize = $(window).width() + $(window).height();
+	console.log(originalSize);
 	$(window).resize(function () {
 		if (flag === true) {
 			var newSize = $(window).width() + $(window).height();
@@ -36324,6 +36323,7 @@ $(document).ready(function (e) {
 				canvasPic.classList = 'canvasPic';
 			}
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+			console.log(newSize);
 			originalSize = newSize;
 		}
 	});

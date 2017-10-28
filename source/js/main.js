@@ -186,6 +186,7 @@ $(document).ready(function (e) {
 
 	/* the form is getting bigger when the on-screen keyboard opens */
 	let originalSize = $(window).width() + $(window).height();
+	console.log(originalSize);
 	$(window).resize(function () {
 		if (flag === true) {
 			let newSize = $(window).width() + $(window).height();
@@ -197,6 +198,7 @@ $(document).ready(function (e) {
 				canvasPic.classList = 'canvasPic';
 			}
 			resizeContent('.envelope', '#wrap', 530, 630);
+			console.log(newSize);
 			originalSize = newSize;
 		}
 	});
