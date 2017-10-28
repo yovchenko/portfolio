@@ -45,7 +45,5 @@ window.onresize = function (event) {
     });
     if ($('.envelope').is(':visible') === true) {
         resizeContent('.envelope', '#wrap', 530, 630);
-    } else if ($('.canvas-box').is(':visible') === true) {
-        resizeContent('#figure', '#wrapperCanvas', 800, 900);
     }
 };
