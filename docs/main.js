@@ -36322,22 +36322,19 @@ $(document).ready(function (e) {
 		});
 		if (flagForm === true) {
 			if (newSize !== originalSize && grid.classList.value === 'grid-container' || keyboard === true) {
-				grid.classList = 'grid-container';
-				grid.classList += ' resize';
-				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
-				document.getElementsByClassName('canvasPic')[0].classList += ' resize';
+				grid.classList = 'grid-container resize';
+				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic resize';
+				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 				keyboard = false;
-				originalSize = newSize;
 			} else {
 				grid.classList = 'grid-container';
 				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
-				originalSize = newSize;
+				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+				keyboard = false;
 			}
 		} else if (flagHome === true) {
 			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
 		}
-		originalSize = newSize;
-		(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 	});
 });
 
