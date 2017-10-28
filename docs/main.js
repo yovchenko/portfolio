@@ -32586,9 +32586,7 @@ var elementBottom = document.getElementsByClassName('footer')[0];
 // Set the background image property, including the encoding type header
 elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
 elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-var originalSize = $(window).width() + $(window).height();
 window.onresize = function (event) {
-    var newSize = $(window).width() + $(window).height();
     document.getElementsByClassName('canvasPic')[0].remove();
     var pattern = Trianglify({
         width: window.innerWidth,
@@ -32606,7 +32604,7 @@ window.onresize = function (event) {
     });
     if ($('.envelope').is(':visible') === true) {
         (0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-    } else if ($('.canvas-box').is(':visible') === true && newSize !== originalSize) {
+    } else if ($('.canvas-box').is(':visible') === true) {
         (0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
     }
 };
@@ -36320,7 +36318,7 @@ $(document).ready(function (e) {
 			document.getElementsByClassName('grid-container')[0].classList += ' resize';
 			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-		} else {
+		} else if (flag === true && newSize !== originalSize && grid.classList.value === 'grid-container resize') {
 			grid.classList = 'grid-container';
 			canvasPic.classList = 'canvasPic';
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);

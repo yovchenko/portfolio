@@ -27,9 +27,7 @@ const elementBottom = document.getElementsByClassName('footer')[0];
 // Set the background image property, including the encoding type header
 elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
 elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-let originalSize = $(window).width() + $(window).height();
 window.onresize = function (event) {
-    let newSize = $(window).width() + $(window).height();
     document.getElementsByClassName('canvasPic')[0].remove();
     let pattern = Trianglify({
         width: window.innerWidth,
@@ -47,7 +45,7 @@ window.onresize = function (event) {
     });
     if ($('.envelope').is(':visible') === true) {
         resizeContent('.envelope', '#wrap', 530, 630);
-    } else if ($('.canvas-box').is(':visible') === true && newSize !== originalSize) {
+    } else if ($('.canvas-box').is(':visible') === true) {
         resizeContent('#figure', '#wrapperCanvas', 800, 900);
     }
 };
