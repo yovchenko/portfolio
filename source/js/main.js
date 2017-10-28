@@ -110,8 +110,10 @@ $(document).ready(function (e) {
 	$contact.on('click', {
 		case: 4
 	}, content);
-	let flag = false;
+	let flagForm = false;
+	let flagHome = true;
 	const grid = document.getElementsByClassName('grid-container')[0];
+
 	function content(event) {
 		const $wrapperCanvas = $('.canvas-box');
 		const $article = $('.about');
@@ -131,19 +133,22 @@ $(document).ready(function (e) {
 				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
 				resizeContent('.envelope', '#wrap', 530, 630);
-				flag = true;
+				flagForm = true;
+				flagHome = false;
 				anim.stop();
 			} else if ($pageMain === 3) {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
 				anim.stop();
-				flag = false;
+				flagForm = false;
+				flagHome = false;
 			} else if ($pageMain === 2) {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($container).stop().css('display', 'none');
 				$article.css('display', 'grid');
 				$home.css('display', 'flex');
 				anim.play();
-				flag = false;
+				flagForm = false;
+				flagHome = false;
 			} else {
 				($wrapperCanvas).add(btnHamburger).add($logoOne).add($logoTwo).css('display', 'grid');
 				$home.add($article).add($container).stop().css('display', 'none');
@@ -151,7 +156,8 @@ $(document).ready(function (e) {
 				resizeContent('#figure', '#wrapperCanvas', 800, 900);
 				btnHamburger.classList = 'btn-hamburger';
 				anim.stop();
-				flag = false;
+				flagForm = false;
+				flagHome = true;
 			}
 			document.getElementsByClassName('canvasPic')[0].remove();
 			let pattern = Trianglify({
@@ -183,8 +189,17 @@ $(document).ready(function (e) {
 	}
 
 	/* the form is getting bigger when the on-screen keyboard opens */
+	$(window).on("orientationchange", function (event) {
+		if (flagForm === true && grid.classList.value === 'grid-container') {
+			grid.classList += ' resize';
+			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
+		} else if (flagForm === true && grid.classList.value === 'grid-container resize') {
+			grid.classList = 'grid-container';
+			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
+		}
+	});
+
 	let originalSize = $(window).width() + $(window).height();
-	console.log(originalSize);
 	$(window).resize(function () {
 		let newSize = $(window).width() + $(window).height();
 		document.getElementsByClassName('canvasPic')[0].remove();
@@ -202,7 +217,7 @@ $(document).ready(function (e) {
 			palette: Trianglify.colorbrewer,
 			stroke_width: 0.2,
 		});
-		if (flag === true) {
+		if (flagForm === true) {
 			if (newSize !== originalSize && grid.classList.value === 'grid-container') {
 				grid.classList += ' resize';
 				document.getElementsByClassName('canvasPic')[0].classList += ' resize';
@@ -210,22 +225,9 @@ $(document).ready(function (e) {
 				grid.classList = 'grid-container';
 				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
 			}
-		}
-		else if  ($('.canvas-box').is(':visible') === true) {
+		} else if (flagHome === true) {
 			resizeContent('#figure', '#wrapperCanvas', 800, 900);
 		}
-			resizeContent('.envelope', '#wrap', 530, 630);
-			console.log(newSize);
-			originalSize = newSize;
-		
-	});
-	$(window).on("orientationchange", function (event) {
-		if (flag === true && grid.classList.value === 'grid-container') {
-			grid.classList += ' resize';
-			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
-		} else if (flag === true && grid.classList.value === 'grid-container resize') {
-			grid.classList = 'grid-container';
-			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
-		}
+		resizeContent('.envelope', '#wrap', 530, 630);
 	});
 });

@@ -36215,8 +36215,10 @@ $(document).ready(function (e) {
 	$contact.on('click', {
 		case: 4
 	}, content);
-	var flag = false;
+	var flagForm = false;
+	var flagHome = true;
 	var grid = document.getElementsByClassName('grid-container')[0];
+
 	function content(event) {
 		var $wrapperCanvas = $('.canvas-box');
 		var $article = $('.about');
@@ -36236,19 +36238,22 @@ $(document).ready(function (e) {
 				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
 				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-				flag = true;
+				flagForm = true;
+				flagHome = false;
 				_jsonAnimation.anim.stop();
 			} else if ($pageMain === 3) {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
 				_jsonAnimation.anim.stop();
-				flag = false;
+				flagForm = false;
+				flagHome = false;
 			} else if ($pageMain === 2) {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($container).stop().css('display', 'none');
 				$article.css('display', 'grid');
 				$home.css('display', 'flex');
 				_jsonAnimation.anim.play();
-				flag = false;
+				flagForm = false;
+				flagHome = false;
 			} else {
 				$wrapperCanvas.add(btnHamburger).add($logoOne).add($logoTwo).css('display', 'grid');
 				$home.add($article).add($container).stop().css('display', 'none');
@@ -36256,7 +36261,8 @@ $(document).ready(function (e) {
 				(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
 				btnHamburger.classList = 'btn-hamburger';
 				_jsonAnimation.anim.stop();
-				flag = false;
+				flagForm = false;
+				flagHome = true;
 			}
 			document.getElementsByClassName('canvasPic')[0].remove();
 			var pattern = Trianglify({
@@ -36288,8 +36294,17 @@ $(document).ready(function (e) {
 	}
 
 	/* the form is getting bigger when the on-screen keyboard opens */
+	$(window).on("orientationchange", function (event) {
+		if (flagForm === true && grid.classList.value === 'grid-container') {
+			grid.classList += ' resize';
+			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
+		} else if (flagForm === true && grid.classList.value === 'grid-container resize') {
+			grid.classList = 'grid-container';
+			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
+		}
+	});
+
 	var originalSize = $(window).width() + $(window).height();
-	console.log(originalSize);
 	$(window).resize(function () {
 		var newSize = $(window).width() + $(window).height();
 		document.getElementsByClassName('canvasPic')[0].remove();
@@ -36307,7 +36322,7 @@ $(document).ready(function (e) {
 			palette: Trianglify.colorbrewer,
 			stroke_width: 0.2
 		});
-		if (flag === true) {
+		if (flagForm === true) {
 			if (newSize !== originalSize && grid.classList.value === 'grid-container') {
 				grid.classList += ' resize';
 				document.getElementsByClassName('canvasPic')[0].classList += ' resize';
@@ -36315,21 +36330,10 @@ $(document).ready(function (e) {
 				grid.classList = 'grid-container';
 				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
 			}
-		} else if ($('.canvas-box').is(':visible') === true) {
+		} else if (flagHome === true) {
 			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
 		}
 		(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-		console.log(newSize);
-		originalSize = newSize;
-	});
-	$(window).on("orientationchange", function (event) {
-		if (flag === true && grid.classList.value === 'grid-container') {
-			grid.classList += ' resize';
-			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
-		} else if (flag === true && grid.classList.value === 'grid-container resize') {
-			grid.classList = 'grid-container';
-			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
-		}
 	});
 });
 
