@@ -36237,6 +36237,7 @@ $(document).ready(function (e) {
 	}, content);
 	var flag = false;
 	var grid = document.getElementsByClassName('grid-container')[0];
+
 	function content(event) {
 		var $wrapperCanvas = $('.canvas-box');
 		var $article = $('.about');
