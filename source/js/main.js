@@ -132,22 +132,19 @@ $(document).ready(function (e) {
 				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
 				resizeContent('.envelope', '#wrap', 530, 630);
-				flagForm = true;
-				flagHome = false;
+				flag = true;
 				anim.stop();
 			} else if ($pageMain === 3) {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
 				anim.stop();
-				flagForm = false;
-				flagHome = false;
+				flag = false;
 			} else if ($pageMain === 2) {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($container).stop().css('display', 'none');
 				$article.css('display', 'grid');
 				$home.css('display', 'flex');
 				anim.play();
-				flagForm = false;
-				flagHome = false;
+				flag = false;
 			} else {
 				($wrapperCanvas).add(btnHamburger).add($logoOne).add($logoTwo).css('display', 'grid');
 				$home.add($article).add($container).stop().css('display', 'none');
@@ -155,8 +152,7 @@ $(document).ready(function (e) {
 				resizeContent('#figure', '#wrapperCanvas', 800, 900);
 				btnHamburger.classList = 'btn-hamburger';
 				anim.stop();
-				flagForm = false;
-				flagHome = true;
+				flag = false;
 			}
 			document.getElementsByClassName('canvasPic')[0].remove();
 			let pattern = Trianglify({
