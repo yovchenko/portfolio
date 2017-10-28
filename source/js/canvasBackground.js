@@ -44,4 +44,10 @@ window.onresize = function (event) {
         palette: Trianglify.colorbrewer,
         stroke_width: 0.2,
     });
+
+    if ($('.envelope').is(':visible') === true) {
+        resizeContent('.envelope', '#wrap', 530, 630);
+    } else if ($('.canvas-box').is(':visible') === true) {
+        resizeContent('#figure', '#wrapperCanvas', 800, 900);
+    }
 };
