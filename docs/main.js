@@ -36293,12 +36293,12 @@ $(document).ready(function (e) {
 		}, 1500);
 	}
 
-	var orientation = false;
+	var keyboard = false;
 	$(window).on("orientationchange", function (event) {
 		if (flagForm === true && grid.classList.value === 'grid-container') {
-			orientation = false;
+			keyboard = false;
 		} else if (flagForm === true && grid.classList.value === 'grid-container resize') {
-			orientation = true;
+			keyboard = true;
 		}
 	});
 
@@ -36321,14 +36321,16 @@ $(document).ready(function (e) {
 			stroke_width: 0.2
 		});
 		if (flagForm === true) {
-			if (newSize !== originalSize && grid.classList.value === 'grid-container' || orientation === true) {
+			if (newSize !== originalSize && grid.classList.value === 'grid-container' || keyboard === true) {
 				grid.classList = 'grid-container';
 				grid.classList += ' resize';
 				document.getElementsByClassName('canvasPic')[0].classList += ' resize';
-				orientation = false;
+				keyboard = false;
+				originalSize = newSize;
 			} else {
 				grid.classList = 'grid-container';
 				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
+				originalSize = newSize;
 			}
 		} else if (flagHome === true) {
 			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
