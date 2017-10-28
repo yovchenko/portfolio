@@ -36293,14 +36293,12 @@ $(document).ready(function (e) {
 		}, 1500);
 	}
 
-	/* the form is getting bigger when the on-screen keyboard opens */
+	var orientation = false;
 	$(window).on("orientationchange", function (event) {
 		if (flagForm === true && grid.classList.value === 'grid-container') {
-			grid.classList += ' resize';
-			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
+			orientation = false;
 		} else if (flagForm === true && grid.classList.value === 'grid-container resize') {
-			grid.classList = 'grid-container';
-			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
+			orientation = true;
 		}
 	});
 
@@ -36323,9 +36321,11 @@ $(document).ready(function (e) {
 			stroke_width: 0.2
 		});
 		if (flagForm === true) {
-			if (newSize !== originalSize && grid.classList.value === 'grid-container') {
+			if (newSize !== originalSize && grid.classList.value === 'grid-container' || orientation === true) {
+				grid.classList = 'grid-container';
 				grid.classList += ' resize';
 				document.getElementsByClassName('canvasPic')[0].classList += ' resize';
+				orientation = false;
 			} else {
 				grid.classList = 'grid-container';
 				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
