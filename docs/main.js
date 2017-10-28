@@ -36330,7 +36330,7 @@ $(document).ready(function (e) {
 			canvasPic.classList = 'canvasPic';
 			orientation = false;
 		}
-	});
+	}, false);
 });
 
 /***/ }),
