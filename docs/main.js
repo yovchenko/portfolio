@@ -36320,16 +36320,16 @@ $(document).ready(function (e) {
 			stroke_width: 0.2
 		});
 		if (flagForm === true) {
-			if (newSize !== originalSize && grid.classList.value === 'grid-container' && !keyboard === true) {
+			if (newSize !== originalSize && grid.classList.value === 'grid-container') {
 				grid.classList = 'grid-container resize';
 				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic resize';
 				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-				keyboard = false;
+				originalSize = newSize;
 			} else {
 				grid.classList = 'grid-container';
 				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
 				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-				keyboard = false;
+				originalSize = newSize;
 			}
 		} else if (flagHome === true) {
 			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
