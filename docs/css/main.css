@@ -1539,9 +1539,9 @@ footer .wrapper {
 
 @media all and (max-width: 767px) and (min-width: 577px) and (orientation: landscape) {
   .grid-container.resize {
-    grid-template-rows: 65px calc(100vh + 150vh) auto; }
+    grid-template-rows: 65px calc(100vh + 50vh) auto; }
   .canvasPic.resize {
-    height: calc(100vh + 150vh); } }
+    height: calc(100vh + 50vh); } }
 
 @media all and (max-width: 576px) {
   .menu__header .menu__about,

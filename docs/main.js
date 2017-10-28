@@ -36312,7 +36312,6 @@ $(document).ready(function (e) {
 			});
 		}, 1500);
 	}
-
 	/* the form is getting bigger when the on-screen keyboard opens */
 	var originalSize = $(window).width() + $(window).height();
 	var orientation = false;
@@ -36329,7 +36328,7 @@ $(document).ready(function (e) {
 			orientation = false;
 		}
 	});
-	$(window).on("orientationchange", function (event) {
+	$(window).on("orientationchange", function () {
 		if (flag === true && grid.classList.value === 'grid-container') {
 			orientation = true;
 		} else if (flag === true && grid.classList.value === 'grid-container resize') {

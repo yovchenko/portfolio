@@ -1,6 +1,8 @@
 'use strict';
-import {resizeContent} from './resize.js';
-let Trianglify = require('trianglify'); 
+import {
+    resizeContent
+} from './resize.js';
+let Trianglify = require('trianglify');
 let pattern = Trianglify({
     width: window.innerWidth,
     height: window.innerHeight
@@ -24,14 +26,14 @@ const elementTop = document.getElementsByClassName('header')[0];
 const elementBottom = document.getElementsByClassName('footer')[0];
 // Set the background image property, including the encoding type header
 elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")'; 
-window.onresize = function(event){
+elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+window.onresize = function (event) {
     document.getElementsByClassName('canvasPic')[0].remove();
     let pattern = Trianglify({
         width: window.innerWidth,
         height: window.innerHeight
     });
-    
+
     const canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
     canvasBackground.setAttribute("class", "canvasPic");
     pattern = Trianglify({
@@ -44,9 +46,8 @@ window.onresize = function(event){
     });
 
     if ($('.envelope').is(':visible') === true) {
-    resizeContent('.envelope','#wrap',530,630);
-    }
-    else if ($('.canvas-box').is(':visible') === true) {
-    resizeContent('#figure','#wrapperCanvas',800,900);
+        resizeContent('.envelope', '#wrap', 530, 630);
+    } else if ($('.canvas-box').is(':visible') === true) {
+        resizeContent('#figure', '#wrapperCanvas', 800, 900);
     }
 };

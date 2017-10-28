@@ -1,12 +1,11 @@
 @mixin font-face($name, $style, $weight, $path) {
 	$format: "truetype";
 	$src: url(quote($path)) format(quote($format));
-
 	@font-face {
-		font : { 
-		family: quote($name);
-		style: $style;
-		weight: $weight;
+		font: {
+			family: quote($name);
+			style: $style;
+			weight: $weight;
 		}
 		src: $src;
 	}
