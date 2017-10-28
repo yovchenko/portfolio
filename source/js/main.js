@@ -192,8 +192,6 @@ $(window).resize(function () {
 		document.getElementsByClassName('grid-container')[0].classList += ' resize';
 		document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 		resizeContent('.envelope', '#wrap', 530, 630);
-		originalSize = newSize;
-		orientation = false;
 	} else {
 		grid.classList = 'grid-container';
 		canvasPic.classList = 'canvasPic';
@@ -203,6 +201,7 @@ $(window).resize(function () {
 	}
 });
 $(window).on("orientationchange", function (event) {
+let newSize = $(window).width() + $(window).height();
 if (flag === true && grid.classList.value === 'grid-container') {
 	orientation = true;
 } else if (flag === true && grid.classList.value === 'grid-container resize') {
