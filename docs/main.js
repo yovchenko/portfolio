@@ -32604,8 +32604,6 @@ window.onresize = function (event) {
     });
     if ($('.envelope').is(':visible') === true) {
         (0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-    } else if ($('.canvas-box').is(':visible') === true) {
-        (0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
     }
 };
 
@@ -36310,6 +36308,7 @@ $(document).ready(function (e) {
 			});
 		}, 1500);
 	}
+
 	/* the form is getting bigger when the on-screen keyboard opens */
 	var originalSize = $(window).width() + $(window).height();
 	$(window).resize(function () {
@@ -36318,6 +36317,7 @@ $(document).ready(function (e) {
 			document.getElementsByClassName('grid-container')[0].classList += ' resize';
 			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+			originalSize = newSize;
 		} else if (flag === true && newSize !== originalSize && grid.classList.value === 'grid-container resize') {
 			grid.classList = 'grid-container';
 			canvasPic.classList = 'canvasPic';
