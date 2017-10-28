@@ -36311,10 +36311,11 @@ $(document).ready(function (e) {
 	var orientation = false;
 	$(window).resize(function () {
 		var newSize = $(window).width() + $(window).height();
-		if (flag === true && newSize != originalSize && grid.classList.value === 'grid-container' || orientation === true) {
+		if (flag === true && newSize != originalSize && grid.classList.value === 'grid-container') {
 			document.getElementsByClassName('grid-container')[0].classList += ' resize';
 			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+			orientation = false;
 		} else {
 			grid.classList = 'grid-container';
 			canvasPic.classList = 'canvasPic';
@@ -36323,12 +36324,9 @@ $(document).ready(function (e) {
 		}
 	});
 	$(window).on("orientationchange", function (event) {
-		if (flag === true && grid.classList.value === 'grid-container') {
-			orientation = false;
-		} else if (flag === true && grid.classList.value === 'grid-container resize') {
+		if (flag === true) {
 			grid.classList = 'grid-container';
 			canvasPic.classList = 'canvasPic';
-			orientation = true;
 		}
 	});
 });
