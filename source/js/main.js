@@ -185,25 +185,28 @@ $(document).ready(function (e) {
 	}
 /* the form is getting bigger when the on-screen keyboard opens */
 let originalSize = $(window).width() + $(window).height();
-let orientation = false;
+
 $(window).resize(function () {
-	let newSize = $(window).width() + $(window).height();
-	if (flag === true && newSize != originalSize && grid.classList.value === 'grid-container') {
+	if (flag === true && $(window).width() + $(window).height() != originalSize && grid.classList.value === 'grid-container') {
 		document.getElementsByClassName('grid-container')[0].classList += ' resize';
 		document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 		resizeContent('.envelope', '#wrap', 530, 630);
-		orientation = false;
+	
 	} else {
 		grid.classList = 'grid-container';
 		canvasPic.classList = 'canvasPic';
 		resizeContent('.envelope', '#wrap', 530, 630);
-		orientation = false;
+		
 	}
 });
 $(window).on("orientationchange", function (event) {
-if (flag === true) {
-	grid.classList = 'grid-container';
-	canvasPic.classList = 'canvasPic';
-}
+	if (flag === true && grid.classList.value === 'grid-container') {
+		grid.classList += ' resize';
+		canvasPic.classList += ' resize';
+	}
+	else if (flag === true && grid.classList.value === 'grid-container resize') {
+		grid.classList = 'grid-container';
+		canvasPic.classList = 'canvasPic';
+	}
 });
 });
