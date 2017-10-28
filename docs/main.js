@@ -36296,18 +36296,31 @@ $(document).ready(function (e) {
 	var keyboard = false;
 	$(window).on("orientationchange", function (event) {
 		if (flagForm === true && grid.classList.value === 'grid-container') {
-			keyboard = false;
+			keyboard = true;
 		} else if (flagForm === true && grid.classList.value === 'grid-container resize') {
 			keyboard = true;
 		}
 	});
-
 	var originalSize = $(window).width() + $(window).height();
 	$(window).resize(function () {
 		var newSize = $(window).width() + $(window).height();
-
+		document.getElementsByClassName('canvasPic')[0].remove();
+		var pattern = Trianglify({
+			width: window.innerWidth,
+			height: window.innerHeight
+		});
+		var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
+		canvasBackground.setAttribute("class", "canvasPic");
+		pattern = Trianglify({
+			cell_size: 95,
+			variance: 0.75,
+			x_colors: 'random',
+			y_colors: 'match_x',
+			palette: Trianglify.colorbrewer,
+			stroke_width: 0.2
+		});
 		if (flagForm === true) {
-			if (newSize !== originalSize && grid.classList.value === 'grid-container' || keyboard === true) {
+			if (newSize !== originalSize && grid.classList.value === 'grid-container' && !keyboard === true) {
 				grid.classList = 'grid-container resize';
 				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic resize';
 				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
