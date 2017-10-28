@@ -45,5 +45,5 @@ window.onresize = function (event) {
     });
     if ($('.envelope').is(':visible') === true) {
         resizeContent('.envelope', '#wrap', 530, 630);
-    }
+    } 
 };

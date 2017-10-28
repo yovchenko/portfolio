@@ -198,7 +198,7 @@ $(window).resize(function () {
 			grid.classList = 'grid-container';
 			canvasPic.classList = 'canvasPic';
 			resizeContent('.envelope', '#wrap', 530, 630);
-
+			originalSize = newSize;
 		}
 	}
 });
