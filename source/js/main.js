@@ -192,11 +192,13 @@ $(window).resize(function () {
 		document.getElementsByClassName('grid-container')[0].classList += ' resize';
 		document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 		resizeContent('.envelope', '#wrap', 530, 630);
+		
 	} else {
 		grid.classList = 'grid-container';
 		canvasPic.classList = 'canvasPic';
 		resizeContent('.envelope', '#wrap', 530, 630);
 		orientation = false;
+		
 	}
 });
 $(window).on("orientationchange", function (event) {
