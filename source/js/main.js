@@ -112,7 +112,6 @@ $(document).ready(function (e) {
 	}, content);
 	let flag = false;
 	const grid = document.getElementsByClassName('grid-container')[0];
-
 	function content(event) {
 		const $wrapperCanvas = $('.canvas-box');
 		const $article = $('.about');
