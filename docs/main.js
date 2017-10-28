@@ -36302,41 +36302,24 @@ $(document).ready(function (e) {
 		}
 	});
 
-	var originalSize = $(window).width();
+	var originalSize = $(window).width() + $(window).height();
 	$(window).resize(function () {
-		var newSize = $(window).width();
-		document.getElementsByClassName('canvasPic')[0].remove();
-		var pattern = Trianglify({
-			width: window.innerWidth,
-			height: window.innerHeight
-		});
-		var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-		canvasBackground.setAttribute("class", "canvasPic");
-		pattern = Trianglify({
-			cell_size: 95,
-			variance: 0.75,
-			x_colors: 'random',
-			y_colors: 'match_x',
-			palette: Trianglify.colorbrewer,
-			stroke_width: 0.2
-		});
+		var newSize = $(window).width() + $(window).height();
+
 		if (flagForm === true) {
 			if (newSize !== originalSize && grid.classList.value === 'grid-container' || keyboard === true) {
 				grid.classList = 'grid-container resize';
 				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic resize';
 				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 				keyboard = false;
-				originalSize = newSize;
 			} else {
 				grid.classList = 'grid-container';
 				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
 				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 				keyboard = false;
-				originalSize = newSize;
 			}
 		} else if (flagHome === true) {
 			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
-			originalSize = newSize;
 		}
 	});
 });
