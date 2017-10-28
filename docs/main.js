@@ -32586,26 +32586,6 @@ var elementBottom = document.getElementsByClassName('footer')[0];
 // Set the background image property, including the encoding type header
 elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
 elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-window.onresize = function (event) {
-    document.getElementsByClassName('canvasPic')[0].remove();
-    var pattern = Trianglify({
-        width: window.innerWidth,
-        height: window.innerHeight
-    });
-    var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-    canvasBackground.setAttribute("class", "canvasPic");
-    pattern = Trianglify({
-        cell_size: 95,
-        variance: 0.75,
-        x_colors: 'random',
-        y_colors: 'match_x',
-        palette: Trianglify.colorbrewer,
-        stroke_width: 0.2
-    });
-    if ($('.canvas-box').is(':visible') === true) {
-        (0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
-    }
-};
 
 /***/ }),
 /* 115 */
@@ -36311,8 +36291,23 @@ $(document).ready(function (e) {
 	var originalSize = $(window).width() + $(window).height();
 	console.log(originalSize);
 	$(window).resize(function () {
+		var newSize = $(window).width() + $(window).height();
+		document.getElementsByClassName('canvasPic')[0].remove();
+		var pattern = Trianglify({
+			width: window.innerWidth,
+			height: window.innerHeight
+		});
+		var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
+		canvasBackground.setAttribute("class", "canvasPic");
+		pattern = Trianglify({
+			cell_size: 95,
+			variance: 0.75,
+			x_colors: 'random',
+			y_colors: 'match_x',
+			palette: Trianglify.colorbrewer,
+			stroke_width: 0.2
+		});
 		if (flag === true) {
-			var newSize = $(window).width() + $(window).height();
 			if (newSize !== originalSize && grid.classList.value === 'grid-container') {
 				grid.classList += ' resize';
 				document.getElementsByClassName('canvasPic')[0].classList += ' resize';
@@ -36320,10 +36315,12 @@ $(document).ready(function (e) {
 				grid.classList = 'grid-container';
 				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
 			}
-			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-			console.log(newSize);
-			originalSize = newSize;
+		} else if ($('.canvas-box').is(':visible') === true) {
+			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
 		}
+		(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+		console.log(newSize);
+		originalSize = newSize;
 	});
 	$(window).on("orientationchange", function (event) {
 		if (flag === true && grid.classList.value === 'grid-container') {
