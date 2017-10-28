@@ -112,8 +112,6 @@ $(document).ready(function (e) {
 	}, content);
 	let flag = false;
 	const grid = document.getElementsByClassName('grid-container')[0];
-	let canvasPic = document.getElementsByClassName('canvasPic')[0];
-
 	function content(event) {
 		const $wrapperCanvas = $('.canvas-box');
 		const $article = $('.about');
@@ -128,7 +126,7 @@ $(document).ready(function (e) {
 		$curtainLeft.stop().css('transform', 'translateX(-50%)');
 		let $timerCurtain = setTimeout(function () {
 			grid.classList = 'grid-container';
-			canvasPic.classList = 'canvasPic';
+			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
 			if ($pageMain === 4) {
 				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
@@ -191,11 +189,11 @@ $(document).ready(function (e) {
 		if (flag === true) {
 			let newSize = $(window).width() + $(window).height();
 			if (newSize !== originalSize && grid.classList.value === 'grid-container') {
-				document.getElementsByClassName('grid-container')[0].classList += ' resize';
+				grid.classList += ' resize';
 				document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 			} else {
 				grid.classList = 'grid-container';
-				canvasPic.classList = 'canvasPic';
+				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
 			}
 			resizeContent('.envelope', '#wrap', 530, 630);
 			console.log(newSize);
@@ -205,10 +203,10 @@ $(document).ready(function (e) {
 	$(window).on("orientationchange", function (event) {
 		if (flag === true && grid.classList.value === 'grid-container') {
 			grid.classList += ' resize';
-			canvasPic.classList += ' resize';
+			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 		} else if (flag === true && grid.classList.value === 'grid-container resize') {
 			grid.classList = 'grid-container';
-			canvasPic.classList = 'canvasPic';
+			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
 		}
 	});
 });
