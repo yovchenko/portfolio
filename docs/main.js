@@ -36316,7 +36316,7 @@ $(document).ready(function (e) {
 	var originalSize = $(window).width() + $(window).height();
 	var orientation = false;
 	$(window).resize(function () {
-		//	let newSize = $(window).width() + $(window).height();
+		var newSize = $(window).width() + $(window).height();
 		if (flag === true && newSize != originalSize && grid.classList.value === 'grid-container' && orientation === false) {
 			document.getElementsByClassName('grid-container')[0].classList += ' resize';
 			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
