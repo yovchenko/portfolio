@@ -192,6 +192,7 @@ $(window).resize(function () {
 		document.getElementsByClassName('grid-container')[0].classList += ' resize';
 		document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 		resizeContent('.envelope', '#wrap', 530, 630);
+		originalSize = newSize;
 	} else {
 		grid.classList = 'grid-container';
 		canvasPic.classList = 'canvasPic';
