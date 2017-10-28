@@ -197,9 +197,9 @@ $(document).ready(function (e) {
 		}
 	});
 
-	let originalSize = $(window).width() + $(window).height();
+	let originalSize = $(window).width();
 	$(window).resize(function () {
-		let newSize = $(window).width() + $(window).height();
+		let newSize = $(window).width();
 		document.getElementsByClassName('canvasPic')[0].remove();
 		let pattern = Trianglify({
 			width: window.innerWidth,
@@ -230,8 +230,8 @@ $(document).ready(function (e) {
 				originalSize = newSize;
 			}
 		} else if (flagHome === true) {
-			originalSize = newSize;
 			resizeContent('#figure', '#wrapperCanvas', 800, 900);
+			originalSize = newSize;
 		}
 	});
 });
