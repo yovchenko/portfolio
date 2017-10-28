@@ -191,7 +191,7 @@ $(document).ready(function (e) {
 	let keyboard = false;
 	$(window).on("orientationchange", function (event) {
 		if (flagForm === true && grid.classList.value === 'grid-container') {
-			keyboard = false;
+			keyboard = true;
 		} else if (flagForm === true && grid.classList.value === 'grid-container resize') {
 			keyboard = true;
 		}
