@@ -36316,19 +36316,22 @@ $(document).ready(function (e) {
 	var originalSize = $(window).width() + $(window).height();
 	var orientation = false;
 	$(window).resize(function () {
-		if (flag === true && $(window).width() + $(window).height() != originalSize && grid.classList.value === 'grid-container' && orientation === false) {
+		var newSize = $(window).width() + $(window).height();
+		if (flag === true && newSize != originalSize && grid.classList.value === 'grid-container' && orientation === false) {
 			document.getElementsByClassName('grid-container')[0].classList += ' resize';
 			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+			originalSize = newSize;
 			orientation = false;
 		} else {
 			grid.classList = 'grid-container';
 			canvasPic.classList = 'canvasPic';
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+			originalSize = newSize;
 			orientation = false;
 		}
 	});
-	$(window).on("orientationchange", function () {
+	$(window).on("orientationchange", function (event) {
 		if (flag === true && grid.classList.value === 'grid-container') {
 			orientation = true;
 		} else if (flag === true && grid.classList.value === 'grid-container resize') {

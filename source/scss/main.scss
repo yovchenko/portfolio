@@ -1098,11 +1098,11 @@ footer .wrapper {
     }
     @media all and (orientation: landscape) {
         .grid-container.resize {
-            grid-template-rows: 65px calc(100vh + 50vh) auto;
+            grid-template-rows: 65px calc(100vh + 150vh) auto;
         }
         .canvasPic.resize {
             
-            height: calc(100vh + 50vh);
+            height: calc(100vh + 150vh);
         }
     }
 }
