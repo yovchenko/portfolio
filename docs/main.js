@@ -36319,7 +36319,6 @@ $(document).ready(function (e) {
 			document.getElementsByClassName('grid-container')[0].classList += ' resize';
 			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-			originalSize = newSize;
 		} else if (flag === true && newSize !== originalSize && grid.classList.value === 'grid-container resize') {
 			grid.classList = 'grid-container';
 			canvasPic.classList = 'canvasPic';
