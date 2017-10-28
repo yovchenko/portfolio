@@ -184,31 +184,31 @@ $(document).ready(function (e) {
 		}, 1500);
 	}
 
-/* the form is getting bigger when the on-screen keyboard opens */
-let originalSize = $(window).width() + $(window).height();
-$(window).resize(function () {
-	if (flag === true) {
-		let newSize = $(window).width() + $(window).height();
-		if (newSize !== originalSize && grid.classList.value === 'grid-container') {
-			document.getElementsByClassName('grid-container')[0].classList += ' resize';
-			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
-			resizeContent('.envelope', '#wrap', 530, 630);
-			originalSize = newSize;
-		} else {
+	/* the form is getting bigger when the on-screen keyboard opens */
+	let originalSize = $(window).width() + $(window).height();
+	$(window).resize(function () {
+		if (flag === true) {
+			let newSize = $(window).width() + $(window).height();
+			if (newSize !== originalSize && grid.classList.value === 'grid-container') {
+				document.getElementsByClassName('grid-container')[0].classList += ' resize';
+				document.getElementsByClassName('canvasPic')[0].classList += ' resize';
+				resizeContent('.envelope', '#wrap', 530, 630);
+				originalSize = newSize;
+			} else {
+				grid.classList = 'grid-container';
+				canvasPic.classList = 'canvasPic';
+				resizeContent('.envelope', '#wrap', 530, 630);
+				originalSize = newSize;
+			}
+		}
+	});
+	$(window).on("orientationchange", function (event) {
+		if (flag === true && grid.classList.value === 'grid-container') {
+			grid.classList += ' resize';
+			canvasPic.classList += ' resize';
+		} else if (flag === true && grid.classList.value === 'grid-container resize') {
 			grid.classList = 'grid-container';
 			canvasPic.classList = 'canvasPic';
-			resizeContent('.envelope', '#wrap', 530, 630);
-			originalSize = newSize;
 		}
-	}
-});
-$(window).on("orientationchange", function (event) {
-if (flag === true && grid.classList.value === 'grid-container') {
-	grid.classList += ' resize';
-	canvasPic.classList += ' resize';
-} else if (flag === true && grid.classList.value === 'grid-container resize') {
-	grid.classList = 'grid-container';
-	canvasPic.classList = 'canvasPic';
-}
-});
+	});
 });
