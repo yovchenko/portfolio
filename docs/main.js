@@ -36332,7 +36332,6 @@ $(document).ready(function (e) {
 	};
 
 	function keyboardShift(keyboardHeight) {
-
 		grid.style.cssText = 'grid-template-rows:65px calc(100vh + ' + keyboardHeight + 'px) auto;';
 		flagKeyboard = true;
 		resizeScreenObj(event, keyboardHeight);
@@ -36340,7 +36339,6 @@ $(document).ready(function (e) {
 
 	function removeKeyboardShift() {
 		grid.style.cssText = 'grid-template-rows:65px calc(100vh - 65px) auto;';
-		document.getElementsByClassName('canvasPic')[0].style.cssText = 'height:calc(100vh - 65px);';
 		flagKeyboard = false;
 		resizeScreenObj(event, 0);
 	};
@@ -36392,16 +36390,18 @@ $(document).ready(function (e) {
 				palette: Trianglify.colorbrewer,
 				stroke_width: 0.2
 			});
-			canvasBackground.setAttribute("class", "canvasPic");
 			if (flagForm === true && !flagKeyboard) {
+				canvasBackground.setAttribute("class", "canvasPic");
 				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 			} else if (flagHome === true) {
+				canvasBackground.setAttribute("class", "canvasPic");
 				(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
 			} else if (flagKeyboard) {
-				document.getElementsByClassName('canvasPic')[0].style.cssText = 'height:calc(100vh + ' + keyHeight + 'px);';
+				canvasBackground.setAttribute("class", "canvasPic");
+				canvasBackground.style.cssText = 'height:calc(100vh + ' + keyHeight + 'px);';
 				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 			}
-		}, 66);
+		}, 122);
 	};
 });
 
