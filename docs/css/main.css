@@ -1529,11 +1529,7 @@ footer .wrapper {
     -webkit-transform: scale(1.2);
             transform: scale(1.2); }
     main .volume .input-wrap {
-      padding: 10px 0 10px 0; }
-  .grid-container.resize {
-    grid-template-rows: 65px calc(100vh + 50vh) auto; }
-  .canvasPic.resize {
-    height: calc(100vh + 50vh); } }
+      padding: 10px 0 10px 0; } }
 
 @media all and (max-width: 576px) {
   .menu__header .menu__about,
@@ -1558,10 +1554,6 @@ footer .wrapper {
   .btn-hamburger:hover {
     -webkit-transform: none;
             transform: none; }
-  .grid-container.resize {
-    grid-template-rows: 65px calc(100vh + 50vh) auto; }
-  .canvasPic.resize {
-    height: calc(100vh + 50vh); }
   main .volume {
     right: -10%;
     bottom: -20px;

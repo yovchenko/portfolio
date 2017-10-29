@@ -36333,16 +36333,13 @@ $(document).ready(function (e) {
 	};
 
 	function keyboardShift(keyboardHeight) {
-		if (flagForm === true) {
-			grid.classList += ' resize';
-			document.getElementsByClassName('canvasPic')[0].classList += ' resize';
-			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-		}
+		grid.style.cssText = 'grid-template-rows:65px calc(100vh + ' + keyboardHeight + 'px) auto;';
+		resizeScreen(keyboardHeight);
 	};
+
 	function removeKeyboardShift() {
-		grid.classList = 'grid-container';
-		document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
-		(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+		grid.style.cssText = 'grid-template-rows:65px calc(100vh - 65px) auto;';
+		resizeScreen();
 	};
 
 	// OnStart innit
@@ -36352,6 +36349,7 @@ $(document).ready(function (e) {
 		window.addEventListener("resize", resizeThrottler, false);
 
 		var resizeTimeout;
+
 		function resizeThrottler() {
 			// ignore resize events as long as an actualResizeHandler execution is in the queue
 			if (!resizeTimeout) {
@@ -36373,7 +36371,8 @@ $(document).ready(function (e) {
 		}
 	})();
 
-	window.onresize = function (event) {
+	window.onresize = resizeScreen;
+	function resizeScreen(keyboardFlag) {
 		document.getElementsByClassName('canvasPic')[0].remove();
 		var pattern = Trianglify({
 			width: window.innerWidth,
@@ -36391,6 +36390,11 @@ $(document).ready(function (e) {
 		});
 		if (flagForm === true) {
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+			if (keyboardFlag > 0) {
+				document.getElementsByClassName('canvasPic')[0].style.cssText = 'height:calc(100vh + ' + keyboardFlag + 'px);';
+			} else {
+				document.getElementsByClassName('canvasPic')[0].style.cssText = 'height:calc(100vh - 65px);';
+			}
 		} else if (flagHome === true) {
 			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
 		}

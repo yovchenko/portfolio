@@ -188,7 +188,6 @@ $(document).ready(function (e) {
 		}, 1500);
 	}
 
-	
 	function updateWindowSize() {
 		window.lastInnerWidth = window.innerWidth;
 		window.lastInnerHeight = window.innerHeight;
@@ -196,79 +195,81 @@ $(document).ready(function (e) {
 		// Stays the same for iOS, so that's our ticket to detect iOS keyboard
 		window.lastBodyHeight = document.body.clientHeight;
 	};
-	
+
 	function detectKeyboard() {
 		function orientationChange() {
-			if ( ((window.lastOrientation == 0 || window.lastOrientation == 180) && (window.orientation == 0 || window.orientation == 180)) || ((window.lastOrientation == 90 || window.lastOrientation == -90) && (window.orientation == 90 || window.orientation == -90)) ) return false
+			if (((window.lastOrientation == 0 || window.lastOrientation == 180) && (window.orientation == 0 || window.orientation == 180)) || ((window.lastOrientation == 90 || window.lastOrientation == -90) && (window.orientation == 90 || window.orientation == -90))) return false
 			else return true;
 		}
-		
+
 		// No orientation change, keyboard opening
-		if ( (window.lastInnerHeight - window.innerHeight > 150 ) && window.innerWidth == window.lastInnerWidth ) {
+		if ((window.lastInnerHeight - window.innerHeight > 150) && window.innerWidth == window.lastInnerWidth) {
 			var keyboardHeight = window.lastInnerHeight - window.innerHeight;
 			updateWindowSize();
 			return keyboardHeight;
 		}
 		// Orientation change with keyboard already opened
-		if ( orientationChange() && document.body.classList.contains("keyboard-open") ) {
+		if (orientationChange() && document.body.classList.contains("keyboard-open")) {
 			var keyboardHeight = screen.height - window.topBarHeight - window.innerHeight;
 			updateWindowSize();
 			return keyboardHeight;
 		}
-		
+
 		// No orientation change, keyboard closing
-		if ( (window.innerHeight - window.lastInnerHeight > 150 ) && window.innerWidth == window.lastInnerWidth) {
+		if ((window.innerHeight - window.lastInnerHeight > 150) && window.innerWidth == window.lastInnerWidth) {
 			var keyboardHeight = -1;
 			updateWindowSize();
 			return keyboardHeight;
-			
-		} 
-		
+
+		}
+
 		// Orientation change or regular resize, no keyboard action
 		var keyboardHeight = 0;
 		updateWindowSize();
 		return keyboardHeight;
 	};
-	
+
 	function keyboardShift(keyboardHeight) {
-		if (flagForm === true) {
-		grid.classList += ' resize';
-		document.getElementsByClassName('canvasPic')[0].classList += ' resize';
-		resizeContent('.envelope', '#wrap', 530, 630);
-		}
+		grid.style.cssText = 'grid-template-rows:65px calc(100vh + ' + keyboardHeight + 'px) auto;';
+		resizeScreen(keyboardHeight);
 	};
+
 	function removeKeyboardShift() {
-		grid.classList = 'grid-container';
-		document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
-		resizeContent('.envelope', '#wrap', 530, 630);
+		grid.style.cssText = 'grid-template-rows:65px calc(100vh - 65px) auto;';
+		resizeScreen();
 	};
-	
+
 	// OnStart innit
-	(function() {
+	(function () {
 		updateWindowSize();
 		window.topBarHeight = screen.height - window.innerHeight;
 		window.addEventListener("resize", resizeThrottler, false);
-		
+
 		var resizeTimeout;
+
 		function resizeThrottler() {
 			// ignore resize events as long as an actualResizeHandler execution is in the queue
-			if ( !resizeTimeout ) {
-				resizeTimeout = setTimeout(function() {
+			if (!resizeTimeout) {
+				resizeTimeout = setTimeout(function () {
 					resizeTimeout = null;
-					actualResizeHandler();			
-				// The actualResizeHandler will execute at a rate of 15fps
+					actualResizeHandler();
+					// The actualResizeHandler will execute at a rate of 15fps
 				}, 66);
 			}
 		}
-		
+
 		function actualResizeHandler() {
 			var keyboardHeight = detectKeyboard();
-			if (keyboardHeight > 0) { keyboardShift(keyboardHeight); }
-			else if (keyboardHeight == -1) { removeKeyboardShift(); }
+			if (keyboardHeight > 0) {
+				keyboardShift(keyboardHeight);
+			} else if (keyboardHeight == -1) {
+				removeKeyboardShift();
+			}
 		}
 	}());
 
-	window.onresize = function (event) {
+	window.onresize = resizeScreen;
+	function resizeScreen(keyboardFlag) {
 		document.getElementsByClassName('canvasPic')[0].remove();
 		let pattern = Trianglify({
 			width: window.innerWidth,
@@ -286,8 +287,14 @@ $(document).ready(function (e) {
 		});
 		if (flagForm === true) {
 			resizeContent('.envelope', '#wrap', 530, 630);
+			if (keyboardFlag > 0) {
+				document.getElementsByClassName('canvasPic')[0].style.cssText = 'height:calc(100vh + ' + keyboardFlag + 'px);';
+			} else {
+				document.getElementsByClassName('canvasPic')[0].style.cssText = 'height:calc(100vh - 65px);';
+			}
 		} else if (flagHome === true) {
 			resizeContent('#figure', '#wrapperCanvas', 800, 900);
 		}
-	}
+	};
+
 });

@@ -1088,12 +1088,6 @@ footer .wrapper {
             padding: 10px 0 10px 0;
         }
     }
-    .grid-container.resize {
-        grid-template-rows: 65px calc(100vh + 50vh) auto;
-    }
-    .canvasPic.resize {
-        height: calc(100vh + 50vh);
-    }
 }
 
 @media all and (max-width: 576px) {
@@ -1127,12 +1121,6 @@ footer .wrapper {
     }
     .btn-hamburger:hover {
         transform: none;
-    }
-    .grid-container.resize {
-        grid-template-rows: 65px calc(100vh + 50vh) auto;
-    }
-    .canvasPic.resize {
-        height: calc(100vh + 50vh);
     }
     main .volume {
         right: -10%;
