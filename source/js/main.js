@@ -122,13 +122,11 @@ $(document).ready(function (e) {
 		const $container = $('.containerForm');
 		const $logoOne = $('.svg-logo-one');
 		const $logoTwo = $('.svg-logo-two');
-		let $pageMain = event.data.case;
 		$curtainRight.add($curtainLeft).css('width', '100%');
 		$curtainRight.stop().css('transform', 'translateX(50%)');
 		$curtainLeft.stop().css('transform', 'translateX(-50%)');
+		let $pageMain = event.data.case;
 		let $timerCurtain = setTimeout(function () {
-			grid.classList = 'grid-container';
-			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
 			if ($pageMain === 4) {
 				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
@@ -188,7 +186,7 @@ $(document).ready(function (e) {
 		}, 1500);
 	}
 
-let flagKeyboard = false;
+	let flagKeyboard = false;
 	function updateWindowSize() {
 		window.lastInnerWidth = window.innerWidth;
 		window.lastInnerHeight = window.innerHeight;
@@ -199,7 +197,11 @@ let flagKeyboard = false;
 
 	function detectKeyboard() {
 		function orientationChange() {
-			if (((window.lastOrientation == 0 || window.lastOrientation == 180) && (window.orientation == 0 || window.orientation == 180)) || ((window.lastOrientation == 90 || window.lastOrientation == -90) && (window.orientation == 90 || window.orientation == -90))) return false
+			if (((window.lastOrientation == 0 || window.lastOrientation == 180) &&
+					(window.orientation == 0 || window.orientation == 180)) ||
+				((window.lastOrientation == 90 || window.lastOrientation == -90) &&
+					(window.orientation == 90 ||
+						window.orientation == -90))) return false
 			else return true;
 		}
 
@@ -221,7 +223,6 @@ let flagKeyboard = false;
 			let keyboardHeight = -1;
 			updateWindowSize();
 			return keyboardHeight;
-
 		}
 
 		// Orientation change or regular resize, no keyboard action
@@ -231,16 +232,17 @@ let flagKeyboard = false;
 	};
 
 	function keyboardShift(keyboardHeight) {
+		
 		grid.style.cssText = 'grid-template-rows:65px calc(100vh + ' + keyboardHeight + 'px) auto;';
 		flagKeyboard = true;
-		resizeScreen(event,keyboardHeight);
+		resizeScreenObj(event, keyboardHeight);
 	};
 
 	function removeKeyboardShift() {
 		grid.style.cssText = 'grid-template-rows:65px calc(100vh - 65px) auto;';
 		document.getElementsByClassName('canvasPic')[0].style.cssText = 'height:calc(100vh - 65px);';
 		flagKeyboard = false;
-		resizeScreen(event,0);
+		resizeScreenObj(event, 0);
 	};
 
 	// OnStart innit
@@ -250,7 +252,6 @@ let flagKeyboard = false;
 		window.addEventListener("resize", resizeThrottler, false);
 
 		let resizeTimeout;
-
 		function resizeThrottler() {
 			// ignore resize events as long as an actualResizeHandler execution is in the queue
 			if (!resizeTimeout) {
@@ -272,9 +273,11 @@ let flagKeyboard = false;
 		}
 	}());
 
-	window.onresize = resizeScreen;
-
-	function resizeScreen(event,keyHeight) {
+	window.onresize = resizeScreenObj;
+	let resizeTimer;
+	function resizeScreenObj(event, keyHeight) {
+		clearTimeout(resizeTimer);
+		resizeTimer = setTimeout(function() {
 		document.getElementsByClassName('canvasPic')[0].remove();
 		let pattern = Trianglify({
 			width: window.innerWidth,
@@ -294,10 +297,10 @@ let flagKeyboard = false;
 			resizeContent('.envelope', '#wrap', 530, 630);
 		} else if (flagHome === true) {
 			resizeContent('#figure', '#wrapperCanvas', 800, 900);
-		}
-		  else if (flagKeyboard) {
+		} else if (flagKeyboard) {
 			document.getElementsByClassName('canvasPic')[0].style.cssText = 'height:calc(100vh + ' + keyHeight + 'px);';
 			resizeContent('.envelope', '#wrap', 530, 630);
 		}
+	}, 66);
 	};
 });

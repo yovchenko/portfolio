@@ -36227,13 +36227,11 @@ $(document).ready(function (e) {
 		var $container = $('.containerForm');
 		var $logoOne = $('.svg-logo-one');
 		var $logoTwo = $('.svg-logo-two');
-		var $pageMain = event.data.case;
 		$curtainRight.add($curtainLeft).css('width', '100%');
 		$curtainRight.stop().css('transform', 'translateX(50%)');
 		$curtainLeft.stop().css('transform', 'translateX(-50%)');
+		var $pageMain = event.data.case;
 		var $timerCurtain = setTimeout(function () {
-			grid.classList = 'grid-container';
-			document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
 			if ($pageMain === 4) {
 				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
@@ -36334,16 +36332,17 @@ $(document).ready(function (e) {
 	};
 
 	function keyboardShift(keyboardHeight) {
+
 		grid.style.cssText = 'grid-template-rows:65px calc(100vh + ' + keyboardHeight + 'px) auto;';
 		flagKeyboard = true;
-		resizeScreen(event, keyboardHeight);
+		resizeScreenObj(event, keyboardHeight);
 	};
 
 	function removeKeyboardShift() {
 		grid.style.cssText = 'grid-template-rows:65px calc(100vh - 65px) auto;';
 		document.getElementsByClassName('canvasPic')[0].style.cssText = 'height:calc(100vh - 65px);';
 		flagKeyboard = false;
-		resizeScreen(event, 0);
+		resizeScreenObj(event, 0);
 	};
 
 	// OnStart innit
@@ -36353,7 +36352,6 @@ $(document).ready(function (e) {
 		window.addEventListener("resize", resizeThrottler, false);
 
 		var resizeTimeout = void 0;
-
 		function resizeThrottler() {
 			// ignore resize events as long as an actualResizeHandler execution is in the queue
 			if (!resizeTimeout) {
@@ -36375,32 +36373,35 @@ $(document).ready(function (e) {
 		}
 	})();
 
-	window.onresize = resizeScreen;
-
-	function resizeScreen(event, keyHeight) {
-		document.getElementsByClassName('canvasPic')[0].remove();
-		var pattern = Trianglify({
-			width: window.innerWidth,
-			height: window.innerHeight
-		});
-		var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-		pattern = Trianglify({
-			cell_size: 95,
-			variance: 0.75,
-			x_colors: 'random',
-			y_colors: 'match_x',
-			palette: Trianglify.colorbrewer,
-			stroke_width: 0.2
-		});
-		canvasBackground.setAttribute("class", "canvasPic");
-		if (flagForm === true && !flagKeyboard) {
-			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-		} else if (flagHome === true) {
-			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
-		} else if (flagKeyboard) {
-			document.getElementsByClassName('canvasPic')[0].style.cssText = 'height:calc(100vh + ' + keyHeight + 'px);';
-			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-		}
+	window.onresize = resizeScreenObj;
+	var resizeTimer = void 0;
+	function resizeScreenObj(event, keyHeight) {
+		clearTimeout(resizeTimer);
+		resizeTimer = setTimeout(function () {
+			document.getElementsByClassName('canvasPic')[0].remove();
+			var pattern = Trianglify({
+				width: window.innerWidth,
+				height: window.innerHeight
+			});
+			var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
+			pattern = Trianglify({
+				cell_size: 95,
+				variance: 0.75,
+				x_colors: 'random',
+				y_colors: 'match_x',
+				palette: Trianglify.colorbrewer,
+				stroke_width: 0.2
+			});
+			canvasBackground.setAttribute("class", "canvasPic");
+			if (flagForm === true && !flagKeyboard) {
+				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+			} else if (flagHome === true) {
+				(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
+			} else if (flagKeyboard) {
+				document.getElementsByClassName('canvasPic')[0].style.cssText = 'height:calc(100vh + ' + keyHeight + 'px);';
+				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+			}
+		}, 66);
 	};
 });
 
