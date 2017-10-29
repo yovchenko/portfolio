@@ -17,6 +17,7 @@ html {
 
 .grid-container {
     display: grid;
+    position: relative;
     grid-template-areas: "head" "main" "footer";
     grid-template-rows: 65px $main auto;
     grid-template-columns: auto;
@@ -213,7 +214,7 @@ figure {
 
 .canvasPic {
     width: 100%;
-    height: $main;
+    height: calc(100% - 130px);
     position: absolute;
     margin-top: 65px;
     z-index: -2;

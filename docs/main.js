@@ -36396,7 +36396,6 @@ $(document).ready(function (e) {
 			} else if (flagHome === true) {
 				(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
 			} else if (flagKeyboard) {
-				canvasBackground.style.cssText = 'height:calc(100vh + ' + keyHeight + 'px);';
 				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 			}
 		}, 122);

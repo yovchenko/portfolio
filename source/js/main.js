@@ -270,7 +270,7 @@ $(document).ready(function (e) {
 			}
 		}
 	}());
-
+	
 	window.onresize = resizeScreenObj;
 	let resizeTimer;
 	function resizeScreenObj(event, keyHeight) {
@@ -296,7 +296,6 @@ $(document).ready(function (e) {
 		} else if (flagHome === true) {
 			resizeContent('#figure', '#wrapperCanvas', 800, 900);
 		} else if (flagKeyboard) {
-			canvasBackground.style.cssText = 'height:calc(100vh + ' + keyHeight + 'px);';
 			resizeContent('.envelope', '#wrap', 530, 630);
 		}
 	}, 122);
