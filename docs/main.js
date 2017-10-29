@@ -36326,11 +36326,13 @@ $(document).ready(function (e) {
 				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic resize';
 				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 				keyboard = false;
+				originalSize = newSize;
 			} else {
 				grid.classList = 'grid-container';
 				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
 				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 				keyboard = false;
+				originalSize = newSize;
 			}
 		} else if (flagHome === true) {
 			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
