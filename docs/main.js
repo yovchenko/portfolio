@@ -36303,7 +36303,7 @@ $(document).ready(function (e) {
 	});
 
 	var originalSize = window.innerWidth + window.innerHeight;
-	$('.grid-container').resize(function () {
+	document.getElementsByTagName("BODY")[0].onresize = function () {
 		var newSize = window.innerWidth + window.innerHeight;
 		document.getElementsByClassName('canvasPic')[0].remove();
 		var pattern = Trianglify({
@@ -36335,7 +36335,7 @@ $(document).ready(function (e) {
 		} else if (flagHome === true) {
 			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
 		}
-	});
+	};
 });
 
 /***/ }),
