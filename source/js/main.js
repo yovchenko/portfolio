@@ -197,9 +197,9 @@ $(document).ready(function (e) {
 		}
 	});
 	
-	let originalSize = $(window).width() + $(window).height();
-	$(window).resize(function () {
-		let newSize = $(window).width() + $(window).height();
+	let originalSize =  window.innerWidth + window.innerHeight;
+	$('.grid-container').resize(function () {
+		let newSize = window.innerWidth + window.innerHeight;
 		document.getElementsByClassName('canvasPic')[0].remove();
 		let pattern = Trianglify({
 			width: window.innerWidth,
@@ -221,13 +221,11 @@ $(document).ready(function (e) {
 				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic resize';
 				resizeContent('.envelope', '#wrap', 530, 630);
 				keyboard = false;
-				originalSize = newSize;
 			} else {
 				grid.classList = 'grid-container';
 				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
 				resizeContent('.envelope', '#wrap', 530, 630);
 				keyboard = false;
-				originalSize = newSize;
 			}
 		} else if (flagHome === true) {
 			resizeContent('#figure', '#wrapperCanvas', 800, 900);
