@@ -188,19 +188,7 @@ $(document).ready(function (e) {
 		}, 1500);
 	}
 
-	let keyboard = false;
-	$(window).on("orientationchange", function (event) {
-		if (flagForm === true && grid.classList.value === 'grid-container') {
-			keyboard = false;
-		} else if (flagForm === true && grid.classList.value === 'grid-container resize') {
-			keyboard = true;
-		}
-	});
-	
-	let originalSize =  window.innerWidth + window.innerHeight;
-	window.onresize = function () {
-		let newSize = this.innerWidth + this.innerHeight;
-		console.log(originalSize + ' ' + newSize);
+	window.onresize = function (event) {
 		document.getElementsByClassName('canvasPic')[0].remove();
 		let pattern = Trianglify({
 			width: window.innerWidth,
@@ -217,19 +205,9 @@ $(document).ready(function (e) {
 			stroke_width: 0.2,
 		});
 		if (flagForm === true) {
-			if ((newSize !== originalSize && grid.classList.value === 'grid-container') || keyboard === true) {
-				grid.classList = 'grid-container resize';
-				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic resize';
-				resizeContent('.envelope', '#wrap', 530, 630);
-				keyboard = false;
-			} else {
-				grid.classList = 'grid-container';
-				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic';
-				resizeContent('.envelope', '#wrap', 530, 630);
-				keyboard = false;
-			}
+			resizeContent('.envelope', '#wrap', 530, 630);
 		} else if (flagHome === true) {
 			resizeContent('#figure', '#wrapperCanvas', 800, 900);
 		}
-	};
+	}
 });
