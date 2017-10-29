@@ -36293,6 +36293,7 @@ $(document).ready(function (e) {
 		}, 1500);
 	}
 
+	var flagKeyboard = false;
 	function updateWindowSize() {
 		window.lastInnerWidth = window.innerWidth;
 		window.lastInnerHeight = window.innerHeight;
@@ -36308,22 +36309,22 @@ $(document).ready(function (e) {
 
 		// No orientation change, keyboard opening
 		if (window.lastInnerHeight - window.innerHeight > 150 && window.innerWidth == window.lastInnerWidth) {
-			var keyboardHeight = window.lastInnerHeight - window.innerHeight;
+			var _keyboardHeight = window.lastInnerHeight - window.innerHeight;
 			updateWindowSize();
-			return keyboardHeight;
+			return _keyboardHeight;
 		}
 		// Orientation change with keyboard already opened
-		if (orientationChange() && document.body.classList.contains("keyboard-open")) {
-			var keyboardHeight = screen.height - window.topBarHeight - window.innerHeight;
+		if (orientationChange() && flagKeyboard) {
+			var _keyboardHeight2 = screen.height - window.topBarHeight - window.innerHeight;
 			updateWindowSize();
-			return keyboardHeight;
+			return _keyboardHeight2;
 		}
 
 		// No orientation change, keyboard closing
 		if (window.innerHeight - window.lastInnerHeight > 150 && window.innerWidth == window.lastInnerWidth) {
-			var keyboardHeight = -1;
+			var _keyboardHeight3 = -1;
 			updateWindowSize();
-			return keyboardHeight;
+			return _keyboardHeight3;
 		}
 
 		// Orientation change or regular resize, no keyboard action
@@ -36334,13 +36335,15 @@ $(document).ready(function (e) {
 
 	function keyboardShift(keyboardHeight) {
 		grid.style.cssText = 'grid-template-rows:65px calc(100vh + ' + keyboardHeight + 'px) auto;';
-		resizeScreen(keyboardHeight);
+		flagKeyboard = true;
+		resizeScreen(event, keyboardHeight);
 	};
 
 	function removeKeyboardShift() {
 		grid.style.cssText = 'grid-template-rows:65px calc(100vh - 65px) auto;';
 		document.getElementsByClassName('canvasPic')[0].style.cssText = 'height:calc(100vh - 65px);';
-		resizeScreen();
+		flagKeyboard = false;
+		resizeScreen(event, 0);
 	};
 
 	// OnStart innit
@@ -36349,7 +36352,7 @@ $(document).ready(function (e) {
 		window.topBarHeight = screen.height - window.innerHeight;
 		window.addEventListener("resize", resizeThrottler, false);
 
-		var resizeTimeout;
+		var resizeTimeout = void 0;
 
 		function resizeThrottler() {
 			// ignore resize events as long as an actualResizeHandler execution is in the queue
@@ -36374,22 +36377,13 @@ $(document).ready(function (e) {
 
 	window.onresize = resizeScreen;
 
-	function resizeScreen(keyboardFlag) {
+	function resizeScreen(event, keyHeight) {
 		document.getElementsByClassName('canvasPic')[0].remove();
 		var pattern = Trianglify({
 			width: window.innerWidth,
 			height: window.innerHeight
 		});
 		var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-		canvasBackground.setAttribute("class", "canvasPic");
-		if (flagForm === true) {
-			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-			if (keyboardFlag > 0) {
-				document.getElementsByClassName('canvasPic')[0].style.cssText = 'height:calc(100vh + ' + keyboardFlag + 'px);';
-			}
-		} else if (flagHome === true) {
-			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
-		}
 		pattern = Trianglify({
 			cell_size: 95,
 			variance: 0.75,
@@ -36398,6 +36392,15 @@ $(document).ready(function (e) {
 			palette: Trianglify.colorbrewer,
 			stroke_width: 0.2
 		});
+		canvasBackground.setAttribute("class", "canvasPic");
+		if (flagForm === true && !flagKeyboard) {
+			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+		} else if (flagHome === true) {
+			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
+		} else if (flagKeyboard) {
+			document.getElementsByClassName('canvasPic')[0].style.cssText = 'height:calc(100vh + ' + keyHeight + 'px);';
+			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+		}
 	};
 });
 

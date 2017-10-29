@@ -188,6 +188,7 @@ $(document).ready(function (e) {
 		}, 1500);
 	}
 
+let flagKeyboard = false;
 	function updateWindowSize() {
 		window.lastInnerWidth = window.innerWidth;
 		window.lastInnerHeight = window.innerHeight;
@@ -204,40 +205,42 @@ $(document).ready(function (e) {
 
 		// No orientation change, keyboard opening
 		if ((window.lastInnerHeight - window.innerHeight > 150) && window.innerWidth == window.lastInnerWidth) {
-			var keyboardHeight = window.lastInnerHeight - window.innerHeight;
+			let keyboardHeight = window.lastInnerHeight - window.innerHeight;
 			updateWindowSize();
 			return keyboardHeight;
 		}
 		// Orientation change with keyboard already opened
-		if (orientationChange() && document.body.classList.contains("keyboard-open")) {
-			var keyboardHeight = screen.height - window.topBarHeight - window.innerHeight;
+		if (orientationChange() && flagKeyboard) {
+			let keyboardHeight = screen.height - window.topBarHeight - window.innerHeight;
 			updateWindowSize();
 			return keyboardHeight;
 		}
 
 		// No orientation change, keyboard closing
 		if ((window.innerHeight - window.lastInnerHeight > 150) && window.innerWidth == window.lastInnerWidth) {
-			var keyboardHeight = -1;
+			let keyboardHeight = -1;
 			updateWindowSize();
 			return keyboardHeight;
 
 		}
 
 		// Orientation change or regular resize, no keyboard action
-		var keyboardHeight = 0;
+		let keyboardHeight = 0;
 		updateWindowSize();
 		return keyboardHeight;
 	};
 
 	function keyboardShift(keyboardHeight) {
 		grid.style.cssText = 'grid-template-rows:65px calc(100vh + ' + keyboardHeight + 'px) auto;';
-		resizeScreen(keyboardHeight);
+		flagKeyboard = true;
+		resizeScreen(event,keyboardHeight);
 	};
 
 	function removeKeyboardShift() {
 		grid.style.cssText = 'grid-template-rows:65px calc(100vh - 65px) auto;';
 		document.getElementsByClassName('canvasPic')[0].style.cssText = 'height:calc(100vh - 65px);';
-		resizeScreen();
+		flagKeyboard = false;
+		resizeScreen(event,0);
 	};
 
 	// OnStart innit
@@ -246,7 +249,7 @@ $(document).ready(function (e) {
 		window.topBarHeight = screen.height - window.innerHeight;
 		window.addEventListener("resize", resizeThrottler, false);
 
-		var resizeTimeout;
+		let resizeTimeout;
 
 		function resizeThrottler() {
 			// ignore resize events as long as an actualResizeHandler execution is in the queue
@@ -260,7 +263,7 @@ $(document).ready(function (e) {
 		}
 
 		function actualResizeHandler() {
-			var keyboardHeight = detectKeyboard();
+			let keyboardHeight = detectKeyboard();
 			if (keyboardHeight > 0) {
 				keyboardShift(keyboardHeight);
 			} else if (keyboardHeight == -1) {
@@ -271,22 +274,13 @@ $(document).ready(function (e) {
 
 	window.onresize = resizeScreen;
 
-	function resizeScreen(keyboardFlag) {
+	function resizeScreen(event,keyHeight) {
 		document.getElementsByClassName('canvasPic')[0].remove();
 		let pattern = Trianglify({
 			width: window.innerWidth,
 			height: window.innerHeight
 		});
 		const canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-		canvasBackground.setAttribute("class", "canvasPic");
-		if (flagForm === true) {
-			resizeContent('.envelope', '#wrap', 530, 630);
-			if (keyboardFlag > 0) {
-				document.getElementsByClassName('canvasPic')[0].style.cssText = 'height:calc(100vh + ' + keyboardFlag + 'px);';
-			}
-		} else if (flagHome === true) {
-			resizeContent('#figure', '#wrapperCanvas', 800, 900);
-		}
 		pattern = Trianglify({
 			cell_size: 95,
 			variance: 0.75,
@@ -295,5 +289,15 @@ $(document).ready(function (e) {
 			palette: Trianglify.colorbrewer,
 			stroke_width: 0.2,
 		});
+		canvasBackground.setAttribute("class", "canvasPic");
+		if (flagForm === true && !flagKeyboard) {
+			resizeContent('.envelope', '#wrap', 530, 630);
+		} else if (flagHome === true) {
+			resizeContent('#figure', '#wrapperCanvas', 800, 900);
+		}
+		  else if (flagKeyboard) {
+			document.getElementsByClassName('canvasPic')[0].style.cssText = 'height:calc(100vh + ' + keyHeight + 'px);';
+			resizeContent('.envelope', '#wrap', 530, 630);
+		}
 	};
 });
