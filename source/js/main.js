@@ -290,14 +290,12 @@ $(document).ready(function (e) {
 			palette: Trianglify.colorbrewer,
 			stroke_width: 0.2,
 		});
+		canvasBackground.setAttribute("class", "canvasPic");
 		if (flagForm === true && !flagKeyboard) {
-			canvasBackground.setAttribute("class", "canvasPic");
 			resizeContent('.envelope', '#wrap', 530, 630);
 		} else if (flagHome === true) {
-			canvasBackground.setAttribute("class", "canvasPic");
 			resizeContent('#figure', '#wrapperCanvas', 800, 900);
 		} else if (flagKeyboard) {
-			canvasBackground.setAttribute("class", "canvasPic");
 			canvasBackground.style.cssText = 'height:calc(100vh + ' + keyHeight + 'px);';
 			resizeContent('.envelope', '#wrap', 530, 630);
 		}
