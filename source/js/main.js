@@ -191,15 +191,16 @@ $(document).ready(function (e) {
 	let keyboard = false;
 	$(window).on("orientationchange", function (event) {
 		if (flagForm === true && grid.classList.value === 'grid-container') {
-			keyboard = true;
+			keyboard = false;
 		} else if (flagForm === true && grid.classList.value === 'grid-container resize') {
 			keyboard = true;
 		}
 	});
 	
 	let originalSize =  window.innerWidth + window.innerHeight;
-	document.getElementsByTagName("BODY")[0].onresize = function () {
-		let newSize = window.innerWidth + window.innerHeight;
+	window.onresize = function () {
+		let newSize = this.innerWidth + this.innerHeight;
+		console.log(originalSize + ' ' + newSize);
 		document.getElementsByClassName('canvasPic')[0].remove();
 		let pattern = Trianglify({
 			width: window.innerWidth,

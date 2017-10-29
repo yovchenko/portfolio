@@ -36296,15 +36296,16 @@ $(document).ready(function (e) {
 	var keyboard = false;
 	$(window).on("orientationchange", function (event) {
 		if (flagForm === true && grid.classList.value === 'grid-container') {
-			keyboard = true;
+			keyboard = false;
 		} else if (flagForm === true && grid.classList.value === 'grid-container resize') {
 			keyboard = true;
 		}
 	});
 
 	var originalSize = window.innerWidth + window.innerHeight;
-	document.getElementsByTagName("BODY")[0].onresize = function () {
-		var newSize = window.innerWidth + window.innerHeight;
+	window.onresize = function () {
+		var newSize = this.innerWidth + this.innerHeight;
+		console.log(originalSize + ' ' + newSize);
 		document.getElementsByClassName('canvasPic')[0].remove();
 		var pattern = Trianglify({
 			width: window.innerWidth,
