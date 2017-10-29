@@ -217,7 +217,7 @@ $(document).ready(function (e) {
 			stroke_width: 0.2,
 		});
 		if (flagForm === true) {
-			if ((newSize !== originalSize && grid.classList.value === 'grid-container') && !keyboard === true) {
+			if ((newSize !== originalSize && grid.classList.value === 'grid-container') || keyboard === true) {
 				grid.classList = 'grid-container resize';
 				document.getElementsByClassName('canvasPic')[0].classList = 'canvasPic resize';
 				resizeContent('.envelope', '#wrap', 530, 630);
