@@ -615,7 +615,8 @@ html, html body {
           box-sizing: border-box;
   font-family: "sketch", "Georgia", serif;
   margin: 0;
-  font-size: 10px; }
+  font-size: 10px;
+  line-height: 1; }
   html body {
     background-color: rgba(106, 137, 244, 0.17); }
 
@@ -707,13 +708,13 @@ footer {
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
     margin: 0px 10px;
     border-radius: 5px;
-    font-size: 5.3vw; }
-    @media (max-width: 283.01887px) {
+    font-size: 5.4vw; }
+    @media (max-width: 370.37037px) {
       .menu__header .menu__about,
       .menu__header .menu__work,
       .menu__header .menu__contact {
-        font-size: 15px; } }
-    @media (min-width: 943.39623px) {
+        font-size: 20px; } }
+    @media (min-width: 925.92593px) {
       .menu__header .menu__about,
       .menu__header .menu__work,
       .menu__header .menu__contact {
@@ -732,11 +733,11 @@ footer {
             justify-content: start;
     text-align: center;
     margin-left: 10px;
-    font-size: 5.3vw; }
-    @media (max-width: 283.01887px) {
+    font-size: 5.4vw; }
+    @media (max-width: 370.37037px) {
       .menu__header #menu__init {
-        font-size: 15px; } }
-    @media (min-width: 943.39623px) {
+        font-size: 20px; } }
+    @media (min-width: 925.92593px) {
       .menu__header #menu__init {
         font-size: 50px; } }
   .menu__header .menu__home {
@@ -749,11 +750,11 @@ footer {
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
     margin: 0px 10px;
     border-radius: 5px;
-    font-size: 5.3vw; }
-    @media (max-width: 283.01887px) {
+    font-size: 5.4vw; }
+    @media (max-width: 370.37037px) {
       .menu__header .menu__home {
-        font-size: 15px; } }
-    @media (min-width: 943.39623px) {
+        font-size: 20px; } }
+    @media (min-width: 925.92593px) {
       .menu__header .menu__home {
         font-size: 50px; } }
   .menu__header p[class] > span {
