@@ -883,7 +883,9 @@ article {
   width: 100%;
   position: relative;
   grid-column: 1 / 4;
-  grid-row: 1 / 4; }
+  grid-row: 1 / 4;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out; }
 
 .envelope {
   width: 90%;
@@ -1530,7 +1532,10 @@ footer .wrapper {
     -webkit-transform: scale(1.2);
             transform: scale(1.2); }
     main .volume .input-wrap {
-      padding: 10px 0 10px 0; } }
+      padding: 10px 0 10px 0; }
+  .scaleForm {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); } }
 
 @media all and (max-width: 576px) {
   .menu__header .menu__about,
@@ -1567,7 +1572,10 @@ footer .wrapper {
           -ms-flex-direction: row;
               flex-direction: row; }
       main .volume .plus-minus-input .input-wrap {
-        padding: 10px 0 10px 0; } }
+        padding: 10px 0 10px 0; }
+  .scaleForm {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); } }
 
 @media all and (max-width: 576px) and (min-aspect-ratio: 9 / 12) {
   main .volume {

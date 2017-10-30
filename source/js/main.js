@@ -300,4 +300,11 @@ $(document).ready(function (e) {
 		}
 	}, 122);
 	};
+/* the form is getting bigger when the on-screen keyboard opens */
+	$(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focus(function () { 
+		document.getElementsByClassName('containerForm')[0].classList += ' scaleForm';
+	});
+	$(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focusout(function () { 
+		document.getElementsByClassName('containerForm')[0].classList = 'containerForm';
+	});
 });

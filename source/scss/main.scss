@@ -303,6 +303,7 @@ article {
     position: relative;
     grid-column: 1 / 4;
     grid-row: 1 / 4;
+    transition: 1s ease-in-out;
 }
 
 .envelope {
@@ -317,6 +318,7 @@ article {
     transform: translate(-50%, -50%);
     letter-spacing: 1.4px;
 }
+
 
 #wrap {
     width: 530px;
@@ -1089,6 +1091,9 @@ footer .wrapper {
             padding: 10px 0 10px 0;
         }
     }
+    .scaleForm {
+        transform: scale(1.1);
+    }
 }
 
 @media all and (max-width: 576px) {
@@ -1134,6 +1139,9 @@ footer .wrapper {
                 padding: 10px 0 10px 0;
             }
         }
+    }
+    .scaleForm {
+        transform: scale(1.1);
     }
     @media all and (min-aspect-ratio: 9/12) {
         main .volume {
