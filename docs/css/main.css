@@ -701,18 +701,27 @@ footer {
     cursor: pointer;
     font-family: "sketch", "Georgia", serif;
     display: none;
-    font-size: 5.3vmin;
     line-height: 61px;
     grid-row: 1;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.005)), to(rgba(75, 75, 75, 0.45)));
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
     margin: 0px 10px;
-    border-radius: 5px; }
+    border-radius: 5px;
+    font-size: 5.3vw; }
+    @media (max-width: 283.01887px) {
+      .menu__header .menu__about,
+      .menu__header .menu__work,
+      .menu__header .menu__contact {
+        font-size: 15px; } }
+    @media (min-width: 943.39623px) {
+      .menu__header .menu__about,
+      .menu__header .menu__work,
+      .menu__header .menu__contact {
+        font-size: 50px; } }
   .menu__header #menu__init {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    font-size: 5.3vmin;
     opacity: 0.85;
     grid-row: 1;
     grid-column: 2 / 4;
@@ -722,18 +731,31 @@ footer {
         -ms-flex-pack: start;
             justify-content: start;
     text-align: center;
-    margin-left: 10px; }
+    margin-left: 10px;
+    font-size: 5.3vw; }
+    @media (max-width: 283.01887px) {
+      .menu__header #menu__init {
+        font-size: 15px; } }
+    @media (min-width: 943.39623px) {
+      .menu__header #menu__init {
+        font-size: 50px; } }
   .menu__header .menu__home {
     display: none;
     cursor: pointer;
     font-family: "sketch", "Georgia", serif;
-    font-size: 5.3vmin;
     line-height: 61px;
     grid-row: 1;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.005)), to(rgba(75, 75, 75, 0.45)));
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
     margin: 0px 10px;
-    border-radius: 5px; }
+    border-radius: 5px;
+    font-size: 5.3vw; }
+    @media (max-width: 283.01887px) {
+      .menu__header .menu__home {
+        font-size: 15px; } }
+    @media (min-width: 943.39623px) {
+      .menu__header .menu__home {
+        font-size: 50px; } }
   .menu__header p[class] > span {
     letter-spacing: -0.45px; }
   .menu__header p[class] > span:last-child {
@@ -763,8 +785,7 @@ main {
   position: relative;
   grid-column: 1 / 4;
   grid-row: 1 / 4;
-  z-index: 2;
-  top: -10px; }
+  z-index: 2; }
 
 figure {
   width: 100%;
@@ -863,7 +884,7 @@ figure {
 
 article {
   max-width: 100%;
-  font-size: 5.2vmin;
+  font-size: 5.3vmin;
   text-align: center;
   margin: 0 auto;
   grid-row: 1;
@@ -1512,13 +1533,7 @@ footer .wrapper {
 
 /* media queries */
 @media all and (min-width: 1600px) {
-  .wrapper #menu__init,
-  .wrapper .menu__home,
-  .wrapper .menu__about,
-  .wrapper .menu__work,
-  .wrapper .menu__contact {
-    font-size: 50px; }
-  .wrapper article {
+  article {
     font-size: 50px; } }
 
 @media all and (max-width: 767px) and (min-width: 577px) {
@@ -1539,15 +1554,9 @@ footer .wrapper {
             transform: scale(1.1); } }
 
 @media all and (max-width: 576px) {
-  .menu__header .menu__about,
-  .menu__header .menu__work,
-  .menu__header .menu__contact {
-    font-size: 5.6vmin; }
   .menu__header #menu__init {
-    font-size: 5.6vmin;
     line-height: 26px; }
   .menu__header .menu__home {
-    font-size: 5.6vmin;
     line-height: 61px;
     border-radius: 5px; }
   .menu__header p[class] > span {
