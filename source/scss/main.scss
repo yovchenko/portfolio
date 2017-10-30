@@ -85,9 +85,7 @@ footer {
     filter: url(#drop-shadow);
 }
 
-
 /*header letters appearing*/
-
 .menu__header {
     display: grid;
     width: 100%;
@@ -103,16 +101,15 @@ footer {
         cursor: pointer;
         font-family: "sketch", "Georgia", serif;
         display: none;
-        font-size: 5.3vmin;
         line-height: 61px;
         grid-row: 1;
         background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
         margin: 0px 10px;
         border-radius: 5px;
+        @include responsive-font(5.3vw, 15px, 50px);
     }
     #menu__init {
         display: flex;
-        font-size: 5.3vmin;
         opacity: 0.85;
         grid-row: 1;
         grid-column: 2 / 4;
@@ -120,17 +117,18 @@ footer {
         justify-content: start;
         text-align: center;
         margin-left: 10px;
+        @include responsive-font(5.3vw, 15px, 50px);
     }
     .menu__home {
         display: none;
         cursor: pointer;
         font-family: "sketch", "Georgia", serif;
-        font-size: 5.3vmin;
         line-height: 61px;
         grid-row: 1;
         background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
         margin: 0px 10px;
         border-radius: 5px;
+        @include responsive-font(5.3vw, 15px, 50px);
     }
     p[class]>span {
         letter-spacing: -0.45px;
@@ -155,9 +153,7 @@ footer {
     transition: text-shadow .3s ease;
 }
 
-
 /*main section */
-
 main {
     grid-area: main;
     display: grid;
@@ -172,7 +168,6 @@ main {
     grid-column: 1 / 4;
     grid-row: 1 / 4;
     z-index: 2;
-    top: -10px;
 }
 
 figure {
@@ -279,7 +274,7 @@ figure {
 
 article {
     max-width: 100%;
-    font-size: 5.2vmin;
+    font-size: 5.3vmin;
     text-align: center;
     margin: 0 auto;
     grid-row: 1;
@@ -1063,20 +1058,10 @@ footer .wrapper {
 
 
 /* media queries */
-
 @media all and (min-width: 1600px) {
-    .wrapper {
-        #menu__init,
-        .menu__home,
-        .menu__about,
-        .menu__work,
-        .menu__contact {
-            font-size: 50px;
-        }
-        article {
-            font-size: 50px;
-        }
-    }
+article {
+    font-size: 50px;
+}
 }
 
 @media all and (max-width: 767px) and (min-width: 577px) {
@@ -1101,17 +1086,11 @@ footer .wrapper {
 
 @media all and (max-width: 576px) {
     .menu__header {
-        .menu__about,
-        .menu__work,
-        .menu__contact {
-            font-size: 5.6vmin;
-        }
         #menu__init {
-            font-size: 5.6vmin;
+
             line-height: 26px;
         }
         .menu__home {
-            font-size: 5.6vmin;
             line-height: 61px;
             border-radius: 5px;
         }
