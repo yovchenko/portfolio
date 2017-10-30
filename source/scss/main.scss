@@ -547,7 +547,7 @@ footer .wrapper {
             .input-group-field {
                 text-align: center;
                 width: 25px;
-                font-size: 13px;
+                font-size: 130%;
                 border-radius: 5%;
                 background: -webkit-gradient(linear, left top, left bottom, from(#2c3e50), to(black));
                 background: linear-gradient(#2c3e50, black);
@@ -1083,6 +1083,21 @@ article {
     .scaleForm {
         transform: scale(1.1);
     }
+    .svgIcons:hover,
+    .svgIcons:focus {
+        filter: none;
+        transform: none;
+    }
+    .svgIcons:active {
+        filter: url(#icon-shadow);
+        transform: scale(1.07);
+        -webkit-transform: scale(1.07);
+        -moz-transform: scale(1.07);
+    }
+    .menu__header>p[class]:hover,
+    .menu__header>p[class]:focus {
+        text-shadow: -0.5px 0 rgba(255, 255, 255, 0.85), 0 0.5px rgba(255, 255, 255, 0.85), 0.5px 0 rgba(255, 255, 255, 0.85), 0 -0.5px rgba(255, 255, 255, 0.85);
+    }
 }
 
 @media all and (max-width: 576px) {
@@ -1125,6 +1140,21 @@ article {
     }
     .scaleForm {
         transform: scale(1.1);
+    }
+    .svgIcons:hover,
+    .svgIcons:focus {
+        filter: none;
+        transform: none;
+    }
+    .svgIcons:active {
+        filter: url(#icon-shadow);
+        transform: scale(1.07);
+        -webkit-transform: scale(1.07);
+        -moz-transform: scale(1.07);
+    }
+    .menu__header>p[class]:hover,
+    .menu__header>p[class]:focus {
+        text-shadow: -0.5px 0 rgba(255, 255, 255, 0.85), 0 0.5px rgba(255, 255, 255, 0.85), 0.5px 0 rgba(255, 255, 255, 0.85), 0 -0.5px rgba(255, 255, 255, 0.85);
     }
     @media all and (min-aspect-ratio: 9/12) {
         main .volume {
