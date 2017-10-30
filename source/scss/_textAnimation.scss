@@ -1,6 +1,6 @@
 .menu__about span {
-  -webkit-animation: letter-glow 0.45s 0s ease both;
-  animation: letter-glow 0.45s 0s ease both;
+  -webkit-animation: letter-glow 0.45s 0s ease backwards;
+  animation: letter-glow 0.45s 0s ease backwards;
 }
 
 .menu__about span:nth-child(1) {
@@ -29,8 +29,8 @@
 }
 
 .menu__work span {
-  -webkit-animation: letter-glow 0.35s 0s ease both;
-  animation: letter-glow 0.35s 0s ease both;
+  -webkit-animation: letter-glow 0.35s 0s ease backwards;
+  animation: letter-glow 0.35s 0s ease backwards;
 }
 
 .menu__work span:nth-child(1) {
@@ -54,8 +54,8 @@
 }
 
 .menu__contact span {
-  -webkit-animation: letter-glow 0.55s 0s ease both;
-  animation: letter-glow 0.55s 0s ease both;
+  -webkit-animation: letter-glow 0.55s 0s ease backwards;
+  animation: letter-glow 0.55s 0s ease backwards;
 }
 
 .menu__contact span:nth-child(1) {
@@ -133,8 +133,8 @@
 /*header letters disappearing*/
 
 .menu__about.fadeOut span {
-  -webkit-animation: textDisappearing 0.55s 0s ease both;
-  animation: textDisappearing 0.55s 0s ease both;
+  -webkit-animation: textDisappearing 0.55s 0s ease backwards;
+  animation: textDisappearing 0.55s 0s ease backwards;
 }
 
 .menu__about.fadeOut span:nth-child(1) {
@@ -163,8 +163,8 @@
 }
 
 .menu__work.fadeOut span {
-  -webkit-animation: textDisappearing 0.45s 0s ease both;
-  animation: textDisappearing 0.45s 0s ease both;
+  -webkit-animation: textDisappearing 0.45s 0s ease backwards;
+  animation: textDisappearing 0.45s 0s ease backwards;
 }
 
 .menu__work.fadeOut span:nth-child(1) {
@@ -188,8 +188,8 @@
 }
 
 .menu__contact.fadeOut span {
-  -webkit-animation: textDisappearing 0.65s 0s ease both;
-  animation: textDisappearing 0.65s 0s ease both;
+  -webkit-animation: textDisappearing 0.65s 0s ease backwards;
+  animation: textDisappearing 0.65s 0s ease backwards;
 }
 
 .menu__contact.fadeOut span:nth-child(1) {
