@@ -1118,7 +1118,10 @@ footer .wrapper {
       .volume .plus-minus-input .input-wrap .input-group-field {
         text-align: center;
         width: 25px;
-        font-size: 130%;
+        height: 20px;
+        line-height: 20px;
+        font-size: 1.2em;
+        vertical-align: middle;
         border-radius: 5%;
         background: -webkit-gradient(linear, left top, left bottom, from(#2c3e50), to(black));
         background: linear-gradient(#2c3e50, black);
