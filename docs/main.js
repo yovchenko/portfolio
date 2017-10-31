@@ -36396,20 +36396,20 @@ $(document).ready(function (e) {
 			} else if (flagHome === true) {
 				(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
 			} else if (flagKeyboard) {
-				$volume.css('display', 'none');
 				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-			}
-			if (!flagKeyboard && stop.style.display === 'block') {
-				$volume.css('display', 'block');
 			}
 		}, 122);
 	};
 	/* the form is getting bigger when the on-screen keyboard opens */
 	$(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focus(function () {
 		document.getElementsByClassName('containerForm')[0].classList += ' scaleForm';
+		$volume.css('display', 'none');
 	});
 	$(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focusout(function () {
 		document.getElementsByClassName('containerForm')[0].classList = 'containerForm';
+		if (stop.style.display === 'block') {
+			$volume.css('display', 'block');
+		}
 	});
 });
 
