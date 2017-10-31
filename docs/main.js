@@ -36403,12 +36403,14 @@ $(document).ready(function (e) {
 	/* the form is getting bigger when the on-screen keyboard opens */
 	$(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focus(function () {
 		document.getElementsByClassName('containerForm')[0].classList += ' scaleForm';
-		$volume.css('display', 'none');
+		if (window.matchMedia('(max-width: 767px)').matches) {
+			$volume.stop().fadeOut('slow');
+		}
 	});
 	$(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focusout(function () {
 		document.getElementsByClassName('containerForm')[0].classList = 'containerForm';
 		if (stop.style.display === 'block') {
-			$volume.css('display', 'block');
+			$volume.stop().fadeIn('slow');
 		}
 	});
 });
