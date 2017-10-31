@@ -1142,7 +1142,7 @@ article {
         transform: none;
     }
     main .volume {
-        right: -10%;
+        right: -8%;
         bottom: -20px;
         margin: 0 auto;
         transform: scale(1.3);
@@ -1151,6 +1151,11 @@ article {
             .input-wrap {
                 padding: 10px 0 10px 0;
             }
+        }
+    }
+    @-moz-document url-prefix() { 
+        main .volume {
+            right: -23%;
         }
     }
     .scaleForm {
@@ -1178,6 +1183,12 @@ article {
             bottom: 12%;
             .plus-minus-input {
                 flex-direction: column;
+            }
+        }
+        @-moz-document url-prefix() { 
+            main .volume {
+                right: 8%;
+                bottom: 23%;
             }
         }
     }

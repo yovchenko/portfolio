@@ -36115,10 +36115,10 @@ var Trianglify = __webpack_require__(69);
 
 $(document).ready(function (e) {
 	/* music player buttons */
+	var stop = document.getElementById('stopMusic');
+	var play = document.getElementById('playMusic');
+	var $volume = $('.volume');
 	document.getElementsByClassName('svgIcons')[0].onclick = function () {
-		var stop = document.getElementById('stopMusic');
-		var play = document.getElementById('playMusic');
-		var $volume = $('.volume');
 		if (stop.style.display === 'none') {
 			stop.style.display = 'block';
 			play.style.display = 'none';
@@ -36396,7 +36396,11 @@ $(document).ready(function (e) {
 			} else if (flagHome === true) {
 				(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
 			} else if (flagKeyboard) {
+				$volume.css('display', 'none');
 				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+			}
+			if (!flagKeyboard && stop.style.display === 'block') {
+				$volume.css('display', 'block');
 			}
 		}, 122);
 	};

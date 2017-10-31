@@ -10,10 +10,10 @@ import {
 
 $(document).ready(function (e) {
 	/* music player buttons */
+	const stop = document.getElementById('stopMusic');
+	const play = document.getElementById('playMusic');
+	const $volume = $('.volume');
 	document.getElementsByClassName('svgIcons')[0].onclick = function () {
-		const stop = document.getElementById('stopMusic');
-		const play = document.getElementById('playMusic');
-		const $volume = $('.volume');
 		if (stop.style.display === 'none') {
 			stop.style.display = 'block'
 			play.style.display = 'none';
@@ -296,7 +296,11 @@ $(document).ready(function (e) {
 		} else if (flagHome === true) {
 			resizeContent('#figure', '#wrapperCanvas', 800, 900);
 		} else if (flagKeyboard) {
+			$volume.css('display','none');
 			resizeContent('.envelope', '#wrap', 530, 630);
+		}
+		if (!flagKeyboard && stop.style.display === 'block') {
+			$volume.css('display','block');
 		}
 	}, 122);
 	};
