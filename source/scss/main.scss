@@ -527,6 +527,12 @@ footer .wrapper {
     @extend #playMusic;
 }
 
+@-moz-document url-prefix() { 
+   main .volume {
+        right: 15.5%;
+    }
+}
+
 .volume {
     display: none;
     direction: block;
@@ -1081,6 +1087,12 @@ article {
         transform: scale(1.2);
         .input-wrap {
             padding: 10px 0 10px 0;
+        }
+    }
+    @-moz-document url-prefix() { 
+        main .volume {
+            right: 6%;
+            bottom: 24%;
         }
     }
     .scaleForm {
