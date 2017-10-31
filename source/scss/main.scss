@@ -213,7 +213,7 @@ figure {
 
 .canvasPic {
     width: 100%;
-    height: calc(100% - 130px);
+    height: 100%;
     position: absolute;
     margin-top: 65px;
     z-index: -2;
@@ -546,9 +546,9 @@ footer .wrapper {
             padding: 5px;
             .input-group-field {
                 text-align: center;
-                width: 25px;
-                height: 20px;
-                line-height: 20px;
+                width: 20px;
+                height: 15px;
+                line-height: 15px;
                 font-size: 1.2em;
                 vertical-align: middle;
                 border-radius: 5%;
