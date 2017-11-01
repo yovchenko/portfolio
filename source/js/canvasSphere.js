@@ -127,7 +127,8 @@ export default function main() {
 	let flag = true;
 	let width = 110;
 	const innerText = ["NodeJS", "Webpack", "jQuery", "HTML5", "SCSS", "VBS", "SQL"];
-	let indexText = 0;
+	const displayFPS = document.getElementsByClassName('fps')[0];
+	let arrText = 0;
 	let numOfPoints = 1;
 	let testCases = 1;
 	let counter = 0;
@@ -227,15 +228,35 @@ export default function main() {
 		}, 1000);
 	}
 
+	let countFPS = (function () {
+		let lastLoop = (new Date()).getMilliseconds();
+		let count = 1;
+		let fps = 0;
+	  
+		return function () {
+		  let currentLoop = (new Date()).getMilliseconds();
+		  if (lastLoop > currentLoop) {
+			fps = count;
+			count = 1;
+		  } else {
+			count += 1;
+		  }
+		  lastLoop = currentLoop;
+		  return fps;
+		};
+	  }());
+
 	function loop() {
 		render();
 		update();
+		displayFPS.innerHTML = countFPS() + ' fps';
 		requestID = window.requestAnimationFrame(loop);
 	}
 
 	function update() {
 		angle.add(angleSpeed);
 	}
+
 
 	function render() {
 		let rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
@@ -248,7 +269,7 @@ export default function main() {
 		ctx.textAlign = "center";
 		ctx.strokeStyle = "rgba(" + 245 + "," + 245 + "," + 245 + "," + opacity + ")";
 		ctx.textBaseline = "middle";
-		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
+		ctx.strokeText(innerText[arrText], canvas.width / 2, canvas.height / 2);
 		ctx.beginPath();
 		for (var p of points) {
 			p = rotation.multiplyVector(p);
@@ -261,11 +282,11 @@ export default function main() {
 
 		if (opacity > 0.005 && flagText == true) {
 			opacity -= 0.005;
-			if (opacity < 0.005 && indexText < lengthArr - 1) {
-				indexText++;
+			if (opacity < 0.005 && arrText < lengthArr - 1) {
+				arrText++;
 				flagText = false;
-			} else if (opacity < 0.005 && indexText === lengthArr - 1) {
-				indexText = 0;
+			} else if (opacity < 0.005 && arrText === lengthArr - 1) {
+				arrText = 0;
 			} else {
 				flagText = true;
 			}

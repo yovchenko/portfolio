@@ -657,6 +657,11 @@ footer {
             align-items: center; }
 
 /*Hamburger menu*/
+.fps {
+  position: absolute;
+  margin: 5px;
+  font-size: 1.5em; }
+
 .btn-hamburger {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

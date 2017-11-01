@@ -13077,7 +13077,8 @@ function main() {
 	var flag = true;
 	var width = 110;
 	var innerText = ["NodeJS", "Webpack", "jQuery", "HTML5", "SCSS", "VBS", "SQL"];
-	var indexText = 0;
+	var displayFPS = document.getElementsByClassName('fps')[0];
+	var arrText = 0;
 	var numOfPoints = 1;
 	var testCases = 1;
 	var counter = 0;
@@ -13219,9 +13220,28 @@ function main() {
 		}, 1000);
 	}
 
+	var countFPS = function () {
+		var lastLoop = new Date().getMilliseconds();
+		var count = 1;
+		var fps = 0;
+
+		return function () {
+			var currentLoop = new Date().getMilliseconds();
+			if (lastLoop > currentLoop) {
+				fps = count;
+				count = 1;
+			} else {
+				count += 1;
+			}
+			lastLoop = currentLoop;
+			return fps;
+		};
+	}();
+
 	function loop() {
 		render();
 		update();
+		displayFPS.innerHTML = countFPS() + ' fps';
 		requestID = window.requestAnimationFrame(loop);
 	}
 
@@ -13240,7 +13260,7 @@ function main() {
 		ctx.textAlign = "center";
 		ctx.strokeStyle = "rgba(" + 245 + "," + 245 + "," + 245 + "," + opacity + ")";
 		ctx.textBaseline = "middle";
-		ctx.strokeText(innerText[indexText], canvas.width / 2, canvas.height / 2);
+		ctx.strokeText(innerText[arrText], canvas.width / 2, canvas.height / 2);
 		ctx.beginPath();
 		var _iteratorNormalCompletion3 = true;
 		var _didIteratorError3 = false;
@@ -13275,11 +13295,11 @@ function main() {
 
 		if (opacity > 0.005 && flagText == true) {
 			opacity -= 0.005;
-			if (opacity < 0.005 && indexText < lengthArr - 1) {
-				indexText++;
+			if (opacity < 0.005 && arrText < lengthArr - 1) {
+				arrText++;
 				flagText = false;
-			} else if (opacity < 0.005 && indexText === lengthArr - 1) {
-				indexText = 0;
+			} else if (opacity < 0.005 && arrText === lengthArr - 1) {
+				arrText = 0;
 			} else {
 				flagText = true;
 			}
