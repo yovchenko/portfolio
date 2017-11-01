@@ -122,33 +122,34 @@ $(document).ready(function (e) {
 		const $container = $('.containerForm');
 		const $logoOne = $('.svg-logo-one');
 		const $logoTwo = $('.svg-logo-two');
+		const $fps = $('.fps');
 		$curtainRight.add($curtainLeft).css('width', '100%');
 		$curtainRight.stop().css('transform', 'translateX(50%)');
 		$curtainLeft.stop().css('transform', 'translateX(-50%)');
 		let $pageMain = event.data.case;
 		let $timerCurtain = setTimeout(function () {
 			if ($pageMain === 4) {
-				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($wrapperCanvas).stop().css('display', 'none');
+				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($fps).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
 				resizeContent('.envelope', '#wrap', 530, 630);
 				flagForm = true;
 				flagHome = false;
 				anim.stop();
 			} else if ($pageMain === 3) {
-				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
+				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($fps).add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
 				anim.stop();
 				flagForm = false;
 				flagHome = false;
 			} else if ($pageMain === 2) {
-				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($container).stop().css('display', 'none');
+				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($fps).add($container).stop().css('display', 'none');
 				$article.css('display', 'grid');
 				$home.css('display', 'flex');
 				anim.play();
 				flagForm = false;
 				flagHome = false;
 			} else {
-				($wrapperCanvas).add(btnHamburger).add($logoOne).add($logoTwo).css('display', 'grid');
+				($wrapperCanvas).add(btnHamburger).add($logoOne).add($logoTwo).add($fps).css('display', 'grid');
 				$home.add($article).add($container).stop().css('display', 'none');
 				animateArrowToMenu();
 				resizeContent('#figure', '#wrapperCanvas', 800, 900);

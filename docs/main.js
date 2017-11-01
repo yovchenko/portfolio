@@ -36247,33 +36247,34 @@ $(document).ready(function (e) {
 		var $container = $('.containerForm');
 		var $logoOne = $('.svg-logo-one');
 		var $logoTwo = $('.svg-logo-two');
+		var $fps = $('.fps');
 		$curtainRight.add($curtainLeft).css('width', '100%');
 		$curtainRight.stop().css('transform', 'translateX(50%)');
 		$curtainLeft.stop().css('transform', 'translateX(-50%)');
 		var $pageMain = event.data.case;
 		var $timerCurtain = setTimeout(function () {
 			if ($pageMain === 4) {
-				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($wrapperCanvas).stop().css('display', 'none');
+				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($fps).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
 				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 				flagForm = true;
 				flagHome = false;
 				_jsonAnimation.anim.stop();
 			} else if ($pageMain === 3) {
-				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($article).add($container).stop().css('display', 'none');
+				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($fps).add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
 				_jsonAnimation.anim.stop();
 				flagForm = false;
 				flagHome = false;
 			} else if ($pageMain === 2) {
-				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($container).stop().css('display', 'none');
+				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($fps).add($container).stop().css('display', 'none');
 				$article.css('display', 'grid');
 				$home.css('display', 'flex');
 				_jsonAnimation.anim.play();
 				flagForm = false;
 				flagHome = false;
 			} else {
-				$wrapperCanvas.add(btnHamburger).add($logoOne).add($logoTwo).css('display', 'grid');
+				$wrapperCanvas.add(btnHamburger).add($logoOne).add($logoTwo).add($fps).css('display', 'grid');
 				$home.add($article).add($container).stop().css('display', 'none');
 				animateArrowToMenu();
 				(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
