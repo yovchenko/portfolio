@@ -113,6 +113,7 @@ $(document).ready(function (e) {
 	let flagForm = false;
 	let flagHome = true;
 	const grid = document.getElementsByClassName('grid-container')[0];
+	const $flipbook = $('#flipbook');
 
 	function content(event) {
 		const $wrapperCanvas = $('.canvas-box');
@@ -129,7 +130,7 @@ $(document).ready(function (e) {
 		let $pageMain = event.data.case;
 		let $timerCurtain = setTimeout(function () {
 			if ($pageMain === 4) {
-				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($fps).add($wrapperCanvas).stop().css('display', 'none');
+				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($fps).add($flipbook).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
 				resizeContent('.envelope', '#wrap', 530, 630);
 				flagForm = true;
@@ -138,11 +139,12 @@ $(document).ready(function (e) {
 			} else if ($pageMain === 3) {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($fps).add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
+				$flipbook.css('display', 'block');
 				anim.stop();
 				flagForm = false;
 				flagHome = false;
 			} else if ($pageMain === 2) {
-				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($fps).add($container).stop().css('display', 'none');
+				$(init).add(btnHamburger).add($logoOne).add($flipbook).add($logoTwo).add($wrapperCanvas).add($fps).add($container).stop().css('display', 'none');
 				$article.css('display', 'grid');
 				$home.css('display', 'flex');
 				anim.play();
@@ -150,7 +152,7 @@ $(document).ready(function (e) {
 				flagHome = false;
 			} else {
 				($wrapperCanvas).add(btnHamburger).add($logoOne).add($logoTwo).add($fps).css('display', 'grid');
-				$home.add($article).add($container).stop().css('display', 'none');
+				$home.add($article).add($flipbook).add($container).stop().css('display', 'none');
 				animateArrowToMenu();
 				resizeContent('#figure', '#wrapperCanvas', 800, 900);
 				btnHamburger.classList = 'btn-hamburger';
@@ -186,8 +188,8 @@ $(document).ready(function (e) {
 			});
 		}, 1500);
 	}
-
 	let flagKeyboard = false;
+
 	function updateWindowSize() {
 		window.lastInnerWidth = window.innerWidth;
 		window.lastInnerHeight = window.innerHeight;
@@ -251,6 +253,7 @@ $(document).ready(function (e) {
 		window.addEventListener("resize", resizeThrottler, false);
 
 		let resizeTimeout;
+
 		function resizeThrottler() {
 			// ignore resize events as long as an actualResizeHandler execution is in the queue
 			if (!resizeTimeout) {
@@ -271,47 +274,48 @@ $(document).ready(function (e) {
 			}
 		}
 	}());
-	
+
 	window.onresize = resizeScreenObj;
 	let resizeTimer;
+
 	function resizeScreenObj(event, keyHeight) {
 		clearTimeout(resizeTimer);
-		resizeTimer = setTimeout(function() {
-		document.getElementsByClassName('canvasPic')[0].remove();
-		let pattern = Trianglify({
-			width: window.innerWidth,
-			height: window.innerHeight
-		});
-		const canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-		pattern = Trianglify({
-			cell_size: 95,
-			variance: 0.75,
-			x_colors: 'random',
-			y_colors: 'match_x',
-			palette: Trianglify.colorbrewer,
-			stroke_width: 0.2,
-		});
-		canvasBackground.setAttribute("class", "canvasPic");
-		if (flagForm === true && !flagKeyboard) {
-			resizeContent('.envelope', '#wrap', 530, 630);
-		} else if (flagHome === true) {
-			resizeContent('#figure', '#wrapperCanvas', 800, 900);
-		} else if (flagKeyboard) {
-			resizeContent('.envelope', '#wrap', 530, 630);
-		}
-	}, 122);
+		resizeTimer = setTimeout(function () {
+			document.getElementsByClassName('canvasPic')[0].remove();
+			let pattern = Trianglify({
+				width: window.innerWidth,
+				height: window.innerHeight
+			});
+			const canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
+			pattern = Trianglify({
+				cell_size: 95,
+				variance: 0.75,
+				x_colors: 'random',
+				y_colors: 'match_x',
+				palette: Trianglify.colorbrewer,
+				stroke_width: 0.2,
+			});
+			canvasBackground.setAttribute("class", "canvasPic");
+			if (flagForm === true && !flagKeyboard) {
+				resizeContent('.envelope', '#wrap', 530, 630);
+			} else if (flagHome === true) {
+				resizeContent('#figure', '#wrapperCanvas', 800, 900);
+			} else if (flagKeyboard) {
+				resizeContent('.envelope', '#wrap', 530, 630);
+			}
+		}, 122);
 	};
-/* the form is getting bigger when the on-screen keyboard opens */
-	$(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focus(function () { 
+	/* the form is getting bigger when the on-screen keyboard opens */
+	$(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focus(function () {
 		document.getElementsByClassName('containerForm')[0].classList += ' scaleForm';
 		if (window.matchMedia('(max-width: 767px)').matches) {
-		$volume.stop().fadeOut('slow');
+			$volume.stop().fadeOut('slow');
 		}
 	});
-	$(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focusout(function () { 
+	$(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focusout(function () {
 		document.getElementsByClassName('containerForm')[0].classList = 'containerForm';
 		if (stop.style.display === 'block') {
-		$volume.stop().fadeIn('slow');
+			$volume.stop().fadeIn('slow');
 		}
 	});
 });

@@ -906,6 +906,25 @@ article {
   max-width: 100%;
   max-height: 100%; }
 
+/* flipbook */
+#flipbook {
+  display: none;
+  width: 960px;
+  height: 600px;
+  background-image: url(../images/book-covers.gif);
+  background-repeat: repeat-y;
+  background-position: 479px 0;
+  z-index: 0; }
+
+#flipbook .page {
+  width: 400px;
+  height: 600px; }
+
+#flipbook .page-wrapper {
+  -webkit-perspective: 2000px;
+  -ms-perspective: 2000px;
+  perspective: 2000px; }
+
 /*contact form*/
 .containerForm {
   display: none;
@@ -1144,7 +1163,6 @@ footer .wrapper {
         -moz-appearance: textfield; }
         .volume .plus-minus-input .input-wrap .input-group-field::-webkit-inner-spin-button,
         .volume .plus-minus-input .input-wrap .input-group-field ::-webkit-outer-spin-button {
-          appearance: none;
           -webkit-appearance: none;
           text-align: center;
           -webkit-box-flex: 0;

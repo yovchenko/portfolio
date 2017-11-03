@@ -23,38 +23,15 @@ module.exports = {
         filename: "[name].js"
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.js$/,
                 exclude: [/node_modules/],
                 use: [{
                     loader: 'babel-loader',
-                    options: { presets: ['es2015'] }                    
-                }]
-            },
-            {
-                test: /\.(eot|ttf|woff|woff2)$/,
-                use: [{
-                    loader: 'file-loader',
                     options: {
-                        name: '[name].[ext]',
-                        outputPath: '/fonts/',
-                        publicPath: '..'
+                        presets: ['es2015']
                     }
-                }, ]
-            },
-            {
-                test: /\.(png|jpg&g|gif|svg|)$/,
-                use: [{
-                        loader: 'file-loader',
-                        options: {
-                            name: '[name].[ext]',
-                            outputPath: '/images/',
-                            publicPath: '..'
-                        }
-                    },
-                    'img-loader'
-                ]
+                }]
             },
             {
                 test: /\.scss$/,
@@ -63,7 +40,7 @@ module.exports = {
                     use: [{
                             loader: 'css-loader',
                             options: {
-                                importLoaders: 1
+                                importLoaders: 1,
                             }
                         },
                         {
@@ -80,6 +57,68 @@ module.exports = {
                         }
                     ]
                 })
+            },
+            {
+                test: /\.(eot|ttf|woff|woff2)$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: '/fonts/',
+                        publicPath: '..'
+                    }
+                }, ]
+            },
+            {
+                test: /\.(png|jpg&g|gif|svg|)$/,
+                use: [
+
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: '/images/',
+                            publicPath: '..'
+                        }
+                    },
+                    {
+                        loader: 'img-loader',
+                        options: {
+                            enabled: process.env.NODE_ENV === 'production',
+                            gifsicle: {
+                                interlaced: false,
+                                optimizationLevel: 3
+                            },
+                            mozjpeg: {
+                                progressive: true,
+                                arithmetic: false
+                            },
+                            optipng: false, // disabled 
+                            pngquant: {
+                                floyd: 0.5,
+                                speed: 2
+                            },
+                            svgo: {
+                                plugins: [{
+                                        removeTitle: true
+                                    },
+                                    {
+                                        convertPathData: false
+                                    },
+                                    {
+                                        removeComments: true
+                                    },
+                                    {
+                                        removeMetadata: true
+                                    },
+                                    {
+                                        removeTitle: true
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
             },
             {
                 test: /\.html$/,
