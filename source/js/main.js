@@ -1,13 +1,12 @@
 'use strict';
 import {
 	resizeContent
-} from './resize.js';
+} from './resize';
 let Trianglify = require('trianglify');
 import Amplitude from "amplitude";
 import {
 	anim
 } from './jsonAnimation.js';
-
 $(document).ready(function (e) {
 	/* music player buttons */
 	const stop = document.getElementById('stopMusic');
@@ -110,11 +109,16 @@ $(document).ready(function (e) {
 	$contact.on('click', {
 		case: 4
 	}, content);
-	let flagForm = false;
-	let flagHome = true;
-	const grid = document.getElementsByClassName('grid-container')[0];
-	const $flipbook = $('#flipbook');
+	let page = {
+		home: true,
+		about: false,
+		work: false,
+		contacts: false,
+		keyboard: false
+	};
 
+	const grid = document.getElementsByClassName('grid-container')[0];
+	const $flipbook = $('.book');
 	function content(event) {
 		const $wrapperCanvas = $('.canvas-box');
 		const $article = $('.about');
@@ -132,33 +136,55 @@ $(document).ready(function (e) {
 			if ($pageMain === 4) {
 				$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($fps).add($flipbook).add($wrapperCanvas).stop().css('display', 'none');
 				$container.add($home).css('display', 'flex');
+				anim.stop();
 				resizeContent('.envelope', '#wrap', 530, 630);
-				flagForm = true;
-				flagHome = false;
+				for (let key in page) {
+					if (key !== 'contacts') { //page contacts
+						page[key] = false;
+					} else {
+						page[key] = true;
+					}
+				}
 				anim.stop();
 			} else if ($pageMain === 3) {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($fps).add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
 				$flipbook.css('display', 'block');
 				anim.stop();
-				flagForm = false;
-				flagHome = false;
+				resizeContent('.bookWrap', '#flipbook', 960, 600);
+				for (let key in page) {
+					if (key !== 'work') { //page work
+						page[key] = false;
+					} else {
+						page[key] = true;
+					}
+				}
 			} else if ($pageMain === 2) {
 				$(init).add(btnHamburger).add($logoOne).add($flipbook).add($logoTwo).add($wrapperCanvas).add($fps).add($container).stop().css('display', 'none');
 				$article.css('display', 'grid');
 				$home.css('display', 'flex');
 				anim.play();
-				flagForm = false;
-				flagHome = false;
+				for (let key in page) {
+					if (key !== 'about') { //page about 
+						page[key] = false;
+					} else {
+						page[key] = true;
+					}
+				}
 			} else {
 				($wrapperCanvas).add(btnHamburger).add($logoOne).add($logoTwo).add($fps).css('display', 'grid');
 				$home.add($article).add($flipbook).add($container).stop().css('display', 'none');
 				animateArrowToMenu();
-				resizeContent('#figure', '#wrapperCanvas', 800, 900);
 				btnHamburger.classList = 'btn-hamburger';
 				anim.stop();
-				flagForm = false;
-				flagHome = true;
+				resizeContent('#figure', '#wrapperCanvas', 800, 900);
+				for (let key in page) {
+					if (key !== 'home') { // page home 
+						page[key] = false;
+					} else {
+						page[key] = true;
+					}
+				}
 			}
 			document.getElementsByClassName('canvasPic')[0].remove();
 			let pattern = Trianglify({
@@ -188,7 +214,7 @@ $(document).ready(function (e) {
 			});
 		}, 1500);
 	}
-	let flagKeyboard = false;
+
 
 	function updateWindowSize() {
 		window.lastInnerWidth = window.innerWidth;
@@ -215,7 +241,7 @@ $(document).ready(function (e) {
 			return keyboardHeight;
 		}
 		// Orientation change with keyboard already opened
-		if (orientationChange() && flagKeyboard) {
+		if (orientationChange() && page.keyboard) {
 			let keyboardHeight = screen.height - window.topBarHeight - window.innerHeight;
 			updateWindowSize();
 			return keyboardHeight;
@@ -236,13 +262,13 @@ $(document).ready(function (e) {
 
 	function keyboardShift(keyboardHeight) {
 		grid.style.cssText = 'grid-template-rows:65px calc(100vh + ' + keyboardHeight + 'px) auto;';
-		flagKeyboard = true;
+		page.keyboard = true;
 		resizeScreenObj(event, keyboardHeight);
 	};
 
 	function removeKeyboardShift() {
 		grid.style.cssText = 'grid-template-rows:65px calc(100vh - 65px) auto;';
-		flagKeyboard = false;
+		page.keyboard = false;
 		resizeScreenObj(event, 0);
 	};
 
@@ -296,12 +322,12 @@ $(document).ready(function (e) {
 				stroke_width: 0.2,
 			});
 			canvasBackground.setAttribute("class", "canvasPic");
-			if (flagForm === true && !flagKeyboard) {
+			if (page.contacts === true) {
 				resizeContent('.envelope', '#wrap', 530, 630);
-			} else if (flagHome === true) {
+			} else if (page.home === true) {
 				resizeContent('#figure', '#wrapperCanvas', 800, 900);
-			} else if (flagKeyboard) {
-				resizeContent('.envelope', '#wrap', 530, 630);
+		    } else if (page.work === true) {
+				resizeContent('.bookWrap',  '#flipbook', 960, 600);
 			}
 		}, 122);
 	};
