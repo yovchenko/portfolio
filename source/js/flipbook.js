@@ -1,5 +1,3 @@
-
-
 loadApp();
 function loadApp() {
     var flipbook = $('.sj-book');
