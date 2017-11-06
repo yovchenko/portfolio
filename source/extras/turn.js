@@ -968,7 +968,6 @@ turnMethods = {
   size: function(width, height) {
 
     if (width===undefined || height===undefined) {
-      
       return {width: this.width(), height: this.height()};
 
     } else {
