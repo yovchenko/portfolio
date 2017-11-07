@@ -380,22 +380,26 @@ article {
 
 .sj-book div.hard.page.p1.odd {
     background-image: url(../images/book/book-page-1.gif);
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
 }
 
 .sj-book div.hard.front-side.page.p2.even {
     background-image: url(../images/book/book-page-2.gif);
     background-size: cover;
+    background-position: center;
 }
 
 .sj-book div.hard.fixed.back-side.p5.page.p3.odd {
     background-image: url(../images/book/book-page-3.gif);
     background-size: cover;
+    background-position: center;
 }
 
 .sj-book div.hard.p6.page.p4.even {
     background-image: url(../images/book/book-page-4.gif);
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
 }
 
 .sj-book .p1,

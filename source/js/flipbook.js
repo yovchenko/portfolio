@@ -1,3 +1,7 @@
+import {page} from './main';
+import {
+	resizeContent
+} from './resize';
 (function loadApp () {
         'use strict';
         var flipbook = $('.sj-book');
@@ -5,18 +9,17 @@
             ratio: 1.6,
             init: function (id) {
                 var me = this;
-    
                 // if older browser then don't run javascript
                 if (document.addEventListener) {
                     this.el = document.getElementById(id);
                     this.resize();
                     this.plugins();
-    
                     // on window resize, update the plugin size
                     window.addEventListener('resize', function (e) {
                         var size = me.resize();
                         $(me.el).turn('size', size.width, size.height);
                     });
+                    resizeContent('.bookWrap',  '#flipbook', 480, 600);
                 }
             },
             resize: function (e) {
@@ -127,7 +130,7 @@
     
         module.init('sj-book');
         flipbook.addClass('animated');
-    }());
+    })();
 
  Hash.on('^page\/([0-9]*)$', {
         yep: function(path, parts) {
@@ -218,7 +221,6 @@ function addPage(page, book) {
 }
 
 function isChrome() {
-
     // Chrome's unsolved bug
     // http://code.google.com/p/chromium/issues/detail?id=128488
 

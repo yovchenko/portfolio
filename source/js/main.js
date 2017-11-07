@@ -7,7 +7,6 @@ import Amplitude from "amplitude";
 import {
 	anim
 } from './jsonAnimation.js';
-$(document).ready(function (e) {
 	/* music player buttons */
 	const stop = document.getElementById('stopMusic');
 	const play = document.getElementById('playMusic');
@@ -109,7 +108,7 @@ $(document).ready(function (e) {
 	$contact.on('click', {
 		case: 4
 	}, content);
-	let page = {
+export	let page = {
 		home: true,
 		about: false,
 		work: false,
@@ -150,6 +149,8 @@ $(document).ready(function (e) {
 				$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($fps).add($article).add($container).stop().css('display', 'none');
 				$home.css('display', 'flex');
 				$flipbook.css('display', 'block');
+                let event = new Event('resize');
+                window.dispatchEvent(event);
 				anim.stop();
 				resizeContent('.bookWrap',  '#flipbook', 480, 600);
 				for (let key in page) {
@@ -344,4 +345,3 @@ $(document).ready(function (e) {
 			$volume.stop().fadeIn('slow');
 		}
 	});
-});
