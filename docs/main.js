@@ -38379,7 +38379,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   //   | bl * br |
 
   corners = {
-    backward: ['bl', 'tl'],
+    backward: ['br', 'tr'],
     forward: ['br', 'tr'],
     all: ['tl', 'bl', 'tr', 'br', 'l', 'r']
   },
@@ -38431,7 +38431,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
     // Size of the active zone of each corner
 
-    cornerSize: 100
+    cornerSize: 200
 
   },
 
@@ -39178,7 +39178,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     size: function size(width, height) {
 
       if (width === undefined || height === undefined) {
-
         return { width: this.width(), height: this.height() };
       } else {
 
@@ -41201,112 +41200,163 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 "use strict";
 
 
-loadApp();
-function loadApp() {
+(function loadApp() {
+    'use strict';
+
     var flipbook = $('.sj-book');
-    Hash.on('^page\/([0-9]*)$', {
-        yep: function yep(path, parts) {
+    var module = {
+        ratio: 1.8,
+        init: function init(id) {
+            var me = this;
 
-            var page = parts[1];
+            // if older browser then don't run javascript
+            if (document.addEventListener) {
+                this.el = document.getElementById(id);
+                this.resize();
+                this.plugins();
 
-            if (page !== undefined) {
-                if ($('.sj-book').turn('is')) $('.sj-book').turn('page', page);
+                // on window resize, update the plugin size
+                window.addEventListener('resize', function (e) {
+                    var size = me.resize();
+                    $(me.el).turn('size', size.width, size.height);
+                });
             }
         },
-        nop: function nop(path) {
+        resize: function resize(e) {
+            // reset the width and height to the css defaults
+            this.el.style.width = '';
+            this.el.style.height = '';
 
-            if ($('.sj-book').turn('is')) $('.sj-book').turn('page', 1);
-        }
-    });
+            var width = this.el.clientWidth,
+                height = Math.round(width / this.ratio),
+                padded = Math.round(document.body.clientHeight * 1);
 
-    // Arrows
-    $(document).keydown(function (e) {
-
-        var previous = 37,
-            next = 39;
-
-        switch (e.keyCode) {
-            case previous:
-
-                $('.sj-book').turn('previous');
-
-                break;
-            case next:
-
-                $('.sj-book').turn('next');
-
-                break;
-        }
-    });
-
-    flipbook.turn({
-        elevation: 50,
-        acceleration: !isChrome(),
-        autoCenter: true,
-        gradients: true,
-        duration: 1000,
-        pages: 0,
-        when: {
-            turning: function turning(e, page, view) {
-                var book = $(this),
-                    currentPage = book.turn('page'),
-                    pages = book.turn('pages');
-
-                if (currentPage > 3 && currentPage < pages - 3) {
-
-                    if (page == 1) {
-                        book.turn('page', 2).turn('stop').turn('page', page);
-                        e.preventDefault();
-                        return;
-                    } else if (page == pages) {
-                        book.turn('page', pages - 1).turn('stop').turn('page', page);
-                        e.preventDefault();
-                        return;
-                    }
-                } else if (page > 3 && page < pages - 3) {
-                    if (currentPage == 1) {
-                        book.turn('page', 2).turn('stop').turn('page', page);
-                        e.preventDefault();
-                        return;
-                    } else if (currentPage == pages) {
-                        book.turn('page', pages - 1).turn('stop').turn('page', page);
-                        e.preventDefault();
-                        return;
-                    }
-                }
-
-                updateDepth(book, page);
-
-                if (page >= 2) $('.sj-book .p2').addClass('fixed');else $('.sj-book .p2').removeClass('fixed');
-
-                if (page < book.turn('pages')) $('.sj-book .p5').addClass('fixed');else $('.sj-book .p5').removeClass('fixed');
-
-                Hash.go('page/' + page).update();
-            },
-
-            turned: function turned(e, page, view) {
-
-                var book = $(this);
-
-                if (page == 2 || page == 3) {
-                    book.turn('peel', 'br');
-                }
-
-                updateDepth(book);
-
-                book.turn('center');
-            },
-
-            missing: function missing(e, pages) {
-
-                for (var i = 0; i < pages.length; i++) {
-                    addPage(pages[i], $(this));
-                }
+            // if the height is too big for the window, constrain it
+            if (height > padded) {
+                height = padded;
+                width = Math.round(height * this.ratio);
             }
+
+            // set the width and height matching the aspect ratio
+            this.el.style.width = width + 'px';
+            this.el.style.height = height + 'px';
+
+            return {
+                width: width,
+                height: height
+            };
+        },
+        plugins: function plugins() {
+            // run the plugin
+            $(this.el).turn({
+                elevation: 50,
+                acceleration: !isChrome(),
+                autoCenter: true,
+                gradients: true,
+                duration: 1000,
+                pages: 0,
+                when: {
+                    turning: function turning(e, page, view) {
+                        var book = $(this),
+                            currentPage = book.turn('page'),
+                            pages = book.turn('pages');
+
+                        if (currentPage > 3 && currentPage < pages - 3) {
+
+                            if (page == 1) {
+                                book.turn('page', 2).turn('stop').turn('page', page);
+                                e.preventDefault();
+                                return;
+                            } else if (page == pages) {
+                                book.turn('page', pages - 1).turn('stop').turn('page', page);
+                                e.preventDefault();
+                                return;
+                            }
+                        } else if (page > 3 && page < pages - 3) {
+                            if (currentPage == 1) {
+                                book.turn('page', 2).turn('stop').turn('page', page);
+                                e.preventDefault();
+                                return;
+                            } else if (currentPage == pages) {
+                                book.turn('page', pages - 1).turn('stop').turn('page', page);
+                                e.preventDefault();
+                                return;
+                            }
+                        }
+
+                        updateDepth(book, page);
+
+                        if (page >= 2) $('.sj-book .p2').addClass('fixed');else $('.sj-book .p2').removeClass('fixed');
+
+                        if (page < book.turn('pages')) $('.sj-book .p5').addClass('fixed');else $('.sj-book .p5').removeClass('fixed');
+
+                        Hash.go('page/' + page).update();
+                    },
+
+                    turned: function turned(e, page, view) {
+
+                        var book = $(this);
+
+                        if (page == 2 || page == 3) {
+                            book.turn('peel', 'br');
+                        }
+
+                        updateDepth(book);
+
+                        book.turn('center');
+                    },
+
+                    missing: function missing(e, pages) {
+
+                        for (var i = 0; i < pages.length; i++) {
+                            addPage(pages[i], $(this));
+                        }
+                    }
+                }
+            });
+            // hide the body overflow
+            document.body.className = 'hide-overflow';
         }
-    });
+    };
+
+    module.init('sj-book');
     flipbook.addClass('animated');
-};
+})();
+
+Hash.on('^page\/([0-9]*)$', {
+    yep: function yep(path, parts) {
+
+        var page = parts[1];
+
+        if (page !== undefined) {
+            if ($('.sj-book').turn('is')) $('.sj-book').turn('page', page);
+        }
+    },
+    nop: function nop(path) {
+
+        if ($('.sj-book').turn('is')) $('.sj-book').turn('page', 1);
+    }
+});
+
+// Arrows
+$(document).keydown(function (e) {
+
+    var previous = 37,
+        next = 39;
+
+    switch (e.keyCode) {
+        case previous:
+
+            $('.sj-book').turn('previous');
+
+            break;
+        case next:
+
+            $('.sj-book').turn('next');
+
+            break;
+    }
+});
 
 function updateDepth(book, newPage) {
 
@@ -41339,7 +41389,7 @@ function addPage(page, book) {
     if (!book.turn('hasPage', page)) {
 
         var element = $('<div />', { 'class': 'own-size',
-            css: { width: 460, height: 582 }
+            css: { width: 480, height: 600 }
         }).html('<div class="loader"></div>');
 
         if (book.turn('addPage', element, page)) {

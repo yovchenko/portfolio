@@ -48,7 +48,7 @@ var has3d,
   //   | bl * br |
 
   corners = {
-    backward: ['bl', 'tl'],
+    backward: ['br', 'tr'],
     forward: ['br', 'tr'],
     all: ['tl', 'bl', 'tr', 'br', 'l', 'r']
   },
@@ -98,7 +98,7 @@ var has3d,
 
     // Size of the active zone of each corner
 
-    cornerSize: 100
+    cornerSize: 200,
 
   },
 

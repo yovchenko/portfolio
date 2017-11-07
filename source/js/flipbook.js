@@ -2,7 +2,7 @@
         'use strict';
         var flipbook = $('.sj-book');
         var module = {
-            ratio: 1.8,
+            ratio: 1.6,
             init: function (id) {
                 var me = this;
     
@@ -206,7 +206,7 @@ function addPage(page, book) {
 
         var element = $('<div />',
             {'class': 'own-size',
-                css: {width: 460, height: 582}
+                css: {width: 480, height: 600}
             }).
             html('<div class="loader"></div>');
 

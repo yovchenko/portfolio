@@ -151,6 +151,7 @@ $(document).ready(function (e) {
 				$home.css('display', 'flex');
 				$flipbook.css('display', 'block');
 				anim.stop();
+				resizeContent('.bookWrap',  '#flipbook', 480, 600);
 				for (let key in page) {
 					if (key !== 'work') { //page work
 						page[key] = false;
@@ -325,7 +326,9 @@ $(document).ready(function (e) {
 				resizeContent('.envelope', '#wrap', 530, 630);
 			} else if (page.home === true) {
 				resizeContent('#figure', '#wrapperCanvas', 800, 900);
-		    } 
+		    } else if (page.work === true) {
+				resizeContent('.bookWrap',  '#flipbook', 480, 600);
+			}
 		}, 122);
 	};
 	/* the form is getting bigger when the on-screen keyboard opens */
