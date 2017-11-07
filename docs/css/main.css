@@ -918,9 +918,9 @@ article {
   transition: 1s ease-in-out; }
 
 .bookWrap {
-  width: 90%;
+  width: 100%;
   position: absolute;
-  height: 90%;
+  height: 65%;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -928,8 +928,10 @@ article {
 
 #flipbook {
   position: absolute;
-  width: 960px;
+  width: 480px;
   height: 600px;
+  top: 0;
+  bottom: 0;
   -webkit-transform-origin: top right;
   transform-origin: top right;
   -webkit-transition: all 500ms ease-in-out !important;
@@ -937,7 +939,6 @@ article {
 
 .sj-book {
   width: 100%;
-  height: 80%;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -966,19 +967,23 @@ article {
 
 .sj-book div.hard.page.p1.odd {
   background-image: url(../images/book-page-1.gif);
-  background-size: contain; }
+  background-size: contain;
+  background-position: center; }
 
 .sj-book div.hard.front-side.page.p2.even {
   background-image: url(../images/book-page-2.gif);
-  background-size: contain; }
+  background-size: cover;
+  background-position: center; }
 
 .sj-book div.hard.fixed.back-side.p5.page.p3.odd {
   background-image: url(../images/book-page-3.gif);
-  background-size: contain; }
+  background-size: cover;
+  background-position: center; }
 
 .sj-book div.hard.p6.page.p4.even {
   background-image: url(../images/book-page-4.gif);
-  background-size: contain; }
+  background-size: contain;
+  background-position: center; }
 
 .sj-book .p1,
 .sj-book .p2,
