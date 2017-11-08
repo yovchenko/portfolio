@@ -900,7 +900,7 @@ article {
 
 #animationWindow {
   width: 100%;
-  grid-column: 1/4;
+  grid-column: 1 / 4;
   grid-row: 2 / 4; }
 
 #animationWindow > svg {
@@ -920,11 +920,11 @@ article {
 .bookWrap {
   width: 100%;
   position: absolute;
-  height: 65%;
+  height: 125%;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  -webkit-transform: translate(-50%, -25%);
+          transform: translate(-50%, -25%); }
 
 #flipbook {
   position: absolute;
@@ -944,6 +944,9 @@ article {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
+
+.align {
+  position: relative; }
 
 .animated {
   -webkit-transition: margin-left 0.2s ease-in-out;
@@ -972,12 +975,12 @@ article {
 
 .sj-book div.hard.front-side.page.p2.even {
   background-image: url(../images/book-page-2.jpg);
-  background-size: cover;
+  background-size: contain;
   background-position: center; }
 
 .sj-book div.hard.fixed.back-side.p5.page.p3.odd {
   background-image: url(../images/book-page-3.jpg);
-  background-size: cover;
+  background-size: contain;
   background-position: center; }
 
 .sj-book div.hard.p6.page.p4.even {

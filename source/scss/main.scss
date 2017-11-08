@@ -296,7 +296,7 @@ article {
 
 #animationWindow {
     width: 100%;
-    grid-column: 1/4;
+    grid-column: 1 / 4;
     grid-row: 2 / 4;
 }
 
@@ -307,7 +307,6 @@ article {
 
 
 /* flipbook */
-
 .book {
     display: none;
     width: 100%;
@@ -320,12 +319,10 @@ article {
 .bookWrap {
     width: 100%;
     position: absolute;
-    height: 65%;
+    height: 125%;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -25%);
 }
 
 #flipbook {
@@ -349,6 +346,10 @@ article {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+.align {
+    position: relative;
 }
 
 .animated {
@@ -387,13 +388,13 @@ article {
 
 .sj-book div.hard.front-side.page.p2.even {
     background-image: url(../images/book-page-2.jpg);
-    background-size: cover;
+    background-size: contain;
     background-position: center;
 }
 
 .sj-book div.hard.fixed.back-side.p5.page.p3.odd {
     background-image: url(../images/book-page-3.jpg);
-    background-size: cover;
+    background-size: contain;
     background-position: center;
 }
 
@@ -1400,6 +1401,9 @@ footer .wrapper {
     .fps {
         font-size: 1.3em;
     }
+    @media all and (min-aspect-ratio: 9/12) {
+     
+    }
 }
 
 @media all and (max-width: 576px) {
@@ -1480,7 +1484,11 @@ footer .wrapper {
                 bottom: 23%;
             }
         }
+     
     }
+    
+    
+    
 }
 
 @media all and (max-aspect-ratio: 5/4) {
@@ -1531,4 +1539,5 @@ footer .wrapper {
     .svg-logo-two>div:nth-child(3) {
         width: 85%;
     }
+    
 }
