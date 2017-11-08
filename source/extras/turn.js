@@ -1967,11 +1967,17 @@ flipMethods = {
 
   _cornerActivated: function(p) {
 
-    var data = this.data().f,
-      width = this.width(),
-      height = this.height(),
-      point = {x: p.x, y: p.y, corner: ''},
-      csz = data.opts.cornerSize;
+    var data = this.data().f;
+    var point = {x: p.x, y: p.y, corner: ''};
+    var csz = data.opts.cornerSize;
+   if (window.matchMedia("(max-width: 767px)").matches) {
+    var width = $('.align').width();
+    var height = $('.align').height();
+   }
+   else {
+    var width = this.width();
+    var height = this.height();
+   }
 
     if (point.x<=0 || point.y<=0 || point.x>=width || point.y>=height)
       return false;
@@ -1986,7 +1992,7 @@ flipMethods = {
         else if (point.x<csz)
           point.corner = 'l';
         else
-          return false;
+          point.corner = 'r';
             
         break;
 
@@ -2017,7 +2023,12 @@ flipMethods = {
   _isIArea: function(e) {
 
     var pos = this.data().f.parent.offset();
-
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      var pos = $('.align').offset();
+     }
+     else {
+      var pos = this.data().f.parent.offset();
+     }
     e = (isTouch && e.originalEvent) ? e.originalEvent.touches[0] : e;
 
     return flipMethods._cornerActivated.call(this,

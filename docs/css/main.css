@@ -920,15 +920,15 @@ article {
 .bookWrap {
   width: 100%;
   position: absolute;
-  height: 125%;
+  height: 75%;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -25%);
-          transform: translate(-50%, -25%); }
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
 
 #flipbook {
   position: absolute;
-  width: 480px;
+  width: 960px;
   height: 600px;
   top: 0;
   bottom: 0;
@@ -937,16 +937,17 @@ article {
   -webkit-transition: all 500ms ease-in-out !important;
   transition: all 500ms ease-in-out !important; }
 
+.align {
+  position: relative; }
+
 .sj-book {
-  width: 100%;
+  width: 960px;
+  height: 600px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none; }
-
-.align {
-  position: relative; }
 
 .animated {
   -webkit-transition: margin-left 0.2s ease-in-out;

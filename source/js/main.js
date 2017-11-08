@@ -150,10 +150,8 @@ function content(event) {
 			$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($fps).add($article).add($container).stop().css('display', 'none');
 			$home.css('display', 'flex');
 			$flipbook.css('display', 'block');
-			let event = new Event('resize');
-			window.dispatchEvent(event);
 			anim.stop();
-			resizeContent('.bookWrap', '#flipbook', 480, 600);
+			resizeContent('.bookWrap', '#flipbook', 960, 600);
 			for (let key in page) {
 				if (key !== 'work') { //page work
 					page[key] = false;
@@ -329,7 +327,7 @@ function resizeScreenObj(event, keyHeight) {
 		} else if (page.home === true) {
 			resizeContent('#figure', '#wrapperCanvas', 800, 900);
 		} else if (page.work === true) {
-			resizeContent('.bookWrap', '#flipbook', 480, 600);
+			resizeContent('.bookWrap', '#flipbook', 960, 600);
 		}
 	}, 122);
 };
