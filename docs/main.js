@@ -13633,6 +13633,7 @@ var page = exports.page = {
 
 var grid = document.getElementsByClassName('grid-container')[0];
 var $flipbook = $('.book');
+
 function content(event) {
 	var $wrapperCanvas = $('.canvas-box');
 	var $article = $('.about');
@@ -41377,14 +41378,18 @@ function updateDepth(book, newPage) {
     if (newPage > 3) $('.sj-book .p2 .depth').css({
         width: depthWidth,
         left: 20 - depthWidth
-    });else $('.sj-book .p2 .depth').css({ width: 0 });
+    });else $('.sj-book .p2 .depth').css({
+        width: 0
+    });
 
     depthWidth = 16 * Math.min(1, (pages - page) * 2 / pages);
 
     if (newPage < pages - 3) $('.sj-book .p5 .depth').css({
         width: depthWidth,
         right: 20 - depthWidth
-    });else $('.sj-book .p4 .depth').css({ width: 0 });
+    });else $('.sj-book .p4 .depth').css({
+        width: 0
+    });
 }
 
 function loadPage(page) {}
@@ -41396,8 +41401,12 @@ function addPage(page, book) {
 
     if (!book.turn('hasPage', page)) {
 
-        var element = $('<div />', { 'class': 'own-size',
-            css: { width: 480, height: 600 }
+        var element = $('<div />', {
+            'class': 'own-size',
+            css: {
+                width: 480,
+                height: 600
+            }
         }).html('<div class="loader"></div>');
 
         if (book.turn('addPage', element, page)) {

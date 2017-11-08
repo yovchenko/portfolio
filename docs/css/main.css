@@ -601,13 +601,13 @@ template {
   font-family: "sketch";
   font-style: normal;
   font-weight: 500;
-  src: url(../fonts/cabinSketch.ttf) format("truetype"); }
+  src: url(../fonts/cabinSketch.ttf&4ad5823cf2d25463beb0a67efc9bda81) format("truetype"); }
 
 @font-face {
   font-family: "Italianno, cursive";
   font-style: normal;
   font-weight: 400;
-  src: url(../fonts/Italianno-Regular.ttf) format("truetype"); }
+  src: url(../fonts/Italianno-Regular.ttf&462fa23a77453e753bc067b38dce027e) format("truetype"); }
 
 html, html body {
   height: 100%;
@@ -966,22 +966,22 @@ article {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
 
 .sj-book div.hard.page.p1.odd {
-  background-image: url(../images/book-page-1.gif);
+  background-image: url(../images/book-page-1.jpg);
   background-size: contain;
   background-position: center; }
 
 .sj-book div.hard.front-side.page.p2.even {
-  background-image: url(../images/book-page-2.gif);
+  background-image: url(../images/book-page-2.jpg);
   background-size: cover;
   background-position: center; }
 
 .sj-book div.hard.fixed.back-side.p5.page.p3.odd {
-  background-image: url(../images/book-page-3.gif);
+  background-image: url(../images/book-page-3.jpg);
   background-size: cover;
   background-position: center; }
 
 .sj-book div.hard.p6.page.p4.even {
-  background-image: url(../images/book-page-4.gif);
+  background-image: url(../images/book-page-4.jpg);
   background-size: contain;
   background-position: center; }
 

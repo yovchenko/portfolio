@@ -53,7 +53,7 @@ module.exports = {
                             }
                         },
                         {
-                            loader: 'sass-loader'
+                            loader: 'sass-loader',
                         }
                     ]
                 })
@@ -63,14 +63,14 @@ module.exports = {
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        name: '[name].[ext]',
+                        name: '[name].[ext]&[hash]',
                         outputPath: '/fonts/',
                         publicPath: '..'
                     }
                 }, ]
             },
             {
-                test: /\.(png|jpg&g|gif|svg|)$/,
+                test: /\.(png|jpg?g|gif|svg|)$/i,
                 use: [
 
                     {
@@ -91,7 +91,6 @@ module.exports = {
                             },
                             mozjpeg: {
                                 progressive: true,
-                                arithmetic: false
                             },
                             optipng: false, // disabled 
                             pngquant: {
