@@ -1988,7 +1988,6 @@ flipMethods = {
         
         }
         else {
-         
          return false;
         }
             

@@ -175,6 +175,15 @@ main {
     grid-template-columns: repeat(3, 1fr);
 }
 
+.touch {
+    display: none;
+    position: absolute;
+    right: 0;
+    margin: 5px;
+    width: 3em;
+    height:  3em;
+}
+
 .canvas-box {
     width: 100%;
     position: relative;

@@ -36264,6 +36264,7 @@ function content(event) {
 	var $logoOne = $('.svg-logo-one');
 	var $logoTwo = $('.svg-logo-two');
 	var $fps = $('.fps');
+	var $touch = $('.touch');
 	$curtainRight.add($curtainLeft).css('width', '100%');
 	$curtainRight.stop().css('transform', 'translateX(50%)');
 	$curtainLeft.stop().css('transform', 'translateX(-50%)');
@@ -36272,6 +36273,7 @@ function content(event) {
 		if ($pageMain === 4) {
 			$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($fps).add($flipbook).add($wrapperCanvas).stop().css('display', 'none');
 			$container.add($home).css('display', 'flex');
+			$touch.css('display', 'block');
 			_jsonAnimation.anim.stop();
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 			for (var key in page) {
@@ -36286,7 +36288,7 @@ function content(event) {
 		} else if ($pageMain === 3) {
 			$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($fps).add($article).add($container).stop().css('display', 'none');
 			$home.css('display', 'flex');
-			$flipbook.css('display', 'block');
+			$($flipbook).add($touch).css('display', 'block');
 			_jsonAnimation.anim.stop();
 			(0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
 			for (var _key in page) {
@@ -36298,7 +36300,7 @@ function content(event) {
 				}
 			}
 		} else if ($pageMain === 2) {
-			$(init).add(btnHamburger).add($logoOne).add($flipbook).add($logoTwo).add($wrapperCanvas).add($fps).add($container).stop().css('display', 'none');
+			$(init).add(btnHamburger).add($logoOne).add($touch).add($flipbook).add($logoTwo).add($wrapperCanvas).add($fps).add($container).stop().css('display', 'none');
 			$article.css('display', 'grid');
 			$home.css('display', 'flex');
 			_jsonAnimation.anim.play();
@@ -36312,7 +36314,7 @@ function content(event) {
 			}
 		} else {
 			$wrapperCanvas.add(btnHamburger).add($logoOne).add($logoTwo).add($fps).css('display', 'grid');
-			$home.add($article).add($flipbook).add($container).stop().css('display', 'none');
+			$home.add($article).add($flipbook).add($touch).add($container).stop().css('display', 'none');
 			animateArrowToMenu();
 			btnHamburger.classList = 'btn-hamburger';
 			_jsonAnimation.anim.stop();
@@ -40044,7 +40046,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
           } else if (point.x < csz) {
             point.corner = 'l';
           } else {
-
             return false;
           }
 
