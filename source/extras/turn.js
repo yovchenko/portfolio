@@ -98,7 +98,7 @@ var has3d,
 
     // Size of the active zone of each corner
 
-    cornerSize: 200,
+    cornerSize: 100,
 
   },
 
@@ -1970,15 +1970,8 @@ flipMethods = {
     var data = this.data().f;
     var point = {x: p.x, y: p.y, corner: ''};
     var csz = data.opts.cornerSize;
-   if (window.matchMedia("(max-width: 767px)").matches) {
-    var width = $('.align').width();
-    var height = $('.align').height();
-   }
-   else {
     var width = this.width();
     var height = this.height();
-   }
-
     if (point.x<=0 || point.y<=0 || point.x>=width || point.y>=height)
       return false;
 
@@ -1986,13 +1979,18 @@ flipMethods = {
 
     switch (data.effect) {
       case 'hard':
-        
-        if (point.x>width-csz)
+        if (point.x > csz) {
           point.corner = 'r';
-        else if (point.x<csz)
+          
+        }
+        else if (point.x < csz) {
           point.corner = 'l';
-        else
-          point.corner = 'r';
+        
+        }
+        else {
+         
+         return false;
+        }
             
         break;
 
@@ -2023,12 +2021,7 @@ flipMethods = {
   _isIArea: function(e) {
 
     var pos = this.data().f.parent.offset();
-    if (window.matchMedia("(max-width: 767px)").matches) {
-      var pos = $('.align').offset();
-     }
-     else {
-      var pos = this.data().f.parent.offset();
-     }
+     
     e = (isTouch && e.originalEvent) ? e.originalEvent.touches[0] : e;
 
     return flipMethods._cornerActivated.call(this,
