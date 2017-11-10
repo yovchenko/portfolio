@@ -182,7 +182,7 @@ main {
     right: 0;
     margin: 5px;
     width: 3em;
-    height:  3em;
+    height: 3em;
 }
 
 .canvas-box {
@@ -317,6 +317,7 @@ article {
 
 
 /* flipbook */
+
 .book {
     display: none;
     width: 100%;
@@ -342,8 +343,6 @@ article {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-
 
 #flipbook {
     position: absolute;
@@ -429,7 +428,7 @@ article {
 .sj-book .p2,
 .sj-book .p3,
 .sj-book .p5,
- {
+{
     background-color: white;
 }
 
@@ -479,19 +478,10 @@ article {
     background-position: right 0;
 }
 
-.sj-book .p2 {
-    background-position: -480px 0 !important;
-}
-
-.sj-book .p3 {
-    background-position: -1920px 0 !important;
-}
-
-.sj-book .p5 {
-    background-position: -960px 0 !important;
-}
-
-.sj-book .hard {
+.sj-book .hard.p1,
+.sj-book .hard.p2,
+.sj-book .hard.p5,
+.sj-book .hard.p6 {
     width: 480px;
     height: 600px;
     background-color: white;
@@ -500,6 +490,9 @@ article {
     -ms-box-shadow: none;
     box-shadow: none;
 }
+
+.sj-book .hard.p3,
+.sj-book .hard.p4 {}
 
 .sj-book .page-wrapper {
     -webkit-perspective: 2000px;
@@ -516,11 +509,15 @@ article {
 }
 
 .sj-book .even {
-    background-image: linear-gradient(to left, #fff 95%, #dadada 100%);
+    background-image: linear-gradient(to left, #dadada, #fff 6%, #fff 6%, #fff 94%, #dadada 98%);
+    -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.25);
 }
 
 .sj-book .odd {
-    background-image: linear-gradient(to right, #fff 95%, #cacaca 100%);
+    background-image: linear-gradient(to left, #dadada, #fff 6%, #fff 6%, #fff 94%, #dadada 98%);
+    -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.25);
 }
 
 .sj-book .loader {
@@ -1418,9 +1415,7 @@ footer .wrapper {
     .fps {
         font-size: 1.3em;
     }
-    @media all and (min-aspect-ratio: 9/12) {
-     
-    }
+    @media all and (min-aspect-ratio: 9/12) {}
 }
 
 @media all and (max-width: 576px) {
@@ -1501,11 +1496,7 @@ footer .wrapper {
                 bottom: 23%;
             }
         }
-     
     }
-    
-    
-    
 }
 
 @media all and (max-aspect-ratio: 5/4) {
@@ -1556,5 +1547,4 @@ footer .wrapper {
     .svg-logo-two>div:nth-child(3) {
         width: 85%;
     }
-    
 }

@@ -1155,16 +1155,10 @@ article {
   right: 4px;
   background-position: right 0; }
 
-.sj-book .p2 {
-  background-position: -480px 0 !important; }
-
-.sj-book .p3 {
-  background-position: -1920px 0 !important; }
-
-.sj-book .p5 {
-  background-position: -960px 0 !important; }
-
-.sj-book .hard {
+.sj-book .hard.p1,
+.sj-book .hard.p2,
+.sj-book .hard.p5,
+.sj-book .hard.p6 {
   width: 480px;
   height: 600px;
   background-color: white;
@@ -1184,12 +1178,16 @@ article {
   overflow: hidden; }
 
 .sj-book .even {
-  background-image: -webkit-gradient(linear, right top, left top, color-stop(95%, #fff), to(#dadada));
-  background-image: linear-gradient(to left, #fff 95%, #dadada 100%); }
+  background-image: -webkit-gradient(linear, right top, left top, from(#dadada), color-stop(6%, #fff), color-stop(6%, #fff), color-stop(94%, #fff), color-stop(98%, #dadada));
+  background-image: linear-gradient(to left, #dadada, #fff 6%, #fff 6%, #fff 94%, #dadada 98%);
+  -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.25); }
 
 .sj-book .odd {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(95%, #fff), to(#cacaca));
-  background-image: linear-gradient(to right, #fff 95%, #cacaca 100%); }
+  background-image: -webkit-gradient(linear, right top, left top, from(#dadada), color-stop(6%, #fff), color-stop(6%, #fff), color-stop(94%, #fff), color-stop(98%, #dadada));
+  background-image: linear-gradient(to left, #dadada, #fff 6%, #fff 6%, #fff 94%, #dadada 98%);
+  -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.25); }
 
 .sj-book .loader {
   width: 22px;

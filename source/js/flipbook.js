@@ -126,11 +126,33 @@ function loadApp() {
 function updateDepth(book, newPage) {
     var page = book.turn('page');
     $('#slider').slider("value", page);
+    var data = book.data();
+    if(data.opts.page === 3) {
+       console.log(true)
+      }
+
 }
+
 
 function loadPage(page) {}
 
-function addPage(page, book) {}
+function addPage(page, book) {
+    var id, pages = book.turn('pages');
+    
+        if (!book.turn('hasPage', page)) {
+    
+            var element = $('<div />',
+                {'class': 'own-size',
+                    css: {width: 460, height: 582}
+                }).
+                html('<div class="loader"></div>');
+    
+            if (book.turn('addPage', element, page)) {
+                loadPage(page);
+            }
+    
+        }
+}
 
 function isChrome() {
 

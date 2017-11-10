@@ -2119,6 +2119,7 @@ flipMethods = {
       width = this.width(),
       height = this.height();
 
+
     switch (data.effect) {
       case 'hard':
         
@@ -2130,7 +2131,6 @@ flipMethods = {
           data.bshadow.css({width: width, height: height});
         }
       }
-
       break;
       case 'sheet':
 
