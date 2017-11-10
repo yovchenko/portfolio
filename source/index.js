@@ -8,6 +8,7 @@ import './js/canvasSphere';
 import './js/jsonAnimation';
 import './js/contactForm';
 import './js/volumeButtons';
+import './extras/jquery-ui.min';
 import './extras/hash';
 import './extras/turn';
 import './js/flipbook';

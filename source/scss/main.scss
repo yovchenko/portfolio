@@ -1,6 +1,7 @@
 @import "variables";
 @import "mixins";
 @import "textAnimation";
+@import "jquery";
 @include font-face('sketch', normal, 500, '../fonts/cabinSketch.ttf');
 @include font-face('Italianno, cursive', normal, 400, '../fonts/Italianno-Regular.ttf');
 html {
@@ -325,6 +326,14 @@ article {
     transition: 1s ease-in-out;
 }
 
+.chapter {
+    width: 75px;
+    margin: 0 auto;
+    position: relative;
+    height: 5%;
+    top: -5%;
+}
+
 .bookWrap {
     width: 100%;
     position: absolute;
@@ -333,6 +342,8 @@ article {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+
 
 #flipbook {
     position: absolute;
@@ -402,13 +413,13 @@ article {
     background-position: center;
 }
 
-.sj-book div.hard.fixed.back-side.p5.page.p3.odd {
+.sj-book div .hard.back-side.p5.page.odd.fixed {
     background-image: url(../images/book-page-3.jpg);
     background-size: contain;
     background-position: center;
 }
 
-.sj-book div.hard.p6.page.p4.even {
+.sj-book div .hard.p6.page.even {
     background-image: url(../images/book-page-4.jpg);
     background-size: contain;
     background-position: center;
@@ -418,7 +429,7 @@ article {
 .sj-book .p2,
 .sj-book .p3,
 .sj-book .p5,
-.sj-book .p6 {
+ {
     background-color: white;
 }
 
@@ -478,10 +489,6 @@ article {
 
 .sj-book .p5 {
     background-position: -960px 0 !important;
-}
-
-.sj-book .p6 {
-    background-position: -1440px 0 !important;
 }
 
 .sj-book .hard {

@@ -135,7 +135,8 @@ function content(event) {
 	let $pageMain = event.data.case;
 	let $timerCurtain = setTimeout(function () {
 		if ($pageMain === 4) {
-			$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($fps).add($flipbook).add($wrapperCanvas).stop().css('display', 'none');
+			$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($fps)
+			.add($flipbook).add($wrapperCanvas).stop().css('display', 'none');
 			$container.add($home).css('display', 'flex');
 			$touch.css('display', 'block');
 			anim.stop();
@@ -149,7 +150,8 @@ function content(event) {
 			}
 			anim.stop();
 		} else if ($pageMain === 3) {
-			$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas).add($fps).add($article).add($container).stop().css('display', 'none');
+			$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas)
+			.add($fps).add($article).add($container).stop().css('display', 'none');
 			$home.css('display', 'flex');
 			$($flipbook).add($touch).css('display', 'block');
 			anim.stop();
@@ -162,7 +164,8 @@ function content(event) {
 				}
 			}
 		} else if ($pageMain === 2) {
-			$(init).add(btnHamburger).add($logoOne).add($touch).add($flipbook).add($logoTwo).add($wrapperCanvas).add($fps).add($container).stop().css('display', 'none');
+			$(init).add(btnHamburger).add($logoOne).add($touch).add($flipbook).add($logoTwo)
+			.add($wrapperCanvas).add($fps).add($container).stop().css('display', 'none');
 			$article.css('display', 'grid');
 			$home.css('display', 'flex');
 			anim.play();
