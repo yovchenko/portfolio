@@ -43,9 +43,15 @@ window.onload = setTimeout(function () {
         let img2 = new Image();
         let img3 = new Image();
         let img4 = new Image();
+        let img5 = new Image();
+        let img6 = new Image();
+        let img7 = new Image();
          img1.src = "./images/book-page-1.jpg";
          img2.src = "./images/book-page-2.jpg";
          img3.src = "./images/book-page-3.jpg";
          img4.src = "./images/book-page-4.jpg";
+         img5.src = "./images/letter_bg.png";
+         img6.src = "./images/before.png";
+         img7.src = "./images/after.png";
      }
 }, 2000);

@@ -18428,10 +18428,16 @@ window.onload = setTimeout(function () {
         var img2 = new Image();
         var img3 = new Image();
         var img4 = new Image();
+        var img5 = new Image();
+        var img6 = new Image();
+        var img7 = new Image();
         img1.src = "./images/book-page-1.jpg";
         img2.src = "./images/book-page-2.jpg";
         img3.src = "./images/book-page-3.jpg";
         img4.src = "./images/book-page-4.jpg";
+        img5.src = "./images/letter_bg.png";
+        img6.src = "./images/before.png";
+        img7.src = "./images/after.png";
     }
 }, 2000);
 
