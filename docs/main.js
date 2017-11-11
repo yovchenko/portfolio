@@ -41907,7 +41907,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
   //   | bl * br |
 
   corners = {
-    backward: ['br', 'tr'],
+    backward: ['bl', 'tl'],
     forward: ['br', 'tr'],
     all: ['tl', 'bl', 'tr', 'br', 'l', 'r']
   },
@@ -44735,30 +44735,24 @@ loadApp();
 
 function loadApp() {
     var flipbook = $('.sj-book');
-    $('#slider').slider({
+    var bookSlider = $('#slider');
+    bookSlider.slider({
         min: 1,
         max: 4,
         value: 0,
         slide: function slide(event, ui) {
-            updateHandleValues(ui);
+            updateHandleValues(ui, flipbook);
         }
     });
 
-    function updateHandleValues(ui) {
-        $('.sj-book').turn('page', ui.value);
-    }
-
     Hash.on('^page\/([0-9]*)$', {
         yep: function yep(path, parts) {
-
             var page = parts[1];
-
             if (page !== undefined) {
                 if ($('.sj-book').turn('is')) $('.sj-book').turn('page', page);
             }
         },
         nop: function nop(path) {
-
             if ($('.sj-book').turn('is')) $('.sj-book').turn('page', 1);
         }
     });
@@ -44826,15 +44820,16 @@ function loadApp() {
 
             turned: function turned(e, page, view) {
                 var book = $(this);
-                if (page == 2 || page == 3) {
-                    book.turn('peel', 'br');
-                }
-
+                bookSlider.slider('value', getViewNumber(book, page));
                 updateDepth(book);
                 book.turn('center');
             },
-            start: function start(e, pageObj) {},
-            end: function end(e, pageObj) {},
+            start: function start(e, pageObj) {
+                moveBar(true);
+            },
+            end: function end(e, pageObj) {
+                moveBar(false);
+            },
 
             missing: function missing(e, pages) {
                 for (var i = 0; i < pages.length; i++) {
@@ -44843,16 +44838,27 @@ function loadApp() {
             }
         }
     });
-
     flipbook.addClass('animated');
 };
 
-function updateDepth(book, newPage) {
-    var page = book.turn('page');
-    $('#slider').slider("value", page);
-    var data = book.data();
-    if (data.opts.page === 3) {
-        console.log(true);
+function updateDepth(book, newPage) {}
+
+function moveBar(yes) {
+    $('#slider .ui-slider-handle').css({
+        zIndex: yes ? -1 : 10000
+    });
+}
+
+function getViewNumber(book, page) {
+
+    return parseInt(book.turn('page') / 2 + 1, 10);
+}
+
+function updateHandleValues(ui, flipbook) {
+    if (getViewNumber(flipbook) > ui.value) {
+        flipbook.turn('previous');
+    } else if (getViewNumber(flipbook) < ui.value) {
+        flipbook.turn('next');
     }
 }
 
@@ -44861,13 +44867,14 @@ function loadPage(page) {}
 function addPage(page, book) {
     var id,
         pages = book.turn('pages');
-
     if (!book.turn('hasPage', page)) {
-
-        var element = $('<div />', { 'class': 'own-size',
-            css: { width: 460, height: 582 }
+        var element = $('<div />', {
+            'class': 'own-size',
+            css: {
+                width: 460,
+                height: 582
+            }
         }).html('<div class="loader"></div>');
-
         if (book.turn('addPage', element, page)) {
             loadPage(page);
         }
@@ -44875,10 +44882,8 @@ function addPage(page, book) {
 }
 
 function isChrome() {
-
     // Chrome's unsolved bug
     // http://code.google.com/p/chromium/issues/detail?id=128488
-
     return navigator.userAgent.indexOf('Chrome') != -1;
 }
 

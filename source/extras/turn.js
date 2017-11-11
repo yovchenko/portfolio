@@ -48,7 +48,7 @@ var has3d,
   //   | bl * br |
 
   corners = {
-    backward: ['br', 'tr'],
+    backward: ['bl', 'tl'],
     forward: ['br', 'tr'],
     all: ['tl', 'bl', 'tr', 'br', 'l', 'r']
   },
