@@ -1,8 +1,8 @@
 @import "variables";
 @import "mixins";
 @import "textAnimation";
-@import "slider";
 @import "jquery-ui";
+@import "slider";
 @include font-face('sketch', normal, 500, '../fonts/cabinSketch.ttf');
 @include font-face('Italianno, cursive', normal, 400, '../fonts/Italianno-Regular.ttf');
 html {

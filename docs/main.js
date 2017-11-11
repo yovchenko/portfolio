@@ -36443,7 +36443,7 @@ function removeKeyboardShift() {
 		var keyboardHeight = detectKeyboard();
 		if (keyboardHeight > 0) {
 			keyboardShift(keyboardHeight);
-		} else if (keyboardHeight == -1) {
+		} else if (keyboardHeight <= 0) {
 			removeKeyboardShift();
 		}
 	}
@@ -44742,6 +44742,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 
 loadApp();
+
 function loadApp() {
     var flipbook = $('.sj-book');
     var bookSlider = $('#slider');
@@ -44752,7 +44753,6 @@ function loadApp() {
         slide: function slide(event, ui) {
             updateHandleValues(ui, flipbook);
         }
-
     });
 
     Hash.on('^page\/([0-9]*)$', {
@@ -44773,14 +44773,10 @@ function loadApp() {
             next = 39;
         switch (e.keyCode) {
             case previous:
-
                 $('.sj-book').turn('previous');
-
                 break;
             case next:
-
                 $('.sj-book').turn('next');
-
                 break;
         }
     });
@@ -44798,7 +44794,6 @@ function loadApp() {
                     pages = book.turn('pages');
 
                 if (currentPage > 3 && currentPage < pages - 3) {
-
                     if (page == 1) {
                         book.turn('page', 2).turn('stop').turn('page', page);
                         e.preventDefault();
@@ -44838,14 +44833,10 @@ function loadApp() {
             },
             end: function end(e, pageObj) {
                 var book = $(this);
-
                 updateDepth(book);
-
                 setTimeout(function () {
-
                     $('#slider').slider('value', getViewNumber(book));
                 }, 1);
-
                 moveBar(false);
             },
 
@@ -44869,12 +44860,16 @@ function updateDepth(book, newPage) {
     if (newPage > 3) $('.sj-book .p2 .depth').css({
         width: depthWidth,
         left: 20 - depthWidth
-    });else $('.sj-book .p2 .depth').css({ width: 0 });
+    });else $('.sj-book .p2 .depth').css({
+        width: 0
+    });
 
     if (newPage < pages - 3) $('.sj-book .p5 .depth').css({
         width: depthWidth,
         right: 20 - depthWidth
-    });else $('.sj-book .p4 .depth').css({ width: 0 });
+    });else $('.sj-book .p4 .depth').css({
+        width: 0
+    });
 }
 
 function moveBar(yes) {
