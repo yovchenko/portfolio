@@ -18405,16 +18405,6 @@ var pulse = setInterval(function () {
         clearInterval(pulse);
     }
 }, 100);
-if (document.images) {
-    var img1 = new Image();
-    var img2 = new Image();
-    var img3 = new Image();
-    var img4 = new Image();
-    img1.src = "../images/book-page-1.jpg";
-    img2.src = "../images/book-page-2.jpg";
-    img3.src = "../images/book-page-3.jpg";
-    img4.src = "../images/book-page-4.jpg";
-}
 /*I'm giving you some extra time to enjoy my preloader*/
 window.onload = setTimeout(function () {
     (0, _canvasSphere2.default)();
@@ -18433,6 +18423,16 @@ window.onload = setTimeout(function () {
         "volume_increment": 10,
         "volume_decrement": 10
     });
+    if (document.images) {
+        var img1 = new Image();
+        var img2 = new Image();
+        var img3 = new Image();
+        var img4 = new Image();
+        img1.src = "./images/book-page-1.jpg";
+        img2.src = "./images/book-page-2.jpg";
+        img3.src = "./images/book-page-3.jpg";
+        img4.src = "./images/book-page-4.jpg";
+    }
 }, 2000);
 
 /***/ }),
