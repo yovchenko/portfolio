@@ -51,7 +51,6 @@ function loadApp() {
         autoCenter: true,
         gradients: true,
         duration: 1000,
-        pages: 0,
         when: {
             turning: function (e, page, view) {
                 var book = $(this),

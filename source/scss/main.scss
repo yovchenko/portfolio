@@ -332,18 +332,6 @@ article {
     margin-top: 35px;
 }
 
-.turnjs-slider .ui-slider-handle {
-  
-}
-
-.chapter {
-    width: 75px;
-    margin: 0 auto;
-    position: relative;
-    height: 5%;
-    top: -5%;
-}
-
 .bookWrap {
     width: 100%;
     position: absolute;
@@ -421,7 +409,7 @@ article {
     background-position: center;
 }
 
-.sj-book div .hard.back-side.p5.page.odd.fixed {
+.sj-book div .hard.front-side.p5 {
     background-image: url(../images/book-page-3.jpg);
     background-size: contain;
     background-position: center;
