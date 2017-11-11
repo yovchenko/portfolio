@@ -18405,7 +18405,16 @@ var pulse = setInterval(function () {
         clearInterval(pulse);
     }
 }, 100);
-
+if (document.images) {
+    var img1 = new Image();
+    var img2 = new Image();
+    var img3 = new Image();
+    var img4 = new Image();
+    img1.src = "../images/book-page-1.jpg";
+    img2.src = "../images/book-page-2.jpg";
+    img3.src = "../images/book-page-3.jpg";
+    img4.src = "../images/book-page-4.jpg";
+}
 /*I'm giving you some extra time to enjoy my preloader*/
 window.onload = setTimeout(function () {
     (0, _canvasSphere2.default)();
@@ -44732,7 +44741,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 
 loadApp();
-
 function loadApp() {
     var flipbook = $('.sj-book');
     var bookSlider = $('#slider');
@@ -44827,6 +44835,15 @@ function loadApp() {
                 moveBar(true);
             },
             end: function end(e, pageObj) {
+                var book = $(this);
+
+                updateDepth(book);
+
+                setTimeout(function () {
+
+                    $('#slider').slider('value', getViewNumber(book));
+                }, 1);
+
                 moveBar(false);
             },
 
@@ -44840,7 +44857,23 @@ function loadApp() {
     flipbook.addClass('animated');
 };
 
-function updateDepth(book, newPage) {}
+function updateDepth(book, newPage) {
+    var page = book.turn('page'),
+        pages = book.turn('pages'),
+        depthWidth = 16 * Math.min(1, page * 2 / pages);
+
+    newPage = newPage || page;
+
+    if (newPage > 3) $('.sj-book .p2 .depth').css({
+        width: depthWidth,
+        left: 20 - depthWidth
+    });else $('.sj-book .p2 .depth').css({ width: 0 });
+
+    if (newPage < pages - 3) $('.sj-book .p5 .depth').css({
+        width: depthWidth,
+        right: 20 - depthWidth
+    });else $('.sj-book .p4 .depth').css({ width: 0 });
+}
 
 function moveBar(yes) {
     $('#slider .ui-slider-handle').css({

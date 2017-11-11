@@ -1114,7 +1114,9 @@ article {
 .sj-book .p1,
 .sj-book .p2,
 .sj-book .p3,
-.sj-book .p5 {
+.sj-book .p4,
+.sj-book .p5,
+.sj-book .p6 {
   background-color: white; }
 
 .sj-book .p1 {
@@ -1151,17 +1153,6 @@ article {
 .sj-book .back-side .depth {
   right: 4px;
   background-position: right 0; }
-
-.sj-book .hard.p1,
-.sj-book .hard.p2,
-.sj-book .hard.p5,
-.sj-book .hard.p6 {
-  width: 480px;
-  height: 600px;
-  background-color: white;
-  -webkit-box-shadow: none;
-  -ms-box-shadow: none;
-  box-shadow: none; }
 
 .sj-book .page-wrapper {
   -webkit-perspective: 2000px;

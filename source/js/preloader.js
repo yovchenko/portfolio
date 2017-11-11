@@ -20,7 +20,16 @@ let pulse = setInterval(function () {
         clearInterval(pulse);
     }
 }, 100);
-
+if (document.images) {
+    let img1 = new Image();
+    let img2 = new Image();
+    let img3 = new Image();
+    let img4 = new Image();
+     img1.src = "../images/book-page-1.jpg";
+     img2.src = "../images/book-page-2.jpg";
+     img3.src = "../images/book-page-3.jpg";
+     img4.src = "../images/book-page-4.jpg";
+ }
 /*I'm giving you some extra time to enjoy my preloader*/
 window.onload = setTimeout(function () {
     main();
