@@ -8,7 +8,8 @@ function loadApp() {
        value: 0,
        slide: function (event, ui) {
         updateHandleValues(ui, flipbook);
-       }
+       },
+    
    });
 
     Hash.on('^page\/([0-9]*)$', {
@@ -151,9 +152,9 @@ else
 }
 
 function moveBar(yes) {
-    $('#slider .ui-slider-handle').css({
-        zIndex: yes ? -1 : 10000
-    });
+ //   $('#slider .ui-slider-handle').css({
+  //      zIndex: yes ? -1 : 10000
+   // });
 }
 
 function getViewNumber(book, page) {

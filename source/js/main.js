@@ -108,7 +108,7 @@ $work.on('click', {
 $contact.on('click', {
 	case: 4
 }, content);
-export let page = {
+let page = {
 	home: true,
 	about: false,
 	work: false,

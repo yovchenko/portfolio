@@ -36143,11 +36143,6 @@ process.umask = function() { return 0; };
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-exports.page = undefined;
-
 var _resize = __webpack_require__(37);
 
 var _amplitude = __webpack_require__(36);
@@ -36261,7 +36256,7 @@ $work.on('click', {
 $contact.on('click', {
 	case: 4
 }, content);
-var page = exports.page = {
+var page = {
 	home: true,
 	about: false,
 	work: false,
@@ -44757,6 +44752,7 @@ function loadApp() {
         slide: function slide(event, ui) {
             updateHandleValues(ui, flipbook);
         }
+
     });
 
     Hash.on('^page\/([0-9]*)$', {
@@ -44882,9 +44878,9 @@ function updateDepth(book, newPage) {
 }
 
 function moveBar(yes) {
-    $('#slider .ui-slider-handle').css({
-        zIndex: yes ? -1 : 10000
-    });
+    //   $('#slider .ui-slider-handle').css({
+    //      zIndex: yes ? -1 : 10000
+    // });
 }
 
 function getViewNumber(book, page) {
