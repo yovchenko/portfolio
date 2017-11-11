@@ -220,23 +220,28 @@ function content(event) {
 	}, 1500);
 }
 
+let orientation = false;
+window.addEventListener("orientationchange", function() {
+	orientation = true;
+}, false);
 
 function updateWindowSize() {
 	window.lastInnerWidth = window.innerWidth;
 	window.lastInnerHeight = window.innerHeight;
-	window.lastOrientation = window.orientation;
 	// Stays the same for iOS, so that's our ticket to detect iOS keyboard
 	window.lastBodyHeight = document.body.clientHeight;
 };
 
 function detectKeyboard() {
 	function orientationChange() {
-		if (((window.lastOrientation == 0 || window.lastOrientation == 180) &&
-				(window.orientation == 0 || window.orientation == 180)) ||
-			((window.lastOrientation == 90 || window.lastOrientation == -90) &&
-				(window.orientation == 90 ||
-					window.orientation == -90))) return false
-		else return true;
+		if (orientation) {
+		     orientation = false;
+			 return true;
+		}
+		 else {
+			 orientation = false;
+			 return false;
+		 } 
 	}
 
 	// No orientation change, keyboard opening
