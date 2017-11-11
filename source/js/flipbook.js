@@ -3,14 +3,14 @@ loadApp();
 function loadApp() {
     var flipbook = $('.sj-book');
     var bookSlider = $('#slider');
-    bookSlider.slider({
-        min: 1,
-        max: 4,
-        value: 0,
-        slide: function (event, ui) {
-            updateHandleValues(ui, flipbook);
-        }
-    });
+   bookSlider.slider({
+       min: 1,
+       max: 4,
+       value: 0,
+       slide: function (event, ui) {
+        updateHandleValues(ui, flipbook);
+       }
+   });
 
     Hash.on('^page\/([0-9]*)$', {
         yep: function (path, parts) {
@@ -97,7 +97,7 @@ function loadApp() {
 
             turned: function (e, page, view) {
                 var book = $(this);
-                bookSlider.slider('value', getViewNumber(book, page));
+                $( "#slider" ).slider('value', getViewNumber(book, page));
                 updateDepth(book);
                 book.turn('center');
             },
@@ -129,16 +129,26 @@ function moveBar(yes) {
 }
 
 function getViewNumber(book, page) {
-
     return parseInt(book.turn('page') / 2 + 1, 10);
 }
 
+function numberOfViews(book) {
+	return book.turn('pages') / 2 + 1;
+}
+
 function updateHandleValues(ui, flipbook) {
-    if (getViewNumber(flipbook) > ui.value) {
+    let pageNum = getViewNumber(flipbook);
+    if (pageNum > ui.value) {
+      while (pageNum != ui.value) {
         flipbook.turn('previous');
-    } else if (getViewNumber(flipbook) < ui.value) {
+        pageNum --;
+      }
+    } else if (pageNum < ui.value) {
+        while (pageNum != ui.value) {
         flipbook.turn('next');
+        pageNum ++;
     }
+}
 }
 
 function loadPage(page) {

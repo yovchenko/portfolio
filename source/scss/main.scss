@@ -327,6 +327,15 @@ article {
     transition: 1s ease-in-out;
 }
 
+.turnjs-slider {
+    position: relative;
+    margin-top: 35px;
+}
+
+.turnjs-slider .ui-slider-handle {
+  
+}
+
 .chapter {
     width: 75px;
     margin: 0 auto;
@@ -1547,4 +1556,10 @@ footer .wrapper {
     .svg-logo-two>div:nth-child(3) {
         width: 85%;
     }
+}
+
+@media all and (max-aspect-ratio: 1/1) {
+    .turnjs-slider {
+        margin-top: 100px;
+    } 
 }
