@@ -36443,7 +36443,7 @@ function removeKeyboardShift() {
 		var keyboardHeight = detectKeyboard();
 		if (keyboardHeight > 0) {
 			keyboardShift(keyboardHeight);
-		} else if (keyboardHeight <= 0) {
+		} else if (keyboardHeight == -1) {
 			removeKeyboardShift();
 		}
 	}
