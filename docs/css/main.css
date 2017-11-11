@@ -1035,12 +1035,9 @@ article {
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out; }
 
-.chapter {
-  width: 75px;
-  margin: 0 auto;
+.turnjs-slider {
   position: relative;
-  height: 5%;
-  top: -5%; }
+  margin-top: 35px; }
 
 .bookWrap {
   width: 100%;
@@ -1104,7 +1101,7 @@ article {
   background-size: contain;
   background-position: center; }
 
-.sj-book div .hard.back-side.p5.page.odd.fixed {
+.sj-book div .hard.front-side.p5 {
   background-image: url(../images/book-page-3.jpg);
   background-size: contain;
   background-position: center; }
@@ -2044,3 +2041,7 @@ footer .wrapper {
     position: initial; }
   .svg-logo-two > div:nth-child(3) {
     width: 85%; } }
+
+@media all and (max-aspect-ratio: 1 / 1) {
+  .turnjs-slider {
+    margin-top: 100px; } }

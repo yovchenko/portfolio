@@ -44781,7 +44781,6 @@ function loadApp() {
         autoCenter: true,
         gradients: true,
         duration: 1000,
-        pages: 0,
         when: {
             turning: function turning(e, page, view) {
                 var book = $(this),
@@ -44820,7 +44819,7 @@ function loadApp() {
 
             turned: function turned(e, page, view) {
                 var book = $(this);
-                bookSlider.slider('value', getViewNumber(book, page));
+                $("#slider").slider('value', getViewNumber(book, page));
                 updateDepth(book);
                 book.turn('center');
             },
@@ -44850,15 +44849,25 @@ function moveBar(yes) {
 }
 
 function getViewNumber(book, page) {
-
     return parseInt(book.turn('page') / 2 + 1, 10);
 }
 
+function numberOfViews(book) {
+    return book.turn('pages') / 2 + 1;
+}
+
 function updateHandleValues(ui, flipbook) {
-    if (getViewNumber(flipbook) > ui.value) {
-        flipbook.turn('previous');
-    } else if (getViewNumber(flipbook) < ui.value) {
-        flipbook.turn('next');
+    var pageNum = getViewNumber(flipbook);
+    if (pageNum > ui.value) {
+        while (pageNum != ui.value) {
+            flipbook.turn('previous');
+            pageNum--;
+        }
+    } else if (pageNum < ui.value) {
+        while (pageNum != ui.value) {
+            flipbook.turn('next');
+            pageNum++;
+        }
     }
 }
 
