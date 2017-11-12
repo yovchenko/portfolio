@@ -36444,8 +36444,8 @@ function removeKeyboardShift() {
 			resizeTimeout = setTimeout(function () {
 				resizeTimeout = null;
 				actualResizeHandler();
-				// The actualResizeHandler will execute at a rate of 30fps
-			}, 33);
+				// The actualResizeHandler will execute at a rate of 15fps
+			}, 66);
 		}
 	}
 
@@ -36487,7 +36487,7 @@ function resizeScreenObj(event, keyHeight) {
 		} else if (page.work) {
 			(0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
 		}
-	}, 66);
+	}, 122);
 };
 /* the form is getting bigger when the on-screen keyboard opens */
 $(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focus(function () {

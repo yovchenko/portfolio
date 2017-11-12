@@ -3488,7 +3488,7 @@ footer .wrapper {
       right: 8%;
       bottom: 23%; } } }
 
-@media all and (max-aspect-ratio: 5 / 4) {
+@media all and (max-aspect-ratio: 19 / 21) {
   .svg-logo-one {
     grid-row: 1;
     grid-column: 1 / 4;
