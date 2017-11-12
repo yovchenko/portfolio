@@ -36370,7 +36370,9 @@ function content(event) {
 }
 
 window.addEventListener("orientationchange", function () {
-	window.lastOrientation = true;
+	if (page.keyboard) {
+		window.lastOrientation = true;
+	}
 }, false);
 
 function updateWindowSize() {

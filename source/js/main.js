@@ -221,7 +221,9 @@ function content(event) {
 }
 
 window.addEventListener("orientationchange", function () {
+	if (page.keyboard) {
 	window.lastOrientation = true;
+	}
 }, false);
 
 function updateWindowSize() {
