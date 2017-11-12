@@ -666,7 +666,7 @@ form {
     height: 200px;
     width: 400px;
     margin: 0px auto;
-    padding: 0px 25px 45px 25px;
+    padding: 5px 25px 45px 25px;
     border: 1px solid #fff;
     border-radius: 3px;
     -moz-border-radius: 3px;
@@ -680,7 +680,7 @@ form {
     transition: all 1s ease-in-out .3s;
     p {
         font-size: 3.8em;
-        margin: 5px 0px 5px 0px;
+        margin: 5px 0px 15px 0px;
     }
 }
 
@@ -689,10 +689,11 @@ form {
 }
 
 label {
-    margin: 11px 55px 0 0;
     font-size: 1.9em;
     text-transform: uppercase;
     text-shadow: 0px 1px 0px #fff;
+    position: relative;
+    top: -2px;
 }
 
 #name-error,
@@ -700,7 +701,7 @@ label {
     color: red;
     float: right;
     position: relative;
-    top: -65px;
+    top: -63px;
     right: 0px;
     margin: 0;
 }
@@ -720,15 +721,12 @@ textarea {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    -moz-box-shadow: inset 0px 0px 1px #726959;
-    -webkit-box-shadow: inset 0px 0px 1px #b3a895;
-    box-shadow: inset 0px 0px 1px #b3a895;
+    box-shadow: inset 0px 0px 1px black;
 }
 
 textarea {
     width: 98.8%;
-    height: 80px;
-    padding-top: 14px;
+    height: 90px;
     resize: vertical;
     margin: 0;
 }
@@ -742,14 +740,15 @@ input[type=email]:focus {
 
 #form_wrap input[type=submit] {
     position: absolute;
-    font-size: 3em;
+    font-size: 3.4em;
     font-family: 'Italianno, cursive';
     color: rgba(0, 0, 0, 0.3);
     width: 89%;
     text-align: center;
     opacity: 0;
-    bottom: 84px;
-    max-height: 40px;
+    bottom: 89px;
+    height: 45px;
+    padding-top: 2px;
     background: none;
     cursor: pointer;
     border-radius: 15px;
