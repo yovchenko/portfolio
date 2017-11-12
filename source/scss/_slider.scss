@@ -1,18 +1,38 @@
-.turnjs-slider{
-	position: relative;
+.turnjs-slider {
 	width: 80%;
-	height:8px;
 	margin: 0 auto;
-	background:rgba(0,0,0, 0.2);
-	-webkit-border-radius:5px;
-	-moz-border-radius:5px;
-	-o-border-radius:5px;
-	-ms-border-radius:5px;
-	border-radius:5px;
+	position: relative;
+	text-align: center;
 }
 
-.ui-slider-horizontal .ui-slider-handle {
-	
-
+#slider {
+	position: relative;
+	height: 16px;
+	line-height: 16px;
+	background: rgba(0, 0, 0, 0.2);
+	border-radius: 8px;
 }
+
+#slider .ui-slider-handle {
+	position: absolute;
+	margin-left: -10px;
+	width: 20px;
+	height: 20px;
+	outline: none;
+	cursor: pointer;
+	box-shadow: 0px 0px 1px 5px rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+}
+
+#slider .ui-slider-handle:active {
+	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.4);
+	border: none;
+}
+
+.ui-widget.ui-widget-content {
+	border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+  
 

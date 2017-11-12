@@ -1,14 +1,19 @@
-loadApp();
-
-function loadApp() {
+(function loadApp() {
     var flipbook = $('.sj-book');
     var bookSlider = $('#slider');
     bookSlider.slider({
+        orientation: "horizontal",
         min: 1,
         max: 4,
-        value: 0,
+        value: 1,
+        animate: "slow",
+        range: false,
+        create: function (event, ui) {
+
+        },
         slide: function (event, ui) {
             updateHandleValues(ui, flipbook);
+        //    return updateHandlePos(event.target, ui.value);
         },
     });
 
@@ -114,41 +119,31 @@ function loadApp() {
             }
         }
     });
+
     flipbook.addClass('animated');
+})();
+
+/* function updateHandlePos(slider, handlePos) {
+    console.log(handlePos)
+    let handleOffset = -2;
+    $(slider).find('.ui-slider-handle').css("margin-left", handleOffset);
+    if (handlePos === 2) {
+        $(slider).find('.ui-slider-handle').css("margin-left", handleOffset - 5);
+    } else if (handlePos === 3) {
+        $(slider).find('.ui-slider-handle').css("margin-left", handleOffset - 10);
+    } else if (handlePos === 4) {
+        $(slider).find('.ui-slider-handle').css("margin-left", handleOffset - 15);
+    }
 };
-
+*/
 function updateDepth(book, newPage) {
-    var page = book.turn('page'),
-        pages = book.turn('pages'),
-        depthWidth = 16 * Math.min(1, page * 2 / pages);
 
-    newPage = newPage || page;
-
-    if (newPage > 3)
-        $('.sj-book .p2 .depth').css({
-            width: depthWidth,
-            left: 20 - depthWidth
-        });
-    else
-        $('.sj-book .p2 .depth').css({
-            width: 0
-        });
-
-    if (newPage < pages - 3)
-        $('.sj-book .p5 .depth').css({
-            width: depthWidth,
-            right: 20 - depthWidth
-        });
-    else
-        $('.sj-book .p4 .depth').css({
-            width: 0
-        });
 }
 
 function moveBar(yes) {
-    //   $('#slider .ui-slider-handle').css({
-    //      zIndex: yes ? -1 : 10000
-    // });
+       $('#slider .ui-slider-handle').css({
+          zIndex: yes ? -1 : 10000
+    });
 }
 
 function getViewNumber(book, page) {
