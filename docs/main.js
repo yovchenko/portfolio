@@ -36386,10 +36386,8 @@ function updateWindowSize() {
 function detectKeyboard() {
 	function orientationChange() {
 		if (window.lastOrientation) {
-			window.lastOrientation = false;
 			return !window.lastOrientation;
 		} else {
-			window.lastOrientation = false;
 			return window.lastOrientation;
 		}
 	}

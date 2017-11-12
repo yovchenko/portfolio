@@ -222,7 +222,7 @@ function content(event) {
 
 window.addEventListener("orientationchange", function () {
 	if (page.keyboard) {
-	window.lastOrientation = true;
+		window.lastOrientation = true;
 	}
 }, false);
 
@@ -237,10 +237,8 @@ function updateWindowSize() {
 function detectKeyboard() {
 	function orientationChange() {
 		if (window.lastOrientation) {
-			window.lastOrientation = false;
 			return !window.lastOrientation;
 		} else {
-			window.lastOrientation = false;
 			return window.lastOrientation;
 		}
 	}

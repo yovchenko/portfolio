@@ -22,7 +22,7 @@ html {
     display: grid;
     position: relative;
     grid-template-areas: "head" "main" "footer";
-    grid-template-rows: 65px $main auto;
+    grid-template-rows: 65px $main 65px;
     grid-template-columns: auto;
     overflow: hidden;
 }
@@ -46,6 +46,9 @@ header {
 
 footer {
     display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     grid-area: footer;
     background-color: rgba(0%, 0%, 0%, 0.1);
     background-size: cover;

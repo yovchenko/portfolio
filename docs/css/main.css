@@ -2234,7 +2234,7 @@ html, html body {
   display: grid;
   position: relative;
   grid-template-areas: "head" "main" "footer";
-  grid-template-rows: 65px calc(100vh - 65px) auto;
+  grid-template-rows: 65px calc(100vh - 65px) 65px;
   grid-template-columns: auto;
   overflow: hidden; }
 
@@ -2254,6 +2254,9 @@ header {
 
 footer {
   display: none;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   grid-area: footer;
   background-color: rgba(0, 0, 0, 0.1);
   background-size: cover;
