@@ -2256,9 +2256,10 @@ html, html body {
 
 .grid-container {
   display: grid;
+  min-height: 100%;
   position: relative;
   grid-template-areas: "head" "main" "footer";
-  grid-template-rows: 65px calc(100vh - 65px) auto;
+  grid-template-rows: 65px calc(100vh - 65px) 65px;
   grid-template-columns: auto;
   overflow: hidden; }
 
