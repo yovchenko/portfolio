@@ -36369,27 +36369,26 @@ function content(event) {
 	}, 1500);
 }
 
-var orientation = false;
 window.addEventListener("orientationchange", function () {
-	orientation = true;
+	window.lastOrientation = true;
 }, false);
 
 function updateWindowSize() {
 	window.lastInnerWidth = window.innerWidth;
 	window.lastInnerHeight = window.innerHeight;
 	// Stays the same for iOS, so that's our ticket to detect iOS keyboard
+	window.lastOrientation = false;
 	window.lastBodyHeight = document.body.clientHeight;
 };
 
 function detectKeyboard() {
 	function orientationChange() {
-		console.log(orientation);
-		if (orientation) {
-			orientation = false;
-			return true;
+		if (window.lastOrientation) {
+			window.lastOrientation = false;
+			return !window.lastOrientation;
 		} else {
-			orientation = false;
-			return false;
+			window.lastOrientation = false;
+			return window.lastOrientation;
 		}
 	}
 
@@ -36481,11 +36480,11 @@ function resizeScreenObj(event, keyHeight) {
 			stroke_width: 0.2
 		});
 		canvasBackground.setAttribute("class", "canvasPic");
-		if (page.contacts === true) {
+		if (page.contacts) {
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-		} else if (page.home === true) {
+		} else if (page.home) {
 			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
-		} else if (page.work === true) {
+		} else if (page.work) {
 			(0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
 		}
 	}, 66);

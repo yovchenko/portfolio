@@ -136,7 +136,7 @@ function content(event) {
 	let $timerCurtain = setTimeout(function () {
 		if ($pageMain === 4) {
 			$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($fps)
-			.add($flipbook).add($wrapperCanvas).stop().css('display', 'none');
+				.add($flipbook).add($wrapperCanvas).stop().css('display', 'none');
 			$container.add($home).css('display', 'flex');
 			$touch.css('display', 'block');
 			anim.stop();
@@ -151,7 +151,7 @@ function content(event) {
 			anim.stop();
 		} else if ($pageMain === 3) {
 			$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas)
-			.add($fps).add($article).add($container).stop().css('display', 'none');
+				.add($fps).add($article).add($container).stop().css('display', 'none');
 			$home.css('display', 'flex');
 			$($flipbook).add($touch).css('display', 'block');
 			anim.stop();
@@ -165,7 +165,7 @@ function content(event) {
 			}
 		} else if ($pageMain === 2) {
 			$(init).add(btnHamburger).add($logoOne).add($touch).add($flipbook).add($logoTwo)
-			.add($wrapperCanvas).add($fps).add($container).stop().css('display', 'none');
+				.add($wrapperCanvas).add($fps).add($container).stop().css('display', 'none');
 			$article.css('display', 'grid');
 			$home.css('display', 'flex');
 			anim.play();
@@ -220,28 +220,27 @@ function content(event) {
 	}, 1500);
 }
 
-let orientation = false;
-window.addEventListener("orientationchange", function() {
-	orientation = true;
+window.addEventListener("orientationchange", function () {
+	window.lastOrientation = true;
 }, false);
 
 function updateWindowSize() {
 	window.lastInnerWidth = window.innerWidth;
 	window.lastInnerHeight = window.innerHeight;
 	// Stays the same for iOS, so that's our ticket to detect iOS keyboard
+	window.lastOrientation = false;
 	window.lastBodyHeight = document.body.clientHeight;
 };
 
 function detectKeyboard() {
 	function orientationChange() {
-		if (orientation) {
-		     orientation = false;
-			 return true;
+		if (window.lastOrientation) {
+			window.lastOrientation = false;
+			return !window.lastOrientation;
+		} else {
+			window.lastOrientation = false;
+			return window.lastOrientation;
 		}
-		 else {
-			 orientation = false;
-			 return false;
-		 } 
 	}
 
 	// No orientation change, keyboard opening
@@ -332,11 +331,11 @@ function resizeScreenObj(event, keyHeight) {
 			stroke_width: 0.2,
 		});
 		canvasBackground.setAttribute("class", "canvasPic");
-		if (page.contacts === true) {
+		if (page.contacts) {
 			resizeContent('.envelope', '#wrap', 530, 630);
-		} else if (page.home === true) {
+		} else if (page.home) {
 			resizeContent('#figure', '#wrapperCanvas', 800, 900);
-		} else if (page.work === true) {
+		} else if (page.work) {
 			resizeContent('.bookWrap', '#flipbook', 960, 600);
 		}
 	}, 66);
