@@ -271,14 +271,12 @@ function detectKeyboard() {
 
 function keyboardShift(keyboardHeight) {
 	grid.style.cssText = 'grid-template-rows:65px calc(100vh + ' + keyboardHeight + 'px) auto;';
-	document.getElementsByClassName('footer')[0].style.display = 'block';
 	page.keyboard = true;
 	resizeScreenObj(event, keyboardHeight);
 };
 
 function removeKeyboardShift() {
 	grid.style.cssText = 'grid-template-rows:65px calc(100vh - 65px) auto;';
-	document.getElementsByClassName('footer')[0].style.display = 'block';
 	page.keyboard = false;
 	resizeScreenObj(event, 0);
 };
@@ -344,14 +342,12 @@ function resizeScreenObj(event, keyHeight) {
 };
 /* the form is getting bigger when the on-screen keyboard opens */
 $(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focus(function () {
-	document.getElementsByClassName('footer')[0].style.display = 'none';
 	document.getElementsByClassName('containerForm')[0].classList += ' scaleForm';
 	if (window.matchMedia('(max-width: 767px)').matches) {
 		$volume.stop().fadeOut('slow');
 	}
 });
 $(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focusout(function () {
-	document.getElementsByClassName('footer')[0].style.display = 'block';
 	document.getElementsByClassName('containerForm')[0].classList = 'containerForm';
 	if (stop.style.display === 'block') {
 		$volume.stop().fadeIn('slow');
