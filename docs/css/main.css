@@ -3041,7 +3041,8 @@ footer .wrapper {
   padding: 0.2em 0; }
 
 .font-preload {
-  font-family: 'Italianno, cursive'; }
+  font-family: 'Italianno, cursive';
+  height: 0; }
 
 #loader-wrapper {
   position: fixed;
