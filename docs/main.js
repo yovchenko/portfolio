@@ -18398,7 +18398,7 @@ var pulse = setInterval(function () {
     var el = document.getElementsByClassName('entry-title')[0];
     opacity += increment;
     if (!document.body.classList.contains('loaded') && !(opacity.toFixed(2) === '0.95' || opacity.toFixed(2) === '0.55')) {
-        el.style.color = 'rgba(255%,255%,255%,' + opacity + ')';
+        el.style.color = 'rgba(255%,255%,255%,' + opacity.toFixed(2) + ')';
     } else if (!document.body.classList.contains('loaded') && (opacity.toFixed(2) === '0.95' || opacity.toFixed(2) === '0.55')) {
         increment = -increment;
     } else {
@@ -18411,6 +18411,7 @@ window.onload = setTimeout(function () {
     _jsonAnimation.anim.stop();
     (0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
     document.body.className = " loaded";
+    pulse = increment = opacity = null;
     document.getElementsByClassName('footer')[0].style.display = 'flex';
     $('#loader').add('.entry-title').add('#loader:before').add('#loader:after').stop().css('display', 'none');
     _amplitude2.default.init({
