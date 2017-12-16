@@ -13,7 +13,7 @@ let pulse = setInterval(function () {
     const el = document.getElementsByClassName('entry-title')[0];
     opacity += increment;
     if (!document.body.classList.contains('loaded') && (!(opacity.toFixed(2) === '0.95' || opacity.toFixed(2) === '0.55'))) {
-        el.style.color = 'rgba(255%,255%,255%,' + opacity + ')';
+        el.style.color = 'rgba(255%,255%,255%,' + opacity.toFixed(2) + ')';
     } else if (!document.body.classList.contains('loaded') && (opacity.toFixed(2) === '0.95' || opacity.toFixed(2) === '0.55')) {
         increment = -increment;
     } else {
