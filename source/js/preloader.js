@@ -26,7 +26,7 @@ window.onload = setTimeout(function () {
     anim.stop();
     resizeContent('#figure', '#wrapperCanvas', 800, 900);
     document.body.className = " loaded";
-    pulse = increment = opacity = null;
+    pulse = increment = opacity = null; /*garbage collection*/
     document.getElementsByClassName('footer')[0].style.display = 'flex';
     $('#loader').add('.entry-title').add('#loader:before').add('#loader:after').stop().css('display', 'none');
     Amplitude.init({

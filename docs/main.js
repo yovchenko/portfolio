@@ -18411,7 +18411,7 @@ window.onload = setTimeout(function () {
     _jsonAnimation.anim.stop();
     (0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
     document.body.className = " loaded";
-    pulse = increment = opacity = null;
+    pulse = increment = opacity = null; /*garbage collection*/
     document.getElementsByClassName('footer')[0].style.display = 'flex';
     $('#loader').add('.entry-title').add('#loader:before').add('#loader:after').stop().css('display', 'none');
     _amplitude2.default.init({
