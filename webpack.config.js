@@ -147,7 +147,6 @@ module.exports = {
             include: /\.min\.js$/,
             minimize: true
         }),
-
         new HtmlWebpackPlugin({
             template: PATHS.source + '/index.html',
             minify: {

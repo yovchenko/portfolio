@@ -3,8 +3,8 @@
 @import "textAnimation";
 @import "jquery-ui";
 @import "slider";
-@include font-face('sketch', normal, 500, '../fonts/cabinSketch.ttf');
-@include font-face('Italianno, cursive', normal, 400, '../fonts/Italianno-Regular.ttf');
+@include font-face('sketch','../fonts/CabinSketch-Bold',normal, 500);
+@include font-face('Italianno, cursive','../fonts/Italianno-Regular', normal, 400);
 html {
     height: 100%;
     box-sizing: border-box;
