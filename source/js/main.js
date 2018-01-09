@@ -7,23 +7,7 @@ import Amplitude from "amplitude";
 import {
 	anim
 } from './jsonAnimation.js';
-/* music player buttons */
-const stop = document.getElementById('stopMusic');
-const play = document.getElementById('playMusic');
-const $volume = $('.volume');
-document.getElementsByClassName('svgIcons')[0].onclick = function () {
-	if (stop.style.display === 'none') {
-		stop.style.display = 'block'
-		play.style.display = 'none';
-		$volume.stop().fadeIn('slow');
-		Amplitude.play();
-	} else {
-		stop.style.display = 'none'
-		play.style.display = 'block';
-		$volume.stop().fadeOut('slow');
-		Amplitude.pause();
-	}
-}
+
 
 /* hamburger menu */
 const btnHamburger = document.getElementsByClassName('btn-hamburger')[0];

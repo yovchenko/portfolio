@@ -6,7 +6,7 @@ import {
 import {
     anim
 } from './jsonAnimation.js';
-"use strict";
+
 let opacity = 0.55;
 let increment = 0.05;
 let pulse = setInterval(function () {
@@ -29,16 +29,6 @@ window.onload = setTimeout(function () {
     pulse = increment = opacity = null; /*garbage collection*/
     document.getElementsByClassName('footer')[0].style.display = 'flex';
     $('#loader').add('.entry-title').add('#loader:before').add('#loader:after').stop().css('display', 'none');
-    Amplitude.init({
-        "songs": [{
-            "name": "Cantaloupe Island",
-            "artist": "Herbie Hancock",
-            "album": "Then&Now The Definitive Herbie",
-            "url": " https://yovchenko.github.io/music/smoothMusic.mp3",
-        }],
-        "volume_increment": 10,
-        "volume_decrement": 10
-    });
     if (document.images) {
         let img1 = new Image();
         let img2 = new Image();

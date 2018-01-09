@@ -60,7 +60,7 @@ module.exports = {
                 })
             },
             {
-                test: /\.(eot|ttf|woff|woff2)$/,
+                test: /\.(eot|ttf|woff|woff2|svg|)$/,
                 use: [{
                     loader: 'file-loader',
                     options: {
@@ -93,7 +93,7 @@ module.exports = {
                             mozjpeg: {
                                 progressive: true,
                             },
-                            optipng: false, // disabled 
+                            optipng: true, 
                             pngquant: {
                                 floyd: 0.5,
                                 speed: 2

@@ -1,6 +1,5 @@
-'use strict';
 import _ from 'jquery';
-export function resizeContent(objDiv,objWrap,objWrapWidth,objWrapHeight) {
+export function resizeContent(obj,objWrap,objWrapWidth,objWrapHeight) {
 	let pageWidth, pageHeight;
 	
 		let basePage = {
@@ -16,8 +15,8 @@ export function resizeContent(objDiv,objWrap,objWrapWidth,objWrapHeight) {
 
 //using underscore to delay resize method till finished resizing window
 		function getPageSize() {
-			pageHeight = $(objDiv).height();
-			pageWidth = $(objDiv).width();
+			pageHeight = $(obj).height();
+			pageWidth = $(obj).width();
 		}
 
 		function scalePages(page, maxWidth, maxHeight) {

@@ -11514,7 +11514,7 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function resizeContent(objDiv, objWrap, objWrapWidth, objWrapHeight) {
+function resizeContent(obj, objWrap, objWrapWidth, objWrapHeight) {
 	var pageWidth = void 0,
 	    pageHeight = void 0;
 
@@ -11531,8 +11531,8 @@ function resizeContent(objDiv, objWrap, objWrapWidth, objWrapHeight) {
 
 	//using underscore to delay resize method till finished resizing window
 	function getPageSize() {
-		pageHeight = $(objDiv).height();
-		pageWidth = $(objDiv).width();
+		pageHeight = $(obj).height();
+		pageWidth = $(obj).width();
 	}
 
 	function scalePages(page, maxWidth, maxHeight) {
@@ -18391,7 +18391,6 @@ var _jsonAnimation = __webpack_require__(38);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-"use strict";
 var opacity = 0.55;
 var increment = 0.05;
 var pulse = setInterval(function () {
@@ -18414,16 +18413,6 @@ window.onload = setTimeout(function () {
     pulse = increment = opacity = null; /*garbage collection*/
     document.getElementsByClassName('footer')[0].style.display = 'flex';
     $('#loader').add('.entry-title').add('#loader:before').add('#loader:after').stop().css('display', 'none');
-    _amplitude2.default.init({
-        "songs": [{
-            "name": "Cantaloupe Island",
-            "artist": "Herbie Hancock",
-            "album": "Then&Now The Definitive Herbie",
-            "url": " https://yovchenko.github.io/music/smoothMusic.mp3"
-        }],
-        "volume_increment": 10,
-        "volume_decrement": 10
-    });
     if (document.images) {
         var img1 = new Image();
         var img2 = new Image();
@@ -36156,23 +36145,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Trianglify = __webpack_require__(69);
 
-/* music player buttons */
-var stop = document.getElementById('stopMusic');
-var play = document.getElementById('playMusic');
-var $volume = $('.volume');
-document.getElementsByClassName('svgIcons')[0].onclick = function () {
-	if (stop.style.display === 'none') {
-		stop.style.display = 'block';
-		play.style.display = 'none';
-		$volume.stop().fadeIn('slow');
-		_amplitude2.default.play();
-	} else {
-		stop.style.display = 'none';
-		play.style.display = 'block';
-		$volume.stop().fadeOut('slow');
-		_amplitude2.default.pause();
-	}
-};
 
 /* hamburger menu */
 var btnHamburger = document.getElementsByClassName('btn-hamburger')[0];
