@@ -20,8 +20,15 @@ let pulse = setInterval(function () {
         clearInterval(pulse);
     }
 }, 100);
+
+function PreloadImage (src) {
+    let img = new Image ();
+    img.onload = function () {delay()};
+}
+PreloadImage ("./images/me-large.png");
+
 /*I'm giving you some extra time to enjoy my preloader*/
-window.onload = setTimeout(function () {
+let delay = setTimeout(function () {
     main();
     anim.stop();
     resizeContent('#figure', '#wrapperCanvas', 800, 900);
@@ -45,4 +52,5 @@ window.onload = setTimeout(function () {
          img6.src = "./images/before.png";
          img7.src = "./images/after.png";
      }
-}, 2000);
+}, 1500);
+
