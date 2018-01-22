@@ -18402,14 +18402,7 @@ var pulse = setInterval(function () {
     }
 }, 100);
 
-function PreloadImage(src) {
-    var img = new Image();
-    img.onload = function () {
-        delay();
-    };
-}
-PreloadImage("./images/me-large.png");
-
+document.addEventListener('DOMContentLoaded', delay);
 /*I'm giving you some extra time to enjoy my preloader*/
 var delay = setTimeout(function () {
     (0, _canvasSphere2.default)();
@@ -18435,7 +18428,7 @@ var delay = setTimeout(function () {
         img6.src = "./images/before.png";
         img7.src = "./images/after.png";
     }
-}, 1500);
+}, 2000);
 
 /***/ }),
 /* 113 */

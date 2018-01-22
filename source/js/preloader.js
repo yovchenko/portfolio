@@ -21,12 +21,7 @@ let pulse = setInterval(function () {
     }
 }, 100);
 
-function PreloadImage (src) {
-    let img = new Image ();
-    img.onload = function () {delay()};
-}
-PreloadImage ("./images/me-large.png");
-
+document.addEventListener('DOMContentLoaded',delay);
 /*I'm giving you some extra time to enjoy my preloader*/
 let delay = setTimeout(function () {
     main();
@@ -52,5 +47,5 @@ let delay = setTimeout(function () {
          img6.src = "./images/before.png";
          img7.src = "./images/after.png";
      }
-}, 1500);
+}, 2000);
 
