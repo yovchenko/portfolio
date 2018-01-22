@@ -18403,13 +18403,14 @@ var pulse = setInterval(function () {
 }, 100);
 
 document.addEventListener('DOMContentLoaded', delay);
+
 /*I'm giving you some extra time to enjoy my preloader*/
 var delay = setTimeout(function () {
     (0, _canvasSphere2.default)();
     _jsonAnimation.anim.stop();
     (0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
     document.body.className = " loaded";
-    pulse = increment = opacity = null; /*garbage collection*/
+    pulse = increment = opacity = null; /*there is no place for the garbage collection*/
     document.getElementsByClassName('footer')[0].style.display = 'flex';
     $('#loader').add('.entry-title').add('#loader:before').add('#loader:after').stop().css('display', 'none');
     if (document.images) {

@@ -2305,7 +2305,8 @@ footer {
   position: absolute;
   margin: 5px;
   font-size: 1.4em;
-  right: 0; }
+  right: 0;
+  top: 65px; }
 
 .btn-hamburger {
   -webkit-box-sizing: border-box;
@@ -2448,6 +2449,7 @@ main {
   display: none;
   position: absolute;
   right: 0;
+  top: 65px;
   margin: 5px;
   width: 3em;
   height: 3em; }

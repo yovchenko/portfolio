@@ -21,14 +21,15 @@ let pulse = setInterval(function () {
     }
 }, 100);
 
-document.addEventListener('DOMContentLoaded',delay);
+document.addEventListener('DOMContentLoaded', delay);
+
 /*I'm giving you some extra time to enjoy my preloader*/
 let delay = setTimeout(function () {
     main();
     anim.stop();
     resizeContent('#figure', '#wrapperCanvas', 800, 900);
     document.body.className = " loaded";
-    pulse = increment = opacity = null; /*garbage collection*/
+    pulse = increment = opacity = null;         /*there is no place for the garbage collection*/
     document.getElementsByClassName('footer')[0].style.display = 'flex';
     $('#loader').add('.entry-title').add('#loader:before').add('#loader:after').stop().css('display', 'none');
     if (document.images) {
@@ -39,13 +40,13 @@ let delay = setTimeout(function () {
         let img5 = new Image();
         let img6 = new Image();
         let img7 = new Image();
-         img1.src = "./images/book-page-1.jpg";
-         img2.src = "./images/book-page-2.jpg";
-         img3.src = "./images/book-page-3.jpg";
-         img4.src = "./images/book-page-4.jpg";
-         img5.src = "./images/letter_bg.png";
-         img6.src = "./images/before.png";
-         img7.src = "./images/after.png";
-     }
+        img1.src = "./images/book-page-1.jpg";
+        img2.src = "./images/book-page-2.jpg";
+        img3.src = "./images/book-page-3.jpg";
+        img4.src = "./images/book-page-4.jpg";
+        img5.src = "./images/letter_bg.png";
+        img6.src = "./images/before.png";
+        img7.src = "./images/after.png";
+    }
 }, 2000);
 
