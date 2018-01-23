@@ -7138,7 +7138,6 @@ var _jquery2 = _interopRequireDefault(_jquery);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //scroll down, until you reach the main() function
-
 function Vector3(x, y, z) {
 	this.x = x;
 	this.y = y;
@@ -7254,23 +7253,24 @@ Matrix3.rotate = function (angle, x, y, z) {
 
 //This is what matters
 function main() {
-	var c = void 0,
-	    ctx = void 0;
-	var opacity = 1.0;
-	var points = [];
-	var flagText = true;
-	var flag = true;
-	var width = 110;
 	var innerText = ["NodeJS", "Webpack", "jQuery", "HTML5", "SCSS", "VBS", "SQL"];
+	var len = innerText.length;
 	var displayFPS = document.getElementsByClassName('fps')[0];
-	var arrText = 0;
-	var numOfPoints = 1;
-	var testCases = 1;
-	var counter = 0;
-	var color = [255, 255, 255];
-	var angle = new Vector3(0, 0, 0);
-	var requestID = void 0;
-	var angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
+	var c = void 0,
+	    ctx = void 0,
+	    fpsSpeed = void 0,
+	    increment = 0.01,
+	    points = [],
+	    flag = true,
+	    opacity = 0.05,
+	    width = 110,
+	    numOfPoints = 1,
+	    testCases = 1,
+	    counter = 0,
+	    idxText = 0,
+	    angle = new Vector3(0, 0, 0),
+	    requestID = void 0,
+	    angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
 	c = document.getElementById("canvas");
 	c.width = 295;
 	c.height = 295;
@@ -7386,8 +7386,6 @@ function main() {
 					points.pop(_buf[_currentHighest]);
 				}
 				var loopDown = setTimeout(function () {
-					var randomColor = void 0;
-					var colorNum = 0;
 					if (counter > 0) {
 						counter--;
 						flag = false;
@@ -7399,7 +7397,6 @@ function main() {
 					}
 				}, 1000);
 			} else {
-
 				clearTimeout(loopDots);
 			}
 		}, 1000);
@@ -7409,7 +7406,6 @@ function main() {
 		var lastLoop = new Date().getMilliseconds();
 		var count = 1;
 		var fps = 0;
-
 		return function () {
 			var currentLoop = new Date().getMilliseconds();
 			if (lastLoop > currentLoop) {
@@ -7426,7 +7422,8 @@ function main() {
 	function loop() {
 		render();
 		update();
-		displayFPS.innerHTML = countFPS() + ' fps';
+		fpsSpeed = countFPS();
+		displayFPS.innerHTML = fpsSpeed + ' fps';
 		requestID = window.requestAnimationFrame(loop);
 	}
 
@@ -7435,17 +7432,17 @@ function main() {
 	}
 
 	function render() {
-		var rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
-		var rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
-		var rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
-		var rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
-		var lengthArr = innerText.length;
+		var rotation1 = Matrix3.rotate(angle.x, 1, 0, 0),
+		    rotation2 = Matrix3.rotate(angle.y, 0, 1, 0),
+		    rotation3 = Matrix3.rotate(angle.z, 0, 0, 1),
+		    rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3)),
+		    lengthArr = innerText.length;
 		ctx.clearRect(35, 35, 225, 225);
 		ctx.font = "52px sketch";
 		ctx.textAlign = "center";
 		ctx.strokeStyle = "rgba(" + 245 + "," + 245 + "," + 245 + "," + opacity + ")";
 		ctx.textBaseline = "middle";
-		ctx.strokeText(innerText[arrText], canvas.width / 2, canvas.height / 2);
+		ctx.strokeText(innerText[idxText], canvas.width / 2, canvas.height / 2);
 		ctx.beginPath();
 		var _iteratorNormalCompletion3 = true;
 		var _didIteratorError3 = false;
@@ -7478,26 +7475,19 @@ function main() {
 
 		ctx.fill();
 
-		if (opacity > 0.005 && flagText == true) {
-			opacity -= 0.005;
-			if (opacity < 0.005 && arrText < lengthArr - 1) {
-				arrText++;
-				flagText = false;
-			} else if (opacity < 0.005 && arrText === lengthArr - 1) {
-				arrText = 0;
-			} else {
-				flagText = true;
+		opacity += increment;
+		if (opacity.toFixed(1) === '1.0' || opacity.toFixed(1) === '0.0') {
+			if (opacity.toFixed(1) === '0.0' && idxText !== len - 1) {
+				idxText++;
+			} else if (opacity.toFixed(1) === '0.0' && idxText === len - 1) {
+				idxText = 0;
 			}
-		} else if (opacity < 0.95 || opacity < 0.01 && flagText == false) {
-			opacity += 0.005;
-			flagText = false;
-		} else {
-			flagText = true;
+			increment = -increment;
 		}
 	}
 	loop();
 	letsDance();
-	$('.menu__about').add('.menu__work').add('.menu__contact').click(function (e) {
+	$(document.getElementsByClassName('menu__about')[0]).add(document.getElementsByClassName('menu__work')).add(document.getElementsByClassName('menu__contact')).click(function (e) {
 		cancelAnimationFrame(requestID);
 	});
 	document.getElementsByClassName('menu__home')[0].onclick = function (e) {

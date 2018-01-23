@@ -1,6 +1,5 @@
 import _ from 'jquery';
 //scroll down, until you reach the main() function
-
 function Vector3(x, y, z) {
 	this.x = x;
 	this.y = y;
@@ -117,22 +116,24 @@ Matrix3.rotate = function (angle, x, y, z) {
 
 //This is what matters
 export default function main() {
-	let c, ctx;
-	let opacity = 1.0;
-	let points = [];
-	let flagText = true;
-	let flag = true;
-	let width = 110;
 	const innerText = ["NodeJS", "Webpack", "jQuery", "HTML5", "SCSS", "VBS", "SQL"];
+	const len = innerText.length;
 	const displayFPS = document.getElementsByClassName('fps')[0];
-	let arrText = 0;
-	let numOfPoints = 1;
-	let testCases = 1;
-	let counter = 0;
-	let color = [255, 255, 255];
-	let angle = new Vector3(0, 0, 0);
-	let requestID;
-	let angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
+	let c, 
+	ctx,
+	fpsSpeed,
+	increment = 0.01,
+	points = [],
+	flag = true,
+	opacity = 0.05,
+	width = 110,
+	numOfPoints = 1,
+	testCases = 1,
+	counter = 0,
+	idxText = 0,
+	angle = new Vector3(0, 0, 0),
+	requestID,
+	angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
 	c = document.getElementById("canvas");
 	c.width = 295;
 	c.height = 295;
@@ -204,8 +205,6 @@ export default function main() {
 					points.pop(buf[currentHighest]);
 				}
 				let loopDown = setTimeout(function () {
-					let randomColor;
-					let colorNum = 0;
 					if (counter > 0) {
 						counter--;
 						flag = false;
@@ -218,7 +217,6 @@ export default function main() {
 
 				}, 1000);
 			} else {
-
 				clearTimeout(loopDots);
 			}
 
@@ -229,7 +227,6 @@ export default function main() {
 		let lastLoop = (new Date()).getMilliseconds();
 		let count = 1;
 		let fps = 0;
-	  
 		return function () {
 		  let currentLoop = (new Date()).getMilliseconds();
 		  if (lastLoop > currentLoop) {
@@ -246,7 +243,8 @@ export default function main() {
 	function loop() {
 		render();
 		update();
-		displayFPS.innerHTML = countFPS() + ' fps';
+		fpsSpeed = countFPS();
+		displayFPS.innerHTML = fpsSpeed + ' fps';
 		requestID = window.requestAnimationFrame(loop);
 	}
 
@@ -254,19 +252,18 @@ export default function main() {
 		angle.add(angleSpeed);
 	}
 
-
 	function render() {
-		let rotation1 = Matrix3.rotate(angle.x, 1, 0, 0);
-		let rotation2 = Matrix3.rotate(angle.y, 0, 1, 0);
-		let rotation3 = Matrix3.rotate(angle.z, 0, 0, 1);
-		let rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
-		let lengthArr = innerText.length;
+		let rotation1 = Matrix3.rotate(angle.x, 1, 0, 0),
+		rotation2 = Matrix3.rotate(angle.y, 0, 1, 0),
+		rotation3 = Matrix3.rotate(angle.z, 0, 0, 1),
+		rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3)),
+		lengthArr = innerText.length;
 		ctx.clearRect(35, 35, 225, 225);
 		ctx.font = "52px sketch";
 		ctx.textAlign = "center";
 		ctx.strokeStyle = "rgba(" + 245 + "," + 245 + "," + 245 + "," + opacity + ")";
 		ctx.textBaseline = "middle";
-		ctx.strokeText(innerText[arrText], canvas.width / 2, canvas.height / 2);
+		ctx.strokeText(innerText[idxText], canvas.width / 2, canvas.height / 2);
 		ctx.beginPath();
 		for (var p of points) {
 			p = rotation.multiplyVector(p);
@@ -276,27 +273,23 @@ export default function main() {
 			ctx.arc(x, y, 2, 0, 2 * Math.PI);
 		}
 		ctx.fill();
-
-		if (opacity > 0.005 && flagText == true) {
-			opacity -= 0.005;
-			if (opacity < 0.005 && arrText < lengthArr - 1) {
-				arrText++;
-				flagText = false;
-			} else if (opacity < 0.005 && arrText === lengthArr - 1) {
-				arrText = 0;
-			} else {
-				flagText = true;
+		
+		opacity += increment;
+		if (opacity.toFixed(1) === '1.0' || opacity.toFixed(1) === '0.0') {
+			if (opacity.toFixed(1) === '0.0' && idxText !== len - 1) {
+				idxText++;
 			}
-		} else if (opacity < 0.95 || (opacity < 0.01 && flagText == false)) {
-			opacity += 0.005;
-			flagText = false;
-		} else {
-			flagText = true;
+			else if (opacity.toFixed(1) === '0.0' && idxText === len - 1) {
+				idxText = 0;
+			}
+		increment = -increment;
 		}
+
 	}
 	loop();
 	letsDance();
-	$('.menu__about').add('.menu__work').add('.menu__contact').click(function (e) {
+	$(document.getElementsByClassName('menu__about')[0]).add(document.getElementsByClassName('menu__work'))
+	.add(document.getElementsByClassName('menu__contact')).click(function (e) {
 		cancelAnimationFrame(requestID);
 	});
 	document.getElementsByClassName('menu__home')[0].onclick = function (e) {

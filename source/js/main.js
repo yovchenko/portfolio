@@ -94,13 +94,13 @@ let page = {
 	about: false,
 	work: false,
 	contacts: false,
-	keyboard: false,	
+	keyboard: false,
 };
 
-Object.defineProperty(page , "elements", {  
+Object.defineProperty(page, "elements", {
 	value: {},
-    enumerable: false  
-}); 
+	enumerable: false
+});
 
 page.elements.fps = document.getElementsByClassName('fps')[0];
 page.elements.grid = document.getElementsByClassName('grid-container')[0];
@@ -123,8 +123,8 @@ function content(event) {
 	let $timerCurtain = setTimeout(function () {
 		if ($pageMain === 4) {
 			$(init).add(btnHamburger).add(page.elements.article).add(page.elements.logoOne)
-			.add(page.elements.logoTwo).add(page.elements.fps)
-			.add(page.elements.flipbook).add(page.elements.wrapperCanvas).stop().css('display', 'none');
+				.add(page.elements.logoTwo).add(page.elements.fps)
+				.add(page.elements.flipbook).add(page.elements.wrapperCanvas).stop().css('display', 'none');
 			$(page.elements.container).add($home).css('display', 'flex');
 			page.elements.touch.style.display = 'block';
 			anim.stop();
@@ -153,8 +153,8 @@ function content(event) {
 			}
 		} else if ($pageMain === 2) {
 			$(init).add(btnHamburger).add(page.elements.logoOne).add(page.elements.touch)
-			.add(page.elements.flipbook).add(page.elements.logoTwo)
-			.add(page.elements.wrapperCanvas).add(page.elements.fps).add(page.elements.container).stop().css('display', 'none');
+				.add(page.elements.flipbook).add(page.elements.logoTwo)
+				.add(page.elements.wrapperCanvas).add(page.elements.fps).add(page.elements.container).stop().css('display', 'none');
 			page.elements.article.style.display = 'grid';
 			$home.css('display', 'flex');
 			anim.play();
@@ -167,9 +167,9 @@ function content(event) {
 			}
 		} else {
 			$(page.elements.wrapperCanvas).add(btnHamburger).add(page.elements.logoOne)
-			.add(page.elements.logoTwo).add(page.elements.fps).css('display', 'grid');
+				.add(page.elements.logoTwo).add(page.elements.fps).css('display', 'grid');
 			$home.add(page.elements.article).add(page.elements.flipbook).add(page.elements.touch)
-			.add(page.elements.container).stop().css('display', 'none');
+				.add(page.elements.container).stop().css('display', 'none');
 			animateArrowToMenu();
 			btnHamburger.classList = 'btn-hamburger';
 			anim.stop();
@@ -333,9 +333,11 @@ function resizeScreenObj(event, keyHeight) {
 };
 
 /* the form is getting bigger when the on-screen keyboard opens */
-$(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focus(function () {
+$(document.getElementById('message')).add(document.getElementById('email'))
+.add(document.getElementById('name')).focus(function () {
 	document.getElementsByClassName('containerForm')[0].classList += ' scaleForm';
 });
-$(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focusout(function () {
+$(document.getElementById('message')).add(document.getElementById('email'))
+.add(document.getElementById('name')).focusout(function () {
 	document.getElementsByClassName('containerForm')[0].classList = 'containerForm';
 });
