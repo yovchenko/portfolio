@@ -3,17 +3,13 @@ import {
 	resizeContent
 } from './resize';
 let Trianglify = require('trianglify');
-import Amplitude from "amplitude";
 import {
 	anim
 } from './jsonAnimation.js';
 
-
 /* hamburger menu */
 const btnHamburger = document.getElementsByClassName('btn-hamburger')[0];
 const init = document.getElementById('menu__init');
-const menuToArrow = document.getElementById('menu-to-arrow');
-const arrowToMenu = document.getElementById('arrow-to-menu');
 const menuAbout = document.getElementsByClassName('menu__about')[0];
 const menuWork = document.getElementsByClassName('menu__work')[0];
 const menuContact = document.getElementsByClassName('menu__contact')[0];
@@ -28,14 +24,14 @@ btnHamburger.onclick = function () {
 }
 
 function animateMenuToArrow() {
-	menuToArrow.beginElement();
+	document.getElementById('menu-to-arrow').beginElement();
 	init.style.display = 'none';
 	$(menuAbout).add(menuWork).add(menuContact).css('display', 'flex');
 	headerText();
 }
 
 function animateArrowToMenu() {
-	arrowToMenu.beginElement();
+	document.getElementById('arrow-to-menu').beginElement();
 	$(menuAbout).add(menuWork).add(menuContact).css('display', 'none');
 	init.style.display = 'flex';
 }
@@ -92,37 +88,45 @@ $work.on('click', {
 $contact.on('click', {
 	case: 4
 }, content);
+
 let page = {
 	home: true,
 	about: false,
 	work: false,
 	contacts: false,
-	keyboard: false
+	keyboard: false,	
 };
 
-const grid = document.getElementsByClassName('grid-container')[0];
-const $flipbook = $('.book');
+Object.defineProperty(page , "elements", {  
+	value: {},
+    enumerable: false  
+}); 
+
+page.elements.fps = document.getElementsByClassName('fps')[0];
+page.elements.grid = document.getElementsByClassName('grid-container')[0];
+page.elements.flipbook = document.getElementsByClassName('book')[0];
+page.elements.wrapperCanvas = document.getElementsByClassName('canvas-box')[0];
+page.elements.article = document.getElementsByClassName('about')[0];
+page.elements.container = document.getElementsByClassName('containerForm')[0];
+page.elements.logoOne = document.getElementsByClassName('svg-logo-one')[0];
+page.elements.logoTwo = document.getElementsByClassName('svg-logo-two')[0];
+page.elements.touch = document.getElementsByClassName('touch')[0];
+
+const $curtainRight = $('#curtain-section-right');
+const $curtainLeft = $('#curtain-section-left');
 
 function content(event) {
-	const $wrapperCanvas = $('.canvas-box');
-	const $article = $('.about');
-	const $curtainRight = $('#curtain-section-right');
-	const $curtainLeft = $('#curtain-section-left');
-	const $container = $('.containerForm');
-	const $logoOne = $('.svg-logo-one');
-	const $logoTwo = $('.svg-logo-two');
-	const $fps = $('.fps');
-	const $touch = $('.touch');
 	$curtainRight.add($curtainLeft).css('width', '100%');
 	$curtainRight.stop().css('transform', 'translateX(50%)');
 	$curtainLeft.stop().css('transform', 'translateX(-50%)');
 	let $pageMain = event.data.case;
 	let $timerCurtain = setTimeout(function () {
 		if ($pageMain === 4) {
-			$(init).add(btnHamburger).add($article).add($logoOne).add($logoTwo).add($fps)
-				.add($flipbook).add($wrapperCanvas).stop().css('display', 'none');
-			$container.add($home).css('display', 'flex');
-			$touch.css('display', 'block');
+			$(init).add(btnHamburger).add(page.elements.article).add(page.elements.logoOne)
+			.add(page.elements.logoTwo).add(page.elements.fps)
+			.add(page.elements.flipbook).add(page.elements.wrapperCanvas).stop().css('display', 'none');
+			$(page.elements.container).add($home).css('display', 'flex');
+			page.elements.touch.style.display = 'block';
 			anim.stop();
 			resizeContent('.envelope', '#wrap', 530, 630);
 			for (let key in page) {
@@ -134,10 +138,10 @@ function content(event) {
 			}
 			anim.stop();
 		} else if ($pageMain === 3) {
-			$(init).add(btnHamburger).add($logoOne).add($logoTwo).add($wrapperCanvas)
-				.add($fps).add($article).add($container).stop().css('display', 'none');
+			$(init).add(btnHamburger).add(page.elements.logoOne).add(page.elements.logoTwo).add(page.elements.wrapperCanvas)
+				.add(page.elements.fps).add(page.elements.article).add(page.elements.container).stop().css('display', 'none');
 			$home.css('display', 'flex');
-			$($flipbook).add($touch).css('display', 'block');
+			$(page.elements.flipbook).add(page.elements.touch).css('display', 'block');
 			anim.stop();
 			resizeContent('.bookWrap', '#flipbook', 960, 600);
 			for (let key in page) {
@@ -148,9 +152,10 @@ function content(event) {
 				}
 			}
 		} else if ($pageMain === 2) {
-			$(init).add(btnHamburger).add($logoOne).add($touch).add($flipbook).add($logoTwo)
-				.add($wrapperCanvas).add($fps).add($container).stop().css('display', 'none');
-			$article.css('display', 'grid');
+			$(init).add(btnHamburger).add(page.elements.logoOne).add(page.elements.touch)
+			.add(page.elements.flipbook).add(page.elements.logoTwo)
+			.add(page.elements.wrapperCanvas).add(page.elements.fps).add(page.elements.container).stop().css('display', 'none');
+			page.elements.article.style.display = 'grid';
 			$home.css('display', 'flex');
 			anim.play();
 			for (let key in page) {
@@ -161,8 +166,10 @@ function content(event) {
 				}
 			}
 		} else {
-			($wrapperCanvas).add(btnHamburger).add($logoOne).add($logoTwo).add($fps).css('display', 'grid');
-			$home.add($article).add($flipbook).add($touch).add($container).stop().css('display', 'none');
+			$(page.elements.wrapperCanvas).add(btnHamburger).add(page.elements.logoOne)
+			.add(page.elements.logoTwo).add(page.elements.fps).css('display', 'grid');
+			$home.add(page.elements.article).add(page.elements.flipbook).add(page.elements.touch)
+			.add(page.elements.container).stop().css('display', 'none');
 			animateArrowToMenu();
 			btnHamburger.classList = 'btn-hamburger';
 			anim.stop();
@@ -254,13 +261,13 @@ function detectKeyboard() {
 };
 
 function keyboardShift(keyboardHeight) {
-	grid.style.cssText = 'grid-template-rows:65px calc(100vh + ' + keyboardHeight + 'px) auto;';
+	page.elements.grid.style.cssText = 'grid-template-rows:65px calc(100vh + ' + keyboardHeight + 'px) auto;';
 	page.keyboard = true;
 	resizeScreenObj(event, keyboardHeight);
 };
 
 function removeKeyboardShift() {
-	grid.style.cssText = 'grid-template-rows:65px calc(100vh - 65px) auto;';
+	page.elements.grid.style.cssText = 'grid-template-rows:65px calc(100vh - 65px) auto;';
 	page.keyboard = false;
 	resizeScreenObj(event, 0);
 };
@@ -325,3 +332,10 @@ function resizeScreenObj(event, keyHeight) {
 	}, 122);
 };
 
+/* the form is getting bigger when the on-screen keyboard opens */
+$(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focus(function () {
+	document.getElementsByClassName('containerForm')[0].classList += ' scaleForm';
+});
+$(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focusout(function () {
+	document.getElementsByClassName('containerForm')[0].classList = 'containerForm';
+});

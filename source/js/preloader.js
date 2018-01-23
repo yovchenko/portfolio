@@ -1,4 +1,3 @@
-import Amplitude from "amplitude";
 import main from './canvasSphere.js';
 import {
     resizeContent
@@ -31,7 +30,7 @@ let delay = setTimeout(function () {
     document.body.className = " loaded";
     pulse = increment = opacity = null;         /*there is no place for the garbage collection*/
     document.getElementsByClassName('footer')[0].style.display = 'flex';
-    $('#loader').add('.entry-title').add('#loader:before').add('#loader:after').stop().css('display', 'none');
+    $(document.getElementById('loader')).add(document.getElementsByClassName('entry-title')[0]).add('#loader:before').add('#loader:after').stop().css('display', 'none');
     if (document.images) {
         let img1 = new Image();
         let img2 = new Image();

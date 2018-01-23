@@ -1,6 +1,4 @@
 import _ from 'jquery';
-//I concatenated the Math classes with the original game file
-//so the example can run, this part is irrelevant, please, 
 //scroll down, until you reach the main() function
 
 function Vector3(x, y, z) {

@@ -1,4 +1,3 @@
-'use strict';
 import _ from 'jquery-validation';
 jQuery.extend(jQuery.validator.messages, {
     required: "This field is required.",
