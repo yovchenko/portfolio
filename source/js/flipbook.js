@@ -76,7 +76,7 @@
                 book.turn('center');
             },
             start: function (e, pageObj) {
-                moveBar(slider);
+                moveBar(pageObj.next);
             },
             end: function (e, pageObj) {
                 var book = $(this);
@@ -84,7 +84,6 @@
                 setTimeout(function () {
                       slider.value = getViewNumber(book);
                 }, 1);
-                moveBar(slider);
             },
 
             missing: function (e, pages) {
@@ -102,8 +101,10 @@ function updateDepth(book, newPage) {
 
 }
 
-function moveBar(el) {
- 
+function moveBar(pageNum) {
+   var scaleBook =  document.getElementsByClassName('align')[0];
+   if(pageNum === 1 || pageNum === 6) scaleBook.classList.add('resized');
+   else  scaleBook.classList.remove('resized');
 }
 
 function getViewNumber(book, page) {

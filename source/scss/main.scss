@@ -352,6 +352,10 @@ article {
 
 .align {
     position: relative;
+    -webkit-transition: all 0.3s linear;
+    /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+    transition: all 0.3s linear;
+    /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
 }
 
 .sj-book {
@@ -1384,5 +1388,8 @@ footer .wrapper {
     }
     .svg-logo-two>div:nth-child(3) {
         width: 85%;
+    }
+    .align.resized {
+        transform: scale(1.2);
     }
 }
