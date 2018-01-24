@@ -1,21 +1,10 @@
 (function loadApp() {
     var flipbook = $('.sj-book');
-    var bookSlider = $('#slider');
-    bookSlider.slider({
-        orientation: "horizontal",
-        min: 1,
-        max: 4,
-        value: 1,
-        animate: "slow",
-        range: false,
-        create: function (event, ui) {
+    var slider = document.getElementById('js-slider');
 
-        },
-        slide: function (event, ui) {
-            updateHandleValues(ui, flipbook);
-        //    return updateHandlePos(event.target, ui.value);
-        },
-    });
+    slider.oninput = function() {
+        updateHandleValues(this.value, flipbook);
+    }
 
     Hash.on('^page\/([0-9]*)$', {
         yep: function (path, parts) {
@@ -29,20 +18,6 @@
         nop: function (path) {
             if ($('.sj-book').turn('is'))
                 $('.sj-book').turn('page', 1);
-        }
-    });
-
-    // Arrows
-    $(document).keydown(function (e) {
-        var previous = 37,
-            next = 39;
-        switch (e.keyCode) {
-            case previous:
-                $('.sj-book').turn('previous');
-                break;
-            case next:
-                $('.sj-book').turn('next');
-                break;
         }
     });
 
@@ -96,20 +71,20 @@
 
             turned: function (e, page, view) {
                 var book = $(this);
-                $("#slider").slider('value', getViewNumber(book, page));
+                slider.value = getViewNumber(book, page);
                 updateDepth(book);
                 book.turn('center');
             },
             start: function (e, pageObj) {
-                moveBar(true);
+                moveBar(slider);
             },
             end: function (e, pageObj) {
                 var book = $(this);
                 updateDepth(book);
                 setTimeout(function () {
-                    $('#slider').slider('value', getViewNumber(book));
+                      slider.value = getViewNumber(book);
                 }, 1);
-                moveBar(false);
+                moveBar(slider);
             },
 
             missing: function (e, pages) {
@@ -123,27 +98,12 @@
     flipbook.addClass('animated');
 })();
 
-/* function updateHandlePos(slider, handlePos) {
-    console.log(handlePos)
-    let handleOffset = -2;
-    $(slider).find('.ui-slider-handle').css("margin-left", handleOffset);
-    if (handlePos === 2) {
-        $(slider).find('.ui-slider-handle').css("margin-left", handleOffset - 5);
-    } else if (handlePos === 3) {
-        $(slider).find('.ui-slider-handle').css("margin-left", handleOffset - 10);
-    } else if (handlePos === 4) {
-        $(slider).find('.ui-slider-handle').css("margin-left", handleOffset - 15);
-    }
-};
-*/
 function updateDepth(book, newPage) {
 
 }
 
-function moveBar(yes) {
-       $('#slider .ui-slider-handle').css({
-          zIndex: yes ? -1 : 10000
-    });
+function moveBar(el) {
+ 
 }
 
 function getViewNumber(book, page) {
@@ -154,22 +114,24 @@ function numberOfViews(book) {
     return book.turn('pages') / 2 + 1;
 }
 
-function updateHandleValues(ui, flipbook) {
+function updateHandleValues(sliderValue, flipbook) {
     let pageNum = getViewNumber(flipbook);
-    if (pageNum > ui.value) {
-        while (pageNum != ui.value) {
+    if (pageNum > sliderValue) {
+        while (pageNum != sliderValue) {
             flipbook.turn('previous');
             pageNum--;
         }
-    } else if (pageNum < ui.value) {
-        while (pageNum != ui.value) {
+    } else if (pageNum < sliderValue) {
+        while (pageNum != sliderValue) {
             flipbook.turn('next');
             pageNum++;
         }
     }
 }
 
-function loadPage(page) {}
+function loadPage(page) {
+
+}
 
 function addPage(page, book) {
     var id, pages = book.turn('pages');

@@ -7258,7 +7258,6 @@ function main() {
 	var displayFPS = document.getElementsByClassName('fps')[0];
 	var c = void 0,
 	    ctx = void 0,
-	    fpsSpeed = void 0,
 	    increment = 0.01,
 	    points = [],
 	    flag = true,
@@ -7423,8 +7422,7 @@ function main() {
 	function loop() {
 		render();
 		update();
-		fpsSpeed = countFPS();
-		displayFPS.innerHTML = fpsSpeed + ' fps';
+		displayFPS.innerHTML = countFPS() + ' fps';
 		requestID = window.requestAnimationFrame(loop);
 	}
 
@@ -30435,14 +30433,12 @@ function content(event) {
 			_jsonAnimation.anim.stop();
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 			for (var key in page) {
-				console.log(page[key]);
 				if (key !== 'contacts') {
 					//page contacts
 					page[key] = false;
 				} else {
 					page[key] = true;
 				}
-				console.log(page[key]);
 			}
 			_jsonAnimation.anim.stop();
 		} else if ($pageMain === 3) {

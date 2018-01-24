@@ -1,7 +1,6 @@
 @import "variables";
 @import "mixins";
 @import "textAnimation";
-@import "jquery-ui";
 @import "slider";
 @include font-face('sketch','../fonts/CabinSketch-Bold',normal, 500);
 @include font-face('Italianno, cursive','../fonts/Italianno-Regular', normal, 400);
@@ -327,11 +326,6 @@ article {
     grid-column: 1 / 4;
     grid-row: 1 / 4;
     transition: 1s ease-in-out;
-}
-
-.turnjs-slider {
-    position: relative;
-    top: 110%;
 }
 
 .bookWrap {
@@ -736,7 +730,8 @@ textarea {
 textarea:focus,
 input[type=text]:focus,
 input[type=email]:focus {
-    background: rgba(255, 255, 255, .35);
+    background: #fff;
+    color: #000;
 }
 
 #form_wrap input[type=submit] {
@@ -806,7 +801,7 @@ footer .wrapper {
 
 .font-preload {
     font-family: 'Italianno, cursive';
-    height: 0;
+    font-size: 0;
 }
 
 #loader-wrapper {

@@ -130,13 +130,11 @@ function content(event) {
 			anim.stop();
 			resizeContent('.envelope', '#wrap', 530, 630);
 			for (let key in page) {
-				console.log(page[key])
 				if (key !== 'contacts') { //page contacts
 					page[key] = false;
 				} else {
 					page[key] = true;
 				}
-				console.log(page[key])
 			}
 			anim.stop();
 		} else if ($pageMain === 3) {

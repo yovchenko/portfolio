@@ -121,7 +121,6 @@ export default function main() {
 	const displayFPS = document.getElementsByClassName('fps')[0];
 	let c, 
 	ctx,
-	fpsSpeed,
 	increment = 0.01,
 	points = [],
 	flag = true,
@@ -244,8 +243,7 @@ export default function main() {
 	function loop() {
 		render();
 		update();
-		fpsSpeed = countFPS();
-		displayFPS.innerHTML = fpsSpeed + ' fps';
+		displayFPS.innerHTML = countFPS() + ' fps';
 		requestID = window.requestAnimationFrame(loop);
 	}
 
