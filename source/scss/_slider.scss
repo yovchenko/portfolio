@@ -44,4 +44,8 @@
 	}
 }
   
-
+@media all and (min-aspect-ratio: 19/21) {
+	.slider {
+	top: 110%;
+	}
+}

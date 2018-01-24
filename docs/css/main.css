@@ -639,6 +639,10 @@ template {
   .slider {
     width: 100%; } }
 
+@media all and (min-aspect-ratio: 19 / 21) {
+  .slider {
+    top: 110%; } }
+
 @font-face {
   font-family: "sketch";
   font-style: 500;
