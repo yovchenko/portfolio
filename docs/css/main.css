@@ -1332,6 +1332,9 @@ label {
   position: relative;
   top: -2px; }
 
+#contactForm .error {
+  border-color: red; }
+
 #name-error,
 #email-error {
   color: red;
@@ -1348,6 +1351,7 @@ textarea {
   font: 14px normal normal uppercase helvetica, arial, serif;
   color: #7c7873;
   background: none;
+  outline: none;
   width: 100%;
   min-height: 28px;
   max-height: 56px;
@@ -1371,6 +1375,7 @@ input[type=email]:focus {
   color: #000; }
 
 #form_wrap input[type=submit] {
+  outline: none;
   position: absolute;
   font-size: 3.4em;
   font-family: 'Italianno, cursive';
