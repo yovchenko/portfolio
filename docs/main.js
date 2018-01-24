@@ -35387,16 +35387,13 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 if (page < book.turn('pages')) $('.sj-book .p5').addClass('fixed');else $('.sj-book .p5').removeClass('fixed');
 
                 Hash.go('page/' + page).update();
+                moveBar(page);
             },
-
             turned: function turned(e, page, view) {
                 var book = $(this);
                 slider.value = getViewNumber(book, page);
                 updateDepth(book);
                 book.turn('center');
-            },
-            start: function start(e, pageObj) {
-                moveBar(pageObj.next);
             },
             end: function end(e, pageObj) {
                 var book = $(this);

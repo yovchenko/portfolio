@@ -66,17 +66,13 @@
                     $('.sj-book .p5').removeClass('fixed');
 
                 Hash.go('page/' + page).update();
-
+                moveBar(page);
             },
-
             turned: function (e, page, view) {
                 var book = $(this);
                 slider.value = getViewNumber(book, page);
                 updateDepth(book);
                 book.turn('center');
-            },
-            start: function (e, pageObj) {
-                moveBar(pageObj.next);
             },
             end: function (e, pageObj) {
                 var book = $(this);
