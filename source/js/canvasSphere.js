@@ -126,6 +126,7 @@ export default function main() {
 	points = [],
 	flag = true,
 	opacity = 0.05,
+	str = '',
 	width = 110,
 	numOfPoints = 1,
 	testCases = 1,
@@ -261,7 +262,7 @@ export default function main() {
 		ctx.clearRect(35, 35, 225, 225);
 		ctx.font = "52px sketch";
 		ctx.textAlign = "center";
-		ctx.strokeStyle = "rgba(" + 245 + "," + 245 + "," + 245 + "," + opacity + ")";
+		ctx.strokeStyle = "rgba(" + 245 + "," + 245 + "," + 245 + "," + opacity.toFixed(3) + ")";
 		ctx.textBaseline = "middle";
 		ctx.strokeText(innerText[idxText], canvas.width / 2, canvas.height / 2);
 		ctx.beginPath();
@@ -275,11 +276,12 @@ export default function main() {
 		ctx.fill();
 		
 		opacity += increment;
-		if (opacity.toFixed(1) === '1.0' || opacity.toFixed(1) === '0.0') {
-			if (opacity.toFixed(1) === '0.0' && idxText !== len - 1) {
+		str = opacity.toFixed(1);
+		if (str === '1.0' || str === '0.0') {
+			if (str === '0.0' && idxText !== len - 1) {
 				idxText++;
 			}
-			else if (opacity.toFixed(1) === '0.0' && idxText === len - 1) {
+			else if (str === '0.0' && idxText === len - 1) {
 				idxText = 0;
 			}
 		increment = -increment;

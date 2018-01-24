@@ -7263,6 +7263,7 @@ function main() {
 	    points = [],
 	    flag = true,
 	    opacity = 0.05,
+	    str = '',
 	    width = 110,
 	    numOfPoints = 1,
 	    testCases = 1,
@@ -7440,7 +7441,7 @@ function main() {
 		ctx.clearRect(35, 35, 225, 225);
 		ctx.font = "52px sketch";
 		ctx.textAlign = "center";
-		ctx.strokeStyle = "rgba(" + 245 + "," + 245 + "," + 245 + "," + opacity + ")";
+		ctx.strokeStyle = "rgba(" + 245 + "," + 245 + "," + 245 + "," + opacity.toFixed(3) + ")";
 		ctx.textBaseline = "middle";
 		ctx.strokeText(innerText[idxText], canvas.width / 2, canvas.height / 2);
 		ctx.beginPath();
@@ -7476,10 +7477,11 @@ function main() {
 		ctx.fill();
 
 		opacity += increment;
-		if (opacity.toFixed(1) === '1.0' || opacity.toFixed(1) === '0.0') {
-			if (opacity.toFixed(1) === '0.0' && idxText !== len - 1) {
+		str = opacity.toFixed(1);
+		if (str === '1.0' || str === '0.0') {
+			if (str === '0.0' && idxText !== len - 1) {
 				idxText++;
-			} else if (opacity.toFixed(1) === '0.0' && idxText === len - 1) {
+			} else if (str === '0.0' && idxText === len - 1) {
 				idxText = 0;
 			}
 			increment = -increment;
@@ -30404,7 +30406,7 @@ var page = {
 
 Object.defineProperty(page, "elements", {
 	value: {},
-	enumerable: false
+	configurable: true
 });
 
 page.elements.fps = document.getElementsByClassName('fps')[0];
@@ -30433,12 +30435,14 @@ function content(event) {
 			_jsonAnimation.anim.stop();
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 			for (var key in page) {
+				console.log(page[key]);
 				if (key !== 'contacts') {
 					//page contacts
 					page[key] = false;
 				} else {
 					page[key] = true;
 				}
+				console.log(page[key]);
 			}
 			_jsonAnimation.anim.stop();
 		} else if ($pageMain === 3) {
