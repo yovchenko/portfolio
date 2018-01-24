@@ -35396,7 +35396,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 book.turn('center');
             },
             start: function start(e, pageObj) {
-                moveBar(slider);
+                moveBar(pageObj.next);
             },
             end: function end(e, pageObj) {
                 var book = $(this);
@@ -35404,7 +35404,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 setTimeout(function () {
                     slider.value = getViewNumber(book);
                 }, 1);
-                moveBar(slider);
             },
 
             missing: function missing(e, pages) {
@@ -35420,7 +35419,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 function updateDepth(book, newPage) {}
 
-function moveBar(el) {}
+function moveBar(pageNum) {
+    var scaleBook = document.getElementsByClassName('align')[0];
+    if (pageNum === 1 || pageNum === 6) scaleBook.classList.add('resized');else scaleBook.classList.remove('resized');
+}
 
 function getViewNumber(book, page) {
     return parseInt(book.turn('page') / 2 + 1, 10);
