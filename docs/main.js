@@ -30333,15 +30333,21 @@ function EventHandler(e) {
 	}
 }
 
+var menuArrow = document.getElementById('menu-to-arrow');
 function animateMenuToArrow() {
-	document.getElementById('menu-to-arrow').beginElement();
+	console.log(menuArrow);
+	if ('beginElement' in item) {
+		menuArrow.beginElement();
+	}
 	init.style.display = 'none';
 	$(menuAbout).add(menuWork).add(menuContact).css('display', 'flex');
 	headerText();
 }
 
 function animateArrowToMenu() {
-	document.getElementById('arrow-to-menu').beginElement();
+	if ('beginElement' in item) {
+		menuArrow.beginElement();
+	}
 	$(menuAbout).add(menuWork).add(menuContact).css('display', 'none');
 	init.style.display = 'flex';
 }

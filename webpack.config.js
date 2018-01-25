@@ -3,6 +3,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const modernizr = require('modernizr');
 const PATHS = {
     source: path.join(__dirname, 'source'),
     docs: path.join(__dirname, 'docs')
@@ -33,6 +34,22 @@ module.exports = {
                     }
                 }]
             },
+            {
+                loader: 'webpack-modernizr-loader',
+                options: {
+                    // Full list of supported options can be found in [config-all.json](https://github.com/Modernizr/Modernizr/blob/master/lib/config-all.json).
+                    options: [
+                        "setClasses"
+                    ],
+                    "feature-detects": [
+                        "test/css/flexbox",
+                        "test/es6/promises",
+                        "test/serviceworker"
+                    ]
+                },
+                test: /empty-alias-file\.js$/
+            },
+
             {
                 test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
@@ -93,7 +110,7 @@ module.exports = {
                             mozjpeg: {
                                 progressive: true,
                             },
-                            optipng: true, 
+                            optipng: true,
                             pngquant: {
                                 floyd: 0.5,
                                 speed: 2
@@ -136,6 +153,7 @@ module.exports = {
     resolve: {
         alias: {
             jquery: "jquery/src/jquery",
+            modernizr$: path.resolve(__dirname, "/path/to/empty-alias-file.js"),
             validation: "jquery-validation/dist/jquery.validation",
             amplitude: "amplitudejs/dist/amplitude",
             normalize: "node-normalize-scss/_normalize.scss",
