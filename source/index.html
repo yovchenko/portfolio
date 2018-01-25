@@ -29,16 +29,16 @@
               <defs>
                 <filter id="drop-shadow">
                   <!--outside-stroke-->
-                  <feFlood flood-color="rgb(255,255,255)" flood-opacity="1" result="outside-color" />
-                  <feMorphology in="SourceAlpha" operator="dilate" radius="1" />
-                  <feComposite in="outside-color" operator="in" result="outside-stroke" />
+                  <feFlood flood-color="rgb(255,255,255)" flood-opacity="1" result="outside-color"></feFlood>
+                  <feMorphology in="SourceAlpha" operator="dilate" radius="1"></feMorphology>
+                  <feComposite in="outside-color" operator="in" result="outside-stroke"></feComposite>
                   <!--fill-area-->
-                  <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1" />
-                  <feComposite in="SourceGraphic" operator="in" result="fill-area" />
+                  <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"></feMorphology>
+                  <feComposite in="SourceGraphic" operator="in" result="fill-area"></feComposite>
                   <!--merge graphics-->
                   <feMerge>
-                    <feMergeNode in="outside-stroke" />
-                    <feMergeNode in="fill-area" />
+                    <feMergeNode in="outside-stroke"></feMergeNode>
+                    <feMergeNode in="fill-area"></feMergeNode>
                   </feMerge>
                 </filter>
               </defs>
@@ -396,16 +396,16 @@
                 <defs>
                   <filter id="icon-shadow">
                     <!--outside-stroke-->
-                    <feFlood flood-color="rgb(255,255,255)" flood-opacity="1" result="outside-color" />
-                    <feMorphology in="SourceAlpha" operator="dilate" radius="1" />
-                    <feComposite in="outside-color" operator="in" result="outside-stroke" />
+                    <feFlood flood-color="rgb(255,255,255)" flood-opacity="1" result="outside-color"></feFlood>
+                    <feMorphology in="SourceAlpha" operator="dilate" radius="1"> </feMorphology>
+                    <feComposite in="outside-color" operator="in" result="outside-stroke"></feComposite>
                     <!--fill-area-->
-                    <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1" />
-                    <feComposite in="SourceGraphic" operator="in" result="fill-area" />
+                    <feMorphology in="SourceAlpha" result="dilated" operator="dilate" radius="1"></feMorphology>
+                    <feComposite in="SourceGraphic" operator="in" result="fill-area"></feComposite>
                     <!--merge graphics-->
                     <feMerge>
-                      <feMergeNode in="outside-stroke" />
-                      <feMergeNode in="fill-area" />
+                      <feMergeNode in="outside-stroke"></feMergeNode>
+                      <feMergeNode in="fill-area"></feMergeNode>
                     </feMerge>
                   </filter>
                 </defs>
