@@ -30316,7 +30316,8 @@ var init = document.getElementById('menu__init');
 var menuAbout = document.getElementsByClassName('menu__about')[0];
 var menuWork = document.getElementsByClassName('menu__work')[0];
 var menuContact = document.getElementsByClassName('menu__contact')[0];
-btnHamburger.onclick = function () {
+btnHamburger.onclick = showMenu;
+function showMenu() {
 	if (this.classList.value === 'btn-hamburger') {
 		this.classList += ' active';
 		animateMenuToArrow();
@@ -30324,7 +30325,7 @@ btnHamburger.onclick = function () {
 		this.classList = 'btn-hamburger';
 		animateArrowToMenu();
 	}
-};
+}
 
 function animateMenuToArrow() {
 	document.getElementById('menu-to-arrow').beginElement();

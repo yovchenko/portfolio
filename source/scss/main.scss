@@ -271,10 +271,26 @@ figure {
     width: 100%;
 }
 
+.canvas-box .svg-logo-two>div:nth-child(2) {
+   top: -100px;
+}
+
 .svg-logo-two>div:nth-child(2)>svg {
     width: 160%;
     position: relative;
-    left: -60%;
+    left: -30%;
+    margin-top: 35%;
+}
+
+.svg-logo-one>div:nth-child(2)>svg {
+    position: relative;
+    width: 120%;
+    right: 10%;
+}
+
+.svg-logo-one>div:nth-child(3)>svg {
+    position: relative;
+    width: 88.4%;
 }
 
 .about {
@@ -1339,11 +1355,11 @@ footer .wrapper {
     .svg-logo-one {
         grid-row: 1;
         grid-column: 1 / 4;
-        justify-items: end;
         height: 30%;
         width: 100%;
         margin-top: 10px;
         position: relative;
+        justify-content: center;
         grid-template-rows: 1fr;
         grid-template-columns: 15% 15% 15%;
         grid-gap: 25%;
@@ -1352,38 +1368,26 @@ footer .wrapper {
     .svg-logo-two {
         grid-row: 3;
         grid-column: 1 / 4;
-        justify-self: end;
-        justify-items: end;
         margin-bottom: 10px;
         width: 100%;
         position: relative;
+        justify-content: center;
         grid-template-columns: 15% 15% 15%;
         grid-template-rows: 1fr;
         grid-gap: 25%;
         align-items: end;
         align-self: end;
     }
-    .svg-logo-one>div:nth-child(1) {
-        width: 79.61%;
-    }
     .svg-logo-one>div:nth-child(2) {
-        width: 130%;
-        position: relative;
-        left: 1%;
+        right: 0%;
+        width: 104%;
     }
-    .svg-logo-one>div:nth-child(3) {
-        width: 70.38%
-    }
-    .svg-logo-two>div:nth-child(1) {
-        width: 79.6%;
+    .svg-logo-one>div:nth-child(2)>svg {
+    margin-top: 25%;
     }
     .svg-logo-two>div:nth-child(2) {
-        width: 190%;
-        justify-self: center;
-        position: initial;
-    }
-    .svg-logo-two>div:nth-child(3) {
-        width: 79.6%;
+        right: 0%;
+        width: 101%;
     }
     .align.resized {
         transform: scale(1.2);

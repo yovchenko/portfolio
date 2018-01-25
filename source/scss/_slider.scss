@@ -33,11 +33,20 @@
 			outline: none;
 			cursor: pointer;
 			box-shadow: 0px 0px 1px 5px $svg-color;
+			border: transparent;
 			border-radius: 50%;
 		}
 	}
 }
 
+input[type=range]::-moz-range-track {
+	background-color: transparent;
+  }
+
+  input[type=range]::-moz-focus-outer {
+    border: 0;
+  }
+	
 @media all and (max-width: 768px) {
 	.slider {
 		width: 100%;

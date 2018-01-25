@@ -633,7 +633,14 @@ template {
       outline: none;
       cursor: pointer;
       box-shadow: 0px 0px 1px 5px #2c3e50;
+      border: transparent;
       border-radius: 50%; }
+
+input[type=range]::-moz-range-track {
+  background-color: transparent; }
+
+input[type=range]::-moz-focus-outer {
+  border: 0; }
 
 @media all and (max-width: 768px) {
   .slider {
@@ -642,6 +649,73 @@ template {
 @media all and (min-aspect-ratio: 19 / 21) {
   .slider {
     top: 110%; } }
+
+progress[value] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  padding: 2px;
+  width: 100%;
+  height: 1.4em;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  position: relative; }
+
+.progress-bar {
+  background: transparent;
+  border-radius: 10px;
+  width: 100%;
+  height: 1.4em; }
+
+.svg-logo-one div .bar-before, .svg-logo-two div .bar-before {
+  font-size: 1.5em;
+  text-align: center;
+  margin: 5px 0px; }
+
+progress[value]::-webkit-progress-bar {
+  background: transparent;
+  border-radius: 10px; }
+
+progress[value]::-webkit-progress-value {
+  position: relative;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+  border-radius: 10px; }
+
+progress[value]::-moz-progress-bar {
+  position: relative;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+  border-radius: 10px; }
+
+.SVG::-webkit-progress-value,
+.html-5::-webkit-progress-value {
+  /* Gradient background with Stripes */
+  background-image: -webkit-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(left, #09c, #f44); }
+
+.webpack::-webkit-progress-value,
+.javascript::-webkit-progress-value {
+  /* Gradient background with Stripes */
+  background-image: -webkit-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(left, #09c, #ff0); }
+
+.jquery::-webkit-progress-value,
+.node-js::-webkit-progress-value {
+  /* Gradient background with Stripes */
+  background-image: -webkit-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(left, #f44, #14bd22); }
+
+.SVG::-moz-progress-bar,
+.html-5::-moz-progress-bar {
+  /* Gradient background with Stripes */
+  background-image: -moz-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -moz-linear-gradient(left, #09c, #f44); }
+
+.jquery::-moz-progress-bar,
+.node-js::-moz-progress-bar {
+  /* Gradient background with Stripes */
+  background-image: -moz-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -moz-linear-gradient(left, #f44, #14bd22); }
+
+.webpack::-moz-progress-bar,
+.javascript::-moz-progress-bar {
+  /* Gradient background with Stripes */
+  background-image: -moz-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -moz-linear-gradient(left, #09c, #ff0); }
 
 @font-face {
   font-family: "sketch";
@@ -950,6 +1024,7 @@ figure {
   grid-column: 3;
   -ms-grid-column-align: end;
       justify-self: end;
+  justify-items: right;
   width: 30%;
   display: -ms-grid;
   display: grid;
@@ -959,24 +1034,27 @@ figure {
       -ms-flex-align: center;
           align-items: center; }
 
-.svg-logo-one > div:nth-child(1) {
-  width: 80%; }
-
-.svg-logo-one > div:nth-child(3) {
-  width: 75%; }
-
-.svg-logo-two > div:nth-child(1) {
-  width: 77%; }
-
-.svg-logo-two > div:nth-child(2) {
-  width: 150%;
-  -ms-grid-column-align: center;
-      justify-self: center;
+.svg-logo-one div, .svg-logo-two div {
   position: relative;
-  left: -25%; }
+  width: 100%; }
 
-.svg-logo-two > div:nth-child(3) {
-  width: 85%; }
+.canvas-box .svg-logo-two > div:nth-child(2) {
+  top: -100px; }
+
+.svg-logo-two > div:nth-child(2) > svg {
+  width: 160%;
+  position: relative;
+  left: -30%;
+  margin-top: 35%; }
+
+.svg-logo-one > div:nth-child(2) > svg {
+  position: relative;
+  width: 120%;
+  right: 10%; }
+
+.svg-logo-one > div:nth-child(3) > svg {
+  position: relative;
+  width: 88.4%; }
 
 .about {
   display: none;
@@ -1876,11 +1954,13 @@ footer .wrapper {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-column: 1 / 4;
-    justify-items: end;
     height: 30%;
     width: 100%;
     margin-top: 10px;
     position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
     -ms-grid-columns: 15% 15% 15%;
@@ -1895,12 +1975,12 @@ footer .wrapper {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-column: 1 / 4;
-    -ms-grid-column-align: end;
-        justify-self: end;
-    justify-items: end;
     margin-bottom: 10px;
     width: 100%;
     position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-grid-columns: 15% 15% 15%;
         grid-template-columns: 15% 15% 15%;
     -ms-grid-rows: 1fr;
@@ -1912,21 +1992,14 @@ footer .wrapper {
     -ms-flex-item-align: end;
         -ms-grid-row-align: end;
         align-self: end; }
-  .svg-logo-one > div:nth-child(1) {
-    width: 80%; }
   .svg-logo-one > div:nth-child(2) {
-    width: 100%; }
-  .svg-logo-one > div:nth-child(3) {
-    width: 75%; }
-  .svg-logo-two > div:nth-child(1) {
-    width: 77%; }
+    right: 0%;
+    width: 104%; }
+  .svg-logo-one > div:nth-child(2) > svg {
+    margin-top: 25%; }
   .svg-logo-two > div:nth-child(2) {
-    width: 150%;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    position: initial; }
-  .svg-logo-two > div:nth-child(3) {
-    width: 85%; }
+    right: 0%;
+    width: 101%; }
   .align.resized {
     -webkit-transform: scale(1.2);
             transform: scale(1.2); } }

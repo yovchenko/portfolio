@@ -12,7 +12,8 @@ const init = document.getElementById('menu__init');
 const menuAbout = document.getElementsByClassName('menu__about')[0];
 const menuWork = document.getElementsByClassName('menu__work')[0];
 const menuContact = document.getElementsByClassName('menu__contact')[0];
-btnHamburger.onclick = function () {
+btnHamburger.onclick = showMenu;
+function showMenu() {
 	if (this.classList.value === 'btn-hamburger') {
 		this.classList += ' active';
 		animateMenuToArrow();
