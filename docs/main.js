@@ -30333,11 +30333,11 @@ function EventHandler(e) {
 	}
 }
 
-var menuArrow = document.getElementById('menu-to-arrow');
 function animateMenuToArrow() {
-	console.log(menuArrow);
-	if ('beginElement' in item) {
-		menuArrow.beginElement();
+	var menu = document.getElementById('menu-to-arrow');
+	console.log();
+	if ('beginElement' in menu) {
+		menu.beginElement();
 	}
 	init.style.display = 'none';
 	$(menuAbout).add(menuWork).add(menuContact).css('display', 'flex');
@@ -30345,8 +30345,9 @@ function animateMenuToArrow() {
 }
 
 function animateArrowToMenu() {
-	if ('beginElement' in item) {
-		menuArrow.beginElement();
+	var menu = document.getElementById('arrow-to-menu');
+	if ('beginElement' in menu) {
+		menu.beginElement();
 	}
 	$(menuAbout).add(menuWork).add(menuContact).css('display', 'none');
 	init.style.display = 'flex';
