@@ -33,7 +33,7 @@ function EventHandler(e) {
 var menuArrow = document.getElementById('menu-to-arrow');
 function animateMenuToArrow() {
 	console.log(menuArrow)
-	if ('beginElement' in item) {
+	if ('beginElement' in menuArrow) {
 	menuArrow.beginElement();
 	}
 	init.style.display = 'none';
@@ -42,7 +42,7 @@ function animateMenuToArrow() {
 }
 
 function animateArrowToMenu() {
-	if ('beginElement' in item) {
+	if ('beginElement' in menuArrow) {
 	menuArrow.beginElement();
 	}
 	$(menuAbout).add(menuWork).add(menuContact).css('display', 'none');
