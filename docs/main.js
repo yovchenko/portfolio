@@ -30316,13 +30316,19 @@ var init = document.getElementById('menu__init');
 var menuAbout = document.getElementsByClassName('menu__about')[0];
 var menuWork = document.getElementsByClassName('menu__work')[0];
 var menuContact = document.getElementsByClassName('menu__contact')[0];
-btnHamburger.onclick = showMenu;
-function showMenu() {
+
+AttachEvent(btnHamburger, "click", EventHandler);
+
+function AttachEvent(element, type, handler) {
+	if (element.addEventListener) element.addEventListener(type, handler, false);else element.attachEvent("on" + type, handler);
+}
+
+function EventHandler(e) {
 	if (this.classList.value === 'btn-hamburger') {
-		this.classList += ' active';
+		this.classList.add('active');
 		animateMenuToArrow();
 	} else {
-		this.classList = 'btn-hamburger';
+		this.classList.remove('active');
 		animateArrowToMenu();
 	}
 }
