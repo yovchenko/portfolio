@@ -718,10 +718,12 @@ progress[value]::-moz-progress-bar {
   background-image: -moz-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -moz-linear-gradient(left, #09c, #ff0); }
 
 @media all and (max-width: 767px) and (min-width: 577px) {
-  font-size: 1.4em; }
+  .bar-before {
+    font-size: 1.4em; } }
 
 @media all and (max-width: 576px) {
-  font-size: 1.3em; }
+  .bar-before {
+    font-size: 1.3em; } }
 
 @font-face {
   font-family: "sketch";
