@@ -741,6 +741,7 @@ header {
 .wrapper {
   margin: 0 auto;
   width: 90%;
+  height: 100%;
   max-width: 1600px; }
 
 footer {
@@ -755,8 +756,9 @@ footer {
   footer .footer-grid {
     display: -ms-grid;
     display: grid;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
@@ -793,34 +795,27 @@ footer {
   stroke-width: 25;
   display: block; }
 
-.navicon:hover > #path {
-  -webkit-filter: url(#drop-shadow);
-          filter: url(#drop-shadow); }
-
 /*header letters appearing*/
 .menu__header {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
+  height: 100%;
   position: relative;
-  grid-auto-rows: minmax(45px, 45px);
-  -ms-grid-columns: (auto-fit)[4];
-      grid-template-columns: repeat(4, auto-fit);
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin: 10px 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
   .menu__header .menu__about,
   .menu__header .menu__work,
   .menu__header .menu__contact {
+    display: none;
     cursor: pointer;
     font-family: "sketch", "Georgia", serif;
-    display: none;
     line-height: 61px;
-    -ms-grid-row: 1;
-    grid-row: 1;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.005)), to(rgba(75, 75, 75, 0.45)));
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
     margin: 0px 10px;
@@ -836,37 +831,23 @@ footer {
       .menu__header .menu__work,
       .menu__header .menu__contact {
         font-size: 50px; } }
-  .menu__header #menu__init {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    opacity: 0.85;
-    -ms-grid-row: 1;
-    grid-row: 1;
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 2;
-    grid-column: 2 / 4;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
+  .menu__header .menu__init {
+    display: block;
     text-align: center;
-    margin-left: 10px;
+    opacity: 0.85;
+    margin: 0 auto;
     font-size: 5.4vw; }
     @media (max-width: 370.37037px) {
-      .menu__header #menu__init {
+      .menu__header .menu__init {
         font-size: 20px; } }
     @media (min-width: 925.92593px) {
-      .menu__header #menu__init {
+      .menu__header .menu__init {
         font-size: 50px; } }
   .menu__header .menu__home {
     display: none;
     cursor: pointer;
     font-family: "sketch", "Georgia", serif;
     line-height: 61px;
-    -ms-grid-row: 1;
-    grid-row: 1;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.005)), to(rgba(75, 75, 75, 0.45)));
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
     margin: 0px 10px;
@@ -885,8 +866,8 @@ footer {
   .menu__header p[class] > span:first-child {
     padding-left: 10px; }
 
-.menu__header > p[class]:hover,
-.menu__header > p[class]:focus {
+.menu__header > p[class]:not(.menu__init):hover,
+.menu__header > p[class]:not(.menu__init):focus {
   text-shadow: -1px 0 rgba(255, 255, 255, 0.85), 0 1px rgba(255, 255, 255, 0.85), 1px 0 rgba(255, 255, 255, 0.85), 0 -1px rgba(255, 255, 255, 0.85);
   transform: scaleY(1.07);
   -webkit-transform: scaleY(1.07);

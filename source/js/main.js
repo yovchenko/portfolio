@@ -8,7 +8,7 @@ import {
 
 /* hamburger menu */
 const btnHamburger = document.getElementsByClassName('btn-hamburger')[0];
-const init = document.getElementById('menu__init');
+const init = document.getElementsByClassName('menu__init')[0];
 const menuAbout = document.getElementsByClassName('menu__about')[0];
 const menuWork = document.getElementsByClassName('menu__work')[0];
 const menuContact = document.getElementsByClassName('menu__contact')[0];
@@ -31,22 +31,15 @@ function EventHandler(e) {
 }
 
 function animateMenuToArrow() {
-	var menu = document.getElementById('menu-to-arrow');
-	if ('beginElement' in menu) {
-	menu.beginElement();
-	}
 	init.style.display = 'none';
 	$(menuAbout).add(menuWork).add(menuContact).css('display', 'flex');
+	
 	headerText();
 }
 
 function animateArrowToMenu() {
-	var menu = document.getElementById('arrow-to-menu');
-	if ('beginElement' in menu) {
-	menu.beginElement();
-	}
+	init.style.display = 'block';
 	$(menuAbout).add(menuWork).add(menuContact).css('display', 'none');
-	init.style.display = 'flex';
 }
 
 /*header text animation*/

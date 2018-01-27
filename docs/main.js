@@ -30312,7 +30312,7 @@ var Trianglify = __webpack_require__(68);
 
 /* hamburger menu */
 var btnHamburger = document.getElementsByClassName('btn-hamburger')[0];
-var init = document.getElementById('menu__init');
+var init = document.getElementsByClassName('menu__init')[0];
 var menuAbout = document.getElementsByClassName('menu__about')[0];
 var menuWork = document.getElementsByClassName('menu__work')[0];
 var menuContact = document.getElementsByClassName('menu__contact')[0];
@@ -30334,22 +30334,15 @@ function EventHandler(e) {
 }
 
 function animateMenuToArrow() {
-	var menu = document.getElementById('menu-to-arrow');
-	if ('beginElement' in menu) {
-		menu.beginElement();
-	}
 	init.style.display = 'none';
 	$(menuAbout).add(menuWork).add(menuContact).css('display', 'flex');
+
 	headerText();
 }
 
 function animateArrowToMenu() {
-	var menu = document.getElementById('arrow-to-menu');
-	if ('beginElement' in menu) {
-		menu.beginElement();
-	}
+	init.style.display = 'block';
 	$(menuAbout).add(menuWork).add(menuContact).css('display', 'none');
-	init.style.display = 'flex';
 }
 
 /*header text animation*/

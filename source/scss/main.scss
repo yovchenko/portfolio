@@ -42,6 +42,7 @@ header {
 .wrapper {
     margin: 0 auto;
     width: 90%;
+    height: 100%;
     max-width: 1600px;
 }
 
@@ -55,7 +56,7 @@ footer {
     box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6);
     .footer-grid {
         display: grid;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
     }
 }
@@ -93,44 +94,32 @@ footer {
     display: block;
 }
 
-.navicon:hover>#path {
-    filter: url(#drop-shadow);
-}
-
-
 /*header letters appearing*/
 
 .menu__header {
-    display: grid;
+    display: flex;
     width: 100%;
+    height: 100%;
     position: relative;
-    grid-auto-rows: minmax(45px, 45px);
-    grid-template-columns: repeat(4, auto-fit);
-    justify-content: space-around;
-    margin: 10px 0;
+    justify-content: space-between;
     align-items: center;
     .menu__about,
     .menu__work,
     .menu__contact {
+        display: none;
         cursor: pointer;
         font-family: "sketch", "Georgia", serif;
-        display: none;
         line-height: 61px;
-        grid-row: 1;
         background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
         margin: 0px 10px;
         border-radius: 5px;
         @include responsive-font(5.4vw, 20px, 50px);
     }
-    #menu__init {
-        display: flex;
-        opacity: 0.85;
-        grid-row: 1;
-        grid-column: 2 / 4;
-        align-content: center;
-        justify-content: start;
+    .menu__init {
+        display: block;
         text-align: center;
-        margin-left: 10px;
+        opacity: 0.85;
+        margin: 0 auto;
         @include responsive-font(5.4vw, 20px, 50px);
     }
     .menu__home {
@@ -138,7 +127,6 @@ footer {
         cursor: pointer;
         font-family: "sketch", "Georgia", serif;
         line-height: 61px;
-        grid-row: 1;
         background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
         margin: 0px 10px;
         border-radius: 5px;
@@ -155,8 +143,9 @@ footer {
     }
 }
 
-.menu__header>p[class]:hover,
-.menu__header>p[class]:focus {
+.menu__header>p[class]:not(.menu__init):hover,
+.menu__header>p[class]:not(.menu__init):focus,
+ {
     text-shadow: -1px 0 rgba(255, 255, 255, 0.85), 0 1px rgba(255, 255, 255, 0.85), 1px 0 rgba(255, 255, 255, 0.85), 0 -1px rgba(255, 255, 255, 0.85);
     transform: scaleY(1.07);
     -webkit-transform: scaleY(1.07);
@@ -166,7 +155,6 @@ footer {
     -o-transition: text-shadow .3s ease;
     transition: text-shadow .3s ease;
 }
-
 
 /*main section */
 
