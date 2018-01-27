@@ -32,7 +32,6 @@ function EventHandler(e) {
 
 function animateMenuToArrow() {
 	var menu = document.getElementById('menu-to-arrow');
-	console.log(menu)
 	if ('beginElement' in menu) {
 	menu.beginElement();
 	}

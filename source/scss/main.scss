@@ -794,9 +794,9 @@ footer .wrapper {
     padding: 6px;
 }
 
-.svgIcons:hover,
-.svgIcons:focus {
-    filter: url(#icon-shadow);
+.svgIcons svg:hover,
+.svgIcons svg:focus {
+    stroke:#fff;
     transform: scale(1.07);
     -webkit-transform: scale(1.07);
     -moz-transform: scale(1.07);
@@ -1281,13 +1281,15 @@ footer .wrapper {
     .scaleForm {
         transform: scale(1.1);
     }
-    .svgIcons:hover,
-    .svgIcons:focus {
-        filter: none;
+    .svgIcons svg:hover,
+    .svgIcons svg:focus {
+        stroke: none;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
     }
-    .svgIcons:active {
-        filter: url(#icon-shadow);
+    .svgIcons svg:active {
+        stroke:#fff;
         transform: scale(1.07);
         -webkit-transform: scale(1.07);
         -moz-transform: scale(1.07);
@@ -1329,13 +1331,15 @@ footer .wrapper {
     .scaleForm {
         transform: scale(1.1);
     }
-    .svgIcons:hover,
-    .svgIcons:focus {
-        filter: none;
+    .svgIcons svg:hover,
+    .svgIcons svg:focus {
+        stroke: none;
         transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
     }
-    .svgIcons:active {
-        filter: url(#icon-shadow);
+    .svgIcons svg:active {
+        stroke:#fff;
         transform: scale(1.07);
         -webkit-transform: scale(1.07);
         -moz-transform: scale(1.07);
