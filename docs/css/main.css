@@ -800,7 +800,8 @@ footer {
   margin: 5px;
   font-size: 1.4em;
   right: 0;
-  top: 65px; }
+  top: 65px;
+  z-index: 1; }
 
 .btn-hamburger {
   -webkit-box-sizing: border-box;
@@ -2000,7 +2001,7 @@ footer .wrapper {
         align-self: end; }
   .svg-logo-one > div:nth-child(2) {
     right: 0%;
-    width: 104%; }
+    width: 103%; }
   .svg-logo-one > div:nth-child(2) > svg {
     margin-top: 25%; }
   .svg-logo-two > div:nth-child(2) {
