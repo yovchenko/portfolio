@@ -137,7 +137,7 @@ function content(event) {
 					else page[key] = true;
 				}
 				break;
-			case 2:
+			case 1:
 				$(page.elements.wrapperCanvas).add(btnHamburger).add(page.elements.logoOne)
 					.add(page.elements.logoTwo).add(page.elements.fps).css('display', 'grid');
 				$home.add(page.elements.article).add(page.elements.flipbook).add(page.elements.touch)
@@ -266,11 +266,3 @@ function resizeScreenObj(event, keyHeight) {
 	}, 122);
 };
 
-$(document.getElementById('message')).add(document.getElementById('email'))
-	.add(document.getElementById('name')).focus(function () {
-		document.getElementsByClassName('containerForm')[0].classList.add('form-is--scaled');
-	});
-$(document.getElementById('message')).add(document.getElementById('email'))
-	.add(document.getElementById('name')).focusout(function () {
-		document.getElementsByClassName('containerForm')[0].classList.remove('form-is--scaled');
-	});

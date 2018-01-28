@@ -76,16 +76,16 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* global Symbol
 	__webpack_require__(1),
 	__webpack_require__(72),
 	__webpack_require__(21),
+	__webpack_require__(38),
 	__webpack_require__(39),
-	__webpack_require__(40),
 	__webpack_require__(22),
 	__webpack_require__(20),
 	__webpack_require__(73),
 	__webpack_require__(23),
-	__webpack_require__(41),
+	__webpack_require__(40),
 	__webpack_require__(74),
 	__webpack_require__(8),
-	__webpack_require__(42)
+	__webpack_require__(41)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( arr, document, getProto, slice, concat, push, indexOf,
 	class2type, toString, hasOwn, fnToString, ObjectFunctionString,
 	support, DOMEval ) {
@@ -585,9 +585,9 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Initialize a 
 !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
 	__webpack_require__(1),
-	__webpack_require__(49),
+	__webpack_require__(48),
 
-	__webpack_require__(50)
+	__webpack_require__(49)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, document, rsingleTag ) {
 
 "use strict";
@@ -717,7 +717,7 @@ return init;
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(53)
+	__webpack_require__(52)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( Data ) {
 	"use strict";
 
@@ -1286,11 +1286,11 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(22),
 	__webpack_require__(78),
 	__webpack_require__(79),
-	__webpack_require__(51),
+	__webpack_require__(50),
 	__webpack_require__(7),
 
 	__webpack_require__(4),
-	__webpack_require__(50),
+	__webpack_require__(49),
 	__webpack_require__(2)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, indexOf, dir, siblings, rneedsContext, nodeName ) {
 
@@ -2237,14 +2237,14 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(1),
 	__webpack_require__(6),
 	__webpack_require__(94),
+	__webpack_require__(63),
 	__webpack_require__(64),
-	__webpack_require__(65),
 
 	__webpack_require__(4),
 	__webpack_require__(95),
 	__webpack_require__(35),
 	__webpack_require__(11),
-	__webpack_require__(66) // jQuery.param
+	__webpack_require__(65) // jQuery.param
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, document, rnothtmlwhite, location, nonce, rquery ) {
 
 "use strict";
@@ -3107,20 +3107,20 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(0),
 	__webpack_require__(25),
 	__webpack_require__(9),
-	__webpack_require__(43),
+	__webpack_require__(42),
 	__webpack_require__(1),
 	__webpack_require__(24),
 	__webpack_require__(26),
+	__webpack_require__(43),
 	__webpack_require__(44),
+	__webpack_require__(37),
 	__webpack_require__(45),
-	__webpack_require__(38),
 	__webpack_require__(46),
 	__webpack_require__(47),
-	__webpack_require__(48),
 	__webpack_require__(27),
 
 	__webpack_require__(4),
-	__webpack_require__(52),
+	__webpack_require__(51),
 	__webpack_require__(2) // contains
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, pnum, access, rmargin, document, rcssNum, rnumnonpx, cssExpand,
 	getStyles, swap, curCSS, adjustCSS, addGetHookIf, support ) {
@@ -3567,7 +3567,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(29),
 	__webpack_require__(11),
 	__webpack_require__(80),
-	__webpack_require__(52),
+	__webpack_require__(51),
 	__webpack_require__(81),
 	__webpack_require__(31),
 	__webpack_require__(82),
@@ -3580,7 +3580,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(96),
 	__webpack_require__(16),
 	__webpack_require__(97),
-	__webpack_require__(66),
+	__webpack_require__(65),
 	__webpack_require__(14),
 	__webpack_require__(98),
 	__webpack_require__(99),
@@ -3610,22 +3610,22 @@ return jQuery;
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
+	__webpack_require__(38),
 	__webpack_require__(39),
-	__webpack_require__(40),
 	__webpack_require__(9),
+	__webpack_require__(55),
 	__webpack_require__(56),
 	__webpack_require__(57),
 	__webpack_require__(58),
 	__webpack_require__(59),
 	__webpack_require__(60),
 	__webpack_require__(61),
-	__webpack_require__(62),
 	__webpack_require__(84),
 
 	__webpack_require__(5),
-	__webpack_require__(54),
+	__webpack_require__(53),
 	__webpack_require__(30),
-	__webpack_require__(42),
+	__webpack_require__(41),
 	__webpack_require__(7),
 
 	__webpack_require__(4),
@@ -4734,10 +4734,10 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(1),
 	__webpack_require__(24),
 	__webpack_require__(6),
-	__webpack_require__(44),
-	__webpack_require__(55),
-	__webpack_require__(38),
-	__webpack_require__(47),
+	__webpack_require__(43),
+	__webpack_require__(54),
+	__webpack_require__(37),
+	__webpack_require__(46),
 	__webpack_require__(5),
 	__webpack_require__(83),
 
@@ -5692,67 +5692,11 @@ return jQuery;
 
 
 Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-exports.resizeContent = resizeContent;
-
-var _jquery = __webpack_require__(18);
-
-var _jquery2 = _interopRequireDefault(_jquery);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function resizeContent(obj, objWrap, objWrapWidth, objWrapHeight) {
-	var pageWidth = void 0,
-	    pageHeight = void 0;
-
-	var basePage = {
-		width: objWrapWidth,
-		height: objWrapHeight,
-		scale: 1,
-		scaleX: 1,
-		scaleY: 1
-	};
-	var $page = $(objWrap);
-	getPageSize();
-	scalePages($page, pageWidth, pageHeight);
-
-	//using underscore to delay resize method till finished resizing window
-	function getPageSize() {
-		pageHeight = $(obj).height();
-		pageWidth = $(obj).width();
-	}
-
-	function scalePages(page, maxWidth, maxHeight) {
-		var scaleX = 1;
-		var scaleY = 1;
-
-		scaleX = maxWidth / basePage.width;
-		scaleY = maxHeight / basePage.height;
-		basePage.scaleX = scaleX;
-		basePage.scaleY = scaleY;
-		basePage.scale = scaleX > scaleY ? scaleY : scaleX;
-
-		var newLeftPos = Math.abs(Math.floor((basePage.width * basePage.scale - maxWidth) / 2));
-		var newTopPos = Math.abs(Math.floor((basePage.height * basePage.scale - maxHeight) / 2));
-
-		page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
-	}
-};
-
-/***/ }),
-/* 37 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
     value: true
 });
 exports.anim = undefined;
 
-var _bodymovin = __webpack_require__(112);
+var _bodymovin = __webpack_require__(111);
 
 var _bodymovin2 = _interopRequireDefault(_bodymovin);
 
@@ -5770,7 +5714,7 @@ var anim = exports.anim = _bodymovin2.default.loadAnimation(animData);
 anim.setSpeed(3.0);
 
 /***/ }),
-/* 38 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
@@ -5803,7 +5747,7 @@ return function( elem, options, callback, args ) {
 
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -5817,7 +5761,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 
 /***/ }),
-/* 40 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -5831,7 +5775,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 
 /***/ }),
-/* 41 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -5845,7 +5789,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 
 /***/ }),
-/* 42 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -5868,7 +5812,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 
 /***/ }),
-/* 43 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
@@ -5880,7 +5824,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
 
 
 /***/ }),
-/* 44 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
@@ -5892,7 +5836,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
 
 
 /***/ }),
-/* 45 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
@@ -5916,14 +5860,14 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
 
 
 /***/ }),
-/* 46 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
 	__webpack_require__(26),
-	__webpack_require__(43),
-	__webpack_require__(45),
+	__webpack_require__(42),
+	__webpack_require__(44),
 	__webpack_require__(27),
 	__webpack_require__(2) // Get jQuery.contains
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, rnumnonpx, rmargin, getStyles, support ) {
@@ -5988,7 +5932,7 @@ return curCSS;
 
 
 /***/ }),
-/* 47 */
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -6066,7 +6010,7 @@ return adjustCSS;
 
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
@@ -6099,7 +6043,7 @@ return addGetHookIf;
 
 
 /***/ }),
-/* 49 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
@@ -6112,13 +6056,13 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
 
 
 /***/ }),
-/* 50 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
 	__webpack_require__(22),
-	__webpack_require__(51),
+	__webpack_require__(50),
 	__webpack_require__(2)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, indexOf, rneedsContext ) {
 
@@ -6225,7 +6169,7 @@ jQuery.fn.extend( {
 
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -6240,7 +6184,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 
 /***/ }),
-/* 52 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -6333,7 +6277,7 @@ if ( document.readyState === "complete" ||
 
 
 /***/ }),
-/* 53 */
+/* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -6501,11 +6445,11 @@ return Data;
 
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(53)
+	__webpack_require__(52)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( Data ) {
 	"use strict";
 
@@ -6515,7 +6459,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -6556,7 +6500,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 
 /***/ }),
-/* 56 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
@@ -6568,7 +6512,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
 
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
@@ -6580,7 +6524,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
 
 
 /***/ }),
-/* 58 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
@@ -6592,7 +6536,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
 
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
@@ -6628,7 +6572,7 @@ return wrapMap;
 
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -6667,7 +6611,7 @@ return getAll;
 
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -6696,16 +6640,16 @@ return setGlobalEval;
 
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
+	__webpack_require__(56),
 	__webpack_require__(57),
 	__webpack_require__(58),
 	__webpack_require__(59),
-	__webpack_require__(60),
-	__webpack_require__(61)
+	__webpack_require__(60)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, rtagName, rscriptType, wrapMap, getAll, setGlobalEval ) {
 
 "use strict";
@@ -6807,7 +6751,7 @@ return buildFragment;
 
 
 /***/ }),
-/* 63 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -6957,7 +6901,7 @@ jQuery.each( [
 
 
 /***/ }),
-/* 64 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -6971,7 +6915,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 
 /***/ }),
-/* 65 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
@@ -6983,15 +6927,15 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
 
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
-	__webpack_require__(56),
+	__webpack_require__(55),
 	__webpack_require__(4),
 	__webpack_require__(12), // filter
-	__webpack_require__(63)
+	__webpack_require__(62)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, rcheckableType ) {
 
 "use strict";
@@ -7118,6 +7062,141 @@ return jQuery;
 }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.page = undefined;
+
+var _canvasSphere = __webpack_require__(67);
+
+var _canvasSphere2 = _interopRequireDefault(_canvasSphere);
+
+var _resize = __webpack_require__(68);
+
+var _jsonAnimation = __webpack_require__(36);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Trianglify = __webpack_require__(112);
+
+
+var pattern = void 0,
+    encode = void 0,
+    svgString = '',
+    opacity = 0.55,
+    increment = 0.05,
+    str = '',
+    title = document.getElementsByClassName('entry-title')[0],
+    pulse = setInterval(function () {
+    opacity += increment;
+    str = opacity.toFixed(2);
+    if (str === '0.95' || str === '0.55') increment = -increment;else title.style.color = 'rgba(255%,255%,255%,' + str + ')';
+}, 100);
+
+var page = exports.page = Object.create(null);
+page.home = true;
+page.about = false;
+page.work = false;
+page.contacts = false;
+page.keyboard = false;
+
+document.addEventListener('DOMContentLoaded', delay);
+/*I'm giving you some extra time to enjoy my preloader*/
+var delay = setTimeout(function () {
+    clearInterval(pulse);
+    (0, _canvasSphere2.default)();
+    _jsonAnimation.anim.stop();
+    (0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
+    $(document.getElementsByClassName('footer')[0]).add(document.body).addClass("is--visible");
+    $(document.getElementsByClassName('loader-section')).add(document.getElementById('loader')).add(title).stop().addClass('is--invisible');
+    Object.defineProperty(page, "elements", {
+        value: {},
+        configurable: true
+    });
+    page.elements.fps = document.getElementsByClassName('fps')[0];
+    page.elements.grid = document.getElementsByClassName('grid-container')[0];
+    page.elements.flipbook = document.getElementsByClassName('book')[0];
+    page.elements.wrapperCanvas = document.getElementsByClassName('canvas-box')[0];
+    page.elements.article = document.getElementsByClassName('about')[0];
+    page.elements.container = document.getElementsByClassName('containerForm')[0];
+    page.elements.logoOne = document.getElementsByClassName('svg-logo-one')[0];
+    page.elements.logoTwo = document.getElementsByClassName('svg-logo-two')[0];
+    page.elements.touch = document.getElementsByClassName('touch')[0];
+    page.elements.curtainRight = document.getElementsByClassName('section-right is--invisible')[0];
+    page.elements.curtainLeft = document.getElementsByClassName('section-left is--invisible')[0];
+    page.elements.background = document.getElementsByClassName('canvasBackground')[0];
+    page.elements.header = document.getElementsByClassName('header')[0];
+    page.elements.footer = document.getElementsByClassName('footer')[0];
+    Object.defineProperty(page, "pattern", {
+        value: {},
+        enumerable: false
+    });
+    page.pattern.colorX = 'YlGnBu';
+    page.pattern.colorY = 'GnBu';
+    Object.defineProperty(page, "setBackground", {
+        get: function get() {
+            this.pattern.canvas = new Trianglify({
+                cell_size: 95,
+                variance: 0.75,
+                x_colors: this.pattern.colorX,
+                y_colors: this.pattern.colorY,
+                width: window.innerWidth,
+                height: window.innerHeight,
+                palette: Trianglify.colorbrewer,
+                stroke_width: 0.2
+            });
+            this.pattern.svg = new XMLSerializer().serializeToString(this.pattern.canvas.svg());
+            this.pattern.encode = window.btoa(page.pattern.svg);
+            return this.elements.background.style.backgroundImage = 'url("data:image/svg+xml;base64,' + this.pattern.encode + '")';
+        },
+        enumerable: false
+    });
+    pattern = new Trianglify({
+        cell_size: 75,
+        variance: 0.75,
+        x_colors: 'YlOrBr',
+        y_colors: 'Purples',
+        width: window.innerWidth,
+        height: 65,
+        palette: Trianglify.colorbrewer,
+        stroke_width: 0.2
+    });
+    // Serialize the SVG object to a String
+    svgString = new XMLSerializer().serializeToString(pattern.svg());
+    // Perform the base64 encoding of the String
+    encode = window.btoa(svgString);
+    // Set the background image property
+    page.elements.footer.style.backgroundImage = 'url("data:image/svg+xml;base64,' + encode + '")';
+    page.elements.header.style.backgroundImage = 'url("data:image/svg+xml;base64,' + encode + '")';
+    page.setBackground;
+    delete page.elements.footer;
+    delete page.elements.header;
+    pulse = increment = opacity = str = title = pattern = svgString = encode = null; /*there is no place for the garbage collection*/
+    if (document.images) {
+        var img1 = new Image();
+        var img2 = new Image();
+        var img3 = new Image();
+        var img4 = new Image();
+        var img5 = new Image();
+        var img6 = new Image();
+        var img7 = new Image();
+        img1.src = "./images/book-page-1.jpg";
+        img2.src = "./images/book-page-2.jpg";
+        img3.src = "./images/book-page-3.jpg";
+        img4.src = "./images/book-page-4.jpg";
+        img5.src = "./images/letter_bg.png";
+        img6.src = "./images/before.png";
+        img7.src = "./images/after.png";
+    }
+}, 2000);
 
 /***/ }),
 /* 67 */
@@ -7499,179 +7578,57 @@ function main() {
 /* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/*
- * Trianglify.js
- * by @qrohlf
- *
- * Licensed under the GPLv3
- */
+"use strict";
 
-var delaunay = __webpack_require__(114);
-var seedrandom = __webpack_require__(115);
-var chroma = __webpack_require__(124); //PROBLEM: chroma.js is nearly 32k in size
-var colorbrewer = __webpack_require__(125); //We could use the chroma.js colorbrewer, but it's got some ugly stuff so we use our own subset.
-var _generate_points = __webpack_require__(126);
 
-var Pattern = __webpack_require__(127);
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.resizeContent = resizeContent;
 
-var defaults = {
-  width: 600,                       // Width of pattern
-  height: 400,                      // Height of pattern
-  cell_size: 75,                    // Size of the cells used to generate a randomized grid
-  variance: 0.75,                   // how much to randomize the grid
-  seed: null,                       // Seed for the RNG
-  x_colors: 'random',               // X color stops
-  y_colors: 'match_x',              // Y color stops
-  palette: colorbrewer,             // Palette to use for 'random' color option
-  color_space: 'lab',               // Color space used for gradient construction & interpolation
-  color_function: null,             // Color function f(x, y) that returns a color specification that is consumable by chroma-js
-  stroke_width: 1.51,               // Width of stroke. Defaults to 1.51 to fix an issue with canvas antialiasing.
-  points: undefined                 // An Array of [x,y] coordinates to trianglulate. Defaults to undefined, and points are generated.
+var _jquery = __webpack_require__(18);
+
+var _jquery2 = _interopRequireDefault(_jquery);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function resizeContent(obj, objWrap, objWrapWidth, objWrapHeight) {
+	var pageWidth = void 0,
+	    pageHeight = void 0;
+
+	var basePage = {
+		width: objWrapWidth,
+		height: objWrapHeight,
+		scale: 1,
+		scaleX: 1,
+		scaleY: 1
+	};
+	var $page = $(objWrap);
+	getPageSize();
+	scalePages($page, pageWidth, pageHeight);
+
+	//using underscore to delay resize method till finished resizing window
+	function getPageSize() {
+		pageHeight = $(obj).height();
+		pageWidth = $(obj).width();
+	}
+
+	function scalePages(page, maxWidth, maxHeight) {
+		var scaleX = 1;
+		var scaleY = 1;
+
+		scaleX = maxWidth / basePage.width;
+		scaleY = maxHeight / basePage.height;
+		basePage.scaleX = scaleX;
+		basePage.scaleY = scaleY;
+		basePage.scale = scaleX > scaleY ? scaleY : scaleX;
+
+		var newLeftPos = Math.abs(Math.floor((basePage.width * basePage.scale - maxWidth) / 2));
+		var newTopPos = Math.abs(Math.floor((basePage.height * basePage.scale - maxHeight) / 2));
+
+		page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
+	}
 };
-
-/*********************************************************
-*
-* Main function that is exported to the global namespace
-*
-**********************************************************/
-
-function Trianglify(opts) {
-  var rand;
-  
-  // apply defaults
-  opts = _merge_opts(defaults, opts);
-
-  // setup seedable RNG
-  rand = seedrandom(opts.seed);
-
-  // randomize colors if requested
-  if (opts.x_colors === 'random') opts.x_colors = _random_from_palette();
-  if (opts.y_colors === 'random') opts.y_colors = _random_from_palette();
-  if (opts.y_colors === 'match_x') opts.y_colors = opts.x_colors;
-
-  // some sanity-checking
-  if (!(opts.width > 0 && opts.height > 0)) {
-    throw new Error("Width and height must be numbers greater than 0");
-  }
-
-  if (opts.cell_size < 2) {
-    throw new Error("Cell size must be greater than 2.");
-  }
-
-  // Setup the color gradient function
-  var gradient;
-
-  if (opts.color_function) {
-    gradient = function(x, y) {
-      return chroma(opts.color_function(x, y));
-    };
-  } else {
-    var x_color = chroma.scale(opts.x_colors).mode(opts.color_space);
-    var y_color = chroma.scale(opts.y_colors).mode(opts.color_space);
-    gradient = function(x, y) {
-      return chroma.interpolate(x_color(x), y_color(y), 0.5, opts.color_space);
-    };
-  }
-
-  // Figure out key dimensions
-
-  // it's a pain to prefix width and height with opts all the time, so let's
-  // give them proper variables to refer to
-  var width = opts.width;
-  var height = opts.height;
-
-  // How many cells we're going to have on each axis (pad by 2 cells on each edge)
-  var cells_x = Math.floor((width + 4 * opts.cell_size) / opts.cell_size);
-  var cells_y = Math.floor((height + 4 * opts.cell_size) / opts.cell_size);
-
-  // figure out the bleed widths to center the grid
-  var bleed_x = ((cells_x * opts.cell_size) - width)/2;
-  var bleed_y = ((cells_y * opts.cell_size) - height)/2;
-
-  // how much can out points wiggle (+/-) given the cell padding?
-  var variance = opts.cell_size * opts.variance / 2;
-
-  // Set up normalizers
-  var norm_x = function(x) {
-    return _map(x, [-bleed_x, width+bleed_x], [0, 1]);
-  };
-
-  var norm_y = function(y) {
-    return _map(y, [-bleed_y, height+bleed_y], [0, 1]);
-  };
-
-  // generate a point mesh
-  var points = opts.points || _generate_points(width, height, bleed_x, bleed_y, opts.cell_size, variance, rand);
-
-  // delaunay.triangulate gives us indices into the original coordinate array
-  var geom_indices = delaunay.triangulate(points);
-
-  // iterate over the indices in groups of three to flatten them into polygons, with color lookup
-  var triangles = [];
-  var lookup_point = function(i) { return points[i];};
-  for (var i=0; i < geom_indices.length; i += 3) {
-    var vertices = [geom_indices[i], geom_indices[i+1], geom_indices[i+2]].map(lookup_point);
-    var centroid = _centroid(vertices);
-    var color = gradient(norm_x(centroid.x), norm_y(centroid.y)).hex();
-    triangles.push([color, vertices]);
-  }
-  return Pattern(triangles, opts);
-
-
-  /*********************************************************
-  *
-  * Private functions
-  *
-  **********************************************************/
-
-  function _map(num, in_range, out_range ) {
-    return ( num - in_range[0] ) * ( out_range[1] - out_range[0] ) / ( in_range[1] - in_range[0] ) + out_range[0];
-  }
-
-  //triangles only!
-  function _centroid(d) {
-    return {
-      x: (d[0][0] + d[1][0] + d[2][0])/3,
-      y: (d[0][1] + d[1][1] + d[2][1])/3
-    };
-  }
-
-  // select a random palette from colorbrewer
-  function _random_from_palette() {
-    if (opts.palette instanceof Array) {
-      return opts.palette[Math.floor(rand()*opts.palette.length)];
-    }
-
-    var keys = Object.keys(opts.palette);
-    return opts.palette[keys[Math.floor(rand()*keys.length)]];
-  }
-
-  // shallow extend (sort of) for option defaults
-  function _merge_opts(defaults, options) {
-    var out = {};
-
-    // shallow-copy defaults so we don't mutate the input objects (bad)
-    for (var key in defaults) {
-      out[key] = defaults[key];
-    }
-
-    for (key in options) {
-      if (defaults.hasOwnProperty(key)) {
-        out[key] = options[key]; // override defaults with options
-      } else {
-        throw new Error(key+" is not a configuration option for Trianglify. Check your spelling?");
-      }
-    }
-    return out;
-  }
-
-} //end of Trianglify function closure
-
-// exports
-Trianglify.colorbrewer = colorbrewer;
-Trianglify.defaults = defaults;
-module.exports = Trianglify;
-
 
 /***/ }),
 /* 69 */
@@ -7692,23 +7649,21 @@ var _jquery = __webpack_require__(18);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-__webpack_require__(111);
+__webpack_require__(66);
 
-__webpack_require__(113);
-
-__webpack_require__(131);
+__webpack_require__(130);
 
 __webpack_require__(67);
 
-__webpack_require__(37);
+__webpack_require__(36);
 
-__webpack_require__(132);
+__webpack_require__(131);
+
+__webpack_require__(133);
 
 __webpack_require__(134);
 
 __webpack_require__(135);
-
-__webpack_require__(136);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -7755,7 +7710,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-	__webpack_require__(41)
+	__webpack_require__(40)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( fnToString ) {
 	"use strict";
 
@@ -10178,7 +10133,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(0),
 	__webpack_require__(9),
 	__webpack_require__(5),
-	__webpack_require__(54)
+	__webpack_require__(53)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, access, dataPriv, dataUser ) {
 
 "use strict";
@@ -10394,7 +10349,7 @@ return jQuery.fn.delay;
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
 	__webpack_require__(5),
-	__webpack_require__(55)
+	__webpack_require__(54)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, dataPriv, isHiddenWithinTree ) {
 
 "use strict";
@@ -10678,7 +10633,7 @@ jQuery.fx.step = {};
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
 	__webpack_require__(87),
-	__webpack_require__(63),
+	__webpack_require__(62),
 	__webpack_require__(88),
 	__webpack_require__(89)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery ) {
@@ -11784,8 +11739,8 @@ jQuery.ajaxTransport( "script", function( s ) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
+	__webpack_require__(63),
 	__webpack_require__(64),
-	__webpack_require__(65),
 	__webpack_require__(14)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, nonce, rquery ) {
 
@@ -11977,8 +11932,8 @@ jQuery.fn.load = function( url, params, callback ) {
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
 	__webpack_require__(1),
-	__webpack_require__(49),
-	__webpack_require__(62),
+	__webpack_require__(48),
+	__webpack_require__(61),
 
 	// This is the only module that needs core/support
 	__webpack_require__(103)
@@ -12130,8 +12085,8 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(1),
 	__webpack_require__(28),
 	__webpack_require__(26),
-	__webpack_require__(46),
-	__webpack_require__(48),
+	__webpack_require__(45),
+	__webpack_require__(47),
 	__webpack_require__(27),
 	__webpack_require__(7),
 
@@ -12543,66 +12498,6 @@ if ( !noGlobal ) {
 
 /***/ }),
 /* 111 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _canvasSphere = __webpack_require__(67);
-
-var _canvasSphere2 = _interopRequireDefault(_canvasSphere);
-
-var _resize = __webpack_require__(36);
-
-var _jsonAnimation = __webpack_require__(37);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var opacity = 0.55;
-var increment = 0.05;
-var pulse = setInterval(function () {
-    var el = document.getElementsByClassName('entry-title')[0];
-    opacity += increment;
-    if (!document.body.classList.contains('loaded') && !(opacity.toFixed(2) === '0.95' || opacity.toFixed(2) === '0.55')) {
-        el.style.color = 'rgba(255%,255%,255%,' + opacity.toFixed(2) + ')';
-    } else if (!document.body.classList.contains('loaded') && (opacity.toFixed(2) === '0.95' || opacity.toFixed(2) === '0.55')) {
-        increment = -increment;
-    } else {
-        clearInterval(pulse);
-    }
-}, 100);
-
-document.addEventListener('DOMContentLoaded', delay);
-
-/*I'm giving you some extra time to enjoy my preloader*/
-var delay = setTimeout(function () {
-    (0, _canvasSphere2.default)();
-    _jsonAnimation.anim.stop();
-    (0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
-    document.body.className = " loaded";
-    pulse = increment = opacity = null; /*there is no place for the garbage collection*/
-    document.getElementsByClassName('footer')[0].style.display = 'flex';
-    $(document.getElementById('loader')).add(document.getElementsByClassName('entry-title')[0]).add('#loader:before').add('#loader:after').stop().css('display', 'none');
-    if (document.images) {
-        var img1 = new Image();
-        var img2 = new Image();
-        var img3 = new Image();
-        var img4 = new Image();
-        var img5 = new Image();
-        var img6 = new Image();
-        var img7 = new Image();
-        img1.src = "./images/book-page-1.jpg";
-        img2.src = "./images/book-page-2.jpg";
-        img3.src = "./images/book-page-3.jpg";
-        img4.src = "./images/book-page-4.jpg";
-        img5.src = "./images/letter_bg.png";
-        img6.src = "./images/before.png";
-        img7.src = "./images/after.png";
-    }
-}, 2000);
-
-/***/ }),
-/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;var window = (typeof window === "undefined") ? {} : window;
@@ -26756,42 +26651,185 @@ GroupEffect.prototype.init = function(data,element,dynamicProperties){
 }));
 
 /***/ }),
-/* 113 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+/*
+ * Trianglify.js
+ * by @qrohlf
+ *
+ * Licensed under the GPLv3
+ */
+
+var delaunay = __webpack_require__(113);
+var seedrandom = __webpack_require__(114);
+var chroma = __webpack_require__(123); //PROBLEM: chroma.js is nearly 32k in size
+var colorbrewer = __webpack_require__(124); //We could use the chroma.js colorbrewer, but it's got some ugly stuff so we use our own subset.
+var _generate_points = __webpack_require__(125);
+
+var Pattern = __webpack_require__(126);
+
+var defaults = {
+  width: 600,                       // Width of pattern
+  height: 400,                      // Height of pattern
+  cell_size: 75,                    // Size of the cells used to generate a randomized grid
+  variance: 0.75,                   // how much to randomize the grid
+  seed: null,                       // Seed for the RNG
+  x_colors: 'random',               // X color stops
+  y_colors: 'match_x',              // Y color stops
+  palette: colorbrewer,             // Palette to use for 'random' color option
+  color_space: 'lab',               // Color space used for gradient construction & interpolation
+  color_function: null,             // Color function f(x, y) that returns a color specification that is consumable by chroma-js
+  stroke_width: 1.51,               // Width of stroke. Defaults to 1.51 to fix an issue with canvas antialiasing.
+  points: undefined                 // An Array of [x,y] coordinates to trianglulate. Defaults to undefined, and points are generated.
+};
+
+/*********************************************************
+*
+* Main function that is exported to the global namespace
+*
+**********************************************************/
+
+function Trianglify(opts) {
+  var rand;
+  
+  // apply defaults
+  opts = _merge_opts(defaults, opts);
+
+  // setup seedable RNG
+  rand = seedrandom(opts.seed);
+
+  // randomize colors if requested
+  if (opts.x_colors === 'random') opts.x_colors = _random_from_palette();
+  if (opts.y_colors === 'random') opts.y_colors = _random_from_palette();
+  if (opts.y_colors === 'match_x') opts.y_colors = opts.x_colors;
+
+  // some sanity-checking
+  if (!(opts.width > 0 && opts.height > 0)) {
+    throw new Error("Width and height must be numbers greater than 0");
+  }
+
+  if (opts.cell_size < 2) {
+    throw new Error("Cell size must be greater than 2.");
+  }
+
+  // Setup the color gradient function
+  var gradient;
+
+  if (opts.color_function) {
+    gradient = function(x, y) {
+      return chroma(opts.color_function(x, y));
+    };
+  } else {
+    var x_color = chroma.scale(opts.x_colors).mode(opts.color_space);
+    var y_color = chroma.scale(opts.y_colors).mode(opts.color_space);
+    gradient = function(x, y) {
+      return chroma.interpolate(x_color(x), y_color(y), 0.5, opts.color_space);
+    };
+  }
+
+  // Figure out key dimensions
+
+  // it's a pain to prefix width and height with opts all the time, so let's
+  // give them proper variables to refer to
+  var width = opts.width;
+  var height = opts.height;
+
+  // How many cells we're going to have on each axis (pad by 2 cells on each edge)
+  var cells_x = Math.floor((width + 4 * opts.cell_size) / opts.cell_size);
+  var cells_y = Math.floor((height + 4 * opts.cell_size) / opts.cell_size);
+
+  // figure out the bleed widths to center the grid
+  var bleed_x = ((cells_x * opts.cell_size) - width)/2;
+  var bleed_y = ((cells_y * opts.cell_size) - height)/2;
+
+  // how much can out points wiggle (+/-) given the cell padding?
+  var variance = opts.cell_size * opts.variance / 2;
+
+  // Set up normalizers
+  var norm_x = function(x) {
+    return _map(x, [-bleed_x, width+bleed_x], [0, 1]);
+  };
+
+  var norm_y = function(y) {
+    return _map(y, [-bleed_y, height+bleed_y], [0, 1]);
+  };
+
+  // generate a point mesh
+  var points = opts.points || _generate_points(width, height, bleed_x, bleed_y, opts.cell_size, variance, rand);
+
+  // delaunay.triangulate gives us indices into the original coordinate array
+  var geom_indices = delaunay.triangulate(points);
+
+  // iterate over the indices in groups of three to flatten them into polygons, with color lookup
+  var triangles = [];
+  var lookup_point = function(i) { return points[i];};
+  for (var i=0; i < geom_indices.length; i += 3) {
+    var vertices = [geom_indices[i], geom_indices[i+1], geom_indices[i+2]].map(lookup_point);
+    var centroid = _centroid(vertices);
+    var color = gradient(norm_x(centroid.x), norm_y(centroid.y)).hex();
+    triangles.push([color, vertices]);
+  }
+  return Pattern(triangles, opts);
 
 
-var _resize = __webpack_require__(36);
+  /*********************************************************
+  *
+  * Private functions
+  *
+  **********************************************************/
 
-var Trianglify = __webpack_require__(68);
-var pattern = Trianglify({
-    width: window.innerWidth,
-    height: window.innerHeight
-});
-var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-canvasBackground.setAttribute("class", "canvasPic");
-pattern = Trianglify({
-    cell_size: 95,
-    variance: 0.75,
-    x_colors: 'random',
-    y_colors: 'match_x',
-    palette: Trianglify.colorbrewer,
-    stroke_width: 0.2
-});
-// Serialize the SVG object to a String
-var m = new XMLSerializer().serializeToString(pattern.svg());
-// Perform the base64 encoding of the String
-var k = window.btoa(m);
-// Query the element to set the background image property
-var elementTop = document.getElementsByClassName('header')[0];
-var elementBottom = document.getElementsByClassName('footer')[0];
-// Set the background image property, including the encoding type header
-elementTop.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
-elementBottom.style.backgroundImage = 'url("data:image/svg+xml;base64,' + k + '")';
+  function _map(num, in_range, out_range ) {
+    return ( num - in_range[0] ) * ( out_range[1] - out_range[0] ) / ( in_range[1] - in_range[0] ) + out_range[0];
+  }
+
+  //triangles only!
+  function _centroid(d) {
+    return {
+      x: (d[0][0] + d[1][0] + d[2][0])/3,
+      y: (d[0][1] + d[1][1] + d[2][1])/3
+    };
+  }
+
+  // select a random palette from colorbrewer
+  function _random_from_palette() {
+    if (opts.palette instanceof Array) {
+      return opts.palette[Math.floor(rand()*opts.palette.length)];
+    }
+
+    var keys = Object.keys(opts.palette);
+    return opts.palette[keys[Math.floor(rand()*keys.length)]];
+  }
+
+  // shallow extend (sort of) for option defaults
+  function _merge_opts(defaults, options) {
+    var out = {};
+
+    // shallow-copy defaults so we don't mutate the input objects (bad)
+    for (var key in defaults) {
+      out[key] = defaults[key];
+    }
+
+    for (key in options) {
+      if (defaults.hasOwnProperty(key)) {
+        out[key] = options[key]; // override defaults with options
+      } else {
+        throw new Error(key+" is not a configuration option for Trianglify. Check your spelling?");
+      }
+    }
+    return out;
+  }
+
+} //end of Trianglify function closure
+
+// exports
+Trianglify.colorbrewer = colorbrewer;
+Trianglify.defaults = defaults;
+module.exports = Trianglify;
+
 
 /***/ }),
-/* 114 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Delaunay;
@@ -27031,7 +27069,7 @@ var Delaunay;
 
 
 /***/ }),
-/* 115 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // A library of seedable RNGs implemented in Javascript.
@@ -27046,17 +27084,17 @@ var Delaunay;
 // alea, a 53-bit multiply-with-carry generator by Johannes Baagøe.
 // Period: ~2^116
 // Reported to pass all BigCrush tests.
-var alea = __webpack_require__(116);
+var alea = __webpack_require__(115);
 
 // xor128, a pure xor-shift generator by George Marsaglia.
 // Period: 2^128-1.
 // Reported to fail: MatrixRank and LinearComp.
-var xor128 = __webpack_require__(117);
+var xor128 = __webpack_require__(116);
 
 // xorwow, George Marsaglia's 160-bit xor-shift combined plus weyl.
 // Period: 2^192-2^32
 // Reported to fail: CollisionOver, SimpPoker, and LinearComp.
-var xorwow = __webpack_require__(118);
+var xorwow = __webpack_require__(117);
 
 // xorshift7, by François Panneton and Pierre L'ecuyer, takes
 // a different approach: it adds robustness by allowing more shifts
@@ -27064,7 +27102,7 @@ var xorwow = __webpack_require__(118);
 // with 256 bits, that passes BigCrush with no systmatic failures.
 // Period 2^256-1.
 // No systematic BigCrush failures reported.
-var xorshift7 = __webpack_require__(119);
+var xorshift7 = __webpack_require__(118);
 
 // xor4096, by Richard Brent, is a 4096-bit xor-shift with a
 // very long period that also adds a Weyl generator. It also passes
@@ -27073,18 +27111,18 @@ var xorshift7 = __webpack_require__(119);
 // collisions.
 // Period: 2^4128-2^32.
 // No systematic BigCrush failures reported.
-var xor4096 = __webpack_require__(120);
+var xor4096 = __webpack_require__(119);
 
 // Tyche-i, by Samuel Neves and Filipe Araujo, is a bit-shifting random
 // number generator derived from ChaCha, a modern stream cipher.
 // https://eden.dei.uc.pt/~sneves/pubs/2011-snfa2.pdf
 // Period: ~2^127
 // No systematic BigCrush failures reported.
-var tychei = __webpack_require__(121);
+var tychei = __webpack_require__(120);
 
 // The original ARC4-based prng included in this library.
 // Period: ~2^1600
-var sr = __webpack_require__(122);
+var sr = __webpack_require__(121);
 
 sr.alea = alea;
 sr.xor128 = xor128;
@@ -27097,7 +27135,7 @@ module.exports = sr;
 
 
 /***/ }),
-/* 116 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A port of an algorithm by Johannes Baagøe <baagoe@baagoe.com>, 2010
@@ -27219,7 +27257,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 117 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xor128" prng algorithm by
@@ -27308,7 +27346,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 118 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xorwow" prng algorithm by
@@ -27402,7 +27440,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 119 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xorshift7" algorithm by
@@ -27507,7 +27545,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 120 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of Richard Brent's Xorgens xor4096 algorithm.
@@ -27661,7 +27699,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 121 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "Tyche-i" prng algorithm by
@@ -27772,7 +27810,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 122 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -28011,7 +28049,7 @@ if ((typeof module) == 'object' && module.exports) {
   module.exports = seedrandom;
   // When in node.js, try using crypto package for autoseeding.
   try {
-    nodecrypto = __webpack_require__(123);
+    nodecrypto = __webpack_require__(122);
   } catch (ex) {}
 } else if (true) {
   !(__WEBPACK_AMD_DEFINE_RESULT__ = function() { return seedrandom; }.call(exports, __webpack_require__, exports, module),
@@ -28026,13 +28064,13 @@ if ((typeof module) == 'object' && module.exports) {
 
 
 /***/ }),
-/* 123 */
+/* 122 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 124 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Generated by CoffeeScript 1.6.2
@@ -29935,7 +29973,7 @@ if ((typeof module) == 'object' && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 125 */
+/* 124 */
 /***/ (function(module, exports) {
 
 /*
@@ -29975,7 +30013,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 126 */
+/* 125 */
 /***/ (function(module, exports) {
 
 function generate_grid(width, height, bleed_x, bleed_y, cell_size, variance, rand_fn) {
@@ -30001,7 +30039,7 @@ module.exports = generate_grid;
 
 
 /***/ }),
-/* 127 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {/*
@@ -30010,7 +30048,7 @@ module.exports = generate_grid;
  */
 
 // conditionally load jsdom if we don't have a browser environment available.
-var doc = (typeof document !== "undefined") ? document : __webpack_require__(129).jsdom('<html/>');
+var doc = (typeof document !== "undefined") ? document : __webpack_require__(128).jsdom('<html/>');
 
 function Pattern(polys, opts) {
 
@@ -30044,7 +30082,7 @@ function Pattern(polys, opts) {
         typeof process.versions.node !== 'undefined') {
       // In Node environment.
       try {
-        __webpack_require__(130);
+        __webpack_require__(129);
       } catch (e) {
         throw Error('The optional node-canvas dependency is needed for Trianglify to render using canvas in node.');
       }
@@ -30092,10 +30130,10 @@ function Pattern(polys, opts) {
 
 module.exports = Pattern;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(128)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(127)))
 
 /***/ }),
-/* 128 */
+/* 127 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -30285,6 +30323,12 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
+/* 128 */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
 /* 129 */
 /***/ (function(module, exports) {
 
@@ -30292,30 +30336,23 @@ process.umask = function() { return 0; };
 
 /***/ }),
 /* 130 */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _resize = __webpack_require__(36);
+var _resize = __webpack_require__(68);
 
-var _jsonAnimation = __webpack_require__(37);
+var _jsonAnimation = __webpack_require__(36);
 
-var Trianglify = __webpack_require__(68);
+var _preloader = __webpack_require__(66);
 
-
-/* hamburger menu */
-var btnHamburger = document.getElementsByClassName('btn-hamburger')[0];
-var init = document.getElementsByClassName('menu__init')[0];
-var menuAbout = document.getElementsByClassName('menu__about')[0];
-var menuWork = document.getElementsByClassName('menu__work')[0];
-var menuContact = document.getElementsByClassName('menu__contact')[0];
+var btnHamburger = document.getElementsByClassName('btn-hamburger')[0],
+    initText = document.getElementsByClassName('menu__init')[0],
+    $home = $('.js-home'),
+    $about = $('.js-about'),
+    $work = $('.js-work'),
+    $contact = $('.js-contact');
 
 AttachEvent(btnHamburger, "click", EventHandler);
 
@@ -30324,31 +30361,28 @@ function AttachEvent(element, type, handler) {
 }
 
 function EventHandler(e) {
+	e.preventDefault();
 	if (String(this.classList) === 'btn-hamburger') {
-		this.classList.add('active');
+		this.classList.add('btn-is--active');
 		animateMenuToArrow();
 	} else {
-		this.classList.remove('active');
 		animateArrowToMenu();
+		this.classList.remove('btn-is--active');
 	}
 }
 
 function animateMenuToArrow() {
-	init.style.display = 'none';
-	$(menuAbout).add(menuWork).add(menuContact).css('display', 'block');
+	initText.classList.add('init-is--invisible');
+	$($about).add($work).add($contact).addClass('is--visible');
 	headerText();
 }
 
 function animateArrowToMenu() {
-	init.style.display = 'block';
-	$(menuAbout).add(menuWork).add(menuContact).css('display', 'none');
+	initText.classList.remove('init-is--invisible');
+	$($about).add($work).add($contact).removeClass('is--visible');
 }
 
 /*header text animation*/
-var $home = $('.menu__home');
-var $about = $('.js-about');
-var $work = $('.js-work');
-var $contact = $('.js-contact');
 var headerText = function headerText() {
 	var s = void 0,
 	    textLetters = {
@@ -30397,127 +30431,66 @@ $contact.on('click', {
 	case: 4
 }, content);
 
-var page = {
-	home: true,
-	about: false,
-	work: false,
-	contacts: false,
-	keyboard: false
-};
-
-Object.defineProperty(page, "elements", {
-	value: {},
-	configurable: true
-});
-
-page.elements.fps = document.getElementsByClassName('fps')[0];
-page.elements.grid = document.getElementsByClassName('grid-container')[0];
-page.elements.flipbook = document.getElementsByClassName('book')[0];
-page.elements.wrapperCanvas = document.getElementsByClassName('canvas-box')[0];
-page.elements.article = document.getElementsByClassName('about')[0];
-page.elements.container = document.getElementsByClassName('containerForm')[0];
-page.elements.logoOne = document.getElementsByClassName('svg-logo-one')[0];
-page.elements.logoTwo = document.getElementsByClassName('svg-logo-two')[0];
-page.elements.touch = document.getElementsByClassName('touch')[0];
-
-var $curtainRight = $('#curtain-section-right');
-var $curtainLeft = $('#curtain-section-left');
-
 function content(event) {
-	$curtainRight.add($curtainLeft).css('width', '100%');
-	$curtainRight.stop().css('transform', 'translateX(50%)');
-	$curtainLeft.stop().css('transform', 'translateX(-50%)');
-	var $pageMain = event.data.case;
-	var $timerCurtain = setTimeout(function () {
-		if ($pageMain === 4) {
-			$(init).add(btnHamburger).add(page.elements.article).add(page.elements.logoOne).add(page.elements.logoTwo).add(page.elements.fps).add(page.elements.flipbook).add(page.elements.wrapperCanvas).stop().css('display', 'none');
-			$(page.elements.container).add($home).css('display', 'flex');
-			page.elements.touch.style.display = 'block';
-			_jsonAnimation.anim.stop();
-			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-			for (var key in page) {
-				if (key !== 'contacts') {
-					//page contacts
-					page[key] = false;
-				} else {
-					page[key] = true;
+	event.preventDefault();
+	var pageNum = event.data.case;
+	$(_preloader.page.elements.curtainRight).add(_preloader.page.elements.curtainLeft).removeClass('is--opening').addClass('is--closing');
+	var $timerCurtains = setTimeout(function () {
+		switch (pageNum) {
+			case 4:
+				$(initText).add(btnHamburger).add(_preloader.page.elements.article).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.fps).add(_preloader.page.elements.flipbook).add(_preloader.page.elements.wrapperCanvas).stop().addClass('is--visible');
+				$(_preloader.page.elements.container).add($home).css('display', 'flex');
+				_preloader.page.elements.touch.style.display = 'block';
+				_jsonAnimation.anim.stop();
+				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+				for (var key in _preloader.page) {
+					if (key !== 'contacts') _preloader.page[key] = false; //page contacts
+					else _preloader.page[key] = true;
 				}
-			}
-			_jsonAnimation.anim.stop();
-		} else if ($pageMain === 3) {
-			$(init).add(btnHamburger).add(page.elements.logoOne).add(page.elements.logoTwo).add(page.elements.wrapperCanvas).add(page.elements.fps).add(page.elements.article).add(page.elements.container).stop().css('display', 'none');
-			$home.css('display', 'flex');
-			$(page.elements.flipbook).add(page.elements.touch).css('display', 'block');
-			_jsonAnimation.anim.stop();
-			(0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
-			for (var _key in page) {
-				if (_key !== 'work') {
-					//page work
-					page[_key] = false;
-				} else {
-					page[_key] = true;
+				_jsonAnimation.anim.stop();
+				break;
+			case 3:
+				$(initText).add(btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.wrapperCanvas).add(_preloader.page.elements.fps).add(_preloader.page.elements.article).add(_preloader.page.elements.container).stop().css('display', 'none');
+				$home.css('display', 'flex');
+				$(_preloader.page.elements.flipbook).add(_preloader.page.elements.touch).css('display', 'block');
+				_jsonAnimation.anim.stop();
+				(0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
+				for (var _key in _preloader.page) {
+					if (_key !== 'work') _preloader.page[_key] = false; //page work
+					else _preloader.page[_key] = true;
 				}
-			}
-		} else if ($pageMain === 2) {
-			$(init).add(btnHamburger).add(page.elements.logoOne).add(page.elements.touch).add(page.elements.flipbook).add(page.elements.logoTwo).add(page.elements.wrapperCanvas).add(page.elements.fps).add(page.elements.container).stop().css('display', 'none');
-			page.elements.article.style.display = 'grid';
-			$home.css('display', 'flex');
-			_jsonAnimation.anim.play();
-			for (var _key2 in page) {
-				if (_key2 !== 'about') {
-					//page about 
-					page[_key2] = false;
-				} else {
-					page[_key2] = true;
+				break;
+			case 2:
+				$(initText).add(btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.touch).add(_preloader.page.elements.flipbook).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.wrapperCanvas).add(_preloader.page.elements.fps).add(_preloader.page.elements.container).stop().css('display', 'none');
+				_preloader.page.elements.article.style.display = 'grid';
+				$home.css('display', 'flex');
+				_jsonAnimation.anim.play();
+				for (var _key2 in _preloader.page) {
+					if (_key2 !== 'about') _preloader.page[_key2] = false; //page about 
+					else _preloader.page[_key2] = true;
 				}
-			}
-		} else {
-			$(page.elements.wrapperCanvas).add(btnHamburger).add(page.elements.logoOne).add(page.elements.logoTwo).add(page.elements.fps).css('display', 'grid');
-			$home.add(page.elements.article).add(page.elements.flipbook).add(page.elements.touch).add(page.elements.container).stop().css('display', 'none');
-			animateArrowToMenu();
-			btnHamburger.classList.remove('active');
-			_jsonAnimation.anim.stop();
-			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
-			for (var _key3 in page) {
-				if (_key3 !== 'home') {
-					// page home 
-					page[_key3] = false;
-				} else {
-					page[_key3] = true;
+				break;
+			case 1:
+				$(_preloader.page.elements.wrapperCanvas).add(btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.fps).css('display', 'grid');
+				$home.add(_preloader.page.elements.article).add(_preloader.page.elements.flipbook).add(_preloader.page.elements.touch).add(_preloader.page.elements.container).stop().css('display', 'none');
+				animateArrowToMenu();
+				btnHamburger.classList.remove('active');
+				_jsonAnimation.anim.stop();
+				(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
+				for (var _key3 in _preloader.page) {
+					if (_key3 !== 'home') _preloader.page[_key3] = false; // page home 
+					else _preloader.page[_key3] = true;
 				}
-			}
+				break;
+			default:
+				document.write('Oops, something went wrong!');
 		}
-		document.getElementsByClassName('canvasPic')[0].remove();
-		var pattern = Trianglify({
-			width: window.innerWidth,
-			height: window.innerHeight
-		});
-
-		var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-		canvasBackground.setAttribute("class", "canvasPic");
-		pattern = Trianglify({
-			cell_size: 95,
-			variance: 0.75,
-			x_colors: 'random',
-			y_colors: 'match_x',
-			palette: Trianglify.colorbrewer,
-			stroke_width: 0.2
-		});
-		$curtainRight.stop().css({
-			'-webkit-transform': 'translateX(100%)',
-			'-moz-transform': 'translateX(100%)',
-			'transform': 'translateX(100%)'
-		});
-		$curtainLeft.stop().css({
-			'-webkit-transform': 'translateX(-100%)',
-			'-moz-transform': 'translateX(-100%)',
-			'transform': 'translateX(-100%)'
-		});
+		$(_preloader.page.elements.curtainRight).add(_preloader.page.elements.curtainLeft).stop().removeClass('is--closing').addClass('is--opening');
 	}, 1500);
 }
 
 window.addEventListener("orientationchange", function () {
-	if (page.keyboard) {
+	if (_preloader.page.keyboard) {
 		window.lastOrientation = true;
 	}
 }, false);
@@ -30546,7 +30519,7 @@ function detectKeyboard() {
 		return _keyboardHeight;
 	}
 	// Orientation change with keyboard already opened
-	if (orientationChange() && page.keyboard) {
+	if (orientationChange() && _preloader.page.keyboard) {
 		var _keyboardHeight2 = screen.height - window.topBarHeight - window.innerHeight;
 		updateWindowSize();
 		return _keyboardHeight2;
@@ -30566,14 +30539,14 @@ function detectKeyboard() {
 };
 
 function keyboardShift(keyboardHeight) {
-	page.elements.grid.style.cssText = 'grid-template-rows:65px calc(100vh + ' + keyboardHeight + 'px) auto;';
-	page.keyboard = true;
+	_preloader.page.elements.grid.style.cssText = 'grid-template-rows:65px calc(100vh + ' + keyboardHeight + 'px) auto;';
+	_preloader.page.keyboard = true;
 	resizeScreenObj(event, keyboardHeight);
 };
 
 function removeKeyboardShift() {
-	page.elements.grid.style.cssText = 'grid-template-rows:65px calc(100vh - 65px) auto;';
-	page.keyboard = false;
+	_preloader.page.elements.grid.style.cssText = 'grid-template-rows:65px calc(100vh - 65px) auto;';
+	_preloader.page.keyboard = false;
 	resizeScreenObj(event, 0);
 };
 
@@ -30612,47 +30585,25 @@ var resizeTimer = void 0;
 function resizeScreenObj(event, keyHeight) {
 	clearTimeout(resizeTimer);
 	resizeTimer = setTimeout(function () {
-		document.getElementsByClassName('canvasPic')[0].remove();
-		var pattern = Trianglify({
-			width: window.innerWidth,
-			height: window.innerHeight
-		});
-		var canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-		pattern = Trianglify({
-			cell_size: 95,
-			variance: 0.75,
-			x_colors: 'random',
-			y_colors: 'match_x',
-			palette: Trianglify.colorbrewer,
-			stroke_width: 0.2
-		});
-		canvasBackground.setAttribute("class", "canvasPic");
-		if (page.contacts) {
+		_preloader.page.setBackground;
+		if (_preloader.page.contacts) {
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-		} else if (page.home) {
+		} else if (_preloader.page.home) {
 			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
-		} else if (page.work) {
+		} else if (_preloader.page.work) {
 			(0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
 		}
 	}, 122);
 };
 
-/* the form is getting bigger when the on-screen keyboard opens */
-$(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focus(function () {
-	document.getElementsByClassName('containerForm')[0].classList += ' scaleForm';
-});
-$(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focusout(function () {
-	document.getElementsByClassName('containerForm')[0].classList = 'containerForm';
-});
-
 /***/ }),
-/* 132 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _jqueryValidation = __webpack_require__(133);
+var _jqueryValidation = __webpack_require__(132);
 
 var _jqueryValidation2 = _interopRequireDefault(_jqueryValidation);
 
@@ -30700,9 +30651,15 @@ $contactForm.submit(function (e) {
         });
     }
 });
+$(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focus(function () {
+    $contactForm.addClass('form-is--scaled');
+});
+$(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focusout(function () {
+    $contactForm.removeClass('form-is--scaled');
+});
 
 /***/ }),
-/* 133 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -32311,7 +32268,7 @@ return $;
 }));
 
 /***/ }),
-/* 134 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32460,7 +32417,7 @@ return $;
 })();
 
 /***/ }),
-/* 135 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35327,7 +35284,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 })(jQuery);
 
 /***/ }),
-/* 136 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
