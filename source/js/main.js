@@ -176,7 +176,7 @@ function content(event) {
 			$home.add(page.elements.article).add(page.elements.flipbook).add(page.elements.touch)
 				.add(page.elements.container).stop().css('display', 'none');
 			animateArrowToMenu();
-			btnHamburger.classList = 'btn-hamburger';
+			btnHamburger.classList.remove('active');
 			anim.stop();
 			resizeContent('#figure', '#wrapperCanvas', 800, 900);
 			for (let key in page) {

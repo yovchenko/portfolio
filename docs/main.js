@@ -30475,7 +30475,7 @@ function content(event) {
 			$(page.elements.wrapperCanvas).add(btnHamburger).add(page.elements.logoOne).add(page.elements.logoTwo).add(page.elements.fps).css('display', 'grid');
 			$home.add(page.elements.article).add(page.elements.flipbook).add(page.elements.touch).add(page.elements.container).stop().css('display', 'none');
 			animateArrowToMenu();
-			btnHamburger.classList = 'btn-hamburger';
+			btnHamburger.classList.remove('active');
 			_jsonAnimation.anim.stop();
 			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
 			for (var _key3 in page) {
