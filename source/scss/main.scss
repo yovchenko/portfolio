@@ -114,6 +114,11 @@ footer {
         border-radius: 5px;
         @include responsive-font(5.2vw, 16px, 50px);
     }
+    .menu__about.visible,
+    .menu__work.visible,
+    .menu__contact.visible {
+        display: block;
+    }
     .menu__init {
         display: block;
         text-align: center;
@@ -121,6 +126,9 @@ footer {
         margin: 0 auto;
         padding-right: 45px;
         @include responsive-font(5.2vw, 16px, 50px);
+    }
+    .menu__init.invisible {
+        display: none;
     }
     .menu__home {
         display: none;

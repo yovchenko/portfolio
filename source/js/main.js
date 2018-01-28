@@ -9,9 +9,10 @@ import {
 /* hamburger menu */
 const btnHamburger = document.getElementsByClassName('btn-hamburger')[0];
 const init = document.getElementsByClassName('menu__init')[0];
-const menuAbout = document.getElementsByClassName('menu__about')[0];
-const menuWork = document.getElementsByClassName('menu__work')[0];
-const menuContact = document.getElementsByClassName('menu__contact')[0];
+const $home = $('.menu__home');
+const $about = $('.js-about');
+const $work = $('.js-work');
+const $contact = $('.js-contact');
 
 AttachEvent(btnHamburger, "click", EventHandler);
 
@@ -25,27 +26,23 @@ function EventHandler(e) {
 		this.classList.add('active');
 		animateMenuToArrow();
 	} else {
-		this.classList.remove('active');
 		animateArrowToMenu();
+		this.classList.remove('active');
 	}
 }
 
 function animateMenuToArrow() {
-	init.style.display = 'none';
-	$(menuAbout).add(menuWork).add(menuContact).css('display', 'block');
+	init.classList.add('invisible');
+	$($about).add($work).add($contact).addClass('visible');
 	headerText();
 }
 
 function animateArrowToMenu() {
-	init.style.display = 'block';
-	$(menuAbout).add(menuWork).add(menuContact).css('display', 'none');
+	init.classList.remove('invisible');
+	$($about).add($work).add($contact).removeClass('visible');
 }
 
 /*header text animation*/
-const $home = $('.menu__home');
-const $about = $('.js-about');
-const $work = $('.js-work');
-const $contact = $('.js-contact');
 let headerText = function () {
 	let s,
 		textLetters = {
@@ -340,9 +337,9 @@ function resizeScreenObj(event, keyHeight) {
 /* the form is getting bigger when the on-screen keyboard opens */
 $(document.getElementById('message')).add(document.getElementById('email'))
 .add(document.getElementById('name')).focus(function () {
-	document.getElementsByClassName('containerForm')[0].classList += ' scaleForm';
+	document.getElementsByClassName('containerForm')[0].classList.add('scaleForm');
 });
 $(document.getElementById('message')).add(document.getElementById('email'))
 .add(document.getElementById('name')).focusout(function () {
-	document.getElementsByClassName('containerForm')[0].classList = 'containerForm';
+	document.getElementsByClassName('containerForm')[0].classList.remove('scaleForm');
 });
