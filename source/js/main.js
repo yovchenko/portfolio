@@ -8,8 +8,8 @@ import {
 
 /* hamburger menu */
 const btnHamburger = document.getElementsByClassName('btn-hamburger')[0];
-const init = document.getElementsByClassName('menu__init')[0];
-const $home = $('.menu__home');
+const initText = document.getElementsByClassName('menu__init')[0];
+const $home = $('.js-home');
 const $about = $('.js-about');
 const $work = $('.js-work');
 const $contact = $('.js-contact');
@@ -23,23 +23,23 @@ function AttachEvent(element, type, handler) {
 
 function EventHandler(e) {
 	if (String(this.classList) === 'btn-hamburger') {
-		this.classList.add('active');
+		this.classList.add('btn-is--active');
 		animateMenuToArrow();
 	} else {
 		animateArrowToMenu();
-		this.classList.remove('active');
+		this.classList.remove('btn-is--active');
 	}
 }
 
 function animateMenuToArrow() {
-	init.classList.add('invisible');
-	$($about).add($work).add($contact).addClass('visible');
+	initText.classList.add('init-is--invisible');
+	$($about).add($work).add($contact).addClass('is--visible');
 	headerText();
 }
 
 function animateArrowToMenu() {
-	init.classList.remove('invisible');
-	$($about).add($work).add($contact).removeClass('visible');
+	initText.classList.remove('init-is--invisible');
+	$($about).add($work).add($contact).removeClass('is--visible');
 }
 
 /*header text animation*/
@@ -114,21 +114,23 @@ page.elements.logoOne = document.getElementsByClassName('svg-logo-one')[0];
 page.elements.logoTwo = document.getElementsByClassName('svg-logo-two')[0];
 page.elements.touch = document.getElementsByClassName('touch')[0];
 
-const $curtainRight = $('#curtain-section-right');
-const $curtainLeft = $('#curtain-section-left');
-
 function content(event) {
+	const $curtainRight = $('.section-right.is--invisible');
+	const $curtainLeft = $('.section-left.is--invisible');
 	$curtainRight.add($curtainLeft).css('width', '100%');
 	$curtainRight.stop().css('transform', 'translateX(50%)');
 	$curtainLeft.stop().css('transform', 'translateX(-50%)');
-	let $pageMain = event.data.case;
+	let $pageNum = event.data.case;
 	let $timerCurtain = setTimeout(function () {
-		if ($pageMain === 4) {
-			$(init).add(btnHamburger).add(page.elements.article).add(page.elements.logoOne)
+		if ($pageNum === 4) {
+			$(initText).add(btnHamburger).add(page.elements.article).add(page.elements.logoOne)
 				.add(page.elements.logoTwo).add(page.elements.fps)
-				.add(page.elements.flipbook).add(page.elements.wrapperCanvas).stop().css('display', 'none');
+				.add(page.elements.flipbook).add(page.elements.wrapperCanvas).stop().addClass('is--visible');
+
 			$(page.elements.container).add($home).css('display', 'flex');
+
 			page.elements.touch.style.display = 'block';
+
 			anim.stop();
 			resizeContent('.envelope', '#wrap', 530, 630);
 			for (let key in page) {
@@ -139,8 +141,8 @@ function content(event) {
 				}
 			}
 			anim.stop();
-		} else if ($pageMain === 3) {
-			$(init).add(btnHamburger).add(page.elements.logoOne).add(page.elements.logoTwo).add(page.elements.wrapperCanvas)
+		} else if ($pageNum === 3) {
+			$(initText).add(btnHamburger).add(page.elements.logoOne).add(page.elements.logoTwo).add(page.elements.wrapperCanvas)
 				.add(page.elements.fps).add(page.elements.article).add(page.elements.container).stop().css('display', 'none');
 			$home.css('display', 'flex');
 			$(page.elements.flipbook).add(page.elements.touch).css('display', 'block');
@@ -153,8 +155,8 @@ function content(event) {
 					page[key] = true;
 				}
 			}
-		} else if ($pageMain === 2) {
-			$(init).add(btnHamburger).add(page.elements.logoOne).add(page.elements.touch)
+		} else if ($pageNum === 2) {
+			$(initText).add(btnHamburger).add(page.elements.logoOne).add(page.elements.touch)
 				.add(page.elements.flipbook).add(page.elements.logoTwo)
 				.add(page.elements.wrapperCanvas).add(page.elements.fps).add(page.elements.container).stop().css('display', 'none');
 			page.elements.article.style.display = 'grid';
@@ -337,9 +339,9 @@ function resizeScreenObj(event, keyHeight) {
 /* the form is getting bigger when the on-screen keyboard opens */
 $(document.getElementById('message')).add(document.getElementById('email'))
 .add(document.getElementById('name')).focus(function () {
-	document.getElementsByClassName('containerForm')[0].classList.add('scaleForm');
+	document.getElementsByClassName('containerForm')[0].classList.add('form-is--scaled');
 });
 $(document.getElementById('message')).add(document.getElementById('email'))
 .add(document.getElementById('name')).focusout(function () {
-	document.getElementsByClassName('containerForm')[0].classList.remove('scaleForm');
+	document.getElementsByClassName('containerForm')[0].classList.remove('form-is--scaled');
 });

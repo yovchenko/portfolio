@@ -8,29 +8,26 @@ import {
 
 let opacity = 0.55;
 let increment = 0.05;
+let str = '';
+let el = document.getElementsByClassName('entry-title')[0];
 let pulse = setInterval(function () {
-    const el = document.getElementsByClassName('entry-title')[0];
     opacity += increment;
-    if (!document.body.classList.contains('loaded') && (!(opacity.toFixed(2) === '0.95' || opacity.toFixed(2) === '0.55'))) {
-        el.style.color = 'rgba(255%,255%,255%,' + opacity.toFixed(2) + ')';
-    } else if (!document.body.classList.contains('loaded') && (opacity.toFixed(2) === '0.95' || opacity.toFixed(2) === '0.55')) {
-        increment = -increment;
-    } else {
-        clearInterval(pulse);
-    }
+    str = opacity.toFixed(2);
+    if (str === '0.95' || str === '0.55') increment = -increment;
+    else el.style.color = 'rgba(255%,255%,255%,' +  str + ')'; 
 }, 100);
 
 document.addEventListener('DOMContentLoaded', delay);
 
 /*I'm giving you some extra time to enjoy my preloader*/
 let delay = setTimeout(function () {
+    clearInterval(pulse);
     main();
     anim.stop();
     resizeContent('#figure', '#wrapperCanvas', 800, 900);
-    document.body.className = " loaded";
-    pulse = increment = opacity = null;         /*there is no place for the garbage collection*/
-    document.getElementsByClassName('footer')[0].style.display = 'flex';
-    $(document.getElementById('loader')).add(document.getElementsByClassName('entry-title')[0]).add('#loader:before').add('#loader:after').stop().css('display', 'none');
+    $(document.getElementsByClassName('footer')[0]).add(document.body).addClass("is--visible");
+    $(document.getElementsByClassName('loader-section')).add(document.getElementById('loader')).add(el).stop().addClass('is--invisible');
+    pulse = increment = opacity = str = el = null;  /*there is no place for the garbage collection*/
     if (document.images) {
         let img1 = new Image();
         let img2 = new Image();
