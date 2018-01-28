@@ -32,8 +32,7 @@ function EventHandler(e) {
 
 function animateMenuToArrow() {
 	init.style.display = 'none';
-	$(menuAbout).add(menuWork).add(menuContact).css('display', 'flex');
-	
+	$(menuAbout).add(menuWork).add(menuContact).css('display', 'block');
 	headerText();
 }
 
