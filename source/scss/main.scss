@@ -3,8 +3,8 @@
 @import "textAnimation";
 @import "slider";
 @import "progressBar";
-@include font-face('sketch','../fonts/CabinSketch-Bold',normal, 500);
-@include font-face('Italianno, cursive','../fonts/Italianno-Regular', normal, 400);
+@include font-face('sketch', '../fonts/CabinSketch-Bold', normal, 500);
+@include font-face('Italianno, cursive', '../fonts/Italianno-Regular', normal, 400);
 html {
     height: 100%;
     box-sizing: border-box;
@@ -65,6 +65,7 @@ header {
 }
 
 /*Hamburger menu*/
+
 .fps {
     position: absolute;
     margin: 5px;
@@ -130,7 +131,6 @@ header {
         &.init-is--invisible {
             display: none;
         }
-      
     }
     .menu__home {
         display: none;
@@ -154,7 +154,7 @@ header {
 
 .menu__header>p[class]:not(.menu__init):hover,
 .menu__header>p[class]:not(.menu__init):focus,
- {
+    {
     text-shadow: -1px 0 rgba(255, 255, 255, 0.85), 0 1px rgba(255, 255, 255, 0.85), 1px 0 rgba(255, 255, 255, 0.85), 0 -1px rgba(255, 255, 255, 0.85);
     transform: scaleY(1.07);
     -webkit-transform: scaleY(1.07);
@@ -233,7 +233,7 @@ figure {
     }
 }
 
-.canvasPic {
+.canvasBackground {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -243,6 +243,9 @@ figure {
     left: 0;
     right: 0;
     bottom: 0;
+    background-size: 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .svg-logo-one {
@@ -264,13 +267,15 @@ figure {
     grid-template-rows: repeat(3, 1fr);
     align-items: center;
 }
-.svg-logo-one div, .svg-logo-two div {
+
+.svg-logo-one div,
+.svg-logo-two div {
     position: relative;
     width: 100%;
     text-align: center;
 }
 
-.svg-logo-two  div:nth-child(2)  svg {
+.svg-logo-two div:nth-child(2) svg {
     width: 160%;
     margin-top: 35%;
     position: relative;
@@ -321,7 +326,6 @@ article p {
     max-width: 100%;
     max-height: 100%;
 }
-
 
 /* flipbook */
 
@@ -434,7 +438,7 @@ article p {
 .sj-book .p4,
 .sj-book .p5,
 .sj-book .p6,
-{
+    {
     background-color: white;
 }
 
@@ -708,6 +712,7 @@ label {
 #contactForm .error {
     border-color: red;
 }
+
 #name-error,
 #email-error {
     color: red;
@@ -802,7 +807,7 @@ footer .wrapper {
 
 .svgIcons svg:hover,
 .svgIcons svg:focus {
-    stroke:#fff;
+    stroke: #fff;
     transform: scale(1.07);
     -webkit-transform: scale(1.07);
     -moz-transform: scale(1.07);
@@ -817,11 +822,6 @@ footer .wrapper {
     padding: 0.2em 0;
 }
 
-.font-preload {
-    font-family: 'Italianno, cursive';
-    font-size: 0;
-}
-
 #loader-wrapper {
     position: fixed;
     top: 0;
@@ -833,66 +833,67 @@ footer .wrapper {
     &.is--invisible {
         display: none;
     }
-}
-
-#loader {
-    display: block;
-    position: relative;
-    left: 50%;
-    top: 45%;
-    width: 150px;
-    height: 150px;
-    margin: -85px 0 0 -85px;
-    border-radius: 50%;
-    border: 5px solid rgba(255%, 255%, 255%, 0.1);
-    box-shadow: 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.25);
-    -moz-box-shadow: inset 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.25);
-    -webkit-box-shadow: inset 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.25);
-    -webkit-animation: spin 2.5s linear infinite;
-    /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 2.5s linear infinite;
-    /* Chrome, Firefox 16+, IE 10+, Opera */
-    z-index: 1001;
-    &.is--invisible {
-        display: none;
+    .font-preload {
+        font-family: 'Italianno, cursive';
+        font-size: 0;
     }
-}
-
-#loader:before {
-    content: "";
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    border-radius: 50%;
-    border: 5px solid rgba(255%, 255%, 255%, 0.6);
-    border-top-color: rgba(255%, 255%, 255%, 0.6);
-    box-shadow: 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.6);
-    -moz-box-shadow: 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.6);
-    -webkit-box-shadow: 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.6);
-    -webkit-animation: spin 3s linear infinite;
-    /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 3s linear infinite;
-    /* Chrome, Firefox 16+, IE 10+, Opera */
-}
-
-#loader:after {
-    content: "";
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    border-radius: 50%;
-    border: 3px solid rgba(255%, 255%, 255%, 0.9);
-    -moz-box-shadow: 5px 10px 5px 6px rgba(255%, 255%, 255%, 0.65);
-    -webkit-box-shadow: 5px 10px 5px 6px rgba(255%, 255%, 255%, 0.65);
-    box-shadow: 5px 10px 5px 6px rgba(255%, 255%, 255%, 0.65);
-    -webkit-animation: spin 1.5s linear infinite;
-    /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 1.5s linear infinite;
-    /* Chrome, Firefox 16+, IE 10+, Opera */
+    #loader {
+        display: block;
+        position: relative;
+        left: 50%;
+        top: 45%;
+        width: 150px;
+        height: 150px;
+        margin: -85px 0 0 -85px;
+        border-radius: 50%;
+        border: 5px solid rgba(255%, 255%, 255%, 0.1);
+        box-shadow: 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.25);
+        -moz-box-shadow: inset 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.25);
+        -webkit-box-shadow: inset 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.25);
+        -webkit-animation: spin 2.5s linear infinite;
+        /* Chrome, Opera 15+, Safari 5+ */
+        animation: spin 2.5s linear infinite;
+        /* Chrome, Firefox 16+, IE 10+, Opera */
+        z-index: 1001;
+        &.is--invisible {
+            display: none;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border-radius: 50%;
+            border: 5px solid rgba(255%, 255%, 255%, 0.6);
+            border-top-color: rgba(255%, 255%, 255%, 0.6);
+            box-shadow: 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.6);
+            -moz-box-shadow: 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.6);
+            -webkit-box-shadow: 5px 5px 5px 5px rgba(255%, 255%, 255%, 0.6);
+            -webkit-animation: spin 3s linear infinite;
+            /* Chrome, Opera 15+, Safari 5+ */
+            animation: spin 3s linear infinite;
+            /* Chrome, Firefox 16+, IE 10+, Opera */
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: 15px;
+            bottom: 15px;
+            border-radius: 50%;
+            border: 3px solid rgba(255%, 255%, 255%, 0.9);
+            -moz-box-shadow: 5px 10px 5px 6px rgba(255%, 255%, 255%, 0.65);
+            -webkit-box-shadow: 5px 10px 5px 6px rgba(255%, 255%, 255%, 0.65);
+            box-shadow: 5px 10px 5px 6px rgba(255%, 255%, 255%, 0.65);
+            -webkit-animation: spin 1.5s linear infinite;
+            /* Chrome, Opera 15+, Safari 5+ */
+            animation: spin 1.5s linear infinite;
+            /* Chrome, Firefox 16+, IE 10+, Opera */
+        }
+    }
 }
 
 .entry-header {
@@ -903,17 +904,16 @@ footer .wrapper {
     max-width: 1200px;
     position: relative;
     z-index: 10001;
-}
-
-.entry-title {
-    font-family: "Georgia", serif;
-    font-size: 2.5rem;
-    color: rgba(255%, 255%, 255%, 0.65);
-    position: relative;
-    top: 50px;
-    text-shadow: 0 0 6px rgba(255%, 255%, 255%, 0.55), 0 0 6px rgba(255%, 255%, 255%, 0.55);
-    &.is--invisible {
-        display: none;
+    .entry-title {
+        font-family: "Georgia", serif;
+        font-size: 2.5rem;
+        color: rgba(255%, 255%, 255%, 0.65);
+        position: relative;
+        top: 50px;
+        text-shadow: 0 0 6px rgba(255%, 255%, 255%, 0.55), 0 0 6px rgba(255%, 255%, 255%, 0.55);
+        &.is--invisible {
+            display: none;
+        }
     }
 }
 
@@ -962,47 +962,65 @@ footer .wrapper {
     height: 100%;
     background: #222;
     z-index: 1000;
-}
-
-#loader-wrapper .loader-section.section-left {
-    left: 0;
-    &.is--invisible {
-    visibility: visible;
-    width: 0%;
-    height: calc(100% + 65px);
-    left: 0;
-    border: 1px solid #222;
-    -webkit-transform: translateX(-50%);
-    /* Chrome, Opera 15+, Safari 3.1+ */
-    -ms-transform: translateX(-50%);
-    /* IE 9 */
-    transform: translateX(-50%);
-    /* Firefox 16+, IE 10+, Opera */
-    -webkit-transition: all 1s cubic-bezier(0.045, 0.045, 0.045, 1.000);
-    /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
-    transition: all 1s cubic-bezier(0.045, 0.045, 0.045, 1.000);
-    /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+    &.section-left {
+        left: 0;
+        &.is--invisible {
+            visibility: visible;
+            width: 0%;
+            height: calc(100% + 65px);
+            left: 0;
+            border: 1px solid #222;
+            -webkit-transform: translateX(-50%);
+            /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateX(-50%);
+            /* IE 9 */
+            transform: translateX(-50%);
+            -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+            /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+            transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+            /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+            &.is--closing {
+                width: 100%;
+                -webkit-transform: translateX(-50%);
+                -moz-transform: translateX(-50%);
+                transform: translateX(-50%);
+            }
+            &.is--opening {
+                -webkit-transform: translateX(-100%);
+                -moz-transform: translateX(-100%);
+                transform: translateX(-100%);
+            }
+        }
     }
-}
-
-#loader-wrapper .loader-section.section-right {
-    right: 0;
-    &.is--invisible {
-        visibility: visible;
-        width: 0%;
-        height: calc(100% + 65px);
+    &.section-right {
         right: 0;
-        border: 1px solid #222;
-        -webkit-transform: translateX(50%);
-        /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: translateX(50%);
-        /* IE 9 */
-        transform: translateX(50%);
-        /* Firefox 16+, IE 10+, Opera */
-        -webkit-transition: all 1s cubic-bezier(0.045, 0.045, 0.045, 1.000);
-        /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
-        transition: all 1s cubic-bezier(0.045, 0.045, 0.045, 1.000);
-        /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+        &.is--invisible {
+            visibility: visible;
+            width: 0%;
+            height: calc(100% + 65px);
+            right: 0;
+            border: 1px solid #222;
+            -webkit-transform: translateX(50%);
+            /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateX(50%);
+            /* IE 9 */
+            transform: translateX(50%);
+            -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+            /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+            transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+            /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */
+        }
+        &.is--closing {
+            width: 100%;
+            -webkit-transform: translateX(50%);
+            -moz-transform: translateX(50%);
+            transform: translateX(50%);
+        }
+        &.is--opening {
+            -webkit-transform: translateX(100%);
+            -moz-transform: translateX(100%);
+            transform: translateX(100%);
+        }
     }
 }
 
@@ -1028,6 +1046,7 @@ footer .wrapper {
 /* ==========================================================================
    Helper classes
    ========================================================================== */
+
 /*
  * Image replacement
  */
@@ -1047,7 +1066,6 @@ footer .wrapper {
     height: 150%;
 }
 
-
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
@@ -1056,7 +1074,6 @@ footer .wrapper {
     display: none !important;
     visibility: hidden;
 }
-
 
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
@@ -1073,7 +1090,6 @@ footer .wrapper {
     width: 1px;
 }
 
-
 /*
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
@@ -1088,7 +1104,6 @@ footer .wrapper {
     position: static;
     width: auto;
 }
-
 
 /*
  * Hide visually and from screenreaders, but maintain layout
@@ -1122,7 +1137,6 @@ footer .wrapper {
     clear: both;
 }
 
-
 /*
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
@@ -1131,7 +1145,6 @@ footer .wrapper {
 .clearfix {
     *zoom: 1;
 }
-
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
@@ -1149,7 +1162,6 @@ footer .wrapper {
 (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
-
 
 /* ==========================================================================
    Print styles.
@@ -1217,7 +1229,6 @@ footer .wrapper {
     display: none;
 }
 
-
 /* media queries */
 
 @media all and (min-width: 1600px) {
@@ -1228,9 +1239,9 @@ footer .wrapper {
 
 @media all and (max-width: 767px) and (min-width: 577px) {
     .menu__header {
-    .menu__init {
-        padding: 0px;
-    }
+        .menu__init {
+            padding: 0px;
+        }
     }
     .btn-hamburger {
         padding: 0px;
@@ -1249,7 +1260,7 @@ footer .wrapper {
         -moz-transform: none;
     }
     .svgIcons svg:active {
-        stroke:#fff;
+        stroke: #fff;
         transform: scale(1.07);
         -webkit-transform: scale(1.07);
         -moz-transform: scale(1.07);
@@ -1300,7 +1311,7 @@ footer .wrapper {
         -moz-transform: none;
     }
     .svgIcons svg:active {
-        stroke:#fff;
+        stroke: #fff;
         transform: scale(1.07);
         -webkit-transform: scale(1.07);
         -moz-transform: scale(1.07);
@@ -1346,7 +1357,7 @@ footer .wrapper {
         width: 103%;
     }
     .svg-logo-one>div:nth-child(2)>svg {
-    margin-top: 25%;
+        margin-top: 25%;
     }
     .svg-logo-two>div:nth-child(2) {
         right: 0%;
@@ -1358,7 +1369,7 @@ footer .wrapper {
 }
 
 @media all and (max-aspect-ratio: 21/19) and (min-aspect-ratio: 19/21) {
-        article {
-            line-height: 1.1;
-        }
+    article {
+        line-height: 1.1;
+    }
 }

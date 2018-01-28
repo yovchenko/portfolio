@@ -1,27 +1,29 @@
 import {
 	resizeContent
 } from './resize';
-let Trianglify = require('trianglify');
 import {
 	anim
-} from './jsonAnimation.js';
+} from './jsonAnimation';
+import {
+	page
+} from './preloader';
 
-/* hamburger menu */
-const btnHamburger = document.getElementsByClassName('btn-hamburger')[0];
-const initText = document.getElementsByClassName('menu__init')[0];
-const $home = $('.js-home');
-const $about = $('.js-about');
-const $work = $('.js-work');
-const $contact = $('.js-contact');
+const btnHamburger = document.getElementsByClassName('btn-hamburger')[0],
+	initText = document.getElementsByClassName('menu__init')[0],
+	$home = $('.js-home'),
+	$about = $('.js-about'),
+	$work = $('.js-work'),
+	$contact = $('.js-contact');
 
 AttachEvent(btnHamburger, "click", EventHandler);
 
 function AttachEvent(element, type, handler) {
 	if (element.addEventListener) element.addEventListener(type, handler, false);
-	else element.attachEvent("on"+type, handler);
+	else element.attachEvent("on" + type, handler);
 }
 
 function EventHandler(e) {
+	e.preventDefault();
 	if (String(this.classList) === 'btn-hamburger') {
 		this.classList.add('btn-is--active');
 		animateMenuToArrow();
@@ -91,127 +93,69 @@ $contact.on('click', {
 	case: 4
 }, content);
 
-let page = {
-	home: true,
-	about: false,
-	work: false,
-	contacts: false,
-	keyboard: false,
-};
-
-Object.defineProperty(page, "elements", {
-	value: {},
-	configurable: true
-});
-
-page.elements.fps = document.getElementsByClassName('fps')[0];
-page.elements.grid = document.getElementsByClassName('grid-container')[0];
-page.elements.flipbook = document.getElementsByClassName('book')[0];
-page.elements.wrapperCanvas = document.getElementsByClassName('canvas-box')[0];
-page.elements.article = document.getElementsByClassName('about')[0];
-page.elements.container = document.getElementsByClassName('containerForm')[0];
-page.elements.logoOne = document.getElementsByClassName('svg-logo-one')[0];
-page.elements.logoTwo = document.getElementsByClassName('svg-logo-two')[0];
-page.elements.touch = document.getElementsByClassName('touch')[0];
-
 function content(event) {
-	const $curtainRight = $('.section-right.is--invisible');
-	const $curtainLeft = $('.section-left.is--invisible');
-	$curtainRight.add($curtainLeft).css('width', '100%');
-	$curtainRight.stop().css('transform', 'translateX(50%)');
-	$curtainLeft.stop().css('transform', 'translateX(-50%)');
-	let $pageNum = event.data.case;
-	let $timerCurtain = setTimeout(function () {
-		if ($pageNum === 4) {
-			$(initText).add(btnHamburger).add(page.elements.article).add(page.elements.logoOne)
-				.add(page.elements.logoTwo).add(page.elements.fps)
-				.add(page.elements.flipbook).add(page.elements.wrapperCanvas).stop().addClass('is--visible');
-
-			$(page.elements.container).add($home).css('display', 'flex');
-
-			page.elements.touch.style.display = 'block';
-
-			anim.stop();
-			resizeContent('.envelope', '#wrap', 530, 630);
-			for (let key in page) {
-				if (key !== 'contacts') { //page contacts
-					page[key] = false;
-				} else {
-					page[key] = true;
+	event.preventDefault();
+	const pageNum = event.data.case;
+	$(page.elements.curtainRight).add(page.elements.curtainLeft).removeClass('is--opening').addClass('is--closing');
+	let $timerCurtains = setTimeout(function () {
+		switch (pageNum) {
+			case 4:
+				$(initText).add(btnHamburger).add(page.elements.article).add(page.elements.logoOne)
+					.add(page.elements.logoTwo).add(page.elements.fps)
+					.add(page.elements.flipbook).add(page.elements.wrapperCanvas).stop().addClass('is--visible');
+				$(page.elements.container).add($home).css('display', 'flex');
+				page.elements.touch.style.display = 'block';
+				anim.stop();
+				resizeContent('.envelope', '#wrap', 530, 630);
+				for (let key in page) {
+					if (key !== 'contacts') page[key] = false; //page contacts
+					else page[key] = true;
 				}
-			}
-			anim.stop();
-		} else if ($pageNum === 3) {
-			$(initText).add(btnHamburger).add(page.elements.logoOne).add(page.elements.logoTwo).add(page.elements.wrapperCanvas)
-				.add(page.elements.fps).add(page.elements.article).add(page.elements.container).stop().css('display', 'none');
-			$home.css('display', 'flex');
-			$(page.elements.flipbook).add(page.elements.touch).css('display', 'block');
-			anim.stop();
-			resizeContent('.bookWrap', '#flipbook', 960, 600);
-			for (let key in page) {
-				if (key !== 'work') { //page work
-					page[key] = false;
-				} else {
-					page[key] = true;
+				anim.stop();
+				break;
+			case 3:
+				$(initText).add(btnHamburger).add(page.elements.logoOne).add(page.elements.logoTwo).add(page.elements.wrapperCanvas)
+					.add(page.elements.fps).add(page.elements.article).add(page.elements.container).stop().css('display', 'none');
+				$home.css('display', 'flex');
+				$(page.elements.flipbook).add(page.elements.touch).css('display', 'block');
+				anim.stop();
+				resizeContent('.bookWrap', '#flipbook', 960, 600);
+				for (let key in page) {
+					if (key !== 'work') page[key] = false; //page work
+					else page[key] = true;
 				}
-			}
-		} else if ($pageNum === 2) {
-			$(initText).add(btnHamburger).add(page.elements.logoOne).add(page.elements.touch)
-				.add(page.elements.flipbook).add(page.elements.logoTwo)
-				.add(page.elements.wrapperCanvas).add(page.elements.fps).add(page.elements.container).stop().css('display', 'none');
-			page.elements.article.style.display = 'grid';
-			$home.css('display', 'flex');
-			anim.play();
-			for (let key in page) {
-				if (key !== 'about') { //page about 
-					page[key] = false;
-				} else {
-					page[key] = true;
+				break;
+			case 2:
+				$(initText).add(btnHamburger).add(page.elements.logoOne).add(page.elements.touch)
+					.add(page.elements.flipbook).add(page.elements.logoTwo)
+					.add(page.elements.wrapperCanvas).add(page.elements.fps).add(page.elements.container).stop().css('display', 'none');
+				page.elements.article.style.display = 'grid';
+				$home.css('display', 'flex');
+				anim.play();
+				for (let key in page) {
+					if (key !== 'about') page[key] = false; //page about 
+					else page[key] = true;
 				}
-			}
-		} else {
-			$(page.elements.wrapperCanvas).add(btnHamburger).add(page.elements.logoOne)
-				.add(page.elements.logoTwo).add(page.elements.fps).css('display', 'grid');
-			$home.add(page.elements.article).add(page.elements.flipbook).add(page.elements.touch)
-				.add(page.elements.container).stop().css('display', 'none');
-			animateArrowToMenu();
-			btnHamburger.classList.remove('active');
-			anim.stop();
-			resizeContent('#figure', '#wrapperCanvas', 800, 900);
-			for (let key in page) {
-				if (key !== 'home') { // page home 
-					page[key] = false;
-				} else {
-					page[key] = true;
+				break;
+			case 2:
+				$(page.elements.wrapperCanvas).add(btnHamburger).add(page.elements.logoOne)
+					.add(page.elements.logoTwo).add(page.elements.fps).css('display', 'grid');
+				$home.add(page.elements.article).add(page.elements.flipbook).add(page.elements.touch)
+					.add(page.elements.container).stop().css('display', 'none');
+				animateArrowToMenu();
+				btnHamburger.classList.remove('active');
+				anim.stop();
+				resizeContent('#figure', '#wrapperCanvas', 800, 900);
+				for (let key in page) {
+					if (key !== 'home') page[key] = false; // page home 
+					else page[key] = true;
 				}
-			}
+				break;
+			default:
+				document.write('Oops, something went wrong!');
 		}
-		document.getElementsByClassName('canvasPic')[0].remove();
-		let pattern = Trianglify({
-			width: window.innerWidth,
-			height: window.innerHeight
-		});
-
-		const canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-		canvasBackground.setAttribute("class", "canvasPic");
-		pattern = Trianglify({
-			cell_size: 95,
-			variance: 0.75,
-			x_colors: 'random',
-			y_colors: 'match_x',
-			palette: Trianglify.colorbrewer,
-			stroke_width: 0.2,
-		});
-		$curtainRight.stop().css({
-			'-webkit-transform': 'translateX(100%)',
-			'-moz-transform': 'translateX(100%)',
-			'transform': 'translateX(100%)'
-		});
-		$curtainLeft.stop().css({
-			'-webkit-transform': 'translateX(-100%)',
-			'-moz-transform': 'translateX(-100%)',
-			'transform': 'translateX(-100%)'
-		});
+		$(page.elements.curtainRight).add(page.elements.curtainLeft).stop()
+			.removeClass('is--closing').addClass('is--opening');
 	}, 1500);
 }
 
@@ -311,21 +255,7 @@ let resizeTimer;
 function resizeScreenObj(event, keyHeight) {
 	clearTimeout(resizeTimer);
 	resizeTimer = setTimeout(function () {
-		document.getElementsByClassName('canvasPic')[0].remove();
-		let pattern = Trianglify({
-			width: window.innerWidth,
-			height: window.innerHeight
-		});
-		const canvasBackground = document.getElementById("main").appendChild(pattern.canvas());
-		pattern = Trianglify({
-			cell_size: 95,
-			variance: 0.75,
-			x_colors: 'random',
-			y_colors: 'match_x',
-			palette: Trianglify.colorbrewer,
-			stroke_width: 0.2,
-		});
-		canvasBackground.setAttribute("class", "canvasPic");
+		page.setBackground;
 		if (page.contacts) {
 			resizeContent('.envelope', '#wrap', 530, 630);
 		} else if (page.home) {
@@ -336,12 +266,11 @@ function resizeScreenObj(event, keyHeight) {
 	}, 122);
 };
 
-/* the form is getting bigger when the on-screen keyboard opens */
 $(document.getElementById('message')).add(document.getElementById('email'))
-.add(document.getElementById('name')).focus(function () {
-	document.getElementsByClassName('containerForm')[0].classList.add('form-is--scaled');
-});
+	.add(document.getElementById('name')).focus(function () {
+		document.getElementsByClassName('containerForm')[0].classList.add('form-is--scaled');
+	});
 $(document.getElementById('message')).add(document.getElementById('email'))
-.add(document.getElementById('name')).focusout(function () {
-	document.getElementsByClassName('containerForm')[0].classList.remove('form-is--scaled');
-});
+	.add(document.getElementById('name')).focusout(function () {
+		document.getElementsByClassName('containerForm')[0].classList.remove('form-is--scaled');
+	});
