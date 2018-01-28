@@ -21,7 +21,7 @@ function AttachEvent(element, type, handler) {
 }
 
 function EventHandler(e) {
-	if (this.classList.value === 'btn-hamburger') {
+	if (String(this.classList) === 'btn-hamburger') {
 		this.classList.add('active');
 		animateMenuToArrow();
 	} else {
