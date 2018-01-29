@@ -856,7 +856,7 @@ header {
     @media (min-width: 961.53846px) {
       .menu__header .menu__init {
         font-size: 50px; } }
-    .menu__header .menu__init.init-is--invisible {
+    .menu__header .menu__init.is--invisible {
       display: none; }
   .menu__header .menu__home {
     display: none;

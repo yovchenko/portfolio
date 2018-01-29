@@ -7087,7 +7087,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Trianglify = __webpack_require__(112);
 
-
 var pattern = void 0,
     encode = void 0,
     svgString = '',
@@ -7107,78 +7106,77 @@ page.about = false;
 page.work = false;
 page.contacts = false;
 page.keyboard = false;
-
+Object.defineProperty(page, "elements", {
+    value: {},
+    configurable: true
+});
+page.elements.fps = document.getElementsByClassName('fps')[0];
+page.elements.btnHamburger = document.getElementsByClassName('btn-hamburger')[0];
+page.elements.grid = document.getElementsByClassName('grid-container')[0];
+page.elements.flipbook = document.getElementsByClassName('book')[0];
+page.elements.wrapperCanvas = document.getElementsByClassName('canvas-box')[0];
+page.elements.article = document.getElementsByClassName('about')[0];
+page.elements.container = document.getElementsByClassName('containerForm')[0];
+page.elements.logoOne = document.getElementsByClassName('svg-logo-one')[0];
+page.elements.logoTwo = document.getElementsByClassName('svg-logo-two')[0];
+page.elements.touch = document.getElementsByClassName('touch')[0];
+page.elements.background = document.getElementsByClassName('canvasBackground')[0];
+page.elements.header = document.getElementsByClassName('header')[0];
+page.elements.footer = document.getElementsByClassName('footer')[0];
+page.elements.initText = document.getElementsByClassName('menu__init')[0];
+Object.defineProperty(page, "pattern", {
+    value: {},
+    enumerable: false
+});
+page.pattern.colorX = 'YlGnBu';
+page.pattern.colorY = 'GnBu';
+Object.defineProperty(page, "setBackground", {
+    get: function get() {
+        this.pattern.canvas = new Trianglify({
+            cell_size: 95,
+            variance: 0.75,
+            x_colors: this.pattern.colorX,
+            y_colors: this.pattern.colorY,
+            width: window.innerWidth,
+            height: window.innerHeight,
+            palette: Trianglify.colorbrewer,
+            stroke_width: 0.2
+        });
+        this.pattern.svg = new XMLSerializer().serializeToString(this.pattern.canvas.svg());
+        this.pattern.encode = window.btoa(page.pattern.svg);
+        return this.elements.background.style.backgroundImage = 'url("data:image/svg+xml;base64,' + this.pattern.encode + '")';
+    },
+    enumerable: false
+});
+pattern = new Trianglify({
+    cell_size: 75,
+    variance: 0.75,
+    x_colors: 'YlOrBr',
+    y_colors: 'Purples',
+    width: window.innerWidth,
+    height: 65,
+    palette: Trianglify.colorbrewer,
+    stroke_width: 0.2
+});
+// Serialize the SVG object to a String
+svgString = new XMLSerializer().serializeToString(pattern.svg());
+// Perform the base64 encoding of the String
+encode = window.btoa(svgString);
+// Set the background image property
+page.elements.footer.style.backgroundImage = 'url("data:image/svg+xml;base64,' + encode + '")';
+page.elements.header.style.backgroundImage = 'url("data:image/svg+xml;base64,' + encode + '")';
 document.addEventListener('DOMContentLoaded', delay);
 /*I'm giving you some extra time to enjoy my preloader*/
 var delay = setTimeout(function () {
     clearInterval(pulse);
     (0, _canvasSphere2.default)();
     _jsonAnimation.anim.stop();
-    (0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
     $(document.getElementsByClassName('footer')[0]).add(document.body).addClass("is--visible");
+    page.setBackground;
     $(document.getElementsByClassName('loader-section')).add(document.getElementById('loader')).add(title).stop().addClass('is--invisible');
-    Object.defineProperty(page, "elements", {
-        value: {},
-        configurable: true
-    });
-    page.elements.fps = document.getElementsByClassName('fps')[0];
-    page.elements.btnHamburger = document.getElementsByClassName('btn-hamburger')[0];
-    page.elements.grid = document.getElementsByClassName('grid-container')[0];
-    page.elements.flipbook = document.getElementsByClassName('book')[0];
-    page.elements.wrapperCanvas = document.getElementsByClassName('canvas-box')[0];
-    page.elements.article = document.getElementsByClassName('about')[0];
-    page.elements.container = document.getElementsByClassName('containerForm')[0];
-    page.elements.logoOne = document.getElementsByClassName('svg-logo-one')[0];
-    page.elements.logoTwo = document.getElementsByClassName('svg-logo-two')[0];
-    page.elements.touch = document.getElementsByClassName('touch')[0];
     page.elements.curtainRight = document.getElementsByClassName('section-right is--invisible')[0];
     page.elements.curtainLeft = document.getElementsByClassName('section-left is--invisible')[0];
-    page.elements.background = document.getElementsByClassName('canvasBackground')[0];
-    page.elements.header = document.getElementsByClassName('header')[0];
-    page.elements.footer = document.getElementsByClassName('footer')[0];
-    page.elements.initText = document.getElementsByClassName('menu__init')[0];
-    Object.defineProperty(page, "pattern", {
-        value: {},
-        enumerable: false
-    });
-    page.pattern.colorX = 'YlGnBu';
-    page.pattern.colorY = 'GnBu';
-    Object.defineProperty(page, "setBackground", {
-        get: function get() {
-            this.pattern.canvas = new Trianglify({
-                cell_size: 95,
-                variance: 0.75,
-                x_colors: this.pattern.colorX,
-                y_colors: this.pattern.colorY,
-                width: window.innerWidth,
-                height: window.innerHeight,
-                palette: Trianglify.colorbrewer,
-                stroke_width: 0.2
-            });
-            this.pattern.svg = new XMLSerializer().serializeToString(this.pattern.canvas.svg());
-            this.pattern.encode = window.btoa(page.pattern.svg);
-            return this.elements.background.style.backgroundImage = 'url("data:image/svg+xml;base64,' + this.pattern.encode + '")';
-        },
-        enumerable: false
-    });
-    pattern = new Trianglify({
-        cell_size: 75,
-        variance: 0.75,
-        x_colors: 'YlOrBr',
-        y_colors: 'Purples',
-        width: window.innerWidth,
-        height: 65,
-        palette: Trianglify.colorbrewer,
-        stroke_width: 0.2
-    });
-    // Serialize the SVG object to a String
-    svgString = new XMLSerializer().serializeToString(pattern.svg());
-    // Perform the base64 encoding of the String
-    encode = window.btoa(svgString);
-    // Set the background image property
-    page.elements.footer.style.backgroundImage = 'url("data:image/svg+xml;base64,' + encode + '")';
-    page.elements.header.style.backgroundImage = 'url("data:image/svg+xml;base64,' + encode + '")';
-    page.setBackground;
+    (0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
     delete page.elements.footer;
     delete page.elements.header;
     pulse = increment = opacity = str = title = pattern = svgString = encode = null; /*there is no place for the garbage collection*/
@@ -7210,7 +7208,7 @@ var delay = setTimeout(function () {
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.default = main;
+exports.default = mainCanvas;
 
 var _jquery = __webpack_require__(18);
 
@@ -7333,7 +7331,7 @@ Matrix3.rotate = function (angle, x, y, z) {
 };
 
 //This is what matters
-function main() {
+function mainCanvas() {
 	var innerText = ["NodeJS", "Webpack", "jQuery", "HTML5", "SCSS", "VBS", "SQL"];
 	var len = innerText.length;
 	var displayFPS = document.getElementsByClassName('fps')[0];
@@ -7572,7 +7570,7 @@ function main() {
 		cancelAnimationFrame(requestID);
 	});
 	document.getElementsByClassName('menu__home')[0].onclick = function (e) {
-		main();
+		mainCanvas();
 	};
 }
 
@@ -30349,258 +30347,249 @@ var _jsonAnimation = __webpack_require__(36);
 
 var _preloader = __webpack_require__(66);
 
-var $home = $('.js-home'),
-    $about = $('.js-about'),
-    $work = $('.js-work'),
-    $contact = $('.js-contact');
+document.addEventListener('DOMContentLoaded', mainPage);
 
-console.log(_preloader.page);
-AttachEvent(_preloader.page.elements.btnHamburger, "click", EventHandler);
+function mainPage() {
+	var $home = $('.js-home'),
+	    $about = $('.js-about'),
+	    $work = $('.js-work'),
+	    $contact = $('.js-contact');
 
-function AttachEvent(element, type, handler) {
-	if (element.addEventListener) element.addEventListener(type, handler, false);else element.attachEvent("on" + type, handler);
-}
+	AttachEvent(_preloader.page.elements.btnHamburger, "click", EventHandler);
 
-function EventHandler(e) {
-	e.preventDefault();
-	if (String(this.classList) === 'btn-hamburger') {
-		this.classList.add('btn-is--active');
-		animateMenuToArrow();
-	} else {
-		animateArrowToMenu();
-		this.classList.remove('btn-is--active');
+	function AttachEvent(element, type, handler) {
+		if (element.addEventListener) element.addEventListener(type, handler, false);else element.attachEvent("on" + type, handler);
 	}
-}
 
-function animateMenuToArrow() {
-	_preloader.page.elements.initText.classList.add('init-is--invisible');
-	$($about).add($work).add($contact).addClass('is--visible');
-	headerText();
-}
+	function EventHandler(e) {
+		e.preventDefault();
+		if (String(this.classList) === 'btn-hamburger') {
+			this.classList.add('btn-is--active');
+			_preloader.page.elements.initText.style.display = 'none';
+			animateMenuToArrow();
+		} else {
+			animateArrowToMenu();
+			this.classList.remove('btn-is--active');
+			_preloader.page.elements.initText.style.display = 'block';
+		}
+	}
 
-function animateArrowToMenu() {
-	_preloader.page.elements.initText.classList.remove('init-is--invisible');
-	$($about).add($work).add($contact).removeClass('is--visible');
-}
+	function animateMenuToArrow() {
+		_preloader.page.elements.initText.classList.add('is--invisible');
+		$($about).add($work).add($contact).addClass('is--visible');
+		headerText();
+	}
 
-/*header text animation*/
-var headerText = function headerText() {
-	var s = void 0,
-	    textLetters = {
-		settings: {
-			lettersAbout: $about,
-			lettersWork: $work,
-			lettersContact: $contact
-		},
-		init: function init() {
-			s = this.settings;
-			this.bindEvents();
-		},
-		bindEvents: function bindEvents() {
-			$about.text('About');
-			$work.text('Work');
-			$contact.text('Contact');{
-				s.lettersAbout.html(function (i, el) {
-					var text = $.trim(el).split("");
-					return '<span>' + text.join('</span><span>') + '</span>';
-				});
-				s.lettersWork.html(function (i, el) {
-					var text = $.trim(el).split("");
-					return '<span>' + text.join('</span><span>') + '</span>';
-				});
-				s.lettersContact.html(function (i, el) {
-					var text = $.trim(el).split("");
-					return '<span>' + text.join('</span><span>') + '</span>';
-				});
+	function animateArrowToMenu() {
+		_preloader.page.elements.initText.classList.remove('is--invisible');
+		$($about).add($work).add($contact).removeClass('is--visible');
+	}
+
+	/*header text animation*/
+	var headerText = function headerText() {
+		var s = void 0,
+		    textLetters = {
+			settings: {
+				lettersAbout: $about,
+				lettersWork: $work,
+				lettersContact: $contact
+			},
+			init: function init() {
+				s = this.settings;
+				this.bindEvents();
+			},
+			bindEvents: function bindEvents() {
+				$about.text('About');
+				$work.text('Work');
+				$contact.text('Contact');{
+					s.lettersAbout.html(function (i, el) {
+						var text = $.trim(el).split("");
+						return '<span>' + text.join('</span><span>') + '</span>';
+					});
+					s.lettersWork.html(function (i, el) {
+						var text = $.trim(el).split("");
+						return '<span>' + text.join('</span><span>') + '</span>';
+					});
+					s.lettersContact.html(function (i, el) {
+						var text = $.trim(el).split("");
+						return '<span>' + text.join('</span><span>') + '</span>';
+					});
+				}
+			}
+		};
+		textLetters.init();
+	};
+
+	/* replace content onclick */
+	$home.on('click', {
+		case: 1
+	}, content);
+	$about.on("click", {
+		case: 2
+	}, content);
+	$work.on('click', {
+		case: 3
+	}, content);
+	$contact.on('click', {
+		case: 4
+	}, content);
+
+	function content(event) {
+		event.preventDefault();
+		for (var key in _preloader.page) {
+			_preloader.page[key] = false;
+		}
+		var pageNum = event.data.case;
+		$(_preloader.page.elements.curtainRight).add(_preloader.page.elements.curtainLeft).removeClass('is--opening').addClass('is--closing');
+		var $timerCurtains = setTimeout(function () {
+			switch (pageNum) {
+				case 4:
+					$(_preloader.page.elements.initText).add(_preloader.page.elements.btnHamburger).add(_preloader.page.elements.article).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.fps).add(_preloader.page.elements.flipbook).add(_preloader.page.elements.wrapperCanvas).stop().css('display', 'none');
+					$(_preloader.page.elements.container).add($home).css('display', 'flex');
+					_preloader.page.elements.touch.style.display = 'block';
+					_jsonAnimation.anim.stop();
+					(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+					_preloader.page['contacts'] = true; //page contacts
+					_jsonAnimation.anim.stop();
+					break;
+				case 3:
+					$(_preloader.page.elements.initText).add(_preloader.page.elements.btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.wrapperCanvas).add(_preloader.page.elements.fps).add(_preloader.page.elements.article).add(_preloader.page.elements.container).stop().css('display', 'none');
+					$home.css('display', 'flex');
+					$(_preloader.page.elements.flipbook).add(_preloader.page.elements.touch).css('display', 'block');
+					_jsonAnimation.anim.stop();
+					(0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
+					_preloader.page['work'] = true; //page work
+					break;
+				case 2:
+					$(_preloader.page.elements.initText).add(_preloader.page.elements.btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.touch).add(_preloader.page.elements.flipbook).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.wrapperCanvas).add(_preloader.page.elements.fps).add(_preloader.page.elements.container).stop().css('display', 'none');
+					_preloader.page.elements.article.style.display = 'grid';
+					$home.css('display', 'flex');
+					_jsonAnimation.anim.play();
+					_preloader.page['about'] = true; //page about
+					break;
+				case 1:
+					$(_preloader.page.elements.wrapperCanvas).add(_preloader.page.elements.initText).add(_preloader.page.elements.btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.fps).css('display', 'grid');
+					$home.add(_preloader.page.elements.article).add(_preloader.page.elements.flipbook).add(_preloader.page.elements.touch).add(_preloader.page.elements.container).stop().css('display', 'none');
+					animateArrowToMenu();
+					_preloader.page.elements.btnHamburger.classList.remove('active');
+					_jsonAnimation.anim.stop();
+					(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
+					_preloader.page['home'] = true; // page home 
+					break;
+				default:
+					document.write('Oops, something went wrong!');
+			}
+			$(_preloader.page.elements.curtainRight).add(_preloader.page.elements.curtainLeft).stop().removeClass('is--closing').addClass('is--opening');
+		}, 1500);
+	}
+
+	window.addEventListener("orientationchange", function () {
+		if (_preloader.page.keyboard) {
+			window.lastOrientation = true;
+		}
+	}, false);
+
+	function updateWindowSize() {
+		window.lastInnerWidth = window.innerWidth;
+		window.lastInnerHeight = window.innerHeight;
+		// Stays the same for iOS, so that's our ticket to detect iOS keyboard
+		window.lastOrientation = false;
+		window.lastBodyHeight = document.body.clientHeight;
+	};
+
+	function detectKeyboard() {
+		function orientationChange() {
+			if (window.lastOrientation) {
+				return !window.lastOrientation;
+			} else {
+				return window.lastOrientation;
 			}
 		}
+
+		// No orientation change, keyboard opening
+		if (window.lastInnerHeight - window.innerHeight > 150 && window.innerWidth == window.lastInnerWidth) {
+			var _keyboardHeight = window.lastInnerHeight - window.innerHeight;
+			updateWindowSize();
+			return _keyboardHeight;
+		}
+		// Orientation change with keyboard already opened
+		if (orientationChange() && _preloader.page.keyboard) {
+			var _keyboardHeight2 = screen.height - window.topBarHeight - window.innerHeight;
+			updateWindowSize();
+			return _keyboardHeight2;
+		}
+
+		// No orientation change, keyboard closing
+		if (window.innerHeight - window.lastInnerHeight > 150 && window.innerWidth == window.lastInnerWidth) {
+			var _keyboardHeight3 = -1;
+			updateWindowSize();
+			return _keyboardHeight3;
+		}
+
+		// Orientation change or regular resize, no keyboard action
+		var keyboardHeight = 0;
+		updateWindowSize();
+		return keyboardHeight;
 	};
-	textLetters.init();
-};
 
-/* replace content onclick */
-$home.on('click', {
-	case: 1
-}, content);
-$about.on("click", {
-	case: 2
-}, content);
-$work.on('click', {
-	case: 3
-}, content);
-$contact.on('click', {
-	case: 4
-}, content);
+	function keyboardShift(keyboardHeight) {
+		_preloader.page.elements.grid.style.cssText = 'grid-template-rows:65px calc(100vh + ' + keyboardHeight + 'px) auto;';
+		_preloader.page.keyboard = true;
+		resizeScreenObj(event, keyboardHeight);
+	};
 
-function content(event) {
-	event.preventDefault();
-	var pageNum = event.data.case;
-	$(_preloader.page.elements.curtainRight).add(_preloader.page.elements.curtainLeft).removeClass('is--opening').addClass('is--closing');
-	var $timerCurtains = setTimeout(function () {
-		switch (pageNum) {
-			case 4:
+	function removeKeyboardShift() {
+		_preloader.page.elements.grid.style.cssText = 'grid-template-rows:65px calc(100vh - 65px) auto;';
+		_preloader.page.keyboard = false;
+		resizeScreenObj(event, 0);
+	};
 
-				$(_preloader.page.elements.initText).add(_preloader.page.elements.btnHamburger).add(_preloader.page.elements.article).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.fps).add(_preloader.page.elements.flipbook).add(_preloader.page.elements.wrapperCanvas).stop().addClass('is--invisible');
+	// OnStart innit
+	(function () {
+		updateWindowSize();
+		window.topBarHeight = screen.height - window.innerHeight;
+		window.addEventListener("resize", resizeThrottler, false);
 
-				$(_preloader.page.elements.container).add($home).css('display', 'flex');
+		var resizeTimeout = void 0;
 
-				_preloader.page.elements.touch.style.display = 'block';
+		function resizeThrottler() {
+			// ignore resize events as long as an actualResizeHandler execution is in the queue
+			if (!resizeTimeout) {
+				resizeTimeout = setTimeout(function () {
+					resizeTimeout = null;
+					actualResizeHandler();
+					// The actualResizeHandler will execute at a rate of 15fps
+				}, 66);
+			}
+		}
 
-				_jsonAnimation.anim.stop();
+		function actualResizeHandler() {
+			var keyboardHeight = detectKeyboard();
+			if (keyboardHeight > 0) {
+				keyboardShift(keyboardHeight);
+			} else if (keyboardHeight == -1) {
+				removeKeyboardShift();
+			}
+		}
+	})();
+
+	window.onresize = resizeScreenObj;
+	var resizeTimer = void 0;
+
+	function resizeScreenObj(event, keyHeight) {
+		clearTimeout(resizeTimer);
+		resizeTimer = setTimeout(function () {
+			_preloader.page.setBackground;
+			if (_preloader.page.contacts) {
 				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-
-				for (var key in _preloader.page) {
-					if (key !== 'contacts') _preloader.page[key] = false; //page contacts
-					else _preloader.page[key] = true;
-				}
-				_jsonAnimation.anim.stop();
-				break;
-			case 3:
-				$(_preloader.page.elements.initText).add(_preloader.page.elements.btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.wrapperCanvas).add(_preloader.page.elements.fps).add(_preloader.page.elements.article).add(_preloader.page.elements.container).stop().css('display', 'none');
-				$home.css('display', 'flex');
-				$(_preloader.page.elements.flipbook).add(_preloader.page.elements.touch).css('display', 'block');
-				_jsonAnimation.anim.stop();
-				(0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
-				for (var _key in _preloader.page) {
-					if (_key !== 'work') _preloader.page[_key] = false; //page work
-					else _preloader.page[_key] = true;
-				}
-				break;
-			case 2:
-				$(_preloader.page.elements.initText).add(_preloader.page.elements.btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.touch).add(_preloader.page.elements.flipbook).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.wrapperCanvas).add(_preloader.page.elements.fps).add(_preloader.page.elements.container).stop().css('display', 'none');
-				_preloader.page.elements.article.style.display = 'grid';
-				$home.css('display', 'flex');
-				_jsonAnimation.anim.play();
-				for (var _key2 in _preloader.page) {
-					if (_key2 !== 'about') _preloader.page[_key2] = false; //page about 
-					else _preloader.page[_key2] = true;
-				}
-				break;
-			case 1:
-				$(_preloader.page.elements.wrapperCanvas).add(_preloader.page.elements.btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.fps).css('display', 'grid');
-				$home.add(_preloader.page.elements.article).add(_preloader.page.elements.flipbook).add(_preloader.page.elements.touch).add(_preloader.page.elements.container).stop().css('display', 'none');
-				animateArrowToMenu();
-				_preloader.page.elements.btnHamburger.classList.remove('active');
-				_jsonAnimation.anim.stop();
+			} else if (_preloader.page.home) {
 				(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
-				for (var _key3 in _preloader.page) {
-					if (_key3 !== 'home') _preloader.page[_key3] = false; // page home 
-					else _preloader.page[_key3] = true;
-				}
-				break;
-			default:
-				document.write('Oops, something went wrong!');
-		}
-		$(_preloader.page.elements.curtainRight).add(_preloader.page.elements.curtainLeft).stop().removeClass('is--closing').addClass('is--opening');
-	}, 1500);
+			} else if (_preloader.page.work) {
+				(0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
+			}
+		}, 122);
+	};
 }
-
-window.addEventListener("orientationchange", function () {
-	if (_preloader.page.keyboard) {
-		window.lastOrientation = true;
-	}
-}, false);
-
-function updateWindowSize() {
-	window.lastInnerWidth = window.innerWidth;
-	window.lastInnerHeight = window.innerHeight;
-	// Stays the same for iOS, so that's our ticket to detect iOS keyboard
-	window.lastOrientation = false;
-	window.lastBodyHeight = document.body.clientHeight;
-};
-
-function detectKeyboard() {
-	function orientationChange() {
-		if (window.lastOrientation) {
-			return !window.lastOrientation;
-		} else {
-			return window.lastOrientation;
-		}
-	}
-
-	// No orientation change, keyboard opening
-	if (window.lastInnerHeight - window.innerHeight > 150 && window.innerWidth == window.lastInnerWidth) {
-		var _keyboardHeight = window.lastInnerHeight - window.innerHeight;
-		updateWindowSize();
-		return _keyboardHeight;
-	}
-	// Orientation change with keyboard already opened
-	if (orientationChange() && _preloader.page.keyboard) {
-		var _keyboardHeight2 = screen.height - window.topBarHeight - window.innerHeight;
-		updateWindowSize();
-		return _keyboardHeight2;
-	}
-
-	// No orientation change, keyboard closing
-	if (window.innerHeight - window.lastInnerHeight > 150 && window.innerWidth == window.lastInnerWidth) {
-		var _keyboardHeight3 = -1;
-		updateWindowSize();
-		return _keyboardHeight3;
-	}
-
-	// Orientation change or regular resize, no keyboard action
-	var keyboardHeight = 0;
-	updateWindowSize();
-	return keyboardHeight;
-};
-
-function keyboardShift(keyboardHeight) {
-	_preloader.page.elements.grid.style.cssText = 'grid-template-rows:65px calc(100vh + ' + keyboardHeight + 'px) auto;';
-	_preloader.page.keyboard = true;
-	resizeScreenObj(event, keyboardHeight);
-};
-
-function removeKeyboardShift() {
-	_preloader.page.elements.grid.style.cssText = 'grid-template-rows:65px calc(100vh - 65px) auto;';
-	_preloader.page.keyboard = false;
-	resizeScreenObj(event, 0);
-};
-
-// OnStart innit
-(function () {
-	updateWindowSize();
-	window.topBarHeight = screen.height - window.innerHeight;
-	window.addEventListener("resize", resizeThrottler, false);
-
-	var resizeTimeout = void 0;
-
-	function resizeThrottler() {
-		// ignore resize events as long as an actualResizeHandler execution is in the queue
-		if (!resizeTimeout) {
-			resizeTimeout = setTimeout(function () {
-				resizeTimeout = null;
-				actualResizeHandler();
-				// The actualResizeHandler will execute at a rate of 15fps
-			}, 66);
-		}
-	}
-
-	function actualResizeHandler() {
-		var keyboardHeight = detectKeyboard();
-		if (keyboardHeight > 0) {
-			keyboardShift(keyboardHeight);
-		} else if (keyboardHeight == -1) {
-			removeKeyboardShift();
-		}
-	}
-})();
-
-window.onresize = resizeScreenObj;
-var resizeTimer = void 0;
-
-function resizeScreenObj(event, keyHeight) {
-	clearTimeout(resizeTimer);
-	resizeTimer = setTimeout(function () {
-		_preloader.page.setBackground;
-		if (_preloader.page.contacts) {
-			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-		} else if (_preloader.page.home) {
-			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
-		} else if (_preloader.page.work) {
-			(0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
-		}
-	}, 122);
-};
 
 /***/ }),
 /* 131 */
