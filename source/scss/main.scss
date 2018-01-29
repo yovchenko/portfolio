@@ -1382,3 +1382,9 @@ footer .wrapper {
         line-height: 1.1;
     }
 }
+
+@media all and (max-aspect-ratio: 23/19) and (min-aspect-ratio: 19/23) {
+.canvas-box {
+    transform: scale(.9);
+}
+}

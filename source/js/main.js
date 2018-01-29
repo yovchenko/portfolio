@@ -255,7 +255,6 @@ function mainPage() {
 	function resizeScreenObj(event, keyHeight) {
 		clearTimeout(resizeTimer);
 		resizeTimer = setTimeout(function () {
-			page.setBackground;
 			if (page.contacts) {
 				resizeContent('.envelope', '#wrap', 530, 630);
 			} else if (page.home) {
