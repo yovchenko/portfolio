@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', mainPage);
 
 function mainPage() {
 	const $home = $('.js-home'),
-		  $about = $('.js-about'),
-		  $work = $('.js-work'),
-		  $contact = $('.js-contact');
+		$about = $('.js-about'),
+		$work = $('.js-work'),
+		$contact = $('.js-contact');
 
 	AttachEvent(page.elements.btnHamburger, "click", EventHandler);
 
@@ -94,54 +94,66 @@ function mainPage() {
 	$contact.on('click', {
 		case: 4
 	}, content);
+
 	function content(event) {
 		event.preventDefault();
 		for (let key in page) {
-			page[key] = false; 
+			page[key] = false;
 		}
 		const pageNum = event.data.case;
 		$(page.elements.curtainRight).add(page.elements.curtainLeft).removeClass('is--opening').addClass('is--closing');
 		let $timerCurtains = setTimeout(function () {
+			anim.stop();
 			switch (pageNum) {
-				case 4: for (let key in page.elements) {
-							if (key !== 'container' && key !== 'touch' && key !== 'home')
+				case 4:
+					for (let key in page.elements) {
+						if (key !== 'container' && key !== 'touch' && key !== 'home')
 							page.elements[key].style.display = 'none';
-							else page.elements[key].style.display = 'flex';
-						}	
-					anim.stop();
+						else page.elements[key].style.display = 'flex';
+					}
+					page.pattern.colorX = 'Paired';
+					page.pattern.colorY = 'Spectral';
 					resizeContent('.envelope', '#wrap', 530, 630);
-					page['contacts'] = true;  								//page contacts
+					page['contacts'] = true; //page contacts
 					break;
-				case 3: for (let key in page.elements) {
-							if (key !== 'flipbook' && key !== 'touch' && key !== 'home')
+				case 3:
+					for (let key in page.elements) {
+						if (key !== 'flipbook' && key !== 'touch' && key !== 'home')
 							page.elements[key].style.display = 'none';
-							else page.elements[key].style.display = 'flex';
-						}	
-					anim.stop();
+						else page.elements[key].style.display = 'flex';
+					}
+					page.pattern.colorX = 'Greys';
+					page.pattern.colorY = 'Greys';
 					resizeContent('.bookWrap', '#flipbook', 960, 600);
-					page['work'] = true;  									//page work
+					page['work'] = true; //page work
 					break;
-				case 2:  for (let key in page.elements) {
-							if (key !== 'article' && key !== 'home')
+				case 2:
+					for (let key in page.elements) {
+						if (key !== 'article' && key !== 'home')
 							page.elements[key].style.display = 'none';
-							else page.elements[key].style.display = 'flex';
-						}	
-					anim.play(); 
-					page['about'] = true;  									//page about
+						else page.elements[key].style.display = 'flex';
+					}
+					page.pattern.colorX = 'PuOr';
+					page.pattern.colorY = 'Pastel2';
+					anim.play();
+					page['about'] = true; //page about
 					break;
-				case 1:	 for (let key in page.elements) {
-							if (key === 'article' || key === 'flipbook' || key === 'touch' || key === 'container' || key === 'home')
+				case 1:
+					for (let key in page.elements) {
+						if (key === 'article' || key === 'flipbook' || key === 'touch' || key === 'container' || key === 'home')
 							page.elements[key].style.display = 'none';
-							else page.elements[key].style.display = 'grid';
-						}	
+						else page.elements[key].style.display = 'grid';
+					}
+					page.pattern.colorX = 'YlGnBu';
+					page.pattern.colorY = 'GnBu';
 					animateArrowToMenu();
-					anim.stop();
 					resizeContent('#figure', '#wrapperCanvas', 800, 900);
-					page['home'] = true;  									// page home 
+					page['home'] = true; // page home 
 					break;
 				default:
 					document.write('Oops, something went wrong!');
 			}
+			page.setBackground;
 			$(page.elements.curtainRight).add(page.elements.curtainLeft).stop()
 				.removeClass('is--closing').addClass('is--opening');
 		}, 1500);

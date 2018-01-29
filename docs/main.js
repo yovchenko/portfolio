@@ -7192,7 +7192,7 @@ var delay = setTimeout(function () {
     });
     delete page.elements.footer;
     delete page.elements.header;
-    pulse = increment = opacity = str = title = pattern = svgString = encode = null; /*there is no place for the garbage collection*/
+    pulse = increment = opacity = str = title = pattern = svgString = encode = null; /*there is no place for the garbage collection here*/
     if (document.images) {
         var img1 = new Image();
         var img2 = new Image();
@@ -30446,6 +30446,7 @@ function mainPage() {
 	$contact.on('click', {
 		case: 4
 	}, content);
+
 	function content(event) {
 		event.preventDefault();
 		for (var key in _preloader.page) {
@@ -30454,12 +30455,14 @@ function mainPage() {
 		var pageNum = event.data.case;
 		$(_preloader.page.elements.curtainRight).add(_preloader.page.elements.curtainLeft).removeClass('is--opening').addClass('is--closing');
 		var $timerCurtains = setTimeout(function () {
+			_jsonAnimation.anim.stop();
 			switch (pageNum) {
 				case 4:
 					for (var _key in _preloader.page.elements) {
 						if (_key !== 'container' && _key !== 'touch' && _key !== 'home') _preloader.page.elements[_key].style.display = 'none';else _preloader.page.elements[_key].style.display = 'flex';
 					}
-					_jsonAnimation.anim.stop();
+					_preloader.page.pattern.colorX = 'Paired';
+					_preloader.page.pattern.colorY = 'Spectral';
 					(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 					_preloader.page['contacts'] = true; //page contacts
 					break;
@@ -30467,7 +30470,8 @@ function mainPage() {
 					for (var _key2 in _preloader.page.elements) {
 						if (_key2 !== 'flipbook' && _key2 !== 'touch' && _key2 !== 'home') _preloader.page.elements[_key2].style.display = 'none';else _preloader.page.elements[_key2].style.display = 'flex';
 					}
-					_jsonAnimation.anim.stop();
+					_preloader.page.pattern.colorX = 'Greys';
+					_preloader.page.pattern.colorY = 'Greys';
 					(0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
 					_preloader.page['work'] = true; //page work
 					break;
@@ -30475,6 +30479,8 @@ function mainPage() {
 					for (var _key3 in _preloader.page.elements) {
 						if (_key3 !== 'article' && _key3 !== 'home') _preloader.page.elements[_key3].style.display = 'none';else _preloader.page.elements[_key3].style.display = 'flex';
 					}
+					_preloader.page.pattern.colorX = 'PuOr';
+					_preloader.page.pattern.colorY = 'Pastel2';
 					_jsonAnimation.anim.play();
 					_preloader.page['about'] = true; //page about
 					break;
@@ -30482,14 +30488,16 @@ function mainPage() {
 					for (var _key4 in _preloader.page.elements) {
 						if (_key4 === 'article' || _key4 === 'flipbook' || _key4 === 'touch' || _key4 === 'container' || _key4 === 'home') _preloader.page.elements[_key4].style.display = 'none';else _preloader.page.elements[_key4].style.display = 'grid';
 					}
+					_preloader.page.pattern.colorX = 'YlGnBu';
+					_preloader.page.pattern.colorY = 'GnBu';
 					animateArrowToMenu();
-					_jsonAnimation.anim.stop();
 					(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
 					_preloader.page['home'] = true; // page home 
 					break;
 				default:
 					document.write('Oops, something went wrong!');
 			}
+			_preloader.page.setBackground;
 			$(_preloader.page.elements.curtainRight).add(_preloader.page.elements.curtainLeft).stop().removeClass('is--closing').addClass('is--opening');
 		}, 1500);
 	}

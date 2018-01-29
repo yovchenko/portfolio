@@ -113,7 +113,7 @@ let delay = setTimeout(function () {
     });
     delete page.elements.footer;
     delete page.elements.header;
-    pulse = increment = opacity = str = title = pattern = svgString = encode = null; /*there is no place for the garbage collection*/
+    pulse = increment = opacity = str = title = pattern = svgString = encode = null; /*there is no place for the garbage collection here*/
     if (document.images) {
         let img1 = new Image();
         let img2 = new Image();
