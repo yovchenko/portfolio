@@ -7122,6 +7122,7 @@ var delay = setTimeout(function () {
         configurable: true
     });
     page.elements.fps = document.getElementsByClassName('fps')[0];
+    page.elements.btnHamburger = document.getElementsByClassName('btn-hamburger')[0];
     page.elements.grid = document.getElementsByClassName('grid-container')[0];
     page.elements.flipbook = document.getElementsByClassName('book')[0];
     page.elements.wrapperCanvas = document.getElementsByClassName('canvas-box')[0];
@@ -7135,6 +7136,7 @@ var delay = setTimeout(function () {
     page.elements.background = document.getElementsByClassName('canvasBackground')[0];
     page.elements.header = document.getElementsByClassName('header')[0];
     page.elements.footer = document.getElementsByClassName('footer')[0];
+    page.elements.initText = document.getElementsByClassName('menu__init')[0];
     Object.defineProperty(page, "pattern", {
         value: {},
         enumerable: false
@@ -30347,14 +30349,13 @@ var _jsonAnimation = __webpack_require__(36);
 
 var _preloader = __webpack_require__(66);
 
-var btnHamburger = document.getElementsByClassName('btn-hamburger')[0],
-    initText = document.getElementsByClassName('menu__init')[0],
-    $home = $('.js-home'),
+var $home = $('.js-home'),
     $about = $('.js-about'),
     $work = $('.js-work'),
     $contact = $('.js-contact');
 
-AttachEvent(btnHamburger, "click", EventHandler);
+console.log(_preloader.page);
+AttachEvent(_preloader.page.elements.btnHamburger, "click", EventHandler);
 
 function AttachEvent(element, type, handler) {
 	if (element.addEventListener) element.addEventListener(type, handler, false);else element.attachEvent("on" + type, handler);
@@ -30372,13 +30373,13 @@ function EventHandler(e) {
 }
 
 function animateMenuToArrow() {
-	initText.classList.add('init-is--invisible');
+	_preloader.page.elements.initText.classList.add('init-is--invisible');
 	$($about).add($work).add($contact).addClass('is--visible');
 	headerText();
 }
 
 function animateArrowToMenu() {
-	initText.classList.remove('init-is--invisible');
+	_preloader.page.elements.initText.classList.remove('init-is--invisible');
 	$($about).add($work).add($contact).removeClass('is--visible');
 }
 
@@ -30438,11 +30439,16 @@ function content(event) {
 	var $timerCurtains = setTimeout(function () {
 		switch (pageNum) {
 			case 4:
-				$(initText).add(btnHamburger).add(_preloader.page.elements.article).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.fps).add(_preloader.page.elements.flipbook).add(_preloader.page.elements.wrapperCanvas).stop().addClass('is--visible');
+
+				$(_preloader.page.elements.initText).add(_preloader.page.elements.btnHamburger).add(_preloader.page.elements.article).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.fps).add(_preloader.page.elements.flipbook).add(_preloader.page.elements.wrapperCanvas).stop().addClass('is--invisible');
+
 				$(_preloader.page.elements.container).add($home).css('display', 'flex');
+
 				_preloader.page.elements.touch.style.display = 'block';
+
 				_jsonAnimation.anim.stop();
 				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+
 				for (var key in _preloader.page) {
 					if (key !== 'contacts') _preloader.page[key] = false; //page contacts
 					else _preloader.page[key] = true;
@@ -30450,7 +30456,7 @@ function content(event) {
 				_jsonAnimation.anim.stop();
 				break;
 			case 3:
-				$(initText).add(btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.wrapperCanvas).add(_preloader.page.elements.fps).add(_preloader.page.elements.article).add(_preloader.page.elements.container).stop().css('display', 'none');
+				$(_preloader.page.elements.initText).add(_preloader.page.elements.btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.wrapperCanvas).add(_preloader.page.elements.fps).add(_preloader.page.elements.article).add(_preloader.page.elements.container).stop().css('display', 'none');
 				$home.css('display', 'flex');
 				$(_preloader.page.elements.flipbook).add(_preloader.page.elements.touch).css('display', 'block');
 				_jsonAnimation.anim.stop();
@@ -30461,7 +30467,7 @@ function content(event) {
 				}
 				break;
 			case 2:
-				$(initText).add(btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.touch).add(_preloader.page.elements.flipbook).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.wrapperCanvas).add(_preloader.page.elements.fps).add(_preloader.page.elements.container).stop().css('display', 'none');
+				$(_preloader.page.elements.initText).add(_preloader.page.elements.btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.touch).add(_preloader.page.elements.flipbook).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.wrapperCanvas).add(_preloader.page.elements.fps).add(_preloader.page.elements.container).stop().css('display', 'none');
 				_preloader.page.elements.article.style.display = 'grid';
 				$home.css('display', 'flex');
 				_jsonAnimation.anim.play();
@@ -30471,10 +30477,10 @@ function content(event) {
 				}
 				break;
 			case 1:
-				$(_preloader.page.elements.wrapperCanvas).add(btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.fps).css('display', 'grid');
+				$(_preloader.page.elements.wrapperCanvas).add(_preloader.page.elements.btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.fps).css('display', 'grid');
 				$home.add(_preloader.page.elements.article).add(_preloader.page.elements.flipbook).add(_preloader.page.elements.touch).add(_preloader.page.elements.container).stop().css('display', 'none');
 				animateArrowToMenu();
-				btnHamburger.classList.remove('active');
+				_preloader.page.elements.btnHamburger.classList.remove('active');
 				_jsonAnimation.anim.stop();
 				(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
 				for (var _key3 in _preloader.page) {

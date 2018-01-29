@@ -7,15 +7,14 @@ import {
 import {
 	page
 } from './preloader';
+document.addEventListener('DOMContentLoaded', mainPage);
+function mainPage() {
+const $home = $('.js-home'),
+	  $about = $('.js-about'),
+	  $work = $('.js-work'),
+	  $contact = $('.js-contact');
 
-const btnHamburger = document.getElementsByClassName('btn-hamburger')[0],
-	initText = document.getElementsByClassName('menu__init')[0],
-	$home = $('.js-home'),
-	$about = $('.js-about'),
-	$work = $('.js-work'),
-	$contact = $('.js-contact');
-
-AttachEvent(btnHamburger, "click", EventHandler);
+AttachEvent(page.elements.btnHamburger, "click", EventHandler);
 
 function AttachEvent(element, type, handler) {
 	if (element.addEventListener) element.addEventListener(type, handler, false);
@@ -26,21 +25,23 @@ function EventHandler(e) {
 	e.preventDefault();
 	if (String(this.classList) === 'btn-hamburger') {
 		this.classList.add('btn-is--active');
+		page.elements.initText.style.display = 'none';
 		animateMenuToArrow();
 	} else {
 		animateArrowToMenu();
 		this.classList.remove('btn-is--active');
+		page.elements.initText.style.display = 'block';
 	}
 }
 
 function animateMenuToArrow() {
-	initText.classList.add('init-is--invisible');
+	page.elements.initText.classList.add('is--invisible');
 	$($about).add($work).add($contact).addClass('is--visible');
 	headerText();
 }
 
 function animateArrowToMenu() {
-	initText.classList.remove('init-is--invisible');
+	page.elements.initText.classList.remove('is--invisible');
 	$($about).add($work).add($contact).removeClass('is--visible');
 }
 
@@ -100,56 +101,48 @@ function content(event) {
 	let $timerCurtains = setTimeout(function () {
 		switch (pageNum) {
 			case 4:
-				$(initText).add(btnHamburger).add(page.elements.article).add(page.elements.logoOne)
+		
+				$(page.elements.initText).add(page.elements.btnHamburger).add(page.elements.article).add(page.elements.logoOne)
 					.add(page.elements.logoTwo).add(page.elements.fps)
-					.add(page.elements.flipbook).add(page.elements.wrapperCanvas).stop().addClass('is--visible');
+					.add(page.elements.flipbook).add(page.elements.wrapperCanvas).stop().css('display', 'none');
+
 				$(page.elements.container).add($home).css('display', 'flex');
+
 				page.elements.touch.style.display = 'block';
+
 				anim.stop();
 				resizeContent('.envelope', '#wrap', 530, 630);
-				for (let key in page) {
-					if (key !== 'contacts') page[key] = false; //page contacts
-					else page[key] = true;
-				}
+
 				anim.stop();
 				break;
 			case 3:
-				$(initText).add(btnHamburger).add(page.elements.logoOne).add(page.elements.logoTwo).add(page.elements.wrapperCanvas)
+				$(page.elements.initText).add(page.elements.btnHamburger).add(page.elements.logoOne).add(page.elements.logoTwo).add(page.elements.wrapperCanvas)
 					.add(page.elements.fps).add(page.elements.article).add(page.elements.container).stop().css('display', 'none');
 				$home.css('display', 'flex');
 				$(page.elements.flipbook).add(page.elements.touch).css('display', 'block');
 				anim.stop();
 				resizeContent('.bookWrap', '#flipbook', 960, 600);
-				for (let key in page) {
-					if (key !== 'work') page[key] = false; //page work
-					else page[key] = true;
-				}
+			
 				break;
 			case 2:
-				$(initText).add(btnHamburger).add(page.elements.logoOne).add(page.elements.touch)
+				$(page.elements.initText).add(page.elements.btnHamburger).add(page.elements.logoOne).add(page.elements.touch)
 					.add(page.elements.flipbook).add(page.elements.logoTwo)
 					.add(page.elements.wrapperCanvas).add(page.elements.fps).add(page.elements.container).stop().css('display', 'none');
 				page.elements.article.style.display = 'grid';
 				$home.css('display', 'flex');
 				anim.play();
-				for (let key in page) {
-					if (key !== 'about') page[key] = false; //page about 
-					else page[key] = true;
-				}
+			
 				break;
 			case 1:
-				$(page.elements.wrapperCanvas).add(btnHamburger).add(page.elements.logoOne)
+				$(page.elements.wrapperCanvas).add(page.elements.initText).add(page.elements.btnHamburger).add(page.elements.logoOne)
 					.add(page.elements.logoTwo).add(page.elements.fps).css('display', 'grid');
 				$home.add(page.elements.article).add(page.elements.flipbook).add(page.elements.touch)
 					.add(page.elements.container).stop().css('display', 'none');
 				animateArrowToMenu();
-				btnHamburger.classList.remove('active');
+				page.elements.btnHamburger.classList.remove('active');
 				anim.stop();
 				resizeContent('#figure', '#wrapperCanvas', 800, 900);
-				for (let key in page) {
-					if (key !== 'home') page[key] = false; // page home 
-					else page[key] = true;
-				}
+				
 				break;
 			default:
 				document.write('Oops, something went wrong!');
@@ -265,4 +258,4 @@ function resizeScreenObj(event, keyHeight) {
 		}
 	}, 122);
 };
-
+}

@@ -115,7 +115,7 @@ Matrix3.rotate = function (angle, x, y, z) {
 }
 
 //This is what matters
-export default function main() {
+export default function mainCanvas() {
 	const innerText = ["NodeJS", "Webpack", "jQuery", "HTML5", "SCSS", "VBS", "SQL"];
 	const len = innerText.length;
 	const displayFPS = document.getElementsByClassName('fps')[0];
@@ -293,6 +293,6 @@ export default function main() {
 		cancelAnimationFrame(requestID);
 	});
 	document.getElementsByClassName('menu__home')[0].onclick = function (e) {
-		main();
+		mainCanvas();
 	}
 }
