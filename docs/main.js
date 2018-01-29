@@ -30464,25 +30464,25 @@ function mainPage() {
 					_preloader.page['contacts'] = true; //page contacts
 					break;
 				case 3:
-					$(_preloader.page.elements.initText).add(_preloader.page.elements.btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.wrapperCanvas).add(_preloader.page.elements.fps).add(_preloader.page.elements.article).add(_preloader.page.elements.container).stop().css('display', 'none');
-					$home.css('display', 'flex');
-					$(_preloader.page.elements.flipbook).add(_preloader.page.elements.touch).css('display', 'block');
+					for (var _key2 in _preloader.page.elements) {
+						if (_key2 !== 'flipbook' && _key2 !== 'touch' && _key2 !== 'home') _preloader.page.elements[_key2].style.display = 'none';else _preloader.page.elements[_key2].style.display = 'flex';
+					}
 					_jsonAnimation.anim.stop();
 					(0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
 					_preloader.page['work'] = true; //page work
 					break;
 				case 2:
-					$(_preloader.page.elements.initText).add(_preloader.page.elements.btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.touch).add(_preloader.page.elements.flipbook).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.wrapperCanvas).add(_preloader.page.elements.fps).add(_preloader.page.elements.container).stop().css('display', 'none');
-					_preloader.page.elements.article.style.display = 'grid';
-					$home.css('display', 'flex');
+					for (var _key3 in _preloader.page.elements) {
+						if (_key3 !== 'article' && _key3 !== 'home') _preloader.page.elements[_key3].style.display = 'none';else _preloader.page.elements[_key3].style.display = 'flex';
+					}
 					_jsonAnimation.anim.play();
 					_preloader.page['about'] = true; //page about
 					break;
 				case 1:
-					$(_preloader.page.elements.wrapperCanvas).add(_preloader.page.elements.initText).add(_preloader.page.elements.btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.fps).css('display', 'grid');
-					$home.add(_preloader.page.elements.article).add(_preloader.page.elements.flipbook).add(_preloader.page.elements.touch).add(_preloader.page.elements.container).stop().css('display', 'none');
+					for (var _key4 in _preloader.page.elements) {
+						if (_key4 === 'article' || _key4 === 'flipbook' || _key4 === 'touch' || _key4 === 'container' || _key4 === 'home') _preloader.page.elements[_key4].style.display = 'none';else _preloader.page.elements[_key4].style.display = 'grid';
+					}
 					animateArrowToMenu();
-					_preloader.page.elements.btnHamburger.classList.remove('active');
 					_jsonAnimation.anim.stop();
 					(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
 					_preloader.page['home'] = true; // page home 

@@ -295,6 +295,7 @@ figure {
 
 .about {
     display: none;
+    flex-direction: column;
     grid-row: 1 / 4;
     grid-column: 1 / 4;
     grid-template-rows: 1fr 1fr;
@@ -320,9 +321,17 @@ article p {
     width: 100%;
     grid-column: 1 / 4;
     grid-row: 2 / 4;
+    height: 100%;
+    position: relative;
 }
 
 #animationWindow>svg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
     max-width: 100%;
     max-height: 100%;
 }

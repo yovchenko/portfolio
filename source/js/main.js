@@ -112,34 +112,32 @@ function mainPage() {
 					resizeContent('.envelope', '#wrap', 530, 630);
 					page['contacts'] = true;  								//page contacts
 					break;
-				case 3:
-					$(page.elements.initText).add(page.elements.btnHamburger).add(page.elements.logoOne).add(page.elements.logoTwo).add(page.elements.wrapperCanvas)
-						.add(page.elements.fps).add(page.elements.article).add(page.elements.container).stop().css('display', 'none');
-					$home.css('display', 'flex');
-					$(page.elements.flipbook).add(page.elements.touch).css('display', 'block');
+				case 3: for (let key in page.elements) {
+							if (key !== 'flipbook' && key !== 'touch' && key !== 'home')
+							page.elements[key].style.display = 'none';
+							else page.elements[key].style.display = 'flex';
+						}	
 					anim.stop();
 					resizeContent('.bookWrap', '#flipbook', 960, 600);
-					page['work'] = true;  //page work
+					page['work'] = true;  									//page work
 					break;
-				case 2:
-					$(page.elements.initText).add(page.elements.btnHamburger).add(page.elements.logoOne).add(page.elements.touch)
-						.add(page.elements.flipbook).add(page.elements.logoTwo)
-						.add(page.elements.wrapperCanvas).add(page.elements.fps).add(page.elements.container).stop().css('display', 'none');
-					page.elements.article.style.display = 'grid';
-					$home.css('display', 'flex');
+				case 2:  for (let key in page.elements) {
+							if (key !== 'article' && key !== 'home')
+							page.elements[key].style.display = 'none';
+							else page.elements[key].style.display = 'flex';
+						}	
 					anim.play(); 
-					page['about'] = true;  //page about
+					page['about'] = true;  									//page about
 					break;
-				case 1:
-					$(page.elements.wrapperCanvas).add(page.elements.initText).add(page.elements.btnHamburger).add(page.elements.logoOne)
-						.add(page.elements.logoTwo).add(page.elements.fps).css('display', 'grid');
-					$home.add(page.elements.article).add(page.elements.flipbook).add(page.elements.touch)
-						.add(page.elements.container).stop().css('display', 'none');
+				case 1:	 for (let key in page.elements) {
+							if (key === 'article' || key === 'flipbook' || key === 'touch' || key === 'container' || key === 'home')
+							page.elements[key].style.display = 'none';
+							else page.elements[key].style.display = 'grid';
+						}	
 					animateArrowToMenu();
-					page.elements.btnHamburger.classList.remove('active');
 					anim.stop();
 					resizeContent('#figure', '#wrapperCanvas', 800, 900);
-					page['home'] = true;  // page home 
+					page['home'] = true;  									// page home 
 					break;
 				default:
 					document.write('Oops, something went wrong!');
