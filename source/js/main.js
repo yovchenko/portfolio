@@ -94,26 +94,23 @@ function mainPage() {
 	$contact.on('click', {
 		case: 4
 	}, content);
-
 	function content(event) {
 		event.preventDefault();
 		for (let key in page) {
-			page[key] = false;
+			page[key] = false; 
 		}
 		const pageNum = event.data.case;
 		$(page.elements.curtainRight).add(page.elements.curtainLeft).removeClass('is--opening').addClass('is--closing');
 		let $timerCurtains = setTimeout(function () {
 			switch (pageNum) {
-				case 4:
-					$(page.elements.initText).add(page.elements.btnHamburger).add(page.elements.article).add(page.elements.logoOne)
-						.add(page.elements.logoTwo).add(page.elements.fps)
-						.add(page.elements.flipbook).add(page.elements.wrapperCanvas).stop().css('display', 'none');
-					$(page.elements.container).add($home).css('display', 'flex');
-					page.elements.touch.style.display = 'block';
+				case 4: for (let key in page.elements) {
+							if (key !== 'container' && key !== 'touch')
+							page.elements[key].style.display = 'none';
+							else page.elements[key].style.display = 'flex';
+						}
 					anim.stop();
 					resizeContent('.envelope', '#wrap', 530, 630);
-					page['contacts'] = true;  //page contacts
-					anim.stop();
+					page['contacts'] = true;  								//page contacts
 					break;
 				case 3:
 					$(page.elements.initText).add(page.elements.btnHamburger).add(page.elements.logoOne).add(page.elements.logoTwo).add(page.elements.wrapperCanvas)

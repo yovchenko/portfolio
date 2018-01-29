@@ -35,11 +35,11 @@ $contactForm.submit(function(e) {
         });
     }
 });
-$(document.getElementById('message')).add(document.getElementById('email'))
-	.add(document.getElementById('name')).focus(function () {
-		$contactForm.addClass('form-is--scaled');
-	});
-$(document.getElementById('message')).add(document.getElementById('email'))
-	.add(document.getElementById('name')).focusout(function () {
-		$contactForm.removeClass('form-is--scaled');
-	});
+$(document.getElementById('message')).add(document.getElementById('email'))	
+	.add(document.getElementById('name')).focus(function () {	
+		document.getElementsByClassName('containerForm')[0].classList.add('form-is--scaled');	
+});	
+$(document.getElementById('message')).add(document.getElementById('email'))	
+	.add(document.getElementById('name')).focusout(function () {	
+		document.getElementsByClassName('containerForm')[0].classList.remove('form-is--scaled');	
+});

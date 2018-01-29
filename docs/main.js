@@ -7112,7 +7112,6 @@ Object.defineProperty(page, "elements", {
 });
 page.elements.fps = document.getElementsByClassName('fps')[0];
 page.elements.btnHamburger = document.getElementsByClassName('btn-hamburger')[0];
-page.elements.grid = document.getElementsByClassName('grid-container')[0];
 page.elements.flipbook = document.getElementsByClassName('book')[0];
 page.elements.wrapperCanvas = document.getElementsByClassName('canvas-box')[0];
 page.elements.article = document.getElementsByClassName('about')[0];
@@ -7120,10 +7119,17 @@ page.elements.container = document.getElementsByClassName('containerForm')[0];
 page.elements.logoOne = document.getElementsByClassName('svg-logo-one')[0];
 page.elements.logoTwo = document.getElementsByClassName('svg-logo-two')[0];
 page.elements.touch = document.getElementsByClassName('touch')[0];
-page.elements.background = document.getElementsByClassName('canvasBackground')[0];
 page.elements.header = document.getElementsByClassName('header')[0];
 page.elements.footer = document.getElementsByClassName('footer')[0];
 page.elements.initText = document.getElementsByClassName('menu__init')[0];
+Object.defineProperty(page.elements, "background", {
+    value: document.getElementsByClassName('canvasBackground')[0],
+    enumerable: false
+});
+Object.defineProperty(page.elements, "grid", {
+    value: document.getElementsByClassName('grid-container')[0],
+    enumerable: false
+});
 Object.defineProperty(page, "pattern", {
     value: {},
     enumerable: false
@@ -7172,11 +7178,17 @@ var delay = setTimeout(function () {
     (0, _canvasSphere2.default)();
     _jsonAnimation.anim.stop();
     $(document.getElementsByClassName('footer')[0]).add(document.body).addClass("is--visible");
-    page.setBackground;
     $(document.getElementsByClassName('loader-section')).add(document.getElementById('loader')).add(title).stop().addClass('is--invisible');
-    page.elements.curtainRight = document.getElementsByClassName('section-right is--invisible')[0];
-    page.elements.curtainLeft = document.getElementsByClassName('section-left is--invisible')[0];
+    page.setBackground;
     (0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
+    Object.defineProperty(page.elements, "curtainLeft", {
+        value: document.getElementsByClassName('section-left is--invisible')[0],
+        enumerable: false
+    });
+    Object.defineProperty(page.elements, "curtainRight", {
+        value: document.getElementsByClassName('section-right is--invisible')[0],
+        enumerable: false
+    });
     delete page.elements.footer;
     delete page.elements.header;
     pulse = increment = opacity = str = title = pattern = svgString = encode = null; /*there is no place for the garbage collection*/
@@ -30433,7 +30445,6 @@ function mainPage() {
 	$contact.on('click', {
 		case: 4
 	}, content);
-
 	function content(event) {
 		event.preventDefault();
 		for (var key in _preloader.page) {
@@ -30444,13 +30455,12 @@ function mainPage() {
 		var $timerCurtains = setTimeout(function () {
 			switch (pageNum) {
 				case 4:
-					$(_preloader.page.elements.initText).add(_preloader.page.elements.btnHamburger).add(_preloader.page.elements.article).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.fps).add(_preloader.page.elements.flipbook).add(_preloader.page.elements.wrapperCanvas).stop().css('display', 'none');
-					$(_preloader.page.elements.container).add($home).css('display', 'flex');
-					_preloader.page.elements.touch.style.display = 'block';
+					for (var _key in _preloader.page.elements) {
+						if (_key !== 'container' && _key !== 'touch') _preloader.page.elements[_key].style.display = 'none';else _preloader.page.elements[_key].style.display = 'flex';
+					}
 					_jsonAnimation.anim.stop();
 					(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 					_preloader.page['contacts'] = true; //page contacts
-					_jsonAnimation.anim.stop();
 					break;
 				case 3:
 					$(_preloader.page.elements.initText).add(_preloader.page.elements.btnHamburger).add(_preloader.page.elements.logoOne).add(_preloader.page.elements.logoTwo).add(_preloader.page.elements.wrapperCanvas).add(_preloader.page.elements.fps).add(_preloader.page.elements.article).add(_preloader.page.elements.container).stop().css('display', 'none');
@@ -30647,10 +30657,10 @@ $contactForm.submit(function (e) {
     }
 });
 $(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focus(function () {
-    $contactForm.addClass('form-is--scaled');
+    document.getElementsByClassName('containerForm')[0].classList.add('form-is--scaled');
 });
 $(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focusout(function () {
-    $contactForm.removeClass('form-is--scaled');
+    document.getElementsByClassName('containerForm')[0].classList.remove('form-is--scaled');
 });
 
 /***/ }),

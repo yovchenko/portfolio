@@ -32,7 +32,6 @@ Object.defineProperty(page, "elements", {
 });
 page.elements.fps = document.getElementsByClassName('fps')[0];
 page.elements.btnHamburger = document.getElementsByClassName('btn-hamburger')[0];
-page.elements.grid = document.getElementsByClassName('grid-container')[0];
 page.elements.flipbook = document.getElementsByClassName('book')[0];
 page.elements.wrapperCanvas = document.getElementsByClassName('canvas-box')[0];
 page.elements.article = document.getElementsByClassName('about')[0];
@@ -40,10 +39,17 @@ page.elements.container = document.getElementsByClassName('containerForm')[0];
 page.elements.logoOne = document.getElementsByClassName('svg-logo-one')[0];
 page.elements.logoTwo = document.getElementsByClassName('svg-logo-two')[0];
 page.elements.touch = document.getElementsByClassName('touch')[0];
-page.elements.background = document.getElementsByClassName('canvasBackground')[0];
 page.elements.header = document.getElementsByClassName('header')[0];
 page.elements.footer = document.getElementsByClassName('footer')[0];
 page.elements.initText = document.getElementsByClassName('menu__init')[0];
+Object.defineProperty(page.elements, "background", {
+    value: document.getElementsByClassName('canvasBackground')[0],
+    enumerable: false
+});
+Object.defineProperty(page.elements, "grid", {
+    value: document.getElementsByClassName('grid-container')[0],
+    enumerable: false
+});
 Object.defineProperty(page, "pattern", {
     value: {},
     enumerable: false
@@ -52,7 +58,7 @@ page.pattern.colorX = 'YlGnBu';
 page.pattern.colorY = 'GnBu';
 Object.defineProperty(page, "setBackground", {
     get: function () {
-       this.pattern.canvas = new Trianglify({
+        this.pattern.canvas = new Trianglify({
             cell_size: 95,
             variance: 0.75,
             x_colors: this.pattern.colorX,
@@ -92,15 +98,21 @@ let delay = setTimeout(function () {
     mainCanvas();
     anim.stop();
     $(document.getElementsByClassName('footer')[0]).add(document.body).addClass("is--visible");
-    page.setBackground;
     $(document.getElementsByClassName('loader-section')).add(document.getElementById('loader'))
-    .add(title).stop().addClass('is--invisible');
-    page.elements.curtainRight = document.getElementsByClassName('section-right is--invisible')[0];
-    page.elements.curtainLeft = document.getElementsByClassName('section-left is--invisible')[0];
+        .add(title).stop().addClass('is--invisible');
+    page.setBackground;
     resizeContent('#figure', '#wrapperCanvas', 800, 900);
+    Object.defineProperty(page.elements, "curtainLeft", {
+        value: document.getElementsByClassName('section-left is--invisible')[0],
+        enumerable: false
+    });
+    Object.defineProperty(page.elements, "curtainRight", {
+        value: document.getElementsByClassName('section-right is--invisible')[0],
+        enumerable: false
+    });
     delete page.elements.footer;
     delete page.elements.header;
-    pulse = increment = opacity = str = title = pattern = svgString = encode = null;  /*there is no place for the garbage collection*/
+    pulse = increment = opacity = str = title = pattern = svgString = encode = null; /*there is no place for the garbage collection*/
     if (document.images) {
         let img1 = new Image();
         let img2 = new Image();
