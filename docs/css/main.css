@@ -668,7 +668,8 @@ progress[value] {
 .svg-logo-one div .bar-before, .svg-logo-two div .bar-before {
   font-size: 1.5em;
   text-align: center;
-  margin: 5px 0px; }
+  margin: 5px 0px;
+  height: auto; }
 
 progress[value]::-webkit-progress-bar {
   background: transparent;
@@ -1011,6 +1012,13 @@ figure {
 .svg-logo-one div,
 .svg-logo-two div {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   text-align: center; }
 
@@ -1965,3 +1973,8 @@ footer .wrapper {
 @media all and (max-aspect-ratio: 21 / 19) and (min-aspect-ratio: 19 / 21) {
   article {
     line-height: 1.1; } }
+
+@media all and (max-aspect-ratio: 23 / 19) and (min-aspect-ratio: 19 / 23) {
+  .canvas-box {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9); } }
