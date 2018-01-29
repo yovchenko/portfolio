@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', mainPage);
 
 function mainPage() {
 	const $home = $('.js-home'),
-		$about = $('.js-about'),
-		$work = $('.js-work'),
-		$contact = $('.js-contact');
+		  $about = $('.js-about'),
+		  $work = $('.js-work'),
+		  $contact = $('.js-contact');
 
 	AttachEvent(page.elements.btnHamburger, "click", EventHandler);
 
@@ -104,10 +104,10 @@ function mainPage() {
 		let $timerCurtains = setTimeout(function () {
 			switch (pageNum) {
 				case 4: for (let key in page.elements) {
-							if (key !== 'container' && key !== 'touch')
+							if (key !== 'container' && key !== 'touch' && key !== 'home')
 							page.elements[key].style.display = 'none';
 							else page.elements[key].style.display = 'flex';
-						}
+						}	
 					anim.stop();
 					resizeContent('.envelope', '#wrap', 530, 630);
 					page['contacts'] = true;  								//page contacts

@@ -39,6 +39,7 @@ page.elements.container = document.getElementsByClassName('containerForm')[0];
 page.elements.logoOne = document.getElementsByClassName('svg-logo-one')[0];
 page.elements.logoTwo = document.getElementsByClassName('svg-logo-two')[0];
 page.elements.touch = document.getElementsByClassName('touch')[0];
+page.elements.home = document.getElementsByClassName('menu__home')[0];
 page.elements.header = document.getElementsByClassName('header')[0];
 page.elements.footer = document.getElementsByClassName('footer')[0];
 page.elements.initText = document.getElementsByClassName('menu__init')[0];
