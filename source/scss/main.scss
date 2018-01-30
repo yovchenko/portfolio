@@ -276,6 +276,7 @@ figure {
 .svg-logo-two div {
     position: relative;
     display: flex;
+    display: -webkit-box;
     flex-direction: column;
     width: 100%;
     height: 100%;
