@@ -764,9 +764,14 @@ header {
   -webkit-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6);
   box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6); }
   .footer .footer-grid {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -774,9 +779,14 @@ header {
         -ms-flex-align: center;
             align-items: center; }
   .footer.is--visible {
+    display: flex;
+    /* NEW, Spec - Firefox, Chrome, Opera */
     display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;
-    display: flex; }
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Safari 6.1+. iOS 7.1+, BB10 */ }
 
 .fps {
   position: absolute;
@@ -812,9 +822,14 @@ header {
 
 /*header letters appearing*/
 .menu__header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  /* NEW, Spec - Firefox, Chrome, Opera */
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   width: 100%;
   height: 100%;
   position: relative;
@@ -1025,9 +1040,14 @@ figure {
 .svg-logo-one div,
 .svg-logo-two div {
   position: relative;
-  display: -ms-flexbox;
   display: flex;
+  /* NEW, Spec - Firefox, Chrome, Opera */
   display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
