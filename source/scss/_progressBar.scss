@@ -5,6 +5,7 @@ progress[value] {
 	padding: 2px;
     width: 100%;
 	height: 1.4em;
+	margin: 5px 0px;
 	color: #fff;
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.2);
@@ -15,7 +16,7 @@ progress[value] {
 .svg-logo-one div .bar-before, .svg-logo-two div .bar-before {
 	font-size: 1.5em;
 	text-align: center;
-	margin: 5px 0px;
+	margin-top: 5px;
 	height: auto
 }
 
