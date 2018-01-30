@@ -16,7 +16,7 @@ progress[value] {
 	font-size: 1.5em;
 	text-align: center;
 	margin: 5px 0px;
-	height: auto;
+	height: auto
 }
 
 progress[value]::-webkit-progress-bar {
@@ -44,9 +44,15 @@ progress[value]::-moz-progress-bar {
 	.svg-logo-one div .bar-before, .svg-logo-two div .bar-before {
 	font-size: 1.4em;
 	}
+	progress[value] {
+		height: 1.3em;
+	}
 }
 @media all and (max-width: 576px) {
 	.svg-logo-one div .bar-before, .svg-logo-two div .bar-before {
 	font-size: 1.3em;
+	}
+	progress[value] {
+		height: 1.2em;
 	}
 }
