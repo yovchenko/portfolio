@@ -691,11 +691,15 @@ progress[value]::-moz-progress-bar {
 
 @media all and (max-width: 767px) and (min-width: 577px) {
   .svg-logo-one div .bar-before, .svg-logo-two div .bar-before {
-    font-size: 1.4em; } }
+    font-size: 1.4em; }
+  progress[value] {
+    height: 1.3em; } }
 
 @media all and (max-width: 576px) {
   .svg-logo-one div .bar-before, .svg-logo-two div .bar-before {
-    font-size: 1.3em; } }
+    font-size: 1.3em; }
+  progress[value] {
+    height: 1.2em; } }
 
 @font-face {
   font-family: "sketch";
@@ -1020,7 +1024,11 @@ figure {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  text-align: center; }
+  height: 100%;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .svg-logo-two div:nth-child(2) svg {
   width: 160%;
@@ -1036,6 +1044,11 @@ figure {
 .svg-logo-one > div:nth-child(3) > svg {
   position: relative;
   width: 88.4%; }
+
+.svg-logo-one div svg,
+.svg-logo-two div svg {
+  height: auto;
+  max-height: 100%; }
 
 .about {
   display: none;
@@ -1943,6 +1956,7 @@ footer .wrapper {
     grid-column: 1 / 4;
     margin-bottom: 10px;
     width: 100%;
+    height: 30%;
     position: relative;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
