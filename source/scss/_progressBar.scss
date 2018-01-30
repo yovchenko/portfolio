@@ -14,7 +14,7 @@ progress[value] {
 }
 
 .svg-logo-one div .bar-before, .svg-logo-two div .bar-before {
-	font-size: 1.5em;
+	font-size: 1.4em;
 	text-align: center;
 	margin-top: 5px;
 	height: auto
@@ -43,7 +43,7 @@ progress[value]::-moz-progress-bar {
 
 @media all and (max-width: 767px) and (min-width: 577px) {
 	.svg-logo-one div .bar-before, .svg-logo-two div .bar-before {
-	font-size: 1.4em;
+	font-size: 1.3em;
 	}
 	progress[value] {
 		height: 1.3em;
