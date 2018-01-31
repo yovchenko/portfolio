@@ -764,13 +764,13 @@ header {
   -webkit-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6);
   box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6); }
   .footer .footer-grid {
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;
     /* TWEENER - IE 10 */
     /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;
     /* NEW, Spec - Firefox, Chrome, Opera */
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -778,13 +778,13 @@ header {
         -ms-flex-align: center;
             align-items: center; }
   .footer.is--visible {
-    display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;
     /* TWEENER - IE 10 */
     /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
     display: flex;
-    /* NEW, Spec - Firefox, Chrome, Opera */ }
+    /* NEW, Spec - Firefox, Chrome, Opera */
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6, BB7 */ }
 
 .fps {
   position: absolute;
