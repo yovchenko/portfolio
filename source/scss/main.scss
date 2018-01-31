@@ -248,6 +248,11 @@ figure {
     background-repeat: no-repeat;
 }
 
+.svg-logo-one div svg,
+.svg-logo-two div svg {
+    width: 100%;
+}
+
 .svg-logo-one {
     grid-row: 1/4;
     grid-column: 1;
@@ -257,6 +262,7 @@ figure {
     grid-template-rows: repeat(3, 1fr);
     align-items: center;
     justify-content: center;
+    z-index: -1;
 }
 
 .svg-logo-two {
@@ -270,6 +276,7 @@ figure {
     padding: 5px 0;
     grid-template-rows: repeat(3, 1fr);
     align-items: center;
+    z-index: -1;
 }
 
 .svg-logo-one div,
