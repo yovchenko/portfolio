@@ -55,18 +55,18 @@ header {
     -moz-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6);
     box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6);
     .footer-grid {
-        display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
         display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
         display: -ms-flexbox;  /* TWEENER - IE 10 */
         display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+        display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
         justify-content: space-between;
         align-items: center;
     }
     &.is--visible {
-        display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
         display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
         display: -ms-flexbox;  /* TWEENER - IE 10 */
         display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+        display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     }
 }
 
@@ -107,10 +107,10 @@ header {
 /*header letters appearing*/
 
 .menu__header {
-    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
     display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
     width: 100%;
     height: 100%;
     position: relative;
@@ -284,13 +284,13 @@ figure {
 .svg-logo-one div,
 .svg-logo-two div {
     position: relative;
-    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    display: -webkit-flex;
     display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     display: -ms-flexbox;  /* TWEENER - IE 10 */
-    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;  
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    max-height: 100%;
     text-align: center;
     justify-content: center;
 }
