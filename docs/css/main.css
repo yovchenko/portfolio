@@ -2009,7 +2009,7 @@ footer .wrapper {
   article {
     line-height: 1.1; } }
 
-@media all and (max-aspect-ratio: 23 / 19) and (min-aspect-ratio: 19 / 23) {
+@media all and (max-aspect-ratio: 23 / 18) and (min-aspect-ratio: 18 / 23) {
   .canvas-box {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9); } }
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85); } }

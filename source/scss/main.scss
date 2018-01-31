@@ -1413,8 +1413,8 @@ footer .wrapper {
     }
 }
 
-@media all and (max-aspect-ratio: 23/19) and (min-aspect-ratio: 19/23) {
+@media all and (max-aspect-ratio: 23/18) and (min-aspect-ratio: 18/23) {
 .canvas-box {
-    transform: scale(.9);
+    transform: scale(.85);
 }
 }
