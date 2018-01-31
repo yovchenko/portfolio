@@ -983,11 +983,6 @@ figure {
   background-size: cover;
   background-repeat: no-repeat; }
 
-.svg-logo-one div svg,
-.svg-logo-two div svg {
-  width: 100%;
-  height: 100%; }
-
 .svg-logo-one {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
