@@ -1373,7 +1373,8 @@ footer .wrapper {
         grid-template-rows: 1fr;
         grid-template-columns: 15% 15% 15%;
         grid-gap: 25%;
-        align-items: center;
+        align-items: flex-end;
+        align-items: end;
     }
     .svg-logo-two {
         grid-column: 1 / 4;
@@ -1386,6 +1387,7 @@ footer .wrapper {
         grid-template-rows: 1fr;
         grid-gap: 25%;
         align-items: end;
+        align-items: flex-end;
         align-self: end;
     }
 
