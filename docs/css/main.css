@@ -725,6 +725,7 @@ progress[value]::-moz-progress-bar {
 
 html, html body {
   height: 100%;
+  overflow: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "sketch", "Georgia", serif;
@@ -732,7 +733,17 @@ html, html body {
   font-size: 10px;
   line-height: 1; }
   html body {
-    background-color: rgba(106, 137, 244, 0.17); }
+    width: 100%;
+    overflow: auto;
+    position: fixed;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat; }
 
 .grid-container {
   display: -ms-grid;
@@ -977,20 +988,6 @@ figure {
     margin: 50px 70px 70px 0px;
     z-index: 1;
     image-rendering: optimizeSpeed; }
-
-.canvasBackground {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  margin-top: 65px;
-  z-index: -2;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-size: 100% 100%;
-  background-size: cover;
-  background-repeat: no-repeat; }
 
 .svg-logo-one div svg,
 .svg-logo-two div svg {

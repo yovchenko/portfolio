@@ -7124,7 +7124,7 @@ page.elements.header = document.getElementsByClassName('header')[0];
 page.elements.footer = document.getElementsByClassName('footer')[0];
 page.elements.initText = document.getElementsByClassName('menu__init')[0];
 Object.defineProperty(page.elements, "background", {
-    value: document.getElementsByClassName('canvasBackground')[0],
+    value: document.body,
     enumerable: false
 });
 Object.defineProperty(page.elements, "grid", {
