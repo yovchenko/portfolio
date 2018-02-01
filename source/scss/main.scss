@@ -26,6 +26,7 @@ html {
         background-size: 100% 100%;
         background-size: cover;
         background-repeat: no-repeat;
+        will-change: transform; // creates a new paint layer
     }
 }
 

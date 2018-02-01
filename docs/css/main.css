@@ -743,7 +743,8 @@ html, html body {
     bottom: 0;
     background-size: 100% 100%;
     background-size: cover;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    will-change: transform; }
 
 .grid-container {
   display: -ms-grid;
