@@ -674,6 +674,7 @@ progress[value] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  vertical-align: middle;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
