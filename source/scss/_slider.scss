@@ -6,6 +6,7 @@
 	margin: 0 auto;
 	text-align: center;
 	z-index: -1;
+	overflow: visible;
 	.slider__range {
 		-webkit-appearance: none;
 		appearance: none;
@@ -17,6 +18,7 @@
 		padding: 0px 2px;
 		background: rgba(0, 0, 0, 0.2);
 		border-radius: 10px;
+		overflow: visible;
 		&::-webkit-slider-thumb {
 			-webkit-appearance: none;
 			appearance: none;
