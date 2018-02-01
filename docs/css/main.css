@@ -734,7 +734,7 @@ html, html body {
   line-height: 1; }
   html body {
     width: 100%;
-    overflow: auto;
+    overflow-y: auto;
     position: fixed;
     z-index: -2;
     top: 0;
@@ -752,8 +752,8 @@ html, html body {
   min-height: 100%;
   position: relative;
       grid-template-areas: "head" "main" "footer";
-  -ms-grid-rows: 65px calc(100vh - 65px) 65px;
-      grid-template-rows: 65px calc(100vh - 65px) 65px;
+  -ms-grid-rows: 65px calc(100vh - 63px) 65px;
+      grid-template-rows: 65px calc(100vh - 63px) 65px;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
   overflow: hidden; }

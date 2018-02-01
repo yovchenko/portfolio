@@ -16,7 +16,7 @@ html {
     body {
         @extend html;
         width: 100%;
-        overflow: auto;
+        overflow-y: auto;
         position: fixed;
         z-index: -2;
         top: 0;

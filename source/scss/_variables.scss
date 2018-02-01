@@ -1,6 +1,6 @@
 $svg-color: #2c3e50;
-$hundred: 100;
-$header: 65;
-$main: calc(#{$hundred}vh - #{$header}px);
+$height: 100;
+$header: 63;
+$main: calc(#{$height}vh - #{$header}px);
 
 
