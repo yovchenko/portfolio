@@ -6,6 +6,14 @@
         updateHandleValues(this.value, flipbook);
     }
 
+    $('.slider__range').change(function () {
+        var val = ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'));
+        
+        $(this).css('background',
+                    '#fff'
+                    );
+    });
+
     Hash.on('^page\/([0-9]*)$', {
         yep: function (path, parts) {
             var page = parts[1];
