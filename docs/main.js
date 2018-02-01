@@ -35311,12 +35311,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         updateHandleValues(this.value, flipbook);
     };
 
-    $('.slider__range').change(function () {
-        var val = ($(this).val() - $(this).attr('min')) / ($(this).attr('max') - $(this).attr('min'));
-
-        $(this).css('background', '#fff');
-    });
-
     Hash.on('^page\/([0-9]*)$', {
         yep: function yep(path, parts) {
             var page = parts[1];

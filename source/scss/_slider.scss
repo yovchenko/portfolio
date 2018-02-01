@@ -53,22 +53,18 @@ input[type=range]::-ms-track {
 	border-radius: 10px;
 	-webkit-appearance: none;
 	overflow: visible;
-	&::-ms-thumb {
-		appearance: none;
-		width: 25px;
-		height: 25px;
-		outline: none;
-		cursor: pointer;
-		box-shadow: 0px 0px 1px 5px $svg-color;
-		border: transparent;
-		border-radius: 50%;
-		z-index: 0;
-	}
   }
 
-input[type=range]:focus::-ms-fill-lower {
-	background:  #fff;
-	padding: 2px;
+input[type=range]::-ms-thumb {
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	outline: none;
+	cursor: pointer;
+	box-shadow: 0px 0px 1px 5px $svg-color;
+	border: transparent;
+	border-radius: 50%;
+	z-index: 0;
 }
 
 input[type=range]::-moz-range-track {

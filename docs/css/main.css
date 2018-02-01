@@ -638,7 +638,7 @@ template {
       border-radius: 50%;
       z-index: 0; }
 
-input[type=range]::-ms-track {
+    .slider .slider__range::-ms-track {
   -webkit-appearance: none;
   appearance: none;
   outline: none;
@@ -650,20 +650,17 @@ input[type=range]::-ms-track {
   border-radius: 10px;
   -webkit-appearance: none;
   overflow: visible; }
-  input[type=range]::-ms-track::-ms-thumb {
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    outline: none;
-    cursor: pointer;
-    box-shadow: 0px 0px 1px 5px #2c3e50;
-    border: transparent;
-    border-radius: 50%;
-    z-index: 0; }
 
-input[type=range]:focus::-ms-fill-lower {
-  background: #fff;
-  padding: 2px; }
+  .slider .slider__range::-ms-thumb {
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 1px 5px #2c3e50;
+  border: transparent;
+  border-radius: 50%;
+  z-index: 0; }
 
 input[type=range]::-moz-range-track {
   background-color: transparent; }
