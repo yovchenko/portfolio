@@ -845,6 +845,7 @@ footer .wrapper {
     transform: scale(1.07);
     -webkit-transform: scale(1.07);
     -moz-transform: scale(1.07);
+    box-sizing: border-box;
 }
 
 /* preloader */
