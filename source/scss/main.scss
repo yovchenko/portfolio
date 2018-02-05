@@ -205,6 +205,21 @@ main {
     z-index: 2;
 }
 
+.canvasBackground {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin-top: 65px;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: 100% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 figure {
     width: 100%;
     position: absolute;
@@ -761,7 +776,7 @@ label {
 input[type=text],
 input[type=email],
 textarea {
-    font: 14px normal normal uppercase helvetica, arial, serif;
+    font: 22px normal normal uppercase helvetica, "Times New Roman", Times, serif;
     color: #7c7873;
     background: none;
     outline: none;
@@ -781,6 +796,7 @@ textarea {
     height: 90px;
     resize: vertical;
     margin: 0;
+    overflow: hidden;
 }
 
 #name:focus,
