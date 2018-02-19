@@ -602,7 +602,8 @@ template {
   position: relative;
   width: 80%;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  z-index: -1; }
   .slider .slider__range {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -635,7 +636,7 @@ template {
       border-radius: 50%;
       z-index: 0; }
     .slider .slider__range::-moz-range-progress {
-      height: 1em;
+      height: 1.4em;
       background: white;
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px; }
@@ -687,8 +688,8 @@ template {
       border-color: transparent;
       color: transparent; }
     .slider .slider__range::-ms-fill-lower {
-      height: 1em;
       background: white;
+      border: 1px solid black;
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px; }
     .slider .slider__range::-ms-fill-upper {
