@@ -610,8 +610,6 @@ template {
          appearance: none;
     outline: none;
     background: transparent;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white));
-    background-image: linear-gradient(white, white);
     background-image: -webkit-linear-gradient(white, white);
     background-size: 0% 100%;
     background-repeat: no-repeat;
