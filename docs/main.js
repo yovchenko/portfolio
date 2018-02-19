@@ -35362,7 +35362,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 if (page < book.turn('pages')) $('.sj-book .p5').addClass('fixed');else $('.sj-book .p5').removeClass('fixed');
 
                 Hash.go('page/' + page).update();
-                moveBar(page);
+                moveBar(page, slider);
             },
             turned: function turned(e, page, view) {
                 var book = $(this);
@@ -35391,9 +35391,18 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 function updateDepth(book, newPage) {}
 
-function moveBar(pageNum) {
+function moveBar(pageNum, slider) {
     var scaleBook = document.getElementsByClassName('align')[0];
     if (pageNum === 1 || pageNum === 6) scaleBook.classList.add('resized');else scaleBook.classList.remove('resized');
+    if (pageNum === 1) {
+        slider.style.backgroundSize = '0% 100%';
+    } else if (pageNum === 2 || pageNum === 3) {
+        slider.style.backgroundSize = '33% 100%';
+    } else if (pageNum === 4 || pageNum === 5) {
+        slider.style.backgroundSize = '66% 100%';
+    } else if (pageNum === 6) {
+        slider.style.backgroundSize = '99% 100%';
+    }
 }
 
 function getViewNumber(book, page) {

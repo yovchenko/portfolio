@@ -609,8 +609,13 @@ template {
     -moz-appearance: none;
          appearance: none;
     outline: none;
-    width: 100%;
     background: transparent;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white));
+    background-image: linear-gradient(white, white);
+    background-image: -webkit-linear-gradient(white, white);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+    width: 100%;
     border-radius: 10px; }
     .slider .slider__range::-webkit-slider-thumb {
       -webkit-appearance: none;
@@ -696,6 +701,8 @@ template {
       background: rgba(0, 0, 0, 0.2);
       border: 1px solid black;
       border-radius: 10px; }
+    .slider .slider__range::-ms-tooltip {
+      display: none; }
 
 @media all and (max-width: 768px) {
   .slider {
