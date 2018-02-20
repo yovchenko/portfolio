@@ -35393,7 +35393,7 @@ function moveBar(page, pages, currentPage, slider) {
     var scaleBook = document.getElementsByClassName('align')[0];
     if (page === 1 || page === pages) scaleBook.classList.add('resized');else scaleBook.classList.remove('resized');
     var percentage = 100 / pages;
-    if (page > currentPage) slider.background = percentage * page;else slider.background -= percentage * 2;
+    if (page > currentPage && page % 2 === 0) slider.background = percentage * page;else if (page > currentPage && page % 2 === 1) slider.background = percentage * (page - 1);else slider.background -= percentage * 2;
     slider.style.backgroundSize = slider.background.toFixed(2) + '% 100%';
 }
 
