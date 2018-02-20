@@ -9,6 +9,8 @@
 		-webkit-appearance: none;
 		appearance: none;
 		outline: none;
+		padding: 0;
+		box-sizing: border-box;
 		background: rgba(0, 0, 0, 0.2);
 		background-image: linear-gradient(white, white);
 		background-image: -webkit-linear-gradient(white, white);
@@ -80,7 +82,7 @@
 			background: #fff;
 			cursor: pointer;
 			box-shadow: 0px 0px 1px 2px $svg-color;
-			border: 5px solid transparent;
+			border: transparent;
 			border-radius: 50%;
 			z-index: 0;
 		}
