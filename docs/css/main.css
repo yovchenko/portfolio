@@ -670,13 +670,11 @@ template {
     .slider .slider__range.ie-edge__detected {
       background-image: none;
       background: transparent;
-      min-height: 35px;
-      padding: 0px 2px; }
+      min-height: 35px; }
     .slider .slider__range::-ms-thumb {
       -webkit-appearance: none;
       width: 25px;
       height: 25px;
-      margin: 0px 2px;
       outline: none;
       background: #fff;
       cursor: pointer;
@@ -699,7 +697,6 @@ template {
     .slider .slider__range::-ms-fill-upper {
       background: rgba(0, 0, 0, 0.2);
       border: 1px solid black;
-      padding-right: 2px;
       border-radius: 10px; }
     .slider .slider__range::-ms-tooltip {
       display: none; }
