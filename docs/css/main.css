@@ -677,7 +677,7 @@ template {
       height: 1.4em;
       cursor: pointer;
       outline: none;
-      background: rgba(0, 0, 0, 0.2);
+      background: transparent;
       border-radius: 10px;
       border: 1px solid black; }
     .slider .slider__range::-moz-range-track:focus {
