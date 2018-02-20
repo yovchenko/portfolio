@@ -183,7 +183,5 @@ function detectIE() {
     // Edge (IE 12+) => return version number
     return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
   }
-
-  // other browser
   return false;
 }
