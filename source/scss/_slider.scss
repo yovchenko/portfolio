@@ -75,16 +75,18 @@
 			background-image: none;
 			background: transparent;
 			min-height: 35px;
+			padding: 0px 2px;
 		}
 		&::-ms-thumb {
 			-webkit-appearance: none;
 			width: 25px;
 			height: 25px;
+			margin: 0px 2px;
 			outline: none;
 			background: #fff;
 			cursor: pointer;
 			box-shadow: 0px 0px 1px 2px $svg-color;
-			border: 2px solid transparent;
+			border: transparent;
 			border-radius: 50%;
 			z-index: 0;
 		}
