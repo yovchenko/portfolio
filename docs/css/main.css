@@ -675,6 +675,7 @@ template {
       width: 25px;
       height: 25px;
       margin-bottom: -5px;
+      margin-left: 5px;
       outline: none;
       background: #fff;
       cursor: pointer;
