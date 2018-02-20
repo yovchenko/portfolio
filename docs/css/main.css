@@ -668,7 +668,8 @@ template {
       outline: none; }
     .slider .slider__range.ie-edge__detected {
       background-image: none;
-      background: transparent; }
+      background: transparent;
+      min-height: 25px; }
     .slider .slider__range::-ms-thumb {
       -webkit-appearance: none;
       width: 25px;
