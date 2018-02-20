@@ -699,6 +699,7 @@ template {
     .slider .slider__range::-ms-fill-upper {
       background: rgba(0, 0, 0, 0.2);
       border: 1px solid black;
+      padding-right: 2px;
       border-radius: 10px; }
     .slider .slider__range::-ms-tooltip {
       display: none; }
