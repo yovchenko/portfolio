@@ -35442,7 +35442,7 @@ function addPage(page, book) {
 var version = detectIE();
 
 if (!(version === false)) {
-    slider.classList.add('ie-edge');
+    document.getElementsByClassName('slider__range').classList.add('ie-edge__detected');
 }
 
 function isChrome() {
@@ -35472,8 +35472,6 @@ function detectIE() {
         // Edge (IE 12+) => return version number
         return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
     }
-
-    // other browser
     return false;
 }
 

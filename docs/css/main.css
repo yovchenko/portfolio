@@ -617,7 +617,7 @@ template {
     background-repeat: no-repeat;
     width: 100%;
     border-radius: 10px; }
-    .slider .slider__range.ie-edge {
+    .slider .slider__range.ie-edge__detected {
       background-image: none;
       background: transparent; }
     .slider .slider__range::-webkit-slider-thumb {
