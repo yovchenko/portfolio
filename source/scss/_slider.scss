@@ -10,11 +10,16 @@
 		appearance: none;
 		outline: none;
 		background: rgba(0, 0, 0, 0.2);
+		background-image: linear-gradient(white, white);
 		background-image: -webkit-linear-gradient(white, white);
 		background-size: 0% 100%;
 		background-repeat: no-repeat;
 		width: 100%;
 		border-radius: 10px;
+		&.ie-edge {
+			background-image: none;
+			background: transparent;
+		}
 		&::-webkit-slider-thumb {
 			-webkit-appearance: none;
 			width: 25px;
@@ -47,14 +52,6 @@
 		}
 		&::-moz-focus-outer {
 			border: 0;
-		}
-		&::-ms-track {
-			width: 100%;
-			cursor: pointer;
-			/* Hides the slider so custom styles can be added */
-			background: transparent; 
-			border-color: transparent;
-			color: transparent;
 		}
 		&::-ms-thumb {
 			-webkit-appearance: none;

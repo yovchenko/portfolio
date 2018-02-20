@@ -610,11 +610,16 @@ template {
          appearance: none;
     outline: none;
     background: rgba(0, 0, 0, 0.2);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(white), to(white));
+    background-image: linear-gradient(white, white);
     background-image: -webkit-linear-gradient(white, white);
     background-size: 0% 100%;
     background-repeat: no-repeat;
     width: 100%;
     border-radius: 10px; }
+    .slider .slider__range.ie-edge {
+      background-image: none;
+      background: transparent; }
     .slider .slider__range::-webkit-slider-thumb {
       -webkit-appearance: none;
       width: 25px;
@@ -645,13 +650,6 @@ template {
       border-bottom-left-radius: 10px; }
     .slider .slider__range::-moz-focus-outer {
       border: 0; }
-    .slider .slider__range::-ms-track {
-      width: 100%;
-      cursor: pointer;
-      /* Hides the slider so custom styles can be added */
-      background: transparent;
-      border-color: transparent;
-      color: transparent; }
     .slider .slider__range::-ms-thumb {
       -webkit-appearance: none;
       width: 25px;

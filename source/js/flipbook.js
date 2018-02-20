@@ -5,7 +5,7 @@
     slider.oninput = function() {
         updateHandleValues(this.value, flipbook);
     }
-
+    
     Hash.on('^page\/([0-9]*)$', {
         yep: function (path, parts) {
             var page = parts[1];
@@ -150,8 +150,34 @@ function addPage(page, book) {
     }
 }
 
-function isChrome() {
-    // Chrome's unsolved bug
-    // http://code.google.com/p/chromium/issues/detail?id=128488
-    return navigator.userAgent.indexOf('Chrome') != -1;
+var version = detectIE();
+
+if (!(version === false)) {
+    slider.classList.add('ie-edge');
+} 
+
+function detectIE() {
+  var ua = window.navigator.userAgent;
+
+  var msie = ua.indexOf('MSIE ');
+  if (msie > 0) {
+    // IE 10 or older => return version number
+    return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+  }
+
+  var trident = ua.indexOf('Trident/');
+  if (trident > 0) {
+    // IE 11 => return version number
+    var rv = ua.indexOf('rv:');
+    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+  }
+
+  var edge = ua.indexOf('Edge/');
+  if (edge > 0) {
+    // Edge (IE 12+) => return version number
+    return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+  }
+
+  // other browser
+  return false;
 }
