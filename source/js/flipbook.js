@@ -156,6 +156,12 @@ if (!(version === false)) {
     slider.classList.add('ie-edge');
 } 
 
+function isChrome() {
+    // Chrome's unsolved bug
+    // http://code.google.com/p/chromium/issues/detail?id=128488
+    return navigator.userAgent.indexOf('Chrome') != -1;
+}
+
 function detectIE() {
   var ua = window.navigator.userAgent;
 
