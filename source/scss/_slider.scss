@@ -75,12 +75,13 @@
 			background-image: none;
 			background: transparent;
 			min-height: 35px;
+			padding: 0px 2px;
 		}
 		&::-ms-thumb {
 			-webkit-appearance: none;
 			width: 25px;
 			height: 25px;
-			margin: 0px 2px 0px 2px;
+		
 			outline: none;
 			background: #fff;
 			cursor: pointer;
