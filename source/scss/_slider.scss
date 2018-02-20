@@ -73,12 +73,13 @@
 		&.ie-edge__detected {
 			background-image: none;
 			background: transparent;
-			min-height: 25px;
+			min-height: 35px;
 		}
 		&::-ms-thumb {
 			-webkit-appearance: none;
 			width: 25px;
 			height: 25px;
+			margin-bottom: -5px; 
 			outline: none;
 			background: #fff;
 			cursor: pointer;
