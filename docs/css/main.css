@@ -676,6 +676,7 @@ template {
       -webkit-appearance: none;
       width: 25px;
       height: 25px;
+      margin: 0px 2px;
       outline: none;
       background: #fff;
       cursor: pointer;
