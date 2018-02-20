@@ -83,7 +83,8 @@
 			outline: none;
 			background: #fff;
 			cursor: pointer;
-			border: 2px solid $svg-color;
+			box-shadow: 0px 0px 1px 2px $svg-color;
+			border: 2px solid transparent;
 			border-radius: 50%;
 			z-index: 0;
 		}
