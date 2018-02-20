@@ -35442,7 +35442,7 @@ function addPage(page, book) {
 var version = detectIE();
 
 if (!(version === false)) {
-    document.getElementsByClassName('slider__range').classList.add('ie-edge__detected');
+    document.getElementsByClassName('slider__range')[0].classList.add('ie-edge__detected');
 }
 
 function isChrome() {
