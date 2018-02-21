@@ -35360,7 +35360,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
                 if (page < book.turn('pages')) $('.sj-book .p5').addClass('fixed');else $('.sj-book .p5').removeClass('fixed');
 
                 Hash.go('page/' + page).update();
-                moveBar(page, pages, currentPage, slider);
+                setTimeout(function () {
+                    slider.value = getViewNumber(book);
+                    moveBar(page, pages, currentPage, slider);
+                }, 1);
             },
             turned: function turned(e, page, view) {
                 var book = $(this);
@@ -35371,9 +35374,6 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
             end: function end(e, pageObj) {
                 var book = $(this);
                 updateDepth(book);
-                setTimeout(function () {
-                    slider.value = getViewNumber(book);
-                }, 1);
             },
 
             missing: function missing(e, pages) {

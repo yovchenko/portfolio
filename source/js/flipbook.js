@@ -64,7 +64,10 @@
                     $('.sj-book .p5').removeClass('fixed');
 
                 Hash.go('page/' + page).update();
-                moveBar(page, pages, currentPage, slider);
+                setTimeout(function () {
+                    slider.value = getViewNumber(book);
+                    moveBar(page, pages, currentPage, slider);
+              }, 1);
             },
             turned: function (e, page, view) {
                 var book = $(this);
@@ -75,9 +78,6 @@
             end: function (e, pageObj) {
                 var book = $(this);
                 updateDepth(book);
-                setTimeout(function () {
-                      slider.value = getViewNumber(book);
-                }, 1);
             },
 
             missing: function (e, pages) {
