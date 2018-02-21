@@ -74,17 +74,20 @@
 		&.ie-edge__detected {
 			background-image: none;
 			background: transparent;
-			min-height: 35px;
+			height: auto;
+			min-height: 29px;
 		}
 		&::-ms-thumb {
 			-webkit-appearance: none;
+			box-sizing: border-box;
 			width: 25px;
 			height: 25px;
 			outline: none;
 			background: #fff;
 			cursor: pointer;
-			box-shadow: 0px 0px 1px 2px $svg-color;
-			border: transparent;
+			box-shadow: 0px 0px 1px 1px $svg-color;
+			border: 1px solid $svg-color;
+			margin: -3px 0px 0px 0px;
 			border-radius: 50%;
 			z-index: 0;
 		}
