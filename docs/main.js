@@ -35407,19 +35407,20 @@ function numberOfViews(book) {
 
 function updateHandleValues(slider, sliderValue, flipbook) {
     var pageNum = getViewNumber(flipbook),
-        percentage = 100 / flipbook.turn('pages');
+        percentage = 100 / flipbook.turn('pages'),
+        background = 0;
     if (pageNum > sliderValue) {
         while (pageNum != sliderValue) {
             flipbook.turn('previous');
-            slider.background = percentage * (flipbook.turn('page') + 1);
-            slider.style.backgroundSize = slider.background.toFixed(2) + '% 100%';
+            background = slider.background - percentage * 2;
+            slider.style.backgroundSize = background.toFixed(2) + '% 100%';
             pageNum--;
         }
     } else if (pageNum < sliderValue) {
         while (pageNum != sliderValue) {
             flipbook.turn('next');
-            slider.background = slider.background + percentage;
-            slider.style.backgroundSize = slider.background.toFixed(2) + '% 100%';
+            background = slider.background + percentage * 2;
+            slider.style.backgroundSize = background.toFixed(2) + '% 100%';
             pageNum++;
         }
     }
