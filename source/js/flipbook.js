@@ -3,7 +3,7 @@
     slider = document.getElementById('js-slider');
     slider.background = 0;
     slider.oninput = function() {
-        updateHandleValues(this.value, flipbook);
+        updateHandleValues(this ,this.value, flipbook);
     }
     
     Hash.on('^page\/([0-9]*)$', {
@@ -114,16 +114,21 @@ function numberOfViews(book) {
     return book.turn('pages') / 2 + 1;
 }
 
-function updateHandleValues(sliderValue, flipbook) {
-    let pageNum = getViewNumber(flipbook);
+function updateHandleValues(slider, sliderValue, flipbook) {
+    var pageNum = getViewNumber(flipbook),
+    percentage = 100 / flipbook.turn('pages');
     if (pageNum > sliderValue) {
         while (pageNum != sliderValue) {
             flipbook.turn('previous');
+            slider.background = percentage * (flipbook.turn('page') + 1);
+            slider.style.backgroundSize = slider.background.toFixed(2) + '% 100%';
             pageNum--;
         }
     } else if (pageNum < sliderValue) {
         while (pageNum != sliderValue) {
             flipbook.turn('next');
+            slider.background = slider.background + percentage;
+            slider.style.backgroundSize = slider.background.toFixed(2) + '% 100%';
             pageNum++;
         }
     }
