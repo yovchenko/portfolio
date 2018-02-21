@@ -96,14 +96,12 @@ function updateDepth(book, newPage) {
 }
 
 function moveBar(page, pages, currentPage, slider) {
-   var scaleBook =  document.getElementsByClassName('align')[0];
+   var percentage = 100 / pages * 2,
+   scaleBook =  document.getElementsByClassName('align')[0];
    if(page === 1 || page === pages) scaleBook.classList.add('resized');
    else scaleBook.classList.remove('resized');
-   var percentage = 100 / pages;
-   if (page > currentPage && page%2 === 0) slider.background = percentage * page;
-   else if(page > currentPage && page%2 === 1)  slider.background = percentage * (page - 1);
-   else slider.background -= percentage * 2;
-       slider.style.backgroundSize = slider.background.toFixed(2) + '% 100%';
+   slider.background = percentage * (slider.value - 1);
+   slider.style.backgroundSize = slider.background.toFixed(2) + '% 100%';
 }
 
 function getViewNumber(book, page) {
@@ -116,23 +114,20 @@ function numberOfViews(book) {
 
 function updateHandleValues(slider, sliderValue, flipbook) {
     var pageNum = getViewNumber(flipbook),
-    percentage = 100 / flipbook.turn('pages'),
-    background = 0;
+    percentage = 100 / flipbook.turn('pages') * 2;
     if (pageNum > sliderValue) {
         while (pageNum != sliderValue) {
             flipbook.turn('previous');
-            background  = slider.background - percentage * 2;
-            slider.style.backgroundSize = background.toFixed(2) + '% 100%';
             pageNum--;
         }
     } else if (pageNum < sliderValue) {
         while (pageNum != sliderValue) {
             flipbook.turn('next');
-            background  = slider.background + percentage * 2;
-            slider.style.backgroundSize = background.toFixed(2) + '% 100%';
             pageNum++;
         }
     }
+    slider.background = percentage * (slider.value - 1);
+    slider.style.backgroundSize = slider.background.toFixed(2) + '% 100%';
 }
 
 function loadPage(page) {
