@@ -5,7 +5,17 @@
     slider.oninput = function() {
         updateHandleValues(this ,this.value, flipbook);
     }
-    
+      
+    document.getElementsByClassName('volume-up')[0].onclick = function (e) {
+        e.preventDefault();
+        flipbook.turn('next');
+    }
+  
+    document.getElementsByClassName('volume-down')[0].onclick = function (e) {
+        e.preventDefault();
+        flipbook.turn('previous');
+    }
+
     Hash.on('^page\/([0-9]*)$', {
         yep: function (path, parts) {
             var page = parts[1];
