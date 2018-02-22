@@ -122,7 +122,9 @@
 .ie-edge__detected .volume .plus-minus-input {
 	top: 0px;
 }
-
+.ie-edge__detected .volume .plus-minus-input .input-group-button .button-wrap .circle:active {
+	border-top: 2px solid rgba(255, 255, 255, 0.2)
+}
 .volume {		
 	z-index: 2; }	
 	.volume .plus-minus-input {	
@@ -187,7 +189,7 @@
 	      border-top-color: white;	
 	      outline: none; }	
 	      .volume .plus-minus-input .input-group-button .button-wrap .circle:active {	
-	        background: radial-gradient(rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.2)); }	
+			background: radial-gradient(rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.2)); }	
 	      .volume .plus-minus-input .input-group-button .button-wrap .circle svg {	
 	        position: absolute;	
 	        left: 0;	

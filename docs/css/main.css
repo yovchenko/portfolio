@@ -710,6 +710,9 @@ template {
 .ie-edge__detected .volume .plus-minus-input {
   top: 0px; }
 
+.ie-edge__detected .volume .plus-minus-input .input-group-button .button-wrap .circle:active {
+  border-top: 2px solid rgba(255, 255, 255, 0.2); }
+
 .volume {
   z-index: 2; }
 
