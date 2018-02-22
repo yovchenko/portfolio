@@ -708,7 +708,6 @@ template {
       /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */ }
 
 .volume {
-  direction: block;
   z-index: 2; }
 
 .volume .plus-minus-input {
@@ -720,11 +719,15 @@ template {
   display: flex;
   position: absolute;
   width: calc(100% + 70px);
+  height: 29px;
   left: -35px;
   top: -8px;
   z-index: -1; }
   .volume .plus-minus-input .input-group-button.minus {
     margin-left: auto; }
+
+.ie-edge__detected .volume .plus-minus-input {
+  top: 0px; }
 
 .volume .plus-minus-input .input-wrap {
   padding: 5px; }
