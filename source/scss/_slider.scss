@@ -119,14 +119,79 @@
 	}
 }
 
-@media all and (max-width: 768px) {
-	.slider {
-		width: 100%;
-	}
-}
-
+.volume {	
+	direction: block;		
+	z-index: 2; }	
+	.volume .plus-minus-input {	
+	  -webkit-box-align: center;	
+	      -ms-flex-align: center;	
+	          align-items: center;	
+	  display: -webkit-box;	
+	  display: -ms-flexbox;	
+	  display: flex;	
+	  position: absolute;
+      width: calc(100% + 70px);
+	  left: -35px;
+	  top: -8px;
+	  z-index: -1;
+	  .input-group-button.minus {
+		  margin-left: auto;
+	  }
+	  }	
+	  .volume .plus-minus-input .input-wrap {	
+	    padding: 5px; }	
+	    .volume .plus-minus-input .input-wrap .input-group-field {	
+	      text-align: center;	
+	      width: 20px;	
+	      height: 15px;	
+	      line-height: 15px;	
+	      font-size: 1.2em;	
+	      vertical-align: middle;	
+	      border-radius: 5%;	
+	      background: -webkit-gradient(linear, left top, left bottom, from(#2c3e50), to(black));	
+	      background: linear-gradient(#2c3e50, black);	
+	      border-bottom-color: rgba(0,0,0,0);	
+	      border-top-color: rgba(0,0,0,0);	
+	      color: white;	
+	      margin: 5px;	
+	      padding: 2px;	
+	      border-style: double;	
+	      -moz-appearance: textfield; }	
+	      .volume .plus-minus-input .input-wrap .input-group-field::-webkit-inner-spin-button,	
+	      .volume .plus-minus-input .input-wrap .input-group-field ::-webkit-outer-spin-button {	
+	        -webkit-appearance: none;	
+	        text-align: center;	
+	        -webkit-box-flex: 0;	
+	                flex: 0 0 auto; }	
+	  .volume .plus-minus-input .input-group-button .button-wrap {	
+	    display: block;	
+	    background: -webkit-gradient(linear, left top, left bottom, from(#2c3e50), to(black));	
+	    background: linear-gradient(#2c3e50, black);	
+	    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04);	
+	            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.04);	
+	    border-radius: 50%; }	
+	    .volume .plus-minus-input .input-group-button .button-wrap .circle {	
+	      position: relative;	
+	      border-radius: 50%;	
+	      padding: 12.5px;	
+	      border-color: transparent;	
+	      background: -webkit-gradient(linear, left top, left bottom, from(#2c3e50), to(rgba(0, 0, 0, 0.6)));	
+	      background: linear-gradient(#2c3e50, rgba(0, 0, 0, 0.6));	
+	      outline: none;	
+	      border-bottom-color: white;	
+	      border-top-color: white;	
+	      outline: none; }	
+	      .volume .plus-minus-input .input-group-button .button-wrap .circle:active {	
+	        background: radial-gradient(rgba(0, 0, 0, 0.6), rgba(255, 255, 255, 0.2)); }	
+	      .volume .plus-minus-input .input-group-button .button-wrap .circle svg {	
+	        position: absolute;	
+	        left: 0;	
+	        right: 0;	
+	        bottom: 0;	
+	        top: 0; }
 @media all and (min-aspect-ratio: 19/21) {
 	.slider {
+		width: 80%;
 		top: 110%;
 	}
 }
