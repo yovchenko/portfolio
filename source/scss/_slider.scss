@@ -123,7 +123,12 @@
 	top: 0px;
 }
 .ie-edge__detected .volume .plus-minus-input .input-group-button .button-wrap .circle:active {
-	border-top: 2px solid rgba(255, 255, 255, 0.2)
+	border-top: 2px solid rgba(255, 255, 255, 0.3);
+	border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+.ie-edge__detected .volume .plus-minus-input .input-group-button .button-wrap .circle:active {
+background: -webkit-gradient(linear, left top, left bottom, from(#2c3e50), to(rgba(0, 0, 0, 0.6)));	
+background: linear-gradient(#2c3e50, rgba(0, 0, 0, 0.6));	
 }
 .volume {		
 	z-index: 2; }	
