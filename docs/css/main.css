@@ -604,6 +604,11 @@ template {
   margin: 0 auto;
   text-align: center;
   z-index: -1; }
+  .slider.ie-edge__detected .slider__range {
+    background-image: none;
+    background: transparent;
+    height: auto;
+    min-height: 29px; }
   .slider .slider__range {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -667,11 +672,6 @@ template {
       border: 1px solid black; }
     .slider .slider__range::-moz-range-track:focus {
       outline: none; }
-    .slider .slider__range.ie-edge__detected {
-      background-image: none;
-      background: transparent;
-      height: auto;
-      min-height: 29px; }
     .slider .slider__range::-ms-thumb {
       -webkit-appearance: none;
       box-sizing: border-box;
@@ -707,6 +707,9 @@ template {
       outline: none;
       /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */ }
 
+.ie-edge__detected .volume .plus-minus-input {
+  top: 0px; }
+
 .volume {
   z-index: 2; }
 
@@ -725,9 +728,6 @@ template {
   z-index: -1; }
   .volume .plus-minus-input .input-group-button.minus {
     margin-left: auto; }
-
-.ie-edge__detected .volume .plus-minus-input {
-  top: 0px; }
 
 .volume .plus-minus-input .input-wrap {
   padding: 5px; }
