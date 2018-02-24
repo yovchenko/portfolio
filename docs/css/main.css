@@ -710,14 +710,6 @@ template {
 .ie-edge__detected .volume .plus-minus-input {
   top: 0px; }
 
-.ie-edge__detected .volume .plus-minus-input .input-group-button .button-wrap .circle:active {
-  border-top: 2px solid rgba(255, 255, 255, 0.3);
-  border-bottom: 2px solid white; }
-
-.ie-edge__detected .volume .plus-minus-input .input-group-button .button-wrap .circle:active {
-  background: -webkit-gradient(linear, left top, left bottom, from(#2c3e50), to(rgba(0, 0, 0, 0.6)));
-  background: linear-gradient(#2c3e50, rgba(0, 0, 0, 0.6)); }
-
 .volume {
   z-index: 2; }
 
@@ -782,8 +774,8 @@ template {
   background: -webkit-gradient(linear, left top, left bottom, from(#2c3e50), to(rgba(0, 0, 0, 0.6)));
   background: linear-gradient(#2c3e50, rgba(0, 0, 0, 0.6));
   outline: none;
-  border-bottom-color: white;
-  border-top-color: white;
+  border-bottom: 2px solid white;
+  border-top: 2px solid white;
   outline: none; }
 
 .volume .plus-minus-input .input-group-button .button-wrap .circle:active {
