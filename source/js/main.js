@@ -8,7 +8,7 @@ import {
 	page
 } from './preloader';
 document.addEventListener('DOMContentLoaded', mainPage);
-
+export var scaleValue = 1;
 function mainPage() {
 	const $home = $('.js-home'),
 		$about = $('.js-about'),
@@ -124,7 +124,7 @@ function mainPage() {
 					}
 					page.pattern.colorX = 'Greys';
 					page.pattern.colorY = 'Greys';
-					resizeContent('.bookWrap', '#flipbook', 960, 600);
+					scaleValue = resizeContent('.bookWrap', '#flipbook', 960, 600);
 					page['work'] = true; //page work
 					break;
 				case 2:
@@ -260,7 +260,7 @@ function mainPage() {
 			} else if (page.home) {
 				resizeContent('#figure', '#wrapperCanvas', 800, 900);
 			} else if (page.work) {
-				resizeContent('.bookWrap', '#flipbook', 960, 600);
+				scaleValue = resizeContent('.bookWrap', '#flipbook', 960, 600);
 			}
 		}, 122);
 	};

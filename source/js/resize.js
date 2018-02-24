@@ -1,15 +1,15 @@
 import _ from 'jquery';
-export function resizeContent(obj,objWrap,objWrapWidth,objWrapHeight) {
+export function resizeContent(obj, wrap, width, height) {
 	let pageWidth, pageHeight;
 	
 		let basePage = {
-			width: objWrapWidth,
-			height: objWrapHeight,
+			width: width,
+			height: height,
 			scale: 1,
 			scaleX: 1,
 			scaleY: 1
 		};
-		let $page = $(objWrap);
+		let $page = $(wrap);
 		getPageSize();
 		scalePages($page, pageWidth, pageHeight);
 
@@ -32,8 +32,9 @@ export function resizeContent(obj,objWrap,objWrapWidth,objWrapHeight) {
 			let newLeftPos = Math.abs(Math.floor(((basePage.width * basePage.scale) - maxWidth) / 2));
 			let newTopPos = Math.abs(Math.floor(((basePage.height * basePage.scale) - maxHeight) / 2));
 
-			page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
+			page.attr('style', '-webkit-transform:scale(' + basePage.scale.toFixed(2) + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
 		}
+		return basePage.scale.toFixed(2);
 	};
 
 	

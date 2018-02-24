@@ -6,7 +6,9 @@
  * Copyright (C) 2012 Emmanuel Garcia
  * All rights reserved
  **/
-
+import {
+	scaleValue
+} from '../js/main';
 (function($) {
 
 'use strict';
@@ -2258,19 +2260,21 @@ flipMethods = {
   _fold: function(point) {
 
     var data = this.data().f,
-      turnData = data.opts.turn.data(),
-      o = flipMethods._c.call(this, point.corner),
-      width = this.width(),
-      height = this.height();
+    turnData = data.opts.turn.data(),
+    o = flipMethods._c.call(this, point.corner),
+    width = this.width(),
+    height = this.height(),
+    divider = 1;
+    if (scaleValue < 1) divider = scaleValue;
+    else divider = 1;
 
-    switch (data.effect) {
+  switch (data.effect) {
 
-      case 'hard':
-
-        if (point.corner=='l')
-          point.x = Math.min(Math.max(point.x, 0), width*2);
-        else
-          point.x = Math.max(Math.min(point.x, width), -width);
+    case 'hard':
+      if (point.corner=='l')
+        point.x = Math.min(Math.max(point.x / divider, 0), width*2);
+      else
+        point.x = Math.max(Math.min(point.x, width), -width);
 
         var leftPos,
           shadow,
@@ -2282,7 +2286,7 @@ flipMethods = {
           parentCss = {'overflow': 'visible'},
           relX = (o.x) ? (o.x - point.x)/width : point.x/width,
           angle = relX * 90,
-          half = angle<90;
+          half = angle < 90;
 
         switch (point.corner) {
           case 'l':

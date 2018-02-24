@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 69);
+/******/ 	return __webpack_require__(__webpack_require__.s = 70);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -74,16 +74,16 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/* global Symbol
 !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(17),
 	__webpack_require__(1),
-	__webpack_require__(72),
+	__webpack_require__(73),
 	__webpack_require__(21),
 	__webpack_require__(38),
 	__webpack_require__(39),
 	__webpack_require__(22),
 	__webpack_require__(20),
-	__webpack_require__(73),
+	__webpack_require__(74),
 	__webpack_require__(23),
 	__webpack_require__(40),
-	__webpack_require__(74),
+	__webpack_require__(75),
 	__webpack_require__(8),
 	__webpack_require__(41)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( arr, document, getProto, slice, concat, push, indexOf,
@@ -562,7 +562,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(75) ], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
+var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(76) ], __WEBPACK_AMD_DEFINE_RESULT__ = function() {
 	"use strict";
 }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
@@ -1284,8 +1284,8 @@ return jQuery;
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
 	__webpack_require__(22),
-	__webpack_require__(78),
 	__webpack_require__(79),
+	__webpack_require__(80),
 	__webpack_require__(50),
 	__webpack_require__(7),
 
@@ -2236,12 +2236,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(0),
 	__webpack_require__(1),
 	__webpack_require__(6),
-	__webpack_require__(94),
+	__webpack_require__(95),
 	__webpack_require__(63),
 	__webpack_require__(64),
 
 	__webpack_require__(4),
-	__webpack_require__(95),
+	__webpack_require__(96),
 	__webpack_require__(35),
 	__webpack_require__(11),
 	__webpack_require__(65) // jQuery.param
@@ -3566,34 +3566,34 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(12),
 	__webpack_require__(29),
 	__webpack_require__(11),
-	__webpack_require__(80),
-	__webpack_require__(51),
 	__webpack_require__(81),
-	__webpack_require__(31),
+	__webpack_require__(51),
 	__webpack_require__(82),
-	__webpack_require__(86),
+	__webpack_require__(31),
+	__webpack_require__(83),
+	__webpack_require__(87),
 	__webpack_require__(13),
-	__webpack_require__(90),
 	__webpack_require__(91),
+	__webpack_require__(92),
 	__webpack_require__(19),
-	__webpack_require__(93),
-	__webpack_require__(96),
-	__webpack_require__(16),
+	__webpack_require__(94),
 	__webpack_require__(97),
+	__webpack_require__(16),
+	__webpack_require__(98),
 	__webpack_require__(65),
 	__webpack_require__(14),
-	__webpack_require__(98),
 	__webpack_require__(99),
 	__webpack_require__(100),
 	__webpack_require__(101),
-	__webpack_require__(104),
-	__webpack_require__(32),
+	__webpack_require__(102),
 	__webpack_require__(105),
+	__webpack_require__(32),
 	__webpack_require__(106),
 	__webpack_require__(107),
 	__webpack_require__(108),
 	__webpack_require__(109),
-	__webpack_require__(110)
+	__webpack_require__(110),
+	__webpack_require__(111)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery ) {
 
 "use strict";
@@ -3620,7 +3620,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(59),
 	__webpack_require__(60),
 	__webpack_require__(61),
-	__webpack_require__(84),
+	__webpack_require__(85),
 
 	__webpack_require__(5),
 	__webpack_require__(53),
@@ -4739,7 +4739,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(37),
 	__webpack_require__(46),
 	__webpack_require__(5),
-	__webpack_require__(83),
+	__webpack_require__(84),
 
 	__webpack_require__(4),
 	__webpack_require__(31),
@@ -4747,7 +4747,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(12),
 	__webpack_require__(19),
 	__webpack_require__(16),
-	__webpack_require__(85)
+	__webpack_require__(86)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, document, rcssNum, rnothtmlwhite, cssExpand, isHiddenWithinTree, swap,
 	adjustCSS, dataPriv, showHide ) {
 
@@ -5696,7 +5696,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.anim = undefined;
 
-var _bodymovin = __webpack_require__(111);
+var _bodymovin = __webpack_require__(112);
 
 var _bodymovin2 = _interopRequireDefault(_bodymovin);
 
@@ -6190,7 +6190,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
 	__webpack_require__(1),
-	__webpack_require__(77),
+	__webpack_require__(78),
 	__webpack_require__(11)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, document ) {
 
@@ -7085,7 +7085,7 @@ var _jsonAnimation = __webpack_require__(36);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Trianglify = __webpack_require__(112);
+var Trianglify = __webpack_require__(113);
 
 var pattern = void 0,
     encode = void 0,
@@ -7605,18 +7605,18 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function resizeContent(obj, objWrap, objWrapWidth, objWrapHeight) {
+function resizeContent(obj, wrap, width, height) {
 	var pageWidth = void 0,
 	    pageHeight = void 0;
 
 	var basePage = {
-		width: objWrapWidth,
-		height: objWrapHeight,
+		width: width,
+		height: height,
 		scale: 1,
 		scaleX: 1,
 		scaleY: 1
 	};
-	var $page = $(objWrap);
+	var $page = $(wrap);
 	getPageSize();
 	scalePages($page, pageWidth, pageHeight);
 
@@ -7639,8 +7639,9 @@ function resizeContent(obj, objWrap, objWrapWidth, objWrapHeight) {
 		var newLeftPos = Math.abs(Math.floor((basePage.width * basePage.scale - maxWidth) / 2));
 		var newTopPos = Math.abs(Math.floor((basePage.height * basePage.scale - maxHeight) / 2));
 
-		page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
+		page.attr('style', '-webkit-transform:scale(' + basePage.scale.toFixed(2) + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
 	}
+	return basePage.scale.toFixed(2);
 };
 
 /***/ }),
@@ -7650,11 +7651,278 @@ function resizeContent(obj, objWrap, objWrapWidth, objWrapHeight) {
 "use strict";
 
 
-var _normalize = __webpack_require__(70);
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+exports.scaleValue = undefined;
+
+var _resize = __webpack_require__(68);
+
+var _jsonAnimation = __webpack_require__(36);
+
+var _preloader = __webpack_require__(66);
+
+document.addEventListener('DOMContentLoaded', mainPage);
+var scaleValue = exports.scaleValue = 1;
+function mainPage() {
+	var $home = $('.js-home'),
+	    $about = $('.js-about'),
+	    $work = $('.js-work'),
+	    $contact = $('.js-contact');
+
+	AttachEvent(_preloader.page.elements.btnHamburger, "click", EventHandler);
+
+	function AttachEvent(element, type, handler) {
+		if (element.addEventListener) element.addEventListener(type, handler, false);else element.attachEvent("on" + type, handler);
+	}
+
+	function EventHandler(e) {
+		e.preventDefault();
+		if (String(this.classList) === 'btn-hamburger') {
+			this.classList.add('btn-is--active');
+			_preloader.page.elements.initText.style.display = 'none';
+			animateMenuToArrow();
+		} else {
+			animateArrowToMenu();
+			this.classList.remove('btn-is--active');
+			_preloader.page.elements.initText.style.display = 'block';
+		}
+	}
+
+	function animateMenuToArrow() {
+		_preloader.page.elements.initText.classList.add('is--invisible');
+		$($about).add($work).add($contact).addClass('is--visible');
+		headerText();
+	}
+
+	function animateArrowToMenu() {
+		_preloader.page.elements.initText.classList.remove('is--invisible');
+		$($about).add($work).add($contact).removeClass('is--visible');
+	}
+
+	/*header text animation*/
+	var headerText = function headerText() {
+		var s = void 0,
+		    textLetters = {
+			settings: {
+				lettersAbout: $about,
+				lettersWork: $work,
+				lettersContact: $contact
+			},
+			init: function init() {
+				s = this.settings;
+				this.bindEvents();
+			},
+			bindEvents: function bindEvents() {
+				$about.text('About');
+				$work.text('Work');
+				$contact.text('Contact');{
+					s.lettersAbout.html(function (i, el) {
+						var text = $.trim(el).split("");
+						return '<span>' + text.join('</span><span>') + '</span>';
+					});
+					s.lettersWork.html(function (i, el) {
+						var text = $.trim(el).split("");
+						return '<span>' + text.join('</span><span>') + '</span>';
+					});
+					s.lettersContact.html(function (i, el) {
+						var text = $.trim(el).split("");
+						return '<span>' + text.join('</span><span>') + '</span>';
+					});
+				}
+			}
+		};
+		textLetters.init();
+	};
+
+	/* replace content onclick */
+	$home.on('click', {
+		case: 1
+	}, content);
+	$about.on("click", {
+		case: 2
+	}, content);
+	$work.on('click', {
+		case: 3
+	}, content);
+	$contact.on('click', {
+		case: 4
+	}, content);
+
+	function content(event) {
+		event.preventDefault();
+		for (var key in _preloader.page) {
+			_preloader.page[key] = false;
+		}
+		var pageNum = event.data.case;
+		$(_preloader.page.elements.curtainRight).add(_preloader.page.elements.curtainLeft).removeClass('is--opening').addClass('is--closing');
+		var $timerCurtains = setTimeout(function () {
+			_jsonAnimation.anim.stop();
+			switch (pageNum) {
+				case 4:
+					for (var _key in _preloader.page.elements) {
+						if (_key !== 'container' && _key !== 'touch' && _key !== 'home') _preloader.page.elements[_key].style.display = 'none';else _preloader.page.elements[_key].style.display = 'flex';
+					}
+					_preloader.page.pattern.colorX = 'Paired';
+					_preloader.page.pattern.colorY = 'Spectral';
+					(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+					_preloader.page['contacts'] = true; //page contacts
+					break;
+				case 3:
+					for (var _key2 in _preloader.page.elements) {
+						if (_key2 !== 'flipbook' && _key2 !== 'touch' && _key2 !== 'home') _preloader.page.elements[_key2].style.display = 'none';else _preloader.page.elements[_key2].style.display = 'flex';
+					}
+					_preloader.page.pattern.colorX = 'Greys';
+					_preloader.page.pattern.colorY = 'Greys';
+					exports.scaleValue = scaleValue = (0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
+					_preloader.page['work'] = true; //page work
+					break;
+				case 2:
+					for (var _key3 in _preloader.page.elements) {
+						if (_key3 !== 'article' && _key3 !== 'home') _preloader.page.elements[_key3].style.display = 'none';else _preloader.page.elements[_key3].style.display = 'flex';
+					}
+					_preloader.page.pattern.colorX = 'PuOr';
+					_preloader.page.pattern.colorY = 'Pastel2';
+					_jsonAnimation.anim.play();
+					_preloader.page['about'] = true; //page about
+					break;
+				case 1:
+					for (var _key4 in _preloader.page.elements) {
+						if (_key4 === 'article' || _key4 === 'flipbook' || _key4 === 'touch' || _key4 === 'container' || _key4 === 'home') _preloader.page.elements[_key4].style.display = 'none';else _preloader.page.elements[_key4].style.display = 'grid';
+					}
+					_preloader.page.pattern.colorX = 'YlGnBu';
+					_preloader.page.pattern.colorY = 'GnBu';
+					animateArrowToMenu();
+					(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
+					_preloader.page['home'] = true; // page home 
+					break;
+				default:
+					document.write('Oops, something went wrong!');
+			}
+			_preloader.page.setBackground;
+			$(_preloader.page.elements.curtainRight).add(_preloader.page.elements.curtainLeft).stop().removeClass('is--closing').addClass('is--opening');
+		}, 1500);
+	}
+
+	window.addEventListener("orientationchange", function () {
+		if (_preloader.page.keyboard) {
+			window.lastOrientation = true;
+		}
+	}, false);
+
+	function updateWindowSize() {
+		window.lastInnerWidth = window.innerWidth;
+		window.lastInnerHeight = window.innerHeight;
+		// Stays the same for iOS, so that's our ticket to detect iOS keyboard
+		window.lastOrientation = false;
+		window.lastBodyHeight = document.body.clientHeight;
+	};
+
+	function detectKeyboard() {
+		function orientationChange() {
+			if (window.lastOrientation) {
+				return !window.lastOrientation;
+			} else {
+				return window.lastOrientation;
+			}
+		}
+
+		// No orientation change, keyboard opening
+		if (window.lastInnerHeight - window.innerHeight > 150 && window.innerWidth == window.lastInnerWidth) {
+			var _keyboardHeight = window.lastInnerHeight - window.innerHeight;
+			updateWindowSize();
+			return _keyboardHeight;
+		}
+		// Orientation change with keyboard already opened
+		if (orientationChange() && _preloader.page.keyboard) {
+			var _keyboardHeight2 = screen.height - window.topBarHeight - window.innerHeight;
+			updateWindowSize();
+			return _keyboardHeight2;
+		}
+
+		// No orientation change, keyboard closing
+		if (window.innerHeight - window.lastInnerHeight > 150 && window.innerWidth == window.lastInnerWidth) {
+			var _keyboardHeight3 = -1;
+			updateWindowSize();
+			return _keyboardHeight3;
+		}
+
+		// Orientation change or regular resize, no keyboard action
+		var keyboardHeight = 0;
+		updateWindowSize();
+		return keyboardHeight;
+	};
+
+	function keyboardShift(keyboardHeight) {
+		_preloader.page.elements.grid.style.cssText = 'grid-template-rows:65px calc(100vh + ' + keyboardHeight + 'px) auto;';
+		_preloader.page.keyboard = true;
+		resizeScreenObj(event, keyboardHeight);
+	};
+
+	function removeKeyboardShift() {
+		_preloader.page.elements.grid.style.cssText = 'grid-template-rows:65px calc(100vh - 65px) auto;';
+		_preloader.page.keyboard = false;
+		resizeScreenObj(event, 0);
+	};
+
+	// OnStart innit
+	(function () {
+		updateWindowSize();
+		window.topBarHeight = screen.height - window.innerHeight;
+		window.addEventListener("resize", resizeThrottler, false);
+
+		var resizeTimeout = void 0;
+
+		function resizeThrottler() {
+			// ignore resize events as long as an actualResizeHandler execution is in the queue
+			if (!resizeTimeout) {
+				resizeTimeout = setTimeout(function () {
+					resizeTimeout = null;
+					actualResizeHandler();
+					// The actualResizeHandler will execute at a rate of 15fps
+				}, 66);
+			}
+		}
+
+		function actualResizeHandler() {
+			var keyboardHeight = detectKeyboard();
+			if (keyboardHeight > 0) {
+				keyboardShift(keyboardHeight);
+			} else if (keyboardHeight == -1) {
+				removeKeyboardShift();
+			}
+		}
+	})();
+
+	window.onresize = resizeScreenObj;
+	var resizeTimer = void 0;
+
+	function resizeScreenObj(event, keyHeight) {
+		clearTimeout(resizeTimer);
+		resizeTimer = setTimeout(function () {
+			if (_preloader.page.contacts) {
+				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+			} else if (_preloader.page.home) {
+				(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
+			} else if (_preloader.page.work) {
+				exports.scaleValue = scaleValue = (0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
+			}
+		}, 122);
+	};
+}
+
+/***/ }),
+/* 70 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _normalize = __webpack_require__(71);
 
 var _normalize2 = _interopRequireDefault(_normalize);
 
-var _main = __webpack_require__(71);
+var _main = __webpack_require__(72);
 
 var _main2 = _interopRequireDefault(_main);
 
@@ -7664,7 +7932,7 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 __webpack_require__(66);
 
-__webpack_require__(130);
+__webpack_require__(69);
 
 __webpack_require__(67);
 
@@ -7681,12 +7949,6 @@ __webpack_require__(135);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /***/ }),
-/* 70 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
 /* 71 */
 /***/ (function(module, exports) {
 
@@ -7694,6 +7956,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 /***/ }),
 /* 72 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
@@ -7705,7 +7973,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
 
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -7719,7 +7987,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -7733,12 +8001,12 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
-	__webpack_require__(76)
+	__webpack_require__(77)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, Sizzle ) {
 
 "use strict";
@@ -7759,7 +8027,7 @@ jQuery.escapeSelector = Sizzle.escape;
 
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -10038,7 +10306,7 @@ if ( true ) {
 
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10058,7 +10326,7 @@ jQuery.readyException = function( error ) {
 
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10087,7 +10355,7 @@ return function( elem, dir, until ) {
 
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
@@ -10111,7 +10379,7 @@ return function( n, elem ) {
 
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10139,7 +10407,7 @@ jQuery.Deferred.exceptionHook = function( error, stack ) {
 
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10325,7 +10593,7 @@ return jQuery;
 
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10356,7 +10624,7 @@ return jQuery.fn.delay;
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10468,7 +10736,7 @@ return showHide;
 
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10510,7 +10778,7 @@ return support;
 
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10640,15 +10908,15 @@ jQuery.fx.step = {};
 
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
-	__webpack_require__(87),
-	__webpack_require__(62),
 	__webpack_require__(88),
-	__webpack_require__(89)
+	__webpack_require__(62),
+	__webpack_require__(89),
+	__webpack_require__(90)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery ) {
 
 "use strict";
@@ -10660,7 +10928,7 @@ return jQuery;
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10808,7 +11076,7 @@ jQuery.each( jQuery.expr.match.bool.source.match( /\w+/g ), function( i, name ) 
 
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -10989,7 +11257,7 @@ jQuery.fn.extend( {
 
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11186,7 +11454,7 @@ jQuery.each( [ "radio", "checkbox" ], function() {
 
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11222,13 +11490,13 @@ jQuery.fn.extend( {
 
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
 	__webpack_require__(5),
-	__webpack_require__(92),
+	__webpack_require__(93),
 
 	__webpack_require__(13),
 	__webpack_require__(35)
@@ -11284,7 +11552,7 @@ return jQuery;
 
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11302,7 +11570,7 @@ return support;
 
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11332,7 +11600,7 @@ return jQuery._evalUrl;
 
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
@@ -11344,7 +11612,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
 
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11381,7 +11649,7 @@ return jQuery.parseXML;
 
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11465,7 +11733,7 @@ return jQuery;
 
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11487,7 +11755,7 @@ jQuery.expr.pseudos.visible = function( elem ) {
 
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11663,7 +11931,7 @@ jQuery.ajaxTransport( function( options ) {
 
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11747,7 +12015,7 @@ jQuery.ajaxTransport( "script", function( s ) {
 
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11856,13 +12124,13 @@ jQuery.ajaxPrefilter( "json jsonp", function( s, originalSettings, jqXHR ) {
 
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 	__webpack_require__(0),
 	__webpack_require__(34),
-	__webpack_require__(102),
+	__webpack_require__(103),
 	__webpack_require__(14),
 	__webpack_require__(12),
 	__webpack_require__(19),
@@ -11939,7 +12207,7 @@ jQuery.fn.load = function( url, params, callback ) {
 
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -11949,7 +12217,7 @@ var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_
 	__webpack_require__(61),
 
 	// This is the only module that needs core/support
-	__webpack_require__(103)
+	__webpack_require__(104)
 ], __WEBPACK_AMD_DEFINE_RESULT__ = function( jQuery, document, rsingleTag, buildFragment, support ) {
 
 "use strict";
@@ -12011,7 +12279,7 @@ return jQuery.parseHTML;
 
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -12038,7 +12306,7 @@ return support;
 
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -12067,7 +12335,7 @@ jQuery.each( [
 
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -12089,7 +12357,7 @@ jQuery.expr.pseudos.animated = function( elem ) {
 
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -12325,7 +12593,7 @@ return jQuery;
 
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -12388,7 +12656,7 @@ return jQuery;
 
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -12435,7 +12703,7 @@ jQuery.nodeName = nodeName;
 
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -12469,7 +12737,7 @@ if ( true ) {
 
 
 /***/ }),
-/* 110 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
@@ -12510,7 +12778,7 @@ if ( !noGlobal ) {
 
 
 /***/ }),
-/* 111 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;var window = (typeof window === "undefined") ? {} : window;
@@ -26664,7 +26932,7 @@ GroupEffect.prototype.init = function(data,element,dynamicProperties){
 }));
 
 /***/ }),
-/* 112 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -26674,13 +26942,13 @@ GroupEffect.prototype.init = function(data,element,dynamicProperties){
  * Licensed under the GPLv3
  */
 
-var delaunay = __webpack_require__(113);
-var seedrandom = __webpack_require__(114);
-var chroma = __webpack_require__(123); //PROBLEM: chroma.js is nearly 32k in size
-var colorbrewer = __webpack_require__(124); //We could use the chroma.js colorbrewer, but it's got some ugly stuff so we use our own subset.
-var _generate_points = __webpack_require__(125);
+var delaunay = __webpack_require__(114);
+var seedrandom = __webpack_require__(115);
+var chroma = __webpack_require__(124); //PROBLEM: chroma.js is nearly 32k in size
+var colorbrewer = __webpack_require__(125); //We could use the chroma.js colorbrewer, but it's got some ugly stuff so we use our own subset.
+var _generate_points = __webpack_require__(126);
 
-var Pattern = __webpack_require__(126);
+var Pattern = __webpack_require__(127);
 
 var defaults = {
   width: 600,                       // Width of pattern
@@ -26842,7 +27110,7 @@ module.exports = Trianglify;
 
 
 /***/ }),
-/* 113 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Delaunay;
@@ -27082,7 +27350,7 @@ var Delaunay;
 
 
 /***/ }),
-/* 114 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // A library of seedable RNGs implemented in Javascript.
@@ -27097,17 +27365,17 @@ var Delaunay;
 // alea, a 53-bit multiply-with-carry generator by Johannes Baagøe.
 // Period: ~2^116
 // Reported to pass all BigCrush tests.
-var alea = __webpack_require__(115);
+var alea = __webpack_require__(116);
 
 // xor128, a pure xor-shift generator by George Marsaglia.
 // Period: 2^128-1.
 // Reported to fail: MatrixRank and LinearComp.
-var xor128 = __webpack_require__(116);
+var xor128 = __webpack_require__(117);
 
 // xorwow, George Marsaglia's 160-bit xor-shift combined plus weyl.
 // Period: 2^192-2^32
 // Reported to fail: CollisionOver, SimpPoker, and LinearComp.
-var xorwow = __webpack_require__(117);
+var xorwow = __webpack_require__(118);
 
 // xorshift7, by François Panneton and Pierre L'ecuyer, takes
 // a different approach: it adds robustness by allowing more shifts
@@ -27115,7 +27383,7 @@ var xorwow = __webpack_require__(117);
 // with 256 bits, that passes BigCrush with no systmatic failures.
 // Period 2^256-1.
 // No systematic BigCrush failures reported.
-var xorshift7 = __webpack_require__(118);
+var xorshift7 = __webpack_require__(119);
 
 // xor4096, by Richard Brent, is a 4096-bit xor-shift with a
 // very long period that also adds a Weyl generator. It also passes
@@ -27124,18 +27392,18 @@ var xorshift7 = __webpack_require__(118);
 // collisions.
 // Period: 2^4128-2^32.
 // No systematic BigCrush failures reported.
-var xor4096 = __webpack_require__(119);
+var xor4096 = __webpack_require__(120);
 
 // Tyche-i, by Samuel Neves and Filipe Araujo, is a bit-shifting random
 // number generator derived from ChaCha, a modern stream cipher.
 // https://eden.dei.uc.pt/~sneves/pubs/2011-snfa2.pdf
 // Period: ~2^127
 // No systematic BigCrush failures reported.
-var tychei = __webpack_require__(120);
+var tychei = __webpack_require__(121);
 
 // The original ARC4-based prng included in this library.
 // Period: ~2^1600
-var sr = __webpack_require__(121);
+var sr = __webpack_require__(122);
 
 sr.alea = alea;
 sr.xor128 = xor128;
@@ -27148,7 +27416,7 @@ module.exports = sr;
 
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A port of an algorithm by Johannes Baagøe <baagoe@baagoe.com>, 2010
@@ -27270,7 +27538,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xor128" prng algorithm by
@@ -27359,7 +27627,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 117 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xorwow" prng algorithm by
@@ -27453,7 +27721,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 118 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xorshift7" algorithm by
@@ -27558,7 +27826,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 119 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of Richard Brent's Xorgens xor4096 algorithm.
@@ -27712,7 +27980,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "Tyche-i" prng algorithm by
@@ -27823,7 +28091,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -28062,7 +28330,7 @@ if ((typeof module) == 'object' && module.exports) {
   module.exports = seedrandom;
   // When in node.js, try using crypto package for autoseeding.
   try {
-    nodecrypto = __webpack_require__(122);
+    nodecrypto = __webpack_require__(123);
   } catch (ex) {}
 } else if (true) {
   !(__WEBPACK_AMD_DEFINE_RESULT__ = function() { return seedrandom; }.call(exports, __webpack_require__, exports, module),
@@ -28077,13 +28345,13 @@ if ((typeof module) == 'object' && module.exports) {
 
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 123 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Generated by CoffeeScript 1.6.2
@@ -29986,7 +30254,7 @@ if ((typeof module) == 'object' && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10)(module)))
 
 /***/ }),
-/* 124 */
+/* 125 */
 /***/ (function(module, exports) {
 
 /*
@@ -30026,7 +30294,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, exports) {
 
 function generate_grid(width, height, bleed_x, bleed_y, cell_size, variance, rand_fn) {
@@ -30052,7 +30320,7 @@ module.exports = generate_grid;
 
 
 /***/ }),
-/* 126 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {/*
@@ -30061,7 +30329,7 @@ module.exports = generate_grid;
  */
 
 // conditionally load jsdom if we don't have a browser environment available.
-var doc = (typeof document !== "undefined") ? document : __webpack_require__(128).jsdom('<html/>');
+var doc = (typeof document !== "undefined") ? document : __webpack_require__(129).jsdom('<html/>');
 
 function Pattern(polys, opts) {
 
@@ -30095,7 +30363,7 @@ function Pattern(polys, opts) {
         typeof process.versions.node !== 'undefined') {
       // In Node environment.
       try {
-        __webpack_require__(129);
+        __webpack_require__(130);
       } catch (e) {
         throw Error('The optional node-canvas dependency is needed for Trianglify to render using canvas in node.');
       }
@@ -30143,10 +30411,10 @@ function Pattern(polys, opts) {
 
 module.exports = Pattern;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(127)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(128)))
 
 /***/ }),
-/* 127 */
+/* 128 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -30336,12 +30604,6 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 128 */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
 /* 129 */
 /***/ (function(module, exports) {
 
@@ -30349,265 +30611,9 @@ process.umask = function() { return 0; };
 
 /***/ }),
 /* 130 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-
-
-var _resize = __webpack_require__(68);
-
-var _jsonAnimation = __webpack_require__(36);
-
-var _preloader = __webpack_require__(66);
-
-document.addEventListener('DOMContentLoaded', mainPage);
-
-function mainPage() {
-	var $home = $('.js-home'),
-	    $about = $('.js-about'),
-	    $work = $('.js-work'),
-	    $contact = $('.js-contact');
-
-	AttachEvent(_preloader.page.elements.btnHamburger, "click", EventHandler);
-
-	function AttachEvent(element, type, handler) {
-		if (element.addEventListener) element.addEventListener(type, handler, false);else element.attachEvent("on" + type, handler);
-	}
-
-	function EventHandler(e) {
-		e.preventDefault();
-		if (String(this.classList) === 'btn-hamburger') {
-			this.classList.add('btn-is--active');
-			_preloader.page.elements.initText.style.display = 'none';
-			animateMenuToArrow();
-		} else {
-			animateArrowToMenu();
-			this.classList.remove('btn-is--active');
-			_preloader.page.elements.initText.style.display = 'block';
-		}
-	}
-
-	function animateMenuToArrow() {
-		_preloader.page.elements.initText.classList.add('is--invisible');
-		$($about).add($work).add($contact).addClass('is--visible');
-		headerText();
-	}
-
-	function animateArrowToMenu() {
-		_preloader.page.elements.initText.classList.remove('is--invisible');
-		$($about).add($work).add($contact).removeClass('is--visible');
-	}
-
-	/*header text animation*/
-	var headerText = function headerText() {
-		var s = void 0,
-		    textLetters = {
-			settings: {
-				lettersAbout: $about,
-				lettersWork: $work,
-				lettersContact: $contact
-			},
-			init: function init() {
-				s = this.settings;
-				this.bindEvents();
-			},
-			bindEvents: function bindEvents() {
-				$about.text('About');
-				$work.text('Work');
-				$contact.text('Contact');{
-					s.lettersAbout.html(function (i, el) {
-						var text = $.trim(el).split("");
-						return '<span>' + text.join('</span><span>') + '</span>';
-					});
-					s.lettersWork.html(function (i, el) {
-						var text = $.trim(el).split("");
-						return '<span>' + text.join('</span><span>') + '</span>';
-					});
-					s.lettersContact.html(function (i, el) {
-						var text = $.trim(el).split("");
-						return '<span>' + text.join('</span><span>') + '</span>';
-					});
-				}
-			}
-		};
-		textLetters.init();
-	};
-
-	/* replace content onclick */
-	$home.on('click', {
-		case: 1
-	}, content);
-	$about.on("click", {
-		case: 2
-	}, content);
-	$work.on('click', {
-		case: 3
-	}, content);
-	$contact.on('click', {
-		case: 4
-	}, content);
-
-	function content(event) {
-		event.preventDefault();
-		for (var key in _preloader.page) {
-			_preloader.page[key] = false;
-		}
-		var pageNum = event.data.case;
-		$(_preloader.page.elements.curtainRight).add(_preloader.page.elements.curtainLeft).removeClass('is--opening').addClass('is--closing');
-		var $timerCurtains = setTimeout(function () {
-			_jsonAnimation.anim.stop();
-			switch (pageNum) {
-				case 4:
-					for (var _key in _preloader.page.elements) {
-						if (_key !== 'container' && _key !== 'touch' && _key !== 'home') _preloader.page.elements[_key].style.display = 'none';else _preloader.page.elements[_key].style.display = 'flex';
-					}
-					_preloader.page.pattern.colorX = 'Paired';
-					_preloader.page.pattern.colorY = 'Spectral';
-					(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-					_preloader.page['contacts'] = true; //page contacts
-					break;
-				case 3:
-					for (var _key2 in _preloader.page.elements) {
-						if (_key2 !== 'flipbook' && _key2 !== 'touch' && _key2 !== 'home') _preloader.page.elements[_key2].style.display = 'none';else _preloader.page.elements[_key2].style.display = 'flex';
-					}
-					_preloader.page.pattern.colorX = 'Greys';
-					_preloader.page.pattern.colorY = 'Greys';
-					(0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
-					_preloader.page['work'] = true; //page work
-					break;
-				case 2:
-					for (var _key3 in _preloader.page.elements) {
-						if (_key3 !== 'article' && _key3 !== 'home') _preloader.page.elements[_key3].style.display = 'none';else _preloader.page.elements[_key3].style.display = 'flex';
-					}
-					_preloader.page.pattern.colorX = 'PuOr';
-					_preloader.page.pattern.colorY = 'Pastel2';
-					_jsonAnimation.anim.play();
-					_preloader.page['about'] = true; //page about
-					break;
-				case 1:
-					for (var _key4 in _preloader.page.elements) {
-						if (_key4 === 'article' || _key4 === 'flipbook' || _key4 === 'touch' || _key4 === 'container' || _key4 === 'home') _preloader.page.elements[_key4].style.display = 'none';else _preloader.page.elements[_key4].style.display = 'grid';
-					}
-					_preloader.page.pattern.colorX = 'YlGnBu';
-					_preloader.page.pattern.colorY = 'GnBu';
-					animateArrowToMenu();
-					(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
-					_preloader.page['home'] = true; // page home 
-					break;
-				default:
-					document.write('Oops, something went wrong!');
-			}
-			_preloader.page.setBackground;
-			$(_preloader.page.elements.curtainRight).add(_preloader.page.elements.curtainLeft).stop().removeClass('is--closing').addClass('is--opening');
-		}, 1500);
-	}
-
-	window.addEventListener("orientationchange", function () {
-		if (_preloader.page.keyboard) {
-			window.lastOrientation = true;
-		}
-	}, false);
-
-	function updateWindowSize() {
-		window.lastInnerWidth = window.innerWidth;
-		window.lastInnerHeight = window.innerHeight;
-		// Stays the same for iOS, so that's our ticket to detect iOS keyboard
-		window.lastOrientation = false;
-		window.lastBodyHeight = document.body.clientHeight;
-	};
-
-	function detectKeyboard() {
-		function orientationChange() {
-			if (window.lastOrientation) {
-				return !window.lastOrientation;
-			} else {
-				return window.lastOrientation;
-			}
-		}
-
-		// No orientation change, keyboard opening
-		if (window.lastInnerHeight - window.innerHeight > 150 && window.innerWidth == window.lastInnerWidth) {
-			var _keyboardHeight = window.lastInnerHeight - window.innerHeight;
-			updateWindowSize();
-			return _keyboardHeight;
-		}
-		// Orientation change with keyboard already opened
-		if (orientationChange() && _preloader.page.keyboard) {
-			var _keyboardHeight2 = screen.height - window.topBarHeight - window.innerHeight;
-			updateWindowSize();
-			return _keyboardHeight2;
-		}
-
-		// No orientation change, keyboard closing
-		if (window.innerHeight - window.lastInnerHeight > 150 && window.innerWidth == window.lastInnerWidth) {
-			var _keyboardHeight3 = -1;
-			updateWindowSize();
-			return _keyboardHeight3;
-		}
-
-		// Orientation change or regular resize, no keyboard action
-		var keyboardHeight = 0;
-		updateWindowSize();
-		return keyboardHeight;
-	};
-
-	function keyboardShift(keyboardHeight) {
-		_preloader.page.elements.grid.style.cssText = 'grid-template-rows:65px calc(100vh + ' + keyboardHeight + 'px) auto;';
-		_preloader.page.keyboard = true;
-		resizeScreenObj(event, keyboardHeight);
-	};
-
-	function removeKeyboardShift() {
-		_preloader.page.elements.grid.style.cssText = 'grid-template-rows:65px calc(100vh - 65px) auto;';
-		_preloader.page.keyboard = false;
-		resizeScreenObj(event, 0);
-	};
-
-	// OnStart innit
-	(function () {
-		updateWindowSize();
-		window.topBarHeight = screen.height - window.innerHeight;
-		window.addEventListener("resize", resizeThrottler, false);
-
-		var resizeTimeout = void 0;
-
-		function resizeThrottler() {
-			// ignore resize events as long as an actualResizeHandler execution is in the queue
-			if (!resizeTimeout) {
-				resizeTimeout = setTimeout(function () {
-					resizeTimeout = null;
-					actualResizeHandler();
-					// The actualResizeHandler will execute at a rate of 15fps
-				}, 66);
-			}
-		}
-
-		function actualResizeHandler() {
-			var keyboardHeight = detectKeyboard();
-			if (keyboardHeight > 0) {
-				keyboardShift(keyboardHeight);
-			} else if (keyboardHeight == -1) {
-				removeKeyboardShift();
-			}
-		}
-	})();
-
-	window.onresize = resizeScreenObj;
-	var resizeTimer = void 0;
-
-	function resizeScreenObj(event, keyHeight) {
-		clearTimeout(resizeTimer);
-		resizeTimer = setTimeout(function () {
-			if (_preloader.page.contacts) {
-				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-			} else if (_preloader.page.home) {
-				(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
-			} else if (_preloader.page.work) {
-				(0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
-			}
-		}, 122);
-	};
-}
+/* (ignored) */
 
 /***/ }),
 /* 131 */
@@ -32436,16 +32442,17 @@ return $;
 "use strict";
 
 
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; /**
+                                                                                                                                                                                                                                                                               * turn.js 4th release
+                                                                                                                                                                                                                                                                               * turnjs.com
+                                                                                                                                                                                                                                                                               * turnjs.com/license.txt
+                                                                                                                                                                                                                                                                               *
+                                                                                                                                                                                                                                                                               * Copyright (C) 2012 Emmanuel Garcia
+                                                                                                                                                                                                                                                                               * All rights reserved
+                                                                                                                                                                                                                                                                               **/
 
-/**
- * turn.js 4th release
- * turnjs.com
- * turnjs.com/license.txt
- *
- * Copyright (C) 2012 Emmanuel Garcia
- * All rights reserved
- **/
+
+var _main = __webpack_require__(69);
 
 (function ($) {
 
@@ -34362,13 +34369,14 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
           turnData = data.opts.turn.data(),
           o = flipMethods._c.call(this, point.corner),
           width = this.width(),
-          height = this.height();
+          height = this.height(),
+          divider = 1;
+      if (_main.scaleValue < 1) divider = _main.scaleValue;else divider = 1;
 
       switch (data.effect) {
 
         case 'hard':
-
-          if (point.corner == 'l') point.x = Math.min(Math.max(point.x, 0), width * 2);else point.x = Math.max(Math.min(point.x, width), -width);
+          if (point.corner == 'l') point.x = Math.min(Math.max(point.x / divider, 0), width * 2);else point.x = Math.max(Math.min(point.x, width), -width);
 
           var leftPos,
               shadow,
