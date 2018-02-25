@@ -32463,6 +32463,7 @@ var _main = __webpack_require__(69);
       vendor = '',
       _version = '4.1.0',
       PI = Math.PI,
+      prevValue = 0,
       A90 = PI / 2,
       isTouch = 'ontouchstart' in window,
       mouseEvents = isTouch ? {
@@ -34364,32 +34365,51 @@ var _main = __webpack_require__(69);
     // Takes a 2P point from the screen and applies the transformation
 
     _fold: function _fold(point) {
-
       var data = this.data().f,
           turnData = data.opts.turn.data(),
           o = flipMethods._c.call(this, point.corner),
           width = this.width(),
           height = this.height(),
-          divider = 1;
-      if (_main.scaleValue < 1) divider = _main.scaleValue;else divider = 1;
+          posValue = 0,
+          prevValue = 0,
+          percent = 0,
+          outputX = 1,
+          result = 0;
+      if (_main.scaleValue > 1) outputX = 1;else {
+        if (point.corner == 'l' && point.x > flipOptions.cornerSize) {
+          result = Math.round((width * 2 - point.x) / 10);
+          var xMax = 0;
+          var xMin = 1 - _main.scaleValue;
+          var yMax = 0;
+          var yMin = 86;
+          percent = (result - yMin) / (yMax - yMin);
+          outputX = point.x / _main.scaleValue;
+        } else outputX = 1;
+      };
 
+      posValue = outputX;
+      prevValue = point.x;
       switch (data.effect) {
 
         case 'hard':
-          if (point.corner == 'l') point.x = Math.min(Math.max(point.x / divider, 0), width * 2);else point.x = Math.max(Math.min(point.x, width), -width);
+          if (point.corner == 'l') {
+            point.x = Math.min(Math.max(posValue, point.x), width * 2);
+          } else point.x = Math.max(Math.min(point.x, width), -width);
 
           var leftPos,
               shadow,
               gradientX,
+              relX,
+              angle,
+              half,
               fpageOrigin,
               parentOrigin,
               totalPages = turnData.totalPages,
               zIndex = data.opts['z-index'] || totalPages,
-              parentCss = { 'overflow': 'visible' },
-              relX = o.x ? (o.x - point.x) / width : point.x / width,
-              angle = relX * 90,
-              half = angle < 90;
-
+              parentCss = { 'overflow': 'visible' };
+          relX = o.x ? (o.x - point.x) / width : point.x / width;
+          angle = relX * 90, half = angle < 90;
+          point.x = prevValue;
           switch (point.corner) {
             case 'l':
 
@@ -34404,6 +34424,7 @@ var _main = __webpack_require__(69);
                 leftPos = '100%';
                 shadow = data.opts.page + 1 < totalPages;
                 gradientX = 0;
+                if (_main.scaleValue < 1) point.x = outputX;
               }
 
               break;
