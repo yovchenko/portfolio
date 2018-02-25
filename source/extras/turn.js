@@ -2260,7 +2260,6 @@ flipMethods = {
   // Takes a 2P point from the screen and applies the transformation
 
   _fold: function(point) {
-
     var data = this.data().f,
     turnData = data.opts.turn.data(),
     o = flipMethods._c.call(this, point.corner),
@@ -2269,31 +2268,28 @@ flipMethods = {
     divider = 1,
     posValue = 0,
     percentWidth = 0,
-    percenDivider = 0,
     s = 0,
     z = 0,
     result = 0;
-
+    var outputX = 1;
     if (scaleValue > 1) divider = 1;
     else {
-      if(point.corner == 'l') {
-        result = 100 - Math.round(((width * 2) - point.x) / 10);
-        percenDivider = scaleValue / 100;
-        s = 1 - (percenDivider * result);
-        z = 1 - scaleValue;
-       /* s = Math.min(Math.max(s, 1 - z), 1); */
-var xMax = 1;
-var xMin = 1 - z;
-
-var yMax = 1;
-var yMin = z;
-
-var percent = (s - yMin) / (yMax - yMin);
-var outputX =  percent * (xMax - xMin) + xMin;
-        console.log(outputX + ' ' + scaleValue)
+      z = scaleValue / 100;
+      if(point.corner == 'l' && point.x > flipOptions.cornerSize) {
+        if(data.opts.page === 6) {
+          s = + scaleValue + (z * 20);
+        }else s = scaleValue;
+        result = Math.round(((width * 2) - point.x) / 10);
+        var xMax = 0;
+        var xMin = 1 - s;
+        var yMax = 0;
+        var yMin = 100;
+        var percent = (result - yMin) / (yMax - yMin);
+        outputX = percent * (xMax - xMin) + xMin;
       }
+      else  outputX = 1;
     };
-    
+    console.log(outputX + ' ' + scaleValue)
   posValue = point.x / outputX;
 
   switch (data.effect) {
