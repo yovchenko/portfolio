@@ -1054,8 +1054,6 @@ header {
     @media (min-width: 961.53846px) {
       .menu__header .menu__home {
         font-size: 50px; } }
-  .menu__header p[class] > span {
-    letter-spacing: -0.45px; }
   .menu__header p[class] > span:last-child {
     padding-right: 10px; }
   .menu__header p[class] > span:first-child {
@@ -1139,7 +1137,6 @@ figure {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
-  background-image: url(../images/me-large.png);
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1152,7 +1149,7 @@ figure {
     -webkit-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6);
     box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6);
     border-radius: 50%;
-    margin: 50px 70px 70px 0px;
+    margin: 50px 0px;
     z-index: 1;
     image-rendering: optimizeSpeed; }
 
@@ -2116,8 +2113,6 @@ footer .wrapper {
   .menu__header .menu__home {
     line-height: 61px;
     border-radius: 5px; }
-  .menu__header p[class] > span {
-    letter-spacing: -0.45px; }
   .menu__header p[class] > span:last-child {
     padding-right: 5px; }
   .menu__header p[class] > span:first-child {

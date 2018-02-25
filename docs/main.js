@@ -34479,9 +34479,7 @@ var _main = __webpack_require__(69);
           height = this.height(),
           posValue = 0,
           prevValue = 0,
-          percent = 0,
-          outputX = 1,
-          result = 0;
+          outputX = 1;
       if (_main.scaleValue > 1) outputX = 1;else {
         if (point.corner == 'l' && point.x > flipOptions.cornerSize) {
           outputX = point.x / _main.scaleValue;
@@ -35451,6 +35449,7 @@ var _main = __webpack_require__(69);
             animating = false;
           },
           easing: function easing(x, t, b, c, data) {
+            console.log(x + ' ' + t + ' ' + b + ' ' + c + ' ' + data);
             return c * Math.sqrt(1 - (t = t / data - 1) * t) + b;
           }
         }, point);

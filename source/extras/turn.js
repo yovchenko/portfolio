@@ -2366,9 +2366,7 @@ import {
           height = this.height(),
           posValue = 0,
           prevValue = 0,
-          percent = 0,
-          outputX = 1,
-          result = 0;
+          outputX = 1;
         if (scaleValue > 1) outputX = 1;
         else {
           if (point.corner == 'l' && point.x > flipOptions.cornerSize) {
@@ -2401,7 +2399,7 @@ import {
               }
             relX = (o.x) ? (o.x - point.x) / width : point.x / width;
             angle = relX * 90,
-              half = angle < 90;
+            half = angle < 90;
             point.x = prevValue;
             switch (point.corner) {
               case 'l':
@@ -2991,7 +2989,7 @@ import {
           duration: turnData.opts.duration,
           turning: true
         });
-
+      
         data.corner = null;
       },
 
@@ -3495,6 +3493,7 @@ import {
             animating = false;
           },
           easing: function (x, t, b, c, data) {
+            console.log(x + ' ' + t + ' ' + b + ' ' + c + ' ' + data)
             return c * Math.sqrt(1 - (t = t / data - 1) * t) + b;
           }
         }, point);

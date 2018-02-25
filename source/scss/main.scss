@@ -153,9 +153,6 @@ header {
         border-radius: 5px;
         @include responsive-font(5.2vw, 16px, 50px);
     }
-    p[class]>span {
-        letter-spacing: -0.45px;
-    }
     p[class]>span:last-child {
         padding-right: 10px;
     }
@@ -239,7 +236,6 @@ figure {
     width: 800px;
     height: 900px;
     align-items: end;
-    background-image: url(../images/me-large.png);
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -254,7 +250,7 @@ figure {
         -moz-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6);
         box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6);
         border-radius: 50%;
-        margin: 50px 70px 70px 0px;
+        margin: 50px 0px;
         z-index: 1;
         image-rendering: optimizeSpeed;
     }
@@ -1360,9 +1356,6 @@ footer .wrapper {
         .menu__home {
             line-height: 61px;
             border-radius: 5px;
-        }
-        p[class]>span {
-            letter-spacing: -0.45px;
         }
         p[class]>span:last-child {
             padding-right: 5px;
