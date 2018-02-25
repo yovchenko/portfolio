@@ -23,6 +23,8 @@ var has3d,
 
   PI = Math.PI,
 
+  prevValue = 0,
+
   A90 = PI/2,
 
   isTouch = 'ontouchstart' in window,
@@ -2264,15 +2266,42 @@ flipMethods = {
     o = flipMethods._c.call(this, point.corner),
     width = this.width(),
     height = this.height(),
-    divider = 1;
-    if (scaleValue < 1) divider = scaleValue;
-    else divider = 1;
+    divider = 1,
+    posValue = 0,
+    percentWidth = 0,
+    percenDivider = 0,
+    s = 0,
+    z = 0,
+    result = 0;
+
+    if (scaleValue > 1) divider = 1;
+    else {
+      if(point.corner == 'l') {
+        result = 100 - Math.round(((width * 2) - point.x) / 10);
+        percenDivider = scaleValue / 100;
+        s = 1 - (percenDivider * result);
+        z = 1 - scaleValue;
+       /* s = Math.min(Math.max(s, 1 - z), 1); */
+var xMax = 1;
+var xMin = 1 - z;
+
+var yMax = 1;
+var yMin = z;
+
+var percent = (s - yMin) / (yMax - yMin);
+var outputX =  percent * (xMax - xMin) + xMin;
+        console.log(outputX + ' ' + scaleValue)
+      }
+    };
+    
+  posValue = point.x / outputX;
 
   switch (data.effect) {
 
     case 'hard':
-      if (point.corner=='l')
-        point.x = Math.min(Math.max(point.x / divider, 0), width*2);
+      if (point.corner == 'l') {
+        point.x = Math.min(Math.max(posValue, point.x), width*2);
+      }
       else
         point.x = Math.max(Math.min(point.x, width), -width);
 
