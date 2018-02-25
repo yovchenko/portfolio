@@ -32596,7 +32596,11 @@ var _main = __webpack_require__(69);
         if (has(i, options.when)) this.bind(i, options.when[i]);
       } // Set the css
 
-      this.css({ position: 'relative', width: options.width, height: options.height });
+      this.css({
+        position: 'relative',
+        width: options.width,
+        height: options.height
+      });
 
       // Set the initial display
 
@@ -32677,7 +32681,9 @@ var _main = __webpack_require__(69);
         if (incPages) data.totalPages = lastPage;
 
         // Add element
-        data.pageObjs[page] = $(element).css({ 'float': 'left' }).addClass('page p' + page + className);
+        data.pageObjs[page] = $(element).css({
+          'float': 'left'
+        }).addClass('page p' + page + className);
 
         if (!hasHardPage() && data.pageObjs[page].hasClass('hard')) {
           data.pageObjs[page].removeClass('hard');
@@ -32705,10 +32711,14 @@ var _main = __webpack_require__(69);
         if (!data.pageWrap[page]) {
 
           // Wrapper
-          data.pageWrap[page] = $('<div/>', { 'class': 'page-wrapper',
+          data.pageWrap[page] = $('<div/>', {
+            'class': 'page-wrapper',
             page: page,
-            css: { position: 'absolute',
-              overflow: 'hidden' } });
+            css: {
+              position: 'absolute',
+              overflow: 'hidden'
+            }
+          });
 
           // Append to this flipbook
           this.append(data.pageWrap[page]);
@@ -32722,7 +32732,10 @@ var _main = __webpack_require__(69);
 
           // Set the size of the page
           var prop = turnMethods._pageSize.call(this, page, true);
-          element.css({ width: prop.width, height: prop.height });
+          element.css({
+            width: prop.width,
+            height: prop.height
+          });
           data.pageWrap[page].css(prop);
         }
 
@@ -32767,7 +32780,9 @@ var _main = __webpack_require__(69);
           }
         }
 
-        $(this).css({ marginLeft: left });
+        $(this).css({
+          marginLeft: left
+        });
       }
 
       return this;
@@ -33160,9 +33175,16 @@ var _main = __webpack_require__(69);
             // Create a temporal page to use as folded page
 
             if (!data.pageObjs[0]) {
-              this.turn('stop').css({ 'overflow': 'hidden' });
+              this.turn('stop').css({
+                'overflow': 'hidden'
+              });
 
-              data.pageObjs[0] = $('<div />', { 'class': 'page p-temporal' }).css({ width: this.width(), height: this.height() }).appendTo(this);
+              data.pageObjs[0] = $('<div />', {
+                'class': 'page p-temporal'
+              }).css({
+                width: this.width(),
+                height: this.height()
+              }).appendTo(this);
             }
 
             this.addClass('shadow');
@@ -33173,7 +33195,9 @@ var _main = __webpack_require__(69);
             // Remove the temporal page
 
             if (data.pageObjs[0]) {
-              this.turn('stop').css({ 'overflow': '' });
+              this.turn('stop').css({
+                'overflow': ''
+              });
               data.pageObjs[0].remove();
               delete data.pageObjs[0];
             }
@@ -33211,7 +33235,9 @@ var _main = __webpack_require__(69);
         if ($.inArray(dir, directions) == -1) throw turnError('"' + dir + '" is not a value for direction');
 
         if (dir == 'rtl') {
-          $(this).attr('dir', 'ltr').css({ direction: 'ltr' });
+          $(this).attr('dir', 'ltr').css({
+            direction: 'ltr'
+          });
         }
 
         data.direction = dir;
@@ -33286,7 +33312,10 @@ var _main = __webpack_require__(69);
     size: function size(width, height) {
 
       if (width === undefined || height === undefined) {
-        return { width: this.width(), height: this.height() };
+        return {
+          width: this.width(),
+          height: this.height()
+        };
       } else {
 
         this.turn('stop');
@@ -33296,19 +33325,31 @@ var _main = __webpack_require__(69);
             data = this.data(),
             pageWidth = data.display == 'double' ? width / 2 : width;
 
-        this.css({ width: width, height: height });
+        this.css({
+          width: width,
+          height: height
+        });
 
-        if (data.pageObjs[0]) data.pageObjs[0].css({ width: pageWidth, height: height });
+        if (data.pageObjs[0]) data.pageObjs[0].css({
+          width: pageWidth,
+          height: height
+        });
 
         for (page in data.pageWrap) {
           if (!has(page, data.pageWrap)) continue;
 
           prop = turnMethods._pageSize.call(this, page, true);
 
-          data.pageObjs[page].css({ width: prop.width, height: prop.height });
+          data.pageObjs[page].css({
+            width: prop.width,
+            height: prop.height
+          });
           data.pageWrap[page].css(prop);
 
-          if (data.pages[page]) data.pages[page].css({ width: prop.width, height: prop.height });
+          if (data.pages[page]) data.pages[page].css({
+            width: prop.width,
+            height: prop.height
+          });
         }
 
         this.turn('resize');
@@ -33325,7 +33366,9 @@ var _main = __webpack_require__(69);
           data = this.data();
 
       if (data.pages[0]) {
-        data.pageWrap[0].css({ left: -this.width() });
+        data.pageWrap[0].css({
+          left: -this.width()
+        });
         data.pages[0].flip('resize', true);
       }
 
@@ -33820,7 +33863,11 @@ var _main = __webpack_require__(69);
           view = this.turn('view'),
           currentPage = view[0] || view[1],
           total = mv.length - 1,
-          r = { pageZ: {}, partZ: {}, pageV: {} },
+          r = {
+        pageZ: {},
+        partZ: {},
+        pageV: {}
+      },
           addView = function addView(page) {
         var view = that.turn('view', page);
         if (view[0]) r.pageV[view[0]] = true;
@@ -33994,7 +34041,8 @@ var _main = __webpack_require__(69);
         case 0:
           data.pageWrap[page].css({
             zIndex: 0,
-            display: data.pageObjs[page].hasClass('fixed') ? '' : 'none' });
+            display: data.pageObjs[page].hasClass('fixed') ? '' : 'none'
+          });
           break;
       }
 
@@ -34063,11 +34111,13 @@ var _main = __webpack_require__(69);
 
     init: function init(opts) {
 
-      this.data({ f: {
+      this.data({
+        f: {
           disabled: false,
           hover: false,
           effect: this.hasClass('hard') ? 'hard' : 'sheet'
-        } });
+        }
+      });
 
       this.flip('options', opts);
 
@@ -34090,7 +34140,9 @@ var _main = __webpack_require__(69);
       var data = this.data().f;
 
       if (opts) {
-        flipMethods.setData.call(this, { opts: $.extend({}, data.opts || flipOptions, opts) });
+        flipMethods.setData.call(this, {
+          opts: $.extend({}, data.opts || flipOptions, opts)
+        });
         return this;
       } else return data.opts;
     },
@@ -34133,7 +34185,11 @@ var _main = __webpack_require__(69);
     _cornerActivated: function _cornerActivated(p) {
 
       var data = this.data().f;
-      var point = { x: p.x, y: p.y, corner: '' };
+      var point = {
+        x: p.x,
+        y: p.y,
+        corner: ''
+      };
       var csz = data.opts.cornerSize;
       var width = this.width();
       var height = this.height();
@@ -34235,7 +34291,11 @@ var _main = __webpack_require__(69);
           turnData = data.opts.turn.data(),
           gradient = turnData.opts.gradients && (turnData.display == 'single' || data.opts.page != 2 && data.opts.page != turnData.totalPages - 1);
 
-      if (gradient && !data.bshadow) data.bshadow = $('<div/>', divAtt(0, 0, 1)).css({ 'position': '', width: this.width(), height: this.height() }).appendTo(data.parent);
+      if (gradient && !data.bshadow) data.bshadow = $('<div/>', divAtt(0, 0, 1)).css({
+        'position': '',
+        width: this.width(),
+        height: this.height()
+      }).appendTo(data.parent);
 
       return gradient;
     },
@@ -34256,11 +34316,23 @@ var _main = __webpack_require__(69);
         case 'hard':
 
           if (full) {
-            data.wrapper.css({ width: width, height: height });
-            data.fpage.css({ width: width, height: height });
+            data.wrapper.css({
+              width: width,
+              height: height
+            });
+            data.fpage.css({
+              width: width,
+              height: height
+            });
             if (turnData.opts.gradients) {
-              data.ashadow.css({ width: width, height: height });
-              data.bshadow.css({ width: width, height: height });
+              data.ashadow.css({
+                width: width,
+                height: height
+              });
+              data.bshadow.css({
+                width: width,
+                height: height
+              });
             }
           }
           break;
@@ -34269,25 +34341,48 @@ var _main = __webpack_require__(69);
           if (full) {
             var size = Math.round(Math.sqrt(Math.pow(width, 2) + Math.pow(height, 2)));
 
-            data.wrapper.css({ width: size, height: size });
-            data.fwrapper.css({ width: size, height: size }).children(':first-child').css({ width: width, height: height });
+            data.wrapper.css({
+              width: size,
+              height: size
+            });
+            data.fwrapper.css({
+              width: size,
+              height: size
+            }).children(':first-child').css({
+              width: width,
+              height: height
+            });
 
-            data.fpage.css({ width: width, height: height });
+            data.fpage.css({
+              width: width,
+              height: height
+            });
 
-            if (turnData.opts.gradients) data.ashadow.css({ width: width, height: height });
+            if (turnData.opts.gradients) data.ashadow.css({
+              width: width,
+              height: height
+            });
 
-            if (flipMethods._backGradient.call(this)) data.bshadow.css({ width: width, height: height });
+            if (flipMethods._backGradient.call(this)) data.bshadow.css({
+              width: width,
+              height: height
+            });
           }
 
           if (data.parent.is(':visible')) {
             var offset = findPos(data.parent[0]);
 
-            data.fwrapper.css({ top: offset.top,
-              left: offset.left });
+            data.fwrapper.css({
+              top: offset.top,
+              left: offset.left
+            });
 
             //if (data.opts.turn) {
             offset = findPos(data.opts.turn[0]);
-            data.fparent.css({ top: -offset.top, left: -offset.left });
+            data.fparent.css({
+              top: -offset.top,
+              left: -offset.left
+            });
             //}
           }
 
@@ -34335,7 +34430,11 @@ var _main = __webpack_require__(69);
           data.fparent = data.opts.turn.data().fparent;
 
           if (!data.fparent) {
-            var fparent = $('<div/>', { css: { 'pointer-events': 'none' } }).hide();
+            var fparent = $('<div/>', {
+              css: {
+                'pointer-events': 'none'
+              }
+            }).hide();
             fparent.data().flips = 0;
             fparent.css(divAtt(0, 0, 'auto', 'visible').css).appendTo(data.opts.turn);
 
@@ -34343,13 +34442,21 @@ var _main = __webpack_require__(69);
             data.fparent = fparent;
           }
 
-          this.css({ position: 'absolute', top: 0, left: 0, bottom: 'auto', right: 'auto' });
+          this.css({
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            bottom: 'auto',
+            right: 'auto'
+          });
 
           data.wrapper = $('<div/>', divAtt(0, 0, this.css('z-index'))).appendTo(parent).prepend(this);
 
           data.fwrapper = $('<div/>', divAtt(parent.offset().top, parent.offset().left)).hide().appendTo(data.fparent);
 
-          data.fpage = $('<div/>', divAtt(0, 0, 0, 'visible')).css({ cursor: 'default' }).appendTo(data.fwrapper);
+          data.fpage = $('<div/>', divAtt(0, 0, 0, 'visible')).css({
+            cursor: 'default'
+          }).appendTo(data.fwrapper);
 
           if (turnData.opts.gradients) data.ashadow = $('<div/>', divAtt(0, 0, 1)).appendTo(data.fpage);
 
@@ -34377,12 +34484,6 @@ var _main = __webpack_require__(69);
           result = 0;
       if (_main.scaleValue > 1) outputX = 1;else {
         if (point.corner == 'l' && point.x > flipOptions.cornerSize) {
-          result = Math.round((width * 2 - point.x) / 10);
-          var xMax = 0;
-          var xMin = 1 - _main.scaleValue;
-          var yMax = 0;
-          var yMin = 86;
-          percent = (result - yMin) / (yMax - yMin);
           outputX = point.x / _main.scaleValue;
         } else outputX = 1;
       };
@@ -34406,7 +34507,9 @@ var _main = __webpack_require__(69);
               parentOrigin,
               totalPages = turnData.totalPages,
               zIndex = data.opts['z-index'] || totalPages,
-              parentCss = { 'overflow': 'visible' };
+              parentCss = {
+            'overflow': 'visible'
+          };
           relX = o.x ? (o.x - point.x) / width : point.x / width;
           angle = relX * 90, half = angle < 90;
           point.x = prevValue;
@@ -34458,12 +34561,20 @@ var _main = __webpack_require__(69);
 
           if (half) {
             relX = -relX + 1;
-            data.wrapper.css({ zIndex: zIndex + 1 });
-            data.fpage.css({ zIndex: zIndex });
+            data.wrapper.css({
+              zIndex: zIndex + 1
+            });
+            data.fpage.css({
+              zIndex: zIndex
+            });
           } else {
             relX = relX - 1;
-            data.wrapper.css({ zIndex: zIndex });
-            data.fpage.css({ zIndex: zIndex + 1 });
+            data.wrapper.css({
+              zIndex: zIndex
+            });
+            data.fpage.css({
+              zIndex: zIndex + 1
+            });
           }
 
           if (turnData.opts.gradients) {
@@ -34473,7 +34584,9 @@ var _main = __webpack_require__(69);
               backgroundColor: 'rgba(0,0,0,' + 0.5 * relX + ')'
             }).transform('rotateY(0deg)');else data.ashadow.hide();
 
-            data.bshadow.css({ opacity: -relX + 1 });
+            data.bshadow.css({
+              opacity: -relX + 1
+            });
 
             if (half) {
               if (data.bshadow.parent()[0] != data.wrapper[0]) {
@@ -34597,7 +34710,12 @@ var _main = __webpack_require__(69);
             var f = ['0', 'auto'],
                 mvW = (width - h) * x[0] / 100,
                 mvH = (height - h) * x[1] / 100,
-                cssA = { left: f[c[0]], top: f[c[1]], right: f[c[2]], bottom: f[c[3]] },
+                cssA = {
+              left: f[c[0]],
+              top: f[c[1]],
+              right: f[c[2]],
+              bottom: f[c[3]]
+            },
                 cssB = {},
                 aliasingFk = a != 90 && a != -90 ? left ? -1 : 1 : 0,
                 origin = x[0] + '% ' + x[1] + '%';
@@ -34805,7 +34923,12 @@ var _main = __webpack_require__(69);
 
           if (--data.fparent.data().flips === 0) data.fparent.hide();
 
-          this.css({ left: 0, top: 0, right: 'auto', bottom: 'auto' }).transform('');
+          this.css({
+            left: 0,
+            top: 0,
+            right: 'auto',
+            bottom: 'auto'
+          }).transform('');
 
           data.wrapper.transform('');
 
@@ -34872,7 +34995,9 @@ var _main = __webpack_require__(69);
           data = this.data().f,
           turnData = data.opts.turn.data();
 
-      corner = { corner: data.corner ? data.corner.corner : corner || flipMethods._cAllowed.call(this)[0] };
+      corner = {
+        corner: data.corner ? data.corner.corner : corner || flipMethods._cAllowed.call(this)[0]
+      };
 
       var p1 = data.point || flipMethods._c.call(this, corner.corner, data.opts.turn ? turnData.opts.elevation : 0),
           p4 = flipMethods._c2.call(this, corner.corner);
@@ -34986,13 +35111,17 @@ var _main = __webpack_require__(69);
 
     disable: function disable(_disable2) {
 
-      flipMethods.setData.call(this, { 'disabled': _disable2 });
+      flipMethods.setData.call(this, {
+        'disabled': _disable2
+      });
       return this;
     },
 
     hover: function hover(_hover) {
 
-      flipMethods.setData.call(this, { 'hover': _hover });
+      flipMethods.setData.call(this, {
+        'hover': _hover
+      });
       return this;
     },
 
@@ -35038,7 +35167,8 @@ var _main = __webpack_require__(69);
 
   function divAtt(top, left, zIndex, overf) {
 
-    return { 'css': {
+    return {
+      'css': {
         position: 'absolute',
         top: top,
         left: left,
@@ -35077,7 +35207,10 @@ var _main = __webpack_require__(69);
 
   function point2D(x, y) {
 
-    return { x: x, y: y };
+    return {
+      x: x,
+      y: y
+    };
   }
 
   // Webkit 534.3 on Android wrongly repaints elements that use overflow:hidden + rotation
@@ -35159,11 +35292,19 @@ var _main = __webpack_require__(69);
 
       for (j = 0; j < numColors; j++) {
         cols.push('color-stop(' + colors[j][0] + ', ' + colors[j][1] + ')');
-      }obj.css({ 'background-image': '-webkit-gradient(linear, ' + p0.x + '% ' + p0.y + '%,' + p1.x + '% ' + p1.y + '%, ' + cols.join(',') + ' )' });
+      }obj.css({
+        'background-image': '-webkit-gradient(linear, ' + p0.x + '% ' + p0.y + '%,' + p1.x + '% ' + p1.y + '%, ' + cols.join(',') + ' )'
+      });
     } else {
 
-      p0 = { x: p0.x / 100 * obj.width(), y: p0.y / 100 * obj.height() };
-      p1 = { x: p1.x / 100 * obj.width(), y: p1.y / 100 * obj.height() };
+      p0 = {
+        x: p0.x / 100 * obj.width(),
+        y: p0.y / 100 * obj.height()
+      };
+      p1 = {
+        x: p1.x / 100 * obj.width(),
+        y: p1.y / 100 * obj.height()
+      };
 
       var dx = p1.x - p0.x,
           dy = p1.y - p0.y,
@@ -35175,12 +35316,17 @@ var _main = __webpack_require__(69);
           slope = Math.tan(angle),
           inverse = -1 / slope,
           x = (inverse * corner.x - corner.y - slope * p0.x + p0.y) / (inverse - slope),
-          c = { x: x, y: inverse * x - inverse * corner.x + corner.y },
+          c = {
+        x: x,
+        y: inverse * x - inverse * corner.x + corner.y
+      },
           segA = Math.sqrt(Math.pow(c.x - p0.x, 2) + Math.pow(c.y - p0.y, 2));
 
       for (j = 0; j < numColors; j++) {
         cols.push(' ' + colors[j][1] + ' ' + (segA + gradientDiagonal * colors[j][0]) * 100 / diagonal + '%');
-      }obj.css({ 'background-image': vendor + 'linear-gradient(' + -angle + 'rad,' + cols.join(',') + ')' });
+      }obj.css({
+        'background-image': vendor + 'linear-gradient(' + -angle + 'rad,' + cols.join(',') + ')'
+      });
     }
   }
 
@@ -35211,7 +35357,10 @@ var _main = __webpack_require__(69);
 
   function findPos(obj) {
 
-    var offset = { top: 0, left: 0 };
+    var offset = {
+      top: 0,
+      left: 0
+    };
 
     do {
       offset.left += obj.offsetLeft;

@@ -2372,12 +2372,6 @@ import {
         if (scaleValue > 1) outputX = 1;
         else {
           if (point.corner == 'l' && point.x > flipOptions.cornerSize) {
-            result = Math.round(((width * 2) - point.x) / 10);
-            var xMax = 0;
-            var xMin = 1 - scaleValue;
-            var yMax = 0;
-            var yMin = 86;
-            percent = (result - yMin) / (yMax - yMin);
             outputX = point.x / scaleValue;
           } else outputX = 1;
         };
