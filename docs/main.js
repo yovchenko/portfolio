@@ -32542,7 +32542,7 @@ var _main = __webpack_require__(69);
     cornerSize: 100
 
   },
-
+      animationTime = 0,
 
   // Number of pages in the DOM, minimum value: 6
 
@@ -32589,6 +32589,8 @@ var _main = __webpack_require__(69);
         touchEnd: $.proxy(turnMethods._touchEnd, this),
         start: $.proxy(turnMethods._eventStart, this)
       };
+
+      animationTime = data.opts.duration;
 
       // Add event listeners
 
@@ -34478,10 +34480,9 @@ var _main = __webpack_require__(69);
           width = this.width(),
           height = this.height(),
           posValue = 0,
-          prevValue = 0,
           outputX = 1;
-      if (_main.scaleValue > 1) outputX = 1;else {
-        if (point.corner == 'l' && point.x > flipOptions.cornerSize) {
+      if (_main.scaleValue >= 1) outputX = 1;else {
+        if (point.corner == 'l') {
           outputX = point.x / _main.scaleValue;
         } else outputX = 1;
       };
@@ -34494,7 +34495,7 @@ var _main = __webpack_require__(69);
           if (point.corner == 'l') {
             point.x = Math.min(Math.max(posValue, point.x), width * 2);
           } else point.x = Math.max(Math.min(point.x, width), -width);
-
+          posValue = null;
           var leftPos,
               shadow,
               gradientX,
@@ -34511,6 +34512,7 @@ var _main = __webpack_require__(69);
           relX = o.x ? (o.x - point.x) / width : point.x / width;
           angle = relX * 90, half = angle < 90;
           point.x = prevValue;
+
           switch (point.corner) {
             case 'l':
 
@@ -34521,13 +34523,14 @@ var _main = __webpack_require__(69);
                 leftPos = 0;
                 shadow = data.opts.next - 1 > 0;
                 gradientX = 1;
+                if (_main.scaleValue < 1) point.x = prevValue;
               } else {
                 leftPos = '100%';
                 shadow = data.opts.page + 1 < totalPages;
                 gradientX = 0;
                 if (_main.scaleValue < 1) point.x = outputX;
               }
-
+              outputX = null;
               break;
             case 'r':
 
@@ -34777,7 +34780,6 @@ var _main = __webpack_require__(69);
     },
 
     _moveFoldingPage: function _moveFoldingPage(move) {
-
       var data = this.data().f;
 
       if (!data) return;
@@ -34830,7 +34832,6 @@ var _main = __webpack_require__(69);
     },
 
     _showFoldedPage: function _showFoldedPage(c, animate) {
-
       var folding = flipMethods._foldingPage.call(this),
           dd = this.data(),
           data = dd.f,
@@ -34839,7 +34840,6 @@ var _main = __webpack_require__(69);
       if (folding) {
 
         if (!visible || !data.point || data.point.corner != c.corner) {
-
           var corner = data.status == 'hover' || data.status == 'peel' || data.opts.turn.data().mouseAction ? c.corner : null;
 
           visible = false;
@@ -34851,7 +34851,6 @@ var _main = __webpack_require__(69);
 
           var that = this,
               point = data.point && data.point.corner == c.corner ? data.point : flipMethods._c.call(this, c.corner, 1);
-
           this.animatef({
             from: [point.x, point.y],
             to: [c.x, c.y],
@@ -34949,7 +34948,6 @@ var _main = __webpack_require__(69);
       var data = this.data().f;
 
       if (!data.point) return;
-
       var that = this,
           p1 = data.point,
           hide = function hide() {
@@ -34960,7 +34958,6 @@ var _main = __webpack_require__(69);
       };
 
       if (animate) {
-
         var p4 = flipMethods._c.call(this, p1.corner),
             top = p1.corner.substr(0, 1) == 't',
             delta = top ? Math.min(0, p1.y - p4.y) / 2 : Math.max(0, p1.y - p4.y) / 2,
@@ -34977,7 +34974,7 @@ var _main = __webpack_require__(69);
             flipMethods._fold.call(that, p1);
           },
           complete: hide,
-          duration: 800,
+          duration: 1000,
           hiding: true
         });
       } else {
@@ -34992,22 +34989,20 @@ var _main = __webpack_require__(69);
       var that = this,
           data = this.data().f,
           turnData = data.opts.turn.data();
-
       corner = {
         corner: data.corner ? data.corner.corner : corner || flipMethods._cAllowed.call(this)[0]
       };
 
       var p1 = data.point || flipMethods._c.call(this, corner.corner, data.opts.turn ? turnData.opts.elevation : 0),
           p4 = flipMethods._c2.call(this, corner.corner);
-
       this.trigger('flip').animatef({
         from: 0,
         to: 1,
         frame: function frame(v) {
-
           var np = bezier(p1, p1, p4, p4, v);
           corner.x = np.x;
           corner.y = np.y;
+
           flipMethods._showFoldedPage.call(that, corner);
         },
         complete: function complete() {
@@ -35017,7 +35012,6 @@ var _main = __webpack_require__(69);
         duration: turnData.opts.duration,
         turning: true
       });
-
       data.corner = null;
     },
 
@@ -35078,6 +35072,7 @@ var _main = __webpack_require__(69);
             if (data.effect == 'sheet' && point.corner.length == 2 || data.effect == 'hard') {
               data.status = 'hover';
               var origin = flipMethods._c.call(this, point.corner, data.opts.cornerSize / 2);
+
               point.x = origin.x;
               point.y = origin.y;
               flipMethods._showFoldedPage.call(this, point, true);
@@ -35413,7 +35408,17 @@ var _main = __webpack_require__(69);
       if (data.effect) data.effect.stop();
 
       if (point) {
+        /*    var xMax = 0;
+                   var xMin = 1 - z;	        
+                   var xMin = 1 - s;
+                   var yMax = 0;
+                   var yMax = 1;	        
+                   var yMin = 100;
+                   var yMin = z;	        
+                   var percent = (result - yMin) / (yMax - yMin);
+                   outputX = percent * (xMax - xMin) + xMin;    */
 
+        if (point.to[0] == 50 && _main.scaleValue < 1) point.to[0] = 50 * _main.scaleValue;
         if (!point.to.length) point.to = [point.to];
         if (!point.from.length) point.from = [point.from];
 
@@ -35449,7 +35454,6 @@ var _main = __webpack_require__(69);
             animating = false;
           },
           easing: function easing(x, t, b, c, data) {
-            console.log(x + ' ' + t + ' ' + b + ' ' + c + ' ' + data);
             return c * Math.sqrt(1 - (t = t / data - 1) * t) + b;
           }
         }, point);

@@ -104,6 +104,7 @@ import {
 
     },
 
+    animationTime = 0,
     // Number of pages in the DOM, minimum value: 6
 
     pagesInDOM = 6,
@@ -126,7 +127,7 @@ import {
           pageNum = 0,
           data = this.data(),
           ch = this.children();
-
+        
         // Set initial configuration
 
         options = $.extend({
@@ -151,7 +152,7 @@ import {
           start: $.proxy(turnMethods._eventStart, this)
         };
 
-
+        animationTime = data.opts.duration;
 
         // Add event listeners
 
@@ -2365,11 +2366,10 @@ import {
           width = this.width(),
           height = this.height(),
           posValue = 0,
-          prevValue = 0,
           outputX = 1;
-        if (scaleValue > 1) outputX = 1;
+        if (scaleValue >= 1) outputX = 1;
         else {
-          if (point.corner == 'l' && point.x > flipOptions.cornerSize) {
+          if (point.corner == 'l') {
             outputX = point.x / scaleValue;
           } else outputX = 1;
         };
@@ -2383,7 +2383,7 @@ import {
               point.x = Math.min(Math.max(posValue, point.x), width * 2);
             } else
               point.x = Math.max(Math.min(point.x, width), -width);
-
+              posValue = null;
             var leftPos,
               shadow,
               gradientX,
@@ -2401,6 +2401,7 @@ import {
             angle = relX * 90,
             half = angle < 90;
             point.x = prevValue;
+       
             switch (point.corner) {
               case 'l':
 
@@ -2411,13 +2412,14 @@ import {
                   leftPos = 0;
                   shadow = data.opts.next - 1 > 0;
                   gradientX = 1;
+                  if (scaleValue < 1) point.x = prevValue;
                 } else {
                   leftPos = '100%';
                   shadow = data.opts.page + 1 < totalPages;
                   gradientX = 0;
                   if (scaleValue < 1) point.x = outputX;
                 }
-
+                outputX = null;
                 break;
               case 'r':
 
@@ -2715,7 +2717,6 @@ import {
       },
 
       _moveFoldingPage: function (move) {
-
         var data = this.data().f;
 
         if (!data)
@@ -2776,7 +2777,6 @@ import {
       },
 
       _showFoldedPage: function (c, animate) {
-
         var folding = flipMethods._foldingPage.call(this),
           dd = this.data(),
           data = dd.f,
@@ -2785,7 +2785,6 @@ import {
         if (folding) {
 
           if (!visible || !data.point || data.point.corner != c.corner) {
-
             var corner = (
                 data.status == 'hover' ||
                 data.status == 'peel' ||
@@ -2804,7 +2803,6 @@ import {
             var that = this,
               point = (data.point && data.point.corner == c.corner) ?
               data.point : flipMethods._c.call(this, c.corner, 1);
-
             this.animatef({
               from: [point.x, point.y],
               to: [c.x, c.y],
@@ -2912,7 +2910,6 @@ import {
         var data = this.data().f;
 
         if (!data.point) return;
-
         var that = this,
           p1 = data.point,
           hide = function () {
@@ -2923,7 +2920,6 @@ import {
           };
 
         if (animate) {
-
           var p4 = flipMethods._c.call(this, p1.corner),
             top = (p1.corner.substr(0, 1) == 't'),
             delta = (top) ? Math.min(0, p1.y - p4.y) / 2 : Math.max(0, p1.y - p4.y) / 2,
@@ -2940,7 +2936,7 @@ import {
               flipMethods._fold.call(that, p1);
             },
             complete: hide,
-            duration: 800,
+            duration: 1000,
             hiding: true
           });
 
@@ -2957,7 +2953,6 @@ import {
         var that = this,
           data = this.data().f,
           turnData = data.opts.turn.data();
-
         corner = {
           corner: (data.corner) ?
             data.corner.corner : corner || flipMethods._cAllowed.call(this)[0]
@@ -2968,16 +2963,15 @@ import {
             corner.corner,
             (data.opts.turn) ? turnData.opts.elevation : 0),
           p4 = flipMethods._c2.call(this, corner.corner);
-
         this.trigger('flip').
         animatef({
           from: 0,
           to: 1,
           frame: function (v) {
-
             var np = bezier(p1, p1, p4, p4, v);
             corner.x = np.x;
             corner.y = np.y;
+           
             flipMethods._showFoldedPage.call(that, corner);
 
           },
@@ -2989,7 +2983,6 @@ import {
           duration: turnData.opts.duration,
           turning: true
         });
-      
         data.corner = null;
       },
 
@@ -3059,6 +3052,7 @@ import {
               if ((data.effect == 'sheet' && point.corner.length == 2) || data.effect == 'hard') {
                 data.status = 'hover';
                 var origin = flipMethods._c.call(this, point.corner, data.opts.cornerSize / 2);
+            
                 point.x = origin.x;
                 point.y = origin.y;
                 flipMethods._showFoldedPage.call(this, point, true);
@@ -3453,7 +3447,17 @@ import {
         data.effect.stop();
 
       if (point) {
-
+       /*    var xMax = 0;
+                  var xMin = 1 - z;	        
+                  var xMin = 1 - s;
+                  var yMax = 0;
+                  var yMax = 1;	        
+                  var yMin = 100;
+                  var yMin = z;	        
+                  var percent = (result - yMin) / (yMax - yMin);
+                  outputX = percent * (xMax - xMin) + xMin;    */
+                 
+        if(point.to[0] == 50 && scaleValue < 1) point.to[0] = 50 * scaleValue;
         if (!point.to.length) point.to = [point.to];
         if (!point.from.length) point.from = [point.from];
 
@@ -3493,7 +3497,6 @@ import {
             animating = false;
           },
           easing: function (x, t, b, c, data) {
-            console.log(x + ' ' + t + ' ' + b + ' ' + c + ' ' + data)
             return c * Math.sqrt(1 - (t = t / data - 1) * t) + b;
           }
         }, point);
