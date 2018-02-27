@@ -35007,7 +35007,7 @@ var _main = __webpack_require__(69);
 
           that.trigger('end', [data.opts, true]);
         },
-        duration: 30000,
+        duration: turnData.opts.duration,
         turning: true
       });
       data.corner = null;
@@ -35444,6 +35444,7 @@ var _main = __webpack_require__(69);
             animating = false;
           },
           easing: function easing(x, t, b, c, data) {
+
             return c * Math.sqrt(1 - (t = t / data - 1) * t) + b;
           }
         }, point);
