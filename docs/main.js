@@ -34963,7 +34963,6 @@ var _main = __webpack_require__(69);
             delta = top ? Math.min(0, p1.y - p4.y) / 2 : Math.max(0, p1.y - p4.y) / 2,
             p2 = point2D(p1.x, p1.y + delta),
             p3 = point2D(p4.x, p4.y - delta);
-
         this.animatef({
           from: 0,
           to: 1,
@@ -34978,14 +34977,12 @@ var _main = __webpack_require__(69);
           hiding: true
         });
       } else {
-
         this.animatef(false);
         hide();
       }
     },
 
     turnPage: function turnPage(corner) {
-
       var that = this,
           data = this.data().f,
           turnData = data.opts.turn.data();
@@ -34995,6 +34992,7 @@ var _main = __webpack_require__(69);
 
       var p1 = data.point || flipMethods._c.call(this, corner.corner, data.opts.turn ? turnData.opts.elevation : 0),
           p4 = flipMethods._c2.call(this, corner.corner);
+      if (corner.corner === 'l' && _main.scaleValue < 1) p4.x *= _main.scaleValue;
       this.trigger('flip').animatef({
         from: 0,
         to: 1,
@@ -35009,7 +35007,7 @@ var _main = __webpack_require__(69);
 
           that.trigger('end', [data.opts, true]);
         },
-        duration: turnData.opts.duration,
+        duration: 30000,
         turning: true
       });
       data.corner = null;
@@ -35408,20 +35406,10 @@ var _main = __webpack_require__(69);
       if (data.effect) data.effect.stop();
 
       if (point) {
-        /*    var xMax = 0;
-                   var xMin = 1 - z;	        
-                   var xMin = 1 - s;
-                   var yMax = 0;
-                   var yMax = 1;	        
-                   var yMin = 100;
-                   var yMin = z;	        
-                   var percent = (result - yMin) / (yMax - yMin);
-                   outputX = percent * (xMax - xMin) + xMin;    */
 
-        if (point.to[0] == 50 && _main.scaleValue < 1) point.to[0] = 50 * _main.scaleValue;
+        if (point.to[0] === 50 && _main.scaleValue < 1) point.to[0] *= _main.scaleValue;
         if (!point.to.length) point.to = [point.to];
         if (!point.from.length) point.from = [point.from];
-
         var diff = [],
             len = point.to.length,
             animating = true,
@@ -35448,8 +35436,10 @@ var _main = __webpack_require__(69);
         };
 
         for (var i = 0; i < len; i++) {
+
           diff.push(point.to[i] - point.from[i]);
-        }data.effect = $.extend({
+        }
+        data.effect = $.extend({
           stop: function stop() {
             animating = false;
           },

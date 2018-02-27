@@ -2925,7 +2925,6 @@ import {
             delta = (top) ? Math.min(0, p1.y - p4.y) / 2 : Math.max(0, p1.y - p4.y) / 2,
             p2 = point2D(p1.x, p1.y + delta),
             p3 = point2D(p4.x, p4.y - delta);
-
           this.animatef({
             from: 0,
             to: 1,
@@ -2939,17 +2938,13 @@ import {
             duration: 1000,
             hiding: true
           });
-
         } else {
-
           this.animatef(false);
           hide();
-
         }
       },
 
       turnPage: function (corner) {
-
         var that = this,
           data = this.data().f,
           turnData = data.opts.turn.data();
@@ -2963,6 +2958,7 @@ import {
             corner.corner,
             (data.opts.turn) ? turnData.opts.elevation : 0),
           p4 = flipMethods._c2.call(this, corner.corner);
+          if(corner.corner === 'l' && scaleValue < 1) p4.x *= scaleValue;
         this.trigger('flip').
         animatef({
           from: 0,
@@ -2980,7 +2976,7 @@ import {
             that.trigger('end', [data.opts, true]);
 
           },
-          duration: turnData.opts.duration,
+          duration: 30000,
           turning: true
         });
         data.corner = null;
@@ -3447,20 +3443,10 @@ import {
         data.effect.stop();
 
       if (point) {
-       /*    var xMax = 0;
-                  var xMin = 1 - z;	        
-                  var xMin = 1 - s;
-                  var yMax = 0;
-                  var yMax = 1;	        
-                  var yMin = 100;
-                  var yMin = z;	        
-                  var percent = (result - yMin) / (yMax - yMin);
-                  outputX = percent * (xMax - xMin) + xMin;    */
-                 
-        if(point.to[0] == 50 && scaleValue < 1) point.to[0] = 50 * scaleValue;
+       
+        if(point.to[0] === 50 && scaleValue < 1) point.to[0] *= scaleValue;
         if (!point.to.length) point.to = [point.to];
         if (!point.from.length) point.from = [point.from];
-
         var diff = [],
           len = point.to.length,
           animating = true,
@@ -3489,9 +3475,10 @@ import {
             }
           };
 
-        for (var i = 0; i < len; i++)
-          diff.push(point.to[i] - point.from[i]);
+        for (var i = 0; i < len; i++) {
 
+          diff.push(point.to[i] - point.from[i]);
+        }
         data.effect = $.extend({
           stop: function () {
             animating = false;
