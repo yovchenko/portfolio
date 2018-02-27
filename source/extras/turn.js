@@ -2958,7 +2958,10 @@ import {
             corner.corner,
             (data.opts.turn) ? turnData.opts.elevation : 0),
           p4 = flipMethods._c2.call(this, corner.corner);
-          if(corner.corner === 'l' && scaleValue < 1) p4.x *= scaleValue;
+          if(corner.corner === 'l' && scaleValue < 1) {
+            p4.x *= scaleValue;
+            p1.x *= scaleValue
+          }
         this.trigger('flip').
         animatef({
           from: 0,
@@ -3464,7 +3467,7 @@ import {
               v.push(data.effect.easing(1, timeDiff, point.from[i], diff[i], point.duration));
 
             point.frame((len == 1) ? v[0] : v);
-
+           
             if (timeDiff == point.duration) {
               delete data['effect'];
               that.data(data);

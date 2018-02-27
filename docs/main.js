@@ -34992,7 +34992,10 @@ var _main = __webpack_require__(69);
 
       var p1 = data.point || flipMethods._c.call(this, corner.corner, data.opts.turn ? turnData.opts.elevation : 0),
           p4 = flipMethods._c2.call(this, corner.corner);
-      if (corner.corner === 'l' && _main.scaleValue < 1) p4.x *= _main.scaleValue;
+      if (corner.corner === 'l' && _main.scaleValue < 1) {
+        p4.x *= _main.scaleValue;
+        p1.x *= _main.scaleValue;
+      }
       this.trigger('flip').animatef({
         from: 0,
         to: 1,
