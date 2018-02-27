@@ -35542,7 +35542,7 @@ var _main = __webpack_require__(69);
                 }
                 if (page >= 2) $('.sj-book .p2').addClass('fixed');else $('.sj-book .p2').removeClass('fixed');
 
-                if (page < book.turn('pages')) $('.sj-book .p5').addClass('fixed');else $('.sj-book .p5').removeClass('fixed');
+                if (page < book.turn('pages')) $('.sj-book .p7').addClass('fixed');else $('.sj-book .p7').removeClass('fixed');
 
                 Hash.go('page/' + page).update();
                 setTimeout(function () {

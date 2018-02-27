@@ -69,9 +69,9 @@
                     $('.sj-book .p2').removeClass('fixed');
 
                 if (page < book.turn('pages'))
-                    $('.sj-book .p5').addClass('fixed');
+                    $('.sj-book .p7').addClass('fixed');
                 else
-                    $('.sj-book .p5').removeClass('fixed');
+                    $('.sj-book .p7').removeClass('fixed');
 
                 Hash.go('page/' + page).update();
                 setTimeout(function () {
