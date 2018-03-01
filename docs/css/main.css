@@ -905,8 +905,8 @@ html, html body {
   min-height: 100%;
   position: relative;
       grid-template-areas: "head" "main" "footer";
-  -ms-grid-rows: 65px calc(100vh - 63px) 65px;
-      grid-template-rows: 65px calc(100vh - 63px) 65px;
+  -ms-grid-rows: 65px calc(100vh - 65px);
+      grid-template-rows: 65px calc(100vh - 65px);
   -ms-grid-columns: auto;
       grid-template-columns: auto;
   overflow: hidden; }
@@ -935,6 +935,7 @@ header {
   grid-area: footer;
   background-color: rgba(0, 0, 0, 0.1);
   background-size: cover;
+  overflow: hidden;
   -webkit-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6);
   box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6); }
   .footer .footer-grid {
@@ -1105,8 +1106,8 @@ main {
 .canvasBackground {
   width: 100%;
   height: 100%;
+  padding: 65px 0px;
   position: absolute;
-  margin-top: 65px;
   z-index: -2;
   top: 0;
   left: 0;
@@ -1717,7 +1718,7 @@ input[type=email]:focus {
 
 /*footer*/
 footer .wrapper {
-  padding: 4px 0; }
+  padding: 6px 0; }
 
 .svgIcons {
   display: -ms-grid;
