@@ -119,11 +119,11 @@ header {
     fill: $svg-color;
 }
 
-.btn-is--active .navicon__arrow{
+.is--active .navicon__arrow{
     display: block;
 }
 
-.btn-is--active .navicon {
+.is--active .navicon {
     display: none;
 }
 

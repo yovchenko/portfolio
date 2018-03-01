@@ -994,10 +994,10 @@ header {
   width: 100%;
   fill: #2c3e50; }
 
-.btn-is--active .navicon__arrow {
+.is--active .navicon__arrow {
   display: block; }
 
-.btn-is--active .navicon {
+.is--active .navicon {
   display: none; }
 
 /*header letters appearing*/
