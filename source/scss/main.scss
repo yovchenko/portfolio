@@ -91,10 +91,12 @@ header {
     box-sizing: border-box;
     width: 45px;
     height: 45px;
+    max-width: 45px;
+    max-height: 45px;
     position: relative;
     cursor: pointer;
+    margin: 6px;
     grid-row: 1;
-    padding: 3px;
 }
 
 .btn-hamburger:hover {
@@ -103,10 +105,8 @@ header {
 
 .navicon {
     width: 100%;
-    fill: none;
+    fill: $svg-color;
     stroke: $svg-color;
-    stroke-linecap: round;
-    stroke-width: 25;
     display: block;
 }
 
@@ -128,7 +128,9 @@ header {
         line-height: 61px;
         background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
         border-radius: 5px;
-        @include responsive-font(5.2vw, 16px, 50px);
+        @include responsive-font(5vw, 35px, 50px);
+        padding: 0px 5px;
+        margin-right: 6px;
         &.is--visible {
             display: block;
         }
@@ -138,8 +140,8 @@ header {
         text-align: center;
         opacity: 0.85;
         margin: 0 auto;
-        padding-right: 45px;
-        @include responsive-font(5.2vw, 16px, 50px);
+        padding-right: 51px;
+        @include responsive-font(5vw, 35px, 50px);
         &.is--invisible {
             display: none;
         }
@@ -151,13 +153,9 @@ header {
         line-height: 61px;
         background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
         border-radius: 5px;
-        @include responsive-font(5.2vw, 16px, 50px);
-    }
-    p[class]>span:last-child {
-        padding-right: 10px;
-    }
-    p[class]>span:first-child {
-        padding-left: 10px;
+        margin-left: 6px;
+        padding: 0px 5px;
+        @include responsive-font(5vw, 35px, 50px);
     }
 }
 
@@ -390,6 +388,7 @@ article p {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 #flipbook {
@@ -872,6 +871,8 @@ footer .wrapper {
 .svgIcons {
     display: grid;
     grid-row: 1;
+    width: 45px;
+    height: 45px;
     max-width: 45px;
     max-height: 45px;
     padding: 6px;
@@ -1314,6 +1315,15 @@ footer .wrapper {
     .menu__header {
         .menu__init {
             padding: 0px;
+            @include responsive-font(5.2vw, 30px, 50px);
+        }
+        .menu__about,
+        .menu__work,
+        .menu__contact {
+            @include responsive-font(5.2vw, 30px, 50px);
+        }
+        .menu__home {
+            @include responsive-font(5.2vw, 30px, 50px);
         }
     }
     .btn-hamburger {
@@ -1350,18 +1360,19 @@ footer .wrapper {
 @media all and (max-width: 576px) {
     .menu__header {
         .menu__init {
-            line-height: 26px;
+            line-height: 32px;
             padding: 0;
+            @include responsive-font(5.2vw, 16px, 50px);
         }
         .menu__home {
             line-height: 61px;
             border-radius: 5px;
+            @include responsive-font(5.2vw, 16px, 50px);
         }
-        p[class]>span:last-child {
-            padding-right: 5px;
-        }
-        p[class]>span:first-child {
-            padding-left: 5px;
+        .menu__about,
+        .menu__work,
+        .menu__contact {
+            @include responsive-font(5.2vw, 16px, 50px);
         }
     }
     .btn-hamburger {

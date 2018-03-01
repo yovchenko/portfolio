@@ -1,10 +1,12 @@
 .slider {
-	top: 105%;
-	position: relative;
+	position: absolute;
 	width: 80%;
-	margin: 0 auto;
+	left: 0;
+	right: 0;
+	bottom: 6.5%;
+	margin: auto;
 	text-align: center;
-	z-index: -1;
+	z-index: 0;
 &.ie-edge__detected .slider__range{
 		background-image: none;
 		background: transparent;
@@ -197,6 +199,6 @@
 @media all and (min-aspect-ratio: 19/21) {
 	.slider {
 		width: 80%;
-		top: 110%;
+		
 	}
 }
