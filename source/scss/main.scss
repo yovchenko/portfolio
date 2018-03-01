@@ -105,10 +105,26 @@ header {
 }
 
 .navicon {
+    display: block;
     width: 100%;
     fill: $svg-color;
     stroke: $svg-color;
+}
+
+.navicon__arrow {
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    fill: $svg-color;
+}
+
+.btn-is--active .navicon__arrow{
     display: block;
+}
+
+.btn-is--active .navicon {
+    display: none;
 }
 
 /*header letters appearing*/

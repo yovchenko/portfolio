@@ -7664,6 +7664,7 @@ var _preloader = __webpack_require__(66);
 
 document.addEventListener('DOMContentLoaded', mainPage);
 var scaleValue = exports.scaleValue = 1;
+
 function mainPage() {
 	var $home = $('.js-home'),
 	    $about = $('.js-about'),
@@ -7680,12 +7681,10 @@ function mainPage() {
 		e.preventDefault();
 		if (String(this.classList) === 'btn-hamburger') {
 			this.classList.add('btn-is--active');
-			_preloader.page.elements.initText.style.display = 'none';
 			animateMenuToArrow();
 		} else {
 			animateArrowToMenu();
 			this.classList.remove('btn-is--active');
-			_preloader.page.elements.initText.style.display = 'block';
 		}
 	}
 
