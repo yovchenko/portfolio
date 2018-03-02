@@ -35,7 +35,7 @@ html {
     min-height: 100%;
     position: relative;
     grid-template-areas: "head" "main" "footer";
-    grid-template-rows: 65px $main;
+    grid-template-rows: 65px $main auto;
     grid-template-columns: auto;
     overflow: hidden;
 }
