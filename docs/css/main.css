@@ -2186,7 +2186,6 @@ footer .wrapper {
     font-size: 1.3em; }
   .menu__header > p[class]:not(.menu__init):hover,
   .menu__header > p[class]:not(.menu__init):focus {
-    text-shadow: -1px 0 rgba(255, 255, 255, 0.35), 0 1px rgba(255, 255, 255, 0.35), 1px 0 rgba(255, 255, 255, 0.35), 0 -1px rgba(255, 255, 255, 0.35);
     letter-spacing: 2px; } }
 
 @media all and (max-width: 576px) {
@@ -2267,7 +2266,6 @@ footer .wrapper {
     font-size: 1.2em; }
   .menu__header > p[class]:not(.menu__init):hover,
   .menu__header > p[class]:not(.menu__init):focus {
-    text-shadow: -1px 0 rgba(255, 255, 255, 0.35), 0 1px rgba(255, 255, 255, 0.35), 1px 0 rgba(255, 255, 255, 0.35), 0 -1px rgba(255, 255, 255, 0.35);
     letter-spacing: 2px; } }
 
 @media all and (max-aspect-ratio: 19 / 21) {
