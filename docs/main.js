@@ -7697,6 +7697,7 @@ function mainPage() {
 
 	function animateArrowToMenu() {
 		_preloader.page.elements.initText.classList.remove('is--invisible');
+		_preloader.page.elements.btnHamburger.classList.remove('is--active');
 		$($about).add($work).add($contact).removeClass('is--visible');
 	}
 

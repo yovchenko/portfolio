@@ -43,6 +43,7 @@ function mainPage() {
 
 	function animateArrowToMenu() {
 		page.elements.initText.classList.remove('is--invisible');
+		page.elements.btnHamburger.classList.remove('is--active');
 		$($about).add($work).add($contact).removeClass('is--visible');
 	}
 
