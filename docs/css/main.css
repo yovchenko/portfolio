@@ -977,10 +977,6 @@ header {
   -ms-grid-row: 1;
   grid-row: 1; }
 
-.btn-hamburger:hover {
-  -webkit-transform: scale(1.15);
-          transform: scale(1.15); }
-
 .navicon {
   display: block;
   width: 100%;
@@ -989,16 +985,31 @@ header {
 
 .navicon__arrow {
   display: none;
+  width: 100%;
+  stroke-width: 10;
   position: absolute;
   top: 0;
-  width: 100%;
-  fill: #2c3e50; }
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  fill: #2c3e50;
+  stroke: #2c3e50; }
 
 .is--active .navicon__arrow {
   display: block; }
 
 .is--active .navicon {
   display: none; }
+
+.navicon:focus, .navicon:hover,
+.navicon__arrow:focus, .navicon__arrow:hover {
+  stroke: #fff;
+  transform: scale(1.07);
+  -webkit-transform: scale(1.07);
+  -moz-transform: scale(1.07);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 /*header letters appearing*/
 .menu__header {

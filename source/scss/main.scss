@@ -100,10 +100,6 @@ header {
     grid-row: 1;
 }
 
-.btn-hamburger:hover {
-    transform: scale(1.15);
-}
-
 .navicon {
     display: block;
     width: 100%;
@@ -113,10 +109,16 @@ header {
 
 .navicon__arrow {
     display: none;
+    width: 100%;
+    stroke-width: 10;
     position: absolute;
     top: 0;
-    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
     fill: $svg-color;
+    stroke: $svg-color;
 }
 
 .is--active .navicon__arrow{
@@ -126,6 +128,15 @@ header {
 .is--active .navicon {
     display: none;
 }
+
+.navicon:focus, .navicon:hover, 
+.navicon__arrow:focus, .navicon__arrow:hover {
+    stroke: #fff;
+    transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+    -moz-transform: scale(1.07);
+    box-sizing: border-box;
+ }
 
 /*header letters appearing*/
 
