@@ -7823,7 +7823,7 @@ function mainPage() {
 		}
 		// Orientation change with keyboard already opened
 		if (orientationChange() && _preloader.page.keyboard) {
-			var _keyboardHeight2 = screen.height - window.innerHeight;
+			var _keyboardHeight2 = screen.height - window.topBarHeight - window.innerHeight;
 			updateWindowSize();
 			return _keyboardHeight2;
 		}

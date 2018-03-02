@@ -177,7 +177,7 @@ function mainPage() {
 		}
 		// Orientation change with keyboard already opened
 		if (orientationChange() && page.keyboard) {
-			let keyboardHeight = screen.height - window.innerHeight;
+			let keyboardHeight = screen.height - window.topBarHeight - window.innerHeight;
 			updateWindowSize();
 			return keyboardHeight;
 		}
