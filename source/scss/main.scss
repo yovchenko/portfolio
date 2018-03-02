@@ -1401,11 +1401,49 @@ footer .wrapper {
     }
     .menu__header>p[class]:not(.menu__init):hover,
 .menu__header>p[class]:not(.menu__init):focus {
-    letter-spacing: 2px;
+    text-shadow: initial;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+.menu__header>p[class]:not(.menu__init):active {
+    text-shadow: -1px 0 rgba(255, 255, 255, 0.85), 0 1px rgba(255, 255, 255, 0.85), 1px 0 rgba(255, 255, 255, 0.85), 0 -1px rgba(255, 255, 255, 0.85);
+    transform: scaleY(1.07);
+    -webkit-transform: scaleY(1.07);
+    -moz-transform: scaleY(1.07);
+    -webkit-transition: text-shadow .3s ease;
+    -moz-transition: text-shadow .3s ease;
+    -o-transition: text-shadow .3s ease;
+    transition: text-shadow .3s ease;
 }
 }
 
 @media all and (max-width: 576px) {
+    .menu__header>p[class]:not(.menu__init):hover,
+    .menu__header>p[class]:not(.menu__init):focus {
+        text-shadow: initial;
+        transform: none;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -webkit-transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        transition: none;
+    }
+    .menu__header>p[class]:not(.menu__init):active {
+        text-shadow: -1px 0 rgba(255, 255, 255, 0.85), 0 1px rgba(255, 255, 255, 0.85), 1px 0 rgba(255, 255, 255, 0.85), 0 -1px rgba(255, 255, 255, 0.85);
+        transform: scaleY(1.07);
+        -webkit-transform: scaleY(1.07);
+        -moz-transform: scaleY(1.07);
+        -webkit-transition: text-shadow .3s ease;
+        -moz-transition: text-shadow .3s ease;
+        -o-transition: text-shadow .3s ease;
+        transition: text-shadow .3s ease;
+    }
     .navicon:focus,
     .navicon:hover,
     .navicon__arrow:focus,
@@ -1464,10 +1502,6 @@ footer .wrapper {
     }
     .fps {
         font-size: 1.2em;
-    }
-    .menu__header>p[class]:not(.menu__init):hover,
-    .menu__header>p[class]:not(.menu__init):focus {
-        letter-spacing: 2px;
     }
 }
 
