@@ -148,9 +148,6 @@ header {
         @include responsive-font(5vw, 35px, 50px);
         padding: 0px 5px;
         margin-right: 6px;
-        &.is--visible {
-            display: block;
-        }
     }
     .menu__init {
         display: block;
@@ -159,9 +156,6 @@ header {
         margin: 0 auto;
         padding-right: 51px;
         @include responsive-font(5vw, 35px, 50px);
-        &.is--invisible {
-            display: none;
-        }
     }
     .menu__home {
         display: none;
@@ -174,6 +168,16 @@ header {
         padding: 0px 5px;
         @include responsive-font(5vw, 35px, 50px);
     }
+}
+
+.is--active .menu__init {
+    display: none;
+}
+
+.is--active .menu__about,
+.is--active .menu__work,
+.is--active .menu__contact {
+    display: flex;
 }
 
 .menu__header>p[class]:not(.menu__init):hover,

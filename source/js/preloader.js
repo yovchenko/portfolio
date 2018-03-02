@@ -40,9 +40,11 @@ page.elements.logoOne = document.getElementsByClassName('svg-logo-one')[0];
 page.elements.logoTwo = document.getElementsByClassName('svg-logo-two')[0];
 page.elements.touch = document.getElementsByClassName('touch')[0];
 page.elements.home = document.getElementsByClassName('menu__home')[0];
-page.elements.header = document.getElementsByClassName('header')[0];
 page.elements.footer = document.getElementsByClassName('footer')[0];
-page.elements.initText = document.getElementsByClassName('menu__init')[0];
+Object.defineProperty(page.elements, "header", {
+    value: document.getElementsByClassName('header')[0],
+    enumerable: false
+});
 Object.defineProperty(page.elements, "background", {
     value: document.getElementsByClassName('canvasBackground')[0],
     enumerable: false
@@ -112,7 +114,6 @@ let delay = setTimeout(function () {
         enumerable: false
     });
     delete page.elements.footer;
-    delete page.elements.header;
     pulse = increment = opacity = str = title = pattern = svgString = encode = null; /*there is no place for the garbage collection here*/
     if (document.images) {
         let img1 = new Image();

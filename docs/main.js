@@ -7120,9 +7120,11 @@ page.elements.logoOne = document.getElementsByClassName('svg-logo-one')[0];
 page.elements.logoTwo = document.getElementsByClassName('svg-logo-two')[0];
 page.elements.touch = document.getElementsByClassName('touch')[0];
 page.elements.home = document.getElementsByClassName('menu__home')[0];
-page.elements.header = document.getElementsByClassName('header')[0];
 page.elements.footer = document.getElementsByClassName('footer')[0];
-page.elements.initText = document.getElementsByClassName('menu__init')[0];
+Object.defineProperty(page.elements, "header", {
+    value: document.getElementsByClassName('header')[0],
+    enumerable: false
+});
 Object.defineProperty(page.elements, "background", {
     value: document.getElementsByClassName('canvasBackground')[0],
     enumerable: false
@@ -7191,7 +7193,6 @@ var delay = setTimeout(function () {
         enumerable: false
     });
     delete page.elements.footer;
-    delete page.elements.header;
     pulse = increment = opacity = str = title = pattern = svgString = encode = null; /*there is no place for the garbage collection here*/
     if (document.images) {
         var img1 = new Image();
@@ -7670,7 +7671,7 @@ function mainPage() {
 	    $work = $('.js-work'),
 	    $contact = $('.js-contact');
 
-	AttachEvent(_preloader.page.elements.btnHamburger, "click", EventHandler);
+	AttachEvent(_preloader.page.elements.btnHamburger, "click", EventHandler.bind(_preloader.page.elements.header));
 
 	function AttachEvent(element, type, handler) {
 		if (element.addEventListener) element.addEventListener(type, handler, false);else element.attachEvent("on" + type, handler);
@@ -7678,27 +7679,12 @@ function mainPage() {
 
 	function EventHandler(e) {
 		e.preventDefault();
-		if (String(this.classList) === 'btn-hamburger') {
+		if (String(this.classList) === 'header') {
 			this.classList.add('is--active');
-			_preloader.page.elements.initText.style.display = 'none';
-			animateMenuToArrow();
+			headerText();
 		} else {
-			animateArrowToMenu();
 			this.classList.remove('is--active');
-			_preloader.page.elements.initText.style.display = 'block';
 		}
-	}
-
-	function animateMenuToArrow() {
-		_preloader.page.elements.initText.classList.add('is--invisible');
-		$($about).add($work).add($contact).addClass('is--visible');
-		headerText();
-	}
-
-	function animateArrowToMenu() {
-		_preloader.page.elements.initText.classList.remove('is--invisible');
-		_preloader.page.elements.btnHamburger.classList.remove('is--active');
-		$($about).add($work).add($contact).removeClass('is--visible');
 	}
 
 	/*header text animation*/
@@ -7791,9 +7777,9 @@ function mainPage() {
 					for (var _key4 in _preloader.page.elements) {
 						if (_key4 === 'article' || _key4 === 'flipbook' || _key4 === 'touch' || _key4 === 'container' || _key4 === 'home') _preloader.page.elements[_key4].style.display = 'none';else _preloader.page.elements[_key4].style.display = 'grid';
 					}
+					_preloader.page.elements.header.classList.remove('is--active');
 					_preloader.page.pattern.colorX = 'YlGnBu';
 					_preloader.page.pattern.colorY = 'GnBu';
-					animateArrowToMenu();
 					(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
 					_preloader.page['home'] = true; // page home 
 					break;

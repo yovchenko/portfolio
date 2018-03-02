@@ -15,7 +15,7 @@ function mainPage() {
 		$work = $('.js-work'),
 		$contact = $('.js-contact');
 
-	AttachEvent(page.elements.btnHamburger, "click", EventHandler);
+	AttachEvent(page.elements.btnHamburger, "click", EventHandler.bind(page.elements.header));
 
 	function AttachEvent(element, type, handler) {
 		if (element.addEventListener) element.addEventListener(type, handler, false);
@@ -24,27 +24,12 @@ function mainPage() {
 
 	function EventHandler(e) {
 		e.preventDefault();
-		if (String(this.classList) === 'btn-hamburger') {
+		if (String(this.classList) === 'header') {
 			this.classList.add('is--active');
-			page.elements.initText.style.display = 'none';
-			animateMenuToArrow();
+			headerText();
 		} else {
-			animateArrowToMenu();
-			this.classList.remove('is--active');
-			page.elements.initText.style.display = 'block';
+			this.classList.remove('is--active');	
 		}
-	}
-
-	function animateMenuToArrow() {
-		page.elements.initText.classList.add('is--invisible');
-		$($about).add($work).add($contact).addClass('is--visible');
-		headerText();
-	}
-
-	function animateArrowToMenu() {
-		page.elements.initText.classList.remove('is--invisible');
-		page.elements.btnHamburger.classList.remove('is--active');
-		$($about).add($work).add($contact).removeClass('is--visible');
 	}
 
 	/*header text animation*/
@@ -145,9 +130,9 @@ function mainPage() {
 							page.elements[key].style.display = 'none';
 						else page.elements[key].style.display = 'grid';
 					}
+					page.elements.header.classList.remove('is--active');
 					page.pattern.colorX = 'YlGnBu';
 					page.pattern.colorY = 'GnBu';
-					animateArrowToMenu();
 					resizeContent('#figure', '#wrapperCanvas', 800, 900);
 					page['home'] = true; // page home 
 					break;

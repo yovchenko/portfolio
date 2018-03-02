@@ -1037,10 +1037,6 @@ header {
       .menu__header .menu__work,
       .menu__header .menu__contact {
         font-size: 50px; } }
-    .menu__header .menu__about.is--visible,
-    .menu__header .menu__work.is--visible,
-    .menu__header .menu__contact.is--visible {
-      display: block; }
   .menu__header .menu__init {
     display: block;
     text-align: center;
@@ -1054,8 +1050,6 @@ header {
     @media (min-width: 1000px) {
       .menu__header .menu__init {
         font-size: 50px; } }
-    .menu__header .menu__init.is--invisible {
-      display: none; }
   .menu__header .menu__home {
     display: none;
     cursor: pointer;
@@ -1073,6 +1067,16 @@ header {
     @media (min-width: 1000px) {
       .menu__header .menu__home {
         font-size: 50px; } }
+
+.is--active .menu__init {
+  display: none; }
+
+.is--active .menu__about,
+.is--active .menu__work,
+.is--active .menu__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .menu__header > p[class]:not(.menu__init):hover,
 .menu__header > p[class]:not(.menu__init):focus {
