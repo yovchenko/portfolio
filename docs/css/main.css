@@ -1660,19 +1660,14 @@ form {
   -webkit-box-shadow: 0px 0px 3px #9d9d9d, inset 0px 0px 27px #fff;
   -webkit-transition: all 1s ease-in-out .3s;
   transition: all 1s ease-in-out .3s; }
-  form p {
-    font-size: 3.8em;
-    margin: 5px 0px 15px 0px; }
 
 #form_wrap:hover form {
   height: 430px; }
 
 label {
-  font-size: 1.9em;
-  text-transform: uppercase;
+  font-size: 4em;
   text-shadow: 0px 1px 0px #fff;
-  position: relative;
-  top: -2px; }
+  position: relative; }
 
 #contactForm .error {
   border-color: red; }
@@ -1682,7 +1677,6 @@ label {
   color: red;
   float: right;
   position: relative;
-  top: -63px;
   right: 0px;
   margin: 0; }
 
@@ -1691,13 +1685,14 @@ input[type=text],
 input[type=email],
 textarea {
   font: 22px normal normal uppercase helvetica, "Times New Roman", Times, serif;
+  font-family: "Times New Roman", Times, serif;
   color: #7c7873;
   background: none;
   outline: none;
   width: 100%;
-  min-height: 28px;
-  max-height: 56px;
-  margin: 0 0 10px 0;
+  min-height: 30px;
+  margin: 5px 0px;
+  max-height: 60px;
   border: 1px solid #f8f5f1;
   border-radius: 5px;
   -webkit-box-shadow: inset 0px 0px 1px black;
@@ -1707,7 +1702,6 @@ textarea {
   width: 98.8%;
   height: 90px;
   resize: vertical;
-  margin: 0;
   overflow: hidden; }
 
 #name:focus,
@@ -1720,15 +1714,12 @@ input[type=email]:focus {
 #form_wrap input[type=submit] {
   outline: none;
   position: absolute;
-  font-size: 3.4em;
+  font-size: 4em;
   font-family: 'Italianno, cursive';
-  color: rgba(0, 0, 0, 0.3);
   width: 89%;
   text-align: center;
   opacity: 0;
   bottom: 89px;
-  height: 45px;
-  padding-top: 2px;
   background: none;
   cursor: pointer;
   border-radius: 15px;
@@ -1740,9 +1731,6 @@ input[type=email]:focus {
   opacity: 1;
   -webkit-transition: opacity .5s ease-in-out 1s;
   transition: opacity .5s ease-in-out 1s; }
-
-#form_wrap:hover input:hover[type=submit] {
-  color: #435c70; }
 
 /*footer*/
 footer .wrapper {
