@@ -9,6 +9,7 @@ import {
 } from './preloader';
 document.addEventListener('DOMContentLoaded', mainPage);
 export var scaleValue = 1;
+
 function mainPage() {
 	const $home = $('.js-home'),
 		$about = $('.js-about'),

@@ -7665,6 +7665,7 @@ var _preloader = __webpack_require__(66);
 
 document.addEventListener('DOMContentLoaded', mainPage);
 var scaleValue = exports.scaleValue = 1;
+
 function mainPage() {
 	var $home = $('.js-home'),
 	    $about = $('.js-about'),

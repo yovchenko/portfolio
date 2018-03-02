@@ -2112,6 +2112,20 @@ footer .wrapper {
     font-size: 50px; } }
 
 @media all and (max-width: 767px) and (min-width: 577px) {
+  .navicon:focus,
+  .navicon:hover,
+  .navicon__arrow:focus,
+  .navicon__arrow:hover {
+    stroke: none;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none; }
+  .navicon:active,
+  .navicon__arrow:active {
+    stroke: #fff;
+    transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+    -moz-transform: scale(1.07); }
   .menu__header .menu__init {
     padding: 0px;
     font-size: 5.2vw; } }
@@ -2168,13 +2182,28 @@ footer .wrapper {
     transform: scale(1.07);
     -webkit-transform: scale(1.07);
     -moz-transform: scale(1.07); }
+  .fps {
+    font-size: 1.3em; }
   .menu__header > p[class]:not(.menu__init):hover,
   .menu__header > p[class]:not(.menu__init):focus {
-    text-shadow: -0.5px 0 rgba(255, 255, 255, 0.85), 0 0.5px rgba(255, 255, 255, 0.85), 0.5px 0 rgba(255, 255, 255, 0.85), 0 -0.5px rgba(255, 255, 255, 0.85); }
-  .fps {
-    font-size: 1.3em; } }
+    text-shadow: -1px 0 rgba(255, 255, 255, 0.35), 0 1px rgba(255, 255, 255, 0.35), 1px 0 rgba(255, 255, 255, 0.35), 0 -1px rgba(255, 255, 255, 0.35);
+    letter-spacing: 2px; } }
 
 @media all and (max-width: 576px) {
+  .navicon:focus,
+  .navicon:hover,
+  .navicon__arrow:focus,
+  .navicon__arrow:hover {
+    stroke: none;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none; }
+  .navicon:active,
+  .navicon__arrow:active {
+    stroke: #fff;
+    transform: scale(1.07);
+    -webkit-transform: scale(1.07);
+    -moz-transform: scale(1.07); }
   .menu__header .menu__init {
     line-height: 32px;
     padding: 0;
@@ -2234,11 +2263,12 @@ footer .wrapper {
     transform: scale(1.07);
     -webkit-transform: scale(1.07);
     -moz-transform: scale(1.07); }
+  .fps {
+    font-size: 1.2em; }
   .menu__header > p[class]:not(.menu__init):hover,
   .menu__header > p[class]:not(.menu__init):focus {
-    text-shadow: -0.5px 0 rgba(255, 255, 255, 0.85), 0 0.5px rgba(255, 255, 255, 0.85), 0.5px 0 rgba(255, 255, 255, 0.85), 0 -0.5px rgba(255, 255, 255, 0.85); }
-  .fps {
-    font-size: 1.2em; } }
+    text-shadow: -1px 0 rgba(255, 255, 255, 0.35), 0 1px rgba(255, 255, 255, 0.35), 1px 0 rgba(255, 255, 255, 0.35), 0 -1px rgba(255, 255, 255, 0.35);
+    letter-spacing: 2px; } }
 
 @media all and (max-aspect-ratio: 19 / 21) {
   .svg-logo-one {
