@@ -112,6 +112,8 @@ header {
 .navicon {
     display: block;
     width: 100%;
+    height: 45px;
+    max-height: 45px;
     fill: $svg-color;
     stroke: $svg-color;
 }
@@ -119,6 +121,8 @@ header {
 .navicon__arrow {
     display: none;
     width: 100%;
+    height: 45px;
+    max-height: 45px;
     stroke-width: 10;
     position: absolute;
     top: 0;
