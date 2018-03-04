@@ -243,6 +243,11 @@ main {
     grid-column: 1 / 4;
     grid-row: 1 / 4;
     z-index: 2;
+    overflow: hidden;
+}
+
+.ie-edge__detected .canvas-box {
+    overflow: hidden;
 }
 
 .canvasBackground {
@@ -1544,6 +1549,7 @@ footer .wrapper {
         align-items: flex-end;
         align-items: end;
         -ms-grid-columns: 15% 25% 15% 25% 15%;
+        -ms-grid-rows: 1fr 1fr 1fr;
     }
     .svg-logo-two {
         grid-column: 1 / 4;
@@ -1559,6 +1565,7 @@ footer .wrapper {
         align-items: flex-end;
         align-self: end;
         -ms-grid-columns: 15% 25% 15% 25% 15%;
+        -ms-grid-rows: 1fr 1fr 1fr;
     }
     .svg-logo-one div:nth-child(1) {
         -ms-grid-row: 1;
@@ -1576,17 +1583,20 @@ footer .wrapper {
     }
     
     .svg-logo-two div:nth-child(1) {
-        -ms-grid-row: 3;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
         -ms-grid-column: 1;
     }
     
     .svg-logo-two div:nth-child(2) {
-        -ms-grid-row: 3;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
         -ms-grid-column: 3;
     }
     
     .svg-logo-two div:nth-child(3) {
-        -ms-grid-row: 3;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
         -ms-grid-column: 5;
     }
     .svg-logo-one div,.svg-logo-two div {
