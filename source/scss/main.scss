@@ -30,6 +30,10 @@ html {
     }
 }
 
+@supports(display: grid) {
+ 
+}
+
 .grid-container {
     display: grid;
     min-height: 100%;

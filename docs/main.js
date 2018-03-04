@@ -7349,8 +7349,8 @@ function mainCanvas() {
 	var innerText = ["NodeJS", "Webpack", "jQuery", "HTML5", "SCSS", "VBS", "SQL"];
 	var len = innerText.length;
 	var displayFPS = document.getElementsByClassName('fps')[0];
-	var c = void 0,
-	    ctx = void 0,
+	var c,
+	    ctx,
 	    increment = 0.01,
 	    points = [],
 	    flag = true,
@@ -7362,7 +7362,7 @@ function mainCanvas() {
 	    counter = 0,
 	    idxText = 0,
 	    angle = new Vector3(0, 0, 0),
-	    requestID = void 0,
+	    requestID,
 	    angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
 	c = document.getElementById("canvas");
 	c.width = 295;

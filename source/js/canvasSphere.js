@@ -119,7 +119,7 @@ export default function mainCanvas() {
 	const innerText = ["NodeJS", "Webpack", "jQuery", "HTML5", "SCSS", "VBS", "SQL"];
 	const len = innerText.length;
 	const displayFPS = document.getElementsByClassName('fps')[0];
-	let c, 
+var c, 
 	ctx,
 	increment = 0.01,
 	points = [],
@@ -252,7 +252,7 @@ export default function mainCanvas() {
 	}
 
 	function render() {
-		let rotation1 = Matrix3.rotate(angle.x, 1, 0, 0),
+		var rotation1 = Matrix3.rotate(angle.x, 1, 0, 0),
 		rotation2 = Matrix3.rotate(angle.y, 0, 1, 0),
 		rotation3 = Matrix3.rotate(angle.z, 0, 0, 1),
 		rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3)),
