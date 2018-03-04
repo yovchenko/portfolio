@@ -3,6 +3,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+
 const PATHS = {
     source: path.join(__dirname, 'source'),
     docs: path.join(__dirname, 'docs')
@@ -16,7 +17,7 @@ module.exports = {
         contentBase: PATHS.docs,
         port: 8081
     },
-    entry: PATHS.source + '/index.js',
+    entry: ['babel-polyfill', PATHS.source + '/index.js'],
     output: {
         path: PATHS.docs,
         publicPath: '',
