@@ -246,10 +246,6 @@ main {
     overflow: hidden;
 }
 
-.ie-edge__detected .canvas-box {
-    overflow: hidden;
-}
-
 .canvasBackground {
     width: 100%;
     height: 100%;
@@ -1553,7 +1549,7 @@ footer .wrapper {
         -ms-grid-columns: 15% 25% 15% 25% 15%;
         -ms-grid-rows: 1fr 1fr 1fr;
     }
-    
+
     .svg-logo-two {
         grid-column: 1 / 4;
         grid-row: 3;
