@@ -30,6 +30,10 @@ html {
     }
 }
 
+.ie-edge__detected {
+    position: inherit;
+}
+
 @supports(display: grid) {
  
 }
@@ -891,8 +895,6 @@ footer .wrapper {
 }
 
 .svgIcons {
-    display: grid;
-    grid-row: 1;
     width: 45px;
     height: 45px;
     max-width: 45px;

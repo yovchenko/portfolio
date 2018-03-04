@@ -9,6 +9,33 @@ import {
 } from './preloader';
 document.addEventListener('DOMContentLoaded', mainPage);
 export var scaleValue = 1;
+var version = detectIE();
+
+if (!(version === false)) {
+    if(version === 'trident') {
+        document.body.classList.add('ie-edge__detected')
+    }
+} 
+
+function detectIE() {
+  var ua = window.navigator.userAgent;
+
+  var msie = ua.indexOf('MSIE ');
+  if (msie > 0) {
+    return 'msie';
+  }
+
+  var trident = ua.indexOf('Trident/');
+  if (trident > 0) {
+    return 'trident';
+  }
+
+  var edge = ua.indexOf('Edge/');
+  if (edge > 0) {
+    return 'edge';
+  }
+  return false;
+}
 
 function mainPage() {
 	const $home = $('.js-home'),

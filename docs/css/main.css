@@ -606,11 +606,6 @@ template {
   margin: auto;
   text-align: center;
   z-index: 0; }
-  .slider.ie-edge__detected .slider__range {
-    background-image: none;
-    background: transparent;
-    height: auto;
-    min-height: 29px; }
   .slider .slider__range {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -708,6 +703,12 @@ template {
     .slider .slider__range:focus {
       outline: none;
       /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */ }
+
+.ie-edge__detected .slider__range {
+  background-image: none;
+  background: transparent;
+  height: auto;
+  min-height: 29px; }
 
 .ie-edge__detected .volume .plus-minus-input {
   top: 0px; }
@@ -898,6 +899,9 @@ html, html body {
     background-size: cover;
     background-repeat: no-repeat;
     will-change: transform; }
+
+.ie-edge__detected {
+  position: inherit; }
 
 .grid-container {
   display: -ms-grid;
@@ -1737,10 +1741,6 @@ footer .wrapper {
   padding: 6px 0; }
 
 .svgIcons {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-row: 1;
-  grid-row: 1;
   width: 45px;
   height: 45px;
   max-width: 45px;
