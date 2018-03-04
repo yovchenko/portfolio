@@ -1169,8 +1169,9 @@ figure {
   transform: translate(-50%, -50%); }
 
 #wrapperCanvas {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1179,7 +1180,7 @@ figure {
   height: 900px;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: end;
+          align-items: flex-end;
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;

@@ -278,12 +278,12 @@ figure {
 }
 
 #wrapperCanvas {
-    display: grid;
+    display: flex;
     justify-content: center;
     position: absolute;
     width: 800px;
     height: 900px;
-    align-items: end;
+    align-items: flex-end;
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
