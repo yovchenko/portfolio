@@ -979,7 +979,8 @@ header {
   cursor: pointer;
   margin: 6px;
   -ms-grid-row: 1;
-  grid-row: 1; }
+  grid-row: 1;
+  -ms-grid-columns: 1fr; }
 
 .navicon {
   display: block;

@@ -107,6 +107,7 @@ header {
     cursor: pointer;
     margin: 6px;
     grid-row: 1;
+    -ms-grid-columns: 1fr;
 }
 
 .navicon {
