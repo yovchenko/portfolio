@@ -322,6 +322,7 @@ figure {
     justify-content: center;
     -ms-grid-columns: 1fr;
     z-index: -1;
+    -ms-grid-rows: 2% 30% 2% 30% 2% 30% 2%;
 }
 
 .svg-logo-two {
@@ -337,6 +338,7 @@ figure {
     align-items: center;
     -ms-grid-columns: 1fr;
     z-index: -1;
+    -ms-grid-rows: 2% 30% 2% 30% 2% 30% 2%;
 }
 
 .svg-logo-one div,
@@ -352,27 +354,27 @@ figure {
 }
 
 .svg-logo-one div:nth-child(1) {
-    -ms-grid-row: 1;
+    -ms-grid-row: 2;
 }
 
 .svg-logo-one div:nth-child(2) {
-    -ms-grid-row: 2;
+    -ms-grid-row: 4;
 }
 
 .svg-logo-one div:nth-child(3) {
-    -ms-grid-row: 3;
+    -ms-grid-row: 6;
 }
 
 .svg-logo-two div:nth-child(1) {
-    -ms-grid-row: 1;
-}
-
-.svg-logo-two div:nth-child(2) {
     -ms-grid-row: 2;
 }
 
+.svg-logo-two div:nth-child(2) {
+    -ms-grid-row: 4;
+}
+
 .svg-logo-two div:nth-child(3) {
-    -ms-grid-row: 3;
+    -ms-grid-row: 6;
 }
 
 _:-ms-lang(x), .svg-logo-one div,
