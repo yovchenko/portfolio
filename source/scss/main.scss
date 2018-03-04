@@ -1099,7 +1099,7 @@ footer .wrapper {
             width: 0%;
             height: calc(100% + 65px);
             left: 0;
-         //   border: 1px solid #222;
+            border: 1px solid #222;
             -webkit-transform: translateX(-50%);
             /* Chrome, Opera 15+, Safari 3.1+ */
             -ms-transform: translateX(-50%);
@@ -1129,7 +1129,7 @@ footer .wrapper {
             width: 0%;
             height: calc(100% + 65px);
             right: 0;
-      //      border: 1px solid #222;
+            border: 1px solid #222;
             -webkit-transform: translateX(50%);
             /* Chrome, Opera 15+, Safari 3.1+ */
             -ms-transform: translateX(50%);
@@ -1543,6 +1543,7 @@ footer .wrapper {
         grid-gap: 25%;
         align-items: flex-end;
         align-items: end;
+        -ms-grid-columns: 15% 25% 15% 25% 15%;
     }
     .svg-logo-two {
         grid-column: 1 / 4;
@@ -1557,8 +1558,31 @@ footer .wrapper {
         align-items: end;
         align-items: flex-end;
         align-self: end;
+        -ms-grid-columns: 15% 25% 15% 25% 15%;
     }
-
+    .svg-logo-one div:nth-child(1) {
+        -ms-grid-column: 1;
+    }
+    
+    .svg-logo-one div:nth-child(2) {
+        -ms-grid-column: 3;
+    }
+    
+    .svg-logo-one div:nth-child(3) {
+        -ms-grid-column: 5;
+    }
+    
+    .svg-logo-two div:nth-child(1) {
+        -ms-grid-column: 1;
+    }
+    
+    .svg-logo-two div:nth-child(2) {
+        -ms-grid-column: 3;
+    }
+    
+    .svg-logo-two div:nth-child(3) {
+        -ms-grid-column: 5;
+    }
     .svg-logo-one div,.svg-logo-two div {
         justify-content: flex-end;
     }
