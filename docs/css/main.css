@@ -900,9 +900,6 @@ html, html body {
     background-repeat: no-repeat;
     will-change: transform; }
 
-.ie-edge__detected {
-  position: inherit; }
-
 .grid-container {
   display: -ms-grid;
   display: grid;

@@ -12,7 +12,10 @@ export var scaleValue = 1;
 var version = detectIE();
 
 if (!(version === false)) {
-        document.body.classList.add('ie-edge__detected');
+		document.body.classList.add('ie-edge__detected');
+		if(version === 'trident') {
+			document.body.style.position = 'inherit';
+		}
 } 
 
 function detectIE() {
