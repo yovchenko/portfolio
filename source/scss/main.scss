@@ -42,6 +42,7 @@ html {
     grid-template-rows: 65px $main auto;
     grid-template-columns: auto;
     -ms-grid-columns: 1fr;
+    overflow: hidden;
 }
 
 header {
