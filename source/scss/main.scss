@@ -42,7 +42,6 @@ html {
     grid-template-rows: 65px $main auto;
     grid-template-columns: auto;
     -ms-grid-columns: 1fr;
-    overflow: hidden;
 }
 
 header {
@@ -239,12 +238,11 @@ main {
     grid-column: 1 / 4;
     grid-row: 1 / 4;
     z-index: 2;
-    overflow: hidden;
 }
 
 .canvasBackground {
     width: 100%;
-    height: 100%;
+    height: calc(100% - 150px);
     padding: 65px 0px;
     position: absolute;
     z-index: -2;
@@ -252,6 +250,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
+    margin: auto;
     background-size: 100% 100%;
     background-size: cover;
     background-repeat: no-repeat;
