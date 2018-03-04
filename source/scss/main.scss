@@ -329,6 +329,7 @@ figure {
     padding: 5px 0;
     grid-template-rows: repeat(3, 1fr);
     align-items: center;
+    -ms-grid-columns: 1fr;
     z-index: -1;
 }
 
@@ -955,7 +956,7 @@ footer .wrapper {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: calc(100% + 65px);
     bottom: -74.64px;
     z-index: 1000;
     &.is--invisible {
@@ -1097,7 +1098,7 @@ footer .wrapper {
             width: 0%;
             height: calc(100% + 65px);
             left: 0;
-            border: 1px solid #222;
+         //   border: 1px solid #222;
             -webkit-transform: translateX(-50%);
             /* Chrome, Opera 15+, Safari 3.1+ */
             -ms-transform: translateX(-50%);
@@ -1127,7 +1128,7 @@ footer .wrapper {
             width: 0%;
             height: calc(100% + 65px);
             right: 0;
-            border: 1px solid #222;
+      //      border: 1px solid #222;
             -webkit-transform: translateX(50%);
             /* Chrome, Opera 15+, Safari 3.1+ */
             -ms-transform: translateX(50%);
