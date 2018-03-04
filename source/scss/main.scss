@@ -314,6 +314,7 @@ figure {
     grid-template-rows: repeat(3, 1fr);
     align-items: center;
     justify-content: center;
+    -ms-grid-columns: 1fr;
     z-index: -1;
 }
 
@@ -341,6 +342,30 @@ figure {
     max-height: 100%;
     text-align: center;
     justify-content: center;
+}
+
+.svg-logo-one div:nth-child(1) {
+    -ms-grid-row: 1;
+}
+
+.svg-logo-one div:nth-child(2) {
+    -ms-grid-row: 2;
+}
+
+.svg-logo-one div:nth-child(3) {
+    -ms-grid-row: 3;
+}
+
+.svg-logo-two div:nth-child(1) {
+    -ms-grid-row: 1;
+}
+
+.svg-logo-two div:nth-child(2) {
+    -ms-grid-row: 2;
+}
+
+.svg-logo-two div:nth-child(3) {
+    -ms-grid-row: 3;
 }
 
 _:-ms-lang(x), .svg-logo-one div,
