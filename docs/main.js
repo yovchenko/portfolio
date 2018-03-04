@@ -11301,9 +11301,7 @@ var scaleValue = exports.scaleValue = 1;
 var version = detectIE();
 
 if (!(version === false)) {
-	if (version === 'trident') {
-		document.body.classList.add('ie-edge__detected');
-	}
+	document.body.classList.add('ie-edge__detected');
 }
 
 function detectIE() {
@@ -11436,7 +11434,7 @@ function mainPage() {
 					break;
 				case 1:
 					for (var _key4 in _preloader.page.elements) {
-						if (_key4 === 'article' || _key4 === 'flipbook' || _key4 === 'touch' || _key4 === 'container' || _key4 === 'home') _preloader.page.elements[_key4].style.display = 'none';else _preloader.page.elements[_key4].style.display = 'grid';
+						if (_key4 === 'article' || _key4 === 'flipbook' || _key4 === 'touch' || _key4 === 'container' || _key4 === 'home') _preloader.page.elements[_key4].style.display = 'none';else _preloader.page.elements[_key4].style.display = 'flex';
 					}
 					_preloader.page.elements.header.classList.remove('is--active');
 					_preloader.page.pattern.colorX = 'YlGnBu';

@@ -1716,6 +1716,7 @@ input[type=email]:focus {
   color: #000; }
 
 #form_wrap input[type=submit] {
+  display: block;
   outline: none;
   position: absolute;
   font-size: 4em;

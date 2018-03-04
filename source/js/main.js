@@ -12,9 +12,7 @@ export var scaleValue = 1;
 var version = detectIE();
 
 if (!(version === false)) {
-    if(version === 'trident') {
-        document.body.classList.add('ie-edge__detected')
-    }
+        document.body.classList.add('ie-edge__detected');
 } 
 
 function detectIE() {
@@ -156,7 +154,7 @@ function mainPage() {
 					for (let key in page.elements) {
 						if (key === 'article' || key === 'flipbook' || key === 'touch' || key === 'container' || key === 'home')
 							page.elements[key].style.display = 'none';
-						else page.elements[key].style.display = 'grid';
+						else page.elements[key].style.display = 'flex';
 					}
 					page.elements.header.classList.remove('is--active');
 					page.pattern.colorX = 'YlGnBu';
