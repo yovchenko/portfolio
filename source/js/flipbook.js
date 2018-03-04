@@ -5,7 +5,11 @@
     slider.oninput = function() {
         updateHandleValues(this ,this.value, flipbook);
     }
-      
+
+    slider.onmousemove = function() {
+        updateHandleValues(this ,this.value, flipbook);
+    }
+    
     document.getElementsByClassName('volume-up')[0].onclick = function (e) {
         e.preventDefault();
         flipbook.turn('next');
