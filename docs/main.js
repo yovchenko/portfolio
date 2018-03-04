@@ -44583,6 +44583,7 @@ function detectIE() {
     var msie = ua.indexOf('MSIE ');
     if (msie > 0) {
         // IE 10 or older => return version number
+        console.log('ie');
         return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
     }
 
@@ -44590,6 +44591,7 @@ function detectIE() {
     if (trident > 0) {
         // IE 11 => return version number
         var rv = ua.indexOf('rv:');
+        console.log('trident');
         return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
     }
 

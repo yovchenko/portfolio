@@ -909,6 +909,7 @@ html, html body {
       grid-template-rows: 65px calc(100vh - 65px) auto;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
+  -ms-grid-column: 1fr;
   overflow: hidden; }
 
 header {
