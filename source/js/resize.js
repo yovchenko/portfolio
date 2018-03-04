@@ -32,7 +32,7 @@ export function resizeContent(obj, wrap, width, height) {
 			let newLeftPos = Math.abs(Math.floor(((basePage.width * basePage.scale) - maxWidth) / 2));
 			let newTopPos = Math.abs(Math.floor(((basePage.height * basePage.scale) - maxHeight) / 2));
 
-			page.attr('style', '-webkit-transform:scale(' + basePage.scale.toFixed(2) + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
+			page.attr('style', '-webkit-transform:scale(' + basePage.scale.toFixed(2) + ');right:' + newLeftPos + 'px;top:' + newTopPos + 'px;' + 'transform:scale(' + basePage.scale.toFixed(2) + ');');
 		}
 		return basePage.scale.toFixed(2);
 	};
