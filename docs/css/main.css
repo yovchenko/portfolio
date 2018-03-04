@@ -1722,6 +1722,7 @@ textarea {
   color: #7c7873;
   background: none;
   outline: none;
+  display: block;
   width: 100%;
   min-height: 30px;
   margin: 5px 0px;
