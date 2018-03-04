@@ -154,7 +154,10 @@ function mainPage() {
 					for (let key in page.elements) {
 						if (key === 'article' || key === 'flipbook' || key === 'touch' || key === 'container' || key === 'home')
 							page.elements[key].style.display = 'none';
-						else page.elements[key].style.display = 'flex';
+						else {
+							page.elements[key].style.display = 'grid';
+							if(version === 'trident') page.elements[key].style.display = '-ms-grid';
+						}
 					}
 					page.elements.header.classList.remove('is--active');
 					page.pattern.colorX = 'YlGnBu';

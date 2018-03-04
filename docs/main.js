@@ -11434,7 +11434,10 @@ function mainPage() {
 					break;
 				case 1:
 					for (var _key4 in _preloader.page.elements) {
-						if (_key4 === 'article' || _key4 === 'flipbook' || _key4 === 'touch' || _key4 === 'container' || _key4 === 'home') _preloader.page.elements[_key4].style.display = 'none';else _preloader.page.elements[_key4].style.display = 'flex';
+						if (_key4 === 'article' || _key4 === 'flipbook' || _key4 === 'touch' || _key4 === 'container' || _key4 === 'home') _preloader.page.elements[_key4].style.display = 'none';else {
+							_preloader.page.elements[_key4].style.display = 'grid';
+							if (version === 'trident') _preloader.page.elements[_key4].style.display = '-ms-grid';
+						}
 					}
 					_preloader.page.elements.header.classList.remove('is--active');
 					_preloader.page.pattern.colorX = 'YlGnBu';
