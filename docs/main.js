@@ -11310,14 +11310,13 @@ function detectIE() {
 
 	var msie = ua.indexOf('MSIE ');
 	if (msie > 0) {
-		console.log(msie);
 		return 'msie';
 	}
 
 	var trident = ua.indexOf('Trident/');
 	if (trident > 0) {
-		console.log(trident);
-		console.log(window.navigator.userAgent);
+		var rv = ua.indexOf('rv:');
+		console.log(parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10));
 		return 'trident';
 	}
 
