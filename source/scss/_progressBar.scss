@@ -1,24 +1,24 @@
-
 progress[value] {
 	appearance: none;
 	border: 1px solid black;
-    width: 100%;
+	width: 100%;
 	height: 1.4em;
 	color: #fff;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+	background: rgba(0, 0, 0, 0.2);
 	position: relative;
 	box-sizing: border-box;
 }
 
-main .svg-logo-one div .bar-before, main .svg-logo-two div .bar-before {
+main .svg-logo-one div .bar-before,
+main .svg-logo-two div .bar-before {
 	font-size: 1.4em;
 	line-height: 1.4;
 	text-align: center;
 	margin-top: 5px;
 	height: auto;
 	display: inline-block;
-	vertical-align: middle;	
+	vertical-align: middle;
 	& svg {
 		width: 1em;
 		height: 1em;
@@ -32,14 +32,14 @@ main .svg-logo-one div .bar-before, main .svg-logo-two div .bar-before {
 }
 
 progress[value]::-webkit-progress-bar {
-    background: rgba(0, 0, 0, 0);
+	background: rgba(0, 0, 0, 0);
 	border-radius: 10px;
 }
 
 progress[value]::-webkit-progress-value {
 	position: relative;
 	border-right: 1px solid black;
-	border-top-left-radius:10px;
+	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	background: #fff;
 }
@@ -47,34 +47,38 @@ progress[value]::-webkit-progress-value {
 progress[value]::-moz-progress-bar {
 	position: relative;
 	border-right: 1px solid black;
-	border-top-left-radius:10px;
+	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	background: #fff;
 }
 
 @media all and (max-width: 767px) and (min-width: 577px) {
-	main .svg-logo-one div .bar-before, main .svg-logo-two div .bar-before {
-	font-size: 1.3em;
-	line-height: 1.3;
+	main .svg-logo-one div .bar-before,
+	main .svg-logo-two div .bar-before {
+		font-size: 1.3em;
+		line-height: 1.3;
 	}
 	progress[value] {
 		height: 1.3em;
 	}
-	main .svg-logo-one div .bar-before svg, main .svg-logo-two div .bar-before svg {
+	main .svg-logo-one div .bar-before svg,
+	main .svg-logo-two div .bar-before svg {
 		width: .9em;
 		height: .9em;
 	}
 }
 
 @media all and (max-width: 576px) {
-	main .svg-logo-one div .bar-before, main .svg-logo-two div .bar-before {
-	font-size: 1.2em;
-	line-height: 1.2;
+	main .svg-logo-one div .bar-before,
+	main .svg-logo-two div .bar-before {
+		font-size: 1.2em;
+		line-height: 1.2;
 	}
 	progress[value] {
 		height: 1.2em;
 	}
-	main .svg-logo-one div .bar-before svg, main .svg-logo-two div .bar-before svg {
+	main .svg-logo-one div .bar-before svg,
+	main .svg-logo-two div .bar-before svg {
 		width: .9em;
 		height: .9em;
 	}

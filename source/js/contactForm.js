@@ -21,7 +21,7 @@ jQuery.extend(jQuery.validator.messages, {
 const $contactForm = $('#contactForm');
 const button = document.getElementById('submit');
 $contactForm.validate();
-$contactForm.submit(function(e) {
+$contactForm.submit(function (e) {
     if ($contactForm.valid()) {
         e.preventDefault();
         $.ajax({
@@ -29,17 +29,23 @@ $contactForm.submit(function(e) {
             method: "POST",
             data: $(this).serialize(),
             dataType: "json",
-            beforeSend: function() {button.value = 'Sending message…'},
-            success: function(data) {button.value = 'Message sent!'},
-            error: function(err) {button.value = 'Ops, there was an error.'}
+            beforeSend: function () {
+                button.value = 'Sending message…'
+            },
+            success: function (data) {
+                button.value = 'Message sent!'
+            },
+            error: function (err) {
+                button.value = 'Ops, there was an error.'
+            }
         });
     }
 });
-$(document.getElementById('message')).add(document.getElementById('email'))	
-	.add(document.getElementById('name')).focus(function () {	
-		document.getElementsByClassName('containerForm')[0].classList.add('form-is--scaled');	
-});	
-$(document.getElementById('message')).add(document.getElementById('email'))	
-	.add(document.getElementById('name')).focusout(function () {	
-		document.getElementsByClassName('containerForm')[0].classList.remove('form-is--scaled');	
-});
+$(document.getElementById('message')).add(document.getElementById('email'))
+    .add(document.getElementById('name')).focus(function () {
+        document.getElementsByClassName('containerForm')[0].classList.add('form-is--scaled');
+    });
+$(document.getElementById('message')).add(document.getElementById('email'))
+    .add(document.getElementById('name')).focusout(function () {
+        document.getElementsByClassName('containerForm')[0].classList.remove('form-is--scaled');
+    });

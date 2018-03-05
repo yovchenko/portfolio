@@ -1,20 +1,20 @@
 (function loadApp() {
     var flipbook = $('.sj-book'),
-    slider = document.getElementById('js-slider');
+        slider = document.getElementById('js-slider');
     slider.background = 0;
-    slider.oninput = function() {
-        updateHandleValues(this ,this.value, flipbook);
+    slider.oninput = function () {
+        updateHandleValues(this, this.value, flipbook);
     }
 
-    slider.onmousemove = function() {
-        updateHandleValues(this ,this.value, flipbook);
+    slider.onmousemove = function () {
+        updateHandleValues(this, this.value, flipbook);
     }
-    
+
     document.getElementsByClassName('volume-up')[0].onclick = function (e) {
         e.preventDefault();
         flipbook.turn('next');
     }
-  
+
     document.getElementsByClassName('volume-down')[0].onclick = function (e) {
         e.preventDefault();
         flipbook.turn('previous');
@@ -81,7 +81,7 @@
                 setTimeout(function () {
                     slider.value = getViewNumber(book);
                     moveBar(page, pages, currentPage, slider);
-              }, 1);
+                }, 1);
             },
             turned: function (e, page, view) {
                 var book = $(this);
@@ -110,12 +110,12 @@ function updateDepth(book, newPage) {
 }
 
 function moveBar(page, pages, currentPage, slider) {
-   var percentage = 100 / pages * 2,
-   scaleBook =  document.getElementsByClassName('align')[0];
-   if(page === 1 || page === pages) scaleBook.classList.add('resized');
-   else scaleBook.classList.remove('resized');
-   slider.background = percentage * (slider.value - 1);
-   slider.style.backgroundSize = slider.background.toFixed(2) + '% 100%';
+    var percentage = 100 / pages * 2,
+        scaleBook = document.getElementsByClassName('align')[0];
+    if (page === 1 || page === pages) scaleBook.classList.add('resized');
+    else scaleBook.classList.remove('resized');
+    slider.background = percentage * (slider.value - 1);
+    slider.style.backgroundSize = slider.background.toFixed(2) + '% 100%';
 }
 
 function getViewNumber(book, page) {
@@ -128,7 +128,7 @@ function numberOfViews(book) {
 
 function updateHandleValues(slider, sliderValue, flipbook) {
     var pageNum = getViewNumber(flipbook),
-    percentage = 100 / flipbook.turn('pages') * 2;
+        percentage = 100 / flipbook.turn('pages') * 2;
     if (pageNum > sliderValue) {
         while (pageNum != sliderValue) {
             flipbook.turn('previous');

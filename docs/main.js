@@ -11296,8 +11296,6 @@ var _jsonAnimation = __webpack_require__(125);
 
 var _preloader = __webpack_require__(190);
 
-document.addEventListener('DOMContentLoaded', mainPage);
-var scaleValue = exports.scaleValue = 1;
 var version = detectIE();
 
 if (!(version === false)) {
@@ -11329,7 +11327,8 @@ function detectIE() {
 	}
 	return false;
 }
-
+document.addEventListener('DOMContentLoaded', mainPage);
+var scaleValue = exports.scaleValue = 1;
 function mainPage() {
 	var $home = $('.js-home'),
 	    $about = $('.js-about'),

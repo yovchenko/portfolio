@@ -7,40 +7,39 @@ import {
 import {
 	page
 } from './preloader';
-document.addEventListener('DOMContentLoaded', mainPage);
-export var scaleValue = 1;
 var version = detectIE();
 
 if (!(version === false)) {
-		document.body.classList.add('ie-edge__detected');
-		if(version === 'trident') {
-			document.body.style.position = 'inherit';
-		}
-} 
-
-function detectIE() {
-  var ua = window.navigator.userAgent;
-
-  var msie = ua.indexOf('MSIE ');
-  if (msie > 0) {
-	console.log(msie)
-    return 'msie';
-  }
-
-  var trident = ua.indexOf('Trident/');
-  if (trident > 0) {
-	  console.log(trident)
-	  console.log(window.navigator.userAgent)
-    return 'trident';
-  }
-
-  var edge = ua.indexOf('Edge/');
-  if (edge > 0) {
-    return 'edge';
-  }
-  return false;
+	document.body.classList.add('ie-edge__detected');
+	if (version === 'trident') {
+		document.body.style.position = 'inherit';
+	}
 }
 
+function detectIE() {
+	var ua = window.navigator.userAgent;
+
+	var msie = ua.indexOf('MSIE ');
+	if (msie > 0) {
+		console.log(msie)
+		return 'msie';
+	}
+
+	var trident = ua.indexOf('Trident/');
+	if (trident > 0) {
+		console.log(trident)
+		console.log(window.navigator.userAgent)
+		return 'trident';
+	}
+
+	var edge = ua.indexOf('Edge/');
+	if (edge > 0) {
+		return 'edge';
+	}
+	return false;
+}
+document.addEventListener('DOMContentLoaded', mainPage);
+export var scaleValue = 1;
 function mainPage() {
 	const $home = $('.js-home'),
 		$about = $('.js-about'),
@@ -60,7 +59,7 @@ function mainPage() {
 			this.classList.add('is--active');
 			headerText();
 		} else {
-			this.classList.remove('is--active');	
+			this.classList.remove('is--active');
 		}
 	}
 
@@ -162,7 +161,7 @@ function mainPage() {
 							page.elements[key].style.display = 'none';
 						else {
 							page.elements[key].style.display = 'grid';
-							if(version === 'trident') page.elements[key].style.display = '-ms-grid';
+							if (version === 'trident') page.elements[key].style.display = '-ms-grid';
 						}
 					}
 					page.elements.header.classList.remove('is--active');

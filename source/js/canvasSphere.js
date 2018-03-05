@@ -119,21 +119,21 @@ export default function mainCanvas() {
 	const innerText = ["NodeJS", "Webpack", "jQuery", "HTML5", "SCSS", "VBS", "SQL"];
 	const len = innerText.length;
 	const displayFPS = document.getElementsByClassName('fps')[0];
-	let c, 
-	ctx,
-	increment = 0.01,
-	points = [],
-	flag = true,
-	opacity = 0.05,
-	str = '',
-	width = 110,
-	numOfPoints = 1,
-	testCases = 1,
-	counter = 0,
-	idxText = 0,
-	angle = new Vector3(0, 0, 0),
-	requestID,
-	angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
+	let c,
+		ctx,
+		increment = 0.01,
+		points = [],
+		flag = true,
+		opacity = 0.05,
+		str = '',
+		width = 110,
+		numOfPoints = 1,
+		testCases = 1,
+		counter = 0,
+		idxText = 0,
+		angle = new Vector3(0, 0, 0),
+		requestID,
+		angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
 	c = document.getElementById("canvas");
 	c.width = 295;
 	c.height = 295;
@@ -228,17 +228,17 @@ export default function mainCanvas() {
 		let count = 1;
 		let fps = 0;
 		return function () {
-		  let currentLoop = (new Date()).getMilliseconds();
-		  if (lastLoop > currentLoop) {
-			fps = count;
-			count = 1;
-		  } else {
-			count += 1;
-		  }
-		  lastLoop = currentLoop;
-		  return fps;
+			let currentLoop = (new Date()).getMilliseconds();
+			if (lastLoop > currentLoop) {
+				fps = count;
+				count = 1;
+			} else {
+				count += 1;
+			}
+			lastLoop = currentLoop;
+			return fps;
 		};
-	  }());
+	}());
 
 	function loop() {
 		render();
@@ -253,10 +253,10 @@ export default function mainCanvas() {
 
 	function render() {
 		let rotation1 = Matrix3.rotate(angle.x, 1, 0, 0),
-		rotation2 = Matrix3.rotate(angle.y, 0, 1, 0),
-		rotation3 = Matrix3.rotate(angle.z, 0, 0, 1),
-		rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3)),
-		lengthArr = innerText.length;
+			rotation2 = Matrix3.rotate(angle.y, 0, 1, 0),
+			rotation3 = Matrix3.rotate(angle.z, 0, 0, 1),
+			rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3)),
+			lengthArr = innerText.length;
 		ctx.clearRect(35, 35, 225, 225);
 		ctx.font = "52px sketch";
 		ctx.textAlign = "center";
@@ -272,26 +272,25 @@ export default function mainCanvas() {
 			ctx.arc(x, y, 2, 0, 2 * Math.PI);
 		}
 		ctx.fill();
-		
+
 		opacity += increment;
 		str = opacity.toFixed(1);
 		if (str === '1.0' || str === '0.0') {
 			if (str === '0.0' && idxText !== len - 1) {
 				idxText++;
-			}
-			else if (str === '0.0' && idxText === len - 1) {
+			} else if (str === '0.0' && idxText === len - 1) {
 				idxText = 0;
 			}
-		increment = -increment;
+			increment = -increment;
 		}
 
 	}
 	loop();
 	letsDance();
 	$(document.getElementsByClassName('menu__about')[0]).add(document.getElementsByClassName('menu__work'))
-	.add(document.getElementsByClassName('menu__contact')).click(function (e) {
-		cancelAnimationFrame(requestID);
-	});
+		.add(document.getElementsByClassName('menu__contact')).click(function (e) {
+			cancelAnimationFrame(requestID);
+		});
 	document.getElementsByClassName('menu__home')[0].onclick = function (e) {
 		mainCanvas();
 	}
