@@ -59,6 +59,10 @@ header {
     max-width: 1600px;
 }
 
+.ie-edge__detected .footer {
+    height: 65px;
+}
+
 .footer {
     display: none;
     grid-area: footer;
