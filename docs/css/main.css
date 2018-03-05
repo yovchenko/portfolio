@@ -935,7 +935,7 @@ header {
   height: 100%;
   max-width: 1600px; }
 
-.ie-edge__detected .footer {
+.ie-edge__detected .footer.is--visible {
   height: 65px; }
 
 .footer {
@@ -1095,6 +1095,11 @@ header {
     @media (min-width: 1000px) {
       .menu__header .menu__home {
         font-size: 50px; } }
+
+.menu__about span,
+.menu__work span,
+.menu__contact span {
+  will-change: opacity; }
 
 .is--active .menu__init {
   display: none; }
@@ -1397,7 +1402,7 @@ article p {
   top: 45%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: 2; }
 
 #flipbook {

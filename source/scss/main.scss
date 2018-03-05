@@ -59,7 +59,7 @@ header {
     max-width: 1600px;
 }
 
-.ie-edge__detected .footer {
+.ie-edge__detected .footer.is--visible {
     height: 65px;
 }
 
@@ -193,6 +193,12 @@ header {
         padding: 0px 5px;
         @include responsive-font(5vw, 35px, 50px);
     }
+}
+
+.menu__about span,
+.menu__work span,
+.menu__contact span {
+        will-change: opacity; 
 }
 
 .is--active .menu__init {
@@ -469,6 +475,8 @@ article p {
     height: 75%;
     top: 45%;
     left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 2;
 }
