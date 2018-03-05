@@ -11298,13 +11298,6 @@ var _preloader = __webpack_require__(190);
 
 var version = detectIE();
 
-if (!(version === false)) {
-	document.body.classList.add('ie-edge__detected');
-	if (version === 'Trident') {
-		document.body.style.position = 'inherit';
-	}
-}
-
 function detectIE() {
 	var ua = window.navigator.userAgent;
 
@@ -11434,7 +11427,7 @@ function mainPage() {
 					for (var _key4 in _preloader.page.elements) {
 						if (_key4 === 'article' || _key4 === 'flipbook' || _key4 === 'touch' || _key4 === 'container' || _key4 === 'home') _preloader.page.elements[_key4].style.display = 'none';else {
 							_preloader.page.elements[_key4].style.display = 'grid';
-							if (version === 'trident') _preloader.page.elements[_key4].style.display = '-ms-grid';
+							if (version === 'Trident') _preloader.page.elements[_key4].style.display = '-ms-grid';
 						}
 					}
 					_preloader.page.elements.header.classList.remove('is--active');

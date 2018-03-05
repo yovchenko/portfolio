@@ -9,13 +9,6 @@ import {
 } from './preloader';
 var version = detectIE();
 
-if (!(version === false)) {
-	document.body.classList.add('ie-edge__detected');
-	if (version === 'Trident') {
-		document.body.style.position = 'inherit';
-	}
-}
-
 function detectIE() {
 	var ua = window.navigator.userAgent;
 
@@ -155,7 +148,7 @@ function mainPage() {
 							page.elements[key].style.display = 'none';
 						else {
 							page.elements[key].style.display = 'grid';
-							if (version === 'trident') page.elements[key].style.display = '-ms-grid';
+							if (version === 'Trident') page.elements[key].style.display = '-ms-grid';
 						}
 					}
 					page.elements.header.classList.remove('is--active');
