@@ -23,11 +23,14 @@ function detectIE() {
 
   var msie = ua.indexOf('MSIE ');
   if (msie > 0) {
+	console.log(msie)
     return 'msie';
   }
 
   var trident = ua.indexOf('Trident/');
   if (trident > 0) {
+	  console.log(trident)
+	  console.log(window.navigator.userAgent)
     return 'trident';
   }
 
