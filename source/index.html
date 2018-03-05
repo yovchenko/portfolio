@@ -11,11 +11,12 @@
   var version = detectIE();
 
   if (!(version === false)) {
-    document.body.classList.add('ie-edge__detected');
+    document.getElementsByClassName('browser-support')[0].style.display = 'none';
     if (version === 'Trident') {
       document.body.style.position = 'inherit';
     }
   }
+  else  document.getElementsByClassName('browser-support')[0].style.display = 'block';
 
   function detectIE() {
     var ua = window.navigator.userAgent;
