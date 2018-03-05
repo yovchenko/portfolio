@@ -11,7 +11,7 @@ var version = detectIE();
 
 if (!(version === false)) {
 	document.body.classList.add('ie-edge__detected');
-	if (version === 'trident') {
+	if (version === 'Trident') {
 		document.body.style.position = 'inherit';
 	}
 }
@@ -19,26 +19,18 @@ if (!(version === false)) {
 function detectIE() {
 	var ua = window.navigator.userAgent;
 
-	var msie = ua.indexOf('MSIE ');
-	if (msie > 0) {
-		return 'msie';
-	}
-
 	var trident = ua.indexOf('Trident/');
 	if (trident > 0) {
 		var rv = ua.indexOf('rv:');
-		if (parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10) < 11) {
-			document.getElementsByClassName('browser-support')[0].style.display = 'block';
-		}
-		return 'trident';
+		if (parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10) === 11) return 'Trident';
+		else return false;
 	}
 
 	var edge = ua.indexOf('Edge/');
-	if (edge > 0) {
-		return 'edge';
-	}
+	if (edge > 0) return 'Edge';
 	return false;
 }
+
 document.addEventListener('DOMContentLoaded', mainPage);
 export var scaleValue = 1;
 
