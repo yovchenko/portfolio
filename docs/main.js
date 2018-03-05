@@ -11316,7 +11316,9 @@ function detectIE() {
 	var trident = ua.indexOf('Trident/');
 	if (trident > 0) {
 		var rv = ua.indexOf('rv:');
-		console.log(parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10));
+		if (parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10) < 11) {
+			document.getElementsByClassName('browser-support')[0].style.display = 'block';
+		}
 		return 'trident';
 	}
 
@@ -11328,6 +11330,7 @@ function detectIE() {
 }
 document.addEventListener('DOMContentLoaded', mainPage);
 var scaleValue = exports.scaleValue = 1;
+
 function mainPage() {
 	var $home = $('.js-home'),
 	    $about = $('.js-about'),
