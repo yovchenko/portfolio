@@ -1495,9 +1495,18 @@ article p {
     border: 1px solid black;
     padding: 5px; }
   .sj-book .book-browser-support td svg {
-    width: 40px;
+    width: 90%;
     vertical-align: middle;
-    padding-bottom: 2.5px; }
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto; }
+  .sj-book .book-browser-support td:nth-child(1) {
+    position: relative;
+    width: 55px;
+    height: 40px; }
 
 .sj-book .page-speed-tools {
   font-family: "sketch", "Georgia", serif;
@@ -1691,7 +1700,7 @@ article p {
   height: 80%;
   top: 50%;
   left: 50%;
-  font-family: "Italianno", "Georgia", serif;
+  font-family: "sketch", "Georgia", serif;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   letter-spacing: 1.4px; }
@@ -1818,7 +1827,7 @@ input[type=email]:focus {
   outline: none;
   position: absolute;
   font-size: 4em;
-  font-family: "Italianno", "Georgia", serif;
+  font-family: "sketch", "Georgia", serif;
   width: 89%;
   text-align: center;
   opacity: 0;
