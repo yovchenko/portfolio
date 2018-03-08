@@ -43367,7 +43367,7 @@ var _main = __webpack_require__(193);
 
           var cssProperties = {};
           cssProperties[vendor + 'transform-style'] = 'preserve-3d';
-          cssProperties[vendor + 'backface-visibility'] = 'hidden';
+          //   cssProperties[vendor + 'backface-visibility'] = 'hidden';
 
           data.wrapper = $('<div/>', divAtt(0, 0, 2)).css(cssProperties).appendTo(parent).prepend(this);
 

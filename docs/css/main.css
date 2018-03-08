@@ -878,10 +878,10 @@ progress[value]::-moz-progress-bar {
   src: url(../fonts/CabinSketch-Bold.eot&565b129b6959b636902d5a24fe8ca456) format("eot"), url(../fonts/CabinSketch-Bold.woff2&1948972bd4c67c19bf5860bf53d55de3) format("woff2"), url(../fonts/CabinSketch-Bold.woff&134679d84c975a7b16e8b70a356ba065) format("woff"), url(../fonts/CabinSketch-Bold.ttf&5e77ac816cfbc43518367a4570fe9b57) format("truetype"), url(../fonts/CabinSketch-Bold.svg&ba316c97da7f9e76f8084f95c59ea11b#sketch) format("svg"); }
 
 @font-face {
-  font-family: "Italianno, cursive";
+  font-family: "Italianno";
   font-style: 400;
   font-weight: normal;
-  src: url(../fonts/Italianno-Regular.eot&26e7ef283b05b28681129eefab3a1242) format("eot"), url(../fonts/Italianno-Regular.woff2&dd3a5d500a8e303f5258890634552aca) format("woff2"), url(../fonts/Italianno-Regular.woff&45f8c4d4f8f4a1b9c802e5a6999155be) format("woff"), url(../fonts/Italianno-Regular.ttf&e8ca0d890ecd08523f6509b3019b2280) format("truetype"), url(../fonts/Italianno-Regular.svg&7cb021e1a0bb4eb7711b4adf835dcdc7#Italianno,_cursive) format("svg"); }
+  src: url(../fonts/Italianno-Regular.eot&26e7ef283b05b28681129eefab3a1242) format("eot"), url(../fonts/Italianno-Regular.woff2&dd3a5d500a8e303f5258890634552aca) format("woff2"), url(../fonts/Italianno-Regular.woff&45f8c4d4f8f4a1b9c802e5a6999155be) format("woff"), url(../fonts/Italianno-Regular.ttf&e8ca0d890ecd08523f6509b3019b2280) format("truetype"), url(../fonts/Italianno-Regular.svg&7cb021e1a0bb4eb7711b4adf835dcdc7#Italianno) format("svg"); }
 
 html, html body {
   height: 100%;
@@ -1468,6 +1468,54 @@ article p {
   -o-box-shadow: 0 0 10px #999;
   box-shadow: 0 0 10px #999; }
 
+.hard.front-side h1 {
+  font-size: 5.2em;
+  font-weight: normal;
+  text-align: right;
+  position: relative;
+  margin: 0.5em 0px;
+  right: 5px; }
+
+.hard.p3.own-size h1 {
+  font-size: 5.2em;
+  font-weight: normal;
+  text-align: left;
+  position: relative;
+  margin: 0.5em 0px;
+  top: -9px;
+  left: -1px; }
+
+.sj-book .book-browser-support {
+  font-family: "sketch", "Georgia", serif;
+  margin: -9px 40px 0px 20px;
+  text-align: center; }
+  .sj-book .book-browser-support th, .sj-book .book-browser-support td {
+    font-size: 5.2em;
+    font-weight: normal;
+    border: 1px solid black;
+    padding: 5px; }
+  .sj-book .book-browser-support td svg {
+    width: 40px;
+    vertical-align: middle;
+    padding-bottom: 2.5px; }
+
+.sj-book .page-speed-tools {
+  font-family: "sketch", "Georgia", serif;
+  text-align: center;
+  padding-left: 20px;
+  margin: 0px 20px 0px 40px; }
+  .sj-book .page-speed-tools th, .sj-book .page-speed-tools td {
+    border: 1px solid black;
+    font-size: 5.2em;
+    font-weight: normal;
+    padding: 5px; }
+  .sj-book .page-speed-tools tr:nth-child(3) {
+    color: green; }
+
+.sj-book .book-browser-icons span svg {
+  width: 45px;
+  height: 45px; }
+
 .sj-book .page {
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   -ms-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
@@ -1643,7 +1691,7 @@ article p {
   height: 80%;
   top: 50%;
   left: 50%;
-  font-family: 'Italianno, cursive';
+  font-family: "Italianno", "Georgia", serif;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   letter-spacing: 1.4px; }
@@ -1770,7 +1818,7 @@ input[type=email]:focus {
   outline: none;
   position: absolute;
   font-size: 4em;
-  font-family: 'Italianno, cursive';
+  font-family: "Italianno", "Georgia", serif;
   width: 89%;
   text-align: center;
   opacity: 0;
@@ -1825,7 +1873,7 @@ footer .wrapper {
   #loader-wrapper.is--invisible {
     display: none; }
   #loader-wrapper .font-preload {
-    font-family: 'Italianno, cursive';
+    font-family: "Italianno", "Georgia", serif;
     font-size: 0; }
   #loader-wrapper #loader {
     display: block;
