@@ -1775,7 +1775,7 @@ form {
   height: 430px; }
 
 label {
-  font-size: 4em;
+  font-size: 3.2em;
   text-shadow: 0px 1px 0px #fff;
   position: relative; }
 
@@ -1794,7 +1794,7 @@ label {
 input[type=text],
 input[type=email],
 textarea {
-  font: 22px normal normal uppercase helvetica, "Times New Roman", Times, serif;
+  font: 3.2em normal normal uppercase helvetica, "Times New Roman", Times, serif;
   font-family: "Times New Roman", Times, serif;
   color: #7c7873;
   background: none;
@@ -1826,7 +1826,7 @@ input[type=email]:focus {
   display: block;
   outline: none;
   position: absolute;
-  font-size: 4em;
+  font-size: 3.2em;
   font-family: "sketch", "Georgia", serif;
   width: 89%;
   text-align: center;
@@ -2530,8 +2530,6 @@ h3 {
   .svg-logo-one > div:nth-child(2) {
     right: 0%;
     width: 103%; }
-  .svg-logo-one > div:nth-child(2) > svg {
-    margin-top: 25%; }
   .svg-logo-two > div:nth-child(2) {
     right: 0%;
     width: 101%; }
