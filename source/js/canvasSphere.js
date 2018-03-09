@@ -274,3 +274,37 @@ export default function mainCanvas() {
 		mainCanvas();
 	}
 }
+
+(function() {
+	var charParts, i, j, len, part, partElem, resize;
+  
+	charParts = ["d-1", "d-2", "e-1", "e-2", "s-1", "i-1", "i-2", "g-1", "g-2", "n-1", "n-2"];
+  
+	partElem = $(".motion")
+  
+	for (j = 0, len = charParts.length; j < len; j++) {
+	  part = charParts[j];
+	  $(".text-animation__svg").append(partElem.clone().attr("class", part));
+	}
+  
+	i = setInterval(function() {
+	  return $(".text-animation").toggleClass("text");
+	}, 7000);
+  
+	setTimeout(function() {
+	  return $(".text-animation").toggleClass("text");
+	}, 100);
+  
+	$(".text-animation").click(function() {
+	  clearInterval(i);
+	  return $(".text-animation").toggleClass("text");
+	});
+  
+	resize = function() {
+	  return false;
+	};
+  
+	$(window).resize(resize);
+  
+	resize();
+  }).call(this);
