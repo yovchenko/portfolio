@@ -10997,13 +10997,27 @@ function mainCanvas() {
 	c.height = 295;
 	ctx = c.getContext('2d');
 	render(ctx);
+	var charParts, i, j, len, part, partElem, resize;
+
+	charParts = ["d-1", "d-2", "e-1", "e-2", "s-1", "i-1", "i-2", "g-1", "g-2", "n-1", "n-2"];
+
+	partElem = $(".motion");
+
+	for (j = 0, len = charParts.length; j < len; j++) {
+		part = charParts[j];
+		$(".text-animation__svg").append(partElem.clone().attr("class", part));
+	}
+
+	setTimeout(function () {
+		return $(".text-animation").toggleClass("text");
+	}, 100);
 
 	function letsDance() {
 		var loopDots = setTimeout(function () {
 			if (flag == true) {
-				for (var i = 0; i < numOfPoints; i++) {
+				for (var _i = 0; _i < numOfPoints; _i++) {
 					var buf = [];
-					for (var j = 0; j < testCases; j++) {
+					for (var _j = 0; _j < testCases; _j++) {
 						var v = new Vector3(Math.random() * 4 - 2, Math.random() * 4 - 2, Math.random() * 4 - 2);
 						v.normalize().multiply(width);
 						buf.push(v);
@@ -11059,9 +11073,9 @@ function mainCanvas() {
 					}
 				}, 1000);
 			} else if (flag == false) {
-				for (var _i = 0; _i < numOfPoints; _i++) {
+				for (var _i2 = 0; _i2 < numOfPoints; _i2++) {
 					var _buf = [];
-					for (var _j = 0; _j < testCases; _j++) {
+					for (var _j2 = 0; _j2 < testCases; _j2++) {
 						var _v = new Vector3(Math.random() * 4 - 2, Math.random() * 4 - 2, Math.random() * 4 - 2);
 						_v.normalize().multiply(width);
 						_buf.push(_v);
@@ -11200,6 +11214,10 @@ function mainCanvas() {
 		mainCanvas();
 	};
 }
+
+$(".text-animation").click(function () {
+	return $(".text-animation").toggleClass("text");
+});
 
 /***/ }),
 /* 192 */
