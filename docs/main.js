@@ -11165,8 +11165,9 @@ function mainCanvas() {
 		ctx.clearRect(35, 35, 225, 225);
 		ctx.font = "52px sketch";
 		ctx.textAlign = "center";
-		ctx.strokeStyle = "rgba(" + 245 + "," + 245 + "," + 245 + "," + opacity.toFixed(3) + ")";
 		ctx.textBaseline = "middle";
+		ctx.strokeStyle = "rgba(" + 0 + "," + 0 + "," + 0 + "," + opacity.toFixed(3) + ")";
+		ctx.fillStyle = '#2c3e50';
 		ctx.strokeText(innerText[idxText], canvas.width / 2, canvas.height / 2);
 		ctx.beginPath();
 		var _iteratorNormalCompletion3 = true;

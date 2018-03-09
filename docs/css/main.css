@@ -871,18 +871,6 @@ progress[value]::-moz-progress-bar {
     width: .9em;
     height: .9em; } }
 
-@font-face {
-  font-family: "sketch";
-  font-style: 500;
-  font-weight: normal;
-  src: url(../fonts/CabinSketch-Bold.eot&565b129b6959b636902d5a24fe8ca456) format("eot"), url(../fonts/CabinSketch-Bold.woff2&1948972bd4c67c19bf5860bf53d55de3) format("woff2"), url(../fonts/CabinSketch-Bold.woff&134679d84c975a7b16e8b70a356ba065) format("woff"), url(../fonts/CabinSketch-Bold.ttf&5e77ac816cfbc43518367a4570fe9b57) format("truetype"), url(../fonts/CabinSketch-Bold.svg&ba316c97da7f9e76f8084f95c59ea11b#sketch) format("svg"); }
-
-@font-face {
-  font-family: "Italianno";
-  font-style: 400;
-  font-weight: normal;
-  src: url(../fonts/Italianno-Regular.eot&26e7ef283b05b28681129eefab3a1242) format("eot"), url(../fonts/Italianno-Regular.woff2&dd3a5d500a8e303f5258890634552aca) format("woff2"), url(../fonts/Italianno-Regular.woff&45f8c4d4f8f4a1b9c802e5a6999155be) format("woff"), url(../fonts/Italianno-Regular.ttf&e8ca0d890ecd08523f6509b3019b2280) format("truetype"), url(../fonts/Italianno-Regular.svg&7cb021e1a0bb4eb7711b4adf835dcdc7#Italianno) format("svg"); }
-
 html, html body {
   height: 100%;
   overflow: hidden;
@@ -1199,8 +1187,8 @@ figure {
   -webkit-transition: all 500ms ease-in-out !important;
   transition: all 500ms ease-in-out !important; }
   #wrapperCanvas #canvas {
-    background-color: rgba(0, 0, 0, 0.3);
-    border: 1px solid black;
+    background-color: #fff;
+    border: 1px solid #2c3e50;
     border-radius: 50%;
     margin: 50px 0px;
     z-index: 1;
