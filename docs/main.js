@@ -10979,21 +10979,16 @@ Matrix3.rotate = function (angle, x, y, z) {
 
 //This is what matters
 function mainCanvas() {
-	var innerText = ["NodeJS", "Webpack", "jQuery", "HTML5", "SCSS", "VBS", "SQL"];
-	var len = innerText.length;
 	var displayFPS = document.getElementsByClassName('fps')[0];
 	var c = void 0,
 	    ctx = void 0,
 	    increment = 0.01,
 	    points = [],
 	    flag = true,
-	    opacity = 0.05,
-	    str = '',
 	    width = 110,
 	    numOfPoints = 1,
 	    testCases = 1,
 	    counter = 0,
-	    idxText = 0,
 	    angle = new Vector3(0, 0, 0),
 	    requestID = void 0,
 	    angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
@@ -11159,10 +11154,9 @@ function mainCanvas() {
 		var rotation1 = Matrix3.rotate(angle.x, 1, 0, 0),
 		    rotation2 = Matrix3.rotate(angle.y, 0, 1, 0),
 		    rotation3 = Matrix3.rotate(angle.z, 0, 0, 1),
-		    rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3)),
-		    lengthArr = innerText.length;
+		    rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3));
 		ctx.clearRect(35, 35, 225, 225);
-		ctx.fillStyle = "rgb(44, 62, 80)";
+		ctx.fillStyle = "#333";
 		ctx.beginPath();
 		var _iteratorNormalCompletion3 = true;
 		var _didIteratorError3 = false;
@@ -11176,6 +11170,8 @@ function mainCanvas() {
 				var x = p.x + c.width / 2;
 				var y = p.y + c.height / 2;
 				ctx.moveTo(x + 2, y);
+				ctx.lineTo(x + 2, y);
+				ctx.stroke();
 				ctx.arc(x, y, 2, 0, 2 * Math.PI);
 			}
 		} catch (err) {
