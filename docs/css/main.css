@@ -1195,37 +1195,39 @@ figure {
     margin: 50px 0px;
     z-index: 1;
     image-rendering: optimizeSpeed; }
-  #wrapperCanvas .text-animation {
-    position: absolute;
-    z-index: 999;
-    font-size: 5.2em;
-    margin: 0;
-    padding: 0;
-    width: 295px;
-    height: 295px;
-    border-radius: 50%;
-    bottom: 50px;
-    overflow: hidden;
-    text-align: center; }
-    #wrapperCanvas .text-animation svg {
-      width: 600px;
-      height: 400px;
-      cursor: pointer;
-      position: relative;
-      left: -150px;
-      top: -65px;
-      -webkit-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0);
-      border: 1px solid #333; }
-      #wrapperCanvas .text-animation svg path {
-        fill: none;
-        -webkit-transition: stroke-dashoffset 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), stroke-dasharray 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-        transition: stroke-dashoffset 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), stroke-dasharray 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-        stroke-width: 2px;
-        stroke-linecap: round;
-        stroke: #333;
-        stroke-dashoffset: 0px;
-        stroke-dasharray: 0px 1180px; }
+  #wrapperCanvas .text-animation-wrap {
+    position: relative; }
+    #wrapperCanvas .text-animation-wrap .text-animation {
+      position: absolute;
+      z-index: 999;
+      font-size: 5.2em;
+      margin: 0;
+      padding: 0;
+      width: 295px;
+      height: 295px;
+      border-radius: 50%;
+      bottom: 50px;
+      overflow: hidden;
+      text-align: center; }
+      #wrapperCanvas .text-animation-wrap .text-animation svg {
+        width: 600px;
+        height: 400px;
+        cursor: pointer;
+        position: relative;
+        left: -150px;
+        top: -65px;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        border: 1px solid #333; }
+        #wrapperCanvas .text-animation-wrap .text-animation svg path {
+          fill: none;
+          -webkit-transition: stroke-dashoffset 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), stroke-dasharray 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          transition: stroke-dashoffset 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), stroke-dasharray 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          stroke-width: 2px;
+          stroke-linecap: round;
+          stroke: #333;
+          stroke-dashoffset: 0px;
+          stroke-dasharray: 0px 1180px; }
 
 #wrapperCanvas .text-animation.text path.d-1 {
   stroke-dashoffset: -149px;
