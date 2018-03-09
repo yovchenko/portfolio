@@ -122,7 +122,7 @@ export default function mainCanvas() {
 		increment = 0.01,
 		points = [],
 		flag = true,
-		width = 110,
+		width = 108,
 		numOfPoints = 1,
 		testCases = 1,
 		counter = 0,
@@ -134,21 +134,7 @@ export default function mainCanvas() {
 	c.height = 295;
 	ctx = c.getContext('2d');
 	render(ctx);
-	var charParts, i, j, len, part, partElem, resize;
-  
-	charParts = ["d-1", "d-2", "e-1", "e-2", "s-1", "i-1", "i-2", "g-1", "g-2", "n-1", "n-2"];
-  
-	partElem = $(".motion")
-  
-	for (j = 0, len = charParts.length; j < len; j++) {
-	  part = charParts[j];
-	  $(".text-animation__svg").append(partElem.clone().attr("class", part));
-	}
-  
-	setTimeout(function() {
-	  return $(".text-animation").toggleClass("text");
-	}, 100);
-  
+
 	function letsDance() {
 		let loopDots = setTimeout(function () {
 			if (flag == true) {
@@ -280,15 +266,32 @@ export default function mainCanvas() {
 	}
 	loop();
 	letsDance();
+	setTimeout(function () {
+		$(document.getElementsByClassName('text-animation')[0]).addClass("text");
+	}, 100);
 	$(document.getElementsByClassName('menu__about')[0]).add(document.getElementsByClassName('menu__work'))
 		.add(document.getElementsByClassName('menu__contact')).click(function (e) {
+			e.preventDefault();
+			$(document.getElementsByClassName('text-animation')[0]).removeClass("text");
 			cancelAnimationFrame(requestID);
 		});
-	document.getElementsByClassName('menu__home')[0].onclick = function (e) {
-		mainCanvas();
-	}
 }
 
-$(".text-animation").click(function() {
-	return $(".text-animation").toggleClass("text");
-  });
+let j,
+	len,
+	elem,
+	part,
+	partElem,
+	charParts;
+charParts = ["d-1", "d-2", "e-1", "e-2", "s-1", "i-1", "i-2", "g-1", "g-2", "n-1", "n-2"];
+partElem = document.getElementsByClassName('motion')[0];
+for (j = 0, len = charParts.length; j < len; j++) {
+	part = charParts[j];
+	elem = document.getElementsByClassName('text-animation')[0];
+	$(elem.firstChild).append($(partElem).clone().attr("class", part));
+}
+
+$(document.getElementsByClassName('text-animation')[0]).click(function (e) {
+	e.preventDefault();
+	$(this).toggleClass("text");
+});

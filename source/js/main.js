@@ -7,6 +7,8 @@ import {
 import {
 	page
 } from './preloader';
+import mainCanvas from './canvasSphere.js';
+
 var version = detectIE();
 
 function detectIE() {
@@ -150,6 +152,7 @@ function mainPage() {
 							page.elements[key].style.display = 'grid';
 							if (version === 'Trident') page.elements[key].style.display = '-ms-grid';
 						}
+						mainCanvas();
 					}
 					page.elements.header.classList.remove('is--active');
 					page.pattern.colorX = 'YlGnBu';
