@@ -11170,6 +11170,8 @@ function mainCanvas() {
 		ctx.fillStyle = '#2c3e50';
 		ctx.strokeText(innerText[idxText], canvas.width / 2, canvas.height / 2);
 		ctx.beginPath();
+		ctx.lineWidth = 2;
+		ctx.fillText(innerText[idxText], canvas.width / 2, canvas.height / 2);
 		var _iteratorNormalCompletion3 = true;
 		var _didIteratorError3 = false;
 		var _iteratorError3 = undefined;
