@@ -11163,15 +11163,12 @@ function mainCanvas() {
 		    rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3)),
 		    lengthArr = innerText.length;
 		ctx.clearRect(35, 35, 225, 225);
-		ctx.font = "52px sketch";
+		ctx.font = "52px Georgia";
 		ctx.textAlign = "center";
+		ctx.fillStyle = "rgba(" + 0 + "," + 0 + "," + 0 + "," + opacity.toFixed(3) + ")";
 		ctx.textBaseline = "middle";
-		ctx.strokeStyle = "rgba(" + 0 + "," + 0 + "," + 0 + "," + opacity.toFixed(3) + ")";
-		ctx.fillStyle = '#2c3e50';
-		ctx.strokeText(innerText[idxText], canvas.width / 2, canvas.height / 2);
-		ctx.beginPath();
-		ctx.lineWidth = 2;
 		ctx.fillText(innerText[idxText], canvas.width / 2, canvas.height / 2);
+		ctx.beginPath();
 		var _iteratorNormalCompletion3 = true;
 		var _didIteratorError3 = false;
 		var _iteratorError3 = undefined;
