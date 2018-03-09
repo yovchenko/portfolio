@@ -138,7 +138,6 @@ export default function mainCanvas() {
 	c.width = 295;
 	c.height = 295;
 	ctx = c.getContext('2d');
-	ctx.fillStyle = 'rgb(255,255,255)';
 	render(ctx);
 
 	function letsDance() {
@@ -257,33 +256,17 @@ export default function mainCanvas() {
 			rotation3 = Matrix3.rotate(angle.z, 0, 0, 1),
 			rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3)),
 			lengthArr = innerText.length;
-		ctx.clearRect(35, 35, 225, 225);
-		ctx.font = "52px Georgia";
-		ctx.textAlign = "center";
-		ctx.fillStyle = "rgba(" + 0 + "," + 0 + "," + 0 + "," + opacity.toFixed(3) + ")";
-		ctx.textBaseline = "middle";
-		ctx.fillText(innerText[idxText], canvas.width / 2, canvas.height / 2);
+			ctx.clearRect(35, 35, 225, 225);
+		ctx.fillStyle = "rgb(44, 62, 80)";
 		ctx.beginPath();
 		for (var p of points) {
 			p = rotation.multiplyVector(p);
 			const x = p.x + c.width / 2;
 			const y = p.y + c.height / 2;
-			ctx.moveTo(x + 2, y)
+			ctx.moveTo(x + 2, y);
 			ctx.arc(x, y, 2, 0, 2 * Math.PI);
 		}
 		ctx.fill();
-
-		opacity += increment;
-		str = opacity.toFixed(1);
-		if (str === '1.0' || str === '0.0') {
-			if (str === '0.0' && idxText !== len - 1) {
-				idxText++;
-			} else if (str === '0.0' && idxText === len - 1) {
-				idxText = 0;
-			}
-			increment = -increment;
-		}
-
 	}
 	loop();
 	letsDance();

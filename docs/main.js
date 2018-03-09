@@ -11001,7 +11001,6 @@ function mainCanvas() {
 	c.width = 295;
 	c.height = 295;
 	ctx = c.getContext('2d');
-	ctx.fillStyle = 'rgb(255,255,255)';
 	render(ctx);
 
 	function letsDance() {
@@ -11163,11 +11162,7 @@ function mainCanvas() {
 		    rotation = rotation1.multiplyMatrix(rotation2.multiplyMatrix(rotation3)),
 		    lengthArr = innerText.length;
 		ctx.clearRect(35, 35, 225, 225);
-		ctx.font = "52px Georgia";
-		ctx.textAlign = "center";
-		ctx.fillStyle = "rgba(" + 0 + "," + 0 + "," + 0 + "," + opacity.toFixed(3) + ")";
-		ctx.textBaseline = "middle";
-		ctx.fillText(innerText[idxText], canvas.width / 2, canvas.height / 2);
+		ctx.fillStyle = "rgb(44, 62, 80)";
 		ctx.beginPath();
 		var _iteratorNormalCompletion3 = true;
 		var _didIteratorError3 = false;
@@ -11199,17 +11194,6 @@ function mainCanvas() {
 		}
 
 		ctx.fill();
-
-		opacity += increment;
-		str = opacity.toFixed(1);
-		if (str === '1.0' || str === '0.0') {
-			if (str === '0.0' && idxText !== len - 1) {
-				idxText++;
-			} else if (str === '0.0' && idxText === len - 1) {
-				idxText = 0;
-			}
-			increment = -increment;
-		}
 	}
 	loop();
 	letsDance();

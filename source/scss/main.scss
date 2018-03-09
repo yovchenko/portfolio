@@ -18,6 +18,7 @@ html {
         overflow-y: auto;
         position: fixed;
         z-index: -2;
+        color: #333;
         top: 0;
         left: 0;
         right: 0;
@@ -295,11 +296,18 @@ figure {
     transition: all 500ms ease-in-out !important;
     #canvas {
         background-color: #fff;
-        border: 1px solid black;
+        border: 1px solid #333;
         border-radius: 50%;
         margin: 50px 0px;
         z-index: 1;
         image-rendering: optimizeSpeed;
+    }
+    p{
+        position: absolute;
+        position: absolute;
+        top: 615px;
+        z-index: 999;
+        font-size: 5.2em;
     }
 }
 
@@ -583,7 +591,7 @@ article p {
     th {
     font-size: 5.2em;
     font-weight: normal;
-    border: 1px solid black;
+    border: 1px solid #333;
     padding: 5px;
     }
     td {
@@ -613,7 +621,7 @@ article p {
     padding-left: 20px;
     margin: 0px 20px 0px 40px; 
     th {
-        border: 1px solid black;
+        border: 1px solid #333;
         font-size: 5.2em;
         font-weight: normal;
         padding: 5px;
@@ -977,7 +985,7 @@ textarea {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    box-shadow: inset 0px 0px 1px black;
+    box-shadow: inset 0px 0px 1px #333;
 }
 
 textarea {
@@ -992,7 +1000,7 @@ textarea:focus,
 input[type=text]:focus,
 input[type=email]:focus {
     background: #fff;
-    color: #000;
+    color: #333;
 }
 
 #form_wrap input[type=submit] {
@@ -1000,6 +1008,7 @@ input[type=email]:focus {
     outline: none;
     position: absolute;
     font-size: 3.2em;
+    color: #333;
     font-family: "Georgia", serif;
     width: 89%;
     text-align: center;
@@ -1143,7 +1152,6 @@ footer .wrapper {
         color: rgba(255%, 255%, 255%, 0.65);
         position: relative;
         top: 50px;
-        text-shadow: 0 0 6px rgba(255%, 255%, 255%, 0.55), 0 0 6px rgba(255%, 255%, 255%, 0.55);
         &.is--invisible {
             display: none;
         }
@@ -1193,7 +1201,7 @@ footer .wrapper {
     top: 0;
     width: 51%;
     height: calc(100% + 65px);
-    background: #222;
+    background: #333;
     z-index: 1000;
     &.section-left {
         left: 0;
@@ -1202,7 +1210,7 @@ footer .wrapper {
             width: 0%;
             height: calc(100% + 65px);
             left: 0;
-            border: 1px solid #222;
+            border: 1px solid #333;
             -webkit-transform: translateX(-50%);
             /* Chrome, Opera 15+, Safari 3.1+ */
             -ms-transform: translateX(-50%);
@@ -1232,7 +1240,7 @@ footer .wrapper {
             width: 0%;
             height: calc(100% + 65px);
             right: 0;
-            border: 1px solid #222;
+            border: 1px solid #333;
             -webkit-transform: translateX(50%);
             /* Chrome, Opera 15+, Safari 3.1+ */
             -ms-transform: translateX(50%);
