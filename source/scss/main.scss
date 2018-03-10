@@ -170,7 +170,7 @@ header {
         line-height: 61px;
         background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
         border-radius: 5px;
-        @include responsive-font(5vw, 35px, 50px);
+        @include responsive-font(4.2vw, 25px, 50px);
         padding: 0px 5px;
         margin-right: 6px;
     }
@@ -180,7 +180,7 @@ header {
         opacity: 0.85;
         margin: 0 auto;
         padding-right: 51px;
-        @include responsive-font(5vw, 35px, 50px);
+        @include responsive-font(4.2vw, 25px, 50px);
     }
     .menu__home {
         display: none;
@@ -191,7 +191,7 @@ header {
         border-radius: 5px;
         margin-left: 6px;
         padding: 0px 5px;
-        @include responsive-font(5vw, 35px, 50px);
+        @include responsive-font(4.2vw, 25px, 50px);
     }
 }
 
@@ -350,47 +350,36 @@ figure {
 #wrapperCanvas {
     .text-animation.text path.d-1 {
         stroke-dashoffset: -149px;
-        stroke-dasharray: 22px 1180px;
     }
     .text-animation.text path.d-2 {
         stroke-dashoffset: -201.3px;
-        stroke-dasharray: 49px 1180px;
     }
     .text-animation.text path.e-1 {
         stroke-dashoffset: -377.5px;
-        stroke-dasharray: 14px 1180px;
     }
     .text-animation.text path.e-2 {
         stroke-dashoffset: -431.2px;
-        stroke-dasharray: 43px 1180px;
     }
     .text-animation.text path.s-1 {
         stroke-dashoffset: -526px;
-        stroke-dasharray: 37px 1180px;
     }
     .text-animation.text path.i-1 {
         stroke-dashoffset: -631px;
-        stroke-dasharray: 0.2px 1180px;
     }
     .text-animation.text path.i-2 {
         stroke-dashoffset: -637.5px;
-        stroke-dasharray: 17px 1180px;
     }
     .text-animation.text path.g-1 {
         stroke-dashoffset: -732.5px;
-        stroke-dasharray: 15px 1180px;
     }
     .text-animation.text path.g-2 {
         stroke-dashoffset: -812px;
-        stroke-dasharray: 70px 1180px;
     }
     .text-animation.text path.n-1 {
         stroke-dashoffset: -941px;
-        stroke-dasharray: 17px 1180px;
     }
     .text-animation.text path.n-2 {
         stroke-dashoffset: -1013px;
-        stroke-dasharray: 36px 1180px;
     }
 }
 
@@ -1624,20 +1613,20 @@ h3 {
     .menu__header {
         .menu__init {
             padding: 0px;
-            @include responsive-font(5.2vw,
-            30px,
+            @include responsive-font(4.2vw,
+            20px,
             50px);
         }
         .menu__about,
         .menu__work,
         .menu__contact {
-            @include responsive-font(5.2vw,
-            30px,
+            @include responsive-font(4.2vw,
+            20px,
             50px);
         }
         .menu__home {
-            @include responsive-font(5.2vw,
-            30px,
+            @include responsive-font(4.2vw,
+            20px,
             50px);
         }
     }
@@ -1731,22 +1720,22 @@ h3 {
         .menu__init {
             line-height: 32px;
             padding: 0;
-            @include responsive-font(5.2vw,
-            16px,
+            @include responsive-font(5vw,
+            18px,
             50px);
         }
         .menu__home {
             line-height: 61px;
             border-radius: 5px;
-            @include responsive-font(5.2vw,
-            16px,
+            @include responsive-font(5vw,
+            18px,
             50px);
         }
         .menu__about,
         .menu__work,
         .menu__contact {
-            @include responsive-font(5.2vw,
-            16px,
+            @include responsive-font(5vw,
+            18px,
             50px);
         }
     }
