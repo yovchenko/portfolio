@@ -331,12 +331,6 @@ figure {
                 border: 1px solid #333;
                 path {
                     fill: none;
-                    -webkit-transition: stroke-dashoffset 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), stroke-dasharray 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-                    -moz-transition: stroke-dashoffset 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), stroke-dasharray 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-                    -o-transition: stroke-dashoffset 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), stroke-dasharray 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-                    -ms-transition: stroke-dashoffset 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), stroke-dasharray 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-                    transition: stroke-dashoffset 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), stroke-dasharray 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-                    animation: ani 15.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
                     stroke-width: 2px;
                     stroke-linecap: round;
                     stroke: #333;
@@ -356,10 +350,12 @@ figure {
 
 #wrapperCanvas {
     .text-animation.text path.d-1 {
-        
+        stroke-dashoffset: -149px;
+        animation: ani 5s linear infinite;
     }
     .text-animation.text path.d-2 {
-     
+        stroke-dashoffset: -201px;
+        animation: ani 5s linear infinite;
     }
     .text-animation.text path.e-1 {
         stroke-dashoffset: -377.5px;

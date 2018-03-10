@@ -282,25 +282,21 @@ var b,
 c,
 d,
 requestAnimID,
-offset = 1180;
+offset = -1180;
 var offsetMe = function() {
-	console.log(true)
-var valOffset,
-valArray,
-elLen = -1180;
-valOffset = valArray = 0;
-for (d = 0; d > elLen; d--) {
+if(offset > 0) offset = -1180;
 for (b = 0; b < len; b++) {
 	var el = document.getElementsByClassName(charParts[b])[0];
 	switch(charParts[b]) {
 		case 'd-1' :
-		   if(d >= -149) {
-			el.style.strokeDashoffset = d + 'px';
+		   if(offset <= 0) {
+			   console.log(offset)
+			el.style.strokeDashoffset = offset;
 		   }
 		   break;
 		case 'd-2' : 
-		   if(d >= -201) {
-		   el.style.strokeDashoffset = String(d - 0.3) + 'px';
+		   if(offset <= 0) {
+		   el.style.strokeDashoffset = offset;
 		   }
 		   break;
 		case 'e-1'	:
@@ -349,8 +345,8 @@ for (b = 0; b < len; b++) {
 		   }
 		   break;
 	   	}
-      }
-   }
+	  }
+	  offset++;
    requestAnimationFrame(offsetMe);
 }
 
