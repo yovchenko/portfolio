@@ -1227,148 +1227,49 @@ figure {
           stroke-dashoffset: 0px;
           stroke-dasharray: 0px 1180px; }
 
-@-webkit-keyframes ani-d-1 {
-  to {
-    stroke-dashoffset: -149px; } }
-
-@keyframes ani-d-1 {
-  to {
-    stroke-dashoffset: -149px; } }
-
-@-webkit-keyframes ani-d-2 {
-  to {
-    stroke-dashoffset: -201px; } }
-
-@keyframes ani-d-2 {
-  to {
-    stroke-dashoffset: -201px; } }
-
-@-webkit-keyframes ani-e-1 {
-  to {
-    stroke-dashoffset: -377px; } }
-
-@keyframes ani-e-1 {
-  to {
-    stroke-dashoffset: -377px; } }
-
-@-webkit-keyframes ani-e-2 {
-  to {
-    stroke-dashoffset: -431.2px; } }
-
-@keyframes ani-e-2 {
-  to {
-    stroke-dashoffset: -431.2px; } }
-
-@-webkit-keyframes ani-s-1 {
-  to {
-    stroke-dashoffset: -526px; } }
-
-@keyframes ani-s-1 {
-  to {
-    stroke-dashoffset: -526px; } }
-
-@-webkit-keyframes ani-i-1 {
-  to {
-    stroke-dashoffset: -631px; } }
-
-@keyframes ani-i-1 {
-  to {
-    stroke-dashoffset: -631px; } }
-
-@-webkit-keyframes ani-i-2 {
-  to {
-    stroke-dashoffset: -637.5px; } }
-
-@keyframes ani-i-2 {
-  to {
-    stroke-dashoffset: -637.5px; } }
-
-@-webkit-keyframes ani-g-1 {
-  to {
-    stroke-dashoffset: -732.5px; } }
-
-@keyframes ani-g-1 {
-  to {
-    stroke-dashoffset: -732.5px; } }
-
-@-webkit-keyframes ani-g-2 {
-  to {
-    stroke-dashoffset: -812px; } }
-
-@keyframes ani-g-2 {
-  to {
-    stroke-dashoffset: -812px; } }
-
-@-webkit-keyframes ani-n-1 {
-  to {
-    stroke-dashoffset: -941px; } }
-
-@keyframes ani-n-1 {
-  to {
-    stroke-dashoffset: -941px; } }
-
-@-webkit-keyframes ani-n-2 {
-  to {
-    stroke-dashoffset: -1013px; } }
-
-@keyframes ani-n-2 {
-  to {
-    stroke-dashoffset: -1013px; } }
-
 #wrapperCanvas .text-animation.text path.d-1 {
-  stroke-dashoffset: 0px;
-  -webkit-animation: ani-d-1 5s linear;
-          animation: ani-d-1 5s linear; }
+  stroke-dasharray: 22px 1180px;
+  stroke-dashoffset: 0px; }
 
 #wrapperCanvas .text-animation.text path.d-2 {
-  stroke-dashoffset: 0px;
-  -webkit-animation: ani-d-2 5s linear;
-          animation: ani-d-2 5s linear; }
+  stroke-dasharray: 49px 1180px;
+  stroke-dashoffset: 0px; }
 
 #wrapperCanvas .text-animation.text path.e-1 {
-  stroke-dashoffset: 0px;
-  -webkit-animation: ani-e-1 5s linear;
-          animation: ani-e-1 5s linear; }
+  stroke-dasharray: 14px 1180px;
+  stroke-dashoffset: 0px; }
 
 #wrapperCanvas .text-animation.text path.e-2 {
-  stroke-dashoffset: 0px;
-  -webkit-animation: ani-e-2 5s linear;
-          animation: ani-e-2 5s linear; }
+  stroke-dasharray: 43px 1180px;
+  stroke-dashoffset: 0px; }
 
 #wrapperCanvas .text-animation.text path.s-1 {
-  stroke-dashoffset: 0px;
-  -webkit-animation: ani-s-1 5s linear;
-          animation: ani-s-1 5s linear; }
+  stroke-dasharray: 37px 1180px;
+  stroke-dashoffset: 0px; }
 
 #wrapperCanvas .text-animation.text path.i-1 {
-  stroke-dashoffset: 0px;
-  -webkit-animation: ani-i-1 5s linear;
-          animation: ani-i-1 5s linear; }
+  stroke-dasharray: 0.1px 1180px;
+  stroke-dashoffset: 0px; }
 
 #wrapperCanvas .text-animation.text path.i-2 {
-  stroke-dashoffset: 0px;
-  -webkit-animation: ani-i-2 5s linear;
-          animation: ani-i-2 5s linear; }
+  stroke-dasharray: 16px 1180px;
+  stroke-dashoffset: 0px; }
 
 #wrapperCanvas .text-animation.text path.g-1 {
-  stroke-dashoffset: 0px;
-  -webkit-animation: ani-g-1 5s linear;
-          animation: ani-g-1 5s linear; }
+  stroke-dasharray: 15px 1180px;
+  stroke-dashoffset: 0px; }
 
 #wrapperCanvas .text-animation.text path.g-2 {
-  stroke-dashoffset: 0px;
-  -webkit-animation: ani-g-2 5s linear;
-          animation: ani-g-2 5s linear; }
+  stroke-dasharray: 69px 1180px;
+  stroke-dashoffset: 0px; }
 
 #wrapperCanvas .text-animation.text path.n-1 {
-  stroke-dashoffset: 0px;
-  -webkit-animation: ani-n-1 5s linear;
-          animation: ani-n-1 5s linear; }
+  stroke-dasharray: 17px 1180px;
+  stroke-dashoffset: 0px; }
 
 #wrapperCanvas .text-animation.text path.n-2 {
-  stroke-dashoffset: 0px;
-  -webkit-animation: ani-n-2 5s linear;
-          animation: ani-n-2 5s linear; }
+  stroke-dasharray: 33.5px 1180px;
+  stroke-dashoffset: 0px; }
 
 .svg-logo-one div svg,
 .svg-logo-two div svg {

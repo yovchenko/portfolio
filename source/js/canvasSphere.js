@@ -278,16 +278,14 @@ for (a = 0, len = charParts.length; a < len; a++) {
 	$(elem.firstChild).append($(partElem).clone().attr("class", part));
 }
 
-var b,
-c,
-d,
+a = elem = part = partElem = null;
+
+let b,
 requestAnimID,
 offset = 0;
-var offsetMe = function() {
-	console.log(offset)
-
+const offsetMe = function() {
 for (b = 0; b < len; b++) {
-	var el = document.getElementsByClassName(charParts[b])[0];
+	let el = document.getElementsByClassName(charParts[b])[0];
 	switch(charParts[b]) {
 		case 'd-1' :
 		   if(offset >= -149) {
@@ -351,68 +349,6 @@ for (b = 0; b < len; b++) {
 	  if(offset < -1013) cancelAnimationFrame(requestAnimID);
 }
 
-for (b = 0; b < len; b++) {
-	var el = document.getElementsByClassName(charParts[b])[0];
-	for(d = 0; d <= 70; d++) {
-		switch(charParts[b]) {
-		 case 'd-1' :
-			if(d <= 22) {
-				el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
-			}
-			break;
-		 case 'd-2' : 
-			if(d <= 49) {
-			el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
-			}
-			break;
-		 case 'e-1'	:
-		 	if(d <= 14) {
-			el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
-			}
-			break;
-		 case 'e-2'	:
-			if(d <= 43) {
-		    el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
-		    }
-			break;
-		 case 's-1'	:
-			if(d <= 37) {
-		    el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
-		    }
-			break;
-		 case 'i-1'	:
-			if(d <= 1) {
-		    el.style.strokeDasharray = String(d - 0.8) + 'px' + ', ' + '1180px';
-		    }
-			break;
-		 case 'i-2'	:
-			if(d <= 17) {
-		    el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
-		    }
-			break;
-		case 'g-1'	:
-			if(d <= 15) {
-		    el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
-		    }
-			break;
-		case 'g-2'	:
-			if(d <= 70) {
-		    el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
-		    }
-			break;
-		case 'n-1'	:
-			if(d <= 17) {
-		    el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
-		    }
-			break;
-		case 'n-2'	:
-			if(d <= 36) {
-		    el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
-		    }
-			break;
-		}
-	}
-  }
 
 $(document.getElementsByClassName('text-animation')[0]).click(function (e) {
 	e.preventDefault();
