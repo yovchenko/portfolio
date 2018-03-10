@@ -8690,6 +8690,7 @@ function mainCanvas() {
 	}
 	loop();
 	letsDance();
+	offsetMe();
 	setTimeout(function () {
 		$(document.getElementsByClassName('text-animation')[0]).addClass("text");
 	}, 100);
@@ -8701,7 +8702,6 @@ function mainCanvas() {
 }
 
 var a = void 0,
-    b = void 0,
     len = void 0,
     elem = void 0,
     part = void 0,
@@ -8715,82 +8715,144 @@ for (a = 0, len = charParts.length; a < len; a++) {
 	$(elem.firstChild).append($(partElem).clone().attr("class", part));
 }
 
-var c,
+var b,
+    c,
     d,
     requestAnimID,
-    offset = 1180,
-    offsetMe = function offsetMe() {
+    offset = 1180;
+var offsetMe = function offsetMe() {
+	console.log(true);
 	var valOffset,
 	    valArray,
 	    elLen = -1180;
 	valOffset = valArray = 0;
-	for (b = 0; b < len; b++) {
-		var el = document.getElementsByClassName(charParts[b])[0];
-		for (d = 0; d <= 70; d++) {
+	for (d = 0; d > elLen; d--) {
+		for (b = 0; b < len; b++) {
+			var el = document.getElementsByClassName(charParts[b])[0];
 			switch (charParts[b]) {
 				case 'd-1':
-					if (d <= 22) {
-						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+					if (d >= -149) {
+						el.style.strokeDashoffset = d + 'px';
 					}
 					break;
 				case 'd-2':
-					if (d <= 49) {
-						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+					if (d >= -201) {
+						el.style.strokeDashoffset = String(d - 0.3) + 'px';
 					}
 					break;
 				case 'e-1':
 					if (d <= 14) {
-						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+						el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
 					}
 					break;
 				case 'e-2':
 					if (d <= 43) {
-						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+						el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
 					}
 					break;
 				case 's-1':
 					if (d <= 37) {
-						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+						el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
 					}
 					break;
 				case 'i-1':
 					if (d <= 1) {
-						el.style.strokeDasharray = String(d - 0.8) + 'px' + ', ' + '1180px';
+						el.style.strokeDashoffset = String(d - 0.8) + 'px' + ', ' + '1180px';
 					}
 					break;
 				case 'i-2':
 					if (d <= 17) {
-						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+						el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
 					}
 					break;
 				case 'g-1':
 					if (d <= 15) {
-						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+						el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
 					}
 					break;
 				case 'g-2':
 					if (d <= 70) {
-						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+						el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
 					}
 					break;
 				case 'n-1':
 					if (d <= 17) {
-						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+						el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
 					}
 					break;
 				case 'n-2':
 					if (d <= 36) {
-						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+						el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
 					}
 					break;
 			}
 		}
 	}
-	requestAnimID = requestAnimationFrame(offsetMe);
-	if (b === len) cancelAnimationFrame(requestAnimID);
+	requestAnimationFrame(offsetMe);
 };
 
-offsetMe();
+for (b = 0; b < len; b++) {
+	var el = document.getElementsByClassName(charParts[b])[0];
+	for (d = 0; d <= 70; d++) {
+		switch (charParts[b]) {
+			case 'd-1':
+				if (d <= 22) {
+					el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+				}
+				break;
+			case 'd-2':
+				if (d <= 49) {
+					el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+				}
+				break;
+			case 'e-1':
+				if (d <= 14) {
+					el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+				}
+				break;
+			case 'e-2':
+				if (d <= 43) {
+					el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+				}
+				break;
+			case 's-1':
+				if (d <= 37) {
+					el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+				}
+				break;
+			case 'i-1':
+				if (d <= 1) {
+					el.style.strokeDasharray = String(d - 0.8) + 'px' + ', ' + '1180px';
+				}
+				break;
+			case 'i-2':
+				if (d <= 17) {
+					el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+				}
+				break;
+			case 'g-1':
+				if (d <= 15) {
+					el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+				}
+				break;
+			case 'g-2':
+				if (d <= 70) {
+					el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+				}
+				break;
+			case 'n-1':
+				if (d <= 17) {
+					el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+				}
+				break;
+			case 'n-2':
+				if (d <= 36) {
+					el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+				}
+				break;
+		}
+	}
+}
 
 $(document.getElementsByClassName('text-animation')[0]).click(function (e) {
 	e.preventDefault();

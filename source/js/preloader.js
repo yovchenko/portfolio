@@ -1,5 +1,5 @@
 const Trianglify = require('trianglify');
-import mainCanvas from './canvasSphere.js';
+import mainCanvas from './canvasSphere';
 import {
     resizeContent
 } from './resize.js';

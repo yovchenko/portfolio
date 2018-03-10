@@ -1223,17 +1223,21 @@ figure {
           fill: none;
           -webkit-transition: stroke-dashoffset 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), stroke-dasharray 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
           transition: stroke-dashoffset 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95), stroke-dasharray 5.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+          -webkit-animation: ani 15.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+                  animation: ani 15.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
           stroke-width: 2px;
           stroke-linecap: round;
           stroke: #333;
           stroke-dashoffset: 0px;
           stroke-dasharray: 0px 1180px; }
 
-#wrapperCanvas .text-animation.text path.d-1 {
-  stroke-dashoffset: -149px; }
+@-webkit-keyframes ani {
+  to {
+    stroke-dashoffset: 0; } }
 
-#wrapperCanvas .text-animation.text path.d-2 {
-  stroke-dashoffset: -201.3px; }
+@keyframes ani {
+  to {
+    stroke-dashoffset: 0; } }
 
 #wrapperCanvas .text-animation.text path.e-1 {
   stroke-dashoffset: -377.5px; }

@@ -252,6 +252,7 @@ export default function mainCanvas() {
 	}
 	loop();
 	letsDance();
+	offsetMe();
 	setTimeout(function () {
 		$(document.getElementsByClassName('text-animation')[0]).addClass("text");
 	}, 100);
@@ -264,7 +265,6 @@ export default function mainCanvas() {
 }
 
 let a,
-	b,
 	len,
 	elem,
 	part,
@@ -278,15 +278,82 @@ for (a = 0, len = charParts.length; a < len; a++) {
 	$(elem.firstChild).append($(partElem).clone().attr("class", part));
 }
 
-var c,
+var b,
+c,
 d,
 requestAnimID,
-offset = 1180,
-offsetMe = function() {
+offset = 1180;
+var offsetMe = function() {
+	console.log(true)
 var valOffset,
 valArray,
 elLen = -1180;
 valOffset = valArray = 0;
+for (d = 0; d > elLen; d--) {
+for (b = 0; b < len; b++) {
+	var el = document.getElementsByClassName(charParts[b])[0];
+	switch(charParts[b]) {
+		case 'd-1' :
+		   if(d >= -149) {
+			el.style.strokeDashoffset = d + 'px';
+		   }
+		   break;
+		case 'd-2' : 
+		   if(d >= -201) {
+		   el.style.strokeDashoffset = String(d - 0.3) + 'px';
+		   }
+		   break;
+		case 'e-1'	:
+			if(d <= 14) {
+		   el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
+		   }
+		   break;
+		case 'e-2'	:
+		   if(d <= 43) {
+		   el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
+		   }
+		   break;
+		case 's-1'	:
+		   if(d <= 37) {
+		   el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
+		   }
+		   break;
+		case 'i-1'	:
+		   if(d <= 1) {
+		   el.style.strokeDashoffset = String(d - 0.8) + 'px' + ', ' + '1180px';
+		   }
+		   break;
+		case 'i-2'	:
+		   if(d <= 17) {
+		   el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
+		   }
+		   break;
+	   case 'g-1'	:
+		   if(d <= 15) {
+		   el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
+		   }
+		   break;
+	   case 'g-2'	:
+		   if(d <= 70) {
+		   el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
+		   }
+		   break;
+	   case 'n-1'	:
+		   if(d <= 17) {
+		   el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
+		   }
+		   break;
+	   case 'n-2'	:
+		   if(d <= 36) {
+		   el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
+		   }
+		   break;
+	   	}
+      }
+   }
+   requestAnimationFrame(offsetMe);
+}
+
 for (b = 0; b < len; b++) {
 	var el = document.getElementsByClassName(charParts[b])[0];
 	for(d = 0; d <= 70; d++) {
@@ -349,12 +416,6 @@ for (b = 0; b < len; b++) {
 		}
 	}
   }
-  requestAnimID = requestAnimationFrame(offsetMe);
-  if(b === len)cancelAnimationFrame(requestAnimID);
-}
-
-offsetMe();
-
 
 $(document.getElementsByClassName('text-animation')[0]).click(function (e) {
 	e.preventDefault();
