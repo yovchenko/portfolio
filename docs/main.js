@@ -8492,7 +8492,6 @@ function mainCanvas() {
 	var displayFPS = document.getElementsByClassName('fps')[0];
 	var c = void 0,
 	    ctx = void 0,
-	    increment = 0.01,
 	    points = [],
 	    flag = true,
 	    width = 108,
@@ -8510,7 +8509,7 @@ function mainCanvas() {
 
 	function letsDance() {
 		var loopDots = setTimeout(function () {
-			if (flag == true) {
+			if (flag === true) {
 				for (var i = 0; i < numOfPoints; i++) {
 					var buf = [];
 					for (var _j = 0; _j < testCases; _j++) {
@@ -8557,18 +8556,11 @@ function mainCanvas() {
 					testCases++;
 					points.push(buf[currentHighest]);
 				}
-
-				var loopUp = setTimeout(function () {
-					if (counter < 15) {
-						counter++;
-						letsDance();
-					} else {
-						flag = false;
-						clearTimeout(loopUp);
-						letsDance();
-					}
-				}, 1000);
-			} else if (flag == false) {
+				if (counter < 15) {
+					counter++;
+				} else flag = false;
+				letsDance();
+			} else if (flag === false) {
 				for (var _i = 0; _i < numOfPoints; _i++) {
 					var _buf = [];
 					for (var _j2 = 0; _j2 < testCases; _j2++) {
@@ -8615,21 +8607,16 @@ function mainCanvas() {
 					testCases--;
 					points.pop(_buf[_currentHighest]);
 				}
-				var loopDown = setTimeout(function () {
-					if (counter > 0) {
-						counter--;
-						flag = false;
-						letsDance();
-					} else {
-						flag = true;
-						clearTimeout(loopDown);
-						letsDance();
-					}
-				}, 1000);
+				if (counter > 0) {
+					counter--;
+					flag = false;
+				} else flag = true;
+				letsDance();
 			} else {
 				clearTimeout(loopDots);
 			}
 		}, 1000);
+		loopDots = null;
 	}
 
 	var countFPS = function () {
@@ -8726,6 +8713,7 @@ for (j = 0, len = charParts.length; j < len; j++) {
 	elem = document.getElementsByClassName('text-animation')[0];
 	$(elem.firstChild).append($(partElem).clone().attr("class", part));
 }
+charParts = partElem = j = len = elem = part = null; //gifts for garbage collector
 
 $(document.getElementsByClassName('text-animation')[0]).click(function (e) {
 	e.preventDefault();

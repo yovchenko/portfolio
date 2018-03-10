@@ -119,7 +119,6 @@ export default function mainCanvas() {
 	const displayFPS = document.getElementsByClassName('fps')[0];
 	let c,
 		ctx,
-		increment = 0.01,
 		points = [],
 		flag = true,
 		width = 108,
@@ -137,7 +136,7 @@ export default function mainCanvas() {
 
 	function letsDance() {
 		let loopDots = setTimeout(function () {
-			if (flag == true) {
+			if (flag === true) {
 				for (let i = 0; i < numOfPoints; i++) {
 					let buf = [];
 					for (let j = 0; j < testCases; j++) {
@@ -162,18 +161,11 @@ export default function mainCanvas() {
 					testCases++;
 					points.push(buf[currentHighest]);
 				}
-
-				var loopUp = setTimeout(function () {
 					if (counter < 15) {
 						counter++;
-						letsDance();
-					} else {
-						flag = false;
-						clearTimeout(loopUp);
-						letsDance();
-					}
-				}, 1000);
-			} else if (flag == false) {
+					} else flag = false;
+					letsDance();
+			} else if (flag === false) {
 				for (let i = 0; i < numOfPoints; i++) {
 					let buf = [];
 					for (let j = 0; j < testCases; j++) {
@@ -198,25 +190,19 @@ export default function mainCanvas() {
 					testCases--;
 					points.pop(buf[currentHighest]);
 				}
-				let loopDown = setTimeout(function () {
 					if (counter > 0) {
 						counter--;
 						flag = false;
-						letsDance();
-					} else {
-						flag = true;
-						clearTimeout(loopDown);
-						letsDance();
-					}
-
-				}, 1000);
+					} else flag = true;
+					letsDance();
 			} else {
 				clearTimeout(loopDots);
 			}
 
 		}, 1000);
+		loopDots = null;
 	}
-
+	
 	let countFPS = (function () {
 		let lastLoop = (new Date()).getMilliseconds();
 		let count = 1;
@@ -290,6 +276,7 @@ for (j = 0, len = charParts.length; j < len; j++) {
 	elem = document.getElementsByClassName('text-animation')[0];
 	$(elem.firstChild).append($(partElem).clone().attr("class", part));
 }
+charParts = partElem = j = len = elem = part = null;  //gifts for garbage collector
 
 $(document.getElementsByClassName('text-animation')[0]).click(function (e) {
 	e.preventDefault();
