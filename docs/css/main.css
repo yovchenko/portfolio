@@ -1316,37 +1316,59 @@ figure {
     stroke-dashoffset: -1013px; } }
 
 #wrapperCanvas .text-animation.text path.d-1 {
-  stroke-dashoffset: 0px; }
+  stroke-dashoffset: 0px;
+  -webkit-animation: ani-d-1 5s linear;
+          animation: ani-d-1 5s linear; }
 
 #wrapperCanvas .text-animation.text path.d-2 {
-  stroke-dashoffset: 0px; }
+  stroke-dashoffset: 0px;
+  -webkit-animation: ani-d-2 5s linear;
+          animation: ani-d-2 5s linear; }
 
 #wrapperCanvas .text-animation.text path.e-1 {
-  stroke-dashoffset: 0px; }
+  stroke-dashoffset: 0px;
+  -webkit-animation: ani-e-1 5s linear;
+          animation: ani-e-1 5s linear; }
 
 #wrapperCanvas .text-animation.text path.e-2 {
-  stroke-dashoffset: 0px; }
+  stroke-dashoffset: 0px;
+  -webkit-animation: ani-e-2 5s linear;
+          animation: ani-e-2 5s linear; }
 
 #wrapperCanvas .text-animation.text path.s-1 {
-  stroke-dashoffset: 0px; }
+  stroke-dashoffset: 0px;
+  -webkit-animation: ani-s-1 5s linear;
+          animation: ani-s-1 5s linear; }
 
 #wrapperCanvas .text-animation.text path.i-1 {
-  stroke-dashoffset: 0px; }
+  stroke-dashoffset: 0px;
+  -webkit-animation: ani-i-1 5s linear;
+          animation: ani-i-1 5s linear; }
 
 #wrapperCanvas .text-animation.text path.i-2 {
-  stroke-dashoffset: 0px; }
+  stroke-dashoffset: 0px;
+  -webkit-animation: ani-i-2 5s linear;
+          animation: ani-i-2 5s linear; }
 
 #wrapperCanvas .text-animation.text path.g-1 {
-  stroke-dashoffset: 0px; }
+  stroke-dashoffset: 0px;
+  -webkit-animation: ani-g-1 5s linear;
+          animation: ani-g-1 5s linear; }
 
 #wrapperCanvas .text-animation.text path.g-2 {
-  stroke-dashoffset: 0px; }
+  stroke-dashoffset: 0px;
+  -webkit-animation: ani-g-2 5s linear;
+          animation: ani-g-2 5s linear; }
 
 #wrapperCanvas .text-animation.text path.n-1 {
-  stroke-dashoffset: 0px; }
+  stroke-dashoffset: 0px;
+  -webkit-animation: ani-n-1 5s linear;
+          animation: ani-n-1 5s linear; }
 
 #wrapperCanvas .text-animation.text path.n-2 {
-  stroke-dashoffset: 0px; }
+  stroke-dashoffset: 0px;
+  -webkit-animation: ani-n-2 5s linear;
+          animation: ani-n-2 5s linear; }
 
 .svg-logo-one div svg,
 .svg-logo-two div svg {
