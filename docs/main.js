@@ -8719,72 +8719,73 @@ var b,
     c,
     d,
     requestAnimID,
-    offset = -1180;
+    offset = 0;
 var offsetMe = function offsetMe() {
-	if (offset > 0) offset = -1180;
+	console.log(offset);
+
 	for (b = 0; b < len; b++) {
 		var el = document.getElementsByClassName(charParts[b])[0];
 		switch (charParts[b]) {
 			case 'd-1':
-				if (offset <= 0) {
-					console.log(offset);
+				if (offset >= -149) {
 					el.style.strokeDashoffset = offset;
 				}
 				break;
 			case 'd-2':
-				if (offset <= 0) {
+				if (offset >= -201) {
 					el.style.strokeDashoffset = offset;
 				}
 				break;
 			case 'e-1':
-				if (d <= 14) {
-					el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
+				if (offset >= -377) {
+					el.style.strokeDashoffset = offset;
 				}
 				break;
 			case 'e-2':
-				if (d <= 43) {
-					el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
+				if (offset >= -431) {
+					el.style.strokeDashoffset = offset;
 				}
 				break;
 			case 's-1':
-				if (d <= 37) {
-					el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
+				if (offset >= -526) {
+					el.style.strokeDashoffset = offset;
 				}
 				break;
 			case 'i-1':
-				if (d <= 1) {
-					el.style.strokeDashoffset = String(d - 0.8) + 'px' + ', ' + '1180px';
+				if (offset >= -631) {
+					el.style.strokeDashoffset = offset;
 				}
 				break;
 			case 'i-2':
-				if (d <= 17) {
-					el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
+				if (offset >= -637) {
+					el.style.strokeDashoffset = offset;
 				}
 				break;
 			case 'g-1':
-				if (d <= 15) {
-					el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
+				if (offset >= -732.5) {
+					el.style.strokeDashoffset = offset;
 				}
 				break;
 			case 'g-2':
-				if (d <= 70) {
-					el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
+				if (offset >= -812) {
+					el.style.strokeDashoffset = offset;
 				}
 				break;
 			case 'n-1':
-				if (d <= 17) {
-					el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
+				if (offset >= -941) {
+					el.style.strokeDashoffset = offset;
 				}
 				break;
 			case 'n-2':
-				if (d <= 36) {
-					el.style.strokeDashoffset = d + 'px' + ', ' + '1180px';
+				if (offset >= -1013) {
+					el.style.strokeDashoffset = offset;
 				}
 				break;
 		}
 	}
-	offset++;
-	requestAnimationFrame(offsetMe);
+	offset--;
+	requestAnimID = requestAnimationFrame(offsetMe);
+	if (offset < -1013) cancelAnimationFrame(requestAnimID);
 };
 
 for (b = 0; b < len; b++) {

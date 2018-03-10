@@ -342,47 +342,105 @@ figure {
     }
 }
 
-@keyframes ani { 
+@keyframes ani-d-1 { 
     to { 
-        stroke-dashoffset: 0; 
+        stroke-dashoffset: -149px;
     } 
 }
-
+@keyframes ani-d-2 { 
+    to { 
+        stroke-dashoffset: -201px;
+    } 
+}
+@keyframes ani-e-1 { 
+    to { 
+        stroke-dashoffset: -377px;
+    } 
+}
+@keyframes ani-e-2 { 
+    to { 
+        stroke-dashoffset: -431.2px;
+    } 
+}
+@keyframes ani-s-1 { 
+    to { 
+        stroke-dashoffset: -526px;
+    } 
+}
+@keyframes ani-i-1 { 
+    to { 
+        stroke-dashoffset: -631px;
+    } 
+}
+@keyframes ani-i-2 { 
+    to { 
+        stroke-dashoffset: -637.5px;
+    } 
+}
+@keyframes ani-g-1 { 
+    to { 
+        stroke-dashoffset: -732.5px;
+    } 
+}
+@keyframes ani-g-2 { 
+    to { 
+        stroke-dashoffset: -812px;
+    } 
+}
+@keyframes ani-n-1 { 
+    to { 
+        stroke-dashoffset: -941px;
+    } 
+}
+@keyframes ani-n-2 { 
+    to { 
+        stroke-dashoffset: -1013px;
+    } 
+}
 #wrapperCanvas {
     .text-animation.text path.d-1 {
-        stroke-dashoffset: -149px;
-        animation: ani 5s linear infinite;
+        stroke-dashoffset: 0px;
+        
     }
     .text-animation.text path.d-2 {
-        stroke-dashoffset: -201px;
-        animation: ani 5s linear infinite;
+        stroke-dashoffset: 0px;
+      
     }
     .text-animation.text path.e-1 {
-        stroke-dashoffset: -377.5px;
+        stroke-dashoffset: 0px;
+       
     }
     .text-animation.text path.e-2 {
-        stroke-dashoffset: -431.2px;
+        stroke-dashoffset: 0px;
+       
     }
     .text-animation.text path.s-1 {
-        stroke-dashoffset: -526px;
+        stroke-dashoffset: 0px;
+       
     }
     .text-animation.text path.i-1 {
-        stroke-dashoffset: -631px;
+        stroke-dashoffset: 0px;
+       
     }
     .text-animation.text path.i-2 {
-        stroke-dashoffset: -637.5px;
+        stroke-dashoffset: 0px;
+     
     }
     .text-animation.text path.g-1 {
-        stroke-dashoffset: -732.5px;
+        stroke-dashoffset: 0px;
+       
     }
     .text-animation.text path.g-2 {
-        stroke-dashoffset: -812px;
+        stroke-dashoffset: 0px;
+      
     }
     .text-animation.text path.n-1 {
-        stroke-dashoffset: -941px;
+        stroke-dashoffset: 0px;
+       
     }
     .text-animation.text path.n-2 {
-        stroke-dashoffset: -1013px;
+        stroke-dashoffset: 0px;
+     
     }
 }
 
