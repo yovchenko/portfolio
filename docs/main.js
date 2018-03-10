@@ -8512,7 +8512,7 @@ function mainCanvas() {
 			if (flag === true) {
 				for (var i = 0; i < numOfPoints; i++) {
 					var buf = [];
-					for (var _j = 0; _j < testCases; _j++) {
+					for (var j = 0; j < testCases; j++) {
 						var v = new Vector3(Math.random() * 4 - 2, Math.random() * 4 - 2, Math.random() * 4 - 2);
 						v.normalize().multiply(width);
 						buf.push(v);
@@ -8563,7 +8563,7 @@ function mainCanvas() {
 			} else if (flag === false) {
 				for (var _i = 0; _i < numOfPoints; _i++) {
 					var _buf = [];
-					for (var _j2 = 0; _j2 < testCases; _j2++) {
+					for (var _j = 0; _j < testCases; _j++) {
 						var _v = new Vector3(Math.random() * 4 - 2, Math.random() * 4 - 2, Math.random() * 4 - 2);
 						_v.normalize().multiply(width);
 						_buf.push(_v);
@@ -8700,7 +8700,8 @@ function mainCanvas() {
 	});
 }
 
-var j = void 0,
+var a = void 0,
+    b = void 0,
     len = void 0,
     elem = void 0,
     part = void 0,
@@ -8708,12 +8709,88 @@ var j = void 0,
     charParts = void 0;
 charParts = ["d-1", "d-2", "e-1", "e-2", "s-1", "i-1", "i-2", "g-1", "g-2", "n-1", "n-2"];
 partElem = document.getElementsByClassName('motion')[0];
-for (j = 0, len = charParts.length; j < len; j++) {
-	part = charParts[j];
+for (a = 0, len = charParts.length; a < len; a++) {
+	part = charParts[a];
 	elem = document.getElementsByClassName('text-animation')[0];
 	$(elem.firstChild).append($(partElem).clone().attr("class", part));
 }
-charParts = partElem = j = len = elem = part = null; //gifts for garbage collector
+
+var c,
+    d,
+    requestAnimID,
+    offset = 1180,
+    offsetMe = function offsetMe() {
+	var valOffset,
+	    valArray,
+	    elLen = -1180;
+	valOffset = valArray = 0;
+	for (b = 0; b < len; b++) {
+		var el = document.getElementsByClassName(charParts[b])[0];
+		for (d = 0; d <= 70; d++) {
+			switch (charParts[b]) {
+				case 'd-1':
+					if (d <= 22) {
+						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+					}
+					break;
+				case 'd-2':
+					if (d <= 49) {
+						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+					}
+					break;
+				case 'e-1':
+					if (d <= 14) {
+						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+					}
+					break;
+				case 'e-2':
+					if (d <= 43) {
+						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+					}
+					break;
+				case 's-1':
+					if (d <= 37) {
+						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+					}
+					break;
+				case 'i-1':
+					if (d <= 1) {
+						el.style.strokeDasharray = String(d - 0.8) + 'px' + ', ' + '1180px';
+					}
+					break;
+				case 'i-2':
+					if (d <= 17) {
+						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+					}
+					break;
+				case 'g-1':
+					if (d <= 15) {
+						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+					}
+					break;
+				case 'g-2':
+					if (d <= 70) {
+						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+					}
+					break;
+				case 'n-1':
+					if (d <= 17) {
+						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+					}
+					break;
+				case 'n-2':
+					if (d <= 36) {
+						el.style.strokeDasharray = d + 'px' + ', ' + '1180px';
+					}
+					break;
+			}
+		}
+	}
+	requestAnimID = requestAnimationFrame(offsetMe);
+	if (b === len) cancelAnimationFrame(requestAnimID);
+};
+
+offsetMe();
 
 $(document.getElementsByClassName('text-animation')[0]).click(function (e) {
 	e.preventDefault();

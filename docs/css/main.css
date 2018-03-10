@@ -1042,15 +1042,15 @@ header {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.005)), to(rgba(75, 75, 75, 0.45)));
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
     border-radius: 5px;
-    font-size: 5vw;
+    font-size: 4.2vw;
     padding: 0px 5px;
     margin-right: 6px; }
-    @media (max-width: 700px) {
+    @media (max-width: 595.2381px) {
       .menu__header .menu__about,
       .menu__header .menu__work,
       .menu__header .menu__contact {
-        font-size: 35px; } }
-    @media (min-width: 1000px) {
+        font-size: 25px; } }
+    @media (min-width: 1190.47619px) {
       .menu__header .menu__about,
       .menu__header .menu__work,
       .menu__header .menu__contact {
@@ -1061,11 +1061,11 @@ header {
     opacity: 0.85;
     margin: 0 auto;
     padding-right: 51px;
-    font-size: 5vw; }
-    @media (max-width: 700px) {
+    font-size: 4.2vw; }
+    @media (max-width: 595.2381px) {
       .menu__header .menu__init {
-        font-size: 35px; } }
-    @media (min-width: 1000px) {
+        font-size: 25px; } }
+    @media (min-width: 1190.47619px) {
       .menu__header .menu__init {
         font-size: 50px; } }
   .menu__header .menu__home {
@@ -1078,11 +1078,11 @@ header {
     border-radius: 5px;
     margin-left: 6px;
     padding: 0px 5px;
-    font-size: 5vw; }
-    @media (max-width: 700px) {
+    font-size: 4.2vw; }
+    @media (max-width: 595.2381px) {
       .menu__header .menu__home {
-        font-size: 35px; } }
-    @media (min-width: 1000px) {
+        font-size: 25px; } }
+    @media (min-width: 1190.47619px) {
       .menu__header .menu__home {
         font-size: 50px; } }
 
@@ -1230,48 +1230,37 @@ figure {
           stroke-dasharray: 0px 1180px; }
 
 #wrapperCanvas .text-animation.text path.d-1 {
-  stroke-dashoffset: -149px;
-  stroke-dasharray: 22px 1180px; }
+  stroke-dashoffset: -149px; }
 
 #wrapperCanvas .text-animation.text path.d-2 {
-  stroke-dashoffset: -201.3px;
-  stroke-dasharray: 49px 1180px; }
+  stroke-dashoffset: -201.3px; }
 
 #wrapperCanvas .text-animation.text path.e-1 {
-  stroke-dashoffset: -377.5px;
-  stroke-dasharray: 14px 1180px; }
+  stroke-dashoffset: -377.5px; }
 
 #wrapperCanvas .text-animation.text path.e-2 {
-  stroke-dashoffset: -431.2px;
-  stroke-dasharray: 43px 1180px; }
+  stroke-dashoffset: -431.2px; }
 
 #wrapperCanvas .text-animation.text path.s-1 {
-  stroke-dashoffset: -526px;
-  stroke-dasharray: 37px 1180px; }
+  stroke-dashoffset: -526px; }
 
 #wrapperCanvas .text-animation.text path.i-1 {
-  stroke-dashoffset: -631px;
-  stroke-dasharray: 0.2px 1180px; }
+  stroke-dashoffset: -631px; }
 
 #wrapperCanvas .text-animation.text path.i-2 {
-  stroke-dashoffset: -637.5px;
-  stroke-dasharray: 17px 1180px; }
+  stroke-dashoffset: -637.5px; }
 
 #wrapperCanvas .text-animation.text path.g-1 {
-  stroke-dashoffset: -732.5px;
-  stroke-dasharray: 15px 1180px; }
+  stroke-dashoffset: -732.5px; }
 
 #wrapperCanvas .text-animation.text path.g-2 {
-  stroke-dashoffset: -812px;
-  stroke-dasharray: 70px 1180px; }
+  stroke-dashoffset: -812px; }
 
 #wrapperCanvas .text-animation.text path.n-1 {
-  stroke-dashoffset: -941px;
-  stroke-dasharray: 17px 1180px; }
+  stroke-dashoffset: -941px; }
 
 #wrapperCanvas .text-animation.text path.n-2 {
-  stroke-dashoffset: -1013px;
-  stroke-dasharray: 36px 1180px; }
+  stroke-dashoffset: -1013px; }
 
 .svg-logo-one div svg,
 .svg-logo-two div svg {
@@ -2332,11 +2321,11 @@ h3 {
     -moz-transform: scale(1.07); }
   .menu__header .menu__init {
     padding: 0px;
-    font-size: 5.2vw; } }
-  @media all and (max-width: 767px) and (min-width: 577px) and (max-width: 576.92308px) {
+    font-size: 4.2vw; } }
+  @media all and (max-width: 767px) and (min-width: 577px) and (max-width: 476.19048px) {
     .menu__header .menu__init {
-      font-size: 30px; } }
-  @media all and (max-width: 767px) and (min-width: 577px) and (min-width: 961.53846px) {
+      font-size: 20px; } }
+  @media all and (max-width: 767px) and (min-width: 577px) and (min-width: 1190.47619px) {
     .menu__header .menu__init {
       font-size: 50px; } }
 
@@ -2344,13 +2333,13 @@ h3 {
   .menu__header .menu__about,
   .menu__header .menu__work,
   .menu__header .menu__contact {
-    font-size: 5.2vw; } }
-  @media all and (max-width: 767px) and (min-width: 577px) and (max-width: 576.92308px) {
+    font-size: 4.2vw; } }
+  @media all and (max-width: 767px) and (min-width: 577px) and (max-width: 476.19048px) {
     .menu__header .menu__about,
     .menu__header .menu__work,
     .menu__header .menu__contact {
-      font-size: 30px; } }
-  @media all and (max-width: 767px) and (min-width: 577px) and (min-width: 961.53846px) {
+      font-size: 20px; } }
+  @media all and (max-width: 767px) and (min-width: 577px) and (min-width: 1190.47619px) {
     .menu__header .menu__about,
     .menu__header .menu__work,
     .menu__header .menu__contact {
@@ -2358,11 +2347,11 @@ h3 {
 
 @media all and (max-width: 767px) and (min-width: 577px) {
   .menu__header .menu__home {
-    font-size: 5.2vw; } }
-  @media all and (max-width: 767px) and (min-width: 577px) and (max-width: 576.92308px) {
+    font-size: 4.2vw; } }
+  @media all and (max-width: 767px) and (min-width: 577px) and (max-width: 476.19048px) {
     .menu__header .menu__home {
-      font-size: 30px; } }
-  @media all and (max-width: 767px) and (min-width: 577px) and (min-width: 961.53846px) {
+      font-size: 20px; } }
+  @media all and (max-width: 767px) and (min-width: 577px) and (min-width: 1190.47619px) {
     .menu__header .menu__home {
       font-size: 50px; } }
 
@@ -2437,11 +2426,11 @@ h3 {
   .menu__header .menu__init {
     line-height: 32px;
     padding: 0;
-    font-size: 5.2vw; } }
-  @media all and (max-width: 576px) and (max-width: 307.69231px) {
+    font-size: 5vw; } }
+  @media all and (max-width: 576px) and (max-width: 360px) {
     .menu__header .menu__init {
-      font-size: 16px; } }
-  @media all and (max-width: 576px) and (min-width: 961.53846px) {
+      font-size: 18px; } }
+  @media all and (max-width: 576px) and (min-width: 1000px) {
     .menu__header .menu__init {
       font-size: 50px; } }
 
@@ -2449,11 +2438,11 @@ h3 {
   .menu__header .menu__home {
     line-height: 61px;
     border-radius: 5px;
-    font-size: 5.2vw; } }
-  @media all and (max-width: 576px) and (max-width: 307.69231px) {
+    font-size: 5vw; } }
+  @media all and (max-width: 576px) and (max-width: 360px) {
     .menu__header .menu__home {
-      font-size: 16px; } }
-  @media all and (max-width: 576px) and (min-width: 961.53846px) {
+      font-size: 18px; } }
+  @media all and (max-width: 576px) and (min-width: 1000px) {
     .menu__header .menu__home {
       font-size: 50px; } }
 
@@ -2461,13 +2450,13 @@ h3 {
   .menu__header .menu__about,
   .menu__header .menu__work,
   .menu__header .menu__contact {
-    font-size: 5.2vw; } }
-  @media all and (max-width: 576px) and (max-width: 307.69231px) {
+    font-size: 5vw; } }
+  @media all and (max-width: 576px) and (max-width: 360px) {
     .menu__header .menu__about,
     .menu__header .menu__work,
     .menu__header .menu__contact {
-      font-size: 16px; } }
-  @media all and (max-width: 576px) and (min-width: 961.53846px) {
+      font-size: 18px; } }
+  @media all and (max-width: 576px) and (min-width: 1000px) {
     .menu__header .menu__about,
     .menu__header .menu__work,
     .menu__header .menu__contact {
