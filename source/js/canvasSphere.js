@@ -317,9 +317,12 @@ export default function mainCanvas() {
 							el.style.strokeDashoffset = offset;
 						}
 						break;
+					default: 
+							cancelAnimationFrame(requestTextAnimID);
+						break;
 				}
 			}
-			offset -= 3;
+			offset -= 4;
 			requestTextAnimID = requestAnimationFrame(showSvgText);
 			if (offset < -1013) cancelAnimationFrame(requestTextAnimID);
 		}
@@ -347,5 +350,5 @@ for (a = 0, len = charParts.length; a < len; a++) {
 	$(elem.firstChild).append($(partElem).clone().attr("class", part));
 }
 
-a = elem = part = partElem = null;
+a = elem = part = partElem = null; //gifts for Garbage collectors
 
