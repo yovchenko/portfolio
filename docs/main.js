@@ -8702,57 +8702,57 @@ function mainCanvas() {
 				switch (charParts[b]) {
 					case 'd-1':
 						if (offset >= -151) {
-							el.style.strokeDashoffset = offset - 0.8;
-						}
-						break;
-					case 'd-2':
-						if (offset >= -204) {
-							el.style.strokeDashoffset = offset + 2.5;
-						}
-						break;
-					case 'e-1':
-						if (offset >= -425) {
-							el.style.strokeDashoffset = offset + 0.5;
-						}
-						break;
-					case 'e-2':
-						if (offset >= -479) {
 							el.style.strokeDashoffset = offset - 0.5;
 						}
 						break;
+					case 'd-2':
+						if (offset >= -203) {
+							el.style.strokeDashoffset = offset - 1.5;
+						}
+						break;
+					case 'e-1':
+						if (offset >= -355) {
+							el.style.strokeDashoffset = offset - 1;
+						}
+						break;
+					case 'e-2':
+						if (offset >= -417) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
 					case 's-1':
-						if (offset >= -571) {
-							el.style.strokeDashoffset = offset - 2.1;
+						if (offset >= -512) {
+							el.style.strokeDashoffset = offset + 1.5;
 						}
 						break;
 					case 'i-1':
-						if (offset >= -678) {
+						if (offset >= -596) {
 							el.style.strokeDashoffset = offset;
 						}
 						break;
 					case 'i-2':
-						if (offset >= -684) {
-							el.style.strokeDashoffset = offset + 0.8;
+						if (offset >= -603) {
+							el.style.strokeDashoffset = offset - 1;
 						}
 						break;
 					case 'g-1':
-						if (offset >= -778) {
+						if (offset >= -697) {
 							el.style.strokeDashoffset = offset;
 						}
 						break;
 					case 'g-2':
-						if (offset >= -863) {
-							el.style.strokeDashoffset = offset;
+						if (offset >= -794) {
+							el.style.strokeDashoffset = offset - 0.5;
 						}
 						break;
 					case 'n-1':
-						if (offset >= -985) {
-							el.style.strokeDashoffset = offset;
+						if (offset >= -883) {
+							el.style.strokeDashoffset = offset - 1.5;
 						}
 						break;
 					case 'n-2':
-						if (offset >= -1059) {
-							el.style.strokeDashoffset = offset;
+						if (offset >= -963) {
+							el.style.strokeDashoffset = offset - 1.5;
 						}
 						break;
 					default:

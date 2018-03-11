@@ -264,37 +264,37 @@ export default function mainCanvas() {
 				switch (charParts[b]) {
 					case 'd-1':
 						if (offset >= -151) {
-							el.style.strokeDashoffset = offset - 0.8;
+							el.style.strokeDashoffset = offset - 0.5;
 						}
 						break;
 					case 'd-2':
-						if (offset >= -204) {
-							el.style.strokeDashoffset = offset + 1;
+						if (offset >= -203) {
+							el.style.strokeDashoffset = offset - 1.5;
 						}
 						break;
 					case 'e-1':
 						if (offset >= -355) {
-							el.style.strokeDashoffset = offset;
+							el.style.strokeDashoffset = offset - 1;
 						}
 						break;
 					case 'e-2':
-						if (offset >= -415) {
-							el.style.strokeDashoffset = offset - 0.5;
+						if (offset >= -417) {
+							el.style.strokeDashoffset = offset;
 						}
 						break;
 					case 's-1':
-						if (offset >= -510) {
-							el.style.strokeDashoffset = offset - 2.1;
+						if (offset >= -512) {
+							el.style.strokeDashoffset = offset + 1.5;
 						}
 						break;
 					case 'i-1':
-						if (offset >= -595) {
+						if (offset >= -596) {
 							el.style.strokeDashoffset = offset;
 						}
 						break;
 					case 'i-2':
-						if (offset >= -600) {
-							el.style.strokeDashoffset = offset + 0.8;
+						if (offset >= -603) {
+							el.style.strokeDashoffset = offset - 1;
 						}
 						break;
 					case 'g-1':
@@ -303,18 +303,18 @@ export default function mainCanvas() {
 						}
 						break;
 					case 'g-2':
-						if (offset >= -777) {
-							el.style.strokeDashoffset = offset;
+						if (offset >= -794) {
+							el.style.strokeDashoffset = offset - 0.5;
 						}
 						break;
 					case 'n-1':
-						if (offset >= -905) {
-							el.style.strokeDashoffset = offset;
+						if (offset >= -883) {
+							el.style.strokeDashoffset = offset - 1.5;
 						}
 						break;
 					case 'n-2':
-						if (offset >= -980) {
-							el.style.strokeDashoffset = offset;
+						if (offset >= -963) {
+							el.style.strokeDashoffset = offset - 1.5;
 						}
 						break;
 					default: 

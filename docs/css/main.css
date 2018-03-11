@@ -873,16 +873,16 @@ progress[value]::-moz-progress-bar {
 
 @font-face {
   font-family: "Pangolin";
-  font-style: 500;
+  font-style: 400;
   font-weight: normal;
-  src: url(../fonts/Pangolin-Regular.eot&a615c540d89215b4ab37d2cf74a7a571) format("eot"), url(../fonts/Pangolin-Regular.woff2&5839dc7999f51a6d70a2397858e80eac) format("woff2"), url(../fonts/Pangolin-Regular.woff&6e656b09987f9421eb0e27e8b69a7c57) format("woff"), url(../fonts/Pangolin-Regular.ttf&5db6be808c53afe6ea17c13e064d3eb4) format("truetype"), url(../fonts/Pangolin-Regular.svg&e17bf9846605b3c3c6196ae899804922#Pangolin) format("svg"); }
+  src: url(../fonts/Pangolin-Regular.eot&b3a3dba541543e4f1f0385b789bf7520) format("eot"), url(../fonts/Pangolin-Regular.woff2&5839dc7999f51a6d70a2397858e80eac) format("woff2"), url(../fonts/Pangolin-Regular.woff&ce79c51fdeb924a9e764259ff4f5a507) format("woff"), url(../fonts/Pangolin-Regular.ttf&0529e076a86ca72872154555487ffdb9) format("truetype"), url(../fonts/Pangolin-Regular.svg&9cd8476a4aeab0b9a60a6423482702be#Pangolin) format("svg"); }
 
 html, html body {
   height: 100%;
   overflow: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Pangolin";
+  font-family: 'Pangolin', cursive;
   font-weight: normal;
   margin: 0;
   font-size: 10px;
@@ -1043,7 +1043,7 @@ header {
   .menu__header .menu__contact {
     display: none;
     cursor: pointer;
-    font-family: "Pangolin";
+    font-family: 'Pangolin', cursive;
     line-height: 61px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.005)), to(rgba(75, 75, 75, 0.45)));
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
@@ -1077,7 +1077,7 @@ header {
   .menu__header .menu__home {
     display: none;
     cursor: pointer;
-    font-family: "Pangolin";
+    font-family: 'Pangolin', cursive;
     line-height: 61px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.005)), to(rgba(75, 75, 75, 0.45)));
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
@@ -1234,25 +1234,25 @@ figure {
         #wrapperCanvas .text-animation-wrap .text-animation svg path.d-1 {
           stroke-dasharray: 22px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.d-2 {
-          stroke-dasharray: 49px 1180px; }
+          stroke-dasharray: 38px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.e-1 {
-          stroke-dasharray: 12px 1180px; }
+          stroke-dasharray: 14px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.e-2 {
-          stroke-dasharray: 43px 1180px; }
+          stroke-dasharray: 40px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.s-1 {
-          stroke-dasharray: 39px 1180px; }
+          stroke-dasharray: 44px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.i-1 {
           stroke-dasharray: 0.2px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.i-2 {
-          stroke-dasharray: 17px 1180px; }
+          stroke-dasharray: 18px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.g-1 {
           stroke-dasharray: 15px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.g-2 {
-          stroke-dasharray: 67px 1180px; }
+          stroke-dasharray: 47px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.n-1 {
-          stroke-dasharray: 19px 1180px; }
+          stroke-dasharray: 18px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.n-2 {
-          stroke-dasharray: 38px 1180px; }
+          stroke-dasharray: 30.5px 1180px; }
 
 .svg-logo-one div svg,
 .svg-logo-two div svg {
@@ -1533,7 +1533,7 @@ article p {
   left: -1px; }
 
 .sj-book .book-browser-support {
-  font-family: "Pangolin";
+  font-family: 'Pangolin', cursive;
   margin: -9px 40px 0px 20px;
   text-align: center; }
   .sj-book .book-browser-support th, .sj-book .book-browser-support td {
@@ -1556,7 +1556,7 @@ article p {
     height: 40px; }
 
 .sj-book .page-speed-tools {
-  font-family: "Pangolin";
+  font-family: 'Pangolin', cursive;
   text-align: center;
   padding-left: 20px;
   margin: 0px 20px 0px 40px; }
@@ -1747,7 +1747,7 @@ article p {
   height: 80%;
   top: 50%;
   left: 50%;
-  font-family: "Pangolin";
+  font-family: 'Pangolin', cursive;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   letter-spacing: 1.4px; }
@@ -1843,7 +1843,7 @@ input[type=text],
 input[type=email],
 textarea {
   font: 3.2em normal normal uppercase helvetica, "Pangolin";
-  font-family: "Pangolin";
+  font-family: 'Pangolin', cursive;
   color: #7c7873;
   background: none;
   outline: none;
@@ -1876,7 +1876,7 @@ input[type=email]:focus {
   position: absolute;
   font-size: 3.2em;
   color: #333;
-  font-family: "Pangolin";
+  font-family: 'Pangolin', cursive;
   width: 89%;
   text-align: center;
   opacity: 0;
@@ -1931,7 +1931,7 @@ footer .wrapper {
   #loader-wrapper.is--invisible {
     display: none; }
   #loader-wrapper .font-preload {
-    font-family: "Pangolin";
+    font-family: 'Pangolin', cursive;
     font-size: 0; }
   #loader-wrapper #loader {
     display: block;
@@ -1995,7 +1995,7 @@ footer .wrapper {
   position: relative;
   z-index: 10001; }
   .entry-header .entry-title {
-    font-family: "Pangolin";
+    font-family: 'Pangolin', cursive;
     font-size: 2.5rem;
     color: rgba(255, 255, 255, 0.65);
     position: relative;
@@ -2268,7 +2268,7 @@ footer .wrapper {
 .browser-support h1,
 h2,
 h3 {
-  font-family: "Pangolin"; }
+  font-family: 'Pangolin', cursive; }
 
 .browser-icons {
   position: absolute;
