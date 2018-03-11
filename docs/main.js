@@ -8762,7 +8762,7 @@ function mainCanvas() {
 			}
 			offset -= 4;
 			requestTextAnimID = requestAnimationFrame(_showSvgText);
-			if (offset < -1113) cancelAnimationFrame(requestTextAnimID);
+			if (offset < -963) cancelAnimationFrame(requestTextAnimID);
 		};
 		_showSvgText();
 	}, 100);

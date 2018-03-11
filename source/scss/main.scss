@@ -331,7 +331,7 @@ figure {
                 border: 1px solid #333;
                 path {
                     fill: none;
-                    stroke-width: 4px;
+                    stroke-width: 2px;
                     stroke-linecap: round;
                     stroke: #333;
                     stroke-dashoffset: 0px;
@@ -1029,8 +1029,7 @@ label {
 input[type=text],
 input[type=email],
 textarea {
-    font: 3.2em normal normal uppercase helvetica, "Pangolin";
-    font-family: 'Pangolin', cursive;
+    font: 3.2em normal normal uppercase Helvetica, Arial, sans-serif;
     color: #7c7873;
     background: none;
     outline: none;
