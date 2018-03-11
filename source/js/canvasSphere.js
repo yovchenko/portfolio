@@ -273,58 +273,58 @@ export default function mainCanvas() {
 						}
 						break;
 					case 'e-1':
-						if (offset >= -380) {
+						if (offset >= -425) {
 							el.style.strokeDashoffset = offset + 0.5;
 						}
 						break;
 					case 'e-2':
-						if (offset >= -434) {
-							el.style.strokeDashoffset = offset;
+						if (offset >= -479) {
+							el.style.strokeDashoffset = offset - 0.5;
 						}
 						break;
 					case 's-1':
-						if (offset >= -527) {
-							el.style.strokeDashoffset = offset - 1.2;
+						if (offset >= -571) {
+							el.style.strokeDashoffset = offset - 2.1;
 						}
 						break;
 					case 'i-1':
-						if (offset >= -634) {
+						if (offset >= -678) {
 							el.style.strokeDashoffset = offset;
 						}
 						break;
 					case 'i-2':
-						if (offset >= -639) {
-							el.style.strokeDashoffset = offset - 2;
+						if (offset >= -684) {
+							el.style.strokeDashoffset = offset + 0.8;
 						}
 						break;
 					case 'g-1':
-						if (offset >= -736) {
-							el.style.strokeDashoffset = offset + 1.5;
+						if (offset >= -778) {
+							el.style.strokeDashoffset = offset;
 						}
 						break;
 					case 'g-2':
-						if (offset >= -815) {
-							el.style.strokeDashoffset = offset - 1.5;
+						if (offset >= -863) {
+							el.style.strokeDashoffset = offset;
 						}
 						break;
 					case 'n-1':
-						if (offset >= -941) {
+						if (offset >= -985) {
 							el.style.strokeDashoffset = offset;
 						}
 						break;
 					case 'n-2':
-						if (offset >= -1013) {
+						if (offset >= -1059) {
 							el.style.strokeDashoffset = offset;
 						}
 						break;
-					default:
-						cancelAnimationFrame(requestTextAnimID);
+					default: 
+							cancelAnimationFrame(requestTextAnimID);
 						break;
 				}
 			}
 			offset -= 4;
 			requestTextAnimID = requestAnimationFrame(showSvgText);
-			if (offset < -1013) cancelAnimationFrame(requestTextAnimID);
+			if (offset < -1113) cancelAnimationFrame(requestTextAnimID);
 		}
 		showSvgText();
 	}, 100);
