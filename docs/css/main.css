@@ -1226,50 +1226,28 @@ figure {
           stroke: #333;
           stroke-dashoffset: 0px;
           stroke-dasharray: 0px 1180px; }
-
-#wrapperCanvas .text-animation.text path.d-1 {
-  stroke-dasharray: 22px 1180px;
-  stroke-dashoffset: 0px; }
-
-#wrapperCanvas .text-animation.text path.d-2 {
-  stroke-dasharray: 49px 1180px;
-  stroke-dashoffset: 0px; }
-
-#wrapperCanvas .text-animation.text path.e-1 {
-  stroke-dasharray: 14px 1180px;
-  stroke-dashoffset: 0px; }
-
-#wrapperCanvas .text-animation.text path.e-2 {
-  stroke-dasharray: 43px 1180px;
-  stroke-dashoffset: 0px; }
-
-#wrapperCanvas .text-animation.text path.s-1 {
-  stroke-dasharray: 37px 1180px;
-  stroke-dashoffset: 0px; }
-
-#wrapperCanvas .text-animation.text path.i-1 {
-  stroke-dasharray: 0.1px 1180px;
-  stroke-dashoffset: 0px; }
-
-#wrapperCanvas .text-animation.text path.i-2 {
-  stroke-dasharray: 16px 1180px;
-  stroke-dashoffset: 0px; }
-
-#wrapperCanvas .text-animation.text path.g-1 {
-  stroke-dasharray: 15px 1180px;
-  stroke-dashoffset: 0px; }
-
-#wrapperCanvas .text-animation.text path.g-2 {
-  stroke-dasharray: 69px 1180px;
-  stroke-dashoffset: 0px; }
-
-#wrapperCanvas .text-animation.text path.n-1 {
-  stroke-dasharray: 17px 1180px;
-  stroke-dashoffset: 0px; }
-
-#wrapperCanvas .text-animation.text path.n-2 {
-  stroke-dasharray: 33.5px 1180px;
-  stroke-dashoffset: 0px; }
+        #wrapperCanvas .text-animation-wrap .text-animation svg path.d-1 {
+          stroke-dasharray: 22px 1180px; }
+        #wrapperCanvas .text-animation-wrap .text-animation svg path.d-2 {
+          stroke-dasharray: 49px 1180px; }
+        #wrapperCanvas .text-animation-wrap .text-animation svg path.e-1 {
+          stroke-dasharray: 14px 1180px; }
+        #wrapperCanvas .text-animation-wrap .text-animation svg path.e-2 {
+          stroke-dasharray: 43px 1180px; }
+        #wrapperCanvas .text-animation-wrap .text-animation svg path.s-1 {
+          stroke-dasharray: 37px 1180px; }
+        #wrapperCanvas .text-animation-wrap .text-animation svg path.i-1 {
+          stroke-dasharray: 0.1px 1180px; }
+        #wrapperCanvas .text-animation-wrap .text-animation svg path.i-2 {
+          stroke-dasharray: 16px 1180px; }
+        #wrapperCanvas .text-animation-wrap .text-animation svg path.g-1 {
+          stroke-dasharray: 15px 1180px; }
+        #wrapperCanvas .text-animation-wrap .text-animation svg path.g-2 {
+          stroke-dasharray: 69px 1180px; }
+        #wrapperCanvas .text-animation-wrap .text-animation svg path.n-1 {
+          stroke-dasharray: 17px 1180px; }
+        #wrapperCanvas .text-animation-wrap .text-animation svg path.n-2 {
+          stroke-dasharray: 33.5px 1180px; }
 
 .svg-logo-one div svg,
 .svg-logo-two div svg {

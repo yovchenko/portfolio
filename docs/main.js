@@ -8492,6 +8492,7 @@ function mainCanvas() {
 	var displayFPS = document.getElementsByClassName('fps')[0];
 	var c = void 0,
 	    ctx = void 0,
+	    temp = void 0,
 	    points = [],
 	    flag = true,
 	    width = 108,
@@ -8500,6 +8501,8 @@ function mainCanvas() {
 	    counter = 0,
 	    angle = new Vector3(0, 0, 0),
 	    requestID = void 0,
+	    _showSvgText = void 0,
+	    requestTextAnimID = void 0,
 	    angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
 	c = document.getElementById("canvas");
 	c.width = 295;
@@ -8690,14 +8693,80 @@ function mainCanvas() {
 	}
 	loop();
 	letsDance();
-	offsetMe();
 	setTimeout(function () {
-		$(document.getElementsByClassName('text-animation')[0]).addClass("text");
+		var b = void 0,
+		    offset = 0;
+		_showSvgText = function showSvgText() {
+			for (b = 0; b < len; b++) {
+				var el = document.getElementsByClassName(charParts[b])[0];
+				switch (charParts[b]) {
+					case 'd-1':
+						if (offset >= -149) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 'd-2':
+						if (offset >= -201) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 'e-1':
+						if (offset >= -377) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 'e-2':
+						if (offset >= -431) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 's-1':
+						if (offset >= -526) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 'i-1':
+						if (offset >= -631) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 'i-2':
+						if (offset >= -637) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 'g-1':
+						if (offset >= -732) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 'g-2':
+						if (offset >= -812) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 'n-1':
+						if (offset >= -941) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 'n-2':
+						if (offset >= -1013) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+				}
+			}
+			offset--;
+			requestTextAnimID = requestAnimationFrame(_showSvgText);
+			if (offset < -1013) cancelAnimationFrame(requestTextAnimID);
+		};
+		_showSvgText();
 	}, 100);
 	$(document.getElementsByClassName('menu__about')[0]).add(document.getElementsByClassName('menu__work')).add(document.getElementsByClassName('menu__contact')).click(function (e) {
 		e.preventDefault();
-		$(document.getElementsByClassName('text-animation')[0]).removeClass("text");
 		cancelAnimationFrame(requestID);
+		cancelAnimationFrame(requestTextAnimID);
 	});
 }
 
@@ -8716,80 +8785,6 @@ for (a = 0, len = charParts.length; a < len; a++) {
 }
 
 a = elem = part = partElem = null;
-
-var b = void 0,
-    requestAnimID = void 0,
-    offset = 0;
-var offsetMe = function offsetMe() {
-	for (b = 0; b < len; b++) {
-		var el = document.getElementsByClassName(charParts[b])[0];
-		switch (charParts[b]) {
-			case 'd-1':
-				if (offset >= -149) {
-					el.style.strokeDashoffset = offset;
-				}
-				break;
-			case 'd-2':
-				if (offset >= -201) {
-					el.style.strokeDashoffset = offset;
-				}
-				break;
-			case 'e-1':
-				if (offset >= -377) {
-					el.style.strokeDashoffset = offset;
-				}
-				break;
-			case 'e-2':
-				if (offset >= -431) {
-					el.style.strokeDashoffset = offset;
-				}
-				break;
-			case 's-1':
-				if (offset >= -526) {
-					el.style.strokeDashoffset = offset;
-				}
-				break;
-			case 'i-1':
-				if (offset >= -631) {
-					el.style.strokeDashoffset = offset;
-				}
-				break;
-			case 'i-2':
-				if (offset >= -637) {
-					el.style.strokeDashoffset = offset;
-				}
-				break;
-			case 'g-1':
-				if (offset >= -732.5) {
-					el.style.strokeDashoffset = offset;
-				}
-				break;
-			case 'g-2':
-				if (offset >= -812) {
-					el.style.strokeDashoffset = offset;
-				}
-				break;
-			case 'n-1':
-				if (offset >= -941) {
-					el.style.strokeDashoffset = offset;
-				}
-				break;
-			case 'n-2':
-				if (offset >= -1013) {
-					el.style.strokeDashoffset = offset;
-				}
-				break;
-		}
-	}
-	offset--;
-	requestAnimID = requestAnimationFrame(offsetMe);
-	if (offset < -1013) cancelAnimationFrame(requestAnimID);
-};
-
-$(document.getElementsByClassName('text-animation')[0]).click(function (e) {
-	e.preventDefault();
-	$(this).toggleClass("text");
-});
 
 /***/ }),
 /* 126 */
@@ -11495,12 +11490,12 @@ function mainPage() {
 							_preloader.page.elements[_key4].style.display = 'grid';
 							if (version === 'Trident') _preloader.page.elements[_key4].style.display = '-ms-grid';
 						}
-						(0, _canvasSphere2.default)();
 					}
 					_preloader.page.elements.header.classList.remove('is--active');
 					_preloader.page.pattern.colorX = 'YlGnBu';
 					_preloader.page.pattern.colorY = 'GnBu';
 					(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
+					(0, _canvasSphere2.default)();
 					_preloader.page['home'] = true; // page home 
 					break;
 				default:

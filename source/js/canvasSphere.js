@@ -119,6 +119,7 @@ export default function mainCanvas() {
 	const displayFPS = document.getElementsByClassName('fps')[0];
 	let c,
 		ctx,
+		temp,
 		points = [],
 		flag = true,
 		width = 108,
@@ -127,6 +128,8 @@ export default function mainCanvas() {
 		counter = 0,
 		angle = new Vector3(0, 0, 0),
 		requestID,
+		showSvgText,
+		requestTextAnimID,
 		angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
 	c = document.getElementById("canvas");
 	c.width = 295;
@@ -161,10 +164,10 @@ export default function mainCanvas() {
 					testCases++;
 					points.push(buf[currentHighest]);
 				}
-					if (counter < 15) {
-						counter++;
-					} else flag = false;
-					letsDance();
+				if (counter < 15) {
+					counter++;
+				} else flag = false;
+				letsDance();
 			} else if (flag === false) {
 				for (let i = 0; i < numOfPoints; i++) {
 					let buf = [];
@@ -190,11 +193,11 @@ export default function mainCanvas() {
 					testCases--;
 					points.pop(buf[currentHighest]);
 				}
-					if (counter > 0) {
-						counter--;
-						flag = false;
-					} else flag = true;
-					letsDance();
+				if (counter > 0) {
+					counter--;
+					flag = false;
+				} else flag = true;
+				letsDance();
 			} else {
 				clearTimeout(loopDots);
 			}
@@ -202,7 +205,7 @@ export default function mainCanvas() {
 		}, 1000);
 		loopDots = null;
 	}
-	
+
 	let countFPS = (function () {
 		let lastLoop = (new Date()).getMilliseconds();
 		let count = 1;
@@ -252,15 +255,81 @@ export default function mainCanvas() {
 	}
 	loop();
 	letsDance();
-	offsetMe();
 	setTimeout(function () {
-		$(document.getElementsByClassName('text-animation')[0]).addClass("text");
+		let b,
+			offset = 0;
+		showSvgText = function () {
+			for (b = 0; b < len; b++) {
+				let el = document.getElementsByClassName(charParts[b])[0];
+				switch (charParts[b]) {
+					case 'd-1':
+						if (offset >= -149) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 'd-2':
+						if (offset >= -201) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 'e-1':
+						if (offset >= -377) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 'e-2':
+						if (offset >= -431) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 's-1':
+						if (offset >= -526) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 'i-1':
+						if (offset >= -631) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 'i-2':
+						if (offset >= -637) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 'g-1':
+						if (offset >= -732) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 'g-2':
+						if (offset >= -812) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 'n-1':
+						if (offset >= -941) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+					case 'n-2':
+						if (offset >= -1013) {
+							el.style.strokeDashoffset = offset;
+						}
+						break;
+				}
+			}
+			offset--;
+			requestTextAnimID = requestAnimationFrame(showSvgText);
+			if (offset < -1013) cancelAnimationFrame(requestTextAnimID);
+		}
+		showSvgText();
 	}, 100);
 	$(document.getElementsByClassName('menu__about')[0]).add(document.getElementsByClassName('menu__work'))
 		.add(document.getElementsByClassName('menu__contact')).click(function (e) {
 			e.preventDefault();
-			$(document.getElementsByClassName('text-animation')[0]).removeClass("text");
 			cancelAnimationFrame(requestID);
+			cancelAnimationFrame(requestTextAnimID);
 		});
 }
 
@@ -280,77 +349,3 @@ for (a = 0, len = charParts.length; a < len; a++) {
 
 a = elem = part = partElem = null;
 
-let b,
-requestAnimID,
-offset = 0;
-const offsetMe = function() {
-for (b = 0; b < len; b++) {
-	let el = document.getElementsByClassName(charParts[b])[0];
-	switch(charParts[b]) {
-		case 'd-1' :
-		   if(offset >= -149) {
-			el.style.strokeDashoffset = offset;
-		   }
-		   break;
-		case 'd-2' : 
-		   if(offset >= -201) {
-		   el.style.strokeDashoffset = offset;
-		   }
-		   break;
-		case 'e-1'	:
-			if(offset >= -377) {
-			el.style.strokeDashoffset = offset;
-		   }
-		   break;
-		case 'e-2'	:
-		   if(offset >= -431) {
-			el.style.strokeDashoffset = offset;
-		   }
-		   break;
-		case 's-1'	:
-		   if(offset >= -526) {
-		    el.style.strokeDashoffset = offset;
-		   }
-		   break;
-		case 'i-1'	:
-		   if(offset >= -631) {
-		    el.style.strokeDashoffset = offset;
-		   }
-		   break;
-		case 'i-2'	:
-		   if(offset >= -637) {
-		    el.style.strokeDashoffset = offset;
-		   }
-		   break;
-	   case 'g-1'	:
-		   if(offset >= -732.5) {
-			el.style.strokeDashoffset = offset;
-		   }
-		   break;
-	   case 'g-2'	:
-		   if(offset >= -812) {
-		    el.style.strokeDashoffset = offset;
-		   }
-		   break;
-	   case 'n-1'	:
-		   if(offset >= -941) {
-			el.style.strokeDashoffset = offset;
-		   }
-		   break;
-	   case 'n-2'	:
-		   if(offset >= -1013) {
-			el.style.strokeDashoffset = offset;
-		   }
-		   break;
-	   	}
-	  }
-	  offset--;
-	  requestAnimID = requestAnimationFrame(offsetMe);
-	  if(offset < -1013) cancelAnimationFrame(requestAnimID);
-}
-
-
-$(document.getElementsByClassName('text-animation')[0]).click(function (e) {
-	e.preventDefault();
-	$(this).toggleClass("text");
-});

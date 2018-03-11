@@ -152,12 +152,12 @@ function mainPage() {
 							page.elements[key].style.display = 'grid';
 							if (version === 'Trident') page.elements[key].style.display = '-ms-grid';
 						}
-						mainCanvas();
 					}
 					page.elements.header.classList.remove('is--active');
 					page.pattern.colorX = 'YlGnBu';
 					page.pattern.colorY = 'GnBu';
 					resizeContent('#figure', '#wrapperCanvas', 800, 900);
+					mainCanvas();
 					page['home'] = true; // page home 
 					break;
 				default:
