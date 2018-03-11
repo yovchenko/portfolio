@@ -269,51 +269,51 @@ export default function mainCanvas() {
 						break;
 					case 'd-2':
 						if (offset >= -204) {
-							el.style.strokeDashoffset = offset + 2.5;
+							el.style.strokeDashoffset = offset + 1;
 						}
 						break;
 					case 'e-1':
-						if (offset >= -425) {
-							el.style.strokeDashoffset = offset + 0.5;
+						if (offset >= -355) {
+							el.style.strokeDashoffset = offset;
 						}
 						break;
 					case 'e-2':
-						if (offset >= -479) {
+						if (offset >= -415) {
 							el.style.strokeDashoffset = offset - 0.5;
 						}
 						break;
 					case 's-1':
-						if (offset >= -571) {
+						if (offset >= -510) {
 							el.style.strokeDashoffset = offset - 2.1;
 						}
 						break;
 					case 'i-1':
-						if (offset >= -678) {
+						if (offset >= -595) {
 							el.style.strokeDashoffset = offset;
 						}
 						break;
 					case 'i-2':
-						if (offset >= -684) {
+						if (offset >= -600) {
 							el.style.strokeDashoffset = offset + 0.8;
 						}
 						break;
 					case 'g-1':
-						if (offset >= -778) {
+						if (offset >= -697) {
 							el.style.strokeDashoffset = offset;
 						}
 						break;
 					case 'g-2':
-						if (offset >= -863) {
+						if (offset >= -777) {
 							el.style.strokeDashoffset = offset;
 						}
 						break;
 					case 'n-1':
-						if (offset >= -985) {
+						if (offset >= -905) {
 							el.style.strokeDashoffset = offset;
 						}
 						break;
 					case 'n-2':
-						if (offset >= -1059) {
+						if (offset >= -980) {
 							el.style.strokeDashoffset = offset;
 						}
 						break;
