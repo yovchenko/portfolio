@@ -1226,7 +1226,7 @@ figure {
         border: 1px solid #333; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path {
           fill: none;
-          stroke-width: 2px;
+          stroke-width: 4px;
           stroke-linecap: round;
           stroke: #333;
           stroke-dashoffset: 0px;

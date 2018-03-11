@@ -320,7 +320,6 @@ figure {
             svg {
                 width: 600px;
                 height: 400px;
-
                 position: relative;
                 left: -150px;
                 top: -65px;
@@ -332,7 +331,7 @@ figure {
                 border: 1px solid #333;
                 path {
                     fill: none;
-                    stroke-width: 2px;
+                    stroke-width: 4px;
                     stroke-linecap: round;
                     stroke: #333;
                     stroke-dashoffset: 0px;
