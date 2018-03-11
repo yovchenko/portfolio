@@ -263,48 +263,48 @@ export default function mainCanvas() {
 				let el = document.getElementsByClassName(charParts[b])[0];
 				switch (charParts[b]) {
 					case 'd-1':
-						if (offset >= -149) {
-							el.style.strokeDashoffset = offset;
+						if (offset >= -151) {
+							el.style.strokeDashoffset = offset - 0.8;
 						}
 						break;
 					case 'd-2':
-						if (offset >= -201) {
-							el.style.strokeDashoffset = offset;
+						if (offset >= -204) {
+							el.style.strokeDashoffset = offset + 2.5;
 						}
 						break;
 					case 'e-1':
-						if (offset >= -377) {
-							el.style.strokeDashoffset = offset;
+						if (offset >= -380) {
+							el.style.strokeDashoffset = offset + 0.5;
 						}
 						break;
 					case 'e-2':
-						if (offset >= -431) {
+						if (offset >= -434) {
 							el.style.strokeDashoffset = offset;
 						}
 						break;
 					case 's-1':
-						if (offset >= -526) {
-							el.style.strokeDashoffset = offset;
+						if (offset >= -527) {
+							el.style.strokeDashoffset = offset - 1.2;
 						}
 						break;
 					case 'i-1':
-						if (offset >= -631) {
+						if (offset >= -634) {
 							el.style.strokeDashoffset = offset;
 						}
 						break;
 					case 'i-2':
-						if (offset >= -637) {
-							el.style.strokeDashoffset = offset;
+						if (offset >= -639) {
+							el.style.strokeDashoffset = offset - 2;
 						}
 						break;
 					case 'g-1':
-						if (offset >= -732) {
-							el.style.strokeDashoffset = offset;
+						if (offset >= -736) {
+							el.style.strokeDashoffset = offset + 1.5;
 						}
 						break;
 					case 'g-2':
-						if (offset >= -812) {
-							el.style.strokeDashoffset = offset;
+						if (offset >= -815) {
+							el.style.strokeDashoffset = offset - 1.5;
 						}
 						break;
 					case 'n-1':
@@ -317,8 +317,8 @@ export default function mainCanvas() {
 							el.style.strokeDashoffset = offset;
 						}
 						break;
-					default: 
-							cancelAnimationFrame(requestTextAnimID);
+					default:
+						cancelAnimationFrame(requestTextAnimID);
 						break;
 				}
 			}
