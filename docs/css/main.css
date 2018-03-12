@@ -1187,20 +1187,26 @@ figure {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  background-image: url(../images/me-large.png);
   background-size: contain;
   background-position: center center;
+  -webkit-filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.5));
   background-repeat: no-repeat;
   -webkit-transform-origin: top right;
   transform-origin: top right;
   -webkit-transition: all 500ms ease-in-out !important;
   transition: all 500ms ease-in-out !important; }
   #wrapperCanvas #canvas {
+    background-clip: padding-box;
     background-color: #fff;
-    border: 1px solid #333;
+    border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 50%;
-    margin: 50px 0px;
+    margin: 50px 70px 70px 0px;
     z-index: 1;
-    image-rendering: optimizeSpeed; }
+    image-rendering: optimizeSpeed;
+    -webkit-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6); }
   #wrapperCanvas .text-animation-wrap {
     position: relative; }
     #wrapperCanvas .text-animation-wrap .text-animation {
@@ -1212,7 +1218,7 @@ figure {
       width: 295px;
       height: 295px;
       border-radius: 50%;
-      bottom: 50px;
+      bottom: 70px;
       overflow: hidden;
       text-align: center; }
       #wrapperCanvas .text-animation-wrap .text-animation svg {
