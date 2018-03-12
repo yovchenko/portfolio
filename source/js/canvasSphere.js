@@ -321,10 +321,13 @@ export default function mainCanvas() {
 							cancelAnimationFrame(requestTextAnimID);
 						break;
 				}
+			
 			}
 			offset -= 4;
 			requestTextAnimID = requestAnimationFrame(showSvgText);
-			if (offset < -963) cancelAnimationFrame(requestTextAnimID);
+			if (offset < -963) {
+				cancelAnimationFrame(requestTextAnimID);
+			}
 		}
 		showSvgText();
 	}, 100);

@@ -31,6 +31,10 @@ html {
     }
 }
 
+.wf-active html {
+        font-family: 'Pangolin', cursive;
+}
+
 .grid-container {
     display: grid;
     min-height: 100%;
@@ -301,7 +305,7 @@ figure {
     #canvas {
         background-clip: padding-box;
         background-color: #fff;
-        border: 2px solid rgba(0,0,0,0.2);
+        border: 2px solid rgba(0,0,0,0.1);
         border-radius: 50%;
         margin: 50px 70px 70px 0px;
         z-index: 1;
@@ -1139,10 +1143,6 @@ footer .wrapper {
     &.is--invisible {
         display: none;
     }
-    .font-preload {
-        font-family: 'Pangolin', cursive;
-        font-size: 0;
-    }
     #loader {
         display: block;
         position: relative;
@@ -1211,6 +1211,7 @@ footer .wrapper {
     position: relative;
     z-index: 10001;
     .entry-title {
+        visibility: hidden;
         font-family: 'Pangolin', cursive;
         font-size: 2.5rem;
         color: rgba(255%, 255%, 255%, 0.65);
@@ -1222,6 +1223,14 @@ footer .wrapper {
     }
 }
 
+.wf-active {
+    .entry-header {
+        .entry-title {
+            visibility: visible;
+             }
+         }
+    }
+    
 @-webkit-keyframes spin {
     0% {
         -webkit-transform: rotate(0deg);
