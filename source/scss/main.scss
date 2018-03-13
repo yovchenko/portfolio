@@ -287,6 +287,10 @@ figure {
     width: 800px;
     height: 900px;
     align-items: flex-end;
+    background-image: url('../images/me-large.png');
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
     -ms-transform-origin: top right;
     -webkit-transform-origin: top right;
     transform-origin: top right;

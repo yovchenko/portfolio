@@ -1187,6 +1187,10 @@ figure {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  background-image: url(../images/me-large.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
   -webkit-transform-origin: top right;
   transform-origin: top right;
   -webkit-transition: all 500ms ease-in-out !important;
