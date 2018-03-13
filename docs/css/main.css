@@ -1191,8 +1191,6 @@ figure {
   transform-origin: top right;
   -webkit-transition: all 500ms ease-in-out !important;
   transition: all 500ms ease-in-out !important; }
-  #wrapperCanvas svg:nth-child(1) {
-    position: absolute; }
   #wrapperCanvas #canvas {
     background-color: #fff;
     border: 2px solid #333;
