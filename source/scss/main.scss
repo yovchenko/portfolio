@@ -299,18 +299,20 @@ figure {
         left: 0;
         right: 0;
         margin: auto;
+        -webkit-filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.5));
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.5));
     }
     #canvas {
-    //    background-clip: padding-box;
+        background-clip: padding-box;
         background-color: #fff;
         border: 1px solid #333;
         border-radius: 50%;
         margin: 50px 10px 270px 0px;
         z-index: 1;
         image-rendering: optimizeSpeed;
-    //     -webkit-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6);
-    //    -moz-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6);
-    //    box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6);
+         -webkit-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6);
+       -moz-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6);
+        box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6);
     }
     .text-animation-wrap {
         position: relative;
