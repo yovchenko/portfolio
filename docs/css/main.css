@@ -1142,8 +1142,8 @@ main {
   -ms-grid-row-span: 3;
   grid-row: 1 / 4;
   z-index: 2;
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out; }
+  -webkit-transition: all 500ms linear;
+  transition: all 500ms linear; }
 
 .canvasBackground {
   width: 100%;
@@ -1185,8 +1185,8 @@ figure {
           align-items: flex-end;
   -webkit-transform-origin: top right;
   transform-origin: top right;
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out; }
+  -webkit-transition: all 500ms linear;
+  transition: all 500ms linear; }
   #wrapperCanvas img {
     position: absolute;
     top: 0;
@@ -1439,8 +1439,8 @@ article p {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   grid-row: 1 / 4;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out; }
+  -webkit-transition: all 500ms linear;
+  transition: all 500ms linear; }
 
 .bookWrap {
   width: 100%;
@@ -1460,8 +1460,8 @@ article p {
   bottom: 0;
   -webkit-transform-origin: top right;
   transform-origin: top right;
-  -webkit-transition: all 500ms ease-in-out !important;
-  transition: all 500ms ease-in-out !important; }
+  -webkit-transition: all 500ms linear;
+  transition: all 500ms linear; }
 
 .align {
   position: relative;
@@ -1759,8 +1759,8 @@ article p {
   position: absolute;
   -webkit-transform-origin: top right;
   transform-origin: top right;
-  -webkit-transition: all 500ms ease-in-out !important;
-  transition: all 500ms ease-in-out !important; }
+  -webkit-transition: all 500ms linear;
+  transition: all 500ms linear; }
 
 #form_wrap {
   height: 446px;
@@ -2619,12 +2619,12 @@ h3 {
   .canvas-box {
     -webkit-transform: scale(0.85);
             transform: scale(0.85);
-    -webkit-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out; } }
+    -webkit-transition: all 500ms linear;
+    transition: all 500ms linear; } }
 
 @media all and (max-aspect-ratio: 19 / 21) and (min-aspect-ratio: 19 / 28) {
   .canvas-box {
     -webkit-transform: scale(0.75);
             transform: scale(0.75);
-    -webkit-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out; } }
+    -webkit-transition: all 500ms linear;
+    transition: all 500ms linear; } }

@@ -254,7 +254,7 @@ main {
     grid-column: 1 / 4;
     grid-row: 1 / 4;
     z-index: 2;
-    transition: all 500ms ease-in-out;
+    transition: all 500ms linear;
 }
 
 .canvasBackground {
@@ -295,8 +295,8 @@ figure {
     -ms-transform-origin: top right;
     -webkit-transform-origin: top right;
     transform-origin: top right;
-    -webkit-transition: all 500ms ease-in-out;
-    transition: all 500ms ease-in-out;
+    -webkit-transition: all 500ms linear;
+    transition: all 500ms linear;
     img {
         position: absolute;
         top: 0;
@@ -545,7 +545,8 @@ article p {
     position: relative;
     grid-column: 1 / 4;
     grid-row: 1 / 4;
-    transition: 1s ease-in-out;
+    -webkit-transition: all 500ms linear;
+    transition: all 500ms linear;
 }
 
 .bookWrap {
@@ -569,8 +570,8 @@ article p {
     -ms-transform-origin: top right;
     -webkit-transform-origin: top right;
     transform-origin: top right;
-    -webkit-transition: all 500ms ease-in-out !important;
-    transition: all 500ms ease-in-out !important;
+    -webkit-transition: all 500ms linear;
+    transition: all 500ms linear;
 }
 
 .align {
@@ -941,8 +942,8 @@ article p {
     -ms-transform-origin: top right;
     -webkit-transform-origin: top right;
     transform-origin: top right;
-    -webkit-transition: all 500ms ease-in-out !important;
-    transition: all 500ms ease-in-out !important;
+    -webkit-transition: all 500ms linear;
+    transition: all 500ms linear;
 }
 
 #form_wrap {
@@ -1878,13 +1879,13 @@ h3 {
 @media all and (max-aspect-ratio: 20/18) and (min-aspect-ratio: 19/21) {
     .canvas-box {
         transform: scale(.85);
-        transition: all 500ms ease-in-out;
+        transition: all 500ms linear;
     }
 }
 
 @media all and (max-aspect-ratio: 19/21) and (min-aspect-ratio: 19/28){
     .canvas-box {
         transform: scale(.75);
-        transition: all 500ms ease-in-out;
+        transition: all 500ms linear;
     }
 }
