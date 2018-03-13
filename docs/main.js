@@ -11159,14 +11159,15 @@ var Trianglify = __webpack_require__(440);
 var pattern = void 0,
     encode = void 0,
     svgString = '',
-    opacity = 0.55,
-    increment = 0.05,
-    str = '',
+    opacity = 0.05,
     title = document.getElementsByClassName('entry-title')[0],
     pulse = setInterval(function () {
-    opacity += increment;
-    str = opacity.toFixed(2);
-    if (str === '0.95' || str === '0.05') increment = -increment;else title.style.color = 'rgba(255%,255%,255%,' + str + ')';
+    if (document.documentElement.className === 'wf-pangolin-n4-active wf-active') {
+        if (opacity <= 0.95) {
+            opacity += opacity;
+            title.style.color = 'rgba(255%,255%,255%,' + opacity.toFixed(2) + ')';
+        } else clearInterval(pulse);
+    }
 }, 100);
 
 var page = exports.page = Object.create(null);
@@ -11262,7 +11263,7 @@ var delay = setTimeout(function () {
         enumerable: false
     });
     delete page.elements.footer;
-    pulse = increment = opacity = str = title = pattern = svgString = encode = null; /*there is no place for the garbage collection here*/
+    pulse = opacity = title = pattern = svgString = encode = null; /*there is no place for the garbage collection here*/
     if (document.images) {
         var img1 = new Image();
         var img2 = new Image();

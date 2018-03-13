@@ -92,7 +92,7 @@ header {
 .fps {
     position: absolute;
     margin: 5px;
-    font-size: 1.4em;
+    font-size: 20px;
     right: 0;
     top: 65px;
     z-index: 1;
@@ -1220,7 +1220,7 @@ footer .wrapper {
         visibility: hidden;
         font-family: 'Pangolin', cursive, Arial, Helvetica, sans-serif;
         font-size: 2.5rem;
-        color: rgba(255%, 255%, 255%, 0.65);
+        color: rgba(255%, 255%, 255%, 0.05);
         position: relative;
         top: 50px;
         &.is--invisible {
@@ -1658,7 +1658,7 @@ h3 {
         -moz-transform: scale(1.07);
     }
     .fps {
-        font-size: 1.3em;
+        font-size: 18px;
     }
     .menu__header>p[class]:not(.menu__init):hover,
     .menu__header>p[class]:not(.menu__init):focus {
@@ -1767,7 +1767,7 @@ h3 {
         -moz-transform: scale(1.07);
     }
     .fps {
-        font-size: 1.2em;
+        font-size: 16px;
     }
 }
 
