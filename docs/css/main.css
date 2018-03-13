@@ -1198,7 +1198,6 @@ figure {
     background-color: #fff;
     border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    margin: 50px 20px 270px 0px;
     z-index: 1;
     image-rendering: optimizeSpeed; }
   #wrapperCanvas .text-animation-wrap {
