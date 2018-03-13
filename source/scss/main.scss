@@ -1219,7 +1219,7 @@ footer .wrapper {
     .entry-title {
         visibility: hidden;
         font-family: 'Pangolin', cursive;
-        font-size: 2.5rem;
+        @include responsive-font(4.2vw, 25px, 50px);
         color: rgba(255%, 255%, 255%, 0.005);
         position: relative;
         top: 50px;
@@ -1599,6 +1599,11 @@ h3 {
 }
 
 @media all and (max-width: 767px) and (min-width: 577px) {
+    .entry-header {
+        .entry-title {
+            @include responsive-font(4.2vw, 20px, 50px);
+    }
+}
     .navicon:focus,
     .navicon:hover,
     .navicon__arrow:focus,
@@ -1684,6 +1689,11 @@ h3 {
 }
 
 @media all and (max-width: 576px) {
+    .entry-header {
+        .entry-title {
+            @include responsive-font(4.2vw, 18px, 50px);
+    }
+}
     .menu__header>p[class]:not(.menu__init):hover,
     .menu__header>p[class]:not(.menu__init):focus {
         text-shadow: initial;
