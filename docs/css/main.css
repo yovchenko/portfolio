@@ -902,6 +902,9 @@ html, html body {
     background-repeat: no-repeat;
     will-change: transform; }
 
+.wf-active html, .wf-active html body, html .wf-active body {
+  font-family: 'Pangolin', cursive; }
+
 .grid-container {
   display: -ms-grid;
   display: grid;
@@ -1988,6 +1991,9 @@ footer .wrapper {
       animation: spin 1.5s linear infinite;
       /* Chrome, Firefox 16+, IE 10+, Opera */ }
 
+.wf-active .entry-header .entry-title {
+  visibility: visible; }
+
 .entry-header {
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
@@ -1997,6 +2003,7 @@ footer .wrapper {
   position: relative;
   z-index: 10001; }
   .entry-header .entry-title {
+    visibility: hidden;
     font-family: 'Pangolin', cursive, Arial, Helvetica, sans-serif;
     font-size: 2.5rem;
     color: rgba(255, 255, 255, 0.65);

@@ -11166,7 +11166,7 @@ var pattern = void 0,
     pulse = setInterval(function () {
     opacity += increment;
     str = opacity.toFixed(2);
-    if (str === '0.95' || str === '0.55') increment = -increment;else title.style.color = 'rgba(255%,255%,255%,' + str + ')';
+    if (str === '0.95' || str === '0.05') increment = -increment;else title.style.color = 'rgba(255%,255%,255%,' + str + ')';
 }, 100);
 
 var page = exports.page = Object.create(null);
