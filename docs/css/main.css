@@ -1141,7 +1141,9 @@ main {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   grid-row: 1 / 4;
-  z-index: 2; }
+  z-index: 2;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out; }
 
 .canvasBackground {
   width: 100%;
@@ -1183,8 +1185,8 @@ figure {
           align-items: flex-end;
   -webkit-transform-origin: top right;
   transform-origin: top right;
-  -webkit-transition: all 500ms ease-in-out !important;
-  transition: all 500ms ease-in-out !important; }
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out; }
   #wrapperCanvas img {
     position: absolute;
     top: 0;
@@ -2613,7 +2615,16 @@ h3 {
   article {
     line-height: 1.1; } }
 
-@media all and (max-aspect-ratio: 23 / 18) and (min-aspect-ratio: 18 / 23) {
+@media all and (max-aspect-ratio: 20 / 18) and (min-aspect-ratio: 19 / 21) {
   .canvas-box {
     -webkit-transform: scale(0.85);
-            transform: scale(0.85); } }
+            transform: scale(0.85);
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out; } }
+
+@media all and (max-aspect-ratio: 19 / 21) and (min-aspect-ratio: 19 / 28) {
+  .canvas-box {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+    -webkit-transition: all 500ms ease-in-out;
+    transition: all 500ms ease-in-out; } }
