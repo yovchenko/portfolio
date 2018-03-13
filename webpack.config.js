@@ -72,7 +72,7 @@ module.exports = {
                 }, ]
             },
             {
-                test: /\.(png|jpg?g|gif|)$/i,
+                test: /\.(png|jpg?g|gif|svg|)$/i,
                 use: [
 
                     {
