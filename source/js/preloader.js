@@ -9,7 +9,7 @@ import {
 let pattern,
     encode,
     svgString = '',
-    opacity = 0.05,
+    opacity = 0.005,
     title = document.getElementsByClassName('entry-title')[0],
     pulse = setInterval(function () {
         if(document.documentElement.className === 'wf-pangolin-n4-active wf-active')
