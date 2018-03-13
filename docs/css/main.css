@@ -1187,16 +1187,12 @@ figure {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  background-image: url(../images/me-large.png);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
   -webkit-transform-origin: top right;
   transform-origin: top right;
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
   -webkit-transition: all 500ms ease-in-out !important;
   transition: all 500ms ease-in-out !important; }
+  #wrapperCanvas svg:nth-child(1) {
+    position: absolute; }
   #wrapperCanvas #canvas {
     background-color: #fff;
     border: 2px solid #333;
