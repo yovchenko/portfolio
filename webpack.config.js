@@ -74,6 +74,7 @@ module.exports = {
             },
             {
                 test: /\.(png|jpg?g|gif|svg|)$/i,
+                exclude: [/fonts/],
                 use: [
 
                     {
