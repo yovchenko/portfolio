@@ -92,7 +92,7 @@ header {
 .fps {
     position: absolute;
     margin: 5px;
-    font-size: 20px;
+    font-size: 1.8em;
     right: 0;
     top: 65px;
     z-index: 1;
@@ -1658,7 +1658,7 @@ h3 {
         -moz-transform: scale(1.07);
     }
     .fps {
-        font-size: 18px;
+        font-size: 1.6em;
     }
     .menu__header>p[class]:not(.menu__init):hover,
     .menu__header>p[class]:not(.menu__init):focus {
@@ -1767,7 +1767,7 @@ h3 {
         -moz-transform: scale(1.07);
     }
     .fps {
-        font-size: 16px;
+        font-size: 1.4em;
     }
 }
 
