@@ -1738,6 +1738,7 @@ article p {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   grid-row: 1 / 4;
+  transition: 1s ease-in-out;
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out; }
 
@@ -2609,7 +2610,9 @@ h3 {
     width: 101%; }
   .align.resized {
     -webkit-transform: scale(1.2);
-            transform: scale(1.2); } }
+            transform: scale(1.2);
+    -webkit-transition: all 500ms linear;
+    transition: all 500ms linear; } }
 
 @media all and (max-aspect-ratio: 21 / 19) and (min-aspect-ratio: 19 / 21) {
   article {

@@ -31,8 +31,8 @@ html {
     }
 }
 
-.wf-active html {	
-        font-family: 'Pangolin', cursive;	
+.wf-active html {
+    font-family: 'Pangolin', cursive;
 }
 
 .grid-container {
@@ -254,6 +254,9 @@ main {
     grid-column: 1 / 4;
     grid-row: 1 / 4;
     z-index: 2;
+    -webkit-transition: all 500ms linear;
+    -moz-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
     transition: all 500ms linear;
 }
 
@@ -296,6 +299,8 @@ figure {
     -webkit-transform-origin: top right;
     transform-origin: top right;
     -webkit-transition: all 500ms linear;
+    -moz-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
     transition: all 500ms linear;
     img {
         position: absolute;
@@ -546,6 +551,8 @@ article p {
     grid-column: 1 / 4;
     grid-row: 1 / 4;
     -webkit-transition: all 500ms linear;
+    -moz-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
     transition: all 500ms linear;
 }
 
@@ -571,6 +578,8 @@ article p {
     -webkit-transform-origin: top right;
     transform-origin: top right;
     -webkit-transition: all 500ms linear;
+    -moz-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
     transition: all 500ms linear;
 }
 
@@ -919,6 +928,10 @@ article p {
     grid-column: 1 / 4;
     grid-row: 1 / 4;
     transition: 1s ease-in-out;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+    transition: 1s ease-in-out;
 }
 
 .envelope {
@@ -943,6 +956,8 @@ article p {
     -webkit-transform-origin: top right;
     transform-origin: top right;
     -webkit-transition: all 500ms linear;
+    -moz-transition: all 500ms linear;
+    -o-transition: all 500ms linear;
     transition: all 500ms linear;
 }
 
@@ -1202,13 +1217,13 @@ footer .wrapper {
     }
 }
 
-.wf-active {	
-        .entry-header {	
-            .entry-title {	
-                visibility: visible;	
-                 }	
-             }	
+.wf-active {
+    .entry-header {
+        .entry-title {
+            visibility: visible;
         }
+    }
+}
 
 .entry-header {
     text-align: center;
@@ -1221,7 +1236,9 @@ footer .wrapper {
     .entry-title {
         visibility: hidden;
         font-family: 'Pangolin', cursive;
-        @include responsive-font(4.2vw, 25px, 50px);
+        @include responsive-font(4.2vw,
+        25px,
+        50px);
         color: rgba(255%, 255%, 255%, 0.005);
         position: relative;
         top: 50px;
@@ -1230,7 +1247,7 @@ footer .wrapper {
         }
     }
 }
- 
+
 @-webkit-keyframes spin {
     0% {
         -webkit-transform: rotate(0deg);
@@ -1603,9 +1620,11 @@ h3 {
 @media all and (max-width: 767px) and (min-width: 577px) {
     .entry-header {
         .entry-title {
-            @include responsive-font(4.2vw, 20px, 50px);
+            @include responsive-font(4.2vw,
+            20px,
+            50px);
+        }
     }
-}
     .navicon:focus,
     .navicon:hover,
     .navicon__arrow:focus,
@@ -1693,9 +1712,11 @@ h3 {
 @media all and (max-width: 576px) {
     .entry-header {
         .entry-title {
-            @include responsive-font(4.2vw, 18px, 50px);
+            @include responsive-font(4.2vw,
+            18px,
+            50px);
+        }
     }
-}
     .menu__header>p[class]:not(.menu__init):hover,
     .menu__header>p[class]:not(.menu__init):focus {
         text-shadow: initial;
@@ -1867,6 +1888,10 @@ h3 {
     }
     .align.resized {
         transform: scale(1.2);
+        -webkit-transition: all 500ms linear;
+        -moz-transition: all 500ms linear;
+        -o-transition: all 500ms linear;
+        transition: all 500ms linear;
     }
 }
 
@@ -1879,13 +1904,19 @@ h3 {
 @media all and (max-aspect-ratio: 20/18) and (min-aspect-ratio: 19/21) {
     .canvas-box {
         transform: scale(.85);
+        -webkit-transition: all 500ms linear;
+        -moz-transition: all 500ms linear;
+        -o-transition: all 500ms linear;
         transition: all 500ms linear;
     }
 }
 
-@media all and (max-aspect-ratio: 19/21) and (min-aspect-ratio: 19/28){
+@media all and (max-aspect-ratio: 19/21) and (min-aspect-ratio: 19/28) {
     .canvas-box {
         transform: scale(.75);
+        -webkit-transition: all 500ms linear;
+        -moz-transition: all 500ms linear;
+        -o-transition: all 500ms linear;
         transition: all 500ms linear;
     }
 }
