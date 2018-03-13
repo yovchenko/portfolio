@@ -875,7 +875,7 @@ progress[value]::-moz-progress-bar {
   font-family: "Pangolin";
   font-style: 400;
   font-weight: normal;
-  src: url(../fonts/Pangolin-Regular.eot&b3a3dba541543e4f1f0385b789bf7520) format("eot"), url(../fonts/Pangolin-Regular.woff2&05b6ea444f7bf5b56b536c03c33cb772) format("woff2"), url(../fonts/Pangolin-Regular.woff&ce79c51fdeb924a9e764259ff4f5a507) format("woff"), url(../fonts/Pangolin-Regular.ttf&0529e076a86ca72872154555487ffdb9) format("truetype"), url(../images/Pangolin-Regular.svg#Pangolin) format("svg"); }
+  src: url(../fonts/Pangolin-Regular.eot&b3a3dba541543e4f1f0385b789bf7520) format("eot"), url(../fonts/Pangolin-Regular.woff2&05b6ea444f7bf5b56b536c03c33cb772) format("woff2"), url(../fonts/Pangolin-Regular.woff&ce79c51fdeb924a9e764259ff4f5a507) format("woff"), url(../fonts/Pangolin-Regular.ttf&0529e076a86ca72872154555487ffdb9) format("truetype"), url(../fonts/Pangolin-Regular.svg&fea8dde1575ffc1eee46ca4b30ec52a4#Pangolin) format("svg"); }
 
 html, html body {
   height: 100%;
@@ -1187,11 +1187,8 @@ figure {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  background-image: url(../images/me-large.svg);
   background-size: cover;
   background-position: center center;
-  -webkit-filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.5));
-  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.5));
   background-repeat: no-repeat;
   -webkit-transform-origin: top right;
   transform-origin: top right;
