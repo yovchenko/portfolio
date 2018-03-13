@@ -1195,15 +1195,12 @@ figure {
   -webkit-transition: all 500ms ease-in-out !important;
   transition: all 500ms ease-in-out !important; }
   #wrapperCanvas #canvas {
-    background-clip: padding-box;
     background-color: #fff;
-    border: 2px solid rgba(0, 0, 0, 0.1);
+    border: 2px solid #333;
     border-radius: 50%;
     margin: 50px 20px 270px 0px;
     z-index: 1;
-    image-rendering: optimizeSpeed;
-    -webkit-box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6);
-    box-shadow: 0 8px 6px -6px rgba(255, 255, 255, 0.6), 0 -8px 6px -6px rgba(255, 255, 255, 0.6), 8px 0px 6px -6px rgba(255, 255, 255, 0.6), -8px 0px 6px -6px rgba(255, 255, 255, 0.6); }
+    image-rendering: optimizeSpeed; }
   #wrapperCanvas .text-animation-wrap {
     position: relative; }
     #wrapperCanvas .text-animation-wrap .text-animation {
