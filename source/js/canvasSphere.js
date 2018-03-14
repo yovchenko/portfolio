@@ -270,7 +270,7 @@ export default function mainCanvas() {
 					case 'd-2':
 						if (offset >= -203) {
 							el.style.strokeDashoffset = offset - 1.5;
-							if(offset === -200) document.getElementsByClassName('text-'+letters[0])[0].style.visibility = "visible";
+							if(offset === -200) document.getElementsByClassName('text-'+letters[0])[0].className += ' is-visible';
 						}
 						break;
 					case 'e-1':
@@ -281,13 +281,13 @@ export default function mainCanvas() {
 					case 'e-2':
 						if (offset >= -417) {
 							el.style.strokeDashoffset = offset;
-							if(offset === -416) document.getElementsByClassName('text-'+letters[1])[0].style.visibility = "visible";
+							if(offset === -416) document.getElementsByClassName('text-'+letters[1])[0].className += ' is-visible';
 						}
 						break;
 					case 's-1':
 						if (offset >= -512) {
 							el.style.strokeDashoffset = offset + 1.5;
-							if(offset === -512) document.getElementsByClassName('text-'+letters[2])[0].style.visibility = "visible";
+							if(offset === -512) document.getElementsByClassName('text-'+letters[2])[0].className += ' is-visible';
 						}
 						break;
 					case 'i-1':
@@ -298,7 +298,7 @@ export default function mainCanvas() {
 					case 'i-2':
 						if (offset >= -603) {
 							el.style.strokeDashoffset = offset - 1;
-							if(offset === -600) document.getElementsByClassName('text-'+letters[3])[0].style.visibility = "visible";
+							if(offset === -600) document.getElementsByClassName('text-'+letters[3])[0].className += ' is-visible';
 						}
 						break;
 					case 'g-1':
@@ -309,7 +309,7 @@ export default function mainCanvas() {
 					case 'g-2':
 						if (offset >= -794) {
 							el.style.strokeDashoffset = offset - 0.5;
-							if(offset === -792) document.getElementsByClassName('text-'+letters[4])[0].style.visibility = "visible";
+							if(offset === -792) document.getElementsByClassName('text-'+letters[4])[0].className += ' is-visible';
 						}
 						break;
 					case 'n-1':
@@ -320,7 +320,7 @@ export default function mainCanvas() {
 					case 'n-2':
 						if (offset >= -963) {
 							el.style.strokeDashoffset = offset - 1.5;
-							if(offset === -960) document.getElementsByClassName('text-'+letters[5])[0].style.visibility = "visible";
+							if(offset === -960) document.getElementsByClassName('text-'+letters[5])[0].className += ' is-visible';
 						}
 						break;
 					default: 
@@ -346,7 +346,7 @@ export default function mainCanvas() {
 				let c,
 				len = letters.length;
 				for(c = 0; c < len; c++) {
-					document.getElementsByClassName('text-'+letters[c])[0].style.visibility = 'hidden';
+					document.getElementsByClassName('text-'+letters[c])[0].className = 'text-'+letters[c];
 				}
 			},1000);
 		});
