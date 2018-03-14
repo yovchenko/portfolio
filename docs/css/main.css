@@ -1220,8 +1220,8 @@ figure {
         opacity: 0;
         position: absolute;
         top: 105px;
-        left: 36px;
-        font-size: 1.4em; }
+        left: 39px;
+        font-size: 1.31em; }
         #wrapperCanvas .text-animation-wrap .text-animation .text-d.is-visible {
           will-change: auto;
           -webkit-transition: opacity 100ms linear;
@@ -1233,7 +1233,7 @@ figure {
         position: absolute;
         top: 105px;
         left: 83px;
-        font-size: 1.4em; }
+        font-size: 1.31em; }
         #wrapperCanvas .text-animation-wrap .text-animation .text-e.is-visible {
           will-change: auto;
           -webkit-transition: opacity 100ms linear;
@@ -1245,7 +1245,7 @@ figure {
         position: absolute;
         top: 105px;
         left: 120px;
-        font-size: 1.4em; }
+        font-size: 1.31em; }
         #wrapperCanvas .text-animation-wrap .text-animation .text-s.is-visible {
           will-change: auto;
           -webkit-transition: opacity 100ms linear;
@@ -1257,7 +1257,7 @@ figure {
         position: absolute;
         top: 105px;
         left: 159px;
-        font-size: 1.4em; }
+        font-size: 1.31em; }
         #wrapperCanvas .text-animation-wrap .text-animation .text-i.is-visible {
           will-change: auto;
           -webkit-transition: opacity 100ms linear;
@@ -1268,8 +1268,8 @@ figure {
         opacity: 0;
         position: absolute;
         top: 105px;
-        left: 175px;
-        font-size: 1.4em; }
+        left: 176px;
+        font-size: 1.31em; }
         #wrapperCanvas .text-animation-wrap .text-animation .text-g.is-visible {
           will-change: auto;
           -webkit-transition: opacity 100ms linear;
@@ -1280,8 +1280,8 @@ figure {
         opacity: 0;
         position: absolute;
         top: 105px;
-        left: 212px;
-        font-size: 1.4em; }
+        left: 213px;
+        font-size: 1.31em; }
         #wrapperCanvas .text-animation-wrap .text-animation .text-n.is-visible {
           will-change: auto;
           -webkit-transition: opacity 100ms linear;
@@ -1302,29 +1302,29 @@ figure {
           stroke-linecap: round;
           stroke: #333;
           stroke-dashoffset: 0px;
-          stroke-dasharray: 0px 1180px; }
+          stroke-dasharray: 0px 870px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.d-1 {
-          stroke-dasharray: 22px 1180px; }
+          stroke-dasharray: 22px 870px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.d-2 {
-          stroke-dasharray: 38px 1180px; }
+          stroke-dasharray: 38px 870px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.e-1 {
-          stroke-dasharray: 14px 1180px; }
+          stroke-dasharray: 14px 870px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.e-2 {
-          stroke-dasharray: 40px 1180px; }
+          stroke-dasharray: 40px 870px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.s-1 {
-          stroke-dasharray: 44px 1180px; }
+          stroke-dasharray: 38px 870px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.i-1 {
-          stroke-dasharray: 0.2px 1180px; }
+          stroke-dasharray: 0.2px 870px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.i-2 {
-          stroke-dasharray: 18px 1180px; }
+          stroke-dasharray: 16px 870px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.g-1 {
-          stroke-dasharray: 15px 1180px; }
+          stroke-dasharray: 12px 870px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.g-2 {
-          stroke-dasharray: 47px 1180px; }
+          stroke-dasharray: 44px 870px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.n-1 {
-          stroke-dasharray: 18px 1180px; }
+          stroke-dasharray: 16px 870px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.n-2 {
-          stroke-dasharray: 30.5px 1180px; }
+          stroke-dasharray: 29px 870px; }
 
 .svg-logo-one div svg,
 .svg-logo-two div svg {

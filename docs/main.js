@@ -8702,7 +8702,7 @@ function mainCanvas() {
 				switch (charParts[b]) {
 					case 'd-1':
 						if (offset >= -151) {
-							el.style.strokeDashoffset = offset - 0.5;
+							el.style.strokeDashoffset = offset - 1.5;
 						}
 						break;
 					case 'd-2':
@@ -8717,48 +8717,48 @@ function mainCanvas() {
 						}
 						break;
 					case 'e-2':
-						if (offset >= -417) {
+						if (offset >= -367) {
 							el.style.strokeDashoffset = offset;
-							if (offset === -416) document.getElementsByClassName('text-' + letters[1])[0].className += ' is-visible';
+							if (offset === -364) document.getElementsByClassName('text-' + letters[1])[0].className += ' is-visible';
 						}
 						break;
 					case 's-1':
-						if (offset >= -512) {
-							el.style.strokeDashoffset = offset + 1.5;
-							if (offset === -512) document.getElementsByClassName('text-' + letters[2])[0].className += ' is-visible';
+						if (offset >= -471) {
+							el.style.strokeDashoffset = offset - 0.5;
+							if (offset === -468) document.getElementsByClassName('text-' + letters[2])[0].className += ' is-visible';
 						}
 						break;
 					case 'i-1':
-						if (offset >= -596) {
+						if (offset >= -548) {
 							el.style.strokeDashoffset = offset;
 						}
 						break;
 					case 'i-2':
-						if (offset >= -603) {
+						if (offset >= -552) {
 							el.style.strokeDashoffset = offset - 1;
-							if (offset === -600) document.getElementsByClassName('text-' + letters[3])[0].className += ' is-visible';
+							if (offset === -552) document.getElementsByClassName('text-' + letters[3])[0].className += ' is-visible';
 						}
 						break;
 					case 'g-1':
-						if (offset >= -697) {
+						if (offset >= -613) {
 							el.style.strokeDashoffset = offset;
 						}
 						break;
 					case 'g-2':
-						if (offset >= -794) {
+						if (offset >= -704) {
 							el.style.strokeDashoffset = offset - 0.5;
-							if (offset === -792) document.getElementsByClassName('text-' + letters[4])[0].className += ' is-visible';
+							if (offset === -704) document.getElementsByClassName('text-' + letters[4])[0].className += ' is-visible';
 						}
 						break;
 					case 'n-1':
-						if (offset >= -883) {
-							el.style.strokeDashoffset = offset - 1.5;
+						if (offset >= -792) {
+							el.style.strokeDashoffset = offset;
 						}
 						break;
 					case 'n-2':
-						if (offset >= -963) {
-							el.style.strokeDashoffset = offset - 1.5;
-							if (offset === -960) document.getElementsByClassName('text-' + letters[5])[0].className += ' is-visible';
+						if (offset >= -870) {
+							el.style.strokeDashoffset = offset;
+							if (offset === -868) document.getElementsByClassName('text-' + letters[5])[0].className += ' is-visible';
 						}
 						break;
 					default:
@@ -8768,7 +8768,7 @@ function mainCanvas() {
 			}
 			offset -= 4;
 			requestTextAnimID = requestAnimationFrame(_showSvgText);
-			if (offset < -963) {
+			if (offset < -870) {
 				cancelAnimationFrame(requestTextAnimID);
 			}
 		};
