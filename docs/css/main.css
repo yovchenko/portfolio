@@ -1616,8 +1616,7 @@ article p {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
-    top: 0;
+    bottom: -1px;
     margin: auto; }
   .sj-book .book-browser-support td:nth-child(1) {
     position: relative;
@@ -1645,8 +1644,7 @@ article p {
       height: 58px;
       left: 0;
       right: 0;
-      bottom: 0;
-      top: 0;
+      bottom: 2px;
       margin: auto; }
     .sj-book .page-speed-tools tfoot td svg {
       position: absolute;
@@ -1654,8 +1652,7 @@ article p {
       height: 68px;
       left: 0;
       right: 0;
-      bottom: 0;
-      top: 0;
+      bottom: -3px;
       margin: auto; }
 
 .sj-book .hard.p4.own-size.page.even .page-speed-tools {
