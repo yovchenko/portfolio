@@ -1617,7 +1617,7 @@ article p {
     left: 0;
     right: 0;
     bottom: -1px;
-    margin: auto; }
+    margin: 0 auto; }
   .sj-book .book-browser-support td:nth-child(1) {
     position: relative;
     width: 55px;
@@ -1645,7 +1645,7 @@ article p {
       left: 0;
       right: 0;
       bottom: 2px;
-      margin: auto; }
+      margin: 0 auto; }
     .sj-book .page-speed-tools tfoot td svg {
       position: absolute;
       width: 100%;
@@ -1653,7 +1653,7 @@ article p {
       left: 0;
       right: 0;
       bottom: -3px;
-      margin: auto; }
+      margin: 0 auto; }
 
 .sj-book .hard.p4.own-size.page.even .page-speed-tools {
   margin: 0px 20px; }
