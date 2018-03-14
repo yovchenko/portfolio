@@ -1215,6 +1215,42 @@ figure {
       bottom: 270px;
       overflow: hidden;
       text-align: center; }
+      #wrapperCanvas .text-animation-wrap .text-animation .text-d {
+        visibility: hidden;
+        position: absolute;
+        top: 105px;
+        left: 36px;
+        font-size: 1.4em; }
+      #wrapperCanvas .text-animation-wrap .text-animation .text-e {
+        visibility: hidden;
+        position: absolute;
+        top: 105px;
+        left: 83px;
+        font-size: 1.4em; }
+      #wrapperCanvas .text-animation-wrap .text-animation .text-s {
+        visibility: hidden;
+        position: absolute;
+        top: 105px;
+        left: 120px;
+        font-size: 1.4em; }
+      #wrapperCanvas .text-animation-wrap .text-animation .text-i {
+        visibility: hidden;
+        position: absolute;
+        top: 105px;
+        left: 159px;
+        font-size: 1.4em; }
+      #wrapperCanvas .text-animation-wrap .text-animation .text-g {
+        visibility: hidden;
+        position: absolute;
+        top: 105px;
+        left: 175px;
+        font-size: 1.4em; }
+      #wrapperCanvas .text-animation-wrap .text-animation .text-n {
+        visibility: hidden;
+        position: absolute;
+        top: 105px;
+        left: 212px;
+        font-size: 1.4em; }
       #wrapperCanvas .text-animation-wrap .text-animation svg {
         width: 600px;
         height: 400px;

@@ -2,10 +2,10 @@ const Trianglify = require('trianglify');
 import mainCanvas from './canvasSphere';
 import {
     resizeContent
-} from './resize.js';
+} from './resize';
 import {
     anim
-} from './jsonAnimation.js';
+} from './jsonAnimation';
 let pattern,
     encode,
     svgString = '',
