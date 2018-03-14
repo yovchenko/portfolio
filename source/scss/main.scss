@@ -333,105 +333,63 @@ figure {
             overflow: hidden;
             text-align: center;
             .text-d {
-                will-change: opacity;
-                opacity: 0;
+                visibility: hidden;
                 position: absolute;
                 top: 105px;
                 left: 39px;
                 font-size: 1.31em;
                 &.is-visible {
-                    will-change: auto;
-                    -webkit-transition: opacity 100ms linear;
-                    -moz-transition: opacity 100ms linear;
-                    -ms-transition: opacity 100ms linear;
-                    -o-transition: opacity 100ms linear;
-                    transition: opacity 100ms linear;
-                    opacity: 1;
+                    visibility: visible;
                 }
             }
             .text-e {
-                will-change: opacity;
-                opacity: 0;
+                visibility: hidden;
                 position: absolute;
                 top: 105px;
                 left: 83px;
                 font-size: 1.31em;
                 &.is-visible {
-                    will-change: auto;
-                    -webkit-transition: opacity 100ms linear;
-                    -moz-transition: opacity 100ms linear;
-                    -ms-transition: opacity 100ms linear;
-                    -o-transition: opacity 100ms linear;
-                    transition: opacity 100ms linear;
-                    opacity: 1;
+                    visibility: visible;
                 }
             }
             .text-s {
-                will-change: opacity;
-                opacity: 0;
+                visibility: hidden;
                 position: absolute;
                 top: 105px;
                 left: 120px;
                 font-size: 1.31em;
                 &.is-visible {
-                    will-change: auto;
-                    -webkit-transition: opacity 100ms linear;
-                    -moz-transition: opacity 100ms linear;
-                    -ms-transition: opacity 100ms linear;
-                    -o-transition: opacity 100ms linear;
-                    transition: opacity 100ms linear;
-                    opacity: 1;
+                    visibility: visible;
                 }
             }
             .text-i {
-                will-change: opacity;
-                opacity: 0;
+                visibility: hidden;
                 position: absolute;
                 top: 105px;
                 left: 159px;
                 font-size: 1.31em;
                 &.is-visible {
-                    will-change: auto;
-                    -webkit-transition: opacity 100ms linear;
-                    -moz-transition: opacity 100ms linear;
-                    -ms-transition: opacity 100ms linear;
-                    -o-transition: opacity 100ms linear;
-                    transition: opacity 100ms linear;
-                    opacity: 1;
+                    visibility: visible;
                 }
             }
             .text-g {
-                will-change: opacity;
-                opacity: 0;
+                visibility: hidden;
                 position: absolute;
                 top: 105px;
                 left: 176px;
                 font-size: 1.31em;
                 &.is-visible {
-                    will-change: auto;
-                    -webkit-transition: opacity 100ms linear;
-                    -moz-transition: opacity 100ms linear;
-                    -ms-transition: opacity 100ms linear;
-                    -o-transition: opacity 100ms linear;
-                    transition: opacity 100ms linear;
-                    opacity: 1;
+                    visibility: visible;
                 }
             }
             .text-n {
-                will-change: opacity;
-                opacity: 0;
+                visibility: hidden;
                 position: absolute;
                 top: 105px;
                 left: 213px;
                 font-size: 1.31em;
                 &.is-visible {
-                    will-change: auto;
-                    -webkit-transition: opacity 100ms linear;
-                    -moz-transition: opacity 100ms linear;
-                    -ms-transition: opacity 100ms linear;
-                    -o-transition: opacity 100ms linear;
-                    transition: opacity 100ms linear;
-                    opacity: 1;
+                   visibility: visible;
                 }
             }
             svg {

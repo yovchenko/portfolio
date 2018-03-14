@@ -318,8 +318,8 @@ export default function mainCanvas() {
 						}
 						break;
 					case 'n-2':
-						if (offset >= -870) {
-							el.style.strokeDashoffset = offset;
+						if (offset >= -868) {
+							el.style.strokeDashoffset = offset + 1.5;
 							if(offset === -868) document.getElementsByClassName('text-'+letters[5])[0].className += ' is-visible';
 						}
 						break;

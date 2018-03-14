@@ -1216,77 +1216,53 @@ figure {
       overflow: hidden;
       text-align: center; }
       #wrapperCanvas .text-animation-wrap .text-animation .text-d {
-        will-change: opacity;
-        opacity: 0;
+        visibility: hidden;
         position: absolute;
         top: 105px;
         left: 39px;
         font-size: 1.31em; }
         #wrapperCanvas .text-animation-wrap .text-animation .text-d.is-visible {
-          will-change: auto;
-          -webkit-transition: opacity 100ms linear;
-          transition: opacity 100ms linear;
-          opacity: 1; }
+          visibility: visible; }
       #wrapperCanvas .text-animation-wrap .text-animation .text-e {
-        will-change: opacity;
-        opacity: 0;
+        visibility: hidden;
         position: absolute;
         top: 105px;
         left: 83px;
         font-size: 1.31em; }
         #wrapperCanvas .text-animation-wrap .text-animation .text-e.is-visible {
-          will-change: auto;
-          -webkit-transition: opacity 100ms linear;
-          transition: opacity 100ms linear;
-          opacity: 1; }
+          visibility: visible; }
       #wrapperCanvas .text-animation-wrap .text-animation .text-s {
-        will-change: opacity;
-        opacity: 0;
+        visibility: hidden;
         position: absolute;
         top: 105px;
         left: 120px;
         font-size: 1.31em; }
         #wrapperCanvas .text-animation-wrap .text-animation .text-s.is-visible {
-          will-change: auto;
-          -webkit-transition: opacity 100ms linear;
-          transition: opacity 100ms linear;
-          opacity: 1; }
+          visibility: visible; }
       #wrapperCanvas .text-animation-wrap .text-animation .text-i {
-        will-change: opacity;
-        opacity: 0;
+        visibility: hidden;
         position: absolute;
         top: 105px;
         left: 159px;
         font-size: 1.31em; }
         #wrapperCanvas .text-animation-wrap .text-animation .text-i.is-visible {
-          will-change: auto;
-          -webkit-transition: opacity 100ms linear;
-          transition: opacity 100ms linear;
-          opacity: 1; }
+          visibility: visible; }
       #wrapperCanvas .text-animation-wrap .text-animation .text-g {
-        will-change: opacity;
-        opacity: 0;
+        visibility: hidden;
         position: absolute;
         top: 105px;
         left: 176px;
         font-size: 1.31em; }
         #wrapperCanvas .text-animation-wrap .text-animation .text-g.is-visible {
-          will-change: auto;
-          -webkit-transition: opacity 100ms linear;
-          transition: opacity 100ms linear;
-          opacity: 1; }
+          visibility: visible; }
       #wrapperCanvas .text-animation-wrap .text-animation .text-n {
-        will-change: opacity;
-        opacity: 0;
+        visibility: hidden;
         position: absolute;
         top: 105px;
         left: 213px;
         font-size: 1.31em; }
         #wrapperCanvas .text-animation-wrap .text-animation .text-n.is-visible {
-          will-change: auto;
-          -webkit-transition: opacity 100ms linear;
-          transition: opacity 100ms linear;
-          opacity: 1; }
+          visibility: visible; }
       #wrapperCanvas .text-animation-wrap .text-animation svg {
         width: 600px;
         height: 400px;
@@ -1302,29 +1278,29 @@ figure {
           stroke-linecap: round;
           stroke: #333;
           stroke-dashoffset: 0px;
-          stroke-dasharray: 0px 870px; }
+          stroke-dasharray: 0px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.d-1 {
-          stroke-dasharray: 22px 870px; }
+          stroke-dasharray: 22px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.d-2 {
-          stroke-dasharray: 38px 870px; }
+          stroke-dasharray: 38px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.e-1 {
-          stroke-dasharray: 14px 870px; }
+          stroke-dasharray: 14px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.e-2 {
-          stroke-dasharray: 40px 870px; }
+          stroke-dasharray: 40px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.s-1 {
-          stroke-dasharray: 38px 870px; }
+          stroke-dasharray: 38px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.i-1 {
-          stroke-dasharray: 0.2px 870px; }
+          stroke-dasharray: 0.2px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.i-2 {
-          stroke-dasharray: 16px 870px; }
+          stroke-dasharray: 16px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.g-1 {
-          stroke-dasharray: 12px 870px; }
+          stroke-dasharray: 12px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.g-2 {
-          stroke-dasharray: 44px 870px; }
+          stroke-dasharray: 44px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.n-1 {
-          stroke-dasharray: 16px 870px; }
+          stroke-dasharray: 16px 1180px; }
         #wrapperCanvas .text-animation-wrap .text-animation svg path.n-2 {
-          stroke-dasharray: 29px 870px; }
+          stroke-dasharray: 29px 1180px; }
 
 .svg-logo-one div svg,
 .svg-logo-two div svg {
