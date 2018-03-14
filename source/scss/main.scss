@@ -782,14 +782,11 @@ article p {
     text-align: center;
     padding-left: 20px;
     margin: 0px 20px 0px 40px;
-    th {
+    td {
         border: 1px solid #333;
         font-size: 52px;
         font-weight: normal;
         padding: 5px;
-    }
-    td {
-        @extend th;
     }
     tr:nth-child(3) {
         color: green;
