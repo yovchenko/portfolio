@@ -728,6 +728,25 @@ article p {
     left: 2px;
 }
 
+.hard.p4.own-size.page.even h1 {
+    font-size: 52px;
+    font-weight: normal;
+    text-align: right;
+    position: relative;
+    margin: 0.325em 0px 0.5em 0px;
+    right: 2px;
+}
+
+.page.odd h1{
+    font-size: 52px;
+    font-weight: normal;
+    text-align: left;
+    position: relative;
+    margin: 0.5em 0px;
+    top: -9px;
+    left: 2px;
+}
+
 .sj-book .book-browser-support {
     font-family: 'Pangolin', cursive;
     margin: -9px 40px 0px 20px;
@@ -778,14 +797,20 @@ article p {
     tfoot {
        td {
         position: relative;
-        height: 55px;
+        height: 52px;
+            padding: 5px;
         #mobile {
             height: 94%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
         }
         svg {
             position: absolute;
             width: 100%;
-            height: 110%;
+            height: 111%;
             left: 0;
             right: 0;
             bottom: 0;
@@ -794,6 +819,10 @@ article p {
            }
        }
     }
+}
+
+.sj-book  .hard.p4.own-size.page.even .page-speed-tools{
+        margin: 0px 20px;
 }
 
 .sj-book .book-browser-support {}
