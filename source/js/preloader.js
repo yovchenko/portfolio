@@ -133,5 +133,5 @@ let delay = setTimeout(function () {
         img6.src = "./images/before.png";
         img7.src = "./images/after.png";
     }
-}, 2000);
+}, 2500);
 
