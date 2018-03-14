@@ -715,7 +715,7 @@ article p {
     text-align: right;
     position: relative;
     margin: 0.5em 0px;
-    right: 5px;
+    right: 2px;
 }
 
 .hard.p3.own-size h1 {
@@ -725,7 +725,7 @@ article p {
     position: relative;
     margin: 0.5em 0px;
     top: -9px;
-    left: -1px;
+    left: 2px;
 }
 
 .sj-book .book-browser-support {
@@ -774,6 +774,25 @@ article p {
     }
     tr:nth-child(3) {
         color: green;
+    }
+    tfoot {
+       td {
+        position: relative;
+        height: 55px;
+        #mobile {
+            height: 94%;
+        }
+        svg {
+            position: absolute;
+            width: 100%;
+            height: 110%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+           }
+       }
     }
 }
 

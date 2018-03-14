@@ -1,6 +1,6 @@
 .slider {
 	position: absolute;
-	width: 80%;
+	width: 70%;
 	left: 0;
 	right: 0;
 	bottom: 6.5%;
@@ -139,9 +139,9 @@
 	display: -ms-flexbox;
 	display: flex;
 	position: absolute;
-	width: calc(100% + 70px);
+	width: calc(100% + 80px);
 	height: 29px;
-	left: -35px;
+	left: -40px;
 	top: -8px;
 	z-index: -1;
 	.input-group-button.minus {
@@ -170,6 +170,10 @@
 	padding: 2px;
 	border-style: double;
 	-moz-appearance: textfield;
+}
+
+.input-group-button.plus,.input-group-button.minus {
+	margin: -5px;
 }
 
 .volume .plus-minus-input .input-wrap .input-group-field::-webkit-inner-spin-button,
@@ -217,6 +221,6 @@
 
 @media all and (min-aspect-ratio: 19/21) {
 	.slider {
-		width: 80%;
+		width: 70%;
 	}
 }

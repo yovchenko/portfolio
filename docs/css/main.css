@@ -599,7 +599,7 @@ template {
 
 .slider {
   position: absolute;
-  width: 80%;
+  width: 70%;
   left: 0;
   right: 0;
   bottom: 6.5%;
@@ -724,9 +724,9 @@ template {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  width: calc(100% + 70px);
+  width: calc(100% + 80px);
   height: 29px;
-  left: -35px;
+  left: -40px;
   top: -8px;
   z-index: -1; }
   .volume .plus-minus-input .input-group-button.minus {
@@ -752,6 +752,9 @@ template {
   padding: 2px;
   border-style: double;
   -moz-appearance: textfield; }
+
+.input-group-button.plus, .input-group-button.minus {
+  margin: -5px; }
 
 .volume .plus-minus-input .input-wrap .input-group-field::-webkit-inner-spin-button,
 .volume .plus-minus-input .input-wrap .input-group-field ::-webkit-outer-spin-button {
@@ -793,7 +796,7 @@ template {
 
 @media all and (min-aspect-ratio: 19 / 21) {
   .slider {
-    width: 80%; } }
+    width: 70%; } }
 
 progress[value] {
   -webkit-appearance: none;
@@ -1569,7 +1572,7 @@ article p {
   text-align: right;
   position: relative;
   margin: 0.5em 0px;
-  right: 5px; }
+  right: 2px; }
 
 .hard.p3.own-size h1 {
   font-size: 52px;
@@ -1578,7 +1581,7 @@ article p {
   position: relative;
   margin: 0.5em 0px;
   top: -9px;
-  left: -1px; }
+  left: 2px; }
 
 .sj-book .book-browser-support {
   font-family: 'Pangolin', cursive;
@@ -1615,6 +1618,20 @@ article p {
     padding: 5px; }
   .sj-book .page-speed-tools tr:nth-child(3) {
     color: green; }
+  .sj-book .page-speed-tools tfoot td {
+    position: relative;
+    height: 55px; }
+    .sj-book .page-speed-tools tfoot td #mobile {
+      height: 94%; }
+    .sj-book .page-speed-tools tfoot td svg {
+      position: absolute;
+      width: 100%;
+      height: 110%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto; }
 
 .sj-book .book-browser-icons span svg {
   width: 45px;
