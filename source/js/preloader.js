@@ -116,22 +116,18 @@ let delay = setTimeout(function () {
         enumerable: false
     });
     delete page.elements.footer;
-    pulse = opacity = title = pattern = svgString = encode = null; /*there is no place for the garbage collection here*/
-    if (document.images) {
-        let img1 = new Image();
-        let img2 = new Image();
-        let img3 = new Image();
-        let img4 = new Image();
-        let img5 = new Image();
-        let img6 = new Image();
-        let img7 = new Image();
-        img1.src = "./images/book-page-1.jpg";
-        img2.src = "./images/book-page-2.jpg";
-        img3.src = "./images/book-page-3.jpg";
-        img4.src = "./images/book-page-4.jpg";
-        img5.src = "./images/letter_bg.png";
-        img6.src = "./images/before.png";
-        img7.src = "./images/after.png";
-    }
-}, 2500);
+        let z,
+        img = [];
+        for (z = 0; z <= 6; z++) {
+        img[z] = new Image();
+        }
+        img[0].src = "./images/book-page-1.jpg";
+        img[1].src = "./images/book-page-2.jpg";
+        img[2].src = "./images/book-page-3.jpg";
+        img[3].src = "./images/book-page-4.jpg";
+        img[4].src = "./images/letter_bg.png";
+        img[5].src = "./images/before.png";
+        img[6].src = "./images/after.png";
+    img = pulse = opacity = title = pattern = svgString = encode = null;  /*there is no place for the garbage collection here*/
+}, 2500); 
 
