@@ -22,7 +22,7 @@ let pattern,
                     init();
                     clearInterval(pulse);
                 }
-            } else if (count > 60 && title.className !== 'entry-title title-backup' && document.documentElement.className !== 'wf-pangolin-n4-active wf-active') {
+            } else if (count > 50 && title.className !== 'entry-title title-backup' && document.documentElement.className !== 'wf-pangolin-n4-active wf-active') {
                 title.className += ' title-backup';
             }
         } else {

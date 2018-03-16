@@ -7,7 +7,7 @@ import {
 import {
 	page
 } from './preloader';
-import mainCanvas from './canvasSphere.js';
+import mainCanvas from './canvasSphere';
 
 var version = detectIE();
 
