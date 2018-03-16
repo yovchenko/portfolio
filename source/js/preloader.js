@@ -18,7 +18,10 @@ let pattern,
         opacity += opacity;
         title.style.color = 'rgba(255%,255%,255%,' + opacity.toFixed(2) + ')';
         }
-        else clearInterval(pulse);
+        else {
+            init();
+            clearInterval(pulse);
+        }
         }
     }, 100);
 
@@ -96,8 +99,10 @@ encode = window.btoa(svgString);
 // Set the background image property
 page.elements.footer.style.backgroundImage = 'url("data:image/svg+xml;base64,' + encode + '")';
 page.elements.header.style.backgroundImage = 'url("data:image/svg+xml;base64,' + encode + '")';
-document.addEventListener('DOMContentLoaded', delay);
-/*I'm giving you some extra time to enjoy my preloader*/
+
+function init() {
+    /*I'm giving you some extra time to enjoy my preloader*/
+    document.addEventListener('DOMContentLoaded', delay);
 let delay = setTimeout(function () {
     clearInterval(pulse);
     mainCanvas();
@@ -129,5 +134,6 @@ let delay = setTimeout(function () {
         img[5].src = "./images/before.png";
         img[6].src = "./images/after.png";
     img = pulse = opacity = title = pattern = svgString = encode = null;  /*there is no place for the garbage collection here*/
-}, 2500); 
+}, 1500); 
+}
 
