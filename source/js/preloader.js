@@ -8,21 +8,28 @@ import {
 } from './jsonAnimation';
 let pattern,
     encode,
+    count = 0,
     svgString = '',
     opacity = 0.005,
     title = document.getElementsByClassName('entry-title')[0],
     pulse = setInterval(function () {
-        if(document.documentElement.className === 'wf-pangolin-n4-active wf-active')
-        {
-        if (opacity <= 0.95) {
-        opacity += opacity;
-        title.style.color = 'rgba(255%,255%,255%,' + opacity.toFixed(2) + ')';
-        }
-        else {
+        if (count < 100) {
+            if (document.documentElement.className === 'wf-pangolin-n4-active wf-active') {
+                if (opacity <= 0.95) {
+                    opacity += opacity;
+                    title.style.color = 'rgba(255%,255%,255%,' + opacity.toFixed(2) + ')';
+                } else {
+                    init();
+                    clearInterval(pulse);
+                }
+            } else if (count > 60 && title.className !== 'entry-title title-backup' && document.documentElement.className !== 'wf-pangolin-n4-active wf-active') {
+                title.className += ' title-backup';
+            }
+        } else {
             init();
             clearInterval(pulse);
         }
-        }
+        count++;
     }, 100);
 
 export let page = Object.create(null);
@@ -103,27 +110,27 @@ page.elements.header.style.backgroundImage = 'url("data:image/svg+xml;base64,' +
 function init() {
     /*I'm giving you some extra time to enjoy my preloader*/
     document.addEventListener('DOMContentLoaded', delay);
-let delay = setTimeout(function () {
-    mainCanvas();
-    anim.stop();
-    $(document.getElementsByClassName('footer')[0]).add(document.body).addClass("is--visible");
-    $(document.getElementsByClassName('loader-section')).add(document.getElementById('loader'))
-        .add(title).stop().addClass('is--invisible');
-    page.setBackground;
-    resizeContent('#figure', '#wrapperCanvas', 800, 900);
-    Object.defineProperty(page.elements, "curtainLeft", {
-        value: document.getElementsByClassName('section-left is--invisible')[0],
-        enumerable: false
-    });
-    Object.defineProperty(page.elements, "curtainRight", {
-        value: document.getElementsByClassName('section-right is--invisible')[0],
-        enumerable: false
-    });
-    delete page.elements.footer;
+    let delay = setTimeout(function () {
+        mainCanvas();
+        anim.stop();
+        $(document.getElementsByClassName('footer')[0]).add(document.body).addClass("is--visible");
+        $(document.getElementsByClassName('loader-section')).add(document.getElementById('loader'))
+            .add(title).stop().addClass('is--invisible');
+        page.setBackground;
+        resizeContent('#figure', '#wrapperCanvas', 800, 900);
+        Object.defineProperty(page.elements, "curtainLeft", {
+            value: document.getElementsByClassName('section-left is--invisible')[0],
+            enumerable: false
+        });
+        Object.defineProperty(page.elements, "curtainRight", {
+            value: document.getElementsByClassName('section-right is--invisible')[0],
+            enumerable: false
+        });
+        delete page.elements.footer;
         let z,
-        img = [];
+            img = [];
         for (z = 0; z <= 6; z++) {
-        img[z] = new Image();
+            img[z] = new Image();
         }
         img[0].src = "./images/book-page-1.jpg";
         img[1].src = "./images/book-page-2.jpg";
@@ -132,7 +139,7 @@ let delay = setTimeout(function () {
         img[4].src = "./images/letter_bg.png";
         img[5].src = "./images/before.png";
         img[6].src = "./images/after.png";
-    img = pulse = opacity = title = pattern = svgString = encode = null;  /*there is no place for the garbage collection here*/
-}, 1000); 
+        img = pulse = opacity = title = pattern = svgString = encode = null; /*there is no place for the garbage collection here*/
+    }, 1000);
 }
 

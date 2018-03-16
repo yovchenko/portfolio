@@ -11173,19 +11173,28 @@ var Trianglify = __webpack_require__(440);
 
 var pattern = void 0,
     encode = void 0,
+    count = 0,
     svgString = '',
     opacity = 0.005,
     title = document.getElementsByClassName('entry-title')[0],
     pulse = setInterval(function () {
-    if (document.documentElement.className === 'wf-pangolin-n4-active wf-active') {
-        if (opacity <= 0.95) {
-            opacity += opacity;
-            title.style.color = 'rgba(255%,255%,255%,' + opacity.toFixed(2) + ')';
-        } else {
-            init();
-            clearInterval(pulse);
+    if (count < 100) {
+        if (document.documentElement.className === 'wf-pangolin-n4-active wf-active') {
+            if (opacity <= 0.95) {
+                opacity += opacity;
+                title.style.color = 'rgba(255%,255%,255%,' + opacity.toFixed(2) + ')';
+            } else {
+                init();
+                clearInterval(pulse);
+            }
+        } else if (count > 60 && title.className !== 'entry-title title-backup' && document.documentElement.className !== 'wf-pangolin-n4-active wf-active') {
+            title.className += ' title-backup';
         }
+    } else {
+        init();
+        clearInterval(pulse);
     }
+    count++;
 }, 100);
 
 var page = exports.page = Object.create(null);

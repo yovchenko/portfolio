@@ -450,6 +450,26 @@ figure {
     }
 }
 
+.wf-inactive .text-animation {
+    display: none;
+}
+
+.wf-active .text-animation-backup {
+    display: none;
+}
+
+.wf-inactive .text-animation-backup {
+    position: absolute;
+    z-index: 999;
+    font-size: 5.2em;
+    margin: 0;
+    padding: 0;
+    bottom: 400px;
+    right: 0px;
+    left: -20px;
+    text-align: center;
+}
+
 .svg-logo-one div svg,
 .svg-logo-two div svg {
     width: 100%;
@@ -1331,6 +1351,15 @@ footer .wrapper {
         }
     }
 }
+
+
+    .entry-header {
+        .entry-title.title-backup {
+            visibility: visible;
+            color: #fff;
+        }
+    }
+
 
 .entry-header {
     text-align: center;
