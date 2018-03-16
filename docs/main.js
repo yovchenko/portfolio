@@ -8490,27 +8490,31 @@ Matrix3.rotate = function (angle, x, y, z) {
 //This is what matters
 function mainCanvas() {
 	var displayFPS = document.getElementsByClassName('fps')[0];
-	var c = void 0,
-	    ctx = void 0,
-	    temp = void 0,
+	var ctx = void 0,
+	    canvas = void 0,
+	    table = void 0,
+	    phone = void 0,
 	    points = [],
 	    flag = true,
 	    width = 108,
 	    numOfPoints = 1,
 	    testCases = 1,
 	    counter = 0,
+	    pointsSize = 2,
 	    angle = new Vector3(0, 0, 0),
 	    requestID = void 0,
 	    _showSvgText = void 0,
 	    requestTextAnimID = void 0,
 	    angleSpeed = new Vector3(Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012, Math.random() * 0.009 - 0.012);
-	c = document.getElementById("canvas");
-	c.width = 295;
-	c.height = 295;
-	ctx = c.getContext('2d');
+	canvas = document.getElementById("canvas");
+	canvas.width = 295;
+	canvas.height = 295;
+	ctx = canvas.getContext('2d');
 	render(ctx);
 
 	function letsDance() {
+		var media = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		if (media < 767 && media > 577) pointsSize = 3;else if (media < 576) pointsSize = 4;else pointsSize = 2;
 		var loopDots = setTimeout(function () {
 			if (flag === true) {
 				for (var i = 0; i < numOfPoints; i++) {
@@ -8667,12 +8671,12 @@ function mainCanvas() {
 				var p = _step3.value;
 
 				p = rotation.multiplyVector(p);
-				var x = p.x + c.width / 2;
-				var y = p.y + c.height / 2;
+				var x = p.x + canvas.width / 2;
+				var y = p.y + canvas.height / 2;
 				ctx.moveTo(x + 2, y);
 				ctx.lineTo(x + 2, y);
 				ctx.stroke();
-				ctx.arc(x, y, 2, 0, 2 * Math.PI);
+				ctx.arc(x, y, pointsSize, 0, pointsSize * Math.PI);
 			}
 		} catch (err) {
 			_didIteratorError3 = true;
