@@ -104,7 +104,6 @@ function init() {
     /*I'm giving you some extra time to enjoy my preloader*/
     document.addEventListener('DOMContentLoaded', delay);
 let delay = setTimeout(function () {
-    clearInterval(pulse);
     mainCanvas();
     anim.stop();
     $(document.getElementsByClassName('footer')[0]).add(document.body).addClass("is--visible");
@@ -134,6 +133,6 @@ let delay = setTimeout(function () {
         img[5].src = "./images/before.png";
         img[6].src = "./images/after.png";
     img = pulse = opacity = title = pattern = svgString = encode = null;  /*there is no place for the garbage collection here*/
-}, 1500); 
+}, 1000); 
 }
 
