@@ -146,12 +146,10 @@ export default function mainCanvas() {
 		if(mediaRule < 767 && mediaRule > 577) {
 			pointsSize = 3;
 			pointCounter = 12;
-			for(let key in angleSpeed) angleSpeed[key] = 0.014;
 		}
 		else if (mediaRule < 576) {
 			pointsSize = 4;
 			pointCounter = 10;
-			for(let key in angleSpeed) angleSpeed[key] = 0.016;
 		}	
 		else {
 			pointsSize = 2;
