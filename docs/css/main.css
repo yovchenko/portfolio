@@ -1625,6 +1625,7 @@ article p {
     font-size: 52px;
     font-weight: normal;
     border: 1px solid #333;
+    border-radius: 5px;
     padding: 5px; }
   .sj-book .book-browser-support td svg {
     width: 90%;
@@ -1647,6 +1648,7 @@ article p {
   margin: 0px 20px 0px 40px; }
   .sj-book .page-speed-tools th, .sj-book .page-speed-tools td {
     border: 1px solid #333;
+    border-radius: 5px;
     font-size: 52px;
     font-weight: normal;
     padding: 5px; }
@@ -1863,7 +1865,6 @@ article p {
 #wrap {
   width: 530px;
   height: 650px;
-  overflow: hidden;
   position: absolute;
   -webkit-transform-origin: top right;
   transform-origin: top right;
@@ -1915,7 +1916,7 @@ form {
   height: 200px;
   width: 400px;
   margin: 0px auto;
-  padding: 5px 25px 45px 25px;
+  padding: 0px 25px 45px 25px;
   border: 1px solid #fff;
   border-radius: 3px;
   -moz-border-radius: 3px;
@@ -1960,7 +1961,7 @@ textarea {
   padding: 0;
   width: 100%;
   max-width: 100%;
-  border: 1px dashed #333;
+  border: 1px solid #333;
   border-radius: 5px;
   -webkit-box-shadow: inset 0px 0px 1px #333;
           box-shadow: inset 0px 0px 1px #333; }
@@ -1989,7 +1990,7 @@ input[type=email]:focus {
   bottom: 89px;
   background: none;
   cursor: pointer;
-  border-radius: 15px;
+  border-radius: 5px;
   -webkit-transition: opacity .5s ease-in-out 0s;
   transition: opacity .5s ease-in-out 0s; }
 

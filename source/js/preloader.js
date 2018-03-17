@@ -139,7 +139,7 @@ function init() {
         img[4].src = "./images/letter_bg.png";
         img[5].src = "./images/before.png";
         img[6].src = "./images/after.png";
-        img = pulse = opacity = title = pattern = svgString = encode = null; /*there is no place for the garbage collection here*/
+        img = pulse = count = opacity = title = pattern = svgString = encode = null; /*there is no place for the garbage collection here*/
     }, 1000);
 }
 
