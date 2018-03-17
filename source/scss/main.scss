@@ -1,3 +1,4 @@
+@import "reset";
 @import "variables";
 @import "mixins";
 @import "textAnimation";
@@ -1189,7 +1190,7 @@ label {
 input[type=text],
 input[type=email],
 textarea {
-    font: 22px normal normal uppercase Helvetica, Arial, sans-serif;
+    font: 3.2em normal normal uppercase Helvetica, Arial, sans-serif;
     color: #7c7873;
     background: none;
     outline: none;
