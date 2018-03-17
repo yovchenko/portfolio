@@ -1935,7 +1935,7 @@ label {
   font-size: 3.2em;
   text-shadow: 0px 1px 0px #fff;
   position: relative;
-  padding: 2px 0px; }
+  padding: 5px 0px; }
 
 #contactForm .error {
   border-color: red; }
@@ -1953,7 +1953,7 @@ label {
 input[type=text],
 input[type=email],
 textarea {
-  font: 3.2em normal normal uppercase Helvetica, Arial, sans-serif;
+  font: 24px normal normal uppercase Helvetica, Arial, sans-serif;
   color: #7c7873;
   background: none;
   outline: none;
