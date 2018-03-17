@@ -8495,9 +8495,11 @@ function mainCanvas() {
 	    table = void 0,
 	    phone = void 0,
 	    points = [],
-	    flag = true,
+	    flagPoints = true,
+	    flagSpeed = true,
 	    width = 108,
 	    numOfPoints = 1,
+	    pointCounter = 14,
 	    testCases = 1,
 	    counter = 0,
 	    pointsSize = 2,
@@ -8513,10 +8515,25 @@ function mainCanvas() {
 	render(ctx);
 
 	function letsDance() {
-		var media = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-		if (media < 767 && media > 577) pointsSize = 3;else if (media < 576) pointsSize = 4;else pointsSize = 2;
+		var mediaRule = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		if (mediaRule < 767 && mediaRule > 577) {
+			pointsSize = 3;
+			pointCounter = 12;
+			for (var key in angleSpeed) {
+				angleSpeed[key] = 0.014;
+			}
+		} else if (mediaRule < 576) {
+			pointsSize = 4;
+			pointCounter = 10;
+			for (var _key in angleSpeed) {
+				angleSpeed[_key] = 0.016;
+			}
+		} else {
+			pointsSize = 2;
+			pointCounter = 14;
+		}
 		var loopDots = setTimeout(function () {
-			if (flag === true) {
+			if (flagPoints === true) {
 				for (var i = 0; i < numOfPoints; i++) {
 					var buf = [];
 					for (var j = 0; j < testCases; j++) {
@@ -8563,11 +8580,11 @@ function mainCanvas() {
 					testCases++;
 					points.push(buf[currentHighest]);
 				}
-				if (counter < 15) {
+				if (counter < pointCounter) {
 					counter++;
-				} else flag = false;
+				} else flagPoints = false;
 				letsDance();
-			} else if (flag === false) {
+			} else if (flagPoints === false) {
 				for (var _i = 0; _i < numOfPoints; _i++) {
 					var _buf = [];
 					for (var _j = 0; _j < testCases; _j++) {
@@ -8616,8 +8633,8 @@ function mainCanvas() {
 				}
 				if (counter > 0) {
 					counter--;
-					flag = false;
-				} else flag = true;
+					flagPoints = false;
+				} else flagPoints = true;
 				letsDance();
 			} else {
 				clearTimeout(loopDots);
