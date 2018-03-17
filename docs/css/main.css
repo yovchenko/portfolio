@@ -1991,6 +1991,8 @@ input[type=email]:focus {
   bottom: 89px;
   background: none;
   cursor: pointer;
+  -webkit-box-shadow: inset 0px 0px 1px #333;
+          box-shadow: inset 0px 0px 1px #333;
   border-radius: 5px;
   -webkit-transition: opacity .5s ease-in-out 0s;
   transition: opacity .5s ease-in-out 0s; }
