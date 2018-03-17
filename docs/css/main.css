@@ -1939,8 +1939,7 @@ label {
   display: block;
   font-size: 3.2em;
   text-shadow: 0px 1px 0px #fff;
-  position: relative;
-  padding: 5px 0px; }
+  position: relative; }
 
 #contactForm .error {
   border-color: red; }
