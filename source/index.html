@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vladymyr M.Yovchenko - Portfolio</title>
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset-context/cssreset-context-min.css">
   <script>
     WebFontConfig = {
       custom: {
@@ -1009,12 +1010,12 @@
             <div id='form_wrap'>
               <form id="contactForm" action="https://formspree.io/yovchenko.vl@email.com" method="post">
                 <label for="email">Your Message : </label>
-                <textarea name="message" id="message"></textarea>
+                <textarea name="message" class="yui3-cssreset" id="message"></textarea>
                 <label for="name">Name:</label>
-                <input type="text" name="name" autocomplete='name' id="name" minlength="1" required/>
+                <input type="text" class="yui3-cssreset" name="name" autocomplete='name' id="name" minlength="1" required/>
                 <label for="email">Email:</label>
-                <input type="email" name="email" autocomplete='email' id="email" required/>
-                <input type="text" name="_gotcha" style="display:none" />
+                <input type="email" class="yui3-cssreset" name="email" autocomplete='email' id="email" required/>
+                <input type="text" class="yui3-cssreset" name="_gotcha" style="display:none" />
                 <input type="submit" id="submit" name="submit" autocomplete='submit' value="Send Message" />
               </form>
             </div>
