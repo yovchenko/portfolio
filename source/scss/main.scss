@@ -1192,7 +1192,7 @@ textarea {
     padding: 0;
     width: 100%;
     max-width: 100%;
-    border: 1px solid #f8f5f1;
+    border: 1px dashed #333;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
@@ -1216,6 +1216,7 @@ input[type=email]:focus {
     outline: none;
     position: absolute;
     font-size: 3.2em;
+    border: 1px solid #333;
     color: #333;
     font-family: 'Pangolin', cursive;
     width: 89%;
