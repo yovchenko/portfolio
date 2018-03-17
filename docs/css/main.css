@@ -392,62 +392,6 @@ template {
  */
 [hidden] {
   display: none; }
-.yui3-cssreset html, .yui3-cssreset html body, html .yui3-cssreset body {
-  color: #000;
-  background: #FFF; }
-
-.yui3-cssreset body, .yui3-cssreset div, .yui3-cssreset dl, .yui3-cssreset dt, .yui3-cssreset dd, .yui3-cssreset ul, .yui3-cssreset ol, .yui3-cssreset li, .yui3-cssreset h1, .yui3-cssreset h2, .yui3-cssreset h3, .yui3-cssreset h4, .yui3-cssreset h5, .yui3-cssreset h6, .yui3-cssreset pre, .yui3-cssreset code, .yui3-cssreset form, .yui3-cssreset fieldset, .yui3-cssreset legend, .yui3-cssreset input, .yui3-cssreset textarea, .yui3-cssreset p, .yui3-cssreset blockquote, .yui3-cssreset th, .yui3-cssreset .sj-book .book-browser-support td, .sj-book .book-browser-support .yui3-cssreset td, .yui3-cssreset .sj-book .page-speed-tools td, .sj-book .page-speed-tools .yui3-cssreset td, .yui3-cssreset td {
-  margin: 0;
-  padding: 0; }
-
-.yui3-cssreset table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-.yui3-cssreset fieldset, .yui3-cssreset img {
-  border: 0; }
-
-.yui3-cssreset address, .yui3-cssreset caption, .yui3-cssreset cite, .yui3-cssreset code, .yui3-cssreset dfn, .yui3-cssreset em, .yui3-cssreset strong, .yui3-cssreset th, .yui3-cssreset .sj-book .book-browser-support td, .sj-book .book-browser-support .yui3-cssreset td, .yui3-cssreset .sj-book .page-speed-tools td, .sj-book .page-speed-tools .yui3-cssreset td, .yui3-cssreset var {
-  font-style: normal;
-  font-weight: normal; }
-
-.yui3-cssreset ol, .yui3-cssreset ul {
-  list-style: none; }
-
-.yui3-cssreset caption, .yui3-cssreset th, .yui3-cssreset .sj-book .book-browser-support td, .sj-book .book-browser-support .yui3-cssreset td, .yui3-cssreset .sj-book .page-speed-tools td, .sj-book .page-speed-tools .yui3-cssreset td {
-  text-align: left; }
-
-.yui3-cssreset h1, .yui3-cssreset h2, .yui3-cssreset h3, .yui3-cssreset h4, .yui3-cssreset h5, .yui3-cssreset h6 {
-  font-size: 100%;
-  font-weight: normal; }
-
-.yui3-cssreset q:before, .yui3-cssreset q:after {
-  content: ''; }
-
-.yui3-cssreset abbr, .yui3-cssreset acronym {
-  border: 0;
-  font-variant: normal; }
-
-.yui3-cssreset sup {
-  vertical-align: text-top; }
-
-.yui3-cssreset sub {
-  vertical-align: text-bottom; }
-
-.yui3-cssreset input, .yui3-cssreset textarea, .yui3-cssreset select {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit; }
-
-.yui3-cssreset input, .yui3-cssreset textarea, .yui3-cssreset select {
-  *font-size: 100%; }
-
-.yui3-cssreset legend {
-  color: #000; }
-
-#yui3-css-stamp.cssreset-context {
-  display: none; }
-
 .menu__about span {
   -webkit-animation: letter-glow 0.45s 0s ease backwards;
   animation: letter-glow 0.45s 0s ease backwards; }
@@ -926,6 +870,12 @@ progress[value]::-moz-progress-bar {
   font-style: 400;
   font-weight: normal;
   src: url(../fonts/Pangolin-Regular.eot&b3a3dba541543e4f1f0385b789bf7520) format("eot"), url(../fonts/Pangolin-Regular.woff2&05b6ea444f7bf5b56b536c03c33cb772) format("woff2"), url(../fonts/Pangolin-Regular.woff&ce79c51fdeb924a9e764259ff4f5a507) format("woff"), url(../fonts/Pangolin-Regular.ttf&0529e076a86ca72872154555487ffdb9) format("truetype"), url(../fonts/Pangolin-Regular.svg&9cd8476a4aeab0b9a60a6423482702be#Pangolin) format("svg"); }
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: 400;
+  font-weight: normal;
+  src: url(../fonts/opensans-regular.eot&425a17d1e3700f190def6fd81346d240) format("eot"), url(../fonts/opensans-regular.woff2&bbfe5aef923413c0d949228e1b985a68) format("woff2"), url(../fonts/opensans-regular.woff&5d63af7f53bbf5c3e73fac846d55464a) format("woff"), url(../fonts/opensans-regular.ttf&19b7213f2f5908e4ec41616a6ea364df) format("truetype"), url(../fonts/opensans-regular.svg&4142641a1cce1d3291fba9cda88d6963#Open_Sans) format("svg"); }
 
 html, html body {
   height: 100%;
@@ -1913,7 +1863,6 @@ article p {
   height: 80%;
   top: 50%;
   left: 50%;
-  font-family: 'Pangolin', cursive;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   letter-spacing: 1.4px; }
@@ -2009,7 +1958,8 @@ label {
 input[type=text],
 input[type=email],
 textarea {
-  font: 3.2em normal normal uppercase Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.8em;
   color: #7c7873;
   background: none;
   outline: none;
