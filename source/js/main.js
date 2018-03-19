@@ -172,6 +172,7 @@ function mainPage() {
 	window.addEventListener("orientationchange", function () {
 		if (page.keyboard) {
 			window.lastOrientation = true;
+			console.log(window.lastInnerHeight);
 		}
 	}, false);
 
@@ -244,6 +245,7 @@ function mainPage() {
 				resizeTimeout = setTimeout(function () {
 					resizeTimeout = null;
 					actualResizeHandler();
+					resizeScreenObj();
 					// The actualResizeHandler will execute at a rate of 15fps
 				}, 66);
 			}
@@ -259,12 +261,8 @@ function mainPage() {
 		}
 	}());
 
-	window.onresize = resizeScreenObj;
-	let resizeTimer;
-
-	function resizeScreenObj(event, keyHeight) {
-		clearTimeout(resizeTimer);
-		resizeTimer = setTimeout(function () {
+	function resizeScreenObj() {
+		console.log('resize');
 			if (page.contacts) {
 				resizeContent('.envelope', '#wrap', 530, 630);
 			} else if (page.home) {
@@ -272,6 +270,5 @@ function mainPage() {
 			} else if (page.work) {
 				scaleValue = resizeContent('.bookWrap', '#flipbook', 960, 600);
 			}
-		}, 122);
 	};
 }

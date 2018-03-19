@@ -11555,6 +11555,7 @@ function mainPage() {
 	window.addEventListener("orientationchange", function () {
 		if (_preloader.page.keyboard) {
 			window.lastOrientation = true;
+			console.log(window.lastInnerHeight);
 		}
 	}, false);
 
@@ -11627,6 +11628,7 @@ function mainPage() {
 				resizeTimeout = setTimeout(function () {
 					resizeTimeout = null;
 					actualResizeHandler();
+					resizeScreenObj();
 					// The actualResizeHandler will execute at a rate of 15fps
 				}, 66);
 			}
@@ -11642,20 +11644,15 @@ function mainPage() {
 		}
 	})();
 
-	window.onresize = resizeScreenObj;
-	var resizeTimer = void 0;
-
-	function resizeScreenObj(event, keyHeight) {
-		clearTimeout(resizeTimer);
-		resizeTimer = setTimeout(function () {
-			if (_preloader.page.contacts) {
-				(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
-			} else if (_preloader.page.home) {
-				(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
-			} else if (_preloader.page.work) {
-				exports.scaleValue = scaleValue = (0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
-			}
-		}, 122);
+	function resizeScreenObj() {
+		console.log('resize');
+		if (_preloader.page.contacts) {
+			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
+		} else if (_preloader.page.home) {
+			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
+		} else if (_preloader.page.work) {
+			exports.scaleValue = scaleValue = (0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
+		}
 	};
 }
 
