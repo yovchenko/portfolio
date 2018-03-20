@@ -1,9 +1,6 @@
 .slider {
-	position: absolute;
+	position: relative;
 	width: 70%;
-	left: 0;
-	right: 0;
-	bottom: 6.5%;
 	margin: auto;
 	text-align: center;
 	z-index: 0;
@@ -219,8 +216,6 @@
 	top: 0;
 }
 
-@media all and (min-aspect-ratio: 19/21) {
-	.slider {
-		width: 70%;
-	}
+@media all and (max-aspect-ratio: 19/21) {
+	margin-top: 0;
 }

@@ -44877,9 +44877,8 @@ var _main = __webpack_require__(193);
 function updateDepth(book, newPage) {}
 
 function moveBar(page, pages, currentPage, slider) {
-    var percentage = 100 / pages * 2,
-        scaleBook = document.getElementsByClassName('align')[0];
-    if (page === 1 || page === pages) scaleBook.classList.add('resized');else scaleBook.classList.remove('resized');
+    var percentage = 100 / pages * 2;
+    if (page === 1 || page === pages) document.getElementById('align').className = 'align';else document.getElementById('align').className += ' resized';
     slider.background = percentage * (slider.value - 1);
     slider.style.backgroundSize = slider.background.toFixed(2) + '% 100%';
 }
