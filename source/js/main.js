@@ -185,7 +185,7 @@ function mainPage() {
 	}else {
 		page.elements.grid.className += ' desktop';
 	}
-			
+	
 	window.addEventListener("resize", resizeScreenObj, false);
 	
 	function resizeScreenObj() {
