@@ -911,11 +911,15 @@ html, html body {
   min-height: 100%;
   position: relative;
       grid-template-areas: "head" "main" "footer";
-  -ms-grid-rows: 65px calc(100% - 65px) auto;
-      grid-template-rows: 65px calc(100% - 65px) auto;
+  -ms-grid-rows: 65px calc(100% - 65px) 65px;
+      grid-template-rows: 65px calc(100% - 65px) 65px;
   grid-template-columns: auto;
   -ms-grid-columns: 1fr;
   overflow: hidden; }
+
+.grid-container.desktop {
+  -ms-grid-rows: 65px calc(100vh - 65px) 65px;
+      grid-template-rows: 65px calc(100vh - 65px) 65px; }
 
 header {
   -ms-grid-row: 1;
@@ -940,7 +944,7 @@ header {
 
 .footer {
   display: none;
-  height: 65px;
+  height: auto;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: footer;
@@ -1201,6 +1205,7 @@ figure {
   transition: all 500ms linear; }
   #wrapperCanvas img {
     position: absolute;
+    height: 90%;
     top: 0;
     bottom: 0;
     left: 0;
@@ -1470,7 +1475,7 @@ _:-ms-lang(x),
 
 article {
   max-width: 100%;
-  font-size: 5.2vmin;
+  font-size: 4.2vw;
   line-height: 1.2;
   text-align: center;
   margin: 0 auto;
@@ -1479,6 +1484,12 @@ article {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1/4; }
+  @media (max-width: 595.2381px) {
+    article {
+      font-size: 25px; } }
+  @media (min-width: 1190.47619px) {
+    article {
+      font-size: 50px; } }
 
 article p {
   margin: 0px;
@@ -2487,6 +2498,16 @@ h3 {
       font-size: 50px; } }
 
 @media all and (max-width: 767px) and (min-width: 577px) {
+  article {
+    font-size: 4.2vw; } }
+  @media all and (max-width: 767px) and (min-width: 577px) and (max-width: 476.19048px) {
+    article {
+      font-size: 20px; } }
+  @media all and (max-width: 767px) and (min-width: 577px) and (min-width: 1190.47619px) {
+    article {
+      font-size: 50px; } }
+
+@media all and (max-width: 767px) and (min-width: 577px) {
   .btn-hamburger {
     padding: 0px; }
   .btn-hamburger:hover {
@@ -2532,6 +2553,16 @@ h3 {
       font-size: 18px; } }
   @media all and (max-width: 576px) and (min-width: 1190.47619px) {
     .entry-header .entry-title {
+      font-size: 50px; } }
+
+@media all and (max-width: 576px) {
+  article {
+    font-size: 4.2vw; } }
+  @media all and (max-width: 576px) and (max-width: 428.57143px) {
+    article {
+      font-size: 18px; } }
+  @media all and (max-width: 576px) and (min-width: 1190.47619px) {
+    article {
       font-size: 50px; } }
 
 @media all and (max-width: 576px) {

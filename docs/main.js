@@ -11565,7 +11565,9 @@ function mainPage() {
 
 	if (device.desktop() === false) {
 		_preloader.page.elements.main.style.height = updateWindowSize(false) - 65 + 'px';
-	} else _preloader.page.elements.main.style.height = updateWindowSize(true) - 65 + 'px';
+	} else {
+		_preloader.page.elements.grid.className += ' desktop';
+	}
 
 	window.addEventListener("resize", resizeScreenObj, false);
 

@@ -183,7 +183,9 @@ function mainPage() {
 	
 	if (device.desktop() === false) {
 		page.elements.main.style.height = updateWindowSize(false) - 65 + 'px';
-	}else page.elements.main.style.height = updateWindowSize(true) - 65 + 'px';
+	}else {
+		page.elements.grid.className += ' desktop';
+	}
 			
 	window.addEventListener("resize", resizeScreenObj, false);
 	
