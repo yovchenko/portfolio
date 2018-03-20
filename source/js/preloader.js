@@ -6,6 +6,7 @@ import {
 import {
     anim
 } from './jsonAnimation';
+
 let pattern,
     encode,
     count = 0,
@@ -73,6 +74,25 @@ Object.defineProperty(page, "pattern", {
     value: {},
     enumerable: false
 });
+
+function updateWindowSize() {
+    let width = window.innerWidth
+    || document.documentElement.clientWidth
+    || document.body.clientWidth;
+
+    let height = window.innerHeight
+    || document.documentElement.clientHeight
+    || document.body.clientHeight;
+    if(width > height) return width;
+    else return height;
+};
+
+if (device.desktop() === false) {
+    page.elements.main.style.height = updateWindowSize() - 65 + 'px';
+}else {
+    page.elements.grid.className += ' desktop';
+}
+
 page.pattern.colorX = 'YlGnBu';
 page.pattern.colorY = 'GnBu';
 Object.defineProperty(page, "setBackground", {

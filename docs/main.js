@@ -11186,6 +11186,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Trianglify = __webpack_require__(441);
 
+
 var pattern = void 0,
     encode = void 0,
     count = 0,
@@ -11253,6 +11254,20 @@ Object.defineProperty(page, "pattern", {
     value: {},
     enumerable: false
 });
+
+function updateWindowSize() {
+    var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    if (width > height) return width;else return height;
+};
+
+if (device.desktop() === false) {
+    page.elements.main.style.height = updateWindowSize() - 65 + 'px';
+} else {
+    page.elements.grid.className += ' desktop';
+}
+
 page.pattern.colorX = 'YlGnBu';
 page.pattern.colorY = 'GnBu';
 Object.defineProperty(page, "setBackground", {
@@ -11554,19 +11569,6 @@ function mainPage() {
 			_preloader.page.setBackground;
 			$(_preloader.page.elements.curtainRight).add(_preloader.page.elements.curtainLeft).stop().removeClass('is--closing').addClass('is--opening');
 		}, 1500);
-	}
-
-	function updateWindowSize() {
-		var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-
-		var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-		if (width > height) return width;else return height;
-	};
-
-	if (device.desktop() === false) {
-		_preloader.page.elements.main.style.height = updateWindowSize() - 65 + 'px';
-	} else {
-		_preloader.page.elements.grid.className += ' desktop';
 	}
 
 	window.addEventListener("resize", resizeScreenObj, false);

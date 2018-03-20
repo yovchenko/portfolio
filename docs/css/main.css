@@ -2046,7 +2046,7 @@ footer .wrapper {
   padding: 0.2em 0; }
 
 #loader-wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
