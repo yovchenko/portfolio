@@ -1,6 +1,6 @@
 $svg-color: #333;
 $height: 100;
 $footer: 65;
-$main: calc(#{$height}vh - #{$footer}px);
+$main: calc(#{$height}% - #{$footer}px);
 
 

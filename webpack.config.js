@@ -144,6 +144,7 @@ module.exports = {
             validation: "jquery-validation/dist/jquery.validation",
             amplitude: "amplitudejs/dist/amplitude",
             normalize: "node-normalize-scss/_normalize.scss",
+            device: "current-device/umd/current-device",
             bodymovin: "bodymovin/build/player/bodymovin"
         },
     },

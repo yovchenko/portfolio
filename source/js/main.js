@@ -8,7 +8,6 @@ import {
 	page
 } from './preloader';
 import mainCanvas from './canvasSphere';
-
 var version = detectIE();
 
 function detectIE() {
@@ -169,100 +168,26 @@ function mainPage() {
 		}, 1500);
 	}
 
-	window.addEventListener("orientationchange", function () {
-		if (page.keyboard) {
-			window.lastOrientation = true;
-			console.log(window.lastInnerHeight);
-		}
-	}, false);
+	function updateWindowSize(pc) {
+		let width = window.innerWidth
+		|| document.documentElement.clientWidth
+		|| document.body.clientWidth;
 
-	function updateWindowSize() {
-		window.lastInnerWidth = window.innerWidth;
-		window.lastInnerHeight = window.innerHeight;
-		// Stays the same for iOS, so that's our ticket to detect iOS keyboard
-		window.lastOrientation = false;
-		window.lastBodyHeight = document.body.clientHeight;
+		let height = window.innerHeight
+		|| document.documentElement.clientHeight
+		|| document.body.clientHeight;
+		if(pc === true) return height;
+		else if(width > height) return width;
+		else return height;
 	};
-
-	function detectKeyboard() {
-		function orientationChange() {
-			if (window.lastOrientation) {
-				return !window.lastOrientation;
-			} else {
-				return window.lastOrientation;
-			}
-		}
-
-		// No orientation change, keyboard opening
-		if ((window.lastInnerHeight - window.innerHeight > 150) && window.innerWidth == window.lastInnerWidth) {
-			let keyboardHeight = window.lastInnerHeight - window.innerHeight;
-			updateWindowSize();
-			return keyboardHeight;
-		}
-		// Orientation change with keyboard already opened
-		if (orientationChange() && page.keyboard) {
-			let keyboardHeight = screen.height - window.topBarHeight - window.innerHeight;
-			updateWindowSize();
-			return keyboardHeight;
-		}
-
-		// No orientation change, keyboard closing
-		if ((window.innerHeight - window.lastInnerHeight > 150) && window.innerWidth == window.lastInnerWidth) {
-			let keyboardHeight = -1;
-			updateWindowSize();
-			return keyboardHeight;
-		}
-
-		// Orientation change or regular resize, no keyboard action
-		let keyboardHeight = 0;
-		updateWindowSize();
-		return keyboardHeight;
-	};
-
-	function keyboardShift(keyboardHeight) {
-		page.elements.grid.style.cssText = 'grid-template-rows:65px calc(100vh + ' + keyboardHeight + 'px) auto;';
-		page.keyboard = true;
-		resizeScreenObj(event, keyboardHeight);
-	};
-
-	function removeKeyboardShift() {
-		page.elements.grid.style.cssText = 'grid-template-rows:65px calc(100vh - 65px) auto;';
-		page.keyboard = false;
-		resizeScreenObj(event, 0);
-	};
-
-	// OnStart innit
-	(function () {
-		updateWindowSize();
-		window.topBarHeight = screen.height - window.innerHeight;
-		window.addEventListener("resize", resizeThrottler, false);
-
-		let resizeTimeout;
-
-		function resizeThrottler() {
-			// ignore resize events as long as an actualResizeHandler execution is in the queue
-			if (!resizeTimeout) {
-				resizeTimeout = setTimeout(function () {
-					resizeTimeout = null;
-					actualResizeHandler();
-					resizeScreenObj();
-					// The actualResizeHandler will execute at a rate of 15fps
-				}, 66);
-			}
-		}
-
-		function actualResizeHandler() {
-			let keyboardHeight = detectKeyboard();
-			if (keyboardHeight > 0) {
-				keyboardShift(keyboardHeight);
-			} else if (keyboardHeight == -1) {
-				removeKeyboardShift();
-			}
-		}
-	}());
-
+	
+	if (device.desktop() === false) {
+		page.elements.main.style.height = updateWindowSize(false) - 65 + 'px';
+	}else page.elements.main.style.height = updateWindowSize(true) - 65 + 'px';
+			
+	window.addEventListener("resize", resizeScreenObj, false);
+	
 	function resizeScreenObj() {
-		console.log('resize');
 			if (page.contacts) {
 				resizeContent('.envelope', '#wrap', 530, 630);
 			} else if (page.home) {

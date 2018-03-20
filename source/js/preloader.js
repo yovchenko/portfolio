@@ -65,6 +65,10 @@ Object.defineProperty(page.elements, "grid", {
     value: document.getElementsByClassName('grid-container')[0],
     enumerable: false
 });
+Object.defineProperty(page.elements, "main", {
+    value: document.getElementById('main'),
+    enumerable: false
+});
 Object.defineProperty(page, "pattern", {
     value: {},
     enumerable: false

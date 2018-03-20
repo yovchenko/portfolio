@@ -911,8 +911,8 @@ html, html body {
   min-height: 100%;
   position: relative;
       grid-template-areas: "head" "main" "footer";
-  -ms-grid-rows: 65px calc(100vh - 65px) auto;
-      grid-template-rows: 65px calc(100vh - 65px) auto;
+  -ms-grid-rows: 65px calc(100% - 65px) auto;
+      grid-template-rows: 65px calc(100% - 65px) auto;
   grid-template-columns: auto;
   -ms-grid-columns: 1fr;
   overflow: hidden; }
@@ -939,6 +939,7 @@ header {
 
 .footer {
   display: none;
+  height: 65px;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: footer;
