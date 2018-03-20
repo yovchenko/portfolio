@@ -49,6 +49,7 @@ html {
 
 header {
     grid-area: head;
+    z-index: 999;
     background-color: rgba(0%, 0%, 0%, 0.1);
     z-index: 0;
     background-size: cover;
@@ -73,6 +74,7 @@ header {
     display: none;
     height: 65px;
     grid-area: footer;
+    z-index: 999;
     background-color: rgba(0%, 0%, 0%, 0.1);
     background-size: cover;
     overflow: hidden;
