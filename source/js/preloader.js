@@ -10,19 +10,19 @@ let pattern,
     encode,
     count = 0,
     svgString = '',
-    opacity = 0.005,
+    opacity = 51,
     title = document.getElementsByClassName('entry-title')[0],
     pulse = setInterval(function () {
-        if (count < 100) {
-            if (document.documentElement.className === 'wf-pangolin-n4-active wf-active') {
-                if (opacity <= 0.95) {
-                    opacity += opacity;
-                    title.style.color = 'rgba(255%,255%,255%,' + opacity.toFixed(2) + ')';
+        if (count < 60) {
+            if (document.documentElement.className.indexOf('wf-active') !== -1) {
+                if (opacity <= 245) {
+                    opacity += 10;
+                    title.style.color = 'rgb(' + opacity + ',' + opacity + ',' + opacity + ')';
                 } else {
                     init();
                     clearInterval(pulse);
                 }
-            } else if (count > 50 && title.className !== 'entry-title title-backup' && document.documentElement.className !== 'wf-pangolin-n4-active wf-active') {
+            } else if (count > 40 && title.className !== 'entry-title title-backup' && document.documentElement.className.indexOf('wf-active') === -1) {
                 title.className += ' title-backup';
             }
         } else {
@@ -144,6 +144,6 @@ function init() {
         img[5].src = "./images/before.png";
         img[6].src = "./images/after.png";
         img = pulse = count = opacity = title = pattern = svgString = encode = null; /*there is no place for the garbage collection here*/
-    }, 1000);
+    }, 100);
 }
 

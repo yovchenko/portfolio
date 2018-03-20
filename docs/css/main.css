@@ -2121,8 +2121,6 @@ footer .wrapper {
 
 .entry-header {
   text-align: center;
-  color: rgba(255, 255, 255, 0.8);
-  text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 0 0 5px rgba(255, 255, 255, 0.6);
   margin: 0 auto;
   max-width: 1200px;
   position: relative;
@@ -2131,7 +2129,7 @@ footer .wrapper {
     visibility: hidden;
     font-family: 'Pangolin', cursive;
     font-size: 4.2vw;
-    color: rgba(255, 255, 255, 0.005);
+    color: #333333;
     position: relative;
     top: 50px; }
     @media (max-width: 595.2381px) {

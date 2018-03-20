@@ -168,7 +168,7 @@ function mainPage() {
 		}, 1500);
 	}
 
-	function updateWindowSize(pc) {
+	function updateWindowSize() {
 		let width = window.innerWidth
 		|| document.documentElement.clientWidth
 		|| document.body.clientWidth;
@@ -176,13 +176,12 @@ function mainPage() {
 		let height = window.innerHeight
 		|| document.documentElement.clientHeight
 		|| document.body.clientHeight;
-		if(pc === true) return height;
-		else if(width > height) return width;
+		if(width > height) return width;
 		else return height;
 	};
 	
 	if (device.desktop() === false) {
-		page.elements.main.style.height = updateWindowSize(false) - 65 + 'px';
+		page.elements.main.style.height = updateWindowSize() - 65 + 'px';
 	}else {
 		page.elements.grid.className += ' desktop';
 	}
