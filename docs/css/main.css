@@ -2046,10 +2046,10 @@ footer .wrapper {
   padding: 0.2em 0; }
 
 #loader-wrapper {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: calc(100% + 65px);
   bottom: -74.64px;
   z-index: 1000; }
@@ -2166,7 +2166,7 @@ footer .wrapper {
     /* Firefox 16+, IE 10+, Opera */ } }
 
 #loader-wrapper .loader-section {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 51%;
   height: calc(100% + 65px);
