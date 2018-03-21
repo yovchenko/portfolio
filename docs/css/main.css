@@ -1885,6 +1885,7 @@ article p {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   grid-row: 1 / 4;
+  overflow: hidden;
   transition: 1s ease-in-out;
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out; }
