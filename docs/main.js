@@ -8833,7 +8833,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.anim = undefined;
 
-var _bodymovin = __webpack_require__(440);
+var _bodymovin = __webpack_require__(439);
 
 var _bodymovin2 = _interopRequireDefault(_bodymovin);
 
@@ -11184,7 +11184,7 @@ var _jsonAnimation = __webpack_require__(126);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Trianglify = __webpack_require__(441);
+var Trianglify = __webpack_require__(440);
 
 
 var pattern = void 0,
@@ -16907,10 +16907,6 @@ var _jquery = __webpack_require__(81);
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var _currentDevice = __webpack_require__(439);
-
-var _currentDevice2 = _interopRequireDefault(_currentDevice);
-
 __webpack_require__(191);
 
 __webpack_require__(193);
@@ -16919,13 +16915,13 @@ __webpack_require__(125);
 
 __webpack_require__(126);
 
-__webpack_require__(459);
+__webpack_require__(458);
+
+__webpack_require__(460);
 
 __webpack_require__(461);
 
 __webpack_require__(462);
-
-__webpack_require__(463);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21760,312 +21756,6 @@ if ( !noGlobal ) {
 
 /***/ }),
 /* 439 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
-// Save the previous value of the device variable.
-var previousDevice = window.device;
-
-var device = {};
-
-var changeOrientationList = [];
-
-// Add device as a global object.
-window.device = device;
-
-// The <html> element.
-var documentElement = window.document.documentElement;
-
-// The client user agent string.
-// Lowercase, so we can use the more efficient indexOf(), instead of Regex
-var userAgent = window.navigator.userAgent.toLowerCase();
-
-// Detectable television devices.
-var television = ['googletv', 'viera', 'smarttv', 'internet.tv', 'netcast', 'nettv', 'appletv', 'boxee', 'kylo', 'roku', 'dlnadoc', 'roku', 'pov_tv', 'hbbtv', 'ce-html'];
-
-// Main functions
-// --------------
-
-device.macos = function () {
-  return find('mac');
-};
-
-device.ios = function () {
-  return device.iphone() || device.ipod() || device.ipad();
-};
-
-device.iphone = function () {
-  return !device.windows() && find('iphone');
-};
-
-device.ipod = function () {
-  return find('ipod');
-};
-
-device.ipad = function () {
-  return find('ipad');
-};
-
-device.android = function () {
-  return !device.windows() && find('android');
-};
-
-device.androidPhone = function () {
-  return device.android() && find('mobile');
-};
-
-device.androidTablet = function () {
-  return device.android() && !find('mobile');
-};
-
-device.blackberry = function () {
-  return find('blackberry') || find('bb10') || find('rim');
-};
-
-device.blackberryPhone = function () {
-  return device.blackberry() && !find('tablet');
-};
-
-device.blackberryTablet = function () {
-  return device.blackberry() && find('tablet');
-};
-
-device.windows = function () {
-  return find('windows');
-};
-
-device.windowsPhone = function () {
-  return device.windows() && find('phone');
-};
-
-device.windowsTablet = function () {
-  return device.windows() && find('touch') && !device.windowsPhone();
-};
-
-device.fxos = function () {
-  return (find('(mobile') || find('(tablet')) && find(' rv:');
-};
-
-device.fxosPhone = function () {
-  return device.fxos() && find('mobile');
-};
-
-device.fxosTablet = function () {
-  return device.fxos() && find('tablet');
-};
-
-device.meego = function () {
-  return find('meego');
-};
-
-device.cordova = function () {
-  return window.cordova && location.protocol === 'file:';
-};
-
-device.nodeWebkit = function () {
-  return _typeof(window.process) === 'object';
-};
-
-device.mobile = function () {
-  return device.androidPhone() || device.iphone() || device.ipod() || device.windowsPhone() || device.blackberryPhone() || device.fxosPhone() || device.meego();
-};
-
-device.tablet = function () {
-  return device.ipad() || device.androidTablet() || device.blackberryTablet() || device.windowsTablet() || device.fxosTablet();
-};
-
-device.desktop = function () {
-  return !device.tablet() && !device.mobile();
-};
-
-device.television = function () {
-  var i = 0;
-  while (i < television.length) {
-    if (find(television[i])) {
-      return true;
-    }
-    i++;
-  }
-  return false;
-};
-
-device.portrait = function () {
-  return window.innerHeight / window.innerWidth > 1;
-};
-
-device.landscape = function () {
-  return window.innerHeight / window.innerWidth < 1;
-};
-
-// Public Utility Functions
-// ------------------------
-
-// Run device.js in noConflict mode,
-// returning the device variable to its previous owner.
-device.noConflict = function () {
-  window.device = previousDevice;
-  return this;
-};
-
-// Private Utility Functions
-// -------------------------
-
-// Simple UA string search
-function find(needle) {
-  return userAgent.indexOf(needle) !== -1;
-}
-
-// Check if documentElement already has a given class.
-function hasClass(className) {
-  return documentElement.className.match(new RegExp(className, 'i'));
-}
-
-// Add one or more CSS classes to the <html> element.
-function addClass(className) {
-  var currentClassNames = null;
-  if (!hasClass(className)) {
-    currentClassNames = documentElement.className.replace(/^\s+|\s+$/g, '');
-    documentElement.className = currentClassNames + ' ' + className;
-  }
-}
-
-// Remove single CSS class from the <html> element.
-function removeClass(className) {
-  if (hasClass(className)) {
-    documentElement.className = documentElement.className.replace(' ' + className, '');
-  }
-}
-
-// HTML Element Handling
-// ---------------------
-
-// Insert the appropriate CSS class based on the _user_agent.
-
-if (device.ios()) {
-  if (device.ipad()) {
-    addClass('ios ipad tablet');
-  } else if (device.iphone()) {
-    addClass('ios iphone mobile');
-  } else if (device.ipod()) {
-    addClass('ios ipod mobile');
-  }
-} else if (device.macos()) {
-  addClass('macos desktop');
-} else if (device.android()) {
-  if (device.androidTablet()) {
-    addClass('android tablet');
-  } else {
-    addClass('android mobile');
-  }
-} else if (device.blackberry()) {
-  if (device.blackberryTablet()) {
-    addClass('blackberry tablet');
-  } else {
-    addClass('blackberry mobile');
-  }
-} else if (device.windows()) {
-  if (device.windowsTablet()) {
-    addClass('windows tablet');
-  } else if (device.windowsPhone()) {
-    addClass('windows mobile');
-  } else {
-    addClass('windows desktop');
-  }
-} else if (device.fxos()) {
-  if (device.fxosTablet()) {
-    addClass('fxos tablet');
-  } else {
-    addClass('fxos mobile');
-  }
-} else if (device.meego()) {
-  addClass('meego mobile');
-} else if (device.nodeWebkit()) {
-  addClass('node-webkit');
-} else if (device.television()) {
-  addClass('television');
-} else if (device.desktop()) {
-  addClass('desktop');
-}
-
-if (device.cordova()) {
-  addClass('cordova');
-}
-
-// Orientation Handling
-// --------------------
-
-// Handle device orientation changes.
-function handleOrientation() {
-  if (device.landscape()) {
-    removeClass('portrait');
-    addClass('landscape');
-    walkOnChangeOrientationList('landscape');
-  } else {
-    removeClass('landscape');
-    addClass('portrait');
-    walkOnChangeOrientationList('portrait');
-  }
-  setOrientationCache();
-}
-
-function walkOnChangeOrientationList(newOrientation) {
-  for (var index in changeOrientationList) {
-    changeOrientationList[index](newOrientation);
-  }
-}
-
-device.onChangeOrientation = function (cb) {
-  if (typeof cb == 'function') {
-    changeOrientationList.push(cb);
-  }
-};
-
-// Detect whether device supports orientationchange event,
-// otherwise fall back to the resize event.
-var orientationEvent = 'resize';
-if (Object.prototype.hasOwnProperty.call(window, 'onorientationchange')) {
-  orientationEvent = 'onorientationchange';
-}
-
-// Listen for changes in orientation.
-if (window.addEventListener) {
-  window.addEventListener(orientationEvent, handleOrientation, false);
-} else if (window.attachEvent) {
-  window.attachEvent(orientationEvent, handleOrientation);
-} else {
-  window[orientationEvent] = handleOrientation;
-}
-
-handleOrientation();
-
-// Public functions to get the current value of type, os, or orientation
-// ---------------------------------------------------------------------
-
-function findMatch(arr) {
-  for (var i = 0; i < arr.length; i++) {
-    if (device[arr[i]]()) {
-      return arr[i];
-    }
-  }
-  return 'unknown';
-}
-
-device.type = findMatch(['mobile', 'tablet', 'desktop']);
-device.os = findMatch(['ios', 'iphone', 'ipad', 'ipod', 'android', 'blackberry', 'windows', 'fxos', 'meego', 'television']);
-
-function setOrientationCache() {
-  device.orientation = findMatch(['portrait', 'landscape']);
-}
-
-setOrientationCache();
-
-/* harmony default export */ __webpack_exports__["default"] = (device);
-
-/***/ }),
-/* 440 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;var window = (typeof window === "undefined") ? {} : window;
@@ -36219,7 +35909,7 @@ GroupEffect.prototype.init = function(data,element,dynamicProperties){
 }));
 
 /***/ }),
-/* 441 */
+/* 440 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -36229,13 +35919,13 @@ GroupEffect.prototype.init = function(data,element,dynamicProperties){
  * Licensed under the GPLv3
  */
 
-var delaunay = __webpack_require__(442);
-var seedrandom = __webpack_require__(443);
-var chroma = __webpack_require__(452); //PROBLEM: chroma.js is nearly 32k in size
-var colorbrewer = __webpack_require__(453); //We could use the chroma.js colorbrewer, but it's got some ugly stuff so we use our own subset.
-var _generate_points = __webpack_require__(454);
+var delaunay = __webpack_require__(441);
+var seedrandom = __webpack_require__(442);
+var chroma = __webpack_require__(451); //PROBLEM: chroma.js is nearly 32k in size
+var colorbrewer = __webpack_require__(452); //We could use the chroma.js colorbrewer, but it's got some ugly stuff so we use our own subset.
+var _generate_points = __webpack_require__(453);
 
-var Pattern = __webpack_require__(455);
+var Pattern = __webpack_require__(454);
 
 var defaults = {
   width: 600,                       // Width of pattern
@@ -36397,7 +36087,7 @@ module.exports = Trianglify;
 
 
 /***/ }),
-/* 442 */
+/* 441 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Delaunay;
@@ -36637,7 +36327,7 @@ var Delaunay;
 
 
 /***/ }),
-/* 443 */
+/* 442 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // A library of seedable RNGs implemented in Javascript.
@@ -36652,17 +36342,17 @@ var Delaunay;
 // alea, a 53-bit multiply-with-carry generator by Johannes Baagøe.
 // Period: ~2^116
 // Reported to pass all BigCrush tests.
-var alea = __webpack_require__(444);
+var alea = __webpack_require__(443);
 
 // xor128, a pure xor-shift generator by George Marsaglia.
 // Period: 2^128-1.
 // Reported to fail: MatrixRank and LinearComp.
-var xor128 = __webpack_require__(445);
+var xor128 = __webpack_require__(444);
 
 // xorwow, George Marsaglia's 160-bit xor-shift combined plus weyl.
 // Period: 2^192-2^32
 // Reported to fail: CollisionOver, SimpPoker, and LinearComp.
-var xorwow = __webpack_require__(446);
+var xorwow = __webpack_require__(445);
 
 // xorshift7, by François Panneton and Pierre L'ecuyer, takes
 // a different approach: it adds robustness by allowing more shifts
@@ -36670,7 +36360,7 @@ var xorwow = __webpack_require__(446);
 // with 256 bits, that passes BigCrush with no systmatic failures.
 // Period 2^256-1.
 // No systematic BigCrush failures reported.
-var xorshift7 = __webpack_require__(447);
+var xorshift7 = __webpack_require__(446);
 
 // xor4096, by Richard Brent, is a 4096-bit xor-shift with a
 // very long period that also adds a Weyl generator. It also passes
@@ -36679,18 +36369,18 @@ var xorshift7 = __webpack_require__(447);
 // collisions.
 // Period: 2^4128-2^32.
 // No systematic BigCrush failures reported.
-var xor4096 = __webpack_require__(448);
+var xor4096 = __webpack_require__(447);
 
 // Tyche-i, by Samuel Neves and Filipe Araujo, is a bit-shifting random
 // number generator derived from ChaCha, a modern stream cipher.
 // https://eden.dei.uc.pt/~sneves/pubs/2011-snfa2.pdf
 // Period: ~2^127
 // No systematic BigCrush failures reported.
-var tychei = __webpack_require__(449);
+var tychei = __webpack_require__(448);
 
 // The original ARC4-based prng included in this library.
 // Period: ~2^1600
-var sr = __webpack_require__(450);
+var sr = __webpack_require__(449);
 
 sr.alea = alea;
 sr.xor128 = xor128;
@@ -36703,7 +36393,7 @@ module.exports = sr;
 
 
 /***/ }),
-/* 444 */
+/* 443 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A port of an algorithm by Johannes Baagøe <baagoe@baagoe.com>, 2010
@@ -36825,7 +36515,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)(module)))
 
 /***/ }),
-/* 445 */
+/* 444 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xor128" prng algorithm by
@@ -36914,7 +36604,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)(module)))
 
 /***/ }),
-/* 446 */
+/* 445 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xorwow" prng algorithm by
@@ -37008,7 +36698,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)(module)))
 
 /***/ }),
-/* 447 */
+/* 446 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xorshift7" algorithm by
@@ -37113,7 +36803,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)(module)))
 
 /***/ }),
-/* 448 */
+/* 447 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of Richard Brent's Xorgens xor4096 algorithm.
@@ -37267,7 +36957,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)(module)))
 
 /***/ }),
-/* 449 */
+/* 448 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "Tyche-i" prng algorithm by
@@ -37378,7 +37068,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)(module)))
 
 /***/ }),
-/* 450 */
+/* 449 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -37617,7 +37307,7 @@ if ((typeof module) == 'object' && module.exports) {
   module.exports = seedrandom;
   // When in node.js, try using crypto package for autoseeding.
   try {
-    nodecrypto = __webpack_require__(451);
+    nodecrypto = __webpack_require__(450);
   } catch (ex) {}
 } else if (true) {
   !(__WEBPACK_AMD_DEFINE_RESULT__ = function() { return seedrandom; }.call(exports, __webpack_require__, exports, module),
@@ -37632,13 +37322,13 @@ if ((typeof module) == 'object' && module.exports) {
 
 
 /***/ }),
-/* 451 */
+/* 450 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 452 */
+/* 451 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Generated by CoffeeScript 1.6.2
@@ -39541,7 +39231,7 @@ if ((typeof module) == 'object' && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)(module)))
 
 /***/ }),
-/* 453 */
+/* 452 */
 /***/ (function(module, exports) {
 
 /*
@@ -39581,7 +39271,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 454 */
+/* 453 */
 /***/ (function(module, exports) {
 
 function generate_grid(width, height, bleed_x, bleed_y, cell_size, variance, rand_fn) {
@@ -39607,7 +39297,7 @@ module.exports = generate_grid;
 
 
 /***/ }),
-/* 455 */
+/* 454 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {/*
@@ -39616,7 +39306,7 @@ module.exports = generate_grid;
  */
 
 // conditionally load jsdom if we don't have a browser environment available.
-var doc = (typeof document !== "undefined") ? document : __webpack_require__(457).jsdom('<html/>');
+var doc = (typeof document !== "undefined") ? document : __webpack_require__(456).jsdom('<html/>');
 
 function Pattern(polys, opts) {
 
@@ -39650,7 +39340,7 @@ function Pattern(polys, opts) {
         typeof process.versions.node !== 'undefined') {
       // In Node environment.
       try {
-        __webpack_require__(458);
+        __webpack_require__(457);
       } catch (e) {
         throw Error('The optional node-canvas dependency is needed for Trianglify to render using canvas in node.');
       }
@@ -39698,10 +39388,10 @@ function Pattern(polys, opts) {
 
 module.exports = Pattern;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(456)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(455)))
 
 /***/ }),
-/* 456 */
+/* 455 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -39891,6 +39581,12 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
+/* 456 */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
 /* 457 */
 /***/ (function(module, exports) {
 
@@ -39898,18 +39594,12 @@ process.umask = function() { return 0; };
 
 /***/ }),
 /* 458 */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-/* 459 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _jqueryValidation = __webpack_require__(460);
+var _jqueryValidation = __webpack_require__(459);
 
 var _jqueryValidation2 = _interopRequireDefault(_jqueryValidation);
 
@@ -39965,7 +39655,7 @@ $(document.getElementById('message')).add(document.getElementById('email')).add(
 });
 
 /***/ }),
-/* 460 */
+/* 459 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -41574,7 +41264,7 @@ return $;
 }));
 
 /***/ }),
-/* 461 */
+/* 460 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -41723,7 +41413,7 @@ return $;
 })();
 
 /***/ }),
-/* 462 */
+/* 461 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44759,7 +44449,7 @@ var _main = __webpack_require__(193);
 })(jQuery);
 
 /***/ }),
-/* 463 */
+/* 462 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

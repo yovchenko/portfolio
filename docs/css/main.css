@@ -2065,6 +2065,7 @@ footer .wrapper {
   #loader-wrapper.is--invisible {
     display: none; }
   #loader-wrapper #loader {
+    visibility: hidden;
     display: block;
     position: absolute;
     left: 50%;
