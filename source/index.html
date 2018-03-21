@@ -7,12 +7,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vladymyr M.Yovchenko - Portfolio</title>
   <script>
+   (function (c) {
+      var ld = c.createElement('script'),
+        p = c.scripts[0];
+      ld.src = "https://unpkg.com/current-device/umd/current-device.min.js";
+      ld.async = true;
+      p.parentNode.insertBefore(ld, p);
+    })(document);
+  </script>
+  <script>
     WebFontConfig = {
       custom: {
         families: ['Pangolin']
       }
     };
-
     (function (d) {
       var wf = d.createElement('script'),
         s = d.scripts[0];
@@ -24,14 +32,6 @@
 </head>
 
 <body class="body">
-  <div id="loader-wrapper">
-    <div class="entry-header">
-      <span class="entry-title">Loading</span>
-    </div>
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-  </div>
   <section class="browser-support">
     <div class="browser-icons">
       <h1>Oops! Sorry, Your browser is not supported.</h1>
@@ -170,6 +170,14 @@
     </div>
   </section>
   <div class="grid-container">
+      <div id="loader-wrapper">
+          <div class="entry-header">
+            <span class="entry-title">Loading</span>
+          </div>
+          <div id="loader"></div>
+          <div class="loader-section section-left"></div>
+          <div class="loader-section section-right"></div>
+        </div> 
     <header class="header">
       <div class="wrapper">
         <div class="menu__header">

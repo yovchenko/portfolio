@@ -913,9 +913,19 @@ html, html body {
   -ms-grid-columns: 1fr;
   overflow: hidden; }
 
-.grid-container.desktop {
+.desktop .grid-container {
   -ms-grid-rows: 65px calc(100vh - 65px) 65px;
       grid-template-rows: 65px calc(100vh - 65px) 65px; }
+
+@media all and (orientation: portrait) {
+  .grid-container {
+    -ms-grid-rows: 65px calc(100vh - 65px) 65px;
+        grid-template-rows: 65px calc(100vh - 65px) 65px; } }
+
+@media all and (orientation: landscape) {
+  .grid-container {
+    -ms-grid-rows: 65px calc(100vw - 65px) 65px;
+        grid-template-rows: 65px calc(100vw - 65px) 65px; } }
 
 header {
   -ms-grid-row: 1;
@@ -2046,20 +2056,19 @@ footer .wrapper {
   padding: 0.2em 0; }
 
 #loader-wrapper {
-  position: fixed;
+  float: left;
   top: 0;
   left: 0;
   width: 100%;
-  height: calc(100% + 65px);
   bottom: -74.64px;
   z-index: 1000; }
   #loader-wrapper.is--invisible {
     display: none; }
   #loader-wrapper #loader {
     display: block;
-    position: relative;
+    position: absolute;
     left: 50%;
-    top: 45%;
+    top: 50%;
     width: 150px;
     height: 150px;
     margin: -85px 0 0 -85px;
@@ -2118,8 +2127,10 @@ footer .wrapper {
 .entry-header {
   text-align: center;
   margin: 0 auto;
-  max-width: 1200px;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 10001; }
   .entry-header .entry-title {
     visibility: hidden;
@@ -2169,16 +2180,16 @@ footer .wrapper {
   position: absolute;
   top: 0;
   width: 51%;
-  height: calc(100% + 65px);
   background: #333;
+  height: calc(100% + 65px);
   z-index: 1000; }
   #loader-wrapper .loader-section.section-left {
     left: 0; }
     #loader-wrapper .loader-section.section-left.is--invisible {
       visibility: visible;
       width: 0%;
-      height: calc(100% + 65px);
       left: 0;
+      height: calc(100% + 65px);
       border: 1px solid #333;
       -webkit-transform: translateX(-50%);
       /* Chrome, Opera 15+, Safari 3.1+ */
@@ -2200,8 +2211,8 @@ footer .wrapper {
     #loader-wrapper .loader-section.section-right.is--invisible {
       visibility: visible;
       width: 0%;
-      height: calc(100% + 65px);
       right: 0;
+      height: calc(100% + 65px);
       border: 1px solid #333;
       -webkit-transform: translateX(50%);
       /* Chrome, Opera 15+, Safari 3.1+ */

@@ -47,8 +47,20 @@ html {
     overflow: hidden;
 }
 
-.grid-container.desktop {
+.desktop .grid-container {
     grid-template-rows: 65px calc(100vh - 65px) 65px;
+}
+
+@media all and (orientation : portrait) {
+    .grid-container {
+    grid-template-rows: 65px calc(100vh - 65px) 65px;
+    }
+}
+
+@media all and (orientation : landscape) {
+    .grid-container {
+    grid-template-rows: 65px calc(100vw - 65px) 65px;
+    }
 }
 
 header {
@@ -1286,12 +1298,11 @@ footer .wrapper {
     padding: 0.2em 0;
 }
 
-#loader-wrapper {
-    position: fixed;
+ #loader-wrapper {
+    float: left;
     top: 0;
     left: 0;
     width: 100%;
-    height: $container;
     bottom: -74.64px;
     z-index: 1000;
     &.is--invisible {
@@ -1299,9 +1310,9 @@ footer .wrapper {
     }
     #loader {
         display: block;
-        position: relative;
+        position: absolute;
         left: 50%;
-        top: 45%;
+        top: 50%;
         width: 150px;
         height: 150px;
         margin: -85px 0 0 -85px;
@@ -1372,12 +1383,13 @@ footer .wrapper {
         }
     }
 
-
 .entry-header {
     text-align: center;
     margin: 0 auto;
-    max-width: 1200px;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 10001;
     .entry-title {
         visibility: hidden;
@@ -1436,16 +1448,16 @@ footer .wrapper {
     position: absolute;
     top: 0;
     width: 51%;
-    height: $container;
     background: #333;
+    height: calc(100% + 65px);
     z-index: 1000;
     &.section-left {
         left: 0;
         &.is--invisible {
             visibility: visible;
             width: 0%;
-            height: $container;
             left: 0;
+            height: calc(100% + 65px);
             border: 1px solid #333;
             -webkit-transform: translateX(-50%);
             /* Chrome, Opera 15+, Safari 3.1+ */
@@ -1474,8 +1486,8 @@ footer .wrapper {
         &.is--invisible {
             visibility: visible;
             width: 0%;
-            height: $container;
             right: 0;
+             height: calc(100% + 65px);
             border: 1px solid #333;
             -webkit-transform: translateX(50%);
             /* Chrome, Opera 15+, Safari 3.1+ */
