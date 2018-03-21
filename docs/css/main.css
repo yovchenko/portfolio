@@ -750,7 +750,8 @@ template {
   border-style: double;
   -moz-appearance: textfield; }
 
-.input-group-button.plus, .input-group-button.minus {
+.input-group-button.plus,
+.input-group-button.minus {
   margin: -5px; }
 
 .volume .plus-minus-input .input-wrap .input-group-field::-webkit-inner-spin-button,
@@ -792,7 +793,8 @@ template {
   top: 0; }
 
 @media all and (max-aspect-ratio: 19 / 21) {
-  margin-top: 0; }
+  .slider {
+    margin-top: 0; } }
 
 progress[value] {
   -webkit-appearance: none;

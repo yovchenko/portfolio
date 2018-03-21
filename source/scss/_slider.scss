@@ -169,7 +169,8 @@
 	-moz-appearance: textfield;
 }
 
-.input-group-button.plus,.input-group-button.minus {
+.input-group-button.plus,
+.input-group-button.minus {
 	margin: -5px;
 }
 
@@ -217,5 +218,7 @@
 }
 
 @media all and (max-aspect-ratio: 19/21) {
-	margin-top: 0;
+	.slider {
+		margin-top: 0;
+	}
 }
