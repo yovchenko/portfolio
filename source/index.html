@@ -17,21 +17,14 @@
           }
         };
       } else { //Others
-        if (url === "https://unpkg.com/current-device/umd/current-device.min.js") {
           script.onerror = function () {
-            callback();
-          };
-        } else {
-          script.onerror = function () {
-            callback();
-          }
-        }
+            callback();  
       }
       script.src = url;
       script.async = true;
       scriptList.parentNode.insertBefore(script, scriptList);
+      }
     }
-
     loadScript("https://unpkg.com/current-device/umd/current-device.min.js", function () {
             var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
             var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
