@@ -931,6 +931,7 @@ header {
   -ms-grid-column: 1;
   grid-area: head;
   z-index: 999;
+  height: 65px;
   background-color: rgba(0, 0, 0, 0.1);
   z-index: 0;
   background-size: cover;
