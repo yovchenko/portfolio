@@ -32,14 +32,6 @@ html {
     }
 }
 
-.wf-active html {
-    font-family: 'Pangolin', cursive;
-}
-
-.wf--error {
-    font-family: 'Pangolin', cursive;
-}
-
 .grid-container {
     display: grid;
     min-height: 100%;
@@ -479,7 +471,7 @@ figure {
     display: none;
 }
 
-.wf-active .text-animation-backup {
+.wf-active .text-animation--error {
     display: none;
 }
 
@@ -487,7 +479,7 @@ figure {
     display: none;
 }
 
-.wf--error .text-animation-backup{
+.wf--error .text-animation--error{
     font-family: 'Pangolin', cursive;
     position: absolute;
     z-index: 999;
@@ -500,7 +492,7 @@ figure {
     text-align: center;
 }
 
-.wf-inactive .text-animation-backup {
+.wf-inactive .text-animation--error {
     position: absolute;
     z-index: 999;
     font-size: 5.2em;
@@ -1207,6 +1199,7 @@ label {
     font-size: 3.2em;
     text-shadow: 0px 1px 0px #fff;
     position: relative;
+    padding: 1px 0px;
 }
 
 #contactForm .error {
@@ -1229,6 +1222,7 @@ input[type=email],
 textarea {
     font-family: 'Open Sans', sans-serif;
     font-size: 2.8em;
+    line-height: 1.35;
     color: #7c7873;
     background: none;
     outline: none;
@@ -1793,13 +1787,6 @@ h3 {
 }
 
 /* media queries */
-
-@media all and (min-width: 1600px) {
-    article {
-        font-size: 50px;
-    }
-}
-
 @media all and (max-width: 767px) and (min-width: 577px) {
     .entry-header {
         .entry-title {

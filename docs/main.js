@@ -11409,22 +11409,6 @@ var _canvasSphere2 = _interopRequireDefault(_canvasSphere);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var version = detectIE();
-
-function detectIE() {
-	var ua = window.navigator.userAgent;
-
-	var trident = ua.indexOf('Trident/');
-	if (trident > 0) {
-		var rv = ua.indexOf('rv:');
-		if (parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10) === 11) return 'Trident';else return false;
-	}
-
-	var edge = ua.indexOf('Edge/');
-	if (edge > 0) return 'Edge';
-	return false;
-}
-
 document.addEventListener('DOMContentLoaded', mainPage);
 var scaleValue = exports.scaleValue = 1;
 

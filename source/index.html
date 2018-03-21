@@ -54,7 +54,7 @@
     };
 
     loadScript("https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js", function () {
-      document.documentElement.className += " wf--error";
+      document.documentElement.className += " wf-inactive wf--error";
     });
   </script>
 </head>
@@ -275,7 +275,7 @@
                   <span class="text-g">g</span>
                   <span class="text-n">n</span>
                 </p>
-                <p class="text-animation-backup">Design</p>
+                <p class="text-animation--error">Design</p>
                 <canvas id="canvas">
                 </canvas>
               </div>
@@ -1044,12 +1044,12 @@
             <div id='form_wrap'>
               <form id="contactForm" action="https://formspree.io/yovchenko.vl@email.com" method="post">
                 <label for="email">Your Message : </label>
-                <textarea name="message" class="yui3-cssreset" id="message"></textarea>
+                <textarea name="message" id="message"></textarea>
                 <label for="name">Name:</label>
-                <input type="text" class="yui3-cssreset" name="name" autocomplete='name' id="name" minlength="1" required/>
+                <input type="text" name="name" autocomplete='name' id="name" minlength="1" required/>
                 <label for="email">Email:</label>
-                <input type="email" class="yui3-cssreset" name="email" autocomplete='email' id="email" required/>
-                <input type="text" class="yui3-cssreset" name="_gotcha" style="display:none" />
+                <input type="email" name="email" autocomplete='email' id="email" required/>
+                <input type="text" name="_gotcha" style="display:none" />
                 <input type="submit" id="submit" name="submit" autocomplete='submit' value="Send Message" />
               </form>
             </div>

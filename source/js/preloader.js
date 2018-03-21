@@ -14,26 +14,23 @@ let pattern,
     opacity = 51,
     title = document.getElementsByClassName('entry-title')[0],
     pulse = setInterval(function () {
-            if (document.documentElement.className.indexOf('wf-active') !== -1) {
-                 if(opacity <= 245) {
-                    opacity += 10;
-                    title.style.color = 'rgb(' + opacity + ',' + opacity + ',' + opacity + ')';
-                     }
-                     else {
-                        init();
-                        clearInterval(pulse);
-                     }
-                }
-                else if (document.documentElement.className.indexOf('wf-inactive') !== -1) {
-                    if(opacity <= 245) {
-                    opacity += 15;
-                    title.style.color = 'rgb(' + opacity + ',' + opacity + ',' + opacity + ')';
-                    }
-                else {
-                        init();
-                        clearInterval(pulse);
-                }
+        if (document.documentElement.className.indexOf('wf-active') !== -1) {
+            if (opacity <= 245) {
+                opacity += 10;
+                title.style.color = 'rgb(' + opacity + ',' + opacity + ',' + opacity + ')';
+            } else {
+                init();
+                clearInterval(pulse);
             }
+        } else if (document.documentElement.className.indexOf('wf-inactive') !== -1) {
+            if (opacity <= 245) {
+                opacity += 15;
+                title.style.color = 'rgb(' + opacity + ',' + opacity + ',' + opacity + ')';
+            } else {
+                init();
+                clearInterval(pulse);
+            }
+        }
     }, 100);
 
 export let page = Object.create(null);

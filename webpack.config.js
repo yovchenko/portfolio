@@ -154,7 +154,9 @@ module.exports = {
             minimize: true
         }),
         new HtmlWebpackPlugin({
+            filename: 'index.html',
             template: PATHS.source + '/index.html',
+     
             minify: {
                 collapseWhitespace: true,
                 removeComments: true,
