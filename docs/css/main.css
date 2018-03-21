@@ -2099,8 +2099,6 @@ footer .wrapper {
     z-index: 1001; }
     #loader-wrapper #loader.is--invisible {
       display: none; }
-    #loader-wrapper #loader.is--active {
-      visibility: visible; }
     #loader-wrapper #loader:before {
       content: "";
       position: absolute;
@@ -2133,6 +2131,15 @@ footer .wrapper {
       /* Chrome, Opera 15+, Safari 5+ */
       animation: spin 1.5s linear infinite;
       /* Chrome, Firefox 16+, IE 10+, Opera */ }
+
+.mobile #loader-wrapper #loader {
+  visibility: visible; }
+
+.table #loader-wrapper #loader {
+  visibility: visible; }
+
+.desktop #loader-wrapper #loader {
+  visibility: visible; }
 
 .wf-active .entry-header .entry-title {
   visibility: visible; }

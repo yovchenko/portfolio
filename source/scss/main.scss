@@ -1345,9 +1345,6 @@ footer .wrapper {
         &.is--invisible {
             display: none;
         }
-        &.is--active {
-            visibility: visible;
-        } 
         &:before {
             content: "";
             position: absolute;
@@ -1382,6 +1379,30 @@ footer .wrapper {
             /* Chrome, Opera 15+, Safari 5+ */
             animation: spin 1.5s linear infinite;
             /* Chrome, Firefox 16+, IE 10+, Opera */
+        }
+    }
+}
+
+.mobile {
+        #loader-wrapper {
+            #loader {
+                visibility: visible;
+        }
+    }
+}
+
+.table {
+        #loader-wrapper {
+            #loader {
+                visibility: visible;
+        }
+    }
+}
+
+.desktop {
+        #loader-wrapper {
+            #loader {
+                visibility: visible;
         }
     }
 }
