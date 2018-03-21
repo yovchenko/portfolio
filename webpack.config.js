@@ -50,7 +50,7 @@ module.exports = {
                                 ident: 'postcss',
                                 plugins: () => [require('autoprefixer')({
                                     browsers: ['last 2 versions'],
-                                    grid: true
+                                    
                                 })]
                             }
                         },
