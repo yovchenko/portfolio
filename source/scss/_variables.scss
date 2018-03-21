@@ -1,8 +1,7 @@
 $svg-color: #333;
 $height: 100;
 $footer: 65;
-$main: calc(#{$height}% - #{$footer}px);
-$landscape: calc(#{$height}vw + #{$footer}px);
-$portrait: calc(#{$height}vh + #{$footer}px);
+$landscape: calc(#{$height}vw - #{$footer}px);
+$portrait: calc(#{$height}vh - #{$footer}px);
 
 

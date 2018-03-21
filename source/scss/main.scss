@@ -37,25 +37,25 @@ html {
     min-height: 100%;
     position: relative;
     grid-template-areas: "head" "main" "footer";
-    grid-template-rows: 65px $main 65px;
+    grid-template-rows: 65px $portrait 65px;
     grid-template-columns: auto;
     -ms-grid-columns: 1fr;
     overflow: hidden;
 }
 
 .desktop .grid-container {
-    grid-template-rows: 65px calc(100vh - 65px) 65px;
+    grid-template-rows: 65px $portrait 65px;
 }
 
 @media all and (orientation : portrait) {
     .grid-container {
-    grid-template-rows: 65px calc(100vh - 65px) 65px;
+    grid-template-rows: 65px $portrait 65px;
     }
 }
 
 @media all and (orientation : landscape) {
     .grid-container {
-    grid-template-rows: 65px calc(100vw - 65px) 65px;
+    grid-template-rows: 65px $landscape 65px;
     }
 }
 
