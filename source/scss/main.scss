@@ -1758,12 +1758,6 @@ footer .wrapper {
     display: none;
 }
 
-@supports(display: grid) {
-    .browser-support {
-        display: none;
-    }
-}
-
 .ie-edge__detected .browser-support {
     display: none;
 }
@@ -2107,5 +2101,11 @@ h3 {
     .svg-logo-two>div:nth-child(2) {
         right: 0%;
         width: 101%;
+    }
+}
+
+@supports(display: grid) {
+    .browser-support {
+        display: none;
     }
 }
