@@ -28,7 +28,7 @@
             if (width >= 1025) document.documentElement.className += ' desktop';
             else if (width <= 1024 && width >= 768) document.documentElement.className += ' tablet';
             else document.documentElement.className += ' mobile';
-            document.getElementById('loader').className += " is--active";
+            callback();
           };
         } else {
           script.onerror = function () {
@@ -248,7 +248,7 @@
       <div class="canvas-box">
         <figure id="figure">
           <div id="wrapperCanvas">
-            <image src="./images/me-large.png" data-src="./images/me-large.png" alt="photo of me">
+            <img src="./images/me-large.png" data-src="./images/me-large.png" alt="photo of me">
               <div class="text-animation-wrap">
                 <p class="text-animation">
                   <svg class="text-animation__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
