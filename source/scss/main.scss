@@ -3,8 +3,8 @@
 @import "textAnimation";
 @import "slider";
 @import "progressBar";
-@include font-face('Pangolin', '../fonts/Pangolin-Regular', normal, 400);
-@include font-face('Open Sans', '../fonts/opensans-regular', normal, 400);
+@include font-face('Pangolin', '../fonts/Pangolin-Regular', normal, normal);
+@include font-face('Open Sans', '../fonts/opensans-regular', normal, normal);
 html {
     height: 100%;
     overflow: hidden;
