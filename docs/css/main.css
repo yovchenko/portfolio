@@ -1139,10 +1139,10 @@ main {
   display: -ms-grid;
   display: grid;
   width: 100%;
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr); }
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr; }
 
 .touch {
   display: none;
@@ -1490,8 +1490,8 @@ figure {
   grid-column: 1 / 4;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr; }
 
 article {
   max-width: 100%;
@@ -2702,8 +2702,7 @@ h3 {
     width: 100%;
     margin-top: 10px;
     position: relative;
-    -ms-grid-rows: (1fr)[3];
-        grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 20% 15% 20% 15% 20%;
     -webkit-box-align: end;
         -ms-flex-align: end;
@@ -2724,8 +2723,7 @@ h3 {
     height: 40%;
     position: relative;
     grid-template-columns: 20% 15% 20% 15% 20%;
-    -ms-grid-rows: (1fr)[3];
-        grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;

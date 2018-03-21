@@ -250,8 +250,10 @@ main {
     grid-area: main;
     display: grid;
     width: 100%;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
 }
 
 .touch {
@@ -618,7 +620,8 @@ figure {
     grid-row: 1 / 4;
     grid-column: 1 / 4;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr;
 }
 
 article {
@@ -2021,7 +2024,7 @@ h3 {
         width: 100%;
         margin-top: 10px;
         position: relative;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 20% 15% 20% 15% 20%;
         align-items: flex-end;
         -ms-grid-columns: 20% 15% 20% 15% 20%;
@@ -2037,7 +2040,7 @@ h3 {
         height: 40%;
         position: relative;
         grid-template-columns: 20% 15% 20% 15% 20%;
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
         align-items: flex-end;
         -ms-grid-columns: 20% 15% 20% 15% 20%;
         -ms-grid-rows: 1fr 1fr 1fr;
