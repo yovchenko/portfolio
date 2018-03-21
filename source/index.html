@@ -28,7 +28,7 @@
             if (width >= 1025) document.documentElement.className += ' desktop';
             else if (width <= 1024 && width >= 768) document.documentElement.className += ' tablet';
             else document.documentElement.className += ' mobile';
-            document.getElementById('loader').className += " active";
+            document.getElementById('loader').className += " is--active";
           };
         } else {
           script.onerror = function () {
@@ -42,7 +42,7 @@
     }
 
     loadScript("https://unpkg.com/current-device/umd/current-device.min.js", function () {
-      document.getElementById('loader').className += " active";
+      document.getElementById('loader').className += " is--active";
     });
   </script>
 
@@ -54,7 +54,7 @@
     };
 
     loadScript("https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js", function () {
-      document.documentElement.className += " wf-backup";
+      document.documentElement.className += " wf--error";
     });
   </script>
 </head>

@@ -11194,23 +11194,23 @@ var pattern = void 0,
     opacity = 51,
     title = document.getElementsByClassName('entry-title')[0],
     pulse = setInterval(function () {
-    if (count < 60) {
-        if (document.documentElement.className.indexOf('wf-active') !== -1) {
-            if (opacity <= 245) {
-                opacity += 10;
-                title.style.color = 'rgb(' + opacity + ',' + opacity + ',' + opacity + ')';
-            } else {
-                init();
-                clearInterval(pulse);
-            }
-        } else if (count > 40 && title.className !== 'entry-title title-backup' && document.documentElement.className.indexOf('wf-active') === -1) {
-            title.className += ' title-backup';
+    if (document.documentElement.className.indexOf('wf-active') !== -1) {
+        if (opacity <= 245) {
+            opacity += 10;
+            title.style.color = 'rgb(' + opacity + ',' + opacity + ',' + opacity + ')';
+        } else {
+            init();
+            clearInterval(pulse);
         }
-    } else {
-        init();
-        clearInterval(pulse);
+    } else if (document.documentElement.className.indexOf('wf-inactive') !== -1) {
+        if (opacity <= 245) {
+            opacity += 15;
+            title.style.color = 'rgb(' + opacity + ',' + opacity + ',' + opacity + ')';
+        } else {
+            init();
+            clearInterval(pulse);
+        }
     }
-    count++;
 }, 100);
 
 var page = exports.page = Object.create(null);

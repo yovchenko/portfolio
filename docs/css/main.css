@@ -901,7 +901,7 @@ html, html body {
 .wf-active html, .wf-active html body, html .wf-active body {
   font-family: 'Pangolin', cursive; }
 
-.wf-backup {
+.wf--error {
   font-family: 'Pangolin', cursive; }
 
 .grid-container {
@@ -1334,10 +1334,10 @@ figure {
 .wf-active .text-animation-backup {
   display: none; }
 
-.wf-backup .text-animation {
+.wf--error .text-animation {
   display: none; }
 
-.wf-backup .text-animation-backup {
+.wf--error .text-animation-backup {
   font-family: 'Pangolin', cursive;
   position: absolute;
   z-index: 999;
@@ -2103,7 +2103,7 @@ footer .wrapper {
     z-index: 1001; }
     #loader-wrapper #loader.is--invisible {
       display: none; }
-    #loader-wrapper #loader.active {
+    #loader-wrapper #loader.is--active {
       visibility: visible; }
     #loader-wrapper #loader:before {
       content: "";
@@ -2141,15 +2141,14 @@ footer .wrapper {
 .wf-active .entry-header .entry-title {
   visibility: visible; }
 
-.entry-header .entry-title.title-backup {
-  visibility: visible;
-  color: #fff; }
+.wf-inactive .entry-header .entry-title {
+  visibility: visible; }
 
 .entry-header {
   text-align: center;
   margin: 0 auto;
   position: absolute;
-  top: 0;
+  top: 10%;
   left: 0;
   right: 0;
   z-index: 10001; }
@@ -2158,8 +2157,7 @@ footer .wrapper {
     font-family: 'Pangolin', cursive;
     font-size: 4.2vw;
     color: #333333;
-    position: relative;
-    top: 50px; }
+    position: relative; }
     @media (max-width: 595.2381px) {
       .entry-header .entry-title {
         font-size: 25px; } }
