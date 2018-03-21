@@ -36,6 +36,10 @@ html {
     font-family: 'Pangolin', cursive;
 }
 
+.wf-backup {
+    font-family: 'Pangolin', cursive;
+}
+
 .grid-container {
     display: grid;
     min-height: 100%;
@@ -477,6 +481,23 @@ figure {
 
 .wf-active .text-animation-backup {
     display: none;
+}
+
+.wf-backup .text-animation {
+    display: none;
+}
+
+.wf-backup .text-animation-backup{
+    font-family: 'Pangolin', cursive;
+    position: absolute;
+    z-index: 999;
+    font-size: 5.2em;
+    margin: 0;
+    padding: 0;
+    bottom: 400px;
+    right: 0px;
+    left: -20px;
+    text-align: center;
 }
 
 .wf-inactive .text-animation-backup {
@@ -1330,6 +1351,9 @@ footer .wrapper {
         &.is--invisible {
             display: none;
         }
+        &.active {
+            visibility: visible;
+        } 
         &:before {
             content: "";
             position: absolute;
