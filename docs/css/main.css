@@ -2417,6 +2417,10 @@ footer .wrapper {
 .no-js #loader-wrapper {
   display: none; }
 
+@supports ((display: -ms-grid) or (display: grid)) {
+  .browser-support {
+    display: none; } }
+
 .ie-edge__detected .browser-support {
   display: none; }
 
