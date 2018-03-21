@@ -22,9 +22,16 @@ function loadScript(url, callback) {
       callback();
     };
     script.onerror = function() {
-         setTimeout(function(){
-          document.getElementById('loader').style.visibility = "visible";
-         },500);  
+        var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        if (width >= 1025) {
+            document.documentElement.className += ' desktop';
+        } 
+        else if (width <= 1024 && width >= 768) {
+            document.documentElement.className += ' tablet';
+        }
+        else document.documentElement.className += ' mobile';
+        document.getElementById('loader').style.visibility = "visible";
       };
   }
   script.src = url;
