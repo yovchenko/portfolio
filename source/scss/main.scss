@@ -244,6 +244,7 @@ header {
     grid-area: main;
     display: grid;
     margin: 0 auto;
+    flex: 1 0 auto;
     width: 90%;
     max-width: 1600px;
     height: 100%;
