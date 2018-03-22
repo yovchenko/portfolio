@@ -2050,6 +2050,7 @@ h3 {
     .svg-logo-one div {
         display: flex;
         height: 100%;
+        -ms-grid-row-span: 1;
     }
     .svg-logo-two div {
         display: flex;
