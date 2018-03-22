@@ -136,6 +136,7 @@ function mainPage() {
 							else if (version === 'Trident') page.elements[key].style.display = '-ms-grid';
 							else page.elements[key].style.display = 'flex';
 						}
+						console.log(supports_grid)
 					}
 					page.elements.header.classList.remove('is--active');
 					page.pattern.colorX = 'YlGnBu';

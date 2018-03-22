@@ -11525,6 +11525,7 @@ function mainPage() {
 						if (_key4 === 'article' || _key4 === 'flipbook' || _key4 === 'touch' || _key4 === 'container' || _key4 === 'home') _preloader.page.elements[_key4].style.display = 'none';else {
 							if (supports_grid) _preloader.page.elements[_key4].style.display = 'grid';else if (version === 'Trident') _preloader.page.elements[_key4].style.display = '-ms-grid';else _preloader.page.elements[_key4].style.display = 'flex';
 						}
+						console.log(supports_grid);
 					}
 					_preloader.page.elements.header.classList.remove('is--active');
 					_preloader.page.pattern.colorX = 'YlGnBu';

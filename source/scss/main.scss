@@ -15,6 +15,7 @@ html {
     line-height: 1;
     body {
         @extend html;
+        background: #333;
         width: 100%;
         z-index: -2;
         color: #333;
@@ -2145,8 +2146,7 @@ h3 {
         max-width: 100%;
     max-height: 100%;
     } 
-
-    .figure {
+    figure {
         width: 70%;
         height: 100%;    
     }    
@@ -2163,7 +2163,7 @@ h3 {
         .svg-logo-two div {
             width: 100%;
         }
-          .figure {
+        figure {
         width: 100%;
         height: 70%;    
     }    
