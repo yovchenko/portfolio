@@ -915,7 +915,7 @@ html, html body {
     -ms-grid-rows: 1fr;
     height: calc(100vh + 65px); }
 
-@media screen and (orientation: landscape) {
+@media all and (orientation: landscape) {
   .mobile body {
     height: calc(100vw + 65px); }
   .tablet body {
@@ -1972,14 +1972,15 @@ article p {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   grid-row: 1 / 4;
-  overflow-y: hidden;
   transition: 1s ease-in-out;
+  z-index: 1;
   -webkit-transition: 1s ease-in-out;
   transition: 1s ease-in-out; }
 
 .envelope {
   width: 90%;
   position: absolute;
+  overflow: hidden;
   height: 80%;
   top: 50%;
   left: 50%;
