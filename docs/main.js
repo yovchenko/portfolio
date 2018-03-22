@@ -11395,7 +11395,7 @@ function resizeContent(obj, wrap, width, height) {
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.scaleValue = undefined;
+exports.supports_grid = exports.scaleValue = undefined;
 
 var _resize = __webpack_require__(192);
 
@@ -11410,8 +11410,8 @@ var _canvasSphere2 = _interopRequireDefault(_canvasSphere);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.addEventListener('DOMContentLoaded', mainPage);
-var scaleValue = exports.scaleValue = 1;
-
+var scaleValue = exports.scaleValue = 1,
+    supports_grid = exports.supports_grid = typeof _preloader.page.elements.grid.style.grid === 'string';
 function mainPage() {
 	var $home = $('.js-home'),
 	    $about = $('.js-about'),
@@ -11523,8 +11523,7 @@ function mainPage() {
 				case 1:
 					for (var _key4 in _preloader.page.elements) {
 						if (_key4 === 'article' || _key4 === 'flipbook' || _key4 === 'touch' || _key4 === 'container' || _key4 === 'home') _preloader.page.elements[_key4].style.display = 'none';else {
-							_preloader.page.elements[_key4].style.display = 'grid';
-							if (version === 'Trident') _preloader.page.elements[_key4].style.display = '-ms-grid';
+							if (supports_grid) _preloader.page.elements[_key4].style.display = 'grid';else if (version === 'Trident') _preloader.page.elements[_key4].style.display = '-ms-grid';else _preloader.page.elements[_key4].style.display = 'flex';
 						}
 					}
 					_preloader.page.elements.header.classList.remove('is--active');

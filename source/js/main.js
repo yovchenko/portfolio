@@ -10,8 +10,8 @@ import {
 import mainCanvas from './canvasSphere';
 
 document.addEventListener('DOMContentLoaded', mainPage);
-export var scaleValue = 1;
-
+export var scaleValue = 1,
+supports_grid = typeof page.elements.grid.style.grid === 'string';
 function mainPage() {
 	const $home = $('.js-home'),
 		$about = $('.js-about'),
@@ -132,8 +132,9 @@ function mainPage() {
 						if (key === 'article' || key === 'flipbook' || key === 'touch' || key === 'container' || key === 'home')
 							page.elements[key].style.display = 'none';
 						else {
-							page.elements[key].style.display = 'grid';
-							if (version === 'Trident') page.elements[key].style.display = '-ms-grid';
+							if (supports_grid) page.elements[key].style.display = 'grid';
+							else if (version === 'Trident') page.elements[key].style.display = '-ms-grid';
+							else page.elements[key].style.display = 'flex';
 						}
 					}
 					page.elements.header.classList.remove('is--active');
