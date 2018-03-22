@@ -36,6 +36,16 @@ html {
     }
 }
 
+@media all and (orientation: portrait) {
+    .mobile body {
+        height: calc(100vh + 65px);
+    }
+    .tablet body {
+        height: calc(100vh + 65px);
+    }
+}
+
+
 .grid-container {
     display: flex;
     flex-direction: column;
@@ -47,7 +57,6 @@ html {
     grid-template-rows: 65px 1fr 65px;
     grid-template-columns: auto;
     -ms-grid-columns: 1fr;
-    min-height: 100%;
     overflow: hidden;
 }
 

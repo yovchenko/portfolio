@@ -7,6 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vladymyr M.Yovchenko - Portfolio</title>
   <script>
+    function getWindowsSize() {
+      var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+      height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+      return [width,height]
+    }
     function loadScript(url, callback) {
       var script = document.createElement("script"),
         scriptList = document.scripts[0];
@@ -17,6 +22,11 @@
           }
         };
       } else { //Others
+        script.onload = function() {
+          if(url === "https://unpkg.com/current-device/umd/current-device.min.js") {
+            device = null;
+          }
+        }
         script.onerror = function () {
           callback();
         }
@@ -26,14 +36,10 @@
       }
     }
     loadScript("https://unpkg.com/current-device/umd/current-device.min.js", function () {
-      var str
-      width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
-      height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-      if (width >= 1025) str = ' desktop';
-      else if (width <= 1024 && width >= 768) str = ' tablet';
-      else str = ' mobile';
-      document.documentElement.className += str;
-      
+      var size = getWindowsSize();
+      if (size[0] >= 1025) document.documentElement.className += ' desktop';
+      else if (size[0] <= 1024 && size[0] >= 768) document.documentElement.className += ' tablet';
+      else document.documentElement.className += ' mobile';
     });
   </script>
 
@@ -1199,6 +1205,7 @@
       if (edge > 0) return 'Edge';
       return false;
     }
+  
   </script>
 </body>
 

@@ -11541,6 +11541,11 @@ function mainPage() {
 			$(_preloader.page.elements.curtainRight).add(_preloader.page.elements.curtainLeft).stop().removeClass('is--closing').addClass('is--opening');
 		}, 1500);
 	}
+	function updateWindowSize() {
+		var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+		    height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+		if (width > height) return width;else return height;
+	}
 
 	window.addEventListener("resize", resizeScreenObj, false);
 
