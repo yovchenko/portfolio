@@ -2073,9 +2073,9 @@ h3 {
         margin-top: 10px;
         position: relative;
         grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 20% 15% 20% 15% 20%;
+        grid-template-columns: 20% 20% 20% 20% 20%;
         align-items: flex-end;
-        -ms-grid-columns: 20% 15% 20% 15% 20%;
+        -ms-grid-columns: 20% 20% 20% 20% 20%;
         -ms-grid-rows: 1fr 1fr 1fr;
         box-sizing: border-box;
     }
@@ -2091,10 +2091,10 @@ h3 {
         margin-top: auto;
         width: 100%;
         position: relative;
-        grid-template-columns: 20% 15% 20% 15% 20%;
+        grid-template-columns: 20% 20% 20% 20% 20%;
         grid-template-rows: 1fr 1fr 1fr;
         align-items: flex-end;
-        -ms-grid-columns: 20% 15% 20% 15% 20%;
+        -ms-grid-columns: 20% 20% 20% 20% 20%;
         -ms-grid-rows: 1fr 1fr 1fr;
         box-sizing: border-box;
     }
