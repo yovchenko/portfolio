@@ -3,6 +3,7 @@ progress[value] {
 	border: 1px solid #333;
 	width: 100%;
 	height: 1.4em;
+	flex-shrink: 1;
 	color: #fff;
 	border-radius: 10px;
 	background: rgba(0, 0, 0, 0.2);
@@ -13,6 +14,7 @@ progress[value] {
 main .svg-logo-one div .bar-before,
 main .svg-logo-two div .bar-before {
 	font-size: 1.8em;
+	flex-shrink: 1;
 	line-height: 1.4;
 	text-align: center;
 	margin: 0 auto;

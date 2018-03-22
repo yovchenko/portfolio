@@ -637,6 +637,7 @@ figure {
 .svg-logo-one div svg,
 .svg-logo-two div svg {
     height: 100%;
+    flex: 1;
 }
 
 .about {
@@ -669,6 +670,7 @@ article p {
     width: 100%;
     grid-column: 1 / 4;
     grid-row: 2 / 4;
+    flex-grow: 1;
     height: 100%;
     position: relative;
 }
