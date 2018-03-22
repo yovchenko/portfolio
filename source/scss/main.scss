@@ -21,6 +21,8 @@ html {
         color: #333;
         display: flex;
         display: grid;
+        -ms-grid-columns: 1fr;
+        -ms-grid-rows: 1fr;
         height: calc(100vh + 65px);
     }
 }
