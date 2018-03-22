@@ -919,13 +919,21 @@ html, html body {
   .mobile body {
     height: calc(100vw + 65px); }
   .tablet body {
-    height: calc(100vw + 65px); } }
+    height: calc(100vw + 65px); }
+  .mobile #main {
+    height: calc(100vw - 65px); }
+  .tablet #main {
+    height: calc(100vw - 65px); } }
 
 @media all and (orientation: portrait) {
   .mobile body {
     height: calc(100vh + 65px); }
   .tablet body {
-    height: calc(100vh + 65px); } }
+    height: calc(100vh + 65px); }
+  .mobile #main {
+    height: calc(100vh - 65px); }
+  .tablet #main {
+    height: calc(100vh - 65px); } }
 
 .grid-container {
   display: -webkit-box;
