@@ -602,7 +602,10 @@ template {
   width: 70%;
   margin: auto;
   text-align: center;
-  z-index: 0; }
+  z-index: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
   .slider .slider__range {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -1620,6 +1623,9 @@ article p {
   width: 100%;
   position: relative;
   height: 75%;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
   margin: auto;
   margin-bottom: 0;
   z-index: 2; }
