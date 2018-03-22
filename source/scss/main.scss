@@ -294,6 +294,11 @@ figure {
     transform: translate(-50%, -50%);
 }
 
+.ie-edge__detected  figure {
+    width: 70%;
+    height: 100%;    
+} 
+
 #wrapperCanvas {
     display: flex;
     justify-content: center;
@@ -540,6 +545,17 @@ figure {
     box-sizing: border-box;
 }
 
+.ie-edge__detected  .svg-logo-one {
+    width: 30%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.ie-edge__detected  .svg-logo-two {
+    width: 30%;
+    max-width: 100%;
+    max-height: 100%;
+} 
 
 .svg-logo-one div,
 .svg-logo-two div {
@@ -2005,6 +2021,22 @@ h3 {
 }
 
 @media all and (max-aspect-ratio: 19/21) {
+    .ie-edge__detected .svg-logo-one {
+        width: 100%;
+        height: 40%;
+    }
+    .ie-edge__detected .svg-logo-two {
+        width: 100%;
+        height: 40%;
+    } 
+    .ie-edge__detected .svg-logo-one div,
+    .ie-edge__detected .svg-logo-two div {
+        width: 100%;
+    }
+    .ie-edge__detected figure {
+    width: 100%;
+    height: 70%;    
+    }  
     #main {
         flex-direction: column;
     }
@@ -2130,21 +2162,21 @@ h3 {
         width: 101%;
     }
 }
-
+ 
 @supports(display: grid) {
     .browser-support {
         display: none;
     }
     .svg-logo-one {
         width: 30%;
-    max-width: 100%;
-    max-height: 100%;
+        max-width: 100%;
+        max-height: 100%;
     }
 
     .svg-logo-two {
         width: 30%;
         max-width: 100%;
-    max-height: 100%;
+        max-height: 100%;
     } 
     figure {
         width: 70%;
