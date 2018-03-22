@@ -20,7 +20,17 @@ html {
         z-index: -2;
         color: #333;
         display: flex;
+        display: grid;
         height: calc(100vh + 65px);
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .mobile body {
+        height: calc(100vw + 65px);
+    }
+    .tablet body {
+        height: calc(100vw + 65px);
     }
 }
 

@@ -893,7 +893,15 @@ html, html body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    display: -ms-grid;
+    display: grid;
     height: calc(100vh + 65px); }
+
+@media screen and (orientation: landscape) {
+  .mobile body {
+    height: calc(100vw + 65px); }
+  .tablet body {
+    height: calc(100vw + 65px); } }
 
 .grid-container {
   display: -webkit-box;
