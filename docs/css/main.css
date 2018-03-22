@@ -607,7 +607,7 @@ template {
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
-  margin-bottom: 65px;
+  margin-bottom: 5%;
   text-align: center;
   z-index: 0;
   -webkit-box-flex: 1;
@@ -1636,9 +1636,9 @@ article p {
   width: 100%;
   position: relative;
   height: 75%;
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
   margin: auto;
   margin-bottom: 0;
   z-index: 2; }
