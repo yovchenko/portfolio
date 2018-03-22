@@ -1119,7 +1119,7 @@ article p {
     position: relative;
     grid-column: 1 / 4;
     grid-row: 1 / 4;
-    overflow: hidden;
+    overflow-y: hidden;
     transition: 1s ease-in-out;
     -webkit-transition: 1s ease-in-out;
     -moz-transition: 1s ease-in-out;
