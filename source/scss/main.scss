@@ -20,7 +20,7 @@ html {
         z-index: -2;
         color: #333;
         display: flex;
-        display: grid;
+        
         height: calc(100vh + 65px);
     }
 }
@@ -38,7 +38,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    display: grid;
+    
     position: relative;
     width: 100%;
     grid-template-areas: "head" "main" "footer";
@@ -242,8 +242,9 @@ header {
 #main {
     display: flex;
     grid-area: main;
-    display: grid;
+    
     margin: 0 auto;
+    flex-grow: 1;
     width: 90%;
     max-width: 1600px;
     height: 100%;
@@ -525,7 +526,7 @@ figure {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    display: grid;
+    
     padding: 5px 0px;
     grid-template-rows: 3% 30% 2% 30% 2% 30% 3%;
     align-items: center;
@@ -545,7 +546,7 @@ figure {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    display: grid;
+    
     padding: 5px 0px;
     grid-template-rows: 3% 30% 2% 30% 2% 30% 3%;
     align-items: center;
@@ -2065,7 +2066,7 @@ h3 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        display: grid;
+        
         grid-row: 1;
         grid-column: 1 / 4;
         height: 18.39%;
@@ -2083,7 +2084,7 @@ h3 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        display: grid;
+        
         height: 18.39%;
         grid-column: 1 / 4;
         grid-row: 3;
@@ -2173,41 +2174,3 @@ h3 {
     }
 }
  
-@supports(display: grid) {
-    .browser-support {
-        display: none;
-    }
-    .svg-logo-one {
-        width: 30%;
-        max-width: 100%;
-        max-height: 100%;
-    }
-
-    .svg-logo-two {
-        width: 30%;
-        max-width: 100%;
-        max-height: 100%;
-    } 
-    figure {
-        width: 70%;
-        height: 100%;    
-    }    
-    @media all and (max-aspect-ratio: 19/21) {
-        .svg-logo-one {
-            width: 100%;
-            height: 40%;
-        }
-        .svg-logo-two {
-            width: 100%;
-            height: 40%;
-        } 
-        .svg-logo-one div,
-        .svg-logo-two div {
-            width: 100%;
-        }
-        figure {
-        width: 100%;
-        height: 70%;    
-    }    
-    }   
-}

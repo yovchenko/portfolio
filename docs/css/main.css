@@ -893,8 +893,6 @@ html, html body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    display: -ms-grid;
-    display: grid;
     height: calc(100vh + 65px); }
 
 @media screen and (orientation: landscape) {
@@ -914,8 +912,6 @@ html, html body {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  display: -ms-grid;
-  display: grid;
   position: relative;
   width: 100%;
       grid-template-areas: "head" "main" "footer";
@@ -1144,9 +1140,10 @@ header {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: main;
-  display: -ms-grid;
-  display: grid;
   margin: 0 auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   width: 90%;
   max-width: 1600px;
   height: 100%;
@@ -1395,8 +1392,6 @@ figure {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  display: -ms-grid;
-  display: grid;
   padding: 5px 0px;
   grid-template-rows: 3% 30% 2% 30% 2% 30% 3%;
   -webkit-box-align: center;
@@ -1426,8 +1421,6 @@ figure {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  display: -ms-grid;
-  display: grid;
   padding: 5px 0px;
   grid-template-rows: 3% 30% 2% 30% 2% 30% 3%;
   -webkit-box-align: center;
@@ -2761,8 +2754,6 @@ h3 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    display: -ms-grid;
-    display: grid;
     -ms-grid-row: 1;
     grid-row: 1;
     -ms-grid-column: 1;
@@ -2792,8 +2783,6 @@ h3 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    display: -ms-grid;
-    display: grid;
     height: 18.39%;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
@@ -2903,31 +2892,3 @@ h3 {
   .svg-logo-two > div:nth-child(2) {
     right: 0%;
     width: 101%; } }
-
-@supports ((display: -ms-grid) or (display: grid)) {
-  .browser-support {
-    display: none; }
-  .svg-logo-one {
-    width: 30%;
-    max-width: 100%;
-    max-height: 100%; }
-  .svg-logo-two {
-    width: 30%;
-    max-width: 100%;
-    max-height: 100%; }
-  figure {
-    width: 70%;
-    height: 100%; }
-  @media all and (max-aspect-ratio: 19 / 21) {
-    .svg-logo-one {
-      width: 100%;
-      height: 40%; }
-    .svg-logo-two {
-      width: 100%;
-      height: 40%; }
-    .svg-logo-one div,
-    .svg-logo-two div {
-      width: 100%; }
-    figure {
-      width: 100%;
-      height: 70%; } } }
