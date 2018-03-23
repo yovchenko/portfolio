@@ -2000,6 +2000,18 @@ h3 {
     main .svg-logo-one div .bar-before {
         order: 2;
     }
+    .svg-logo-one>div:nth-child(1) {
+        padding-top: 15px;
+    }
+    .svg-logo-one>div:nth-child(3) {
+        padding-top: 15px;
+    }
+    .svg-logo-two>div:nth-child(1) {
+        padding-bottom: 15px;
+    }
+    .svg-logo-two>div:nth-child(3) {
+        padding-bottom: 15px;
+    }
     .svg-logo-one>div:nth-child(2) {
         right: 0%;
         width: 103%;

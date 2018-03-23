@@ -838,7 +838,7 @@ main .svg-logo-two div .bar-before {
     width: .9em;
     height: .9em;
     position: relative;
-    bottom: -2px;
+    bottom: -1px;
     left: 0;
     right: 0;
     margin: 0;
@@ -2713,6 +2713,14 @@ h3 {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2; }
+  .svg-logo-one > div:nth-child(1) {
+    padding-top: 15px; }
+  .svg-logo-one > div:nth-child(3) {
+    padding-top: 15px; }
+  .svg-logo-two > div:nth-child(1) {
+    padding-bottom: 15px; }
+  .svg-logo-two > div:nth-child(3) {
+    padding-bottom: 15px; }
   .svg-logo-one > div:nth-child(2) {
     right: 0%;
     width: 103%; }
