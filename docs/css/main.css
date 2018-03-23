@@ -862,13 +862,6 @@ progress[value]::-moz-progress-bar {
   border-bottom-left-radius: 10px;
   background: #fff; }
 
-@media all and (max-aspect-ratio: 19 / 21) {
-  main .svg-logo-one div .bar-before,
-  main .svg-logo-two div .bar-before {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1; } }
-
 @media all and (max-width: 767px) and (min-width: 577px) {
   main .svg-logo-one div .bar-before,
   main .svg-logo-two div .bar-before {
@@ -1199,7 +1192,7 @@ header {
   background-repeat: no-repeat; }
 
 figure {
-  width: 60%;
+  width: 50%;
   position: absolute;
   height: 90%;
   top: 50%;
@@ -2643,7 +2636,8 @@ h3 {
             flex-direction: column; }
   figure {
     width: 90%;
-    height: 60%; }
+    height: 50%;
+    top: 50%; }
   .bookWrap {
     width: 120%;
     left: -10%; }
@@ -2705,13 +2699,22 @@ h3 {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
+  main .svg-logo-one div .bar-before,
+  main .svg-logo-two div .bar-before {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+  .svg-logo-one > div svg {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3; }
+  main .svg-logo-one div .bar-before {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
   .svg-logo-one > div:nth-child(2) {
     right: 0%;
     width: 103%; }
-  .svg-logo-one > div:nth-child(1) svg {
-    padding-bottom: 1.70000%; }
-  .svg-logo-one > div:nth-child(2) svg {
-    padding-bottom: 26.5222%; }
   .svg-logo-two > div:nth-child(2) {
     right: 0%;
     width: 101%; } }

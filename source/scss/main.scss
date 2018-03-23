@@ -296,7 +296,7 @@ header {
 }
 
 figure {
-    width: 60%;
+    width: 50%;
     position: absolute;
     height: 90%;
     top: 50%;
@@ -1949,7 +1949,8 @@ h3 {
     }
     figure {
         width: 90%;
-        height: 60%;
+        height: 50%;
+        top: 50%;
     }
     .bookWrap {
         width: 120%;
@@ -1988,15 +1989,19 @@ h3 {
         height: auto;
         justify-content: flex-end;
     }
+    main .svg-logo-one div .bar-before,
+	main .svg-logo-two div .bar-before {
+		flex: 1;
+    }
+    .svg-logo-one>div svg {
+        order: 3;
+    }
+    main .svg-logo-one div .bar-before {
+        order: 2;
+    }
     .svg-logo-one>div:nth-child(2) {
         right: 0%;
         width: 103%;
-    }
-    .svg-logo-one>div:nth-child(1) svg {
-    padding-bottom: 1.70000%
-    }
-    .svg-logo-one>div:nth-child(2) svg {
-        padding-bottom: 26.5222%;
     }
     .svg-logo-two>div:nth-child(2) {
         right: 0%;

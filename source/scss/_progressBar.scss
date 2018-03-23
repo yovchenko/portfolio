@@ -53,13 +53,6 @@ progress[value]::-moz-progress-bar {
 	background: #fff;
 }
 
-@media all and (max-aspect-ratio: 19/21) {
-	main .svg-logo-one div .bar-before,
-	main .svg-logo-two div .bar-before {
-		flex: 1;
-	}
-}
-
 @media all and (max-width: 767px) and (min-width: 577px) {
 	main .svg-logo-one div .bar-before,
 	main .svg-logo-two div .bar-before {
