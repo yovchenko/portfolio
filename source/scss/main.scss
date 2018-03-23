@@ -27,7 +27,7 @@ html {
         overflow: hidden;
         body {
         overflow-y: auto;
-        position: fixed;
+        position: absolute;
         }
     }
 
@@ -1449,28 +1449,15 @@ footer .wrapper {
 
 .ie-edge__detected {
     #loader-wrapper {
-        position: fixed;
-        height: calc(100% + 65px);
-        top: 0;
-        left: 0;
-        bottom: 0;
+        position: absolute;
         #loader {
             display: block;
             position: relative;
-            left: 50%;
-            top: 50%;
         }
     }
     
     #loader-wrapper .loader-section {
         position: fixed;
-        top: 0;
-        width: 51%;
-        height: calc(100% + 65px);
-    }
-    
-    .is--visible #loader-wrapper {
-        visibility: hidden;
     }
 }
 

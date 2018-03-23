@@ -912,7 +912,7 @@ html, html body {
   overflow: hidden; }
   .ie-edge__detected body {
     overflow-y: auto;
-    position: fixed; }
+    position: absolute; }
 
 .grid-container {
   display: -webkit-box;
@@ -2235,25 +2235,13 @@ footer .wrapper {
       /* Chrome, Firefox 16+, IE 10+, Opera */ }
 
 .ie-edge__detected #loader-wrapper {
-  position: fixed;
-  height: calc(100% + 65px);
-  top: 0;
-  left: 0;
-  bottom: 0; }
+  position: absolute; }
   .ie-edge__detected #loader-wrapper #loader {
     display: block;
-    position: relative;
-    left: 50%;
-    top: 50%; }
+    position: relative; }
 
 .ie-edge__detected #loader-wrapper .loader-section {
-  position: fixed;
-  top: 0;
-  width: 51%;
-  height: calc(100% + 65px); }
-
-.ie-edge__detected .is--visible #loader-wrapper {
-  visibility: hidden; }
+  position: fixed; }
 
 .mobile #loader-wrapper #loader {
   visibility: visible; }
