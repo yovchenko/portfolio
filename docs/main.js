@@ -11547,6 +11547,9 @@ function mainPage() {
 
 	if (document.documentElement.className.indexOf('mobile') !== -1) exports.device = device = 'mobile';else if (document.documentElement.className.indexOf('tablet') !== -1) exports.device = device = 'tablet';else exports.device = device = 'desktop';
 	exports.size = size = getWindowSize();
+	if (device === 'mobile' || device === 'tablet') {
+		if (size[0] > size[1]) _preloader.page.elements.main.style.height = size[0] - 65 + 'px';else _preloader.page.elements.main.style.height = size[1] - 65 + 'px';
+	}
 	function resizeScreenObj() {
 		if (device === 'mobile' || device === 'tablet') {
 			if (size[0] > size[1]) _preloader.page.elements.main.style.height = size[0] - 65 + 'px';else _preloader.page.elements.main.style.height = size[1] - 65 + 'px';
