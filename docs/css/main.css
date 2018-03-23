@@ -1175,7 +1175,6 @@ header {
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
   height: 100%;
-  position: relative;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -1200,9 +1199,9 @@ header {
   background-repeat: no-repeat; }
 
 figure {
-  width: 100%;
+  width: 60%;
   position: absolute;
-  height: 100%;
+  height: 90%;
   top: 50%;
   left: 50%;
   margin: 0 auto;
@@ -2643,8 +2642,8 @@ h3 {
         -ms-flex-direction: column;
             flex-direction: column; }
   figure {
-    width: 100%;
-    height: 100%; }
+    width: 90%;
+    height: 60%; }
   .bookWrap {
     width: 120%;
     left: -10%; }
@@ -2666,11 +2665,11 @@ h3 {
         -ms-flex: 2;
             flex: 2;
     width: 100%;
-    padding: 15px 0px 0px 0px;
+    padding: 0px;
     position: relative;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end; }
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
   .svg-logo-two {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2685,7 +2684,7 @@ h3 {
     -webkit-box-flex: 2;
         -ms-flex: 2;
             flex: 2;
-    padding: 0px 0px 15px 0px;
+    padding: 0px;
     margin-top: auto;
     width: 100%;
     position: relative;
@@ -2708,6 +2707,8 @@ h3 {
   .svg-logo-one > div:nth-child(2) {
     right: 0%;
     width: 103%; }
+  .svg-logo-one > div:nth-child(2) svg {
+    padding-bottom: 24.85%; }
   .svg-logo-two > div:nth-child(2) {
     right: 0%;
     width: 101%; } }

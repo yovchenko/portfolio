@@ -270,7 +270,6 @@ header {
 .canvas-box {
     flex-basis: 60%;
     height: 100%;
-    position: relative;
     flex-grow: 1;
     z-index: 2;
     -webkit-transition: all 500ms linear;
@@ -297,9 +296,9 @@ header {
 }
 
 figure {
-    width: 100%;
+    width: 60%;
     position: absolute;
-    height: 100%;
+    height: 90%;
     top: 50%;
     left: 50%;
     margin: 0 auto;
@@ -1949,8 +1948,8 @@ h3 {
         flex-direction: column;
     }
     figure {
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 60%;
     }
     .bookWrap {
         width: 120%;
@@ -1965,16 +1964,16 @@ h3 {
         justify-content: space-between;
         flex: 2;
         width: 100%;
-        padding: 15px 0px 0px 0px;
+        padding: 0px;
         position: relative;
-        align-items: flex-end;
+        align-items: flex-start;
     }
     .svg-logo-two {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         flex: 2;
-        padding: 0px 0px 15px 0px;
+        padding: 0px;
         margin-top: auto;
         width: 100%;
         position: relative;
@@ -1991,6 +1990,9 @@ h3 {
     .svg-logo-one>div:nth-child(2) {
         right: 0%;
         width: 103%;
+    }
+    .svg-logo-one>div:nth-child(2) svg {
+        padding-bottom: 24.85%;
     }
     .svg-logo-two>div:nth-child(2) {
         right: 0%;
