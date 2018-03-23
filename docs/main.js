@@ -11419,7 +11419,7 @@ function mainPage() {
 	    supportsIE = detectIE();
 
 	if (!(supportsIE === false)) {
-		document.body.className += ' ie-edge__detected';
+		document.documentElement.className += ' ie-edge__detected';
 	}
 
 	function detectIE() {
