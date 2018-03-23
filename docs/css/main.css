@@ -2086,7 +2086,7 @@ footer .wrapper {
 .mobile #loader-wrapper #loader {
   visibility: visible; }
 
-.table #loader-wrapper #loader {
+.tablet #loader-wrapper #loader {
   visibility: visible; }
 
 .desktop #loader-wrapper #loader {
