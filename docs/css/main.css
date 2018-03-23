@@ -965,7 +965,10 @@ header {
   max-width: 1600px; }
 
 .footer {
-  display: none;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 65px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -987,9 +990,7 @@ header {
         -ms-flex-align: center;
             align-items: center; }
   .footer.is--visible {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    visibility: visible;
     /* NEW, Spec - Firefox, Chrome, Opera */ }
 
 .fps {
