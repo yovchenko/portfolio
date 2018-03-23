@@ -1167,7 +1167,8 @@ header {
   height: 3em; }
 
 .canvas-box {
-  width: 100%;
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
   height: 100%;
   position: relative;
   -webkit-box-flex: 1;
@@ -1374,7 +1375,8 @@ figure {
   margin: 0 auto; }
 
 .svg-logo-one {
-  width: 20%;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1386,16 +1388,17 @@ figure {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 15px 0px 15px 0px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   z-index: -1;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
 .svg-logo-two {
   margin-left: auto;
-  width: 20%;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1407,9 +1410,9 @@ figure {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 15px 0px 15px 0px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   z-index: -1;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -1425,9 +1428,8 @@ figure {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
+  width: 80%;
   height: 100%;
-  margin: 15px 0px;
   text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -2625,6 +2627,10 @@ h3 {
     font-size: 1.4em; } }
 
 @media all and (max-aspect-ratio: 19 / 21) {
+  .canvas-box {
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+    width: 100%; }
   #main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2650,7 +2656,8 @@ h3 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    height: 20%;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
     width: 100%;
     padding: 15px 0px 0px 0px;
     position: relative;
@@ -2670,7 +2677,8 @@ h3 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    height: 20%;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
     padding: 0px 0px 15px 0px;
     margin-top: auto;
     width: 100%;
@@ -2680,30 +2688,18 @@ h3 {
             align-items: flex-end;
     -webkit-box-sizing: border-box;
             box-sizing: border-box; }
-  .svg-logo-one div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    margin: 0px 15px;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 20%;
-            flex: 0 1 20%;
-    margin: 0;
-    height: 100%; }
-  .svg-logo-two div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 20%;
-            flex: 0 1 20%;
-    margin: 0px 15px;
-    margin: 0;
-    height: 100%; }
   .svg-logo-one div,
   .svg-logo-two div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 20%;
+            flex: 0 1 20%;
+    margin: 0px 15px;
+    margin: 0;
+    height: 100%;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end; }
