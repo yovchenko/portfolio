@@ -953,7 +953,7 @@ header {
       flex-shrink: 0;
   z-index: 999;
   height: 65px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #fff;
   z-index: 0;
   background-size: cover;
   overflow: hidden;
@@ -972,7 +972,7 @@ header {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   z-index: 999;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #fff;
   background-size: cover;
   overflow: hidden;
   -webkit-box-shadow: 0 -8px 6px -6px rgba(0, 0, 0, 0.6);

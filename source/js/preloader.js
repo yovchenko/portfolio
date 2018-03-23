@@ -113,13 +113,13 @@ encode = window.btoa(svgString);
 page.elements.footer.style.backgroundImage = 'url("data:image/svg+xml;base64,' + encode + '")';
 page.elements.header.style.backgroundImage = 'url("data:image/svg+xml;base64,' + encode + '")';
 
+page.setBackground;
 function init() {
     /*I'm giving you some extra time to enjoy my preloader*/
     document.addEventListener('DOMContentLoaded', delay);
     let delay = setTimeout(function () {
         mainCanvas();
         anim.stop();
-        page.setBackground;
         $(document.getElementsByClassName('footer')[0]).add(document.body).addClass("is--visible");
         $(document.getElementsByClassName('loader-section')).add(document.getElementById('loader'))
             .add(title).stop().addClass('is--invisible');
