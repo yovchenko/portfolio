@@ -11395,7 +11395,7 @@ function resizeContent(obj, wrap, width, height) {
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.supports_grid = exports.scaleValue = exports.device = exports.size = undefined;
+exports.scaleValue = undefined;
 
 var _resize = __webpack_require__(192);
 
@@ -11410,11 +11410,31 @@ var _canvasSphere2 = _interopRequireDefault(_canvasSphere);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.addEventListener('DOMContentLoaded', mainPage);
-var size = exports.size = undefined,
-    device = exports.device = '',
-    scaleValue = exports.scaleValue = 1,
-    supports_grid = exports.supports_grid = typeof _preloader.page.elements.grid.style.grid === 'string';
+var scaleValue = exports.scaleValue = 1;
 function mainPage() {
+	var size,
+	    device = '',
+	    supports_grid = typeof _preloader.page.elements.grid.style.grid === 'string',
+	    version = detectIE();
+
+	if (!(version === false)) {
+		document.body.className += ' ie-edge__detected';
+	}
+
+	function detectIE() {
+		var ua = window.navigator.userAgent;
+
+		var trident = ua.indexOf('Trident/');
+		if (trident > 0) {
+			var rv = ua.indexOf('rv:');
+			if (parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10) === 11) return 'Trident';else return false;
+		}
+
+		var edge = ua.indexOf('Edge/');
+		if (edge > 0) return 'Edge';
+		return false;
+	}
+
 	var $home = $('.js-home'),
 	    $about = $('.js-about'),
 	    $work = $('.js-work'),
@@ -11545,8 +11565,8 @@ function mainPage() {
 
 	window.addEventListener("resize", resizeScreenObj, false);
 
-	if (document.documentElement.className.indexOf('mobile') !== -1) exports.device = device = 'mobile';else if (document.documentElement.className.indexOf('tablet') !== -1) exports.device = device = 'tablet';else exports.device = device = 'desktop';
-	exports.size = size = getWindowSize();
+	if (document.documentElement.className.indexOf('mobile') !== -1) device = 'mobile';else if (document.documentElement.className.indexOf('tablet') !== -1) device = 'tablet';else device = 'desktop';
+	size = getWindowSize();
 	if (device === 'mobile' || device === 'tablet') {
 		if (size[0] > size[1]) _preloader.page.elements.main.style.height = size[0] - 65 + 'px';else _preloader.page.elements.main.style.height = size[1] - 65 + 'px';
 	} else _preloader.page.elements.main.style.height = size[1] - 65 + 'px';
