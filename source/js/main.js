@@ -11,31 +11,33 @@ import mainCanvas from './canvasSphere';
 
 document.addEventListener('DOMContentLoaded', mainPage);
 export var scaleValue = 1;
+
 function mainPage() {
 	var size,
-	device = '',
-	supports_grid = typeof page.elements.grid.style.grid === 'string',
-	version = detectIE();
+		device = '',
+		supportsGrid = typeof page.elements.grid.style.grid === 'string',
+		supportsIE = detectIE();
 
-    if (!(version === false)) {
-      document.body.className += ' ie-edge__detected';
-    }
-
-    function detectIE() {
-      var ua = window.navigator.userAgent;
-
-      var trident = ua.indexOf('Trident/');
-      if (trident > 0) {
-        var rv = ua.indexOf('rv:');
-        if (parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10) === 11) return 'Trident';
-        else return false;
-      }
-
-      var edge = ua.indexOf('Edge/');
-      if (edge > 0) return 'Edge';
-      return false;
+	if (!(supportsIE === false)) {
+		document.body.className += ' ie-edge__detected';
 	}
-	
+
+	function detectIE() {
+		var ua = window.navigator.userAgent;
+
+		var trident = ua.indexOf('Trident/');
+		if (trident > 0) {
+			var rv = ua.indexOf('rv:');
+			if (parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10) === 11) return 'Trident';
+			else return false;
+		}
+
+		var edge = ua.indexOf('Edge/');
+		if (edge > 0) return 'Edge';
+		return false;
+	}
+
+	/*header text animation*/
 	const $home = $('.js-home'),
 		$about = $('.js-about'),
 		$work = $('.js-work'),
@@ -58,7 +60,6 @@ function mainPage() {
 		}
 	}
 
-	/*header text animation*/
 	let headerText = function () {
 		let s,
 			textLetters = {
@@ -155,8 +156,8 @@ function mainPage() {
 						if (key === 'article' || key === 'flipbook' || key === 'touch' || key === 'container' || key === 'home')
 							page.elements[key].style.display = 'none';
 						else {
-							if (supports_grid) page.elements[key].style.display = 'grid';
-							else if (version === 'Trident') page.elements[key].style.display = '-ms-grid';
+							if (supportsGrid) page.elements[key].style.display = 'grid';
+							else if (supportsIE === 'Trident') page.elements[key].style.display = '-ms-grid';
 							else page.elements[key].style.display = 'flex';
 						}
 					}
@@ -178,27 +179,26 @@ function mainPage() {
 
 	window.addEventListener("resize", resizeScreenObj, false);
 
-	if(document.documentElement.className.indexOf('mobile') !== -1) device = 'mobile';
-	else if(document.documentElement.className.indexOf('tablet') !== -1) device = 'tablet';
+	if (document.documentElement.className.indexOf('mobile') !== -1) device = 'mobile';
+	else if (document.documentElement.className.indexOf('tablet') !== -1) device = 'tablet';
 	else device = 'desktop';
 	size = getWindowSize();
-	if(device === 'mobile' || device === 'tablet') {
-		if(size[0] > size[1]) page.elements.main.style.height = (size[0] - 65) + 'px';
+	if (device === 'mobile' || device === 'tablet') {
+		if (size[0] > size[1]) page.elements.main.style.height = (size[0] - 65) + 'px';
 		else page.elements.main.style.height = (size[1] - 65) + 'px';
-	}
-	else page.elements.main.style.height = (size[1] - 65) + 'px';
+	} else page.elements.main.style.height = (size[1] - 65) + 'px';
 
 	function resizeScreenObj() {
-		if(device === 'mobile' || device === 'tablet') {
-			if(size[0] > size[1]) page.elements.main.style.height = (size[0] - 65) + 'px';
+		if (device === 'mobile' || device === 'tablet') {
+			if (size[0] > size[1]) page.elements.main.style.height = (size[0] - 65) + 'px';
 			else page.elements.main.style.height = (size[1] - 65) + 'px';
-		} 
-			if (page.contacts) {
-				resizeContent('.envelope', '#wrap', 530, 630);
-			} else if (page.home) {
-				resizeContent('#figure', '#wrapperCanvas', 800, 900);
-			} else if (page.work) {
-				scaleValue = resizeContent('.bookWrap', '#flipbook', 960, 600);
-			}
+		}
+		if (page.contacts) {
+			resizeContent('.envelope', '#wrap', 530, 630);
+		} else if (page.home) {
+			resizeContent('#figure', '#wrapperCanvas', 800, 900);
+		} else if (page.work) {
+			scaleValue = resizeContent('.bookWrap', '#flipbook', 960, 600);
+		}
 	};
 }
