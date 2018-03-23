@@ -194,7 +194,7 @@ header {
         line-height: 61px;
         background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
         border-radius: 5px;
-        @include responsive-font(4.2vw, 25px, 50px);
+        @include responsive-font(3vw, 24px, 48px);
         padding: 0px 5px;
         margin-right: 6px;
     }
@@ -204,7 +204,7 @@ header {
         opacity: 0.85;
         margin: 0 auto;
         padding-right: 51px;
-        @include responsive-font(4.2vw, 25px, 50px);
+        @include responsive-font(3vw, 24px, 48px);
     }
     .menu__home {
         display: none;
@@ -214,7 +214,7 @@ header {
         border-radius: 5px;
         margin-left: 6px;
         padding: 0px 5px;
-        @include responsive-font(4.2vw, 25px, 50px);
+        @include responsive-font(3vw, 24px, 48px);
     }
 }
 
@@ -584,7 +584,7 @@ figure {
 
 article {
     max-width: 100%;
-    @include responsive-font(4.2vw, 25px, 50px);
+    @include responsive-font(3vw, 24px, 48px);
     line-height: 1.2;
     text-align: center;
     margin: 0 auto;
@@ -592,7 +592,7 @@ article {
 
 article p {
     margin: 0px;
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 #animationWindow {
@@ -1378,9 +1378,9 @@ footer .wrapper {
     .entry-title {
         visibility: hidden;
         font-family: 'Pangolin', cursive;
-        @include responsive-font(4.2vw,
-        25px,
-        50px);
+        @include responsive-font(3vw,
+        24px,
+        48px);
         color: rgb(51, 51, 51);
         position: relative;
         &.is--invisible {
@@ -1747,9 +1747,9 @@ h3 {
 @media all and (max-width: 767px) and (min-width: 577px) {
     .entry-header {
         .entry-title {
-            @include responsive-font(4.2vw,
+            @include responsive-font(3.2vw,
             20px,
-            50px);
+            24px);
         }
     }
     .navicon:focus,
@@ -1771,27 +1771,27 @@ h3 {
     .menu__header {
         .menu__init {
             padding: 0px;
-            @include responsive-font(4.2vw,
+            @include responsive-font(3.2vw,
             20px,
-            50px);
+            24px);
         }
         .menu__about,
         .menu__work,
         .menu__contact {
-            @include responsive-font(4.2vw,
+            @include responsive-font(3.2vw,
             20px,
-            50px);
+            24px);
         }
         .menu__home {
-            @include responsive-font(4.2vw,
+            @include responsive-font(3.2vw,
             20px,
-            50px);
+            24px);
         }
     }
         article {
-            @include responsive-font(4.2vw,
+            @include responsive-font(3.2vw,
             20px,
-            50px);
+            24px);
     }
     .btn-hamburger {
         padding: 0px;
@@ -1844,15 +1844,15 @@ h3 {
 @media all and (max-width: 576px) {
     .entry-header {
         .entry-title {
-            @include responsive-font(4.2vw,
+            @include responsive-font(4.8vw,
             18px,
-            50px);
+            22px);
         }
     }
     article {
-            @include responsive-font(4.2vw,
+            @include responsive-font(4.8vw,
             18px,
-            50px);
+            22px);
     }        
     .menu__header>p[class]:not(.menu__init):hover,
     .menu__header>p[class]:not(.menu__init):focus {
@@ -1895,23 +1895,23 @@ h3 {
         .menu__init {
             line-height: 32px;
             padding: 0;
-            @include responsive-font(5vw,
+            @include responsive-font(4.8vw,
             18px,
-            50px);
+            22px);
         }
         .menu__home {
             line-height: 61px;
             border-radius: 5px;
-            @include responsive-font(5vw,
+            @include responsive-font(4.8vw,
             18px,
-            50px);
+            22px);
         }
         .menu__about,
         .menu__work,
         .menu__contact {
-            @include responsive-font(5vw,
+            @include responsive-font(4.8vw,
             18px,
-            50px);
+            22px);
         }
     }
     .btn-hamburger {

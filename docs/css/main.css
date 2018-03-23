@@ -1077,32 +1077,32 @@ header {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.005)), to(rgba(75, 75, 75, 0.45)));
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
     border-radius: 5px;
-    font-size: 4.2vw;
+    font-size: 3vw;
     padding: 0px 5px;
     margin-right: 6px; }
-    @media (max-width: 595.2381px) {
+    @media (max-width: 800px) {
       .menu__header .menu__about,
       .menu__header .menu__work,
       .menu__header .menu__contact {
-        font-size: 25px; } }
-    @media (min-width: 1190.47619px) {
+        font-size: 24px; } }
+    @media (min-width: 1600px) {
       .menu__header .menu__about,
       .menu__header .menu__work,
       .menu__header .menu__contact {
-        font-size: 50px; } }
+        font-size: 48px; } }
   .menu__header .menu__init {
     display: block;
     text-align: center;
     opacity: 0.85;
     margin: 0 auto;
     padding-right: 51px;
-    font-size: 4.2vw; }
-    @media (max-width: 595.2381px) {
+    font-size: 3vw; }
+    @media (max-width: 800px) {
       .menu__header .menu__init {
-        font-size: 25px; } }
-    @media (min-width: 1190.47619px) {
+        font-size: 24px; } }
+    @media (min-width: 1600px) {
       .menu__header .menu__init {
-        font-size: 50px; } }
+        font-size: 48px; } }
   .menu__header .menu__home {
     display: none;
     cursor: pointer;
@@ -1112,13 +1112,13 @@ header {
     border-radius: 5px;
     margin-left: 6px;
     padding: 0px 5px;
-    font-size: 4.2vw; }
-    @media (max-width: 595.2381px) {
+    font-size: 3vw; }
+    @media (max-width: 800px) {
       .menu__header .menu__home {
-        font-size: 25px; } }
-    @media (min-width: 1190.47619px) {
+        font-size: 24px; } }
+    @media (min-width: 1600px) {
       .menu__header .menu__home {
-        font-size: 50px; } }
+        font-size: 48px; } }
 
 .menu__about span,
 .menu__work span,
@@ -1459,20 +1459,20 @@ figure {
 
 article {
   max-width: 100%;
-  font-size: 4.2vw;
+  font-size: 3vw;
   line-height: 1.2;
   text-align: center;
   margin: 0 auto; }
-  @media (max-width: 595.2381px) {
+  @media (max-width: 800px) {
     article {
-      font-size: 25px; } }
-  @media (min-width: 1190.47619px) {
+      font-size: 24px; } }
+  @media (min-width: 1600px) {
     article {
-      font-size: 50px; } }
+      font-size: 48px; } }
 
 article p {
   margin: 0px;
-  margin-top: 25px; }
+  margin-top: 15px; }
 
 #animationWindow {
   width: 100%;
@@ -2106,15 +2106,15 @@ footer .wrapper {
   .entry-header .entry-title {
     visibility: hidden;
     font-family: 'Pangolin', cursive;
-    font-size: 4.2vw;
+    font-size: 3vw;
     color: #333333;
     position: relative; }
-    @media (max-width: 595.2381px) {
+    @media (max-width: 800px) {
       .entry-header .entry-title {
-        font-size: 25px; } }
-    @media (min-width: 1190.47619px) {
+        font-size: 24px; } }
+    @media (min-width: 1600px) {
       .entry-header .entry-title {
-        font-size: 50px; } }
+        font-size: 48px; } }
     .entry-header .entry-title.is--invisible {
       display: none; }
 
@@ -2405,13 +2405,13 @@ h3 {
 /* media queries */
 @media all and (max-width: 767px) and (min-width: 577px) {
   .entry-header .entry-title {
-    font-size: 4.2vw; } }
-  @media all and (max-width: 767px) and (min-width: 577px) and (max-width: 476.19048px) {
+    font-size: 3.2vw; } }
+  @media all and (max-width: 767px) and (min-width: 577px) and (max-width: 625px) {
     .entry-header .entry-title {
       font-size: 20px; } }
-  @media all and (max-width: 767px) and (min-width: 577px) and (min-width: 1190.47619px) {
+  @media all and (max-width: 767px) and (min-width: 577px) and (min-width: 750px) {
     .entry-header .entry-title {
-      font-size: 50px; } }
+      font-size: 24px; } }
 
 @media all and (max-width: 767px) and (min-width: 577px) {
   .navicon:focus,
@@ -2430,49 +2430,49 @@ h3 {
     -moz-transform: scale(1.07); }
   .menu__header .menu__init {
     padding: 0px;
-    font-size: 4.2vw; } }
-  @media all and (max-width: 767px) and (min-width: 577px) and (max-width: 476.19048px) {
+    font-size: 3.2vw; } }
+  @media all and (max-width: 767px) and (min-width: 577px) and (max-width: 625px) {
     .menu__header .menu__init {
       font-size: 20px; } }
-  @media all and (max-width: 767px) and (min-width: 577px) and (min-width: 1190.47619px) {
+  @media all and (max-width: 767px) and (min-width: 577px) and (min-width: 750px) {
     .menu__header .menu__init {
-      font-size: 50px; } }
+      font-size: 24px; } }
 
 @media all and (max-width: 767px) and (min-width: 577px) {
   .menu__header .menu__about,
   .menu__header .menu__work,
   .menu__header .menu__contact {
-    font-size: 4.2vw; } }
-  @media all and (max-width: 767px) and (min-width: 577px) and (max-width: 476.19048px) {
+    font-size: 3.2vw; } }
+  @media all and (max-width: 767px) and (min-width: 577px) and (max-width: 625px) {
     .menu__header .menu__about,
     .menu__header .menu__work,
     .menu__header .menu__contact {
       font-size: 20px; } }
-  @media all and (max-width: 767px) and (min-width: 577px) and (min-width: 1190.47619px) {
+  @media all and (max-width: 767px) and (min-width: 577px) and (min-width: 750px) {
     .menu__header .menu__about,
     .menu__header .menu__work,
     .menu__header .menu__contact {
-      font-size: 50px; } }
+      font-size: 24px; } }
 
 @media all and (max-width: 767px) and (min-width: 577px) {
   .menu__header .menu__home {
-    font-size: 4.2vw; } }
-  @media all and (max-width: 767px) and (min-width: 577px) and (max-width: 476.19048px) {
+    font-size: 3.2vw; } }
+  @media all and (max-width: 767px) and (min-width: 577px) and (max-width: 625px) {
     .menu__header .menu__home {
       font-size: 20px; } }
-  @media all and (max-width: 767px) and (min-width: 577px) and (min-width: 1190.47619px) {
+  @media all and (max-width: 767px) and (min-width: 577px) and (min-width: 750px) {
     .menu__header .menu__home {
-      font-size: 50px; } }
+      font-size: 24px; } }
 
 @media all and (max-width: 767px) and (min-width: 577px) {
   article {
-    font-size: 4.2vw; } }
-  @media all and (max-width: 767px) and (min-width: 577px) and (max-width: 476.19048px) {
+    font-size: 3.2vw; } }
+  @media all and (max-width: 767px) and (min-width: 577px) and (max-width: 625px) {
     article {
       font-size: 20px; } }
-  @media all and (max-width: 767px) and (min-width: 577px) and (min-width: 1190.47619px) {
+  @media all and (max-width: 767px) and (min-width: 577px) and (min-width: 750px) {
     article {
-      font-size: 50px; } }
+      font-size: 24px; } }
 
 @media all and (max-width: 767px) and (min-width: 577px) {
   .btn-hamburger {
@@ -2514,23 +2514,23 @@ h3 {
 
 @media all and (max-width: 576px) {
   .entry-header .entry-title {
-    font-size: 4.2vw; } }
-  @media all and (max-width: 576px) and (max-width: 428.57143px) {
+    font-size: 4.8vw; } }
+  @media all and (max-width: 576px) and (max-width: 375px) {
     .entry-header .entry-title {
       font-size: 18px; } }
-  @media all and (max-width: 576px) and (min-width: 1190.47619px) {
+  @media all and (max-width: 576px) and (min-width: 458.33333px) {
     .entry-header .entry-title {
-      font-size: 50px; } }
+      font-size: 22px; } }
 
 @media all and (max-width: 576px) {
   article {
-    font-size: 4.2vw; } }
-  @media all and (max-width: 576px) and (max-width: 428.57143px) {
+    font-size: 4.8vw; } }
+  @media all and (max-width: 576px) and (max-width: 375px) {
     article {
       font-size: 18px; } }
-  @media all and (max-width: 576px) and (min-width: 1190.47619px) {
+  @media all and (max-width: 576px) and (min-width: 458.33333px) {
     article {
-      font-size: 50px; } }
+      font-size: 22px; } }
 
 @media all and (max-width: 576px) {
   .menu__header > p[class]:not(.menu__init):hover,
@@ -2565,41 +2565,41 @@ h3 {
   .menu__header .menu__init {
     line-height: 32px;
     padding: 0;
-    font-size: 5vw; } }
-  @media all and (max-width: 576px) and (max-width: 360px) {
+    font-size: 4.8vw; } }
+  @media all and (max-width: 576px) and (max-width: 375px) {
     .menu__header .menu__init {
       font-size: 18px; } }
-  @media all and (max-width: 576px) and (min-width: 1000px) {
+  @media all and (max-width: 576px) and (min-width: 458.33333px) {
     .menu__header .menu__init {
-      font-size: 50px; } }
+      font-size: 22px; } }
 
 @media all and (max-width: 576px) {
   .menu__header .menu__home {
     line-height: 61px;
     border-radius: 5px;
-    font-size: 5vw; } }
-  @media all and (max-width: 576px) and (max-width: 360px) {
+    font-size: 4.8vw; } }
+  @media all and (max-width: 576px) and (max-width: 375px) {
     .menu__header .menu__home {
       font-size: 18px; } }
-  @media all and (max-width: 576px) and (min-width: 1000px) {
+  @media all and (max-width: 576px) and (min-width: 458.33333px) {
     .menu__header .menu__home {
-      font-size: 50px; } }
+      font-size: 22px; } }
 
 @media all and (max-width: 576px) {
   .menu__header .menu__about,
   .menu__header .menu__work,
   .menu__header .menu__contact {
-    font-size: 5vw; } }
-  @media all and (max-width: 576px) and (max-width: 360px) {
+    font-size: 4.8vw; } }
+  @media all and (max-width: 576px) and (max-width: 375px) {
     .menu__header .menu__about,
     .menu__header .menu__work,
     .menu__header .menu__contact {
       font-size: 18px; } }
-  @media all and (max-width: 576px) and (min-width: 1000px) {
+  @media all and (max-width: 576px) and (min-width: 458.33333px) {
     .menu__header .menu__about,
     .menu__header .menu__work,
     .menu__header .menu__contact {
-      font-size: 50px; } }
+      font-size: 22px; } }
 
 @media all and (max-width: 576px) {
   .btn-hamburger {
