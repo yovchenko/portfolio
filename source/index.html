@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vladymyr M.Yovchenko - Portfolio</title>
   <script>
-    function getWindowsSize() {
+    function getWindowSize() {
       var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
       height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
       return [width,height]
@@ -36,7 +36,7 @@
       }
     }
     loadScript("https://unpkg.com/current-device/umd/current-device.min.js", function () {
-      var size = getWindowsSize();
+      var size = getWindowSize();
       if (size[0] >= 1025) document.documentElement.className += ' desktop';
       else if (size[0] <= 1024 && size[0] >= 768) document.documentElement.className += ' tablet';
       else document.documentElement.className += ' mobile';

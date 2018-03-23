@@ -10,7 +10,9 @@ import {
 import mainCanvas from './canvasSphere';
 
 document.addEventListener('DOMContentLoaded', mainPage);
-export var scaleValue = 1,
+export var size,
+device = '',
+scaleValue = 1,
 supports_grid = typeof page.elements.grid.style.grid === 'string';
 function mainPage() {
 	const $home = $('.js-home'),
@@ -136,7 +138,6 @@ function mainPage() {
 							else if (version === 'Trident') page.elements[key].style.display = '-ms-grid';
 							else page.elements[key].style.display = 'flex';
 						}
-						console.log(supports_grid)
 					}
 					page.elements.header.classList.remove('is--active');
 					page.pattern.colorX = 'YlGnBu';
@@ -153,16 +154,18 @@ function mainPage() {
 				.removeClass('is--closing').addClass('is--opening');
 		}, 1500);
 	}
-	function updateWindowSize() {
-		var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
-		height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-		if(width > height) return width;
-		else return height;
-	}
 
 	window.addEventListener("resize", resizeScreenObj, false);
 
+	if(document.documentElement.className.indexOf('mobile') !== -1) device = 'mobile';
+	else if(document.documentElement.className.indexOf('tablet') !== -1) device = 'tablet';
+	else device = 'desktop';
+	size = getWindowSize();
 	function resizeScreenObj() {
+		if(device === 'mobile' || device === 'tablet') {
+			if(size[0] > size[1]) page.elements.main.style.height = (size[0] - 65) + 'px';
+			else page.elements.main.style.height = (size[1] - 65) + 'px';
+		}
 			if (page.contacts) {
 				resizeContent('.envelope', '#wrap', 530, 630);
 			} else if (page.home) {

@@ -11395,7 +11395,7 @@ function resizeContent(obj, wrap, width, height) {
 Object.defineProperty(exports, "__esModule", {
 	value: true
 });
-exports.supports_grid = exports.scaleValue = undefined;
+exports.supports_grid = exports.scaleValue = exports.device = exports.size = undefined;
 
 var _resize = __webpack_require__(192);
 
@@ -11410,7 +11410,9 @@ var _canvasSphere2 = _interopRequireDefault(_canvasSphere);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 document.addEventListener('DOMContentLoaded', mainPage);
-var scaleValue = exports.scaleValue = 1,
+var size = exports.size = undefined,
+    device = exports.device = '',
+    scaleValue = exports.scaleValue = 1,
     supports_grid = exports.supports_grid = typeof _preloader.page.elements.grid.style.grid === 'string';
 function mainPage() {
 	var $home = $('.js-home'),
@@ -11525,7 +11527,6 @@ function mainPage() {
 						if (_key4 === 'article' || _key4 === 'flipbook' || _key4 === 'touch' || _key4 === 'container' || _key4 === 'home') _preloader.page.elements[_key4].style.display = 'none';else {
 							if (supports_grid) _preloader.page.elements[_key4].style.display = 'grid';else if (version === 'Trident') _preloader.page.elements[_key4].style.display = '-ms-grid';else _preloader.page.elements[_key4].style.display = 'flex';
 						}
-						console.log(supports_grid);
 					}
 					_preloader.page.elements.header.classList.remove('is--active');
 					_preloader.page.pattern.colorX = 'YlGnBu';
@@ -11541,15 +11542,15 @@ function mainPage() {
 			$(_preloader.page.elements.curtainRight).add(_preloader.page.elements.curtainLeft).stop().removeClass('is--closing').addClass('is--opening');
 		}, 1500);
 	}
-	function updateWindowSize() {
-		var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
-		    height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-		if (width > height) return width;else return height;
-	}
 
 	window.addEventListener("resize", resizeScreenObj, false);
 
+	if (document.documentElement.className.indexOf('mobile') !== -1) exports.device = device = 'mobile';else if (document.documentElement.className.indexOf('tablet') !== -1) exports.device = device = 'tablet';else exports.device = device = 'desktop';
+	exports.size = size = getWindowSize();
 	function resizeScreenObj() {
+		if (device === 'mobile' || device === 'tablet') {
+			if (size[0] > size[1]) _preloader.page.elements.main.style.height = size[0] - 65 + 'px';else _preloader.page.elements.main.style.height = size[1] - 65 + 'px';
+		}
 		if (_preloader.page.contacts) {
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 		} else if (_preloader.page.home) {

@@ -30,7 +30,7 @@ html {
     display: grid;
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     grid-template-areas: "head" "main" "footer";
     grid-template-rows: 65px 1fr 65px;
     grid-template-columns: auto;
@@ -48,18 +48,7 @@ html {
 }
 
 @media all and (orientation: landscape) {
-    .mobile .grid-container {
-        height: calc(100vw + 65px);
-    }
-    .tablet .grid-container {
-        height: calc(100vw + 65px);
-    }
-    .mobile .grid-container {
-        grid-template-rows: 65px $landscape 65px;
-    }
-    .tablet .grid-container {
-        grid-template-rows: 65px $landscape 65px;
-    }
+
     .mobile #main{
         height: $landscape;
     }
@@ -69,18 +58,7 @@ html {
 }
 
 @media all and (orientation: portrait) {
-    .mobile .grid-container {
-        height: calc(100vh + 65px);
-    }
-    .tablet .grid-container {
-        height: calc(100vh + 65px);
-    }
-    .mobile .grid-container {
-        grid-template-rows: 65px $portrait 65px;
-    }
-    .tablet .grid-container {
-        grid-template-rows: 65px $portrait 65px;
-    }
+
     .mobile #main{
         height: $portrait;
     }
