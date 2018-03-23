@@ -14,7 +14,6 @@ progress[value] {
 main .svg-logo-one div .bar-before,
 main .svg-logo-two div .bar-before {
 	font-size: 1.8em;
-	flex-shrink: 1;
 	line-height: 1.4;
 	text-align: center;
 	margin: 0 auto;
@@ -52,6 +51,13 @@ progress[value]::-moz-progress-bar {
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	background: #fff;
+}
+
+@media all and (max-aspect-ratio: 19/21) {
+	main .svg-logo-one div .bar-before,
+	main .svg-logo-two div .bar-before {
+		flex: 1;
+	}
 }
 
 @media all and (max-width: 767px) and (min-width: 577px) {
