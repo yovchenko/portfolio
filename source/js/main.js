@@ -183,16 +183,17 @@ function mainPage() {
 	else if (document.documentElement.className.indexOf('tablet') !== -1) device = 'tablet';
 	else device = 'desktop';
 	size = getWindowSize();
-	if (device === 'mobile' || device === 'tablet') {
-		if (size[0] > size[1]) page.elements.main.style.height = (size[0] - 65) + 'px';
-		else page.elements.main.style.height = (size[1] - 65) + 'px';
-	} else page.elements.main.style.height = (size[1] - 65) + 'px';
+	setPageHeight();
 
-	function resizeScreenObj() {
+	function setPageHeight() {
 		if (device === 'mobile' || device === 'tablet') {
 			if (size[0] > size[1]) page.elements.main.style.height = (size[0] - 65) + 'px';
 			else page.elements.main.style.height = (size[1] - 65) + 'px';
-		}
+		} else page.elements.main.style.height = (size[1] - 65) + 'px';
+	}
+
+	function resizeScreenObj() {
+		setPageHeight();
 		if (page.contacts) {
 			resizeContent('.envelope', '#wrap', 530, 630);
 		} else if (page.home) {
