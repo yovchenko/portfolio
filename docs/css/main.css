@@ -2665,7 +2665,7 @@ h3 {
         -ms-flex: 2;
             flex: 2;
     width: 100%;
-    padding: 0px;
+    padding: 15px 0px 0px 0px;
     position: relative;
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -2686,6 +2686,7 @@ h3 {
             flex: 2;
     padding: 0px;
     margin-top: auto;
+    padding: 0px 0px 15px 0px;
     width: 100%;
     position: relative;
     -webkit-box-align: end;
@@ -2707,8 +2708,10 @@ h3 {
   .svg-logo-one > div:nth-child(2) {
     right: 0%;
     width: 103%; }
+  .svg-logo-one > div:nth-child(1) svg {
+    padding-bottom: 1.70000%; }
   .svg-logo-one > div:nth-child(2) svg {
-    padding-bottom: 24.85%; }
+    padding-bottom: 26.5222%; }
   .svg-logo-two > div:nth-child(2) {
     right: 0%;
     width: 101%; } }
