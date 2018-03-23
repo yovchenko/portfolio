@@ -1997,6 +1997,7 @@ article p {
   width: 530px;
   height: 650px;
   position: absolute;
+  overflow: hidden;
   -webkit-transform-origin: top right;
   transform-origin: top right;
   -webkit-transition: all 500ms linear;
