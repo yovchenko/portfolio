@@ -191,7 +191,6 @@ header {
     .menu__contact {
         display: none;
         cursor: pointer;
-        font-family: 'Pangolin', cursive;
         line-height: 61px;
         background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
         border-radius: 5px;
@@ -210,7 +209,6 @@ header {
     .menu__home {
         display: none;
         cursor: pointer;
-        font-family: 'Pangolin', cursive;
         line-height: 61px;
         background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.005) 0%, rgba(75, 75, 75, 0.45) 100%);
         border-radius: 5px;
@@ -551,9 +549,6 @@ figure {
     position: relative;
     flex-direction: column;
     width: 100%;
-    margin: 2% 0%;
-    max-width: 100%;
-    max-height: 100%;
     text-align: center;
     justify-content: center;
 }
@@ -676,32 +671,6 @@ article p {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-}
-
-#book-zoom {
-    -webkit-transition: -webkit-transform 1s;
-    -moz-transition: -moz-transform 1s;
-    -ms-transition: -ms-transform 1s;
-    -o-transition: -o-transform 1s;
-    transition: transform 1s;
-}
-
-.zoom-pic {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 999;
-}
-
-.zoom-pic img {
-    -webkit-box-shadow: 0 0 20px #999;
-    -moz-box-shadow: 0 0 20px #999;
-    -o-box-shadow: 0 0 20px #999;
-    -ms-box-shadow: 0 0 20px #999;
-    box-shadow: 0 0 20px #999;
 }
 
 .animated {
@@ -844,12 +813,6 @@ article p {
 .sj-book  .hard.p4.own-size.page.even .page-speed-tools{
         margin: 0px 20px;
 }
-
-.sj-book .book-browser-support {}
-
-.sj-book .book-browser-icons {}
-
-.sj-book .book-browser-icons span {}
 
 .sj-book .book-browser-icons span svg {
     width: 45px;
@@ -1996,7 +1959,7 @@ h3 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        height: 18.39%;
+        height: 20%;
         width: 100%;
         margin-top: 10px;
         position: relative;
@@ -2007,7 +1970,7 @@ h3 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        height: 18.39%;
+        height: 20%;
         margin-bottom: 10px;
         margin-top: auto;
         width: 100%;

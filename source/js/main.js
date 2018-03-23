@@ -182,9 +182,9 @@ function mainPage() {
 
 	function setElementHeight(targetElement) {
 		if (device === 'mobile' || device === 'tablet') {
-			if (size[0] > size[1]) el.style.height = (size[0] - 65) + 'px';
-			else el.style.height = (size[1] - 65) + 'px';
-		} else el.style.height = (size[1] - 65) + 'px';
+			if (size[0] > size[1]) targetElement.style.height = (size[0] - 65) + 'px';
+			else targetElement.style.height = (size[1] - 65) + 'px';
+		} else targetElement.style.height = (size[1] - 65) + 'px';
 	}
 
 	function resizeScreenObj() {
