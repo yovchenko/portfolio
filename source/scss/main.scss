@@ -1450,12 +1450,10 @@ footer .wrapper {
 .ie-edge__detected {
     #loader-wrapper {
         position: fixed;
+        height: calc(100% + 65px);
         top: 0;
         left: 0;
-        width: 100%;
-        height: calc(100% + 65px);
-        bottom: -74.64px;
-        z-index: 1000;
+        bottom: 0;
         &.is--invisible {
             display: none;
         }
