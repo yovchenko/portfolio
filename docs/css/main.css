@@ -1986,7 +1986,7 @@ article p {
 .envelope {
   width: 90%;
   position: absolute;
-  overflow: hidden;
+  overflow-y: hidden;
   height: 80%;
   top: 50%;
   left: 50%;
