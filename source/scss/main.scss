@@ -1942,7 +1942,7 @@ h3 {
 
 @media all and (max-aspect-ratio: 19/21) {
     .canvas-box {
-        flex-basis: 60%;
+        flex: 6;
         width: 100%;
     }
     #main {
@@ -1963,24 +1963,22 @@ h3 {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        flex-basis: 20%;
+        flex: 2;
         width: 100%;
         padding: 15px 0px 0px 0px;
         position: relative;
         align-items: flex-end;
-        box-sizing: content-box;
     }
     .svg-logo-two {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        flex-basis: 20%;
+        flex: 2;
         padding: 0px 0px 15px 0px;
         margin-top: auto;
         width: 100%;
         position: relative;
         align-items: flex-end;
-        box-sizing: content-box;
     }
     .svg-logo-one div,
     .svg-logo-two div {

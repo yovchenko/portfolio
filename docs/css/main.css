@@ -2633,8 +2633,9 @@ h3 {
 
 @media all and (max-aspect-ratio: 19 / 21) {
   .canvas-box {
-    -ms-flex-preferred-size: 60%;
-        flex-basis: 60%;
+    -webkit-box-flex: 6;
+        -ms-flex: 6;
+            flex: 6;
     width: 100%; }
   #main {
     -webkit-box-orient: vertical;
@@ -2661,16 +2662,15 @@ h3 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
     width: 100%;
     padding: 15px 0px 0px 0px;
     position: relative;
     -webkit-box-align: end;
         -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-box-sizing: content-box;
-            box-sizing: content-box; }
+            align-items: flex-end; }
   .svg-logo-two {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2682,17 +2682,16 @@ h3 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -ms-flex-preferred-size: 20%;
-        flex-basis: 20%;
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
     padding: 0px 0px 15px 0px;
     margin-top: auto;
     width: 100%;
     position: relative;
     -webkit-box-align: end;
         -ms-flex-align: end;
-            align-items: flex-end;
-    -webkit-box-sizing: content-box;
-            box-sizing: content-box; }
+            align-items: flex-end; }
   .svg-logo-one div,
   .svg-logo-two div {
     display: -webkit-box;
