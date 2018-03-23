@@ -2240,114 +2240,17 @@ footer .wrapper {
   top: 0;
   left: 0;
   bottom: 0; }
-  .ie-edge__detected #loader-wrapper.is--invisible {
-    display: none; }
   .ie-edge__detected #loader-wrapper #loader {
     display: block;
     position: relative;
     left: 50%;
-    top: 45%;
-    width: 150px;
-    height: 150px;
-    margin: -85px 0 0 -85px;
-    border-radius: 50%;
-    border: 5px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 5px 5px 5px 5px rgba(255, 255, 255, 0.25);
-    -moz-box-shadow: inset 5px 5px 5px 5px rgba(255, 255, 255, 0.25);
-    -webkit-box-shadow: inset 5px 5px 5px 5px rgba(255, 255, 255, 0.25);
-    -webkit-animation: spin 2.5s linear infinite;
-    /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 2.5s linear infinite;
-    /* Chrome, Firefox 16+, IE 10+, Opera */
-    z-index: 1001; }
-    .ie-edge__detected #loader-wrapper #loader.is--invisible {
-      display: none; }
-    .ie-edge__detected #loader-wrapper #loader:before {
-      content: "";
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
-      border-radius: 50%;
-      border: 5px solid rgba(255, 255, 255, 0.6);
-      border-top-color: rgba(255, 255, 255, 0.6);
-      box-shadow: 5px 5px 5px 5px rgba(255, 255, 255, 0.6);
-      -moz-box-shadow: 5px 5px 5px 5px rgba(255, 255, 255, 0.6);
-      -webkit-box-shadow: 5px 5px 5px 5px rgba(255, 255, 255, 0.6);
-      -webkit-animation: spin 3s linear infinite;
-      /* Chrome, Opera 15+, Safari 5+ */
-      animation: spin 3s linear infinite;
-      /* Chrome, Firefox 16+, IE 10+, Opera */ }
-    .ie-edge__detected #loader-wrapper #loader:after {
-      content: "";
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      right: 15px;
-      bottom: 15px;
-      border-radius: 50%;
-      border: 3px solid rgba(255, 255, 255, 0.9);
-      -webkit-box-shadow: 5px 10px 5px 6px rgba(255, 255, 255, 0.65);
-      box-shadow: 5px 10px 5px 6px rgba(255, 255, 255, 0.65);
-      -webkit-animation: spin 1.5s linear infinite;
-      /* Chrome, Opera 15+, Safari 5+ */
-      animation: spin 1.5s linear infinite;
-      /* Chrome, Firefox 16+, IE 10+, Opera */ }
+    top: 50%; }
 
 .ie-edge__detected #loader-wrapper .loader-section {
   position: fixed;
   top: 0;
   width: 51%;
-  height: calc(100% + 65px);
-  background: #333;
-  z-index: 1000; }
-  .ie-edge__detected #loader-wrapper .loader-section.section-left {
-    left: 0; }
-    .ie-edge__detected #loader-wrapper .loader-section.section-left.is--invisible {
-      visibility: visible;
-      width: 0%;
-      height: calc(100% + 65px);
-      left: 0;
-      border: 1px solid #333;
-      -webkit-transform: translateX(-50%);
-      /* Chrome, Opera 15+, Safari 3.1+ */
-      /* IE 9 */
-      transform: translateX(-50%);
-      -webkit-transition: all 0.7s linear 0.3s;
-      /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
-      transition: all 0.7s linear 0.3s;
-      /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */ }
-      .ie-edge__detected #loader-wrapper .loader-section.section-left.is--invisible.is--closing {
-        width: 100%;
-        -webkit-transform: translateX(-50%);
-        transform: translateX(-50%); }
-      .ie-edge__detected #loader-wrapper .loader-section.section-left.is--invisible.is--opening {
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%); }
-  .ie-edge__detected #loader-wrapper .loader-section.section-right {
-    right: 0; }
-    .ie-edge__detected #loader-wrapper .loader-section.section-right.is--invisible {
-      visibility: visible;
-      width: 0%;
-      height: calc(100% + 65px);
-      right: 0;
-      border: 1px solid #333;
-      -webkit-transform: translateX(50%);
-      /* Chrome, Opera 15+, Safari 3.1+ */
-      /* IE 9 */
-      transform: translateX(50%);
-      -webkit-transition: all 0.7s linear 0.3s;
-      /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
-      transition: all 0.7s linear 0.3s;
-      /* Chrome 26, Firefox 16+, iOS 7+, IE 10+, Opera, Safari 6.1+  */ }
-    .ie-edge__detected #loader-wrapper .loader-section.section-right.is--closing {
-      width: 100%;
-      -webkit-transform: translateX(50%);
-      transform: translateX(50%); }
-    .ie-edge__detected #loader-wrapper .loader-section.section-right.is--opening {
-      -webkit-transform: translateX(100%);
-      transform: translateX(100%); }
+  height: calc(100% + 65px); }
 
 .ie-edge__detected .is--visible #loader-wrapper {
   visibility: hidden; }
