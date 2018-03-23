@@ -1385,7 +1385,7 @@ figure {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 15px 0px;
+  padding: 15px 0px 15px 0px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1406,7 +1406,7 @@ figure {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 15px 0px;
+  padding: 15px 0px 15px 0px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2652,7 +2652,7 @@ h3 {
             justify-content: space-between;
     height: 20%;
     width: 100%;
-    margin-top: 10px;
+    padding: 15px 0px 0px 0px;
     position: relative;
     -webkit-box-align: end;
         -ms-flex-align: end;
@@ -2671,7 +2671,7 @@ h3 {
         -ms-flex-pack: justify;
             justify-content: space-between;
     height: 20%;
-    margin-bottom: 10px;
+    padding: 0px 0px 15px 0px;
     margin-top: auto;
     width: 100%;
     position: relative;
@@ -2684,7 +2684,8 @@ h3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
+    width: 80%;
+    margin: 0% 10%;
     -webkit-box-flex: 0;
         -ms-flex: 0 1 20%;
             flex: 0 1 20%;
@@ -2694,11 +2695,12 @@ h3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 80%;
     -webkit-box-flex: 0;
         -ms-flex: 0 1 20%;
             flex: 0 1 20%;
+    margin: 0% 10%;
     margin: 0;
-    width: 100%;
     height: 100%; }
   .svg-logo-one div,
   .svg-logo-two div {
