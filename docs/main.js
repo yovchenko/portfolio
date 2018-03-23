@@ -11418,9 +11418,7 @@ function mainPage() {
 	    supportsGrid = typeof _preloader.page.elements.grid.style.grid === 'string',
 	    supportsIE = detectIE();
 
-	if (!(supportsIE === false)) {
-		document.documentElement.className += ' ie-edge__detected';
-	}
+	if (supportsIE === 'Trident') document.documentElement.className += ' ie-detected';else if (supportsIE === 'Edge') document.documentElement.className += ' edge-detected';
 
 	function detectIE() {
 		var ua = window.navigator.userAgent;
@@ -11546,7 +11544,7 @@ function mainPage() {
 				case 1:
 					for (var _key4 in _preloader.page.elements) {
 						if (_key4 === 'article' || _key4 === 'flipbook' || _key4 === 'touch' || _key4 === 'container' || _key4 === 'home') _preloader.page.elements[_key4].style.display = 'none';else {
-							if (supportsGrid) _preloader.page.elements[_key4].style.display = 'grid';else if (supportsIE === 'Trident') _preloader.page.elements[_key4].style.display = '-ms-grid';else _preloader.page.elements[_key4].style.display = 'flex';
+							_preloader.page.elements[_key4].style.display = 'flex';
 						}
 					}
 					_preloader.page.elements.header.classList.remove('is--active');

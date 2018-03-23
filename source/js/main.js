@@ -18,10 +18,9 @@ function mainPage() {
 		supportsGrid = typeof page.elements.grid.style.grid === 'string',
 		supportsIE = detectIE();
 
-	if (!(supportsIE === false)) {
-		document.documentElement.className += ' ie-edge__detected';
-	}
-
+	if (supportsIE === 'Trident') document.documentElement.className += ' ie-detected';
+	else if (supportsIE === 'Edge') document.documentElement.className += ' edge-detected';
+	
 	function detectIE() {
 		var ua = window.navigator.userAgent;
 
@@ -155,11 +154,7 @@ function mainPage() {
 					for (let key in page.elements) {
 						if (key === 'article' || key === 'flipbook' || key === 'touch' || key === 'container' || key === 'home')
 							page.elements[key].style.display = 'none';
-						else {
-							if (supportsGrid) page.elements[key].style.display = 'grid';
-							else if (supportsIE === 'Trident') page.elements[key].style.display = '-ms-grid';
-							else page.elements[key].style.display = 'flex';
-						}
+						else page.elements[key].style.display = 'flex';
 					}
 					page.elements.header.classList.remove('is--active');
 					page.pattern.colorX = 'YlGnBu';
