@@ -11543,9 +11543,7 @@ function mainPage() {
 					break;
 				case 1:
 					for (var _key4 in _preloader.page.elements) {
-						if (_key4 === 'article' || _key4 === 'flipbook' || _key4 === 'touch' || _key4 === 'container' || _key4 === 'home') _preloader.page.elements[_key4].style.display = 'none';else {
-							_preloader.page.elements[_key4].style.display = 'flex';
-						}
+						if (_key4 === 'article' || _key4 === 'flipbook' || _key4 === 'touch' || _key4 === 'container' || _key4 === 'home') _preloader.page.elements[_key4].style.display = 'none';else _preloader.page.elements[_key4].style.display = 'flex';
 					}
 					_preloader.page.elements.header.classList.remove('is--active');
 					_preloader.page.pattern.colorX = 'YlGnBu';
@@ -11566,16 +11564,16 @@ function mainPage() {
 
 	if (document.documentElement.className.indexOf('mobile') !== -1) device = 'mobile';else if (document.documentElement.className.indexOf('tablet') !== -1) device = 'tablet';else device = 'desktop';
 	size = getWindowSize();
-	setPageHeight(_preloader.page.elements.main);
+	setElementHeight(_preloader.page.elements.main);
 
-	function setPageHeight(el) {
+	function setElementHeight(targetElement) {
 		if (device === 'mobile' || device === 'tablet') {
 			if (size[0] > size[1]) el.style.height = size[0] - 65 + 'px';else el.style.height = size[1] - 65 + 'px';
-		} else el.height = size[1] - 65 + 'px';
+		} else el.style.height = size[1] - 65 + 'px';
 	}
 
 	function resizeScreenObj() {
-		setPageHeight(_preloader.page.elements.main);
+		setElementHeight(_preloader.page.elements.main);
 		if (_preloader.page.contacts) {
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 		} else if (_preloader.page.home) {

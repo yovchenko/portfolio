@@ -711,13 +711,13 @@ template {
       outline: none;
       /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */ }
 
-.ie-edge__detected .slider__range {
+.ie-detected .slider__range {
   background-image: none;
   background: transparent;
   height: auto;
   min-height: 29px; }
 
-.ie-edge__detected .volume .plus-minus-input {
+.ie-detected .volume .plus-minus-input {
   top: 0px; }
 
 .volume {
@@ -1205,10 +1205,6 @@ figure {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
-.ie-detected figure {
-  width: 70%;
-  height: 100%; }
-
 #wrapperCanvas {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1420,12 +1416,6 @@ figure {
   z-index: -1;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
-
-.ie-detected .svg-logo-one {
-  width: 30%; }
-
-.ie-detected .svg-logo-two {
-  width: 30%; }
 
 .svg-logo-one div,
 .svg-logo-two div {
@@ -2664,18 +2654,6 @@ h3 {
     font-size: 1.4em; } }
 
 @media all and (max-aspect-ratio: 19 / 21) {
-  .ie-detected .svg-logo-one {
-    width: 100%;
-    height: 40%; }
-  .ie-detected .svg-logo-two {
-    width: 100%;
-    height: 40%; }
-  .ie-detected .svg-logo-one div,
-  .ie-detected .svg-logo-two div {
-    width: 100%; }
-  .ie-detected figure {
-    width: 100%;
-    height: 70%; }
   #main {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

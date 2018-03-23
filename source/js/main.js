@@ -178,17 +178,17 @@ function mainPage() {
 	else if (document.documentElement.className.indexOf('tablet') !== -1) device = 'tablet';
 	else device = 'desktop';
 	size = getWindowSize();
-	setPageHeight(page.elements.main);
+	setElementHeight(page.elements.main);
 
-	function setPageHeight(el) {
+	function setElementHeight(targetElement) {
 		if (device === 'mobile' || device === 'tablet') {
 			if (size[0] > size[1]) el.style.height = (size[0] - 65) + 'px';
 			else el.style.height = (size[1] - 65) + 'px';
-		} else el.height = (size[1] - 65) + 'px';
+		} else el.style.height = (size[1] - 65) + 'px';
 	}
 
 	function resizeScreenObj() {
-		setPageHeight(page.elements.main);
+		setElementHeight(page.elements.main);
 		if (page.contacts) {
 			resizeContent('.envelope', '#wrap', 530, 630);
 		} else if (page.home) {
