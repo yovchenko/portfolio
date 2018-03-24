@@ -547,10 +547,26 @@ figure {
     /* OLD - iOS 6-, Safari 3.1-6, BB7 */
     position: relative;
     flex-direction: column;
-    width: 80%;
-    height: 100%;
+    width: 60%;
+    flex-basis: 60%;
     text-align: center;
     justify-content: center;
+}
+
+.svg-logo-one>div:nth-child(1),
+.svg-logo-two>div:nth-child(1) {
+    justify-content: flex-start;
+}
+
+.svg-logo-one>div:nth-child(3),
+.svg-logo-two>div:nth-child(3) {
+    justify-content: flex-end;
+}
+
+main .svg-logo-one div .bar-before,
+main .svg-logo-two div .bar-before {
+    flex: 0 1 auto;
+    min-height: 25px;
 }
 
 .svg-logo-two div:nth-child(2) svg {
@@ -572,7 +588,7 @@ figure {
 
 .svg-logo-one div svg,
 .svg-logo-two div svg {
-  
+    height: auto;
 }
 
 .about {
@@ -1743,6 +1759,15 @@ h3 {
 }
 
 /* media queries */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .svg-logo-one div,
+    .svg-logo-two div {
+        width: 80%;
+        flex-basis: 80%;
+    }
+}
+
 @media all and (max-width: 767px) and (min-width: 577px) {
     .entry-header {
         .entry-title {
@@ -1992,7 +2017,7 @@ h3 {
     }
     main .svg-logo-one div .bar-before,
 	main .svg-logo-two div .bar-before {
-		flex: 1;
+		
     }
     .svg-logo-one>div svg {
         order: 3;
