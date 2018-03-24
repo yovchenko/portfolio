@@ -548,7 +548,6 @@ figure {
     position: relative;
     flex-direction: column;
     width: 60%;
-    flex-basis: 60%;
     text-align: center;
     justify-content: center;
 }
@@ -564,11 +563,18 @@ figure {
 }
 
 .svg-logo-one>div:nth-child(1){
-    margin-left: auto;
+    margin: 0px 0px auto auto;
+}
+
+.svg-logo-one>div:nth-child(2){
+    margin: 0px 0px auto 0px;
 }
 
 .svg-logo-two>div:nth-child(1) {
-    margin-right: auto;
+    margin: 0px auto auto 0px;
+}
+.svg-logo-two>div:nth-child(2) {
+    margin: 0px 0px auto 0px;
 }
 .svg-logo-one>div:nth-child(3){
     margin-left: auto;
@@ -2058,8 +2064,10 @@ h3 {
     .svg-logo-one>div:nth-child(2) {
         right: 0%;
         width: 103%;
+        margin: 0;
     }
     .svg-logo-two>div:nth-child(2) {
+        margin: 0;
         right: 0%;
         width: 101%;
     }
