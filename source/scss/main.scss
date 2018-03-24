@@ -1028,21 +1028,6 @@ article p {
     border-radius: 10px;
 }
 
-.sj-book .book-content .capital,
-.sj-book .book-content .no-indent {
-    text-indent: 0;
-}
-
-.sj-book .capital:first-letter {
-    display: block;
-    float: left;
-    font-size: 300%;
-    line-height: 70%;
-    margin-right: 6px;
-    margin-top: 7px;
-    margin-left: 18px;
-}
-
 /*contact form*/
 
 .containerForm {
@@ -1275,11 +1260,11 @@ footer .wrapper {
 }
 
  #loader-wrapper {
-    float: left;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    bottom: -74.64px;
+    height: 100%;
     z-index: 1000;
     &.is--invisible {
         display: none;
@@ -1287,7 +1272,7 @@ footer .wrapper {
     #loader {
         visibility: hidden;
         display: block;
-        position: absolute;
+        position: relative;
         left: 50%;
         top: 50%;
         width: 150px;
@@ -1459,11 +1444,11 @@ footer .wrapper {
 }
 
 #loader-wrapper .loader-section {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 51%;
     background: #333;
-    height: calc(100% + 65px);
+    height: 100%;
     z-index: 1000;
     &.section-left {
         left: 0;
@@ -1501,7 +1486,7 @@ footer .wrapper {
             visibility: visible;
             width: 0%;
             right: 0;
-             height: calc(100% + 65px);
+            height: 100%;
             border: 1px solid #333;
             -webkit-transform: translateX(50%);
             /* Chrome, Opera 15+, Safari 3.1+ */
