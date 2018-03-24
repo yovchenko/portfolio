@@ -1260,7 +1260,7 @@ footer .wrapper {
 }
 
  #loader-wrapper {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -1430,6 +1430,20 @@ footer .wrapper {
         /* Firefox 16+, IE 10+, Opera */
     }
 }
+
+/* .edge-detected {
+    #loader-wrapper {
+        position: absolute;
+        #loader {
+            display: block;
+            position: relative;
+        }
+    }
+    
+    #loader-wrapper .loader-section {
+        position: fixed;
+    }
+} */
 
 #loader-wrapper .loader-section {
     position: fixed;
