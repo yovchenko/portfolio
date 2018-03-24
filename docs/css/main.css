@@ -2201,6 +2201,7 @@ footer .wrapper {
       left: 0;
       height: 100%;
       min-height: 100%;
+      border-right: 1px solid #333;
       -webkit-transform: translateX(-50%);
       /* Chrome, Opera 15+, Safari 3.1+ */
       /* IE 9 */
