@@ -920,13 +920,12 @@ html, html body {
     z-index: -2;
     color: #333; }
 
-/*.edge-detected {
-        overflow: hidden;
-        body {
-        overflow-y: auto;
-        position: absolute;
-        }
-    }*/
+.edge-detected {
+  overflow: hidden; }
+  .edge-detected body {
+    overflow-y: auto;
+    position: absolute; }
+
 .grid-container {
   display: -webkit-box;
   display: -ms-flexbox;
