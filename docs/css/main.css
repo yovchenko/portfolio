@@ -720,6 +720,15 @@ template {
 .ie-detected .volume .plus-minus-input {
   top: 0px; }
 
+.edge-detected .slider__range {
+  background-image: none;
+  background: transparent;
+  height: auto;
+  min-height: 29px; }
+
+.edge-detected .volume .plus-minus-input {
+  top: 0px; }
+
 .volume {
   z-index: 2; }
 
@@ -911,12 +920,13 @@ html, html body {
     z-index: -2;
     color: #333; }
 
-.edge-detected {
-  overflow: hidden; }
-  .edge-detected body {
-    overflow-y: auto;
-    position: absolute; }
-
+/*.edge-detected {
+        overflow: hidden;
+        body {
+        overflow-y: auto;
+        position: absolute;
+        }
+    }*/
 .grid-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -932,9 +942,6 @@ html, html body {
   width: 100%;
   min-height: 100%;
   overflow: hidden; }
-
-.desktop .grid-container {
-  height: calc(100vh + 65px); }
 
 .desktop #main {
   height: calc(100vh - 65px); }
@@ -2118,15 +2125,18 @@ footer .wrapper {
       animation: spin 1.5s linear infinite;
       /* Chrome, Firefox 16+, IE 10+, Opera */ }
 
-.edge-detected #loader-wrapper {
-  position: absolute; }
-  .edge-detected #loader-wrapper #loader {
-    display: block;
-    position: relative; }
-
-.edge-detected #loader-wrapper .loader-section {
-  position: fixed; }
-
+/*.edge-detected {	 .edge-detected {
+    #loader-wrapper {	
+        position: absolute;	
+        #loader {	
+           display: block;	
+            position: relative;	
+           &.is--invisible {	
+               display: none;	
+           }	
+       }	
+   }
+}*/
 .mobile #loader-wrapper #loader {
   visibility: visible; }
 

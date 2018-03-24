@@ -23,13 +23,13 @@ html {
     }
 }
 
-.edge-detected {
+/*.edge-detected {
         overflow: hidden;
         body {
         overflow-y: auto;
         position: absolute;
         }
-    }
+    }*/
 
 .grid-container {
     display: flex;
@@ -1344,11 +1344,18 @@ footer .wrapper {
     }
 }
 
-.edge-detected {
-    #loader-wrapper .loader-section {
-        position: fixed;
-    }
-}
+/*.edge-detected {	 .edge-detected {
+    #loader-wrapper {	
+        position: absolute;	
+        #loader {	
+           display: block;	
+            position: relative;	
+           &.is--invisible {	
+               display: none;	
+           }	
+       }	
+   }
+}*/
 
 .mobile {
         #loader-wrapper {

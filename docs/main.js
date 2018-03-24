@@ -11573,7 +11573,6 @@ function mainPage() {
 	}
 
 	function resizeScreenObj() {
-		setElementHeight(_preloader.page.elements.main);
 		if (_preloader.page.contacts) {
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 		} else if (_preloader.page.home) {
