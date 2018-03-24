@@ -86,12 +86,10 @@
             turned: function (e, page, view) {
                 var book = $(this);
                 slider.value = getViewNumber(book, page);
-                updateDepth(book);
                 book.turn('center');
             },
             end: function (e, pageObj) {
                 var book = $(this);
-                updateDepth(book);
             },
 
             missing: function (e, pages) {
@@ -101,13 +99,8 @@
             }
         }
     });
-
     flipbook.addClass('animated');
 })();
-
-function updateDepth(book, newPage) {
-
-}
 
 function moveBar(page, pages, currentPage, slider) {
     var percentage = 100 / pages * 2;
@@ -143,10 +136,6 @@ function updateHandleValues(slider, sliderValue, flipbook) {
     slider.style.backgroundSize = slider.background.toFixed(2) + '% 100%';
 }
 
-function loadPage(page) {
-
-}
-
 function addPage(page, book) {
     var id, pages = book.turn('pages');
     if (!book.turn('hasPage', page)) {
@@ -159,7 +148,6 @@ function addPage(page, book) {
         }).
         html('<div class="loader"></div>');
         if (book.turn('addPage', element, page)) {
-            loadPage(page);
         }
     }
 }

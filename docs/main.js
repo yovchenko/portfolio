@@ -44546,12 +44546,10 @@ var _main = __webpack_require__(193);
             turned: function turned(e, page, view) {
                 var book = $(this);
                 slider.value = getViewNumber(book, page);
-                updateDepth(book);
                 book.turn('center');
             },
             end: function end(e, pageObj) {
                 var book = $(this);
-                updateDepth(book);
             },
 
             missing: function missing(e, pages) {
@@ -44561,11 +44559,8 @@ var _main = __webpack_require__(193);
             }
         }
     });
-
     flipbook.addClass('animated');
 })();
-
-function updateDepth(book, newPage) {}
 
 function moveBar(page, pages, currentPage, slider) {
     var percentage = 100 / pages * 2;
@@ -44600,8 +44595,6 @@ function updateHandleValues(slider, sliderValue, flipbook) {
     slider.style.backgroundSize = slider.background.toFixed(2) + '% 100%';
 }
 
-function loadPage(page) {}
-
 function addPage(page, book) {
     var id,
         pages = book.turn('pages');
@@ -44613,9 +44606,7 @@ function addPage(page, book) {
                 height: 582
             }
         }).html('<div class="loader"></div>');
-        if (book.turn('addPage', element, page)) {
-            loadPage(page);
-        }
+        if (book.turn('addPage', element, page)) {}
     }
 }
 
