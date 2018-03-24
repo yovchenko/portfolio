@@ -1355,6 +1355,9 @@ footer .wrapper {
         #loader {
             display: block;
             position: relative;
+            &.is--invisible {
+                display: none;
+            }
         }
     }
     
