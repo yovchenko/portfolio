@@ -521,7 +521,7 @@ figure {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 10px 0px 10px 0px;
+    padding: 25px 0px 25px 0px;
     align-items: flex-start;
     z-index: -1;
     box-sizing: border-box;
@@ -535,7 +535,7 @@ figure {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 10px 0px 10px 0px;
+    padding: 25px 0px 25px 0px;
     align-items: flex-end;
     z-index: -1;
     box-sizing: border-box;
@@ -563,6 +563,20 @@ figure {
     justify-content: flex-end;
 }
 
+.svg-logo-one>div:nth-child(1){
+    margin-left: auto;
+}
+
+.svg-logo-two>div:nth-child(1) {
+    margin-right: auto;
+}
+.svg-logo-one>div:nth-child(3){
+    margin-left: auto;
+}
+
+.svg-logo-two>div:nth-child(3) {
+    margin-right: auto;
+}
 main .svg-logo-one div .bar-before,
 main .svg-logo-two div .bar-before {
     flex: 0 1 auto;
@@ -2027,15 +2041,19 @@ h3 {
     }
     .svg-logo-one>div:nth-child(1) {
         padding-top: 15px;
+        margin: 0;
     }
     .svg-logo-one>div:nth-child(3) {
         padding-top: 15px;
+        margin: 0;
     }
     .svg-logo-two>div:nth-child(1) {
         padding-bottom: 15px;
+        margin: 0;
     }
     .svg-logo-two>div:nth-child(3) {
         padding-bottom: 15px;
+        margin: 0;
     }
     .svg-logo-one>div:nth-child(2) {
         right: 0%;
