@@ -31,7 +31,6 @@ html {
         }
     }
 
-
 .grid-container {
     display: flex;
     flex-direction: column;
@@ -40,10 +39,6 @@ html {
     width: 100%;
     min-height: 100%;
     overflow: hidden;
-}
-
-.desktop .grid-container {
-    height: calc(100vh + 65px);
 }
 
 .desktop #main {
