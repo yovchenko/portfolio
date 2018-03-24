@@ -179,7 +179,6 @@ function mainPage() {
 	else device = 'desktop';
 	size = getWindowSize();
 	setElementHeight(page.elements.main);
-
 	function setElementHeight(targetElement) {
 		if (device === 'mobile' || device === 'tablet') {
 			if (size[0] > size[1]) targetElement.style.height = (size[0] - 65) + 'px';

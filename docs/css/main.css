@@ -2050,7 +2050,7 @@ footer .wrapper {
   padding: 0.2em 0; }
 
 #loader-wrapper {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -2112,18 +2112,6 @@ footer .wrapper {
       animation: spin 1.5s linear infinite;
       /* Chrome, Firefox 16+, IE 10+, Opera */ }
 
-/*.edge-detected {	 .edge-detected {
-    #loader-wrapper {	
-        position: absolute;	
-        #loader {	
-           display: block;	
-            position: relative;	
-           &.is--invisible {	
-               display: none;	
-           }	
-       }	
-   }
-}*/
 .mobile #loader-wrapper #loader {
   visibility: visible; }
 
@@ -2191,7 +2179,7 @@ footer .wrapper {
     /* Firefox 16+, IE 10+, Opera */ } }
 
 #loader-wrapper .loader-section {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 51%;
   background: #333;

@@ -11565,7 +11565,6 @@ function mainPage() {
 	if (document.documentElement.className.indexOf('mobile') !== -1) device = 'mobile';else if (document.documentElement.className.indexOf('tablet') !== -1) device = 'tablet';else device = 'desktop';
 	size = getWindowSize();
 	setElementHeight(_preloader.page.elements.main);
-
 	function setElementHeight(targetElement) {
 		if (device === 'mobile' || device === 'tablet') {
 			if (size[0] > size[1]) targetElement.style.height = size[0] - 65 + 'px';else targetElement.style.height = size[1] - 65 + 'px';
