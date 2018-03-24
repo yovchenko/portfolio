@@ -188,7 +188,6 @@ function mainPage() {
 	}
 
 	function resizeScreenObj() {
-		setElementHeight(page.elements.main);
 		if (page.contacts) {
 			resizeContent('.envelope', '#wrap', 530, 630);
 		} else if (page.home) {
