@@ -1431,9 +1431,8 @@ footer .wrapper {
     }
 }
 
-
 #loader-wrapper .loader-section {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 51%;
     background: #333;
@@ -1448,7 +1447,6 @@ footer .wrapper {
             left: 0;
             height: 100%;
             min-height: 100%;
-            border: 1px solid #333;
             -webkit-transform: translateX(-50%);
             /* Chrome, Opera 15+, Safari 3.1+ */
             -ms-transform: translateX(-50%);
@@ -1479,7 +1477,6 @@ footer .wrapper {
             right: 0;
             height: 100%;
             min-height: 100%;
-            border: 1px solid #333;
             -webkit-transform: translateX(50%);
             /* Chrome, Opera 15+, Safari 3.1+ */
             -ms-transform: translateX(50%);
