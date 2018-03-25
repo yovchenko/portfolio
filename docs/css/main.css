@@ -1006,7 +1006,7 @@ header {
   top: 65px;
   z-index: 1; }
 
-/*Menu*/
+/*header menu*/
 .btn-hamburger {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2171,19 +2171,6 @@ footer .wrapper {
     transform: rotate(360deg);
     /* Firefox 16+, IE 10+, Opera */ } }
 
-/* .edge-detected {
-    #loader-wrapper {
-        position: absolute;
-        #loader {
-            display: block;
-            position: relative;
-        }
-    }
-    
-    #loader-wrapper .loader-section {
-        position: fixed;
-    }
-} */
 #loader-wrapper .loader-section {
   position: fixed;
   top: 0;

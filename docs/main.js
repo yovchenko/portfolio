@@ -11207,13 +11207,13 @@ var pattern = void 0,
             opacity += 15;
             title.style.color = 'rgb(' + opacity + ',' + opacity + ',' + opacity + ')';
         } else {
-            init();
+            init(); /*the page has finished loading*/
             clearInterval(pulse);
         }
     }
 }, 100);
 
-var page = exports.page = Object.create(null);
+var page = exports.page = Object.create(null); /*the object doesn't inherit from anywhere and thus has no properties at all*/
 page.home = true;
 page.about = false;
 page.work = false;
@@ -11293,7 +11293,6 @@ encode = window.btoa(svgString);
 page.elements.footer.style.backgroundImage = 'url("data:image/svg+xml;base64,' + encode + '")';
 page.elements.header.style.backgroundImage = 'url("data:image/svg+xml;base64,' + encode + '")';
 
-page.setBackground;
 function init() {
     /*I'm giving you some extra time to enjoy my preloader*/
     document.addEventListener('DOMContentLoaded', delay);
@@ -11302,6 +11301,7 @@ function init() {
         _jsonAnimation.anim.stop();
         $(document.getElementsByClassName('footer')[0]).add(document.body).addClass("is--visible");
         $(document.getElementsByClassName('loader-section')).add(document.getElementById('loader')).add(title).stop().addClass('is--invisible');
+        page.setBackground;
         (0, _resize.resizeContent)('#figure', '.canvas-box__wrapper', 800, 900);
         Object.defineProperty(page.elements, "curtainLeft", {
             value: document.getElementsByClassName('section-left is--invisible')[0],
@@ -11409,16 +11409,16 @@ var _canvasSphere2 = _interopRequireDefault(_canvasSphere);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-document.addEventListener('DOMContentLoaded', mainPage);
-var scaleValue = exports.scaleValue = 1;
+document.addEventListener('DOMContentLoaded', showPage);
+var scaleValue = exports.scaleValue = 1; /*don't touch the variable, it will broke flipbook animation*/
 
-function mainPage() {
+function showPage() {
 	var size,
 	    device = '',
-	    supportsGrid = typeof _preloader.page.elements.grid.style.grid === 'string',
 	    supportsIE = detectIE();
 
-	if (supportsIE === 'Trident') document.documentElement.className += ' ie-detected';else if (supportsIE === 'Edge') document.documentElement.className += ' edge-detected';
+	/*user agent identification*/
+	if (supportsIE === 'Trident') document.documentElement.className += ' ie-edge-detected';else if (supportsIE === 'Edge') document.documentElement.className += ' edge-detected';
 
 	function detectIE() {
 		var ua = window.navigator.userAgent;
@@ -11432,6 +11432,16 @@ function mainPage() {
 		var edge = ua.indexOf('Edge/');
 		if (edge > 0) return 'Edge';
 		return false;
+	}
+
+	if (document.documentElement.className.indexOf('mobile') !== -1) device = 'mobile';else if (document.documentElement.className.indexOf('tablet') !== -1) device = 'tablet';else device = 'desktop';
+	size = getWindowSize(); /*the function declared in <head>*/
+	setPageHeight(_preloader.page.elements.main);
+
+	function setPageHeight(targetElement) {
+		if (device === 'mobile' || device === 'tablet') {
+			if (size[0] > size[1]) targetElement.style.height = size[0] - 65 + 'px';else targetElement.style.height = size[1] - 65 + 'px';
+		} else targetElement.style.height = size[1] - 65 + 'px';
 	}
 
 	/*header text animation*/
@@ -11490,7 +11500,6 @@ function mainPage() {
 		textLetters.init();
 	};
 
-	/* replace content onclick */
 	$home.on('click', {
 		case: 1
 	}, content);
@@ -11505,6 +11514,7 @@ function mainPage() {
 	}, content);
 
 	function content(event) {
+		/* the function replace page content onclick */
 		event.preventDefault();
 		for (var key in _preloader.page) {
 			_preloader.page[key] = false;
@@ -11561,15 +11571,6 @@ function mainPage() {
 	}
 
 	window.addEventListener("resize", resizeScreenObj, false);
-
-	if (document.documentElement.className.indexOf('mobile') !== -1) device = 'mobile';else if (document.documentElement.className.indexOf('tablet') !== -1) device = 'tablet';else device = 'desktop';
-	size = getWindowSize();
-	setElementHeight(_preloader.page.elements.main);
-	function setElementHeight(targetElement) {
-		if (device === 'mobile' || device === 'tablet') {
-			if (size[0] > size[1]) targetElement.style.height = size[0] - 65 + 'px';else targetElement.style.height = size[1] - 65 + 'px';
-		} else targetElement.style.height = size[1] - 65 + 'px';
-	}
 
 	function resizeScreenObj() {
 		if (_preloader.page.contacts) {
