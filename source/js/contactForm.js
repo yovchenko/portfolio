@@ -18,7 +18,7 @@ jQuery.extend(jQuery.validator.messages, {
     max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
     min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
 });
-const $contactForm = $('#contactForm');
+const $contactForm = $('#form');
 const button = document.getElementById('submit');
 $contactForm.validate();
 $contactForm.submit(function (e) {
@@ -43,9 +43,9 @@ $contactForm.submit(function (e) {
 });
 $(document.getElementById('message')).add(document.getElementById('email'))
     .add(document.getElementById('name')).focus(function () {
-        document.getElementsByClassName('containerForm')[0].classList.add('form-is--scaled');
+        document.getElementsByClassName('envelope-container')[0].classList.add('form-is--scaled');
     });
 $(document.getElementById('message')).add(document.getElementById('email'))
     .add(document.getElementById('name')).focusout(function () {
-        document.getElementsByClassName('containerForm')[0].classList.remove('form-is--scaled');
+        document.getElementsByClassName('envelope-container')[0].classList.remove('form-is--scaled');
     });

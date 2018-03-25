@@ -11228,7 +11228,7 @@ page.elements.btnHamburger = document.getElementsByClassName('btn-hamburger')[0]
 page.elements.flipbook = document.getElementsByClassName('book')[0];
 page.elements.wrapperCanvas = document.getElementsByClassName('canvas-box')[0];
 page.elements.article = document.getElementsByClassName('about')[0];
-page.elements.container = document.getElementsByClassName('containerForm')[0];
+page.elements.container = document.getElementsByClassName('envelope-container')[0];
 page.elements.logoOne = document.getElementsByClassName('svg-logo-one')[0];
 page.elements.logoTwo = document.getElementsByClassName('svg-logo-two')[0];
 page.elements.touch = document.getElementsByClassName('touch')[0];
@@ -39636,7 +39636,7 @@ jQuery.extend(jQuery.validator.messages, {
     max: jQuery.validator.format("Please enter a value less than or equal to {0}."),
     min: jQuery.validator.format("Please enter a value greater than or equal to {0}.")
 });
-var $contactForm = $('#contactForm');
+var $contactForm = $('#form');
 var button = document.getElementById('submit');
 $contactForm.validate();
 $contactForm.submit(function (e) {
@@ -39660,10 +39660,10 @@ $contactForm.submit(function (e) {
     }
 });
 $(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focus(function () {
-    document.getElementsByClassName('containerForm')[0].classList.add('form-is--scaled');
+    document.getElementsByClassName('envelope-container')[0].classList.add('form-is--scaled');
 });
 $(document.getElementById('message')).add(document.getElementById('email')).add(document.getElementById('name')).focusout(function () {
-    document.getElementsByClassName('containerForm')[0].classList.remove('form-is--scaled');
+    document.getElementsByClassName('envelope-container')[0].classList.remove('form-is--scaled');
 });
 
 /***/ }),
