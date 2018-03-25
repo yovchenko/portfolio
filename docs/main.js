@@ -39694,6 +39694,7 @@ $contactForm.submit(function (event) {
             var data = getFormData(); // get the values submitted in the form
             var url = event.target.action; //
             var xhr = new XMLHttpRequest();
+            button.value = 'Sending message…';
             xhr.open('POST', url);
             // xhr.withCredentials = true;
             xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
