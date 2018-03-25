@@ -18,7 +18,7 @@ function showPage() {
 		supportsIE = detectIE();
 
 	/*user agent identification*/
-	if (supportsIE === 'Trident') document.documentElement.className += ' ie-edge-detected';
+	if (supportsIE === 'Trident') document.documentElement.className += ' ie-detected';
 	else if (supportsIE === 'Edge') document.documentElement.className += ' edge-detected';
 
 	function detectIE() {
