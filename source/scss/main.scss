@@ -810,9 +810,10 @@ article p {
             height: 52px;
             padding: 4px;
             svg {
-                height: calc(100% + 2px);
+                height: 100%;
                 vertical-align: middle;
                 margin: 0 auto;
+                position: relative;
             }
         }
         td:nth-child(2) {

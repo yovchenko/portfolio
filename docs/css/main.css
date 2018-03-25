@@ -1678,9 +1678,10 @@ article p {
     height: 52px;
     padding: 4px; }
     .sj-book .page-speed-tools tfoot td svg {
-      height: calc(100% + 2px);
+      height: 100%;
       vertical-align: middle;
-      margin: 0 auto; }
+      margin: 0 auto;
+      position: relative; }
   .sj-book .page-speed-tools tfoot td:nth-child(2) {
     padding: 0px; }
     .sj-book .page-speed-tools tfoot td:nth-child(2) svg {
