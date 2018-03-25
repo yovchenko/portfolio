@@ -1652,15 +1652,11 @@ article p {
     padding: 5px; }
   .sj-book .book-browser-support td svg {
     width: 90%;
-    height: 64px;
     vertical-align: middle;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -1px;
     margin: 0 auto; }
   .sj-book .book-browser-support td:nth-child(1) {
     position: relative;
+    padding: 0px 0px;
     width: 55px;
     height: 40px; }
 
@@ -1680,22 +1676,16 @@ article p {
   .sj-book .page-speed-tools tfoot td {
     position: relative;
     height: 52px;
-    padding: 5px; }
-    .sj-book .page-speed-tools tfoot td #mobile {
-      width: 100%;
-      height: 58px;
-      left: 0;
-      right: 0;
-      bottom: 2px;
-      margin: 0 auto; }
+    padding: 0; }
     .sj-book .page-speed-tools tfoot td svg {
-      position: absolute;
-      width: 100%;
-      height: 68px;
-      left: 0;
-      right: 0;
-      bottom: -3px;
-      margin: 0 auto; }
+      height: calc(100% + 10px);
+      vertical-align: middle;
+      margin: 0 auto;
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05); }
+    .sj-book .page-speed-tools tfoot td #mobile {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9); }
 
 .sj-book .hard.p4.own-size.page.even .page-speed-tools {
   margin: 0px 20px; }
