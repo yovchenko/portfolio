@@ -778,6 +778,7 @@ article p {
         @extend th;
         svg {
             width: 53px;
+            max-height: 59.84;
             vertical-align: middle;
             margin: 0 auto;
         }
@@ -816,6 +817,7 @@ article p {
             height: 52px;
             padding: 3px;
             svg {
+                max-width: 60.48px;
                 height: 54px;
                 vertical-align: middle;
                 margin: 0 auto;
@@ -824,6 +826,7 @@ article p {
         td:nth-child(2) {
             padding: 0px;
             svg {
+                max-width: 69.44px;
                 height: 62px;
             }
         }

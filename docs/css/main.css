@@ -1658,6 +1658,7 @@ article p {
     padding: 5px; }
   .sj-book .book-browser-support td svg {
     width: 53px;
+    max-height: 59.84;
     vertical-align: middle;
     margin: 0 auto; }
   .sj-book .book-browser-support td:nth-child(1) {
@@ -1684,12 +1685,14 @@ article p {
     height: 52px;
     padding: 3px; }
     .sj-book .page-speed-tools tfoot td svg {
+      max-width: 60.48px;
       height: 54px;
       vertical-align: middle;
       margin: 0 auto; }
   .sj-book .page-speed-tools tfoot td:nth-child(2) {
     padding: 0px; }
     .sj-book .page-speed-tools tfoot td:nth-child(2) svg {
+      max-width: 69.44px;
       height: 62px; }
 
 .sj-book .hard.p4.own-size.page.even .page-speed-tools {
