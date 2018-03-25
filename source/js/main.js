@@ -136,7 +136,7 @@ function mainPage() {
 					}
 					page.pattern.colorX = 'Greys';
 					page.pattern.colorY = 'Greys';
-					scaleValue = resizeContent('.bookWrap', '#flipbook', 960, 600);
+					scaleValue = resizeContent('.book__wrap', '#flipbook', 960, 600);
 					page['work'] = true; //page work
 					break;
 				case 2:
@@ -192,7 +192,7 @@ function mainPage() {
 		} else if (page.home) {
 			resizeContent('#figure', '.canvas-box__wrapper', 800, 900);
 		} else if (page.work) {
-			scaleValue = resizeContent('.bookWrap', '#flipbook', 960, 600);
+			scaleValue = resizeContent('.book__wrap', '#flipbook', 960, 600);
 		}
 	};
 }
