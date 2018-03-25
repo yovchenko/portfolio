@@ -2006,7 +2006,12 @@ h3 {
     .svg-logo-one div,
     .svg-logo-two div {
         flex: 0 1 20%;
-        height: auto;
+        height: 100%;
+    }
+    .svg-logo-one div {
+        justify-content: flex-start;
+    }
+    .svg-logo-two div {
         justify-content: flex-end;
     }
     main .svg-logo-one div .bar-before,
@@ -2022,14 +2027,17 @@ h3 {
     .svg-logo-one>div:nth-child(1) {
         padding-top: 15px;
         margin: 0;
+        justify-content: flex-start;
     }
     .svg-logo-one>div:nth-child(3) {
         padding-top: 15px;
         margin: 0;
+        justify-content: flex-start;
     }
     .svg-logo-two>div:nth-child(1) {
         padding-bottom: 15px;
         margin: 0;
+        justify-content: flex-end;
     }
     .svg-logo-two>div:nth-child(3) {
         padding-bottom: 15px;
@@ -2040,6 +2048,7 @@ h3 {
     }
     .svg-logo-two>div:nth-child(2) {
         margin: 0;
+        justify-content: flex-end;
     }
 }
 
