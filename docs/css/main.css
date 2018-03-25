@@ -936,6 +936,9 @@ html, html body {
   min-height: 100%;
   overflow: hidden; }
 
+.desktop .grid-container {
+  height: calc(100vh + 65px); }
+
 .desktop #main {
   height: calc(100vh - 65px); }
 

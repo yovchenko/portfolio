@@ -33,6 +33,10 @@ html {
     overflow: hidden;
 }
 
+.desktop .grid-container {
+    height: calc(100vh + 65px);
+}
+
 .desktop #main {
     height: $portrait;
 }
@@ -115,6 +119,7 @@ header {
 }
 
 /*header menu*/
+
 .btn-hamburger {
     box-sizing: border-box;
     width: 45px;
@@ -171,6 +176,7 @@ header {
 }
 
 /*header letters appearing*/
+
 .menu__header {
     display: flex;
     width: 100%;
@@ -239,6 +245,7 @@ header {
 }
 
 /*main section */
+
 #main {
     display: flex;
     margin: 0 auto;
