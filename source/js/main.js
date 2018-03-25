@@ -14,7 +14,6 @@ export var scaleValue = 1; /*don't touch the variable, it will broke flipbook an
 
 function showPage() {
 	var size,
-		device = '',
 		supportsIE = detectIE();
 
 	/*user agent identification*/
@@ -36,17 +35,17 @@ function showPage() {
 		return false;
 	}
 
-	if (document.documentElement.className.indexOf('mobile') !== -1) device = 'mobile';
-	else if (document.documentElement.className.indexOf('tablet') !== -1) device = 'tablet';
-	else device = 'desktop';
 	size = getWindowSize(); /*the function declared in <head>*/
-	setPageHeight(page.elements.main);
-
-	function setPageHeight(targetElement) {
+	page.elements.main.style.height = setPageHeight(65, size[0], size[1]) + 'px';
+	function setPageHeight(footerHeight, width, height) {
+		var device = '';
+		if (document.documentElement.className.indexOf('mobile') !== -1) device = 'mobile';
+		else if (document.documentElement.className.indexOf('tablet') !== -1) device = 'tablet';
+		else device = 'desktop';
 		if (device === 'mobile' || device === 'tablet') {
-			if (size[0] > size[1]) targetElement.style.height = (size[0] - 65) + 'px';
-			else targetElement.style.height = (size[1] - 65) + 'px';
-		} else targetElement.style.height = (size[1] - 65) + 'px';
+			if (width > height) return width - footerHeight;
+			else return height - footerHeight;
+		} else return height - footerHeight;
 	}
 
 	/*header text animation*/
