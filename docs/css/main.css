@@ -1237,14 +1237,14 @@ figure {
       height: 90%;
       top: 0;
       bottom: 0;
-      left: 0;
+      left: 5%;
       right: 0;
       margin: auto; }
     .canvas-box .canvas-box__wrapper #canvas {
       background-color: #fff;
       border: 1px solid #333;
       border-radius: 50%;
-      margin: 50px 10px 270px 0px;
+      margin: 50px 0px 270px 25px;
       z-index: 1;
       image-rendering: optimizeSpeed; }
     .canvas-box .canvas-box__wrapper .text-animation-wrap {
@@ -1258,7 +1258,8 @@ figure {
         width: 295px;
         height: 295px;
         border-radius: 50%;
-        bottom: 270px;
+        bottom: 265px;
+        right: 0;
         overflow: hidden;
         text-align: center; }
         .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation .text-d {
@@ -1366,7 +1367,7 @@ figure {
   padding: 0;
   bottom: 400px;
   right: 0px;
-  left: -20px;
+  left: 20px;
   text-align: center; }
 
 .wf-inactive .text-animation--error {
@@ -1377,7 +1378,7 @@ figure {
   padding: 0;
   bottom: 400px;
   right: 0px;
-  left: -20px;
+  left: 20px;
   text-align: center; }
 
 .svg-logo-one div svg,
