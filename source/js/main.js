@@ -13,8 +13,7 @@ document.addEventListener('DOMContentLoaded', showPage);
 export var scaleValue = 1; /*don't touch the variable, it will broke flipbook animation*/
 
 function showPage() {
-	var size,
-		supportsIE = detectIE();
+	var supportsIE = detectIE();
 
 	/*user agent identification*/
 	if (supportsIE === 'Trident') document.documentElement.className += ' ie-detected';
@@ -34,21 +33,6 @@ function showPage() {
 		if (edge > 0) return 'Edge';
 		return false;
 	}
-
-	size = getWindowSize(); /*the function declared in <head>*/
-	page.elements.main.style.height = setPageHeight(65, size[0], size[1]) + 'px';
-
-	function setPageHeight(footerHeight, width, height) {
-		var device = '';
-		if (document.documentElement.className.indexOf('mobile') !== -1) device = 'mobile';
-		else if (document.documentElement.className.indexOf('tablet') !== -1) device = 'tablet';
-		else device = 'desktop';
-		if (device === 'mobile' || device === 'tablet') {
-			if (width > height) return width - footerHeight;
-			else return height - footerHeight;
-		} else return height - footerHeight;
-	}
-
 	/*header text animation*/
 	const $home = $('.js-home'),
 		$about = $('.js-about'),

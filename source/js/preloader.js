@@ -70,6 +70,7 @@ Object.defineProperty(page.elements, "main", {
     value: document.getElementById('main'),
     enumerable: false
 });
+
 Object.defineProperty(page, "pattern", {
     value: {},
     enumerable: false
@@ -117,6 +118,19 @@ function init() {
     /*I'm giving you some extra time to enjoy my preloader*/
     document.addEventListener('DOMContentLoaded', delay);
     let delay = setTimeout(function () {
+        let size = getWindowSize(); /*the function declared in <head>*/
+        page.elements.main.style.height = setPageHeight(65, size[0], size[1]) + 'px';
+
+        function setPageHeight(footerHeight, width, height) {
+            var device = '';
+            if (document.documentElement.className.indexOf('mobile') !== -1) device = 'mobile';
+            else if (document.documentElement.className.indexOf('tablet') !== -1) device = 'tablet';
+            else device = 'desktop';
+            if (device === 'mobile' || device === 'tablet') {
+                if (width > height) return width - footerHeight;
+                else return height - footerHeight;
+            } else return height - footerHeight;
+        }
         mainCanvas();
         anim.stop();
         $(document.getElementsByClassName('footer')[0]).add(document.body).addClass("is--visible");

@@ -24,9 +24,7 @@
         };
       } else { //Others
         script.onload = function () {
-          if (url === "https://unpkg.com/current-device/umd/current-device.min.js") {
-            device = null;
-          }
+          if (url === "https://unpkg.com/current-device/umd/current-device.min.js") device = null;
         }
         script.onerror = function () {
           callback();

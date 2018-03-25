@@ -11250,6 +11250,7 @@ Object.defineProperty(page.elements, "main", {
     value: document.getElementById('main'),
     enumerable: false
 });
+
 Object.defineProperty(page, "pattern", {
     value: {},
     enumerable: false
@@ -11297,6 +11298,16 @@ function init() {
     /*I'm giving you some extra time to enjoy my preloader*/
     document.addEventListener('DOMContentLoaded', delay);
     var delay = setTimeout(function () {
+        var size = getWindowSize(); /*the function declared in <head>*/
+        page.elements.main.style.height = setPageHeight(65, size[0], size[1]) + 'px';
+
+        function setPageHeight(footerHeight, width, height) {
+            var device = '';
+            if (document.documentElement.className.indexOf('mobile') !== -1) device = 'mobile';else if (document.documentElement.className.indexOf('tablet') !== -1) device = 'tablet';else device = 'desktop';
+            if (device === 'mobile' || device === 'tablet') {
+                if (width > height) return width - footerHeight;else return height - footerHeight;
+            } else return height - footerHeight;
+        }
         (0, _canvasSphere2.default)();
         _jsonAnimation.anim.stop();
         $(document.getElementsByClassName('footer')[0]).add(document.body).addClass("is--visible");
@@ -11413,8 +11424,7 @@ document.addEventListener('DOMContentLoaded', showPage);
 var scaleValue = exports.scaleValue = 1; /*don't touch the variable, it will broke flipbook animation*/
 
 function showPage() {
-	var size,
-	    supportsIE = detectIE();
+	var supportsIE = detectIE();
 
 	/*user agent identification*/
 	if (supportsIE === 'Trident') document.documentElement.className += ' ie-detected';else if (supportsIE === 'Edge') document.documentElement.className += ' edge-detected';
@@ -11432,17 +11442,6 @@ function showPage() {
 		if (edge > 0) return 'Edge';
 		return false;
 	}
-
-	size = getWindowSize(); /*the function declared in <head>*/
-	_preloader.page.elements.main.style.height = setPageHeight(65, size[0], size[1]) + 'px';
-	function setPageHeight(footerHeight, width, height) {
-		var device = '';
-		if (document.documentElement.className.indexOf('mobile') !== -1) device = 'mobile';else if (document.documentElement.className.indexOf('tablet') !== -1) device = 'tablet';else device = 'desktop';
-		if (device === 'mobile' || device === 'tablet') {
-			if (width > height) return width - footerHeight;else return height - footerHeight;
-		} else return height - footerHeight;
-	}
-
 	/*header text animation*/
 	var $home = $('.js-home'),
 	    $about = $('.js-about'),
