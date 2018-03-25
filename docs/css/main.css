@@ -1683,9 +1683,9 @@ article p {
       margin: 0 auto;
       -webkit-transform: scale(1.05);
       transform: scale(1.05); }
-    .sj-book .page-speed-tools tfoot td #mobile {
-      -webkit-transform: scale(0.9);
-      transform: scale(0.9); }
+  .sj-book .page-speed-tools tfoot td:nth-child(1) svg {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); }
 
 .sj-book .hard.p4.own-size.page.even .page-speed-tools {
   margin: 0px 20px; }

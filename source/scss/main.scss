@@ -819,7 +819,9 @@ article p {
                 -ms-transform: scale(1.05);
                 transform: scale(1.05);
             }
-            #mobile {
+        }
+        td:nth-child(1) {
+            svg {
                 -webkit-transform: scale(0.9);
                 -moz-transform: scale(0.9);
                 -o-transform: scale(0.9);
