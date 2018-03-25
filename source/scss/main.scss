@@ -771,14 +771,14 @@ article p {
     td {
         @extend th;
         svg {
-            width: 90%;
+            width: 53px;
             vertical-align: middle;
             margin: 0 auto;
         }
     }
     td:nth-child(1) {
         position: relative;
-        padding: 0px 0px;
+        padding: 0;
         width: 55px;
         height: 40px;
     }
@@ -808,25 +808,21 @@ article p {
         td {
             position: relative;
             height: 52px;
-            padding: 0;
+            padding: 4px;
+            svg {
+                height: calc(100% + 2px);
+                vertical-align: middle;
+                margin: 0 auto;
+            }
+        }
+        td:nth-child(2) {
+            padding: 0px;
             svg {
                 height: calc(100% + 10px);
                 vertical-align: middle;
                 margin: 0 auto;
-                -webkit-transform: scale(1.05);
-                -moz-transform: scale(1.05);
-                -o-transform: scale(1.05);
-                -ms-transform: scale(1.05);
-                transform: scale(1.05);
-            }
-        }
-        td:nth-child(1) {
-            svg {
-                -webkit-transform: scale(0.9);
-                -moz-transform: scale(0.9);
-                -o-transform: scale(0.9);
-                -ms-transform: scale(0.9);
-                transform: scale(0.9);
+                position: relative;
+                bottom: -1px;
             }
         }
     }
