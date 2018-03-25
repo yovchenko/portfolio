@@ -27,13 +27,13 @@ let pattern,
                 opacity += 15;
                 title.style.color = 'rgb(' + opacity + ',' + opacity + ',' + opacity + ')';
             } else {
-                init();
+                init(); /*the page has finished loading*/
                 clearInterval(pulse);
             }
         }
     }, 100);
 
-export let page = Object.create(null);
+export let page = Object.create(null); /*the object doesn't inherit from anywhere and thus has no properties at all*/
 page.home = true;
 page.about = false;
 page.work = false;
@@ -113,7 +113,6 @@ encode = window.btoa(svgString);
 page.elements.footer.style.backgroundImage = 'url("data:image/svg+xml;base64,' + encode + '")';
 page.elements.header.style.backgroundImage = 'url("data:image/svg+xml;base64,' + encode + '")';
 
-page.setBackground;
 function init() {
     /*I'm giving you some extra time to enjoy my preloader*/
     document.addEventListener('DOMContentLoaded', delay);
@@ -123,6 +122,7 @@ function init() {
         $(document.getElementsByClassName('footer')[0]).add(document.body).addClass("is--visible");
         $(document.getElementsByClassName('loader-section')).add(document.getElementById('loader'))
             .add(title).stop().addClass('is--invisible');
+        page.setBackground;
         resizeContent('#figure', '.canvas-box__wrapper', 800, 900);
         Object.defineProperty(page.elements, "curtainLeft", {
             value: document.getElementsByClassName('section-left is--invisible')[0],

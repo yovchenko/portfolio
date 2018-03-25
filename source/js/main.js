@@ -9,18 +9,18 @@ import {
 } from './preloader';
 import mainCanvas from './canvasSphere';
 
-document.addEventListener('DOMContentLoaded', mainPage);
-export var scaleValue = 1;
+document.addEventListener('DOMContentLoaded', showPage);
+export var scaleValue = 1; /*don't touch the variable, it will broke flipbook animation*/
 
-function mainPage() {
+function showPage() {
 	var size,
 		device = '',
-		supportsGrid = typeof page.elements.grid.style.grid === 'string',
 		supportsIE = detectIE();
 
-	if (supportsIE === 'Trident') document.documentElement.className += ' ie-detected';
+	/*user agent identification*/
+	if (supportsIE === 'Trident') document.documentElement.className += ' ie-edge-detected';
 	else if (supportsIE === 'Edge') document.documentElement.className += ' edge-detected';
-	
+
 	function detectIE() {
 		var ua = window.navigator.userAgent;
 
@@ -34,6 +34,19 @@ function mainPage() {
 		var edge = ua.indexOf('Edge/');
 		if (edge > 0) return 'Edge';
 		return false;
+	}
+
+	if (document.documentElement.className.indexOf('mobile') !== -1) device = 'mobile';
+	else if (document.documentElement.className.indexOf('tablet') !== -1) device = 'tablet';
+	else device = 'desktop';
+	size = getWindowSize(); /*the function declared in <head>*/
+	setPageHeight(page.elements.main);
+
+	function setPageHeight(targetElement) {
+		if (device === 'mobile' || device === 'tablet') {
+			if (size[0] > size[1]) targetElement.style.height = (size[0] - 65) + 'px';
+			else targetElement.style.height = (size[1] - 65) + 'px';
+		} else targetElement.style.height = (size[1] - 65) + 'px';
 	}
 
 	/*header text animation*/
@@ -93,7 +106,6 @@ function mainPage() {
 		textLetters.init();
 	};
 
-	/* replace content onclick */
 	$home.on('click', {
 		case: 1
 	}, content);
@@ -107,7 +119,7 @@ function mainPage() {
 		case: 4
 	}, content);
 
-	function content(event) {
+	function content(event) { /* the function replace page content onclick */
 		event.preventDefault();
 		for (let key in page) {
 			page[key] = false;
@@ -173,18 +185,6 @@ function mainPage() {
 	}
 
 	window.addEventListener("resize", resizeScreenObj, false);
-
-	if (document.documentElement.className.indexOf('mobile') !== -1) device = 'mobile';
-	else if (document.documentElement.className.indexOf('tablet') !== -1) device = 'tablet';
-	else device = 'desktop';
-	size = getWindowSize();
-	setElementHeight(page.elements.main);
-	function setElementHeight(targetElement) {
-		if (device === 'mobile' || device === 'tablet') {
-			if (size[0] > size[1]) targetElement.style.height = (size[0] - 65) + 'px';
-			else targetElement.style.height = (size[1] - 65) + 'px';
-		} else targetElement.style.height = (size[1] - 65) + 'px';
-	}
 
 	function resizeScreenObj() {
 		if (page.contacts) {

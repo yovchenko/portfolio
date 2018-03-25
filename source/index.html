@@ -9,9 +9,10 @@
   <script>
     function getWindowSize() {
       var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
-      height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-      return [width,height]
+        height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+      return [width, height]
     }
+
     function loadScript(url, callback) {
       var script = document.createElement("script"),
         scriptList = document.scripts[0];
@@ -22,8 +23,8 @@
           }
         };
       } else { //Others
-        script.onload = function() {
-          if(url === "https://unpkg.com/current-device/umd/current-device.min.js") {
+        script.onload = function () {
+          if (url === "https://unpkg.com/current-device/umd/current-device.min.js") {
             device = null;
           }
         }
@@ -58,7 +59,7 @@
 
 <body class="body">
   <div class="grid-container">
-  <!--  <section class="browser-support">
+    <!--  <section class="browser-support">
       <div class="browser-icons">
         <h1>Oops! Sorry, Your browser is not supported.</h1>
         <h2>Please use one of the browsers below instead</h2>
