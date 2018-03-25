@@ -1676,9 +1676,9 @@ article p {
   .sj-book .page-speed-tools tfoot td {
     position: relative;
     height: 52px;
-    padding: 4px; }
+    padding: 3px; }
     .sj-book .page-speed-tools tfoot td svg {
-      height: 100%;
+      height: 54px;
       vertical-align: middle;
       margin: 0 auto;
       position: relative; }
@@ -1688,8 +1688,7 @@ article p {
       height: 62px;
       vertical-align: middle;
       margin: 0 auto;
-      position: relative;
-      bottom: -1px; }
+      position: relative; }
 
 .sj-book .hard.p4.own-size.page.even .page-speed-tools {
   margin: 0px 20px; }
