@@ -2051,5 +2051,10 @@ h3 {
         margin: 0;
         justify-content: flex-end;
     }
+    .svg-logo-one > div:nth-child(2) > svg {
+        position: relative;
+        width: 117%;
+        right: 3%;
+    }
 }
 
