@@ -1170,17 +1170,6 @@ header {
   width: 3em;
   height: 3em; }
 
-.canvas-box {
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
-  height: 100%;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  z-index: 2;
-  -webkit-transition: all 500ms linear;
-  transition: all 500ms linear; }
-
 .canvasBackground {
   width: 100%;
   height: calc(100% - 150px);
@@ -1200,145 +1189,155 @@ header {
 figure {
   width: 50%;
   position: absolute;
-  height: 90%;
+  height: calc(100% - 130px);
   top: 50%;
   left: 50%;
   margin: 0 auto;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
-#wrapperCanvas {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: absolute;
-  width: 800px;
-  height: 900px;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-transform-origin: top right;
-  transform-origin: top right;
+.canvas-box {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  z-index: 2;
   -webkit-transition: all 500ms linear;
   transition: all 500ms linear; }
-  #wrapperCanvas img {
+  .canvas-box .canvas-box__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     position: absolute;
-    height: 90%;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto; }
-  #wrapperCanvas #canvas {
-    background-color: #fff;
-    border: 1px solid #333;
-    border-radius: 50%;
-    margin: 50px 10px 270px 0px;
-    z-index: 1;
-    image-rendering: optimizeSpeed; }
-  #wrapperCanvas .text-animation-wrap {
-    position: relative; }
-    #wrapperCanvas .text-animation-wrap .text-animation {
+    width: 800px;
+    height: 900px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-transform-origin: top right;
+    transform-origin: top right;
+    -webkit-transition: all 500ms linear;
+    transition: all 500ms linear; }
+    .canvas-box .canvas-box__wrapper img {
       position: absolute;
-      z-index: 999;
-      font-size: 5.2em;
-      margin: 0;
-      padding: 0;
-      width: 295px;
-      height: 295px;
+      height: 90%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto; }
+    .canvas-box .canvas-box__wrapper #canvas {
+      background-color: #fff;
+      border: 1px solid #333;
       border-radius: 50%;
-      bottom: 270px;
-      overflow: hidden;
-      text-align: center; }
-      #wrapperCanvas .text-animation-wrap .text-animation .text-d {
-        visibility: hidden;
+      margin: 50px 10px 270px 0px;
+      z-index: 1;
+      image-rendering: optimizeSpeed; }
+    .canvas-box .canvas-box__wrapper .text-animation-wrap {
+      position: relative; }
+      .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation {
         position: absolute;
-        top: 105px;
-        left: 39px;
-        font-size: 1.31em; }
-        #wrapperCanvas .text-animation-wrap .text-animation .text-d.is-visible {
-          visibility: visible; }
-      #wrapperCanvas .text-animation-wrap .text-animation .text-e {
-        visibility: hidden;
-        position: absolute;
-        top: 105px;
-        left: 83px;
-        font-size: 1.31em; }
-        #wrapperCanvas .text-animation-wrap .text-animation .text-e.is-visible {
-          visibility: visible; }
-      #wrapperCanvas .text-animation-wrap .text-animation .text-s {
-        visibility: hidden;
-        position: absolute;
-        top: 105px;
-        left: 120px;
-        font-size: 1.31em; }
-        #wrapperCanvas .text-animation-wrap .text-animation .text-s.is-visible {
-          visibility: visible; }
-      #wrapperCanvas .text-animation-wrap .text-animation .text-i {
-        visibility: hidden;
-        position: absolute;
-        top: 105px;
-        left: 159px;
-        font-size: 1.31em; }
-        #wrapperCanvas .text-animation-wrap .text-animation .text-i.is-visible {
-          visibility: visible; }
-      #wrapperCanvas .text-animation-wrap .text-animation .text-g {
-        visibility: hidden;
-        position: absolute;
-        top: 105px;
-        left: 176px;
-        font-size: 1.31em; }
-        #wrapperCanvas .text-animation-wrap .text-animation .text-g.is-visible {
-          visibility: visible; }
-      #wrapperCanvas .text-animation-wrap .text-animation .text-n {
-        visibility: hidden;
-        position: absolute;
-        top: 105px;
-        left: 213px;
-        font-size: 1.31em; }
-        #wrapperCanvas .text-animation-wrap .text-animation .text-n.is-visible {
-          visibility: visible; }
-      #wrapperCanvas .text-animation-wrap .text-animation svg {
-        width: 600px;
-        height: 400px;
-        position: relative;
-        left: -150px;
-        top: -65px;
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-        border: 1px solid #333; }
-        #wrapperCanvas .text-animation-wrap .text-animation svg path {
-          fill: none;
-          stroke-width: 2px;
-          stroke-linecap: round;
-          stroke: #333;
-          stroke-dashoffset: 0px;
-          stroke-dasharray: 0px 1180px; }
-        #wrapperCanvas .text-animation-wrap .text-animation svg path.d-1 {
-          stroke-dasharray: 22px 1180px; }
-        #wrapperCanvas .text-animation-wrap .text-animation svg path.d-2 {
-          stroke-dasharray: 38px 1180px; }
-        #wrapperCanvas .text-animation-wrap .text-animation svg path.e-1 {
-          stroke-dasharray: 14px 1180px; }
-        #wrapperCanvas .text-animation-wrap .text-animation svg path.e-2 {
-          stroke-dasharray: 40px 1180px; }
-        #wrapperCanvas .text-animation-wrap .text-animation svg path.s-1 {
-          stroke-dasharray: 38px 1180px; }
-        #wrapperCanvas .text-animation-wrap .text-animation svg path.i-1 {
-          stroke-dasharray: 0.2px 1180px; }
-        #wrapperCanvas .text-animation-wrap .text-animation svg path.i-2 {
-          stroke-dasharray: 16px 1180px; }
-        #wrapperCanvas .text-animation-wrap .text-animation svg path.g-1 {
-          stroke-dasharray: 12px 1180px; }
-        #wrapperCanvas .text-animation-wrap .text-animation svg path.g-2 {
-          stroke-dasharray: 44px 1180px; }
-        #wrapperCanvas .text-animation-wrap .text-animation svg path.n-1 {
-          stroke-dasharray: 16px 1180px; }
-        #wrapperCanvas .text-animation-wrap .text-animation svg path.n-2 {
-          stroke-dasharray: 29px 1180px; }
+        z-index: 999;
+        font-size: 5.2em;
+        margin: 0;
+        padding: 0;
+        width: 295px;
+        height: 295px;
+        border-radius: 50%;
+        bottom: 270px;
+        overflow: hidden;
+        text-align: center; }
+        .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation .text-d {
+          visibility: hidden;
+          position: absolute;
+          top: 105px;
+          left: 39px;
+          font-size: 1.31em; }
+          .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation .text-d.is-visible {
+            visibility: visible; }
+        .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation .text-e {
+          visibility: hidden;
+          position: absolute;
+          top: 105px;
+          left: 83px;
+          font-size: 1.31em; }
+          .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation .text-e.is-visible {
+            visibility: visible; }
+        .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation .text-s {
+          visibility: hidden;
+          position: absolute;
+          top: 105px;
+          left: 120px;
+          font-size: 1.31em; }
+          .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation .text-s.is-visible {
+            visibility: visible; }
+        .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation .text-i {
+          visibility: hidden;
+          position: absolute;
+          top: 105px;
+          left: 159px;
+          font-size: 1.31em; }
+          .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation .text-i.is-visible {
+            visibility: visible; }
+        .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation .text-g {
+          visibility: hidden;
+          position: absolute;
+          top: 105px;
+          left: 176px;
+          font-size: 1.31em; }
+          .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation .text-g.is-visible {
+            visibility: visible; }
+        .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation .text-n {
+          visibility: hidden;
+          position: absolute;
+          top: 105px;
+          left: 213px;
+          font-size: 1.31em; }
+          .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation .text-n.is-visible {
+            visibility: visible; }
+        .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation svg {
+          width: 600px;
+          height: 400px;
+          position: relative;
+          left: -150px;
+          top: -65px;
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+          border: 1px solid #333; }
+          .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation svg path {
+            fill: none;
+            stroke-width: 2px;
+            stroke-linecap: round;
+            stroke: #333;
+            stroke-dashoffset: 0px;
+            stroke-dasharray: 0px 1180px; }
+          .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation svg path.d-1 {
+            stroke-dasharray: 22px 1180px; }
+          .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation svg path.d-2 {
+            stroke-dasharray: 38px 1180px; }
+          .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation svg path.e-1 {
+            stroke-dasharray: 14px 1180px; }
+          .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation svg path.e-2 {
+            stroke-dasharray: 40px 1180px; }
+          .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation svg path.s-1 {
+            stroke-dasharray: 38px 1180px; }
+          .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation svg path.i-1 {
+            stroke-dasharray: 0.2px 1180px; }
+          .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation svg path.i-2 {
+            stroke-dasharray: 16px 1180px; }
+          .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation svg path.g-1 {
+            stroke-dasharray: 12px 1180px; }
+          .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation svg path.g-2 {
+            stroke-dasharray: 44px 1180px; }
+          .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation svg path.n-1 {
+            stroke-dasharray: 16px 1180px; }
+          .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation svg path.n-2 {
+            stroke-dasharray: 29px 1180px; }
 
 .wf-inactive .text-animation {
   display: none; }

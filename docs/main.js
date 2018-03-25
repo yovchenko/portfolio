@@ -11302,7 +11302,7 @@ function init() {
         _jsonAnimation.anim.stop();
         $(document.getElementsByClassName('footer')[0]).add(document.body).addClass("is--visible");
         $(document.getElementsByClassName('loader-section')).add(document.getElementById('loader')).add(title).stop().addClass('is--invisible');
-        (0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
+        (0, _resize.resizeContent)('#figure', '.canvas-box__wrapper', 800, 900);
         Object.defineProperty(page.elements, "curtainLeft", {
             value: document.getElementsByClassName('section-left is--invisible')[0],
             enumerable: false
@@ -11575,7 +11575,7 @@ function mainPage() {
 		if (_preloader.page.contacts) {
 			(0, _resize.resizeContent)('.envelope', '#wrap', 530, 630);
 		} else if (_preloader.page.home) {
-			(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
+			(0, _resize.resizeContent)('#figure', '.canvas-box__wrapper', 800, 900);
 		} else if (_preloader.page.work) {
 			exports.scaleValue = scaleValue = (0, _resize.resizeContent)('.bookWrap', '#flipbook', 960, 600);
 		}

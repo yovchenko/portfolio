@@ -190,7 +190,7 @@ function mainPage() {
 		if (page.contacts) {
 			resizeContent('.envelope', '#wrap', 530, 630);
 		} else if (page.home) {
-			resizeContent('#figure', '#wrapperCanvas', 800, 900);
+			resizeContent('#figure', '.canvas-box__wrapper', 800, 900);
 		} else if (page.work) {
 			scaleValue = resizeContent('.bookWrap', '#flipbook', 960, 600);
 		}
