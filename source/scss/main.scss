@@ -590,21 +590,29 @@ main .svg-logo-two div .bar-before {
     width: 100%;
 }
 
+.svg-logo-one>div:nth-child(2)>svg {
+    position: relative;
+    width: 117.4%;
+    right: 8.7%;
+}
+
 .svg-logo-two div:nth-child(2) svg {
     width: 160%;
     position: relative;
     left: -30%;
 }
 
-.svg-logo-one>div:nth-child(2)>svg {
-    position: relative;
-    width: 120%;
-    right: 10%;
-}
-
 .svg-logo-one>div:nth-child(3)>svg {
     position: relative;
-    width: 88.4%;
+    width: 86.8888%;
+}
+
+.svg-logo-two>div:nth-child(1)>svg {
+    width: 98.3%;
+}
+
+.svg-logo-two>div:nth-child(3)>svg {
+    width: 98.3%;
 }
 
 .svg-logo-one div svg,
@@ -1248,6 +1256,7 @@ footer .wrapper {
 }
 
 /* preloader */
+
 .chromeframe {
     margin: 0.2em 0;
     background: #ccc;
@@ -1260,7 +1269,7 @@ footer .wrapper {
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% + 65px);
+    height: 100%;
     min-height: 100%;
     z-index: 1000;
     &.is--invisible {
@@ -2027,14 +2036,10 @@ h3 {
         margin: 0;
     }
     .svg-logo-one>div:nth-child(2) {
-        right: 0%;
-        width: 103%;
         margin: 0;
     }
     .svg-logo-two>div:nth-child(2) {
         margin: 0;
-        right: 0%;
-        width: 101%;
     }
 }
 

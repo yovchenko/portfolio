@@ -37,6 +37,7 @@ function showPage() {
 
 	size = getWindowSize(); /*the function declared in <head>*/
 	page.elements.main.style.height = setPageHeight(65, size[0], size[1]) + 'px';
+
 	function setPageHeight(footerHeight, width, height) {
 		var device = '';
 		if (document.documentElement.className.indexOf('mobile') !== -1) device = 'mobile';
