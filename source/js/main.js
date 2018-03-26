@@ -155,7 +155,7 @@ function showPage() {
 					page.elements.header.classList.remove('is--active');
 					page.pattern.colorX = 'YlGnBu';
 					page.pattern.colorY = 'GnBu';
-					resizeContent('#figure', '#wrapperCanvas', 800, 900);
+					resizeContent('#figure', '.canvas-box__wrapper', 800, 900);
 					mainCanvas();
 					page['home'] = true; // page home 
 					break;

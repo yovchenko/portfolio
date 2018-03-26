@@ -11556,7 +11556,7 @@ function showPage() {
 					_preloader.page.elements.header.classList.remove('is--active');
 					_preloader.page.pattern.colorX = 'YlGnBu';
 					_preloader.page.pattern.colorY = 'GnBu';
-					(0, _resize.resizeContent)('#figure', '#wrapperCanvas', 800, 900);
+					(0, _resize.resizeContent)('#figure', '.canvas-box__wrapper', 800, 900);
 					(0, _canvasSphere2.default)();
 					_preloader.page['home'] = true; // page home 
 					break;
