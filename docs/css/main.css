@@ -1196,7 +1196,7 @@ header {
   background-repeat: no-repeat; }
 
 figure {
-  width: 50%;
+  width: 60%;
   position: absolute;
   height: calc(100% - 130px);
   top: 50%;
@@ -1237,14 +1237,14 @@ figure {
       height: 90%;
       top: 0;
       bottom: 0;
-      left: 5%;
+      left: 0;
       right: 0;
       margin: auto; }
     .canvas-box .canvas-box__wrapper #canvas {
       background-color: #fff;
       border: 1px solid #333;
       border-radius: 50%;
-      margin: 50px 0px 270px 25px;
+      margin: 50px 12.5px 270px 0px;
       z-index: 1;
       image-rendering: optimizeSpeed; }
     .canvas-box .canvas-box__wrapper .text-animation-wrap {
@@ -1258,8 +1258,9 @@ figure {
         width: 295px;
         height: 295px;
         border-radius: 50%;
-        bottom: 265px;
-        right: 0;
+        bottom: 270px;
+        right: 10px;
+        left: 0;
         overflow: hidden;
         text-align: center; }
         .canvas-box .canvas-box__wrapper .text-animation-wrap .text-animation .text-d {
@@ -1362,23 +1363,23 @@ figure {
   font-family: 'Pangolin', cursive;
   position: absolute;
   z-index: 999;
-  font-size: 5.2em;
+  font-size: 5.8em;
   margin: 0;
   padding: 0;
-  bottom: 400px;
+  bottom: 390px;
   right: 0px;
-  left: 20px;
+  left: -10px;
   text-align: center; }
 
 .wf-inactive .text-animation--error {
   position: absolute;
   z-index: 999;
-  font-size: 5.2em;
+  font-size: 5.8em;
   margin: 0;
   padding: 0;
-  bottom: 400px;
+  bottom: 390px;
   right: 0px;
-  left: 20px;
+  left: -10px;
   text-align: center; }
 
 .svg-logo-one div svg,
@@ -2679,9 +2680,8 @@ h3 {
         -ms-flex-direction: column;
             flex-direction: column; }
   figure {
-    width: 90%;
-    height: 50%;
-    top: 50%; }
+    width: 100%;
+    height: 60%; }
   .book__wrap {
     width: 120%;
     left: -10%; }
@@ -2782,4 +2782,8 @@ h3 {
     margin: 0;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
-            justify-content: flex-end; } }
+            justify-content: flex-end; }
+  .svg-logo-one > div:nth-child(2) > svg {
+    position: relative;
+    width: 117.36%;
+    right: 8.68%; } }
