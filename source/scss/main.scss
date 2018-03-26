@@ -283,7 +283,7 @@ header {
 }
 
 figure {
-    width: 60%;
+    width: 50%;
     position: absolute;
     height: calc(100% - 130px);
     top: 50%;
@@ -1971,8 +1971,9 @@ h3 {
         flex-direction: column;
     }
     figure {
-        width: 100%;
-        height: 60%;
+        width: 90%;
+        height: 50%;
+        top: 50%;
     }
     .book__wrap {
         width: 120%;
