@@ -118,6 +118,7 @@ function init() {
     /*I'm giving you some extra time to enjoy my preloader*/
     document.addEventListener('DOMContentLoaded', delay);
     let delay = setTimeout(function () {
+        anim.stop();
         let size = getWindowSize(); /*the function declared in <head>*/
         page.elements.main.style.height = setPageHeight(65, size[0], size[1]) + 'px';
 
@@ -131,12 +132,11 @@ function init() {
                 else return height - footerHeight;
             } else return height - footerHeight;
         }
+        page.setBackground;
         mainCanvas();
-        anim.stop();
         $(document.getElementsByClassName('footer')[0]).add(document.body).addClass("is--visible");
         $(document.getElementsByClassName('loader-section')).add(document.getElementById('loader'))
             .add(title).stop().addClass('is--invisible');
-        page.setBackground;
         resizeContent('#figure', '.canvas-box__wrapper', 800, 900);
         Object.defineProperty(page.elements, "curtainLeft", {
             value: document.getElementsByClassName('section-left is--invisible')[0],
