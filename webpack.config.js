@@ -17,6 +17,7 @@ module.exports = {
         contentBase: PATHS.docs,
         port: 8081
     },
+    devtool: 'source-map',
     entry: ['babel-polyfill', PATHS.source + '/index.js'],
     output: {
         path: PATHS.docs,
