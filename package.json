@@ -40,6 +40,7 @@
     "node-sass": "^4.7.2",
     "postcss-loader": "^2.0.6",
     "sass-loader": "^6.0.6",
+    "source-map-loader": "^0.2.3",
     "style-loader": "^0.20.3",
     "trianglify": "^1.1.0",
     "webpack": "^3.5.6",
