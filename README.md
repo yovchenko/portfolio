@@ -1,7 +1,6 @@
-# portfolio
+# Portfolio - https://yovchenko.info
 This repository contains an application that was created with HTML5,Sass,jQuery and JavaScript.
 ## Browser support
-
 This website has been tested and works on the following browsers:
 * Chrome v.49+
 * Firefox v.52+
