@@ -1667,8 +1667,7 @@ article p {
   text-align: center;
   margin: 0.325em 40px 0.5em 40px; }
 
-.hard.p6.own-size.page.even a {
-  cursor: pointer;
+.hard.p6.own-size.page.even svg {
   width: 50%;
   height: 50%;
   position: absolute;
@@ -2076,7 +2075,7 @@ footer .wrapper {
   padding: 0.2em 0; }
 
 #loader-wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -2084,7 +2083,7 @@ footer .wrapper {
   min-height: 100%;
   z-index: 1000; }
   #loader-wrapper.is--invisible {
-    display: none; }
+    position: absolute; }
   #loader-wrapper #loader {
     visibility: hidden;
     display: block;

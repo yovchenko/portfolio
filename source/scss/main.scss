@@ -789,8 +789,7 @@ article p {
     margin: 0.325em 40px 0.5em 40px
 }
 
-.hard.p6.own-size.page.even a {
-    cursor: pointer;
+.hard.p6.own-size.page.even svg {
     width: 50%;
     height: 50%;
     position: absolute;
@@ -1295,7 +1294,7 @@ footer .wrapper {
 }
 
 #loader-wrapper {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -1303,7 +1302,7 @@ footer .wrapper {
     min-height: 100%;
     z-index: 1000;
     &.is--invisible {
-        display: none;
+        position: absolute;
     }
     #loader {
         visibility: hidden;

@@ -136,7 +136,7 @@ function init() {
         mainCanvas();
         $(document.getElementsByClassName('footer')[0]).add(document.body).addClass("is--visible");
         $(document.getElementsByClassName('loader-section')).add(document.getElementById('loader'))
-            .add(title).stop().addClass('is--invisible');
+        .add(document.getElementById('loader-wrapper')).add(title).stop().addClass('is--invisible');
         resizeContent('#figure', '.canvas-box__wrapper', 800, 900);
         Object.defineProperty(page.elements, "curtainLeft", {
             value: document.getElementsByClassName('section-left is--invisible')[0],
