@@ -6,7 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-html {
+html, html body {
   line-height: 1.15;
   /* 1 */
   -ms-text-size-adjust: 100%;
@@ -392,6 +392,7 @@ template {
  */
 [hidden] {
   display: none; }
+
 .menu__about span {
   -webkit-animation: letter-glow 0.45s 0s ease backwards;
   animation: letter-glow 0.45s 0s ease backwards; }
@@ -1499,13 +1500,13 @@ main .svg-logo-two div .bar-before {
 
 .svg-logo-one > div:nth-child(3) > svg {
   position: relative;
-  width: 86.8888%; }
+  width: 100%; }
 
 .svg-logo-two > div:nth-child(1) > svg {
-  width: 98.3%; }
+  width: 100%; }
 
 .svg-logo-two > div:nth-child(3) > svg {
-  width: 98.3%; }
+  width: 100%; }
 
 .svg-logo-one div svg,
 .svg-logo-two div svg {
@@ -1657,6 +1658,29 @@ article p {
   margin: 0.5em 0px;
   top: -9px;
   left: 2px; }
+
+.hard.p6.own-size.page.even h1 {
+  font-size: 52px;
+  font-weight: normal;
+  text-align: left;
+  position: relative;
+  text-align: center;
+  margin: 0.325em 40px 0.5em 40px; }
+
+.hard.p6.own-size.page.even a {
+  cursor: pointer;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 99; }
+
+.hard.p6.own-size.page.even a:-moz-focusring {
+  outline: none; }
 
 .sj-book .book-browser-support {
   font-family: 'Pangolin', cursive;
