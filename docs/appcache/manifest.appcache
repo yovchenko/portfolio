@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#ver:2018-4-25 22:42:21
+#ver:2018-4-25 23:03:24
 #plugin:4.9.0
 
 CACHE:
@@ -13,33 +13,33 @@ CACHE:
 ../icons-a744bbb9fc8528fa57de32144c9b941a/android-chrome-256x256.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/android-chrome-384x384.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/android-chrome-512x512.png
-../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-icon-57x57.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-icon-60x60.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-icon-72x72.png
-../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-icon-76x76.png
+../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-icon-57x57.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-icon-114x114.png
+../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-icon-76x76.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-icon-120x120.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-icon-144x144.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-icon-152x152.png
-../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-icon-167x167.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-icon-180x180.png
-../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-icon.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-icon-precomposed.png
+../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-icon.png
+../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-icon-167x167.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/favicon-16x16.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/favicon-32x32.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/favicon.ico
 ../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-startup-image-320x460.png
-../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-startup-image-640x920.png
-../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-startup-image-750x1294.png
-../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-startup-image-748x1024.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-startup-image-640x1096.png
+../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-startup-image-750x1294.png
+../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-startup-image-640x920.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-startup-image-768x1004.png
-../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-startup-image-1242x2148.png
+../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-startup-image-748x1024.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-startup-image-1182x2208.png
+../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-startup-image-1242x2148.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-startup-image-1496x2048.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/apple-touch-startup-image-1536x2008.png
-../icons-a744bbb9fc8528fa57de32144c9b941a/firefox_app_128x128.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/firefox_app_60x60.png
+../icons-a744bbb9fc8528fa57de32144c9b941a/firefox_app_128x128.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/firefox_app_512x512.png
 ../icons-a744bbb9fc8528fa57de32144c9b941a/manifest.json
 ../icons-a744bbb9fc8528fa57de32144c9b941a/manifest.webapp

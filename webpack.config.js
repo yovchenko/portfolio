@@ -178,12 +178,7 @@ module.exports = {
         new ManifestPlugin(),
         new UglifyJsPlugin(),
         new OfflinePlugin(),
-        new ExtractTextPlugin({
-            filename: (getPath) => {
-                return getPath('css/[name].css').replace('css/js', 'css');
-            },
-            allChunks: true
-        }),
+        new ExtractTextPlugin("css/main.css"),
         new ServiceWorkerWebpackPlugin({
             entry: PATHS.source + '/sw-config.json',
           })
