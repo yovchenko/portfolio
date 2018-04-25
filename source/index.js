@@ -8,6 +8,9 @@ import './js/contactForm';
 import './js/hash';
 import './js/turn';
 import './js/flipbook';
-
+import runtime from 'serviceworker-webpack-plugin/lib/runtime';
+if ('serviceWorker' in navigator) {
+  const registration = runtime.register();
+}
 
 

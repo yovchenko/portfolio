@@ -4,6 +4,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
+const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
 
 const PATHS = {
     source: path.join(__dirname, 'source'),
@@ -178,6 +179,9 @@ module.exports = {
                 return getPath('css/[name].css').replace('css/js', 'css');
             },
             allChunks: true
-        })
+        }),
+        new ServiceWorkerWebpackPlugin({
+            entry: PATHS.source + '/sw-config.json',
+          }),
     ]
 };

@@ -16929,7 +16929,15 @@ __webpack_require__(460);
 
 __webpack_require__(461);
 
+var _runtime = __webpack_require__(462);
+
+var _runtime2 = _interopRequireDefault(_runtime);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+if ('serviceWorker' in navigator) {
+  var registration = _runtime2.default.register();
+}
 
 /***/ }),
 /* 398 */
@@ -44656,6 +44664,32 @@ function isChrome() {
     // http://code.google.com/p/chromium/issues/detail?id=128488
     return navigator.userAgent.indexOf('Chrome') != -1;
 }
+
+/***/ }),
+/* 462 */
+/***/ (function(module, exports) {
+
+var serviceWorkerOption = {"scriptURL":"/sw.js"};
+      "use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/* eslint-disable flowtype/require-valid-file-annotation */
+/* global serviceWorkerOption */
+
+exports.default = {
+  register: function register() {
+    var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+    if (navigator.serviceWorker) {
+      return navigator.serviceWorker.register(serviceWorkerOption.scriptURL, options);
+    }
+
+    return false;
+  }
+};
+module.exports = exports["default"];
 
 /***/ })
 /******/ ]);
