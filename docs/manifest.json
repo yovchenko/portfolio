@@ -4,7 +4,6 @@
   "start_url": ".",
   "background_color": "#333",
   "theme_color": "#333",
-  "display": "standalone",
   "icons": [{
     "src": "images/icons/favicon_64.png",
     "sizes": "64x64",
@@ -45,5 +44,6 @@
   "/images/before.png": "/images/before.png",
   "/images/after.png": "/images/after.png",
   "/images/letter_bg.png": "/images/letter_bg.png",
-  "index.html": "index.html"
+  "index.html": "index.html",
+  "display": "standalone"
 }
