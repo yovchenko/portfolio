@@ -3,6 +3,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const ManifestPlugin = require('webpack-manifest-plugin');
 
 const PATHS = {
     source: path.join(__dirname, 'source'),
@@ -171,6 +172,7 @@ module.exports = {
             }
         }),
         new FaviconsWebpackPlugin(PATHS.source + '/favicon/favicon.png'),
+        new ManifestPlugin(),
         new ExtractTextPlugin({
             filename: (getPath) => {
                 return getPath('css/[name].css').replace('css/js', 'css');
