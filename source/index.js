@@ -12,5 +12,6 @@ import runtime from 'serviceworker-webpack-plugin/lib/runtime';
 if ('serviceWorker' in navigator) {
   const registration = runtime.register();
 }
-
+import * as OfflinePluginRuntime from 'offline-plugin/runtime';
+OfflinePluginRuntime.install();
 

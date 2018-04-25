@@ -5,6 +5,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const ServiceWorkerWebpackPlugin = require('serviceworker-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const OfflinePlugin = require('offline-plugin');
 
 const PATHS = {
     source: path.join(__dirname, 'source'),
@@ -50,6 +52,7 @@ module.exports = {
                             loader: 'css-loader',
                             options: {
                                 importLoaders: 1,
+                                minimize: true 
                             }
                         },
                         {
@@ -163,7 +166,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: PATHS.source + '/index.html',
-
             minify: {
                 collapseWhitespace: true,
                 removeComments: true,
@@ -174,6 +176,8 @@ module.exports = {
         }),
         new FaviconsWebpackPlugin(PATHS.source + '/favicon/favicon.png'),
         new ManifestPlugin(),
+        new UglifyJsPlugin(),
+        new OfflinePlugin(),
         new ExtractTextPlugin({
             filename: (getPath) => {
                 return getPath('css/[name].css').replace('css/js', 'css');
@@ -182,6 +186,6 @@ module.exports = {
         }),
         new ServiceWorkerWebpackPlugin({
             entry: PATHS.source + '/sw-config.json',
-          }),
+          })
     ]
 };

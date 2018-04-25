@@ -7,6 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Vladymyr M.Yovchenko - Portfolio</title>
   <script>
+    var host = "yovchenko.info";
+    if ((host == window.location.host) && (window.location.protocol != "https:"))
+      window.location.protocol = "https";
+  </script>
+  <script>
     function getWindowSize() {
       var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
         height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
@@ -53,9 +58,9 @@
       document.documentElement.className += " wf-inactive wf--error";
     });
   </script>
-   <link rel="manifest" href="manifest.json">
-   <meta name="theme-color" content="#333">
-   <meta name="apple-mobile-web-app-status-bar-style" content="#333">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#333">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#333">
 </head>
 
 <body class="body">

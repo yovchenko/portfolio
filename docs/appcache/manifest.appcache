@@ -1,0 +1,31 @@
+CACHE MANIFEST
+#ver:2018-4-25 22:04:09
+#plugin:4.9.0
+
+CACHE:
+../sw.js
+/images/me-large.png
+/fonts/Pangolin-Regular.eot&b3a3dba541543e4f1f0385b789bf7520
+/fonts/Pangolin-Regular.woff2&05b6ea444f7bf5b56b536c03c33cb772
+/fonts/Pangolin-Regular.woff&ce79c51fdeb924a9e764259ff4f5a507
+/fonts/Pangolin-Regular.ttf&0529e076a86ca72872154555487ffdb9
+/fonts/Pangolin-Regular.svg&9cd8476a4aeab0b9a60a6423482702be
+/fonts/opensans-regular.eot&425a17d1e3700f190def6fd81346d240
+/fonts/opensans-regular.woff2&bbfe5aef923413c0d949228e1b985a68
+/fonts/opensans-regular.woff&5d63af7f53bbf5c3e73fac846d55464a
+/fonts/opensans-regular.ttf&19b7213f2f5908e4ec41616a6ea364df
+/fonts/opensans-regular.svg&4142641a1cce1d3291fba9cda88d6963
+/images/book-page-1.jpg
+/images/book-page-2.jpg
+/images/book-page-3.jpg
+/images/book-page-4.jpg
+/images/before.png
+/images/after.png
+/images/letter_bg.png
+../main.js
+../css/main.css
+../
+../manifest.json
+
+NETWORK:
+*
