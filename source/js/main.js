@@ -155,7 +155,7 @@ function showPage() {
 					page.elements.header.classList.remove('is--active');
 					page.pattern.colorX = 'YlGnBu';
 					page.pattern.colorY = 'GnBu';
-					resizeContent('#figure', '.canvas-box__wrapper', 800, 900);
+					resizeContent('#figure', '.canvas-box__wrapper', 768, 826);
 					mainCanvas();
 					page['home'] = true; // page home 
 					break;
@@ -174,7 +174,7 @@ function showPage() {
 		if (page.contacts) {
 			resizeContent('.envelope', '#wrap', 530, 630);
 		} else if (page.home) {
-			resizeContent('#figure', '.canvas-box__wrapper', 800, 900);
+			resizeContent('#figure', '.canvas-box__wrapper', 768, 826);
 		} else if (page.work) {
 			scaleValue = resizeContent('.book__wrap', '#flipbook', 960, 600);
 		}
