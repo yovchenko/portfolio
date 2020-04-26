@@ -8,5 +8,4 @@ This project was generated with webpack version 3.5.6.
 * IE10+ or Edge
 ## Author
 Volodymyr.M.Yovchenko
-## License
-[MIT License](https://opensource.org/licenses/MIT)
+
