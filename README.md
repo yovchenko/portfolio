@@ -1,4 +1,4 @@
-## Portfolio - https://yovchenko.info
+## Portfolio - https://yovchenko.github.io/portfolio/
 This project was generated with webpack version 3.5.6.
 ## Browser support
 * Chrome v.49+
