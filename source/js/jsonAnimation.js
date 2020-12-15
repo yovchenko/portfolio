@@ -5,7 +5,7 @@ let animData = {
     loop: true,
     prerender: true,
     autoplay: true,
-    path: 'https://yovchenko.github.io/JSON-animation/animation.json'
+    path: 'https://raw.githubusercontent.com/yovchenko/JSON-animation/master/animation.JSON'
 };
 export let anim = bodymovin.loadAnimation(animData);
 anim.setSpeed(3.0);
