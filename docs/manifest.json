@@ -1,7 +1,7 @@
 { "name": "Portfolio",
   "short_name": "YV",
   "description": "JS app",
-  "start_url": "https://yovchenko.github.io/portfolio",
+  "start_url": "https://yovchenko.github.io/portfolio/",
   "background_color": "#333",
   "theme_color": "#333",
   "display": "standalone",
