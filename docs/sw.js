@@ -720,7 +720,7 @@ function WebpackServiceWorker(params, helpers) {
       if (responses.some(function (response) {
         return !response.ok;
       })) {
-        return Promise.reject(new Error('Wrong response status'));
+        return !response.ok;
       }
 
       var extracted = [];
