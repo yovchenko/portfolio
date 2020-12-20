@@ -46,13 +46,13 @@
     "webpack-dev-server": "^2.9.1",
     "webpack-file-preprocessor-plugin": "0.0.1",
     "webpack-manifest-plugin": "^2.0.1",
-    "webpack-modernizr-loader": "^4.0.0"
+    "webpack-modernizr-loader": "^4.0.0",
+    "webpack": "^3.5.6"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "jquery": "^3.2.1",
     "jquery-validation": "^1.17.0",
-    "serviceworker-webpack-plugin": "^0.2.3",
-    "webpack": "^3.5.6"
+    "serviceworker-webpack-plugin": "^0.2.3"
   }
 }
